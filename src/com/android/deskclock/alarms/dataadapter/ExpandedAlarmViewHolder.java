@@ -40,6 +40,9 @@ import com.android.deskclock.provider.DaysOfWeek;
 
 import java.util.HashSet;
 
+import cyanogenmod.app.Profile;
+import cyanogenmod.app.ProfileManager;
+
 /**
  * A ViewHolder containing views for an alarm item in expanded stated.
  */
@@ -54,6 +57,7 @@ public final class ExpandedAlarmViewHolder extends AlarmTimeViewHolder {
     public final Button delete;
     public final View preemptiveDismissContainer;
     public final TextView preemptiveDismissButton;
+    public final TextView profile;
 
     private final boolean mHasVibrator;
     private final int[] mDayOrder;
@@ -85,6 +89,7 @@ public final class ExpandedAlarmViewHolder extends AlarmTimeViewHolder {
         ringtone = (TextView) itemView.findViewById(R.id.choose_ringtone);
         editLabel = (TextView) itemView.findViewById(R.id.edit_label);
         repeatDays = (LinearLayout) itemView.findViewById(R.id.repeat_days);
+        profile = (TextView) itemView.findViewById(R.id.choose_profile);
 
         // Build button for each day.
         LayoutInflater mInflater = LayoutInflater.from(context);
@@ -142,6 +147,13 @@ public final class ExpandedAlarmViewHolder extends AlarmTimeViewHolder {
                 alarmTimeClickHandler.onRingtoneClicked(mAlarm);
             }
         });
+        // Profile editor handler
+        profile.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View view) {
+                alarmTimeClickHandler.onProfileClicked(mAlarm);
+            }
+        });
         // Delete alarm handler
         delete.setOnClickListener(new View.OnClickListener() {
             @Override
@@ -180,6 +192,7 @@ public final class ExpandedAlarmViewHolder extends AlarmTimeViewHolder {
         bindDaysOfWeekButtons(alarm);
         bindVibrator(alarm);
         bindRingtoneTitle(context, alarm);
+        bindProfileTitle(context, alarm);
         bindPreemptiveDismissButton(context, alarm, alarmInstance);
     }
 
@@ -189,6 +202,20 @@ public final class ExpandedAlarmViewHolder extends AlarmTimeViewHolder {
 
         ringtone.setText(title);
         ringtone.setContentDescription(description + " " + title);
+    }
+
+    private void bindProfileTitle(Context context, Alarm alarm) {
+        String text = context.getString(R.string.profile_no_selected);
+
+        ProfileManager mProfileManager = ProfileManager.getInstance(context);
+        Profile mProfile = mProfileManager.getProfile(alarm.profile);
+
+        if (mProfileManager.isProfilesEnabled() && mProfile != null
+                && !alarm.profile.equals(ProfileManager.NO_PROFILE)) {
+            text = mProfile.getName();
+        }
+
+        profile.setText(text);
     }
 
     private void bindDaysOfWeekButtons(Alarm alarm) {
