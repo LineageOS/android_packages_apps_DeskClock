@@ -56,6 +56,10 @@ import com.android.deskclock.widget.toast.SnackbarManager;
 import com.android.deskclock.widget.toast.ToastManager;
 
 import java.util.List;
+import java.util.UUID;
+
+import cyanogenmod.app.Profile;
+import cyanogenmod.app.ProfileManager;
 
 /**
  * A fragment that displays a list of alarm time and allows interaction with them.
@@ -80,6 +84,7 @@ public final class AlarmClockFragment extends DeskClockFragment implements
     public static final int REQUEST_CODE_EXTERN_AUDIO = 12;
     public static final int REQUEST_READ_EXTERNAL_STORAGE_PERMISSION = 13;
     public static final int REQUEST_CODE_WRITE_SETTINGS = 14;
+    public static final int REQUEST_CODE_PROFILE = 1015;
     private Uri mWaitUpdateUri;
 
     private static final String QUERY_URI = "content://com.android.deskclock/alarms";
@@ -102,6 +107,21 @@ public final class AlarmClockFragment extends DeskClockFragment implements
     private AlarmTimeClickHandler mAlarmTimeClickHandler;
     private LinearLayoutManager mLayoutManager;
 
+    private ProfileManager mProfileManager;
+    private boolean mProfilesEnabled;
+    private BroadcastReceiver mProfileReceiver = new BroadcastReceiver() {
+        @Override
+        public void onReceive(Context context, Intent intent) {
+            String action = intent.getAction();
+            if (ProfileManager.PROFILES_STATE_CHANGED_ACTION.equals(action)) {
+                boolean newState = intent.getIntExtra(ProfileManager.EXTRA_PROFILES_STATE,
+                        ProfileManager.PROFILES_STATE_DISABLED)
+                        == ProfileManager.PROFILES_STATE_ENABLED;
+                updateProfilesStatus(newState);
+            }
+        }
+    };
+
     @Override
     public void processTimeSet(int hourOfDay, int minute) {
         mAlarmTimeClickHandler.processTimeSet(hourOfDay, minute);
@@ -110,6 +130,8 @@ public final class AlarmClockFragment extends DeskClockFragment implements
     @Override
     public void onCreate(Bundle savedState) {
         super.onCreate(savedState);
+        mProfileManager = ProfileManager.getInstance(getActivity());
+        mProfilesEnabled = mProfileManager.isProfilesEnabled();
         mCursorLoader = getLoaderManager().initLoader(0, null, this);
 
         mReceiver = new RefreshDefaultRingtoneBroadcastReceiver();
@@ -173,6 +195,10 @@ public final class AlarmClockFragment extends DeskClockFragment implements
             // Remove the SCROLL_TO_ALARM extra now that we've processed it.
             intent.removeExtra(SCROLL_TO_ALARM_INTENT_EXTRA);
         }
+
+        updateProfilesStatus(mProfileManager.isProfilesEnabled());
+        getActivity().registerReceiver(mProfileReceiver, new IntentFilter(
+                ProfileManager.PROFILES_STATE_CHANGED_ACTION));
     }
 
     @Override
@@ -203,6 +229,8 @@ public final class AlarmClockFragment extends DeskClockFragment implements
         // home was pressed, just dismiss any existing toast bar when restarting
         // the app.
         mAlarmUpdateHandler.hideUndoBar();
+
+        getActivity().unregisterReceiver(mProfileReceiver);
     }
 
     public void setLabel(Alarm alarm, String label) {
@@ -295,6 +323,9 @@ public final class AlarmClockFragment extends DeskClockFragment implements
                     DataModel.getDataModel().setDefaultAlarmRingtoneUri(
                             Uri.parse(new_default_ringtone_Uri));
                 }
+                break;
+            case REQUEST_CODE_PROFILE:
+                saveProfile(data);
                 break;
             default:
                 LogUtils.w("Unhandled request code in onActivityResult: " + requestCode);
@@ -481,6 +512,34 @@ public final class AlarmClockFragment extends DeskClockFragment implements
             default:
                 super.onRequestPermissionsResult(requestCode, permissions, grantResults);
                 break;
+        }
+    }
+
+    private void saveProfile(Intent intent) {
+        final String uuid = intent.getStringExtra(ProfileManager.EXTRA_PROFILE_PICKED_UUID);
+        final Alarm alarm = mAlarmTimeClickHandler.getSelectedAlarm();
+        if (uuid != null) {
+            try {
+                alarm.profile = UUID.fromString(uuid);
+            } catch (IllegalArgumentException ex) {
+                alarm.profile = ProfileManager.NO_PROFILE;
+            }
+        } else {
+            alarm.profile = ProfileManager.NO_PROFILE;
+        }
+
+        // Save the change to alarm.
+        mAlarmUpdateHandler.asyncUpdateAlarm(alarm, false /* popToast */,
+                true /* minorUpdate */);
+    }
+
+    private void updateProfilesStatus(boolean newState) {
+        if (mProfilesEnabled != newState) {
+            mProfilesEnabled = newState;
+            // Need to refresh the data
+            if (mAlarmTimeAdapter != null) {
+                mAlarmTimeAdapter.notifyDataSetChanged();
+            }
         }
     }
 }
