@@ -38,6 +38,8 @@ import com.android.deskclock.provider.AlarmInstance;
 
 import java.util.Calendar;
 
+import cyanogenmod.app.ProfileManager;
+
 /**
  * Click handler for an alarm time item.
  */
@@ -261,4 +263,17 @@ public final class AlarmTimeClickHandler {
             mFragment.startActivityForResult(intent, AlarmClockFragment.REQUEST_CODE_EXTERN_AUDIO);
         }
     }
+
+    public void onProfileClicked(Alarm alarm) {
+        launchProfilePicker(alarm);
+    }
+
+    private void launchProfilePicker(Alarm alarm) {
+        mSelectedAlarm = alarm;
+        final Intent intent = new Intent(ProfileManager.ACTION_PROFILE_PICKER);
+        intent.putExtra(ProfileManager.EXTRA_PROFILE_EXISTING_UUID, mSelectedAlarm.profile.toString());
+        intent.putExtra(ProfileManager.EXTRA_PROFILE_SHOW_NONE, true);
+        mFragment.startActivityForResult(intent, AlarmClockFragment.REQUEST_CODE_PROFILE);
+    }
+
 }

@@ -91,7 +91,32 @@
                     android:text="@string/alarm_vibrate"
                     android:textColor="@color/white"
                     android:textSize="@dimen/alarm_text_font_size" />
+            </LinearLayout>
 
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:gravity="center_vertical"
+                android:orientation="horizontal">
+
+                <TextView
+                    android:id="@+id/choose_profile"
+                    android:layout_width="0dip"
+                    android:layout_height="@dimen/touch_target_min_size"
+                    android:layout_weight="1"
+                    android:background="?android:attr/selectableItemBackground"
+                    android:clickable="true"
+                    android:drawablePadding="@dimen/alarm_horizontal_padding"
+                    android:drawableStart="@drawable/ic_profile"
+                    android:ellipsize="marquee"
+                    android:gravity="center_vertical"
+                    android:marqueeRepeatLimit="marquee_forever"
+                    android:paddingStart="@dimen/icon_margin"
+                    android:scrollHorizontally="true"
+                    android:singleLine="true"
+                    android:textAlignment="viewStart"
+                    android:textColor="@color/clock_white"
+                    android:textSize="@dimen/alarm_text_font_size" />
             </LinearLayout>
 
             <TextView
