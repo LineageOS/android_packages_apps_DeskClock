@@ -41,7 +41,7 @@ import android.telephony.TelephonyManager;
 public class AlarmKlaxon extends Service {
 
     /** Play alarm up to 10 minutes before silencing */
-    private static final int ALARM_TIMEOUT_SECONDS = 10 * 60;
+    private static final int ALARM_TIMEOUT_SECONDS = 30 * 60;
 
     private static final long[] sVibratePattern = new long[] { 500, 500 };
 
