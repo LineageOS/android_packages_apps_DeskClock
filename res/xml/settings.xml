@@ -23,6 +23,11 @@
         android:title="@string/alarm_in_silent_mode_title"
         android:summary="@string/alarm_in_silent_mode_summary" />
 
+    <CheckBoxPreference
+        android:key="alarm_requires_unlock"
+        android:title="@string/alarm_requires_unlock_title"
+        android:summary="@string/alarm_requires_unlock_summary" />
+
     <VolumePreference
         android:title="@string/alarm_volume_title"
         android:summary="@string/alarm_volume_summary"

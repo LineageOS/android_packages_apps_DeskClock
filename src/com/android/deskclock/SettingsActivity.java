@@ -40,7 +40,10 @@ public class SettingsActivity extends PreferenceActivity
             "snooze_duration";
     static final String KEY_VOLUME_BEHAVIOR =
             "volume_button_setting";
-
+    static final String KEY_ALARM_REQUIRES_UNLOCK = 
+    		"alarm_requires_unlock";
+    
+    
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
@@ -73,6 +76,11 @@ public class SettingsActivity extends PreferenceActivity
                     ringerModeStreamTypes);
 
             return true;
+            
+        } else if (KEY_ALARM_REQUIRES_UNLOCK.equals(preference.getKey())) {
+        	CheckBoxPreference pref = (CheckBoxPreference) preference;
+        	Settings.System.putInt(getContentResolver(), KEY_ALARM_REQUIRES_UNLOCK, pref.isChecked() ? 1 : 0);
+        	return true;
         }
 
         return super.onPreferenceTreeClick(preferenceScreen, preference);

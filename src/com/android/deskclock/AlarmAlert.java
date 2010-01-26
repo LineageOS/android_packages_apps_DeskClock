@@ -16,29 +16,26 @@
 
 package com.android.deskclock;
 
+import java.util.Calendar;
+
 import android.app.Activity;
 import android.app.Notification;
 import android.app.NotificationManager;
 import android.app.PendingIntent;
-import android.content.Context;
 import android.content.BroadcastReceiver;
+import android.content.Context;
 import android.content.Intent;
 import android.content.IntentFilter;
-import android.content.SharedPreferences;
-import android.content.res.Configuration;
 import android.os.Bundle;
 import android.preference.PreferenceManager;
+import android.provider.Settings;
 import android.view.KeyEvent;
-import android.view.View;
-import android.view.ViewGroup;
 import android.view.LayoutInflater;
-import android.view.Window;
+import android.view.View;
 import android.view.WindowManager;
 import android.widget.Button;
-import android.widget.Toast;
 import android.widget.TextView;
-
-import java.util.Calendar;
+import android.widget.Toast;
 
 /**
  * Alarm Clock alarm alert: pops visible indicator and plays alarm
@@ -77,11 +74,17 @@ public class AlarmAlert extends Activity {
                         DEFAULT_VOLUME_BEHAVIOR);
         mVolumeBehavior = Integer.parseInt(vol);
 
+        final boolean requireUnlock = Settings.System.getInt(getContentResolver(), SettingsActivity.KEY_ALARM_REQUIRES_UNLOCK, 0) == 1;
+        
         requestWindowFeature(android.view.Window.FEATURE_NO_TITLE);
-        getWindow().addFlags(WindowManager.LayoutParams.FLAG_SHOW_WHEN_LOCKED
-                | WindowManager.LayoutParams.FLAG_DISMISS_KEYGUARD
+        getWindow().addFlags(WindowManager.LayoutParams.FLAG_DISMISS_KEYGUARD
                 | WindowManager.LayoutParams.FLAG_KEEP_SCREEN_ON
                 | WindowManager.LayoutParams.FLAG_TURN_SCREEN_ON);
+        
+        if (!requireUnlock) {
+        	getWindow().addFlags(WindowManager.LayoutParams.FLAG_SHOW_WHEN_LOCKED);
+        }
+        
         updateLayout();
 
         // Register to get the alarm killed intent.

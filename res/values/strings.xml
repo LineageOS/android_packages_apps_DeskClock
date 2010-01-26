@@ -246,6 +246,10 @@
          respond. This is a sign of an error; if the weather widget is not
          present on the device, we show nothing at all. -->
     <string name="weather_fetch_failure">Weather information currently unavailable.</string>
+
+    <string name="alarm_requires_unlock_title">Alarm requires unlock</string>
+    <string name="alarm_requires_unlock_summary">Must unlock phone to disable or snooze alarm</string>
 </resources>
+
 
 
