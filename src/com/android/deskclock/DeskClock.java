@@ -80,6 +80,7 @@ import java.util.Date;
 import java.util.Locale;
 import java.util.Random;
 
+import java.text.SimpleDateFormat;
 /**
  * DeskClock clock view for desk docks.
  */
@@ -253,9 +254,9 @@ public class DeskClock extends Activity {
         if (DEBUG) Log.d(LOG_TAG, (hold ? "hold" : " releas") + "ing wake lock");
         Window win = getWindow();
         WindowManager.LayoutParams winParams = win.getAttributes();
-        winParams.flags |= WindowManager.LayoutParams.FLAG_DISMISS_KEYGUARD;
+//        winParams.flags |= WindowManager.LayoutParams.FLAG_DISMISS_KEYGUARD;
         winParams.flags |= WindowManager.LayoutParams.FLAG_SHOW_WHEN_LOCKED;
-        winParams.flags |= WindowManager.LayoutParams.FLAG_TURN_SCREEN_ON;
+//        winParams.flags |= WindowManager.LayoutParams.FLAG_TURN_SCREEN_ON;
         if (hold)
             winParams.flags |= WindowManager.LayoutParams.FLAG_KEEP_SCREEN_ON;
         else
@@ -560,7 +561,14 @@ public class DeskClock extends Activity {
 
         // reload the date format in case the user has changed settings
         // recently
-        mDateFormat = getString(com.android.internal.R.string.full_wday_month_day_no_year);
+//      mDateFormat = getString(com.android.internal.R.string.full_wday_month_day_no_year);
+
+        final SimpleDateFormat dateFormat 
+    		 = (SimpleDateFormat)java.text.DateFormat.getDateInstance(java.text.DateFormat.FULL);
+        mDateFormat = dateFormat.toPattern()
+                .replace("MMMM", "MMM")    // we want "Sep", not "September"
+                .replace("EEEE", "EEE")     // we want "Fri", no "Friday"
+                .replaceAll("EEE$", "(EEE)");
 
         IntentFilter filter = new IntentFilter();
         filter.addAction(Intent.ACTION_DATE_CHANGED);

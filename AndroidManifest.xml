@@ -15,7 +15,6 @@
 
         <activity android:name="DeskClock"
                 android:label="@string/app_label"
-                android:theme="@android:style/Theme.Wallpaper.NoTitleBar"
                 android:icon="@drawable/ic_widget_analog_clock"
                 android:launchMode="singleInstance"
                 android:configChanges="orientation|keyboardHidden|keyboard|navigation">
@@ -68,7 +67,6 @@
              with the wallpaper background. -->
         <activity android:name="AlarmAlertFullScreen"
                 android:excludeFromRecents="true"
-                android:theme="@android:style/Theme.Wallpaper.NoTitleBar"
                 android:launchMode="singleInstance"
                 android:taskAffinity=""
                 android:configChanges="orientation|keyboardHidden|keyboard|navigation"/>
