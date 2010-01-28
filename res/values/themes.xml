@@ -1,0 +1,26 @@
+<?xml version="1.0" encoding="utf-8"?>
+
+<resources>
+    <!-- Default theme for windows that want to have the user's selected
+    	 wallpaper appear behind them.  -->
+    <style name="Theme.Wallpaper" parent="android:Theme">
+        <item name="android:windowBackground">@android:color/transparent</item>
+<!--
+        <item name="android:colorBackgroundCacheHint">@null</item>
+        <item name="android:windowShowWallpaper">true</item>
+-->
+    </style>
+
+    <!-- Variant of the translucent theme with no title bar -->
+    <style name="Theme.Wallpaper.NoTitleBar">
+        <item name="android:windowNoTitle">true</item>
+    </style>
+
+    <!-- Variant of the translucent theme that has no title bar and
+         fills the entire screen -->
+    <style name="Theme.Wallpaper.NoTitleBar.Fullscreen">
+        <item name="android:windowFullscreen">true</item>
+        <item name="android:windowContentOverlay">@null</item>
+    </style>
+</resources>
+
