@@ -21,6 +21,7 @@ import android.app.AlarmManager;
 import android.app.AlertDialog;
 import android.app.PendingIntent;
 import android.content.BroadcastReceiver;
+import android.content.ComponentName;
 import android.content.Context;
 import android.content.DialogInterface;
 import android.content.Intent;
@@ -687,9 +688,13 @@ public class DeskClock extends Activity {
         musicButton.setOnClickListener(new View.OnClickListener() {
             public void onClick(View v) {
                 try {
-                    Intent musicAppQuery = getPackageManager()
-                        .getLaunchIntentForPackage(MUSIC_PACKAGE_ID)
-                        .addFlags(Intent.FLAG_ACTIVITY_NEW_TASK|Intent.FLAG_ACTIVITY_CLEAR_TOP);
+//                    Intent musicAppQuery = getPackageManager()
+//                        .getLaunchIntentForPackage(MUSIC_PACKAGE_ID)
+//                        .addFlags(Intent.FLAG_ACTIVITY_NEW_TASK|Intent.FLAG_ACTIVITY_CLEAR_TOP);
+                	Intent musicAppQuery = new Intent(Intent.ACTION_MAIN);
+                	musicAppQuery.setComponent(new ComponentName(MUSIC_PACKAGE_ID,"com.android.music.MusicBrowserActivity"));
+                	musicAppQuery.addFlags(Intent.FLAG_ACTIVITY_NEW_TASK|Intent.FLAG_ACTIVITY_CLEAR_TOP);
+
                     if (musicAppQuery != null) {
                         startActivity(musicAppQuery);
                     }
