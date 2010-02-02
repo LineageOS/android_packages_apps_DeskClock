@@ -74,6 +74,11 @@ import static android.os.BatteryManager.BATTERY_STATUS_CHARGING;
 import static android.os.BatteryManager.BATTERY_STATUS_FULL;
 import static android.os.BatteryManager.BATTERY_STATUS_UNKNOWN;
 
+import android.graphics.Bitmap;
+import android.graphics.Canvas;
+import android.graphics.PixelFormat;
+import android.graphics.ColorFilter;
+
 import java.io.IOException;
 import java.io.InputStream;
 import java.util.Calendar;
@@ -210,7 +215,7 @@ public class DeskClock extends Activity {
             } else if (m.what == SCREEN_SAVER_TIMEOUT_MSG) {
                 if (m.arg1 == mIdleTimeoutEpoch) {
                     saveScreen();
-                }
+                }
             } else if (m.what == SCREEN_SAVER_MOVE_MSG) {
                 moveScreenSaver();
             }
@@ -645,6 +650,12 @@ public class DeskClock extends Activity {
 
         setContentView(R.layout.desk_clock);
 
+        // set wallpaper as background by nobunobuta for Donut
+        Window window = getWindow();
+        final BitmapDrawable drawable = (BitmapDrawable) getWallpaper();
+        window.setBackgroundDrawable(
+                new FastBitmapDrawable(drawable.getBitmap()));
+
         mTime = (DigitalClock) findViewById(R.id.time);
         mDate = (TextView) findViewById(R.id.date);
         mBatteryDisplay = (TextView) findViewById(R.id.battery);
@@ -691,9 +702,9 @@ public class DeskClock extends Activity {
 //                    Intent musicAppQuery = getPackageManager()
 //                        .getLaunchIntentForPackage(MUSIC_PACKAGE_ID)
 //                        .addFlags(Intent.FLAG_ACTIVITY_NEW_TASK|Intent.FLAG_ACTIVITY_CLEAR_TOP);
-                	Intent musicAppQuery = new Intent(Intent.ACTION_MAIN);
-                	musicAppQuery.setComponent(new ComponentName(MUSIC_PACKAGE_ID,"com.android.music.MusicBrowserActivity"));
-                	musicAppQuery.addFlags(Intent.FLAG_ACTIVITY_NEW_TASK|Intent.FLAG_ACTIVITY_CLEAR_TOP);
+                    Intent musicAppQuery = new Intent(Intent.ACTION_MAIN);
+                    musicAppQuery.setComponent(new ComponentName(MUSIC_PACKAGE_ID,"com.android.music.MusicBrowserActivity"));
+                    musicAppQuery.addFlags(Intent.FLAG_ACTIVITY_NEW_TASK|Intent.FLAG_ACTIVITY_CLEAR_TOP);
 
                     if (musicAppQuery != null) {
                         startActivity(musicAppQuery);
@@ -789,4 +800,59 @@ public class DeskClock extends Activity {
         initViews();
     }
 
+    /**
+     * Used to put wallpaper on the background of the lock screen.  Centers it Horizontally and
+     * vertically.
+     */
+    static private class FastBitmapDrawable extends Drawable {
+        private Bitmap mBitmap;
+        private int mOpacity;
+
+        private FastBitmapDrawable(Bitmap bitmap) {
+            mBitmap = bitmap;
+            mOpacity = mBitmap.hasAlpha() ? PixelFormat.TRANSLUCENT : PixelFormat.OPAQUE;
+        }
+
+        @Override
+        public void draw(Canvas canvas) {
+            canvas.drawBitmap(
+                    mBitmap,
+                    (getBounds().width() - mBitmap.getWidth()) / 2,
+                    (getBounds().height() - mBitmap.getHeight()) / 2,
+                    null);
+        }
+
+        @Override
+        public int getOpacity() {
+            return mOpacity;
+        }
+
+        @Override
+        public void setAlpha(int alpha) {
+        }
+
+        @Override
+        public void setColorFilter(ColorFilter cf) {
+        }
+
+        @Override
+        public int getIntrinsicWidth() {
+            return mBitmap.getWidth();
+        }
+
+        @Override
+        public int getIntrinsicHeight() {
+            return mBitmap.getHeight();
+        }
+
+        @Override
+        public int getMinimumWidth() {
+            return mBitmap.getWidth();
+        }
+
+        @Override
+        public int getMinimumHeight() {
+            return mBitmap.getHeight();
+        }
+    }
 }
