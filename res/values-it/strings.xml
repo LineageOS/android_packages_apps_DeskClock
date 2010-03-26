@@ -88,7 +88,7 @@
     <string name="alarm_notify_snooze_label" msgid="5404083762646377829">"<xliff:g id="LABEL">%s</xliff:g> (sospeso)"</string>
     <string name="alarm_notify_snooze_text" msgid="8004830999152609519">"L\'allarme sarà attivato alle <xliff:g id="TIME">%s</xliff:g>. Seleziona per annullare."</string>
     <string name="volume_button_setting_title" msgid="1892885285888644234">"Comp. pulsante laterale"</string>
-    <string name="volume_button_setting_summary" msgid="1594641247799573198">"Imposta il comport. dei puls. laterali quando vengono premuti durante un allarme"</string>
+    <string name="volume_button_setting_summary" msgid="1594641247799573198">"Imposta il comportamento dei pulsanti laterali durante l\'allarme"</string>
   <string-array name="volume_button_setting_entries">
     <item msgid="4520420953175098625">"Nessuno"</item>
     <item msgid="7111908302622811168">"Sospendi"</item>
@@ -108,8 +108,8 @@
     <string name="battery_charging_level" msgid="4391767951302394083">"<xliff:g id="NUMBER">%d</xliff:g><xliff:g id="PERCENT">%%</xliff:g>"</string>
     <string name="weather_fetch_failure" msgid="7517010911981312358">"Informazioni meteo attualmente non disponibili"</string>
     
-    <string name="alarm_requires_unlock_title">Sblocco richiesto</string>
-    <string name="alarm_requires_unlock_summary">Seleziona se vuoi dover sbloccare lo schermo prima di disattivare o posticipare un allarme</string>
+    <string name="alarm_requires_unlock_title">"Sblocco richiesto"</string>
+    <string name="alarm_requires_unlock_summary">"Sblocca lo schermo prima di disattivare o posticipare la sveglia"</string>
     <string name="menu_item_dock_settings" msgid="3524235151132971114">"Impostazioni dock"</string>
 </resources>
 
