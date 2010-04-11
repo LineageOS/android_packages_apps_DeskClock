@@ -101,6 +101,9 @@ public class DeskClock extends Activity {
     // Alarm action for midnight (so we can update the date display).
     private static final String ACTION_MIDNIGHT = "com.android.deskclock.MIDNIGHT";
 
+    // Intent to broadcast for dock settings.
+    private static final String DOCK_SETTINGS_ACTION = "com.android.settings.DOCK_SETTINGS";
+
     // Interval between polls of the weather widget. Its refresh period is
     // likely to be much longer (~3h), but we want to pick up any changes
     // within 5 minutes.
@@ -174,8 +177,6 @@ public class DeskClock extends Activity {
 
     private boolean mLaunchedFromDock = false;
 
-    private int mIdleTimeoutEpoch = 0;
-
     private Random mRNG;
 
     private PendingIntent mMidnightIntent;
@@ -184,7 +185,8 @@ public class DeskClock extends Activity {
         @Override
         public void onReceive(Context context, Intent intent) {
             final String action = intent.getAction();
-            if (Intent.ACTION_DATE_CHANGED.equals(action)) {
+            if (DEBUG) Log.d(LOG_TAG, "mIntentReceiver.onReceive: action=" + action + ", intent=" + intent);
+            if (Intent.ACTION_DATE_CHANGED.equals(action) || ACTION_MIDNIGHT.equals(action)) {
                 refreshDate();
             } else if (Intent.ACTION_BATTERY_CHANGED.equals(action)) {
                 handleBatteryUpdate(
@@ -213,9 +215,7 @@ public class DeskClock extends Activity {
             } else if (m.what == UPDATE_WEATHER_DISPLAY_MSG) {
                 updateWeatherDisplay();
             } else if (m.what == SCREEN_SAVER_TIMEOUT_MSG) {
-                if (m.arg1 == mIdleTimeoutEpoch) {
-                    saveScreen();
-                }
+                saveScreen();
             } else if (m.what == SCREEN_SAVER_MOVE_MSG) {
                 moveScreenSaver();
             }
@@ -270,6 +270,14 @@ public class DeskClock extends Activity {
         win.setAttributes(winParams);
     }
 
+    private void scheduleScreenSaver() {
+        // reschedule screen saver
+        mHandy.removeMessages(SCREEN_SAVER_TIMEOUT_MSG);
+        mHandy.sendMessageDelayed(
+            Message.obtain(mHandy, SCREEN_SAVER_TIMEOUT_MSG),
+            SCREEN_SAVER_TIMEOUT);
+    }
+
     private void restoreScreen() {
         if (!mScreenSaverMode) return;
         if (DEBUG) Log.d(LOG_TAG, "restoreScreen");
@@ -278,6 +286,9 @@ public class DeskClock extends Activity {
         doDim(false); // restores previous dim mode
         // policy: update weather info when returning from screen saver
         if (mPluggedIn) requestWeatherDataFetch();
+
+        scheduleScreenSaver();
+
         refreshAll();
     }
 
@@ -584,10 +595,17 @@ public class DeskClock extends Activity {
         registerReceiver(mIntentReceiver, filter);
 
         Calendar today = Calendar.getInstance();
+        today.set(Calendar.HOUR_OF_DAY, 0);
+        today.set(Calendar.MINUTE, 0);
+        today.set(Calendar.SECOND, 0);
         today.add(Calendar.DATE, 1);
+        long alarmTimeUTC = today.getTimeInMillis() + today.get(Calendar.ZONE_OFFSET);
         mMidnightIntent = PendingIntent.getBroadcast(this, 0, new Intent(ACTION_MIDNIGHT), 0);
         AlarmManager am = (AlarmManager) getSystemService(Context.ALARM_SERVICE);
-        am.setRepeating(AlarmManager.RTC, today.getTimeInMillis(), AlarmManager.INTERVAL_DAY, mMidnightIntent);
+        am.setRepeating(AlarmManager.RTC, alarmTimeUTC, AlarmManager.INTERVAL_DAY, mMidnightIntent);
+        if (DEBUG) Log.d(LOG_TAG, "set repeating midnight event at "
+            + alarmTimeUTC + " repeating every "
+            + AlarmManager.INTERVAL_DAY + " with intent: " + mMidnightIntent);
 
         // un-dim when resuming
         mDimmed = false;
@@ -598,10 +616,7 @@ public class DeskClock extends Activity {
 
         setWakeLock(mPluggedIn);
 
-        mIdleTimeoutEpoch++;
-        mHandy.sendMessageDelayed(
-            Message.obtain(mHandy, SCREEN_SAVER_TIMEOUT_MSG, mIdleTimeoutEpoch, 0),
-            SCREEN_SAVER_TIMEOUT);
+        scheduleScreenSaver();
 
         final boolean launchedFromDock
             = getIntent().hasCategory(Intent.CATEGORY_DESK_DOCK);
@@ -619,7 +634,9 @@ public class DeskClock extends Activity {
     public void onPause() {
         if (DEBUG) Log.d(LOG_TAG, "onPause");
 
-        // Turn off the screen saver. (But don't un-dim.)
+        // Turn off the screen saver and cancel any pending timeouts.
+        // (But don't un-dim.)
+        mHandy.removeMessages(SCREEN_SAVER_TIMEOUT_MSG);
         restoreScreen();
 
         // Other things we don't want to be doing in the background.
@@ -767,14 +784,19 @@ public class DeskClock extends Activity {
 
     @Override
     public boolean onOptionsItemSelected(MenuItem item) {
-        if (item.getItemId() == R.id.menu_item_alarms) {
-            startActivity(new Intent(DeskClock.this, AlarmClock.class));
-            return true;
-        } else if (item.getItemId() == R.id.menu_item_add_alarm) {
-            AlarmClock.addNewAlarm(this);
-            return true;
+        switch (item.getItemId()) {
+            case R.id.menu_item_alarms:
+                startActivity(new Intent(DeskClock.this, AlarmClock.class));
+                return true;
+            case R.id.menu_item_add_alarm:
+                AlarmClock.addNewAlarm(this);
+                return true;
+            case R.id.menu_item_dock_settings:
+                startActivity(new Intent(DOCK_SETTINGS_ACTION));
+                return true;
+            default:
+                return false;
         }
-        return false;
     }
 
     @Override
