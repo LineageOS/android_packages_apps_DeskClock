@@ -215,7 +215,7 @@ public class DeskClock extends Activity {
             } else if (m.what == SCREEN_SAVER_TIMEOUT_MSG) {
                 if (m.arg1 == mIdleTimeoutEpoch) {
                     saveScreen();
-                }
+                }
             } else if (m.what == SCREEN_SAVER_MOVE_MSG) {
                 moveScreenSaver();
             }
