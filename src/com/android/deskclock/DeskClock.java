@@ -102,15 +102,15 @@ public class DeskClock extends Activity {
     // within 5 minutes.
     private final long QUERY_WEATHER_DELAY = 5 * 60 * 1000; // 5 min
 
-    // Delay before engaging the burn-in protection mode (green-on-black).
-    private final long SCREEN_SAVER_TIMEOUT = 5* 60 * 1000; // 10 min
+    // Delay before engaging the burn-in protection mode (cyan-on-black).
+    private final long SCREEN_SAVER_TIMEOUT = 5* 60 * 1000; // 5 min
 
     // Repositioning delay in screen saver.
     private final long SCREEN_SAVER_MOVE_DELAY = 60 * 1000; // 1 min
 
     // Color to use for text & graphics in screen saver mode.
-    private final int SCREEN_SAVER_COLOR = 0xFF308030;
-    private final int SCREEN_SAVER_COLOR_DIM = 0xFF183018;
+    private final int SCREEN_SAVER_COLOR = 0xFF00C0FF;
+    private final int SCREEN_SAVER_COLOR_DIM = 0xFF00BAFF;
 
     // Opacity of black layer between clock display and wallpaper.
     private final float DIM_BEHIND_AMOUNT_NORMAL = 0.4f;
