@@ -110,7 +110,7 @@ public class DeskClock extends Activity {
 
     // Color to use for text & graphics in screen saver mode.
     private final int SCREEN_SAVER_COLOR = 0xFF00C0FF;
-    private final int SCREEN_SAVER_COLOR_DIM = 0xFF00BAFF;
+    private final int SCREEN_SAVER_COLOR_DIM = 0xFF004880;
 
     // Opacity of black layer between clock display and wallpaper.
     private final float DIM_BEHIND_AMOUNT_NORMAL = 0.4f;
