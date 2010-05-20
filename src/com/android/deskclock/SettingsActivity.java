@@ -42,6 +42,8 @@ public class SettingsActivity extends PreferenceActivity
             "volume_button_setting";
     static final String KEY_ALARM_REQUIRES_UNLOCK = 
     		"alarm_requires_unlock";
+    static final String KEY_ALARM_LIMIT =
+    		"alarm_limit";
     
     
     @Override
@@ -106,6 +108,12 @@ public class SettingsActivity extends PreferenceActivity
                 (ListPreference) findPreference(KEY_ALARM_SNOOZE);
         snooze.setSummary(snooze.getEntry());
         snooze.setOnPreferenceChangeListener(this);
+        
+        final ListPreference alarmlimit =
+        		(ListPreference) findPreference(KEY_ALARM_LIMIT);
+        alarmlimit.setSummary(alarmlimit.getEntry());
+        alarmlimit.setOnPreferenceChangeListener(this);
+        
     }
 
 }

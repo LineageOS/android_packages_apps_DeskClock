@@ -51,4 +51,11 @@
         android:summary="@string/volume_button_setting_summary"
         android:defaultValue="2" />
 
+	<ListPreference
+		android:key="alarm_limit"
+		android:title="@string/alarm_limit_title"
+        android:entries="@array/alarm_limit_entries"
+        android:entryValues="@array/alarm_limit_values"
+        android:defaultValue="30" />
+		
 </PreferenceScreen>

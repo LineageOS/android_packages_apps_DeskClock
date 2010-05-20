@@ -31,6 +31,7 @@ import android.os.Handler;
 import android.os.IBinder;
 import android.os.Message;
 import android.os.Vibrator;
+import android.preference.PreferenceManager;
 import android.telephony.PhoneStateListener;
 import android.telephony.TelephonyManager;
 
@@ -41,7 +42,18 @@ import android.telephony.TelephonyManager;
 public class AlarmKlaxon extends Service {
 
     /** Play alarm up to 10 minutes before silencing */
-    private static final int ALARM_TIMEOUT_SECONDS = 30 * 60;
+/**    private static final int ALARM_TIMEOUT_SECONDS = 30 * 60; */
+	
+	private static final String DEFAULT_ALARM_LIMIT = "30";
+	
+	final String alarmdur =
+        PreferenceManager.getDefaultSharedPreferences(this)
+        .getString(SettingsActivity.KEY_ALARM_LIMIT, DEFAULT_ALARM_LIMIT);
+
+	int alarmtimeout = Integer.parseInt(alarmdur);
+		
+	private final int ALARM_TIMEOUT_SECONDS = alarmtimeout * 60;
+	
 
     private static final long[] sVibratePattern = new long[] { 500, 500 };
 
