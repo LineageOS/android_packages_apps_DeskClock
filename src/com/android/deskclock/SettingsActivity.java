@@ -40,7 +40,9 @@ public class SettingsActivity extends PreferenceActivity
             "snooze_duration";
     static final String KEY_VOLUME_BEHAVIOR =
             "volume_button_setting";
-
+    static final String KEY_ALARM_LIMIT =
+    		"alarm_limit";
+    
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
@@ -98,6 +100,12 @@ public class SettingsActivity extends PreferenceActivity
                 (ListPreference) findPreference(KEY_ALARM_SNOOZE);
         snooze.setSummary(snooze.getEntry());
         snooze.setOnPreferenceChangeListener(this);
+        
+        final ListPreference alarmlimit =
+        		(ListPreference) findPreference(KEY_ALARM_LIMIT);
+        alarmlimit.setSummary(alarmlimit.getEntry());
+        alarmlimit.setOnPreferenceChangeListener(this);
+        
     }
 
 }
