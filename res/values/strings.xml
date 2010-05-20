@@ -251,9 +251,34 @@
     <string name="weather_fetch_failure">Weather information currently unavailable.</string>
 
     <string name="menu_item_dock_settings" msgid="9161438664257429372">Dock settings</string>
+    
+    <!-- Setting title for setting alarm time limit -->
+    <string name="alarm_limit_title">Maximum alarm duration</string>
 
     <string name="alarm_klaxon_service_desc">Sound playback service for alarms set in DeskClock.</string>
 
+    <!-- Entries listed in the ListPreference when invoking the snooze duration
+         preference. -->
+    <string-array name="alarm_limit_entries">
+      <item>15 minutes</item>
+      <item>30 minutes</item>
+      <item>45 minutes</item>
+      <item>60 minutes</item>
+      <item>90 minutes</item>
+      <item>120 minutes</item>
+    </string-array>
+
+    <!-- Values that are retrieved from the ListPreference. These must match
+         the alarm_limit_entries above. -->
+    <string-array name="alarm_limit_values">
+      <item>15</item>
+      <item>30</item>
+      <item>45</item>
+      <item>60</item>
+      <item>90</item>
+      <item>120</item>
+    </string-array>
+    
 </resources>
 
 
