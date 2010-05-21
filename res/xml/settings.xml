@@ -52,6 +52,7 @@
 		android:title="@string/alarm_limit_title"
         android:entries="@array/alarm_limit_entries"
         android:entryValues="@array/alarm_limit_values"
-        android:defaultValue="30" />
+        android:defaultValue="30" 
+        android:dialogTitle="@string/alarm_limit_title"/>
 		
 </PreferenceScreen>
