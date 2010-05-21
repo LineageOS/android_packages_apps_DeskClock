@@ -257,12 +257,12 @@
 
     <string name="alarm_klaxon_service_desc">Sound playback service for alarms set in DeskClock.</string>
 
-    <!-- Entries listed in the ListPreference when invoking the snooze duration
+    <!-- Entries listed in the ListPreference when invoking the max alarm duration
          preference. -->
     <string-array name="alarm_limit_entries">
+      <item>5 minutes</item>
       <item>15 minutes</item>
       <item>30 minutes</item>
-      <item>45 minutes</item>
       <item>60 minutes</item>
       <item>90 minutes</item>
       <item>120 minutes</item>
@@ -271,9 +271,9 @@
     <!-- Values that are retrieved from the ListPreference. These must match
          the alarm_limit_entries above. -->
     <string-array name="alarm_limit_values">
+      <item>5</item>
       <item>15</item>
       <item>30</item>
-      <item>45</item>
       <item>60</item>
       <item>90</item>
       <item>120</item>
