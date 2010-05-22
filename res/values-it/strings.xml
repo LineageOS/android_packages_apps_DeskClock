@@ -111,6 +111,20 @@
     <string name="alarm_requires_unlock_title">"Sblocco richiesto"</string>
     <string name="alarm_requires_unlock_summary">"Sblocca lo schermo prima di disattivare o posticipare la sveglia"</string>
     <string name="menu_item_dock_settings" msgid="3524235151132971114">"Impostazioni dock"</string>
+
+  <!-- Setting title for setting alarm time limit -->
+    <string name="alarm_limit_title">Durata massima dell\'allarme</string>
+
+    <!-- Entries listed in the ListPreference when invoking the max alarm duration
+         preference. -->
+    <string-array name="alarm_limit_entries">
+      <item>5 minuti</item>
+      <item>15 minuti</item>
+      <item>30 minuti</item>
+      <item>60 minuti</item>
+      <item>90 minuti</item>
+      <item>120 minuti</item>
+    </string-array>
 </resources>
 
 
