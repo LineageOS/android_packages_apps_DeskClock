@@ -111,4 +111,18 @@
     <string name="weather_fetch_failure" msgid="7517010911981312358">"天気予報は現在ご利用いただけません。"</string>
     <string name="menu_item_dock_settings" msgid="3524235151132971114">"ドックの設定"</string>
     <string name="alarm_klaxon_service_desc" msgid="2153290655559916468">"卓上時計で設定したアラーム用のサウンド再生サービスです。"</string>
+
+    <string name="alarm_requires_unlock_title">アラーム停止にアンロックを要求</string>
+    <string name="alarm_requires_unlock_summary">アラームをスヌーズ/停止するために、端末のアンロックをしなくてはならない</string>
+
+    <string name="alarm_limit_title">アラームの最大持続時間</string>
+    <string-array name="alarm_limit_entries">
+      <item>5 分</item>
+      <item>15 分</item>
+      <item>30 分</item>
+      <item>60 分</item>
+      <item>90 分</item>
+      <item>120 分</item>
+    </string-array>
+
 </resources>
