@@ -125,4 +125,18 @@
       <item>90 Minuten</item>
       <item>120 Minuten</item>
     </string-array>
+    
+    <!-- Setting title for setting alarm time limit -->
+    <string name="screensaver_timeout_title">Screensaver timeout</string>
+    
+    <!-- Entries listed in the ListPreference when invoking the max alarm duration
+         preference. -->
+    <string-array name="screensaver_timeout_entries">
+      <item>1 Minute</item>
+      <item>5 Minuten</item>
+      <item>10 Minuten</item>
+      <item>15 Minuten</item>
+      <item>30 Minuten</item>
+      <item>60 Minuten</item>
+    </string-array>
 </resources>

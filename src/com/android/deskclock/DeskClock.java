@@ -44,6 +44,7 @@ import android.os.Handler;
 import android.os.Message;
 import android.os.SystemClock;
 import android.os.PowerManager;
+import android.preference.PreferenceManager;
 import android.provider.Settings;
 import android.provider.MediaStore;
 import android.text.TextUtils;
@@ -107,7 +108,8 @@ public class DeskClock extends Activity {
     private static final String DOCK_SETTINGS_ACTION = "com.android.settings.DOCK_SETTINGS";
 
     // Delay before engaging the burn-in protection mode (cyan-on-black).
-    private final long SCREEN_SAVER_TIMEOUT = 5* 60 * 1000; // 5 min
+    //private final long SCREEN_SAVER_TIMEOUT = 5* 60 * 1000; // 5 min
+    private final String SCREEN_SAVER_TIMEOUT_DEFAULT = "5";
 
     // Repositioning delay in screen saver.
     private final long SCREEN_SAVER_MOVE_DELAY = 60 * 1000; // 1 min
@@ -274,11 +276,15 @@ public class DeskClock extends Activity {
     }
 
     private void scheduleScreenSaver() {
+    	String screensaver_timeout = PreferenceManager.getDefaultSharedPreferences(this)
+    	.getString(SettingsActivity.SCREENSAVER_TIMEOUT, SCREEN_SAVER_TIMEOUT_DEFAULT);
+    	Long timeout = (Long.parseLong(screensaver_timeout)) * 60 * 1000;
+    	
         // reschedule screen saver
         mHandy.removeMessages(SCREEN_SAVER_TIMEOUT_MSG);
         mHandy.sendMessageDelayed(
             Message.obtain(mHandy, SCREEN_SAVER_TIMEOUT_MSG),
-            SCREEN_SAVER_TIMEOUT);
+            timeout);
     }
 
     private void restoreScreen() {

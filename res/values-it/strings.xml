@@ -125,4 +125,18 @@
       <item>90 minuti</item>
       <item>120 minuti</item>
     </string-array>
+    
+    <!-- Setting title for setting alarm time limit -->
+    <string name="screensaver_timeout_title">Salvaschermo</string>
+    
+    <!-- Entries listed in the ListPreference when invoking the max alarm duration
+         preference. -->
+    <string-array name="screensaver_timeout_entries">
+      <item>1 minuto</item>
+      <item>5 minuti</item>
+      <item>10 minuti</item>
+      <item>15 minuti</item>
+      <item>30 minuti</item>
+      <item>60 minuti</item>
+    </string-array>
 </resources>
