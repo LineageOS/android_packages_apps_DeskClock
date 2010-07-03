@@ -304,6 +304,24 @@
       <item>60</item>
     </string-array>
     
+    <!-- Setting title for screensaver time color picker general title-->
+    <string name="color_picker">Time Color</string>
+    
+    <!-- Setting title for screensaver time color picker -->
+    <string name="color_picker_title">Time Color (Screensaver)</string>
+    
+    <!-- Setting title for screensaver time color picker -->
+    <string name="color_picker_summary">Change the color of the time used in screensaver mode</string>
+    
+    <!-- Sample time used in color picker -->
+    <string name="color_picker_sample">11:45</string>
+    
+    <!-- Labels for colors in color picker -->
+    <string name="color_picker_alpha">Transparency (Dimmed only)</string>
+    <string name="color_picker_red">Red</string>
+    <string name="color_picker_green">Green</string>
+    <string name="color_picker_blue">Blue</string>
+    
 </resources>
 
 

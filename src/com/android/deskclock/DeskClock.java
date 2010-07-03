@@ -33,6 +33,7 @@ import android.content.res.Configuration;
 import android.content.res.Resources;
 import android.database.ContentObserver;
 import android.database.Cursor;
+import android.graphics.Color;
 import android.graphics.Rect;
 import android.graphics.drawable.BitmapDrawable;
 import android.graphics.drawable.ColorDrawable;
@@ -107,16 +108,19 @@ public class DeskClock extends Activity {
     // Intent to broadcast for dock settings.
     private static final String DOCK_SETTINGS_ACTION = "com.android.settings.DOCK_SETTINGS";
 
-    // Delay before engaging the burn-in protection mode (cyan-on-black).
-    //private final long SCREEN_SAVER_TIMEOUT = 5* 60 * 1000; // 5 min
+    // Default delay before engaging the burn-in protection mode (can be changed on settings)
     private final String SCREEN_SAVER_TIMEOUT_DEFAULT = "5";
 
     // Repositioning delay in screen saver.
     private final long SCREEN_SAVER_MOVE_DELAY = 60 * 1000; // 1 min
 
     // Color to use for text & graphics in screen saver mode.
-    private final int SCREEN_SAVER_COLOR = 0xFF00C0FF;
-    private final int SCREEN_SAVER_COLOR_DIM = 0xFF004880;
+//    private final int SCREEN_SAVER_COLOR = 0xFF00C0FF;
+//    private final int SCREEN_SAVER_COLOR_DIM = 0xFF004880;
+    static final int DEFAULT_SCREENSAVER_COLOR_ALPHA = 130;
+    static final int DEFAULT_SCREENSAVER_COLOR_RED = 0;
+    static final int DEFAULT_SCREENSAVER_COLOR_GREEN = 192;
+    static final int DEFAULT_SCREENSAVER_COLOR_BLUE = 255;
 
     // Opacity of black layer between clock display and wallpaper.
     private final float DIM_BEHIND_AMOUNT_NORMAL = 0.4f;
@@ -326,7 +330,21 @@ public class DeskClock extends Activity {
         mTime = (DigitalClock) findViewById(R.id.time);
         mDate = (TextView) findViewById(R.id.date);
         mNextAlarm = (TextView) findViewById(R.id.nextAlarm);
+        
+        SharedPreferences mPrefs = PreferenceManager.getDefaultSharedPreferences(this);
+        
+        int aColor = new Integer(mPrefs.getInt(
+				SettingsActivity.SCREENSAVER_COLOR_ALPHA, DeskClock.DEFAULT_SCREENSAVER_COLOR_ALPHA));
+        int rColor = new Integer(mPrefs.getInt(
+        		SettingsActivity.SCREENSAVER_COLOR_RED, DeskClock.DEFAULT_SCREENSAVER_COLOR_RED));
+        int gColor = new Integer(mPrefs.getInt(
+        		SettingsActivity.SCREENSAVER_COLOR_GREEN, DeskClock.DEFAULT_SCREENSAVER_COLOR_GREEN));
+        int bColor = new Integer(mPrefs.getInt(
+        		SettingsActivity.SCREENSAVER_COLOR_BLUE, DeskClock.DEFAULT_SCREENSAVER_COLOR_BLUE));
 
+        int SCREEN_SAVER_COLOR_DIM = Color.argb(aColor, rColor, gColor, bColor);
+        int SCREEN_SAVER_COLOR = Color.argb(255, rColor, gColor, bColor);
+        
         final int color = mDimmed ? SCREEN_SAVER_COLOR_DIM : SCREEN_SAVER_COLOR;
 
         ((TextView)findViewById(R.id.timeDisplay)).setTextColor(color);
