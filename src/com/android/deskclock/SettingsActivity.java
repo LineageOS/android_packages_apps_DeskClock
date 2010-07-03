@@ -42,6 +42,8 @@ public class SettingsActivity extends PreferenceActivity
             "volume_button_setting";
     static final String KEY_ALARM_LIMIT =
     		"alarm_limit";
+    static final String SCREENSAVER_TIMEOUT =
+		"screensaver_timeout";
     
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -105,6 +107,11 @@ public class SettingsActivity extends PreferenceActivity
         		(ListPreference) findPreference(KEY_ALARM_LIMIT);
         alarmlimit.setSummary(alarmlimit.getEntry());
         alarmlimit.setOnPreferenceChangeListener(this);
+        
+        final ListPreference screensaver_timeout =
+    		(ListPreference) findPreference(SCREENSAVER_TIMEOUT);
+        screensaver_timeout.setSummary(screensaver_timeout.getEntry());
+        screensaver_timeout.setOnPreferenceChangeListener(this);
         
     }
 
