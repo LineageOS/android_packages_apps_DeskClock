@@ -62,5 +62,15 @@
         android:entryValues="@array/screensaver_timeout_values"
         android:defaultValue="5" 
         android:dialogTitle="@string/screensaver_timeout_title"/>
+        
+	<PreferenceScreen
+			android:key="color_picker"
+			android:title="@string/color_picker_title"
+			android:summary="@string/color_picker_summary">
+			<intent
+				android:action="com.android.alarmclock.ColorPicker"
+				android:targetPackage="com.android.alarmclock"
+				android.targetClass="com.android.alarmclock.ColorPicker"/>
+		</PreferenceScreen>
 		
 </PreferenceScreen>

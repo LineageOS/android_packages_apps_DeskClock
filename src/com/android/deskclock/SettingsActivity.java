@@ -44,6 +44,16 @@ public class SettingsActivity extends PreferenceActivity
     		"alarm_limit";
     static final String SCREENSAVER_TIMEOUT =
 		"screensaver_timeout";
+    static final String SCREENSAVER_COLOR =
+		"screensaver_color";
+    static final String SCREENSAVER_COLOR_ALPHA = 
+    	"screensaver_color_alpha";
+	static final String SCREENSAVER_COLOR_RED = 
+		"screensaver_color_red";
+	static final String SCREENSAVER_COLOR_GREEN = 
+		"screensaver_color_green";
+	static final String SCREENSAVER_COLOR_BLUE = 
+		"screensaver_color_blue";
     
     @Override
     protected void onCreate(Bundle savedInstanceState) {

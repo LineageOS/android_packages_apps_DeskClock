@@ -56,6 +56,18 @@
                 <action android:name="android.intent.action.MAIN" />
             </intent-filter>
         </activity>
+        
+        <activity 
+        	android:name="ColorPicker" 
+			android:label="@string/color_picker"
+			android:taskAffinity=""
+			android:excludeFromRecents="true"
+			android:theme="@android:style/Theme.Dialog">
+			<intent-filter>
+            	<action android:name="com.android.alarmclock.ColorPicker" />
+            	<category android:name="android.intent.category.DEFAULT" />
+            </intent-filter>
+		</activity>
 
         <activity android:name="SetAlarm" android:label="@string/set_alarm"
                 android:configChanges="orientation|keyboardHidden|keyboard|navigation" />
