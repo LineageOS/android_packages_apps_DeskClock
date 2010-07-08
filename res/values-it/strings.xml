@@ -139,4 +139,22 @@
       <item>30 minuti</item>
       <item>60 minuti</item>
     </string-array>
+   
+    <!-- Setting title for screensaver time color picker general title-->
+    <string name="color_picker">Colore ora</string>
+    
+    <!-- Setting title for screensaver time color picker -->
+    <string name="color_picker_title">Colore ora (Screensaver)</string>
+    
+    <!-- Setting title for screensaver time color picker -->
+    <string name="color_picker_summary">Cambia il colore dell'ora visualizzata in modalità screensaver</string>
+    
+    <!-- Sample time used in color picker -->
+    <string name="color_picker_sample">11:45</string>
+    
+    <!-- Labels for colors in color picker -->
+    <string name="color_picker_alpha">Luminosità</string>
+    <string name="color_picker_red">Rosso</string>
+    <string name="color_picker_green">Verde</string>
+    <string name="color_picker_blue">Blu</string>
 </resources>
