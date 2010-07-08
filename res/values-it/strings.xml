@@ -146,7 +146,7 @@
     <string name="color_picker_title">Colore ora (Screensaver)</string>
     
     <!-- Setting title for screensaver time color picker -->
-    <string name="color_picker_summary">Cambia il colore dell'ora visualizzata in modalità screensaver</string>
+    <string name="color_picker_summary">Cambia il colore dell\'ora visualizzata in modalità screensaver</string>
     
     <!-- Sample time used in color picker -->
     <string name="color_picker_sample">11:45</string>
