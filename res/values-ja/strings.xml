@@ -123,6 +123,7 @@
       <item>60 分</item>
       <item>90 分</item>
       <item>120 分</item>
+    </string-array>
 
     <!-- Setting title for setting alarm time limit -->
     <string name="screensaver_timeout_title">スクリーンセーバータイムアウト</string>
