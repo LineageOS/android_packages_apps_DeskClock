@@ -33,7 +33,10 @@ import android.content.res.Configuration;
 import android.content.res.Resources;
 import android.database.ContentObserver;
 import android.database.Cursor;
+import android.graphics.Bitmap;
 import android.graphics.Color;
+import android.graphics.PorterDuff;
+import android.graphics.PorterDuffColorFilter;
 import android.graphics.Rect;
 import android.graphics.drawable.BitmapDrawable;
 import android.graphics.drawable.ColorDrawable;
@@ -349,10 +352,12 @@ public class DeskClock extends Activity {
         ((TextView)findViewById(R.id.am_pm)).setTextColor(color);
         mDate.setTextColor(color);
         mNextAlarm.setTextColor(color);
+		
+		//color alarm icon to match chosen color
+        Drawable alarmIcon = getResources().getDrawable(R.drawable.ic_lock_idle_alarm_saver);
+        alarmIcon.setColorFilter(new PorterDuffColorFilter(color, PorterDuff.Mode.MULTIPLY));
         mNextAlarm.setCompoundDrawablesWithIntrinsicBounds(
-            getResources().getDrawable(mDimmed
-                ? R.drawable.ic_lock_idle_alarm_saver_dim
-                : R.drawable.ic_lock_idle_alarm_saver),
+        		alarmIcon,
             null, null, null);
 
         mBatteryDisplay =
@@ -367,7 +372,7 @@ public class DeskClock extends Activity {
 
         moveScreenSaverTo(oldLoc[0], oldLoc[1]);
     }
-
+	
     @Override
     public void onUserInteraction() {
         if (mScreenSaverMode)
