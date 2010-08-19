@@ -251,7 +251,7 @@
     <string name="weather_fetch_failure">Weather information currently unavailable.</string>
 
     <string name="menu_item_dock_settings" msgid="9161438664257429372">Dock settings</string>
-    
+
     <!-- Setting title for setting alarm time limit -->
     <string name="alarm_limit_title">Maximum alarm duration</string>
 
@@ -278,10 +278,10 @@
       <item>90</item>
       <item>120</item>
     </string-array>
-    
+
     <!-- Setting title for setting alarm time limit -->
     <string name="screensaver_timeout_title">Screensaver timeout</string>
-    
+
     <!-- Entries listed in the ListPreference when invoking the max alarm duration
          preference. -->
     <string-array name="screensaver_timeout_entries">
@@ -303,25 +303,25 @@
       <item>30</item>
       <item>60</item>
     </string-array>
-    
+
     <!-- Setting title for screensaver time color picker general title-->
     <string name="color_picker">Time Color</string>
-    
+
     <!-- Setting title for screensaver time color picker -->
     <string name="color_picker_title">Time Color (Screensaver)</string>
-    
+
     <!-- Setting title for screensaver time color picker -->
     <string name="color_picker_summary">Change the color of the time used in screensaver mode</string>
-    
+
     <!-- Sample time used in color picker -->
     <string name="color_picker_sample">11:45</string>
-    
+
     <!-- Labels for colors in color picker -->
     <string name="color_picker_alpha">Transparency (Dimmed only)</string>
     <string name="color_picker_red">Red</string>
     <string name="color_picker_green">Green</string>
     <string name="color_picker_blue">Blue</string>
-    
+
 </resources>
 
 
