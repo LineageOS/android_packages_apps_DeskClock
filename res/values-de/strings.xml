@@ -124,10 +124,10 @@
       <item>90 Minuten</item>
       <item>120 Minuten</item>
     </string-array>
-    
+
     <!-- Setting title for setting alarm time limit -->
     <string name="screensaver_timeout_title">Screensaver timeout</string>
-    
+
     <!-- Entries listed in the ListPreference when invoking the max alarm duration
          preference. -->
     <string-array name="screensaver_timeout_entries">
@@ -138,4 +138,20 @@
       <item>30 Minuten</item>
       <item>60 Minuten</item>
     </string-array>
+
+    <!-- Setting title for screensaver time color picker general title-->
+    <string name="color_picker">Farbe: Zeit</string>
+    <!-- Setting title for screensaver time color picker -->
+    <string name="color_picker_title">Farbe der Uhrzeit (Bildschirmschoner)</string>
+    <!-- Setting title for screensaver time color picker -->
+    <string name="color_picker_summary">Die Farbe der Zeitanzeige beim Bildschirmschoner ändern</string>
+
+    <!-- Sample time used in color picker -->
+    <string name="color_picker_sample">11:45</string>
+
+    <!-- Labels for colors in color picker -->
+    <string name="color_picker_alpha">Transparenz (nur gedimmt)</string>
+    <string name="color_picker_red">Rot</string>
+    <string name="color_picker_green">Grün</string>
+    <string name="color_picker_blue">Blau</string>
 </resources>
