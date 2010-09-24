@@ -81,6 +81,7 @@
 
             <!-- blank stretchable view -->
             <View
+                android:id="@+id/spacer"
                 android:layout_width="2dip"
                 android:layout_height="2dip"
                 android:layout_gravity="fill_horizontal"

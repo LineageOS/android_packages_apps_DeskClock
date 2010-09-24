@@ -71,6 +71,12 @@
 				android:action="com.android.alarmclock.ColorPicker"
 				android:targetPackage="com.android.alarmclock"
 				android.targetClass="com.android.alarmclock.ColorPicker"/>
-		</PreferenceScreen>
-		
+    </PreferenceScreen>
+
+    <CheckBoxPreference
+        android:key="use_dual_mode_button"
+        android:title="@string/use_dual_mode_button"
+        android:summaryOn="@string/use_dual_mode_button_on"
+        android:summaryOff="@string/use_dual_mode_button_off" />
+
 </PreferenceScreen>

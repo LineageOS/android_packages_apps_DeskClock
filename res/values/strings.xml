@@ -81,6 +81,9 @@
     <!-- Button labels on the alarm dialog: Snooze -->
     <string name="alarm_alert_snooze_text">Snooze</string>
 
+    <!-- Button labels on the alarm dialog: Snooze & dismiss (when dual-mode button enabled) -->
+    <string name="alarm_alert_snooze_text_dual_mode">Snooze (hold to dismiss)</string>
+
     <!-- Toast that appears after Alarm is snoozed from the Alarm
          dialog. Says the alarm will snooze for xxx minutes.  -->
     <string name="alarm_alert_snooze_set">Snoozing for <xliff:g id="minutes">%d</xliff:g> minutes.</string>
@@ -320,6 +323,9 @@
     <string name="color_picker_green">Green</string>
     <string name="color_picker_blue">Blue</string>
 
+    <!-- Settings strings for dual-mode button -->
+    <string name="use_dual_mode_button">Dual-mode snooze</string>
+    <string name="use_dual_mode_button_on">Long-press the snooze button to dismiss the alarm</string>
+    <string name="use_dual_mode_button_off">Separate snooze and dismiss buttons</string>
+
 </resources>
-
-
