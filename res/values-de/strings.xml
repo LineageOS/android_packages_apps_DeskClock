@@ -36,7 +36,11 @@
     <string name="time" msgid="8067216534232296518">"Uhrzeit"</string>
     <string name="alarm_alert_dismiss_text" msgid="4942914605480888820">"Ausschalten"</string>
     <string name="alarm_alert_alert_silenced" msgid="7918075929961104202">"Der Wecker verstummte nach <xliff:g id="MINUTES">%d</xliff:g> Minuten"</string>
-    <string name="alarm_alert_snooze_text" msgid="1774416052207651584">"Snooze-Funktion"</string>
+    <string name="alarm_alert_snooze_text" msgid="1774416052207651584">"Snooze"</string>
+
+    <!-- Button labels on the alarm dialog: Snooze & dismiss (when dual-mode button enabled) -->
+    <string name="alarm_alert_snooze_text_dual_mode">Snooze (Halten zum Verwerfen)</string>
+
     <string name="alarm_alert_snooze_set" msgid="656470966696912087">"Snooze-Funktion aktiviert für <xliff:g id="MINUTES">%d</xliff:g> Minuten"</string>
   <string-array name="alarm_set">
     <item msgid="5163476010406761625">"Dieser Wecker klingelt in weniger als 1 Minute."</item>
@@ -155,4 +159,9 @@
     <string name="color_picker_red">Rot</string>
     <string name="color_picker_green">Grün</string>
     <string name="color_picker_blue">Blau</string>
+
+    <!-- Settings strings for dual-mode button -->
+    <string name="use_dual_mode_button">Dual-Mode Snooze</string>
+    <string name="use_dual_mode_button_on">Snooze-Taste gedrückt halten um den Wecker zu beenden</string>
+    <string name="use_dual_mode_button_off">Separate Tasten für Snooze und Verwerfen</string>
 </resources>
