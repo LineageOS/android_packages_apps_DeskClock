@@ -154,4 +154,8 @@
     <string name="color_picker_green">緑</string>
     <string name="color_picker_blue">青</string>
 
+    <!-- Settings strings for dual-mode button -->
+    <string name="use_dual_mode_button">デュアルモードスヌーズ</string>
+    <string name="use_dual_mode_button_on">スヌーズボタンの長押しでアラームを停止します。</string>
+    <string name="use_dual_mode_button_off">スヌーズボタンと停止ボタンをわけて表示します。</string>
 </resources>
