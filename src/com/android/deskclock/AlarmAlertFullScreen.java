@@ -28,6 +28,7 @@ import android.content.SharedPreferences;
 import android.content.res.Configuration;
 import android.os.Bundle;
 import android.preference.PreferenceManager;
+import android.view.HapticFeedbackConstants;
 import android.view.KeyEvent;
 import android.view.View;
 import android.view.ViewGroup;
@@ -144,6 +145,7 @@ public class AlarmAlertFullScreen extends Activity {
                         @Override
                         public boolean onLongClick(View v) {
                             dismiss(false);
+                            v.performHapticFeedback(HapticFeedbackConstants.LONG_PRESS);
                             return true;
                         }
                     });
