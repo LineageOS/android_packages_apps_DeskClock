@@ -291,10 +291,12 @@ public class AlarmKlaxon extends Service {
     	
     	int alarmtimeout = Integer.parseInt(alarmdur);
 
-    	final int ALARM_TIMEOUT_SECONDS = alarmtimeout * 60;
-    	
-        mHandler.sendMessageDelayed(mHandler.obtainMessage(KILLER, alarm),
-                1000 * ALARM_TIMEOUT_SECONDS);
+        if (alarmtimeout > 0) {
+            final int ALARM_TIMEOUT_SECONDS = alarmtimeout * 60;
+
+            mHandler.sendMessageDelayed(mHandler.obtainMessage(KILLER, alarm),
+                    1000 * ALARM_TIMEOUT_SECONDS);
+        }
     }
 
     private void disableKiller() {
