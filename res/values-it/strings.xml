@@ -125,6 +125,7 @@
       <item>60 minuti</item>
       <item>90 minuti</item>
       <item>120 minuti</item>
+      <item>Infinito</item>
     </string-array>
 
     <!-- Setting title for setting alarm time limit -->
