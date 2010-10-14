@@ -297,8 +297,8 @@ public class AlarmAlertFullScreen extends Activity {
                 return true;
             default:
                 break;
-        return super.dispatchKeyEvent(event);
         }
+        return super.dispatchKeyEvent(event);
     }
 
     @Override
