@@ -111,4 +111,56 @@
     <string name="weather_fetch_failure" msgid="7517010911981312358">"目前无法提供天气信息。"</string>
     <string name="menu_item_dock_settings" msgid="3524235151132971114">"底座设置"</string>
     <string name="alarm_klaxon_service_desc" msgid="2153290655559916468">"在 DeskClock 中设置的闹钟铃声播放服务。"</string>
+
+    <!-- Setting title for setting alarm time limit -->
+    <string name="alarm_limit_title">最大闹铃时长</string>
+
+    <!-- Entries listed in the ListPreference when invoking the max alarm duration
+         preference. -->
+    <string-array name="alarm_limit_entries">
+      <item>5 分钟</item>
+      <item>15 分钟</item>
+      <item>30 分钟</item>
+      <item>60 分钟</item>
+      <item>90 分钟</item>
+      <item>120 分钟</item>
+      <item>无限</item>
+    </string-array>
+
+    <!-- Setting title for setting alarm time limit -->
+    <string name="screensaver_timeout_title">屏保超时</string>
+
+    <!-- Entries listed in the ListPreference when invoking the max alarm duration
+         preference. -->
+    <string-array name="screensaver_timeout_entries">
+      <item>1 分钟</item>
+      <item>5 分钟</item>
+      <item>10 分钟</item>
+      <item>15 分钟</item>
+      <item>30 分钟</item>
+      <item>60 分钟</item>
+    </string-array>
+
+    <!-- Setting title for screensaver time color picker general title-->
+    <string name="color_picker">时钟颜色</string>
+
+    <!-- Setting title for screensaver time color picker -->
+    <string name="color_picker_title">时钟颜色 (屏保)</string>
+
+    <!-- Setting title for screensaver time color picker -->
+    <string name="color_picker_summary">在屏保模式下更改时钟使用的颜色</string>
+
+    <!-- Sample time used in color picker -->
+    <string name="color_picker_sample">11:45</string>
+
+    <!-- Labels for colors in color picker -->
+    <string name="color_picker_alpha">透明度 (仅变暗)</string>
+    <string name="color_picker_red">红</string>
+    <string name="color_picker_green">绿</string>
+    <string name="color_picker_blue">蓝</string>
+
+    <!-- Settings strings for dual-mode button -->
+    <string name="use_dual_mode_button">懒人模式</string>
+    <string name="use_dual_mode_button_on">长按打盹按键解除闹铃</string>
+    <string name="use_dual_mode_button_off">分离打盹和解除按键</string>
 </resources>
