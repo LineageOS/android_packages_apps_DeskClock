@@ -40,4 +40,13 @@
         android:persistent="false"
         android:title="@string/label"
         android:dialogTitle="@string/label" />
+    <Preference android:key="intent"
+        android:persistent="false"
+        android:title="@string/application" />
+    <CheckBoxPreference android:key="no_dialog"
+        android:persistent="true"
+        android:title="@string/no_dialog"
+        android:defaultValue="false"
+        android:summaryOn="@string/no_dialog_on"
+        android:summaryOff="@string/no_dialog_off" />
 </PreferenceScreen>

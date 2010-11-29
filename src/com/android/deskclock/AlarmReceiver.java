@@ -26,7 +26,9 @@ import android.content.Intent;
 import android.content.BroadcastReceiver;
 import android.database.Cursor;
 import android.os.Parcel;
+import android.text.TextUtils;
 
+import java.net.URISyntaxException;
 import java.text.SimpleDateFormat;
 import java.util.Date;
 
@@ -103,54 +105,72 @@ public class AlarmReceiver extends BroadcastReceiver {
             c = AlarmAlertFullScreen.class;
         }
 
-        /* launch UI, explicitly stating that this is not due to user action
-         * so that the current app's notification management is not disturbed */
-        Intent alarmAlert = new Intent(context, c);
-        alarmAlert.putExtra(Alarms.ALARM_INTENT_EXTRA, alarm);
-        alarmAlert.setFlags(Intent.FLAG_ACTIVITY_NEW_TASK
-                | Intent.FLAG_ACTIVITY_NO_USER_ACTION);
-        context.startActivity(alarmAlert);
-
-        // Disable the snooze alert if this alarm is the snooze.
-        Alarms.disableSnoozeAlert(context, alarm.id);
-        // Disable this alarm if it does not repeat.
-        if (!alarm.daysOfWeek.isRepeatSet()) {
-            Alarms.enableAlarm(context, alarm.id, false);
+        // If there's an intent specified, start that activity.
+        if (!TextUtils.isEmpty(alarm.intent)) {
+            try {
+                Intent alarmActivity = Intent.parseUri(alarm.intent, Intent.URI_INTENT_SCHEME);
+                alarmActivity.setFlags(alarmActivity.getFlags() | Intent.FLAG_ACTIVITY_NEW_TASK);
+                context.startActivity(alarmActivity);
+            } catch (URISyntaxException e) {
+                // Silently fail since the intent failed to parse.
+            }
         } else {
-            // Enable the next alert if there is one. The above call to
-            // enableAlarm will call setNextAlert so avoid calling it twice.
-            Alarms.setNextAlert(context);
+            Log.i("Empty or null intent!");
         }
 
-        // Play the alarm alert and vibrate the device.
-        Intent playAlarm = new Intent(Alarms.ALARM_ALERT_ACTION);
-        playAlarm.putExtra(Alarms.ALARM_INTENT_EXTRA, alarm);
-        context.startService(playAlarm);
+        if (!alarm.silent) {
+            // Play the alarm alert and vibrate the device.
+            Intent playAlarm = new Intent(Alarms.ALARM_ALERT_ACTION);
+            playAlarm.putExtra(Alarms.ALARM_INTENT_EXTRA, alarm);
+            context.startService(playAlarm);
+        }
 
-        // Trigger a notification that, when clicked, will show the alarm alert
-        // dialog. No need to check for fullscreen since this will always be
-        // launched from a user action.
-        Intent notify = new Intent(context, AlarmAlert.class);
-        notify.putExtra(Alarms.ALARM_INTENT_EXTRA, alarm);
-        PendingIntent pendingNotify = PendingIntent.getActivity(context,
-                alarm.id, notify, 0);
+        if (!alarm.noDialog) {
+            // User has decided to disable the dialog
+            /* launch UI, explicitly stating that this is not due to user action
+             * so that the current app's notification management is not disturbed */
+            Intent alarmAlert = new Intent(context, c);
+            alarmAlert.putExtra(Alarms.ALARM_INTENT_EXTRA, alarm);
+            alarmAlert.setFlags(Intent.FLAG_ACTIVITY_NEW_TASK
+                    | Intent.FLAG_ACTIVITY_NO_USER_ACTION);
+            context.startActivity(alarmAlert);
 
-        // Use the alarm's label or the default label as the ticker text and
-        // main text of the notification.
-        String label = alarm.getLabelOrDefault(context);
-        Notification n = new Notification(R.drawable.stat_notify_alarm,
-                label, alarm.time);
-        n.setLatestEventInfo(context, label,
-                context.getString(R.string.alarm_notify_text),
-                pendingNotify);
-        n.flags |= Notification.FLAG_SHOW_LIGHTS
-                | Notification.FLAG_ONGOING_EVENT;
-        n.defaults |= Notification.DEFAULT_LIGHTS;
+            // Disable the snooze alert if this alarm is the snooze.
+            Alarms.disableSnoozeAlert(context, alarm.id);
+            // Disable this alarm if it does not repeat.
+            if (!alarm.daysOfWeek.isRepeatSet()) {
+                Alarms.enableAlarm(context, alarm.id, false);
+            } else {
+                // Enable the next alert if there is one. The above call to
+                // enableAlarm will call setNextAlert so avoid calling it twice.
+                Alarms.setNextAlert(context);
+            }
+            
+            // Trigger a notification that, when clicked, will show the alarm alert
+            // dialog. No need to check for fullscreen since this will always be
+            // launched from a user action.
+            Intent notify = new Intent(context, AlarmAlert.class);
+            notify.putExtra(Alarms.ALARM_INTENT_EXTRA, alarm);
+            PendingIntent pendingNotify = PendingIntent.getActivity(context,
+                    alarm.id, notify, 0);
 
-        // Send the notification using the alarm id to easily identify the
-        // correct notification.
-        NotificationManager nm = getNotificationManager(context);
-        nm.notify(alarm.id, n);
+            // Use the alarm's label or the default label as the ticker text and
+            // main text of the notification.
+            String label = alarm.getLabelOrDefault(context);
+            Notification n = new Notification(R.drawable.stat_notify_alarm,
+                    label, alarm.time);
+            n.setLatestEventInfo(context, label,
+                    context.getString(R.string.alarm_notify_text),
+                    pendingNotify);
+            n.flags |= Notification.FLAG_SHOW_LIGHTS
+                    | Notification.FLAG_ONGOING_EVENT;
+            n.defaults |= Notification.DEFAULT_LIGHTS;
+
+            // Send the notification using the alarm id to easily identify the
+            // correct notification.
+            NotificationManager nm = getNotificationManager(context);
+            nm.notify(alarm.id, n);
+        }
     }
 
     private NotificationManager getNotificationManager(Context context) {
