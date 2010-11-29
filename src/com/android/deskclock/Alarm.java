@@ -17,14 +17,16 @@
 package com.android.deskclock;
 
 import android.content.Context;
+import android.content.Intent;
 import android.database.Cursor;
 import android.media.RingtoneManager;
 import android.net.Uri;
 import android.os.Parcel;
 import android.os.Parcelable;
 import android.provider.BaseColumns;
-import android.text.format.DateFormat;
+import android.text.TextUtils;
 
+import java.net.URISyntaxException;
 import java.text.DateFormatSymbols;
 import java.util.Calendar;
 
@@ -59,6 +61,7 @@ public final class Alarm implements Parcelable {
         p.writeString(label);
         p.writeParcelable(alert, flags);
         p.writeInt(silent ? 1 : 0);
+        p.writeString(intent);
     }
     //////////////////////////////
     // end Parcelable apis
@@ -124,6 +127,12 @@ public final class Alarm implements Parcelable {
         public static final String ALERT = "alert";
 
         /**
+         * Intent to fire when alarm triggers
+         * <P>Type: STRING</P>
+         */
+        public static final String INTENT = "intent";
+
+        /**
          * The default sort order for this table
          */
         public static final String DEFAULT_SORT_ORDER =
@@ -134,7 +143,7 @@ public final class Alarm implements Parcelable {
 
         static final String[] ALARM_QUERY_COLUMNS = {
             _ID, HOUR, MINUTES, DAYS_OF_WEEK, ALARM_TIME,
-            ENABLED, VIBRATE, MESSAGE, ALERT };
+            ENABLED, VIBRATE, MESSAGE, ALERT, INTENT };
 
         /**
          * These save calls to cursor.getColumnIndexOrThrow()
@@ -149,6 +158,7 @@ public final class Alarm implements Parcelable {
         public static final int ALARM_VIBRATE_INDEX = 6;
         public static final int ALARM_MESSAGE_INDEX = 7;
         public static final int ALARM_ALERT_INDEX = 8;
+        public static final int ALARM_INTENT_INDEX = 9;
     }
     //////////////////////////////
     // End column definitions
@@ -165,6 +175,7 @@ public final class Alarm implements Parcelable {
     public String     label;
     public Uri        alert;
     public boolean    silent;
+    public String     intent;
 
     public Alarm(Cursor c) {
         id = c.getInt(Columns.ALARM_ID_INDEX);
@@ -193,6 +204,17 @@ public final class Alarm implements Parcelable {
                         RingtoneManager.TYPE_ALARM);
             }
         }
+        String intentString = c.getString(Columns.ALARM_INTENT_INDEX);
+        if (!TextUtils.isEmpty(intentString)) {
+            try {
+                // Try and parse the URI, see if it breaks.
+                Intent.parseUri(intentString, Intent.URI_INTENT_SCHEME);
+                // If it's an invalid URI, the exception will short-circuit.
+                intent = intentString;
+            } catch (URISyntaxException e) {
+                intent = null;
+            }
+        }
     }
 
     public Alarm(Parcel p) {
@@ -206,6 +228,7 @@ public final class Alarm implements Parcelable {
         label = p.readString();
         alert = (Uri) p.readParcelable(null);
         silent = p.readInt() == 1;
+        intent = p.readString();
     }
 
     // Creates a default alarm at the current time.

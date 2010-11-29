@@ -16,11 +16,14 @@
 
 package com.android.deskclock;
 
+import java.util.ArrayList;
+
 import android.app.AlertDialog;
 import android.app.TimePickerDialog;
 import android.content.Context;
 import android.content.DialogInterface;
 import android.content.Intent;
+import android.content.Intent.ShortcutIconResource;
 import android.os.Bundle;
 import android.os.Handler;
 import android.preference.CheckBoxPreference;
@@ -48,6 +51,8 @@ public class SetAlarm extends PreferenceActivity
         implements TimePickerDialog.OnTimeSetListener,
         Preference.OnPreferenceChangeListener {
 
+	private static final int CODE_PICK_APP = 1;
+
     private EditTextPreference mLabel;
     private CheckBoxPreference mEnabledPref;
     private Preference mTimePref;
@@ -55,6 +60,7 @@ public class SetAlarm extends PreferenceActivity
     private CheckBoxPreference mVibratePref;
     private RepeatPreference mRepeatPref;
     private MenuItem mTestAlarmItem;
+    private Preference mIntentPref;
 
     private int     mId;
     private int     mHour;
@@ -112,6 +118,7 @@ public class SetAlarm extends PreferenceActivity
         mVibratePref.setOnPreferenceChangeListener(this);
         mRepeatPref = (RepeatPreference) findPreference("setRepeat");
         mRepeatPref.setOnPreferenceChangeListener(this);
+        mIntentPref = findPreference("intent");
 
         Intent i = getIntent();
         mId = i.getIntExtra(Alarms.ALARM_ID, -1);
@@ -211,6 +218,7 @@ public class SetAlarm extends PreferenceActivity
         mVibratePref.setChecked(alarm.vibrate);
         // Give the alert uri to the preference.
         mAlarmPref.setAlert(alarm.alert);
+        mIntentPref.setSummary(alarm.intent);
         updateTime();
     }
 
@@ -219,6 +227,8 @@ public class SetAlarm extends PreferenceActivity
             Preference preference) {
         if (preference == mTimePref) {
             showTimePicker();
+        } else if (preference == mIntentPref) {
+            showAppPicker();
         }
 
         return super.onPreferenceTreeClick(preferenceScreen, preference);
@@ -238,6 +248,39 @@ public class SetAlarm extends PreferenceActivity
     private void showTimePicker() {
         new TimePickerDialog(this, this, mHour, mMinutes,
                 DateFormat.is24HourFormat(this)).show();
+    }
+
+    private void showAppPicker() {
+        Bundle bundle = new Bundle();
+
+        ArrayList<String> shortcutNames = new ArrayList<String>();
+        shortcutNames.add(getString(R.string.application_none));
+        bundle.putStringArrayList(Intent.EXTRA_SHORTCUT_NAME, shortcutNames);
+
+        ArrayList<ShortcutIconResource> shortcutIcons = new ArrayList<ShortcutIconResource>();
+        shortcutIcons
+                .add(ShortcutIconResource.fromContext(this, android.R.drawable.ic_menu_delete));
+        bundle.putParcelableArrayList(Intent.EXTRA_SHORTCUT_ICON_RESOURCE, shortcutIcons);
+
+        Intent appIntent = new Intent(Intent.ACTION_PICK_ACTIVITY);
+        Intent filterIntent = new Intent(Intent.ACTION_MAIN);
+        filterIntent.addCategory(Intent.CATEGORY_LAUNCHER);
+        appIntent.putExtra(Intent.EXTRA_INTENT, filterIntent);
+        appIntent.putExtra(Intent.EXTRA_TITLE, getText(R.string.application_title));
+        appIntent.putExtras(bundle);
+        startActivityForResult(appIntent, CODE_PICK_APP);
+    }
+
+    @Override
+    protected void onActivityResult(int requestCode, int resultCode, Intent data) {
+        if (data == null) return;
+
+        String none = getString(R.string.application_none);
+        if (none.equals(data.getStringExtra(Intent.EXTRA_SHORTCUT_NAME))) {
+            mIntentPref.setSummary("");
+        } else {
+            mIntentPref.setSummary(data.toUri(Intent.URI_INTENT_SCHEME));
+        }
     }
 
     public void onTimeSet(TimePicker view, int hourOfDay, int minute) {
@@ -277,6 +320,8 @@ public class SetAlarm extends PreferenceActivity
         alarm.vibrate = mVibratePref.isChecked();
         alarm.label = mLabel.getText();
         alarm.alert = mAlarmPref.getAlert();
+        CharSequence intent = mIntentPref.getSummary();
+        alarm.intent = intent == null ? "" : intent.toString();
 
         long time;
         if (alarm.id == -1) {

@@ -40,4 +40,7 @@
         android:persistent="false"
         android:title="@string/label"
         android:dialogTitle="@string/label" />
+    <Preference android:key="intent"
+        android:persistent="false"
+        android:title="@string/application" />
 </PreferenceScreen>

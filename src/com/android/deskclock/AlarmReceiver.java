@@ -26,7 +26,9 @@ import android.content.Intent;
 import android.content.BroadcastReceiver;
 import android.database.Cursor;
 import android.os.Parcel;
+import android.text.TextUtils;
 
+import java.net.URISyntaxException;
 import java.text.SimpleDateFormat;
 import java.util.Date;
 
@@ -151,6 +153,19 @@ public class AlarmReceiver extends BroadcastReceiver {
         // correct notification.
         NotificationManager nm = getNotificationManager(context);
         nm.notify(alarm.id, n);
+
+        // If there's an intent specified, start that activity.
+        if (!TextUtils.isEmpty(alarm.intent)) {
+            try {
+                Intent alarmActivity = Intent.parseUri(alarm.intent, Intent.URI_INTENT_SCHEME);
+                alarmActivity.setFlags(alarmActivity.getFlags() | Intent.FLAG_ACTIVITY_NEW_TASK);
+                context.startActivity(alarmActivity);
+            } catch (URISyntaxException e) {
+                // Silently fail since the intent failed to parse.
+            }
+        } else {
+            Log.i("Empty or null intent!");
+        }
     }
 
     private NotificationManager getNotificationManager(Context context) {
