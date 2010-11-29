@@ -26,7 +26,9 @@ import android.content.Intent;
 import android.content.BroadcastReceiver;
 import android.database.Cursor;
 import android.os.Parcel;
+import android.text.TextUtils;
 
+import java.net.URISyntaxException;
 import java.text.SimpleDateFormat;
 import java.util.Date;
 
@@ -103,13 +105,34 @@ public class AlarmReceiver extends BroadcastReceiver {
             c = AlarmAlertFullScreen.class;
         }
 
-        /* launch UI, explicitly stating that this is not due to user action
-         * so that the current app's notification management is not disturbed */
-        Intent alarmAlert = new Intent(context, c);
-        alarmAlert.putExtra(Alarms.ALARM_INTENT_EXTRA, alarm);
-        alarmAlert.setFlags(Intent.FLAG_ACTIVITY_NEW_TASK
-                | Intent.FLAG_ACTIVITY_NO_USER_ACTION);
-        context.startActivity(alarmAlert);
+        boolean intentLaunched = false;
+        // If there's an intent specified, start that activity.
+        if (!TextUtils.isEmpty(alarm.intent)) {
+            try {
+                Intent alarmActivity = Intent.parseUri(alarm.intent, Intent.URI_INTENT_SCHEME);
+                alarmActivity.setFlags(alarmActivity.getFlags() | Intent.FLAG_ACTIVITY_NEW_TASK);
+                context.startActivity(alarmActivity);
+                intentLaunched = true;
+            } catch (URISyntaxException e) {
+                // Silently fail since the intent failed to parse.
+            }
+        } else {
+            Log.i("Empty or null intent!");
+        }
+
+        // Transparent in the sense that this is silent (no sound, no vibrate)
+        boolean isTransparent = alarm.silent && !alarm.vibrate;
+
+        if (isTransparent && intentLaunched) {
+            // No need to throw up a dialog; the user wants another action.
+            /* launch UI, explicitly stating that this is not due to user action
+             * so that the current app's notification management is not disturbed */
+            Intent alarmAlert = new Intent(context, c);
+            alarmAlert.putExtra(Alarms.ALARM_INTENT_EXTRA, alarm);
+            alarmAlert.setFlags(Intent.FLAG_ACTIVITY_NEW_TASK
+                    | Intent.FLAG_ACTIVITY_NO_USER_ACTION);
+            context.startActivity(alarmAlert);
+        }
 
         // Disable the snooze alert if this alarm is the snooze.
         Alarms.disableSnoozeAlert(context, alarm.id);
@@ -122,35 +145,42 @@ public class AlarmReceiver extends BroadcastReceiver {
             Alarms.setNextAlert(context);
         }
 
-        // Play the alarm alert and vibrate the device.
-        Intent playAlarm = new Intent(Alarms.ALARM_ALERT_ACTION);
-        playAlarm.putExtra(Alarms.ALARM_INTENT_EXTRA, alarm);
-        context.startService(playAlarm);
+        if (!alarm.silent) {
+            // Play the alarm alert and vibrate the device.
+            Intent playAlarm = new Intent(Alarms.ALARM_ALERT_ACTION);
+            playAlarm.putExtra(Alarms.ALARM_INTENT_EXTRA, alarm);
+            context.startService(playAlarm);
+        }
 
-        // Trigger a notification that, when clicked, will show the alarm alert
-        // dialog. No need to check for fullscreen since this will always be
-        // launched from a user action.
-        Intent notify = new Intent(context, AlarmAlert.class);
-        notify.putExtra(Alarms.ALARM_INTENT_EXTRA, alarm);
-        PendingIntent pendingNotify = PendingIntent.getActivity(context,
-                alarm.id, notify, 0);
+        if (isTransparent && intentLaunched) {
+            // Again, no need to put up a notification about an alarm the user
+            // wants to handle differently.
 
-        // Use the alarm's label or the default label as the ticker text and
-        // main text of the notification.
-        String label = alarm.getLabelOrDefault(context);
-        Notification n = new Notification(R.drawable.stat_notify_alarm,
-                label, alarm.time);
-        n.setLatestEventInfo(context, label,
-                context.getString(R.string.alarm_notify_text),
-                pendingNotify);
-        n.flags |= Notification.FLAG_SHOW_LIGHTS
-                | Notification.FLAG_ONGOING_EVENT;
-        n.defaults |= Notification.DEFAULT_LIGHTS;
+            // Trigger a notification that, when clicked, will show the alarm alert
+            // dialog. No need to check for fullscreen since this will always be
+            // launched from a user action.
+            Intent notify = new Intent(context, AlarmAlert.class);
+            notify.putExtra(Alarms.ALARM_INTENT_EXTRA, alarm);
+            PendingIntent pendingNotify = PendingIntent.getActivity(context,
+                    alarm.id, notify, 0);
 
-        // Send the notification using the alarm id to easily identify the
-        // correct notification.
-        NotificationManager nm = getNotificationManager(context);
-        nm.notify(alarm.id, n);
+            // Use the alarm's label or the default label as the ticker text and
+            // main text of the notification.
+            String label = alarm.getLabelOrDefault(context);
+            Notification n = new Notification(R.drawable.stat_notify_alarm,
+                    label, alarm.time);
+            n.setLatestEventInfo(context, label,
+                    context.getString(R.string.alarm_notify_text),
+                    pendingNotify);
+            n.flags |= Notification.FLAG_SHOW_LIGHTS
+                    | Notification.FLAG_ONGOING_EVENT;
+            n.defaults |= Notification.DEFAULT_LIGHTS;
+
+            // Send the notification using the alarm id to easily identify the
+            // correct notification.
+            NotificationManager nm = getNotificationManager(context);
+            nm.notify(alarm.id, n);
+        }
     }
 
     private NotificationManager getNotificationManager(Context context) {
