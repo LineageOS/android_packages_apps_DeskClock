@@ -1,0 +1,38 @@
+{
+  "comments": [
+    {
+      "key": {
+        "uuid": "AAAACX//+uo\u003d",
+        "filename": "res/values-pt-rPT/strings.xml",
+        "patchSetId": 1
+      },
+      "lineNbr": 296,
+      "author": {
+        "id": 32
+      },
+      "writtenOn": "2011-02-17T12:45:09Z",
+      "side": 1,
+      "message": "Can\u0027t have value arrays in translations",
+      "revId": "1f6a609a472745dc530e321252ed24f56a9ef9d5",
+      "serverId": "1ec6b3db-b2c1-4fa4-84a2-4c7efe89ba71",
+      "unresolved": false
+    },
+    {
+      "key": {
+        "uuid": "AAAACX//+uk\u003d",
+        "filename": "res/values-pt-rPT/strings.xml",
+        "patchSetId": 1
+      },
+      "lineNbr": 321,
+      "author": {
+        "id": 32
+      },
+      "writtenOn": "2011-02-17T12:45:09Z",
+      "side": 1,
+      "message": "Same",
+      "revId": "1f6a609a472745dc530e321252ed24f56a9ef9d5",
+      "serverId": "1ec6b3db-b2c1-4fa4-84a2-4c7efe89ba71",
+      "unresolved": false
+    }
+  ]
+}
