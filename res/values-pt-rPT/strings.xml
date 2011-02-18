@@ -1,5 +1,5 @@
-<?xml version="1.0" encoding="UTF-8"?>
-<!--  Copyright (C) 2007 The Android Open Source Project
+<?xml version="1.0" encoding="utf-8"?>
+<!-- Copyright (C) 2007 The Android Open Source Project
 
      Licensed under the Apache License, Version 2.0 (the "License");
      you may not use this file except in compliance with the License.
@@ -12,103 +12,301 @@
      WITHOUT WARRANTIES OR CONDITIONS OF ANY KIND, either express or implied.
      See the License for the specific language governing permissions and
      limitations under the License.
- -->
+-->
 
-<resources xmlns:android="http://schemas.android.com/apk/res/android"
-    xmlns:xliff="urn:oasis:names:tc:xliff:document:1.2">
-    <string name="app_label" msgid="6674495003718166674">"Relógio"</string>
-    <string name="alarm_list_title" msgid="7589940465292950600">"Alarmes"</string>
-    <string name="add_alarm" msgid="5976616107390962899">"Adicionar alarme"</string>
-    <string name="menu_desk_clock" msgid="3241995064554071588">"Relógio de secretária"</string>
-    <string name="menu_edit_alarm" msgid="7204602994918829751">"Editar alarme"</string>
-    <string name="delete_alarm" msgid="3457780990646206817">"Eliminar alarme"</string>
-    <string name="enable_alarm" msgid="1834599140632142536">"Activar alarme"</string>
-    <string name="disable_alarm" msgid="5889378670229554109">"Desactivar alarme"</string>
-    <string name="delete_alarm_confirm" msgid="4237696873219106907">"Este alarme será eliminado."</string>
-    <string name="show_clock" msgid="8358759982675616915">"Mostrar relógio"</string>
-    <string name="hide_clock" msgid="3217727306480505694">"Ocultar relógio"</string>
-    <string name="label" msgid="162189613902857319">"Etiqueta"</string>
-    <string name="default_label" msgid="5590025289805630372">"Alarme"</string>
-    <string name="set_alarm" msgid="9148359866152726808">"Definir alarme"</string>
-    <string name="alarm_vibrate" msgid="3476686921490362230">"Vibrar"</string>
-    <string name="alarm_repeat" msgid="7242985466344233206">"Repetir"</string>
-    <string name="alert" msgid="6539852766423700221">"Toque"</string>
-    <string name="time" msgid="8067216534232296518">"Hora"</string>
-    <string name="alarm_alert_dismiss_text" msgid="4942914605480888820">"Ignorar"</string>
-    <string name="alarm_alert_alert_silenced" msgid="7918075929961104202">"Alarme silenciado após <xliff:g id="MINUTES">%d</xliff:g> minutos."</string>
-    <string name="alarm_alert_snooze_text" msgid="1774416052207651584">"Suspender"</string>
-    <string name="alarm_alert_snooze_set" msgid="656470966696912087">"Suspenso por <xliff:g id="MINUTES">%d</xliff:g> minutos."</string>
-  <string-array name="alarm_set">
-    <item msgid="5163476010406761625">"Este alarme dispara daqui a menos de um minuto."</item>
-    <item msgid="7110525731259629055">"Este alarme dispara daqui a <xliff:g id="DAYS">%1$s</xliff:g>."</item>
-    <item msgid="7003982794086186185">"Este alarme dispara daqui a <xliff:g id="HOURS">%2$s</xliff:g>."</item>
-    <item msgid="7311021123230077742">"Este alarme dispara daqui a <xliff:g id="DAYS">%1$s</xliff:g> e <xliff:g id="HOURS">%2$s</xliff:g>."</item>
-    <item msgid="8431715191823114872">"Este alarme dispara daqui a <xliff:g id="MINUTES">%3$s</xliff:g>."</item>
-    <item msgid="3244151088673185428">"Este alarme dispara daqui a <xliff:g id="DAYS">%1$s</xliff:g> e <xliff:g id="MINUTES">%3$s</xliff:g>."</item>
-    <item msgid="3663661342600168814">"Este alarme dispara daqui a <xliff:g id="HOURS">%2$s</xliff:g> e <xliff:g id="MINUTES">%3$s</xliff:g>."</item>
-    <item msgid="7779544127785487304">"Este alarme dispara daqui a <xliff:g id="DAYS">%1$s</xliff:g>, <xliff:g id="HOURS">%2$s</xliff:g> e <xliff:g id="MINUTES">%3$s</xliff:g>."</item>
-  </string-array>
-    <string name="day" msgid="7984755014526510295">"1 dia"</string>
-    <string name="days" msgid="2070509222727852210">"<xliff:g id="DAYS">%s</xliff:g> dias"</string>
-    <string name="hour" msgid="2546819039651509323">"1 hora"</string>
-    <string name="hours" msgid="2071487018566991613">"<xliff:g id="HOURS">%s</xliff:g> horas"</string>
-    <string name="minute" msgid="2486157997434653710">"1 minuto"</string>
-    <string name="minutes" msgid="6115838729146292526">"<xliff:g id="MINUTES">%s</xliff:g> minutos"</string>
-    <string name="every_day" msgid="1058994798884544691">"todos os dias"</string>
-    <string name="never" msgid="54104287800571769">"Nunca"</string>
-    <string name="day_concat" msgid="971998564991636532">", "</string>
-    <string name="clock_instructions" msgid="3118560284915857690">"Seleccione um relógio para visualizar."</string>
-    <string name="analog_gadget" msgid="1670505720837152766">"Relógio analógico"</string>
-    <string name="settings" msgid="5849739030579520686">"Definições"</string>
-    <string name="alarm_in_silent_mode_title" msgid="3892612644543516705">"Alarme em modo silencioso"</string>
-    <string name="alarm_in_silent_mode_summary" msgid="6042500263899922832">"Fazer soar o alarme mesmo com o telefone em modo silencioso"</string>
-    <string name="snooze_duration_title" msgid="1471249885139952670">"Duração da suspensão"</string>
-  <string-array name="snooze_duration_entries">
-    <item msgid="8337408933053603125">"5 minutos"</item>
-    <item msgid="5294206441496024610">"10 minutos"</item>
-    <item msgid="2165904039211935470">"15 minutos"</item>
-    <item msgid="7248236967714374250">"20 minutos"</item>
-    <item msgid="738394723625179423">"25 minutos"</item>
-    <item msgid="1180222611308391616">"30 minutos"</item>
-  </string-array>
-  <string-array name="snooze_duration_values">
-    <item msgid="3655014754453084122">"5"</item>
-    <item msgid="8939029597449573449">"10"</item>
-    <item msgid="3922647341176353315">"15"</item>
-    <item msgid="5821804105985044459">"20"</item>
-    <item msgid="6048861883552402852">"25"</item>
-    <item msgid="2740866721232379791">"30"</item>
-  </string-array>
-    <string name="done" msgid="6509722361933858451">"Concluído"</string>
-    <string name="revert" msgid="9100911171235162926">"Reverter"</string>
-    <string name="delete" msgid="5732434972457000541">"Eliminar"</string>
-    <string name="alarm_volume_title" msgid="8506245173912428522">"Volume do alarme"</string>
-    <string name="alarm_volume_summary" msgid="8957440373896242438">"Definir o volume dos alarmes"</string>
-    <string name="silent_alarm_summary" msgid="8605302849408279221">"Silencioso"</string>
-    <string name="alarm_notify_text" msgid="4146350965933990093">"Seleccionar suspender ou ignorar este alarme."</string>
-    <string name="alarm_notify_snooze_label" msgid="5404083762646377829">"<xliff:g id="LABEL">%s</xliff:g> (suspenso)"</string>
-    <string name="alarm_notify_snooze_text" msgid="8004830999152609519">"Alarme definido para a(s) <xliff:g id="TIME">%s</xliff:g>. Seleccione para cancelar."</string>
-    <string name="volume_button_setting_title" msgid="8155275533660105161">"Volume e câmara"</string>
-    <string name="volume_button_dialog_title" msgid="8768042543750036853">"Efeito do botão"</string>
-    <string name="volume_button_setting_summary" msgid="4776447991226047070">"Defina o que estes botões fazem quando forem premidos durante um alarme"</string>
-  <string-array name="volume_button_setting_entries">
-    <item msgid="4520420953175098625">"Nenhum"</item>
-    <item msgid="7111908302622811168">"Suspender"</item>
-    <item msgid="8573552194573068996">"Ignorar"</item>
-  </string-array>
-  <string-array name="volume_button_setting_values">
-    <item msgid="4851033050639608752">"0"</item>
-    <item msgid="3204893476515513084">"1"</item>
-    <item msgid="7687709558968154577">"2"</item>
-  </string-array>
-    <string name="alarm_button_description" msgid="740283647046258651">"Alarmes"</string>
-    <string name="gallery_button_description" msgid="1151743663255257668">"Galeria"</string>
-    <string name="music_button_description" msgid="1626593420810117999">"Música"</string>
-    <string name="nightmode_button_description" msgid="990894208217576381">"Esbater"</string>
-    <string name="home_button_description" msgid="3383859096809056157">"Launcher"</string>
-    <string name="desk_clock_button_description" msgid="968868045496561043">"Apresentação do relógio"</string>
-    <string name="battery_charging_level" msgid="4391767951302394083">"<xliff:g id="NUMBER">%d</xliff:g><xliff:g id="PERCENT">%%</xliff:g>"</string>
-    <string name="weather_fetch_failure" msgid="7517010911981312358">"Informações meteorológicas actualmente indisponíveis."</string>
-    <string name="menu_item_dock_settings" msgid="3524235151132971114">"Definições da estação de ancoragem"</string>
-    <string name="alarm_klaxon_service_desc" msgid="2153290655559916468">"Serviço de reprodução de som para alarmes definidos no DeskClock."</string>
+<resources xmlns:xliff="urn:oasis:names:tc:xliff:document:1.2">
+    <!-- -->
+    <!-- Label shown on launcher icon -->
+    <string name="app_label">Relógio</string>
+
+    <!-- Title for AlarmClock activity -->
+    <string name="alarm_list_title">Alarmes</string>
+
+    <!-- Menu item on Alarm Clock screen: Add alarm -->
+    <string name="add_alarm">Adicionar alarme</string>
+
+    <!-- Menu item on Alarm Clock screen: Desk clock -->
+    <string name="menu_desk_clock">Relógio de Secretária</string>
+
+    <!-- Menu item on Alarm Clock screen: Edit alarm -->
+    <string name="menu_edit_alarm">Alterar alarme</string>
+
+    <!-- Context Menu Item on Alarm Settings screen: Delete alarm -->
+    <string name="delete_alarm">Apagar alarme</string>
+
+    <!-- Context Menu Item on Alarm Settings screen: Enable alarm -->
+    <string name="enable_alarm">Ligar alarme</string>
+
+    <!-- Context Menu Item on Alarm Settings screen: Disable alarm -->
+    <string name="disable_alarm">Desligar alarme</string>
+
+    <!-- Delete alarm confirmation dialog message. -->
+    <string name="delete_alarm_confirm">Este alarme será apagado.</string>
+
+    <!-- Menu item on Alarm Clock screen: Show clock -->
+    <string name="show_clock">Mostrar relógio</string>
+
+    <!-- Menu item on Alarm Clock screen: Hide clock -->
+    <string name="hide_clock">Esconder relógio</string>
+
+    <!-- Setting label on Set alarm screen: Label -->
+    <string name="label">Descrição</string>
+
+    <!-- Default label to display for an alarm -->
+    <string name="default_label">Alarme</string>
+
+    <!-- Setting label on Set alarm screen: Application to launch -->
+    <string name="application">Aplicação</string>
+
+    <!-- Title on the application picker -->
+    <string name="application_title">Aplicação a iniciar</string>
+
+    <!-- Option to not launch an application -->
+    <string name="application_none">Nenhuma</string>
+
+	<!-- Setting label on Set alarm screen: Show dialog -->
+	<string name="no_dialog">Esconder opções</string>
+
+	<!-- Summary when dialog is hidden -->
+	<string name="no_dialog_on">Sem opção de snooze/desligar</string>
+
+	<!-- Summary when dialog will be shown -->
+	<string name="no_dialog_off">Opção de snooze/desligar será mostrada</string>
+
+    <!-- Preference category on Alarm Settings screen: Set alarm -->
+    <string name="set_alarm">Ajustar alarme</string>
+
+    <!-- Setting labels on Set alarm screen: Vibration on or off -->
+    <string name="alarm_vibrate">Vibrar</string>
+
+    <!-- Setting labels on Set alarm screen: Repeat -->
+    <string name="alarm_repeat">Repetir</string>
+
+    <!-- Setting labels on Set alarm screen: Select alarm ringtone  -->
+    <string name="alert">Toque</string>
+
+    <!-- Setting labels on Set alarm screen: Set time  -->
+    <string name="time">Hora</string>
+
+    <!-- Button labels on the alarm dialog: Dismiss -->
+    <string name="alarm_alert_dismiss_text">Desligar</string>
+
+    <!-- Alarm Alert screen: this message is shown after an alarm rung
+         unattended for a number of minutes.  It tells the user that
+         the alarm has been silenced.-->
+    <string name="alarm_alert_alert_silenced">Alarme desligado após <xliff:g id="minutes">%d</xliff:g> minutos</string>
+
+    <!-- Button labels on the alarm dialog: Snooze -->
+    <string name="alarm_alert_snooze_text">Snooze</string>
+
+    <!-- Button labels on the alarm dialog: Snooze & dismiss (when dual-mode button enabled) -->
+    <string name="alarm_alert_snooze_text_dual_mode">Snooze (prima para desligar)</string>
+
+    <!-- Toast that appears after Alarm is snoozed from the Alarm
+         dialog. Says the alarm will snooze for xxx minutes.  -->
+    <string name="alarm_alert_snooze_set">Snoozing durante <xliff:g id="minutes">%d</xliff:g> minutos.</string>
+
+    <!-- 0: nothing
+         1: days
+         2:      hours
+         3: days hours
+         4:            minutes
+         5: days       minutes
+         6:      hours minutes
+         7: days hours minutes
+    --><skip />
+
+    <!-- Alarm confirmation toast: Describes how long from now until
+         alarm fires -->
+    <string-array name="alarm_set">
+        <item>O alarme tocará em menos de 1 minuto.</item>
+        <item>O alarme tocará daqui a <xliff:g id="DAYS" example="2 days">%1$s</xliff:g> .</item>
+        <item>O alarme tocará daqui a <xliff:g id="HOURS" example="2 hours">%2$s</xliff:g> .</item>
+        <item>O alarme tocará daqui a <xliff:g id="DAYS" example="2 days">%1$s</xliff:g> e <xliff:g id="HOURS" example="2 hours">%2$s</xliff:g> .</item>
+        <item>O alarme tocará daqui a <xliff:g id="MINUTES" example="2 minutes">%3$s</xliff:g> from now.</item>
+        <item>O alarme tocará daqui a <xliff:g id="DAYS" example="2 days">%1$s</xliff:g> e <xliff:g id="MINUTES" example="2 minutes">%3$s</xliff:g> .</item>
+        <item>O alarme tocará daqui a <xliff:g id="HOURS" example="2 hours">%2$s</xliff:g> e <xliff:g id="MINUTES" example="2 minutes">%3$s</xliff:g> .</item>
+        <item>O alarme tocará daqui a <xliff:g id="DAYS" example="2 days">%1$s</xliff:g>, <xliff:g id="HOURS" example="2 hours">%2$s</xliff:g>, e <xliff:g id="MINUTES" example="2 minutes">%3$s</xliff:g> .</item>
+    </string-array>
+
+    <!-- Alarm confirmation toast: singular day -->
+    <string name="day">"1 dia"</string>
+
+    <!-- Alarm confirmation toast: plural days -->
+    <string name="days">"<xliff:g id="days">%s</xliff:g> dias"</string>
+
+    <!-- Alarm confirmation toast: singular hour -->
+    <string name="hour">1 hora</string>
+
+    <!-- Alarm confirmation toast: plural hours -->
+    <string name="hours"><xliff:g id="hours">%s</xliff:g> horas</string>
+
+    <!-- Alarm confirmation toast: singular minute  -->
+    <string name="minute">"1 minuto"</string>
+
+    <!-- Alarm confirmation toast: plural minutes  -->
+    <string name="minutes">"<xliff:g id="minutes">%s</xliff:g> minutos"</string>
+
+    <!-- Repeat options that appear under an alarm on main Alarm Clock
+         screen to identify repetition schedule: special case for when
+         the alarm is set to repeat every day -->
+    <string name="every_day">todos os dias</string>
+
+    <!-- Repeat options that appear under an alarm on main Alarm Clock
+         screen to identify repetition schedule: special case for when
+         the alarm is set to never repeat -->
+    <string name="never">Nunca</string>
+
+    <!-- Repeat options that appear under an alarm on main Alarm Clock
+         screen to identify repetition schedule: concatenate days with
+         this character, i.e. "Mon, Tue, Wed" -->
+    <string name="day_concat">", "</string>
+
+    <!-- Appears at the top of the Clock Picker screen: Tell user to
+         select a clock to display -->
+    <string name="clock_instructions">Seleccione o relógio a mostrar.</string>
+
+    <!-- Label for analog clock gadget, shown in list of all gadgets -->
+    <string name="analog_gadget">Relógio analógico</string>
+
+    <!-- Menu item title for general Alarm Clock Settings -->
+    <string name="settings">Definições</string>
+
+    <!-- Setting title for whether the alarm should play in silent mode.
+         Usually, silent mode only affects the ringer, but this setting
+         will make the alarms respect silent mode too. -->
+    <string name="alarm_in_silent_mode_title">Alarme em modo silencioso</string>
+
+    <!-- Setting summary for whether the alarm should play in silent mode. -->
+    <string name="alarm_in_silent_mode_summary">Tocar alarme mesmo com o telefone em modo silencioso</string>
+
+    <!-- Setting title for changing the snooze duration. -->
+    <string name="snooze_duration_title">Duração do Snooze</string>
+
+    <!-- Entries listed in the ListPreference when invoking the snooze duration
+         preference. -->
+    <string-array name="snooze_duration_entries">
+      <item>5 minutos</item>
+      <item>10 minutos</item>
+      <item>15 minutos</item>
+      <item>20 minutos</item>
+      <item>25 minutos</item>
+      <item>30 minutos</item>
+    </string-array>
+
+    <!-- Done button when editing an alarm. -->
+    <string name="done">Concluído</string>
+
+    <!-- Revert button when editing an alarm. -->
+    <string name="revert">Reverter</string>
+
+    <!-- Delete button when editing an alarm. -->
+    <string name="delete">Apagar</string>
+
+    <!-- Setting title for changing the alarm volume. -->
+    <string name="alarm_volume_title">Volume do alarme</string>
+
+    <!-- Setting summary for changing the alarm volume. -->
+    <string name="alarm_volume_summary">Definir volume dos alarmes</string>
+
+    <!-- Summary for the alarm preference when silent is chosen. -->
+    <string name="silent_alarm_summary">Silencioso</string>
+
+    <!-- Text to display in the small text of the notification -->
+    <string name="alarm_notify_text">Seleccione para snooze ou desligar este alarme.</string>
+
+    <!-- Text to display in the notification ticker and label -->
+    <string name="alarm_notify_snooze_label"><xliff:g id="label">%s</xliff:g> (snoozed)</string>
+
+    <!-- Text to display in the notification when the alarm has been snoozed -->
+    <string name="alarm_notify_snooze_text">Alarm definido para <xliff:g id="time">%s</xliff:g>. Seleccione para cancelar.</string>
+
+    <!-- Title of the setting to change the volume/camera button behavior. -->
+    <string name="volume_button_setting_title">Volume e Camera</string>
+
+    <!-- Dialog title of the volume and power setting. -->
+    <string name="volume_button_dialog_title">Efeito do botão</string>
+
+    <!-- The summary of the side button setting. -->
+    <string name="volume_button_setting_summary">Defina a função destes botões ao serem primidos durante um alarme</string>
+
+    <!-- Entries listed in the setting for the side-button action. -->
+    <string-array name="volume_button_setting_entries">
+      <item>Nenhuma</item>
+      <item>Snooze</item>
+      <item>Desligar</item>
+    </string-array>
+
+    <!-- Accessibility labels for Clock activity buttons --><skip/>
+    <string name="alarm_button_description">Alarmes</string>
+    <string name="gallery_button_description">Galeria</string>
+    <string name="music_button_description">Música</string>
+    <string name="nightmode_button_description">Brilho</string>
+    <string name="home_button_description">Launcher</string>
+    <string name="desk_clock_button_description">Mostrar Relógio</string>
+
+    <!-- A short representation of charging information, e.g "34%" -->
+    <string name="battery_charging_level"><xliff:g id="number">%d</xliff:g><xliff:g id="percent">%%</xliff:g></string>
+
+    <!-- What to show the user if the weather widget exists but fails to
+         respond. This is a sign of an error; if the weather widget is not
+         present on the device, we show nothing at all. -->
+    <string name="weather_fetch_failure">Informação meteorológica indisponível.</string>
+
+    <string name="menu_item_dock_settings" msgid="9161438664257429372">Definições da dock</string>
+
+    <!-- Setting title for setting alarm time limit -->
+    <string name="alarm_limit_title">Duração máxima do alarme</string>
+
+    <string name="alarm_klaxon_service_desc">Tocar sons de serviço para alarmes definidos no DeskClock.</string>
+
+    <!-- Entries listed in the ListPreference when invoking the max alarm duration
+         preference. -->
+    <string-array name="alarm_limit_entries">
+      <item>5 minutos</item>
+      <item>15 minutos</item>
+      <item>30 minutos</item>
+      <item>60 minutos</item>
+      <item>90 minutos</item>
+      <item>120 minutos</item>
+      <item>Infinito</item>
+    </string-array>
+
+    <!-- Setting title for setting alarm time limit -->
+    <string name="screensaver_timeout_title">Tempo limite do protector de ecrã</string>
+
+    <!-- Entries listed in the ListPreference when invoking the max alarm duration
+         preference. -->
+    <string-array name="screensaver_timeout_entries">
+      <item>1 minuto</item>
+      <item>5 minutos</item>
+      <item>10 minutos</item>
+      <item>15 minutos</item>
+      <item>30 minutos</item>
+      <item>60 minutos</item>
+    </string-array>
+
+    <!-- Setting title for screensaver time color picker general title-->
+    <string name="color_picker">Cor das Horas</string>
+
+    <!-- Setting title for screensaver time color picker -->
+    <string name="color_picker_title">Cor das Horas (Protector de Ecrã)</string>
+
+    <!-- Setting title for screensaver time color picker -->
+    <string name="color_picker_summary">Mudar a cor das horas usadas no modo de protector de ecrã</string>
+
+    <!-- Sample time used in color picker -->
+    <string name="color_picker_sample">11:45</string>
+
+    <!-- Labels for colors in color picker -->
+    <string name="color_picker_alpha">Transparência (Menos brilho)</string>
+    <string name="color_picker_red">Vermelho</string>
+    <string name="color_picker_green">Verde</string>
+    <string name="color_picker_blue">Azul</string>
+
+    <!-- Settings strings for dual-mode button -->
+    <string name="use_dual_mode_button">Snooze de modo duplo</string>
+    <string name="use_dual_mode_button_on">Premir continuamente no botão snooze para desligar o alarme</string>
+    <string name="use_dual_mode_button_off">Separar botões snooze e desligar</string>
+
 </resources>
