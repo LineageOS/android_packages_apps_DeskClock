@@ -1,5 +1,5 @@
-<?xml version="1.0" encoding="UTF-8"?>
-<!--  Copyright (C) 2007 The Android Open Source Project
+<?xml version="1.0" encoding="utf-8"?>
+<!-- Copyright (C) 2007 The Android Open Source Project
 
      Licensed under the Apache License, Version 2.0 (the "License");
      you may not use this file except in compliance with the License.
@@ -12,103 +12,343 @@
      WITHOUT WARRANTIES OR CONDITIONS OF ANY KIND, either express or implied.
      See the License for the specific language governing permissions and
      limitations under the License.
- -->
+-->
 
 <resources xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:xliff="urn:oasis:names:tc:xliff:document:1.2">
+    <!-- -->
+    <!-- Label shown on launcher icon -->
     <string name="app_label" msgid="6674495003718166674">"時鐘"</string>
+
+    <!-- Title for AlarmClock activity -->
     <string name="alarm_list_title" msgid="7589940465292950600">"鬧鐘"</string>
+
+    <!-- Menu item on Alarm Clock screen: Add alarm -->
     <string name="add_alarm" msgid="5976616107390962899">"新增鬧鐘"</string>
+
+    <!-- Menu item on Alarm Clock screen: Desk clock -->
     <string name="menu_desk_clock" msgid="3241995064554071588">"桌面時鐘"</string>
+
+    <!-- Menu item on Alarm Clock screen: Edit alarm -->
     <string name="menu_edit_alarm" msgid="7204602994918829751">"編輯鬧鐘"</string>
+
+    <!-- Context Menu Item on Alarm Settings screen: Delete alarm -->
     <string name="delete_alarm" msgid="3457780990646206817">"刪除鬧鐘"</string>
+
+    <!-- Context Menu Item on Alarm Settings screen: Enable alarm -->
     <string name="enable_alarm" msgid="1834599140632142536">"開啟鬧鐘"</string>
+
+    <!-- Context Menu Item on Alarm Settings screen: Disable alarm -->
     <string name="disable_alarm" msgid="5889378670229554109">"關閉鬧鐘"</string>
+
+    <!-- Delete alarm confirmation dialog message. -->
     <string name="delete_alarm_confirm" msgid="4237696873219106907">"刪除此鬧鐘？"</string>
+
+    <!-- Menu item on Alarm Clock screen: Show clock -->
     <string name="show_clock" msgid="8358759982675616915">"顯示時鐘"</string>
+
+    <!-- Menu item on Alarm Clock screen: Hide clock -->
     <string name="hide_clock" msgid="3217727306480505694">"隱藏時鐘"</string>
+
+    <!-- Setting label on Set alarm screen: Label -->
     <string name="label" msgid="162189613902857319">"標籤"</string>
+
+    <!-- Default label to display for an alarm -->
     <string name="default_label" msgid="5590025289805630372">"鬧鐘"</string>
+
+    <!-- Setting label on Set alarm screen: Application to launch -->
+    <string name="application">啟動應用程式</string>
+
+    <!-- Title on the application picker -->
+    <string name="application_title">選擇應用程式</string>
+
+    <!-- Option to not launch an application -->
+    <string name="application_none">不要啟動</string>
+
+	<!-- Setting label on Set alarm screen: Show dialog -->
+	<string name="no_dialog">隱藏對話方塊</string>
+
+	<!-- Summary when dialog is hidden -->
+	<string name="no_dialog_on">不顯示“貪睡／關閉”對話方塊</string>
+
+	<!-- Summary when dialog will be shown -->
+	<string name="no_dialog_off">顯示“貪睡／關閉”對話方塊</string>
+
+    <!-- Preference category on Alarm Settings screen: Set alarm -->
     <string name="set_alarm" msgid="9148359866152726808">"設定鬧鐘"</string>
+
+    <!-- Setting labels on Set alarm screen: Vibration on or off -->
     <string name="alarm_vibrate" msgid="3476686921490362230">"震動"</string>
+
+    <!-- Setting labels on Set alarm screen: Repeat -->
     <string name="alarm_repeat" msgid="7242985466344233206">"重複"</string>
+
+    <!-- Setting labels on Set alarm screen: Select alarm ringtone  -->
     <string name="alert" msgid="6539852766423700221">"鈴聲"</string>
+
+    <!-- Setting labels on Set alarm screen: Set time  -->
     <string name="time" msgid="8067216534232296518">"時間"</string>
+
+    <!-- Button labels on the alarm dialog: Dismiss -->
     <string name="alarm_alert_dismiss_text" msgid="4942914605480888820">"關閉"</string>
+
+    <!-- Alarm Alert screen: this message is shown after an alarm rung
+         unattended for a number of minutes.  It tells the user that
+         the alarm has been silenced.-->
     <string name="alarm_alert_alert_silenced" msgid="7918075929961104202">"鬧鐘 <xliff:g id="MINUTES">%d</xliff:g> 分鐘後靜音"</string>
+
+    <!-- Button labels on the alarm dialog: Snooze -->
     <string name="alarm_alert_snooze_text" msgid="1774416052207651584">"貪睡"</string>
+
+    <!-- Button labels on the alarm dialog: Snooze & dismiss (when dual-mode button enabled) -->
+    <string name="alarm_alert_snooze_text_dual_mode">貪睡（長按來關閉）</string>
+
+    <!-- Toast that appears after Alarm is snoozed from the Alarm
+         dialog. Says the alarm will snooze for xxx minutes.  -->
     <string name="alarm_alert_snooze_set" msgid="656470966696912087">"再貪睡 <xliff:g id="MINUTES">%d</xliff:g> 分鐘。"</string>
-  <string-array name="alarm_set">
-    <item msgid="5163476010406761625">"已將此鬧鐘設為 1 分鐘後啟動。"</item>
-    <item msgid="7110525731259629055">"已將此鬧鐘設為 <xliff:g id="DAYS">%1$s</xliff:g>後啟動。"</item>
-    <item msgid="7003982794086186185">"已將此鬧鐘設為 <xliff:g id="HOURS">%2$s</xliff:g>後啟動。"</item>
-    <item msgid="7311021123230077742">"已將此鬧鐘設為 <xliff:g id="DAYS">%1$s</xliff:g>又 <xliff:g id="HOURS">%2$s</xliff:g>後啟動。"</item>
-    <item msgid="8431715191823114872">"已將此鬧鐘設為 <xliff:g id="MINUTES">%3$s</xliff:g>後啟動。"</item>
-    <item msgid="3244151088673185428">"已將此鬧鐘設為 <xliff:g id="DAYS">%1$s</xliff:g>又 <xliff:g id="MINUTES">%3$s</xliff:g>後啟動。"</item>
-    <item msgid="3663661342600168814">"已將此鬧鐘設為 <xliff:g id="HOURS">%2$s</xliff:g> <xliff:g id="MINUTES">%3$s</xliff:g>後啟動。"</item>
-    <item msgid="7779544127785487304">"已將此鬧鐘設為 <xliff:g id="DAYS">%1$s</xliff:g>又 <xliff:g id="HOURS">%2$s</xliff:g> <xliff:g id="MINUTES">%3$s</xliff:g>後啟動。"</item>
-  </string-array>
+
+    <!-- 0: nothing
+         1: days
+         2:      hours
+         3: days hours
+         4:            minutes
+         5: days       minutes
+         6:      hours minutes
+         7: days hours minutes
+    --><skip />
+
+    <!-- Alarm confirmation toast: Describes how long from now until
+         alarm fires -->
+    <string-array name="alarm_set">
+        <item msgid="5163476010406761625">"已將此鬧鐘設為 1 分鐘後啟動。"</item>
+        <item msgid="7110525731259629055">"已將此鬧鐘設為 <xliff:g id="DAYS">%1$s</xliff:g>後啟動。"</item>
+        <item msgid="7003982794086186185">"已將此鬧鐘設為 <xliff:g id="HOURS">%2$s</xliff:g>後啟動。"</item>
+        <item msgid="7311021123230077742">"已將此鬧鐘設為 <xliff:g id="DAYS">%1$s</xliff:g>又 <xliff:g id="HOURS">%2$s</xliff:g>後啟動。"</item>
+        <item msgid="8431715191823114872">"已將此鬧鐘設為 <xliff:g id="MINUTES">%3$s</xliff:g>後啟動。"</item>
+        <item msgid="3244151088673185428">"已將此鬧鐘設為 <xliff:g id="DAYS">%1$s</xliff:g>又 <xliff:g id="MINUTES">%3$s</xliff:g>後啟動。"</item>
+        <item msgid="3663661342600168814">"已將此鬧鐘設為 <xliff:g id="HOURS">%2$s</xliff:g> <xliff:g id="MINUTES">%3$s</xliff:g>後啟動。"</item>
+        <item msgid="7779544127785487304">"已將此鬧鐘設為 <xliff:g id="DAYS">%1$s</xliff:g>又 <xliff:g id="HOURS">%2$s</xliff:g> <xliff:g id="MINUTES">%3$s</xliff:g>後啟動。"</item>
+    </string-array>
+
+    <!-- Alarm confirmation toast: singular day -->
     <string name="day" msgid="7984755014526510295">"1 天"</string>
+
+    <!-- Alarm confirmation toast: plural days -->
     <string name="days" msgid="2070509222727852210">"<xliff:g id="DAYS">%s</xliff:g> 天"</string>
+
+    <!-- Alarm confirmation toast: singular hour -->
     <string name="hour" msgid="2546819039651509323">"1 小時"</string>
+
+    <!-- Alarm confirmation toast: plural hours -->
     <string name="hours" msgid="2071487018566991613">"<xliff:g id="HOURS">%s</xliff:g> 小時"</string>
+
+    <!-- Alarm confirmation toast: singular minute  -->
     <string name="minute" msgid="2486157997434653710">"1 分鐘"</string>
+
+    <!-- Alarm confirmation toast: plural minutes  -->
     <string name="minutes" msgid="6115838729146292526">"<xliff:g id="MINUTES">%s</xliff:g> 分鐘"</string>
+
+    <!-- Repeat options that appear under an alarm on main Alarm Clock
+         screen to identify repetition schedule: special case for when
+         the alarm is set to repeat every day -->
     <string name="every_day" msgid="1058994798884544691">"每天"</string>
+
+    <!-- Repeat options that appear under an alarm on main Alarm Clock
+         screen to identify repetition schedule: special case for when
+         the alarm is set to never repeat -->
     <string name="never" msgid="54104287800571769">"永不"</string>
+
+    <!-- Repeat options that appear under an alarm on main Alarm Clock
+         screen to identify repetition schedule: concatenate days with
+         this character, i.e. "Mon, Tue, Wed" -->
     <string name="day_concat" msgid="971998564991636532">"、 "</string>
+
+    <!-- Appears at the top of the Clock Picker screen: Tell user to
+         select a clock to display -->
     <string name="clock_instructions" msgid="3118560284915857690">"選取要顯示的時鐘。"</string>
+
+    <!-- Label for analog clock gadget, shown in list of all gadgets -->
     <string name="analog_gadget" msgid="1670505720837152766">"類比時鐘"</string>
+
+    <!-- Menu item title for general Alarm Clock Settings -->
     <string name="settings" msgid="5849739030579520686">"設定"</string>
+
+    <!-- Setting title for whether the alarm should play in silent mode.
+         Usually, silent mode only affects the ringer, but this setting
+         will make the alarms respect silent mode too. -->
     <string name="alarm_in_silent_mode_title" msgid="3892612644543516705">"靜音模式下的鬧鐘"</string>
+
+    <!-- Setting summary for whether the alarm should play in silent mode. -->
     <string name="alarm_in_silent_mode_summary" msgid="6042500263899922832">"手機處於靜音模式時，鬧鐘仍會響"</string>
+
+    <!-- Setting title for changing the snooze duration. -->
     <string name="snooze_duration_title" msgid="1471249885139952670">"貪睡時間"</string>
-  <string-array name="snooze_duration_entries">
-    <item msgid="8337408933053603125">"5 分鐘"</item>
-    <item msgid="5294206441496024610">"10 分鐘"</item>
-    <item msgid="2165904039211935470">"15 分鐘"</item>
-    <item msgid="7248236967714374250">"20 分鐘"</item>
-    <item msgid="738394723625179423">"25 分鐘"</item>
-    <item msgid="1180222611308391616">"30 分鐘"</item>
-  </string-array>
-  <string-array name="snooze_duration_values">
-    <item msgid="3655014754453084122">"5"</item>
-    <item msgid="8939029597449573449">"10"</item>
-    <item msgid="3922647341176353315">"15"</item>
-    <item msgid="5821804105985044459">"20"</item>
-    <item msgid="6048861883552402852">"25"</item>
-    <item msgid="2740866721232379791">"30"</item>
-  </string-array>
+
+    <!-- Entries listed in the ListPreference when invoking the snooze duration
+         preference. -->
+    <string-array name="snooze_duration_entries">
+      <item msgid="8337408933053603125">"5 分鐘"</item>
+      <item msgid="5294206441496024610">"10 分鐘"</item>
+      <item msgid="2165904039211935470">"15 分鐘"</item>
+      <item msgid="7248236967714374250">"20 分鐘"</item>
+      <item msgid="738394723625179423">"25 分鐘"</item>
+      <item msgid="1180222611308391616">"30 分鐘"</item>
+    </string-array>
+
+    <!-- Values that are retrieved from the ListPreference. These must match
+         the snooze_duration_entries above. -->
+    <string-array name="snooze_duration_values">
+      <item msgid="3655014754453084122">"5"</item>
+      <item msgid="8939029597449573449">"10"</item>
+      <item msgid="3922647341176353315">"15"</item>
+      <item msgid="5821804105985044459">"20"</item>
+      <item msgid="6048861883552402852">"25"</item>
+      <item msgid="2740866721232379791">"30"</item>
+    </string-array>
+
+    <!-- Done button when editing an alarm. -->
     <string name="done" msgid="6509722361933858451">"完成"</string>
+
+    <!-- Revert button when editing an alarm. -->
     <string name="revert" msgid="9100911171235162926">"復原"</string>
+
+    <!-- Delete button when editing an alarm. -->
     <string name="delete" msgid="5732434972457000541">"刪除"</string>
+
+    <!-- Setting title for changing the alarm volume. -->
     <string name="alarm_volume_title" msgid="8506245173912428522">"鬧鐘音量"</string>
+
+    <!-- Setting summary for changing the alarm volume. -->
     <string name="alarm_volume_summary" msgid="8957440373896242438">"設定鬧鐘音量"</string>
+
+    <!-- Summary for the alarm preference when silent is chosen. -->
     <string name="silent_alarm_summary" msgid="8605302849408279221">"靜音"</string>
+
+    <!-- Text to display in the small text of the notification -->
     <string name="alarm_notify_text" msgid="4146350965933990093">"選取貪睡功能或關閉此鬧鐘。"</string>
+
+    <!-- Text to display in the notification ticker and label -->
     <string name="alarm_notify_snooze_label" msgid="5404083762646377829">"<xliff:g id="LABEL">%s</xliff:g> (貪睡)"</string>
+
+    <!-- Text to display in the notification when the alarm has been snoozed -->
     <string name="alarm_notify_snooze_text" msgid="8004830999152609519">"鬧鐘設定在 <xliff:g id="TIME">%s</xliff:g>，選取即可取消"</string>
+
+    <!-- Title of the setting to change the volume/camera button behavior. -->
     <string name="volume_button_setting_title" msgid="8155275533660105161">"音量和相機"</string>
+
+    <!-- Dialog title of the volume and power setting. -->
     <string name="volume_button_dialog_title" msgid="8768042543750036853">"按鈕功用"</string>
+
+    <!-- The summary of the side button setting. -->
     <string name="volume_button_setting_summary" msgid="4776447991226047070">"設定這些按鈕在鬧鐘啟動時的功用"</string>
-  <string-array name="volume_button_setting_entries">
-    <item msgid="4520420953175098625">"無"</item>
-    <item msgid="7111908302622811168">"貪睡"</item>
-    <item msgid="8573552194573068996">"關閉"</item>
-  </string-array>
-  <string-array name="volume_button_setting_values">
-    <item msgid="4851033050639608752">"0"</item>
-    <item msgid="3204893476515513084">"1"</item>
-    <item msgid="7687709558968154577">"2"</item>
-  </string-array>
+
+    <!-- Entries listed in the setting for the side-button action. -->
+    <string-array name="volume_button_setting_entries">
+      <item msgid="4520420953175098625">"無"</item>
+      <item msgid="7111908302622811168">"貪睡"</item>
+      <item msgid="8573552194573068996">"關閉"</item>
+    </string-array>
+
+    <!-- Values for the side-button setting. -->
+    <string-array name="volume_button_setting_values">
+      <item msgid="4851033050639608752">"0"</item>
+      <item msgid="3204893476515513084">"1"</item>
+      <item msgid="7687709558968154577">"2"</item>
+    </string-array>
+
+    <!-- Accessibility labels for Clock activity buttons --><skip/>
     <string name="alarm_button_description" msgid="740283647046258651">"鬧鐘"</string>
     <string name="gallery_button_description" msgid="1151743663255257668">"圖片庫"</string>
     <string name="music_button_description" msgid="1626593420810117999">"音樂"</string>
     <string name="nightmode_button_description" msgid="990894208217576381">"微暗"</string>
     <string name="home_button_description" msgid="3383859096809056157">"啟動器"</string>
     <string name="desk_clock_button_description" msgid="968868045496561043">"時鐘顯示"</string>
+
+    <!-- A short representation of charging information, e.g "34%" -->
     <string name="battery_charging_level" msgid="4391767951302394083">"<xliff:g id="NUMBER">%d</xliff:g><xliff:g id="PERCENT">%%</xliff:g>"</string>
+
+    <!-- What to show the user if the weather widget exists but fails to
+         respond. This is a sign of an error; if the weather widget is not
+         present on the device, we show nothing at all. -->
     <string name="weather_fetch_failure" msgid="7517010911981312358">"目前無法取得天氣資訊。"</string>
+
     <string name="menu_item_dock_settings" msgid="3524235151132971114">"座架設定"</string>
+
+    <!-- Setting title for setting alarm time limit -->
+    <string name="alarm_limit_title">鬧鐘持續時間上限</string>
+
     <string name="alarm_klaxon_service_desc" msgid="2153290655559916468">"DeskClock 鬧鐘鈴聲播放服務。"</string>
+
+    <!-- Entries listed in the ListPreference when invoking the max alarm duration
+         preference. -->
+    <string-array name="alarm_limit_entries">
+      <item>5 分鐘</item>
+      <item>15 分鐘</item>
+      <item>30 分鐘</item>
+      <item>60 分鐘</item>
+      <item>90 分鐘</item>
+      <item>120 分鐘</item>
+      <item>無限</item>
+    </string-array>
+
+    <!-- Values that are retrieved from the ListPreference. These must match
+         the alarm_limit_entries above. -->
+    <string-array name="alarm_limit_values">
+      <item>5</item>
+      <item>15</item>
+      <item>30</item>
+      <item>60</item>
+      <item>90</item>
+      <item>120</item>
+      <item>-1</item>
+    </string-array>
+
+    <!-- Setting title for setting alarm time limit -->
+    <string name="screensaver_timeout_title">螢幕保護模式逾時</string>
+
+    <!-- Entries listed in the ListPreference when invoking the max alarm duration
+         preference. -->
+    <string-array name="screensaver_timeout_entries">
+      <item>1 分鐘</item>
+      <item>5 分鐘</item>
+      <item>10 分鐘</item>
+      <item>15 分鐘</item>
+      <item>30 分鐘</item>
+      <item>60 分鐘</item>
+    </string-array>
+
+    <!-- Values that are retrieved from the ListPreference. These must match
+         the alarm_limit_entries above. -->
+    <string-array name="screensaver_timeout_values">
+      <item>1</item>
+      <item>5</item>
+      <item>10</item>
+      <item>15</item>
+      <item>30</item>
+      <item>60</item>
+    </string-array>
+
+    <!-- Setting title for screensaver time color picker general title-->
+    <string name="color_picker">時間色彩</string>
+
+    <!-- Setting title for screensaver time color picker -->
+    <string name="color_picker_title">時間色彩（螢幕保護模式）</string>
+
+    <!-- Setting title for screensaver time color picker -->
+    <string name="color_picker_summary">變更顯示於螢幕保護模式中的時間的顏色</string>
+
+    <!-- Sample time used in color picker -->
+    <string name="color_picker_sample">11:45</string>
+
+    <!-- Labels for colors in color picker -->
+    <string name="color_picker_alpha">透明度（只限暗淡時）</string>
+    <string name="color_picker_red">紅</string>
+    <string name="color_picker_green">綠</string>
+    <string name="color_picker_blue">藍</string>
+
+    <!-- Settings strings for dual-mode button -->
+    <string name="use_dual_mode_button">貪睡雙重模式</string>
+    <string name="use_dual_mode_button_on">長按貪睡按鈕關閉鬧鐘</string>
+    <string name="use_dual_mode_button_off">貪睡和關閉分別使用個別的按鈕</string>
+
 </resources>
