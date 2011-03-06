@@ -103,7 +103,7 @@
   </string-array>
     <string name="alarm_button_description" msgid="740283647046258651">"Alarmes"</string>
     <string name="gallery_button_description" msgid="1151743663255257668">"Galeria"</string>
-    <string name="music_button_description" msgid="1626593420810117999">"Música"</string>
+    <string name="music_button_description" msgid="1626593420810117999">Música</string>
     <string name="nightmode_button_description" msgid="990894208217576381">"Escurecer"</string>
     <string name="home_button_description" msgid="3383859096809056157">"Launcher"</string>
     <string name="desk_clock_button_description" msgid="968868045496561043">"Exibição do relógio"</string>
