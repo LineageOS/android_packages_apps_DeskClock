@@ -197,14 +197,6 @@
 
     <!-- Values that are retrieved from the ListPreference. These must match
          the snooze_duration_entries above. -->
-    <string-array name="snooze_duration_values">
-      <item msgid="3655014754453084122">"5"</item>
-      <item msgid="8939029597449573449">"10"</item>
-      <item msgid="3922647341176353315">"15"</item>
-      <item msgid="5821804105985044459">"20"</item>
-      <item msgid="6048861883552402852">"25"</item>
-      <item msgid="2740866721232379791">"30"</item>
-    </string-array>
 
     <!-- Done button when editing an alarm. -->
     <string name="done" msgid="6509722361933858451">"完成"</string>
@@ -250,11 +242,6 @@
     </string-array>
 
     <!-- Values for the side-button setting. -->
-    <string-array name="volume_button_setting_values">
-      <item msgid="4851033050639608752">"0"</item>
-      <item msgid="3204893476515513084">"1"</item>
-      <item msgid="7687709558968154577">"2"</item>
-    </string-array>
 
     <!-- Accessibility labels for Clock activity buttons --><skip/>
     <string name="alarm_button_description" msgid="740283647046258651">"鬧鐘"</string>
