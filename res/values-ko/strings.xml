@@ -71,14 +71,6 @@
     <item msgid="738394723625179423">"25분"</item>
     <item msgid="1180222611308391616">"30분"</item>
   </string-array>
-  <string-array name="snooze_duration_values">
-    <item msgid="3655014754453084122">"5"</item>
-    <item msgid="8939029597449573449">"10"</item>
-    <item msgid="3922647341176353315">"15"</item>
-    <item msgid="5821804105985044459">"20"</item>
-    <item msgid="6048861883552402852">"25"</item>
-    <item msgid="2740866721232379791">"30"</item>
-  </string-array>
     <string name="done" msgid="6509722361933858451">"완료"</string>
     <string name="revert" msgid="9100911171235162926">"되돌리기"</string>
     <string name="delete" msgid="5732434972457000541">"삭제"</string>
@@ -95,11 +87,6 @@
     <item msgid="4520420953175098625">"없음"</item>
     <item msgid="7111908302622811168">"다시 울림"</item>
     <item msgid="8573552194573068996">"해제"</item>
-  </string-array>
-  <string-array name="volume_button_setting_values">
-    <item msgid="4851033050639608752">"0"</item>
-    <item msgid="3204893476515513084">"1"</item>
-    <item msgid="7687709558968154577">"2"</item>
   </string-array>
     <string name="alarm_button_description" msgid="740283647046258651">"알람"</string>
     <string name="gallery_button_description" msgid="1151743663255257668">"갤러리"</string>
