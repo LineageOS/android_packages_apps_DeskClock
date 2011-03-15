@@ -29,6 +29,12 @@
     <string name="hide_clock" msgid="3217727306480505694">"הסתר שעון"</string>
     <string name="label" msgid="162189613902857319">"תווית"</string>
     <string name="default_label" msgid="5590025289805630372">"התראה"</string>
+	<string name="application">יישום</string>
+    <string name="application_title">הפעל יישום</string>
+    <string name="application_none">ללא</string>
+    <string name="no_dialog">הסתר דו שיח</string>
+    <string name="no_dialog_on">ללא נודניק/לבטל</string>
+    <string name="no_dialog_off">נודניק/הפסק</string>
     <string name="set_alarm" msgid="9148359866152726808">"הגדר התראה"</string>
     <string name="alarm_vibrate" msgid="3476686921490362230">"רטט"</string>
     <string name="alarm_repeat" msgid="7242985466344233206">"חזרה"</string>
@@ -37,6 +43,7 @@
     <string name="alarm_alert_dismiss_text" msgid="4942914605480888820">"בטל"</string>
     <string name="alarm_alert_alert_silenced" msgid="7918075929961104202">"התראה מושתקת לאחר <xliff:g id="MINUTES">%d</xliff:g> דקות"</string>
     <string name="alarm_alert_snooze_text" msgid="1774416052207651584">"נודניק"</string>
+    <string name="alarm_alert_snooze_text_dual_mode">נודניק (החזק כדי לבטל)</string>
     <string name="alarm_alert_snooze_set" msgid="656470966696912087">"נודניק בעוד <xliff:g id="MINUTES">%d</xliff:g> דקות."</string>
   <string-array name="alarm_set">
     <item msgid="5163476010406761625">"התראה זו מוגדרת לעוד פחות מדקה אחת מעכשיו."</item>
@@ -97,5 +104,79 @@
     <string name="battery_charging_level" msgid="4391767951302394083">"<xliff:g id="NUMBER">%d</xliff:g><xliff:g id="PERCENT">%%</xliff:g>"</string>
     <string name="weather_fetch_failure" msgid="7517010911981312358">"מידע על מזג האוויר אינו זמין כעת."</string>
     <string name="menu_item_dock_settings" msgid="3524235151132971114">"הגדרות עגינה"</string>
+	<string name="alarm_limit_title">מקסימום משך התראה</string>
     <string name="alarm_klaxon_service_desc" msgid="2153290655559916468">"שירות השמעת צלילים להתראות שהוגדרו ב-DeskClock."</string>
+	
+    <!-- Entries listed in the ListPreference when invoking the max alarm duration
+         preference. -->
+    <string-array name="alarm_limit_entries">
+     <item>5 דקות</item>
+    <item>15 דקות</item>
+    <item>30 דקות</item>
+    <item>60 דקות</item>
+    <item>90 דקות</item>
+    <item>120 דקות</item>
+    <item>אינסופי</item>
+    </string-array>
+
+    <!-- Values that are retrieved from the ListPreference. These must match
+         the alarm_limit_entries above. -->
+    <string-array name="alarm_limit_values">
+      <item>5</item>
+      <item>15</item>
+      <item>30</item>
+      <item>60</item>
+      <item>90</item>
+      <item>120</item>
+      <item>-1</item>
+    </string-array>
+
+    <!-- Setting title for setting alarm time limit -->
+    <string name="screensaver_timeout_title">הפסק שומר מסך</string>
+
+    <!-- Entries listed in the ListPreference when invoking the max alarm duration
+         preference. -->
+    <string-array name="screensaver_timeout_entries">
+      <item>1 דקה</item>
+    <item>5 דקות</item>
+    <item>10 דקות</item>
+    <item>15 דקות</item>
+    <item>30 דקות</item>
+    <item>60 דקות</item
+    </string-array>
+
+    <!-- Values that are retrieved from the ListPreference. These must match
+         the alarm_limit_entries above. -->
+    <string-array name="screensaver_timeout_values">
+      <item>1</item>
+      <item>5</item>
+      <item>10</item>
+      <item>15</item>
+      <item>30</item>
+      <item>60</item>
+    </string-array>
+
+    <!-- Setting title for screensaver time color picker general title-->
+    <string name="color_picker">צבע הזמן</string>
+
+    <!-- Setting title for screensaver time color picker -->
+    <string name="color_picker_title">צבע הזמן (בשומר מסך)</string>
+
+    <!-- Setting title for screensaver time color picker -->
+    <string name="color_picker_summary">שינוי צבע של הזמן במצב שומר מסך</string>
+
+    <!-- Sample time used in color picker -->
+    <string name="color_picker_sample">11:45</string>
+
+    <!-- Labels for colors in color picker -->
+    <string name="color_picker_alpha">שקיפות (מעומעם בלבד)</string>
+    <string name="color_picker_red">אדום</string>
+    <string name="color_picker_green">ירוק</string>
+    <string name="color_picker_blue">כחול</string>
+
+    <!-- Settings strings for dual-mode button -->
+    <string name="use_dual_mode_button">מצב נודניק כפול</string>
+    <string name="use_dual_mode_button_on">לחיצה ארוכה על כפתור הנודניק לכבות את ההתראה</string>
+    <string name="use_dual_mode_button_off">Separate snooze and dismiss buttons</string>
+
 </resources>
