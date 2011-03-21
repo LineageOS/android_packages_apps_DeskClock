@@ -25,6 +25,7 @@ import android.os.Parcel;
 import android.os.Parcelable;
 import android.provider.BaseColumns;
 import android.text.TextUtils;
+import android.text.format.DateUtils;
 
 import java.net.URISyntaxException;
 import java.text.DateFormatSymbols;
@@ -313,15 +314,11 @@ public final class Alarm implements Parcelable {
             }
 
             // short or long form?
-            DateFormatSymbols dfs = new DateFormatSymbols();
-            String[] dayList = (dayCount > 1) ?
-                    dfs.getShortWeekdays() :
-                    dfs.getWeekdays();
-
+            int abbrev = dayCount > 1 ? DateUtils.LENGTH_SHORT : DateUtils.LENGTH_LONG;
             // selected days
             for (int i = 0; i < 7; i++) {
                 if ((mDays & (1 << i)) != 0) {
-                    ret.append(dayList[DAY_MAP[i]]);
+                    ret.append(DateUtils.getDayOfWeekString(DAY_MAP[i],abbrev));
                     dayCount -= 1;
                     if (dayCount > 0) ret.append(
                             context.getText(R.string.day_concat));
