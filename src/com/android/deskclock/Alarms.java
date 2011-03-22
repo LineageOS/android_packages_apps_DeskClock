@@ -33,7 +33,7 @@ import android.text.TextUtils;
 import android.text.format.DateFormat;
 
 import java.util.Calendar;
-import java.text.DateFormatSymbols;
+
 
 /**
  * The Alarms provider supplies info about Alarm Clock settings
