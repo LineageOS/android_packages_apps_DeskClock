@@ -28,7 +28,6 @@ import android.text.TextUtils;
 import android.text.format.DateUtils;
 
 import java.net.URISyntaxException;
-import java.text.DateFormatSymbols;
 import java.util.Calendar;
 
 public final class Alarm implements Parcelable {
