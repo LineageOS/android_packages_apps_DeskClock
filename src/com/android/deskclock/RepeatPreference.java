@@ -20,9 +20,9 @@ import android.app.AlertDialog.Builder;
 import android.content.Context;
 import android.content.DialogInterface;
 import android.preference.ListPreference;
+import android.text.format.DateUtils;
 import android.util.AttributeSet;
 
-import java.text.DateFormatSymbols;
 import java.util.Calendar;
 
 public class RepeatPreference extends ListPreference {
@@ -36,15 +36,14 @@ public class RepeatPreference extends ListPreference {
     public RepeatPreference(Context context, AttributeSet attrs) {
         super(context, attrs);
 
-        String[] weekdays = new DateFormatSymbols().getWeekdays();
         String[] values = new String[] {
-            weekdays[Calendar.MONDAY],
-            weekdays[Calendar.TUESDAY],
-            weekdays[Calendar.WEDNESDAY],
-            weekdays[Calendar.THURSDAY],
-            weekdays[Calendar.FRIDAY],
-            weekdays[Calendar.SATURDAY],
-            weekdays[Calendar.SUNDAY],
+            DateUtils.getDayOfWeekString(Calendar.MONDAY, DateUtils.LENGTH_LONG),
+            DateUtils.getDayOfWeekString(Calendar.TUESDAY, DateUtils.LENGTH_LONG),
+            DateUtils.getDayOfWeekString(Calendar.WEDNESDAY, DateUtils.LENGTH_LONG),
+            DateUtils.getDayOfWeekString(Calendar.THURSDAY, DateUtils.LENGTH_LONG),
+            DateUtils.getDayOfWeekString(Calendar.FRIDAY, DateUtils.LENGTH_LONG),
+            DateUtils.getDayOfWeekString(Calendar.SATURDAY, DateUtils.LENGTH_LONG),
+            DateUtils.getDayOfWeekString(Calendar.SUNDAY, DateUtils.LENGTH_LONG)
         };
         setEntries(values);
         setEntryValues(values);
