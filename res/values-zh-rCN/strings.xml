@@ -29,6 +29,25 @@
     <string name="hide_clock" msgid="3217727306480505694">"隐藏时钟"</string>
     <string name="label" msgid="162189613902857319">"标签"</string>
     <string name="default_label" msgid="5590025289805630372">"闹钟"</string>
+
+    <!-- Setting label on Set alarm screen: Application to launch -->
+    <string name="application">应用程序</string>
+
+    <!-- Title on the application picker -->
+    <string name="application_title">运行应用程序</string>
+
+    <!-- Option to not launch an application -->
+    <string name="application_none">无</string>
+
+	<!-- Setting label on Set alarm screen: Show dialog -->
+	<string name="no_dialog">隐藏对话框</string>
+
+	<!-- Summary when dialog is hidden -->
+	<string name="no_dialog_on">不显示暂停/取消对话框</string>
+
+	<!-- Summary when dialog will be shown -->
+	<string name="no_dialog_off">显示暂停/取消对话框</string>
+
     <string name="set_alarm" msgid="9148359866152726808">"设置闹钟"</string>
     <string name="alarm_vibrate" msgid="3476686921490362230">"振动"</string>
     <string name="alarm_repeat" msgid="7242985466344233206">"重复"</string>
@@ -37,6 +56,10 @@
     <string name="alarm_alert_dismiss_text" msgid="4942914605480888820">"取消"</string>
     <string name="alarm_alert_alert_silenced" msgid="7918075929961104202">"闹钟响铃时间为 <xliff:g id="MINUTES">%d</xliff:g> 分钟"</string>
     <string name="alarm_alert_snooze_text" msgid="1774416052207651584">"暂停再响"</string>
+
+    <!-- Button labels on the alarm dialog: Snooze & dismiss (when dual-mode button enabled) -->
+    <string name="alarm_alert_snooze_text_dual_mode">暂停再响(长按取消)</string>
+
     <string name="alarm_alert_snooze_set" msgid="656470966696912087">"暂停 <xliff:g id="MINUTES">%d</xliff:g> 分钟。"</string>
   <string-array name="alarm_set">
     <item msgid="5163476010406761625">"已将此闹钟设置为从现在起不到 1 分钟后提醒。"</item>
