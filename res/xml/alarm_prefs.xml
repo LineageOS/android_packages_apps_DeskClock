@@ -40,7 +40,7 @@
         android:persistent="false"
         android:title="@string/label"
         android:dialogTitle="@string/label" />
-    <Preference android:key="intent"
+    <com.android.deskclock.IntentPreferenceScreen android:key="intent"
         android:persistent="false"
         android:title="@string/application" />
     <CheckBoxPreference android:key="no_dialog"

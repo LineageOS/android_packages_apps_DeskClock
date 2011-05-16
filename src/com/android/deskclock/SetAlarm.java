@@ -16,6 +16,7 @@
 
 package com.android.deskclock;
 
+import java.net.URISyntaxException;
 import java.util.ArrayList;
 
 import android.app.AlertDialog;
@@ -24,6 +25,9 @@ import android.content.Context;
 import android.content.DialogInterface;
 import android.content.Intent;
 import android.content.Intent.ShortcutIconResource;
+import android.content.pm.PackageManager;
+import android.content.pm.PackageManager.NameNotFoundException;
+import android.graphics.drawable.Drawable;
 import android.os.Bundle;
 import android.os.Handler;
 import android.preference.CheckBoxPreference;
@@ -32,15 +36,9 @@ import android.preference.Preference;
 import android.preference.PreferenceActivity;
 import android.preference.PreferenceScreen;
 import android.text.format.DateFormat;
-import android.view.LayoutInflater;
-import android.view.Menu;
 import android.view.MenuItem;
 import android.view.View;
-import android.view.ViewGroup.LayoutParams;
 import android.widget.Button;
-import android.widget.FrameLayout;
-import android.widget.LinearLayout;
-import android.widget.ListView;
 import android.widget.TimePicker;
 import android.widget.Toast;
 
@@ -60,7 +58,7 @@ public class SetAlarm extends PreferenceActivity
     private CheckBoxPreference mVibratePref;
     private RepeatPreference mRepeatPref;
     private MenuItem mTestAlarmItem;
-    private Preference mIntentPref;
+    private IntentPreferenceScreen mIntentPref;
     private CheckBoxPreference mNoDialogPref;
 
     private int     mId;
@@ -121,7 +119,7 @@ public class SetAlarm extends PreferenceActivity
         mRepeatPref.setOnPreferenceChangeListener(this);
         mNoDialogPref = (CheckBoxPreference) findPreference("no_dialog");
         mNoDialogPref.setOnPreferenceChangeListener(this);
-        mIntentPref = findPreference("intent");
+        mIntentPref = (IntentPreferenceScreen) findPreference("intent");
 
         Intent i = getIntent();
         mId = i.getIntExtra(Alarms.ALARM_ID, -1);
@@ -221,7 +219,8 @@ public class SetAlarm extends PreferenceActivity
         mVibratePref.setChecked(alarm.vibrate);
         // Give the alert uri to the preference.
         mAlarmPref.setAlert(alarm.alert);
-        mIntentPref.setSummary(alarm.intent);
+        mIntentPref.updateIntent(alarm.intent);
+
         updateTime();
         updateNoDialog(alarm);
     }
@@ -290,9 +289,9 @@ public class SetAlarm extends PreferenceActivity
 
         String none = getString(R.string.application_none);
         if (none.equals(data.getStringExtra(Intent.EXTRA_SHORTCUT_NAME))) {
-            mIntentPref.setSummary("");
+            mIntentPref.clearIntent();
         } else {
-            mIntentPref.setSummary(data.toUri(Intent.URI_INTENT_SCHEME));
+            mIntentPref.updateIntent(data);
         }
     }
 
@@ -347,7 +346,7 @@ public class SetAlarm extends PreferenceActivity
         alarm.vibrate = mVibratePref.isChecked();
         alarm.label = mLabel.getText();
         alarm.alert = mAlarmPref.getAlert();
-        CharSequence intent = mIntentPref.getSummary();
+        CharSequence intent = mIntentPref.getIntentString();
         alarm.intent = intent == null ? "" : intent.toString();
         alarm.noDialog = mNoDialogPref.isChecked();
         updateNoDialog(alarm);
