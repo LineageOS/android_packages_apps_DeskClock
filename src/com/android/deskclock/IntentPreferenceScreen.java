@@ -91,6 +91,7 @@ public class IntentPreferenceScreen extends Preference {
     public void updateIntent(String intentUri) {
         if (intentUri == null) {
             clearIntent();
+            return;
         }
 
         try {
