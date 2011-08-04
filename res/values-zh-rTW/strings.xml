@@ -278,18 +278,6 @@
       <item>無限</item>
     </string-array>
 
-    <!-- Values that are retrieved from the ListPreference. These must match
-         the alarm_limit_entries above. -->
-    <string-array name="alarm_limit_values">
-      <item>5</item>
-      <item>15</item>
-      <item>30</item>
-      <item>60</item>
-      <item>90</item>
-      <item>120</item>
-      <item>-1</item>
-    </string-array>
-
     <!-- Setting title for setting alarm time limit -->
     <string name="screensaver_timeout_title">螢幕保護模式逾時</string>
 
@@ -302,17 +290,6 @@
       <item>15 分鐘</item>
       <item>30 分鐘</item>
       <item>60 分鐘</item>
-    </string-array>
-
-    <!-- Values that are retrieved from the ListPreference. These must match
-         the alarm_limit_entries above. -->
-    <string-array name="screensaver_timeout_values">
-      <item>1</item>
-      <item>5</item>
-      <item>10</item>
-      <item>15</item>
-      <item>30</item>
-      <item>60</item>
     </string-array>
 
     <!-- Setting title for screensaver time color picker general title-->

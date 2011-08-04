@@ -292,7 +292,7 @@
 
     <!-- Values that are retrieved from the ListPreference. These must match
          the alarm_limit_entries above. -->
-    <string-array name="alarm_limit_values">
+    <string-array name="alarm_limit_values" translatable="false">
       <item>5</item>
       <item>15</item>
       <item>30</item>
@@ -318,7 +318,7 @@
 
     <!-- Values that are retrieved from the ListPreference. These must match
          the alarm_limit_entries above. -->
-    <string-array name="screensaver_timeout_values">
+    <string-array name="screensaver_timeout_values" translatable="false">
       <item>1</item>
       <item>5</item>
       <item>10</item>
