@@ -123,6 +123,7 @@
       <item>15 минут</item>
       <item>30 минут</item>
       <item>60 минут</item>
+      <item>@string/never</item>
     </string-array>
     <string name="color_picker">Цвет времени</string>
     <string name="color_picker_title">Цвет времени (Заставка)</string>

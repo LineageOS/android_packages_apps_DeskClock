@@ -144,6 +144,7 @@
       <item>15 Minuten</item>
       <item>30 Minuten</item>
       <item>60 Minuten</item>
+      <item>@string/never</item>
     </string-array>
 
     <!-- Setting title for screensaver time color picker general title-->

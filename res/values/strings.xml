@@ -314,6 +314,7 @@
       <item>15 minutes</item>
       <item>30 minutes</item>
       <item>60 minutes</item>
+      <item>@string/never</item>
     </string-array>
 
     <!-- Values that are retrieved from the ListPreference. These must match
@@ -325,6 +326,7 @@
       <item>15</item>
       <item>30</item>
       <item>60</item>
+      <item>-1</item>
     </string-array>
 
     <!-- Setting title for screensaver time color picker general title-->

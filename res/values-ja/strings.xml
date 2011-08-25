@@ -130,6 +130,7 @@
       <item>15 分</item>
       <item>30 分</item>
       <item>60 分</item>
+      <item>@string/never</item>
     </string-array>
 
     <!-- Setting title for screensaver time color picker general title-->

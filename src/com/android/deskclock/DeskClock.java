@@ -286,12 +286,13 @@ public class DeskClock extends Activity {
     	String screensaver_timeout = PreferenceManager.getDefaultSharedPreferences(this)
     	.getString(SettingsActivity.SCREENSAVER_TIMEOUT, SCREEN_SAVER_TIMEOUT_DEFAULT);
     	Long timeout = (Long.parseLong(screensaver_timeout)) * 60 * 1000;
-    	
-        // reschedule screen saver
-        mHandy.removeMessages(SCREEN_SAVER_TIMEOUT_MSG);
-        mHandy.sendMessageDelayed(
-            Message.obtain(mHandy, SCREEN_SAVER_TIMEOUT_MSG),
-            timeout);
+        if (timeout > 0) {
+            // reschedule screen saver
+            mHandy.removeMessages(SCREEN_SAVER_TIMEOUT_MSG);
+            mHandy.sendMessageDelayed(
+                Message.obtain(mHandy, SCREEN_SAVER_TIMEOUT_MSG),
+                timeout);
+        }
     }
 
     private void restoreScreen() {
