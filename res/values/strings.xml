@@ -43,12 +43,6 @@
     <!-- Delete alarm confirmation dialog message. -->
     <string name="delete_alarm_confirm">This alarm will be deleted.</string>
 
-    <!-- Menu item on Alarm Clock screen: Show clock -->
-    <string name="show_clock">Show clock</string>
-
-    <!-- Menu item on Alarm Clock screen: Hide clock -->
-    <string name="hide_clock">Hide clock</string>
-
     <!-- Setting label on Set alarm screen: Label -->
     <string name="label">Label</string>
 
@@ -161,10 +155,6 @@
          screen to identify repetition schedule: concatenate days with
          this character, i.e. "Mon, Tue, Wed" -->
     <string name="day_concat">", "</string>
-
-    <!-- Appears at the top of the Clock Picker screen: Tell user to
-         select a clock to display -->
-    <string name="clock_instructions">Select a clock to display.</string>
 
     <!-- Label for analog clock gadget, shown in list of all gadgets -->
     <string name="analog_gadget">Analog clock</string>

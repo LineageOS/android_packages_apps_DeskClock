@@ -25,8 +25,6 @@
     <string name="enable_alarm" msgid="1834599140632142536">"Porniţi alarma"</string>
     <string name="disable_alarm" msgid="5889378670229554109">"Opriţi alarma"</string>
     <string name="delete_alarm_confirm" msgid="4237696873219106907">"Această alarmă va fi ştearsă."</string>
-    <string name="show_clock" msgid="8358759982675616915">"Afişaţi ceasul"</string>
-    <string name="hide_clock" msgid="3217727306480505694">"Ascundeţi ceasul"</string>
     <string name="label" msgid="162189613902857319">"Etichetă"</string>
     <string name="default_label" msgid="5590025289805630372">"Alarmă"</string>
     <string name="set_alarm" msgid="9148359866152726808">"Setaţi alarma"</string>
@@ -57,7 +55,6 @@
     <string name="every_day" msgid="1058994798884544691">"în fiecare zi"</string>
     <string name="never" msgid="54104287800571769">"Niciodată"</string>
     <string name="day_concat" msgid="971998564991636532">", "</string>
-    <string name="clock_instructions" msgid="3118560284915857690">"Selectaţi un tip de ceas pentru a fi afişat."</string>
     <string name="analog_gadget" msgid="1670505720837152766">"Ceas analogic"</string>
     <string name="settings" msgid="5849739030579520686">"Setări"</string>
     <string name="alarm_in_silent_mode_title" msgid="3892612644543516705">"Alarmă în modul Silenţios"</string>

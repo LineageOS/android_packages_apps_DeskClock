@@ -44,12 +44,6 @@
     <!-- Delete alarm confirmation dialog message. -->
     <string name="delete_alarm_confirm" msgid="4237696873219106907">"刪除此鬧鐘？"</string>
 
-    <!-- Menu item on Alarm Clock screen: Show clock -->
-    <string name="show_clock" msgid="8358759982675616915">"顯示時鐘"</string>
-
-    <!-- Menu item on Alarm Clock screen: Hide clock -->
-    <string name="hide_clock" msgid="3217727306480505694">"隱藏時鐘"</string>
-
     <!-- Setting label on Set alarm screen: Label -->
     <string name="label" msgid="162189613902857319">"標籤"</string>
 
@@ -162,10 +156,6 @@
          screen to identify repetition schedule: concatenate days with
          this character, i.e. "Mon, Tue, Wed" -->
     <string name="day_concat" msgid="971998564991636532">"、 "</string>
-
-    <!-- Appears at the top of the Clock Picker screen: Tell user to
-         select a clock to display -->
-    <string name="clock_instructions" msgid="3118560284915857690">"選取要顯示的時鐘。"</string>
 
     <!-- Label for analog clock gadget, shown in list of all gadgets -->
     <string name="analog_gadget" msgid="1670505720837152766">"類比時鐘"</string>

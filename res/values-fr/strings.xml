@@ -25,8 +25,6 @@
     <string name="enable_alarm" msgid="1834599140632142536">"Activer l\'alarme"</string>
     <string name="disable_alarm" msgid="5889378670229554109">"Désactiver l\'alarme"</string>
     <string name="delete_alarm_confirm" msgid="4237696873219106907">"Cette alarme va être supprimée."</string>
-    <string name="show_clock" msgid="8358759982675616915">"Afficher l\'horloge"</string>
-    <string name="hide_clock" msgid="3217727306480505694">"Masquer l\'horloge"</string>
     <string name="label" msgid="162189613902857319">"Libellé"</string>
     <string name="default_label" msgid="5590025289805630372">"Alarme"</string>
     <!-- Setting label on Set alarm screen: Application to launch -->
@@ -70,7 +68,6 @@
     <string name="every_day" msgid="1058994798884544691">"Tous les jours"</string>
     <string name="never" msgid="54104287800571769">"Jamais"</string>
     <string name="day_concat" msgid="971998564991636532">", "</string>
-    <string name="clock_instructions" msgid="3118560284915857690">"Sélectionnez une horloge à afficher."</string>
     <string name="analog_gadget" msgid="1670505720837152766">"Horloge analogique"</string>
     <string name="settings" msgid="5849739030579520686">"Paramètres"</string>
     <string name="alarm_in_silent_mode_title" msgid="3892612644543516705">"Alarme mode silencieux"</string>
