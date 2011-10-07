@@ -122,8 +122,7 @@ public class AlarmAlertFullScreen extends Activity implements GlowPadView.OnTrig
         mVolumeBehavior = Integer.parseInt(vol);
 
         final Window win = getWindow();
-        win.addFlags(WindowManager.LayoutParams.FLAG_SHOW_WHEN_LOCKED
-                | WindowManager.LayoutParams.FLAG_DISMISS_KEYGUARD);
+        win.addFlags(WindowManager.LayoutParams.FLAG_SHOW_WHEN_LOCKED);
         // Turn on the screen unless we are being launched from the AlarmAlert
         // subclass as a result of the screen turning off.
         if (!getIntent().getBooleanExtra(SCREEN_OFF, false)) {
