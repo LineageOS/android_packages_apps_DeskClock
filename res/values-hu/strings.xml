@@ -95,4 +95,35 @@
     <string name="weather_fetch_failure" msgid="7517010911981312358">"Az időjárás-adatok jelenleg nem érhetők el."</string>
     <string name="menu_item_dock_settings" msgid="3524235151132971114">"Dokkolási beállítások"</string>
     <string name="alarm_klaxon_service_desc" msgid="2153290655559916468">"Hanglejátszó szolgáltatás az Asztali órában beállított ébresztőkhöz."</string>
+    <string name="alarm_limit_title">Ébresztés hossza</string>
+    <string-array name="alarm_limit_entries">
+      <item>5 perc</item>
+      <item>15 perc</item>
+      <item>30 perc</item>
+      <item>60 perc</item>
+      <item>90 perc</item>
+      <item>120 perc</item>
+      <item>Végtelen</item>
+    </string-array>
+    <string name="screensaver_timeout_title">Képernyővédő időtúllépés</string>
+    <string-array name="screensaver_timeout_entries">
+      <item>1 perc</item>
+      <item>5 perc</item>
+      <item>10 perc</item>
+      <item>15 perc</item>
+      <item>30 perc</item>
+      <item>60 perc</item>
+      <item>@string/never</item>
+    </string-array>
+    <string name="color_picker">Óra színe</string>
+    <string name="color_picker_title">Óra színe (Képernyővédőn)</string>
+    <string name="color_picker_summary">Képernyővédőn látható óra színének megváltoztatása</string>
+    <string name="color_picker_sample">11:45</string>
+    <string name="color_picker_alpha">Átlátszó (csak halványan)</string>
+    <string name="color_picker_red">Piros</string>
+    <string name="color_picker_green">Zöld</string>
+    <string name="color_picker_blue">Kék</string>
+    <string name="use_dual_mode_button">Szundi módjai</string>
+    <string name="use_dual_mode_button_on">Szundi gomb hosszú érintésekor az ébresztés elvetése</string>
+    <string name="use_dual_mode_button_off">Különálló Szundi és Elvetés gomb</string>
 </resources>
