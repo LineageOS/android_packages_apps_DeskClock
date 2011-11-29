@@ -1,5 +1,5 @@
-<?xml version="1.0" encoding="UTF-8"?>
-<!--  Copyright (C) 2007 The Android Open Source Project
+<?xml version="1.0" encoding="utf-8"?>
+<!-- Copyright (C) 2007 The Android Open Source Project
 
      Licensed under the Apache License, Version 2.0 (the "License");
      you may not use this file except in compliance with the License.
@@ -12,7 +12,7 @@
      WITHOUT WARRANTIES OR CONDITIONS OF ANY KIND, either express or implied.
      See the License for the specific language governing permissions and
      limitations under the License.
- -->
+-->
 
 <resources xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:xliff="urn:oasis:names:tc:xliff:document:1.2">
@@ -27,6 +27,25 @@
     <string name="delete_alarm_confirm" msgid="4237696873219106907">"Esta alarma se eliminará."</string>
     <string name="label" msgid="162189613902857319">"Etiqueta"</string>
     <string name="default_label" msgid="5590025289805630372">"Alarma"</string>
+
+    <!-- Setting label on Set alarm screen: Application to launch -->
+    <string name="application">Aplicación</string>
+
+    <!-- Title on the application picker -->
+    <string name="application_title">Aplicación a lanzar</string>
+
+    <!-- Option to not launch an application -->
+    <string name="application_none">Ninguna</string>
+
+    <!-- Setting label on Set alarm screen: Show dialog -->
+    <string name="no_dialog">Ocultar mensaje</string>
+
+    <!-- Summary when dialog is hidden -->
+    <string name="no_dialog_on">No se mostrará el mensaje para posponer o descartar</string>
+
+    <!-- Summary when dialog will be shown -->
+    <string name="no_dialog_off">El mensaje para posponer o descartar se mostrará normalmente</string>
+
     <string name="set_alarm" msgid="9148359866152726808">"Establecer alarma"</string>
     <string name="alarm_vibrate" msgid="3476686921490362230">"Vibración"</string>
     <string name="alarm_repeat" msgid="7242985466344233206">"Repetir"</string>
@@ -94,5 +113,60 @@
     <string name="battery_charging_level" msgid="4391767951302394083">"<xliff:g id="NUMBER">%d</xliff:g> <xliff:g id="PERCENT">%%</xliff:g>"</string>
     <string name="weather_fetch_failure" msgid="7517010911981312358">"La información meteorológica no está disponible."</string>
     <string name="menu_item_dock_settings" msgid="3524235151132971114">"Ajustes del conector"</string>
+
+    <!-- Setting title for setting alarm time limit -->
+    <string name="alarm_limit_title">Duración máxima de alarma</string>
+
     <string name="alarm_klaxon_service_desc" msgid="2153290655559916468">"Reproducción de alarmas definidas en reloj de escritorio"</string>
+
+    <!-- Entries listed in the ListPreference when invoking the max alarm duration
+         preference. -->
+    <string-array name="alarm_limit_entries">
+      <item>5 minutos</item>
+      <item>15 minutos</item>
+      <item>30 minutos</item>
+      <item>60 minutos</item>
+      <item>90 minutos</item>
+      <item>120 minutos</item>
+      <item>Infinito</item>
+    </string-array>
+
+    <!-- Setting title for setting alarm time limit -->
+    <string name="screensaver_timeout_title">Tiempo de espera salvapantallas</string>
+
+    <!-- Entries listed in the ListPreference when invoking the max alarm duration
+         preference. -->
+    <string-array name="screensaver_timeout_entries">
+      <item>1 minuto</item>
+      <item>5 minutos</item>
+      <item>10 minutos</item>
+      <item>15 minutos</item>
+      <item>30 minutos</item>
+      <item>60 minutos</item>
+      <item>@string/never</item>
+    </string-array>
+
+    <!-- Setting title for screensaver time color picker general title-->
+    <string name="color_picker">Color salvapantallas</string>
+
+    <!-- Setting title for screensaver time color picker -->
+    <string name="color_picker_title">Color en salvapantallas</string>
+
+    <!-- Setting title for screensaver time color picker -->
+    <string name="color_picker_summary">Cambia el color del texto en modo salvapantallas</string>
+
+    <!-- Sample time used in color picker -->
+    <string name="color_picker_sample">11:45</string>
+
+    <!-- Labels for colors in color picker -->
+    <string name="color_picker_alpha">Transparencia (atenuación)</string>
+    <string name="color_picker_red">Rojo</string>
+    <string name="color_picker_green">Verde</string>
+    <string name="color_picker_blue">Azul</string>
+
+    <!-- Settings strings for dual-mode button -->
+    <string name="use_dual_mode_button">Modo de repetición</string>
+    <string name="use_dual_mode_button_on">Pulsación larga en el botón Posponer, descarta la alarma</string>
+    <string name="use_dual_mode_button_off">Botones separados para posponer y descartar la alarma</string>
+
 </resources>
