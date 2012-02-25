@@ -27,20 +27,12 @@
     <string name="delete_alarm_confirm" msgid="4237696873219106907">"Dit alarm wordt verwijderd."</string>
     <string name="label" msgid="162189613902857319">"Label"</string>
     <string name="default_label" msgid="5590025289805630372">"Alarm"</string>
-		
-    <!-- Setting label on Set alarm screen: Application to launch -->
     <string name="application">Applicatie</string>
-    <!-- Title on the application picker -->
-    <string name="application_title">Deze app starten</string>
-    <!-- Option to not launch an application -->
+    <string name="application_title">Deze applicatie starten</string>
     <string name="application_none">Geen</string>
-    <!-- Setting label on Set alarm screen: Show dialog -->
     <string name="no_dialog">Dialoog verbergen</string>
-    <!-- Summary when dialog is hidden -->
     <string name="no_dialog_on">Geen snooze/gemist dialoog</string>
-    <!-- Summary when dialog will be shown -->
     <string name="no_dialog_off">Snooze/gemist dialoog weergeven</string>
-	
     <string name="set_alarm" msgid="9148359866152726808">"Alarm instellen"</string>
     <string name="alarm_vibrate" msgid="3476686921490362230">"Trillen"</string>
     <string name="alarm_repeat" msgid="7242985466344233206">"Herhalen"</string>
@@ -49,10 +41,7 @@
     <string name="alarm_alert_dismiss_text" msgid="4942914605480888820">"Negeren"</string>
     <string name="alarm_alert_alert_silenced" msgid="7918075929961104202">"Alarm gaat uit na <xliff:g id="MINUTES">%d</xliff:g> minuten"</string>
     <string name="alarm_alert_snooze_text" msgid="1774416052207651584">"Snooze"</string>
-	
-    <!-- Button labels on the alarm dialog: Snooze & dismiss (when dual-mode button enabled) -->
     <string name="alarm_alert_snooze_text_dual_mode">Snooze (vasthouden om te negeren)</string>
-
     <string name="alarm_alert_snooze_set" msgid="656470966696912087">"Snooze is ingesteld op <xliff:g id="MINUTES">%d</xliff:g> minuten."</string>
   <string-array name="alarm_set">
     <item msgid="5163476010406761625">"Dit alarm is ingesteld voor minder dan 1 minuut vanaf nu."</item>
@@ -113,55 +102,43 @@
     <string name="weather_fetch_failure" msgid="7517010911981312358">"Er is momenteel geen weerbericht beschikbaar."</string>
     <string name="menu_item_dock_settings" msgid="3524235151132971114">"Dockinstellingen"</string>
     <string name="alarm_klaxon_service_desc" msgid="2153290655559916468">"Service geluidsweergave voor alarmen ingesteld in DeskClock."</string>
-	
-    <!-- Setting title for setting alarm time limit -->
-    <string name="alarm_limit_title">Maximale alarm duur</string>
+    <string name="alarm_limit_title">Maximale alarmduur</string>
 
-    <!-- Entries listed in the ListPreference when invoking the max alarm duration
-         preference. -->
     <string-array name="alarm_limit_entries">
-      <item>5 Minuten</item>
-      <item>15 Minuten</item>
-      <item>30 Minuten</item>
-      <item>60 Minuten</item>
-      <item>90 Minuten</item>
-      <item>120 Minuten</item>
+      <item>5 minuten</item>
+      <item>15 minuten</item>
+      <item>30 minuten</item>
+      <item>60 minuten</item>
+      <item>90 minuten</item>
+      <item>120 minuten</item>
       <item>Oneindig</item>
     </string-array>
 
-    <!-- Setting title for setting alarm time limit -->
-    <string name="screensaver_timeout_title">Screensaver timeout</string>
+    <string name="screensaver_timeout_title">Time-out schermbeveiliging</string>
 
-    <!-- Entries listed in the ListPreference when invoking the max alarm duration
-         preference. -->
     <string-array name="screensaver_timeout_entries">
-      <item>1 Minuut</item>
-      <item>5 Minuten</item>
-      <item>10 Minuten</item>
-      <item>15 Minuten</item>
-      <item>30 Minuten</item>
-      <item>60 Minuten</item>
+      <item>1 minuut</item>
+      <item>5 minuten</item>
+      <item>10 minuten</item>
+      <item>15 minuten</item>
+      <item>30 minuten</item>
+      <item>60 minuten</item>
       <item>@string/never</item>
     </string-array>
 
-    <!-- Setting title for screensaver time color picker general title-->
-    <string name="color_picker">Tijd kleur</string>
-    <!-- Setting title for screensaver time color picker -->
-    <string name="color_picker_title">Tijd kleur (screensaver)</string>
-    <!-- Setting title for screensaver time color picker -->
-    <string name="color_picker_summary">Verander de tijd kleur in de screensaver</string>
+    <string name="color_picker">Tijdskleur</string>
+    <string name="color_picker_title">Tijdskleur (schermbeveiliging)</string>
+    <string name="color_picker_summary">Verander de tijdskleur gebruikt bij schermbeveiliging</string>
 
-    <!-- Sample time used in color picker -->
     <string name="color_picker_sample">11:45</string>
 
-    <!-- Labels for colors in color picker -->
-    <string name="color_picker_alpha">Transparent (alleen gedimt)</string>
+    <string name="color_picker_alpha">Transparent (alleen gedimd)</string>
     <string name="color_picker_red">Rood</string>
     <string name="color_picker_green">Groen</string>
     <string name="color_picker_blue">Blauw</string>
 
-    <!-- Settings strings for dual-mode button -->
-    <string name="use_dual_mode_button">Dual-Mode Snooze</string>
+    <string name="use_dual_mode_button">Snooze dual-modus</string>
     <string name="use_dual_mode_button_on">Snooze-knop ingedrukt houden om wekker te stoppen</string>
     <string name="use_dual_mode_button_off">Aparte knoppen voor snooze en negeren</string>
+
 </resources>
