@@ -184,6 +184,12 @@
       <item>30</item>
     </string-array>
 
+    <!-- Setting title for the flip to snooze option. -->
+    <string name="flip_to_snooze_title">Flip to snooze</string>
+
+    <!-- Setting summary for the flip to snooze option. -->
+    <string name="flip_to_snooze_summary">Flipping the phone down will snooze the alarm</string>
+
     <!-- Auto silence preference title -->
     <string name="auto_silence_title">Auto-silence</string>
 

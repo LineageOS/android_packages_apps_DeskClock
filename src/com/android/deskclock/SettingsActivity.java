@@ -48,6 +48,8 @@ public class SettingsActivity extends PreferenceActivity
             "default_ringtone";
     static final String KEY_AUTO_SILENCE =
             "auto_silence";
+    static final String KEY_FLIP_TO_SNOOZE =
+            "flip_to_snooze";
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
