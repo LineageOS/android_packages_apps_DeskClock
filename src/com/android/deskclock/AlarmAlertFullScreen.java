@@ -24,6 +24,10 @@ import android.content.BroadcastReceiver;
 import android.content.Context;
 import android.content.Intent;
 import android.content.IntentFilter;
+import android.hardware.Sensor;
+import android.hardware.SensorEvent;
+import android.hardware.SensorEventListener;
+import android.hardware.SensorManager;
 import android.os.Bundle;
 import android.preference.PreferenceManager;
 import android.view.KeyEvent;
@@ -32,7 +36,6 @@ import android.view.View;
 import android.view.Window;
 import android.view.WindowManager;
 import android.widget.Button;
-import android.widget.TextView;
 import android.widget.Toast;
 
 import java.util.Calendar;
@@ -47,11 +50,14 @@ public class AlarmAlertFullScreen extends Activity {
     // These defaults must match the values in res/xml/settings.xml
     private static final String DEFAULT_SNOOZE = "10";
     private static final String DEFAULT_VOLUME_BEHAVIOR = "2";
+    private static final String DEFAULT_FLIP_ACTION = "0";
     protected static final String SCREEN_OFF = "screen_off";
 
     protected Alarm mAlarm;
     private int mVolumeBehavior;
     boolean mFullscreenStyle;
+    private int mFlipAction;
+    SensorEventListener mOrientationListener;
 
     // Receives the ALARM_KILLED action from the AlarmKlaxon,
     // and also ALARM_SNOOZE_ACTION / ALARM_DISMISS_ACTION from other applications
@@ -85,6 +91,13 @@ public class AlarmAlertFullScreen extends Activity {
                         DEFAULT_VOLUME_BEHAVIOR);
         mVolumeBehavior = Integer.parseInt(vol);
 
+        final String flipAction =
+                PreferenceManager.getDefaultSharedPreferences(this)
+                .getString(SettingsActivity.KEY_FLIP_ACTION,
+                        DEFAULT_FLIP_ACTION);
+        Log.v("flipaction = " + flipAction);
+        mFlipAction = Integer.parseInt(flipAction);
+
         final Window win = getWindow();
         win.addFlags(WindowManager.LayoutParams.FLAG_SHOW_WHEN_LOCKED);
         // Turn on the screen unless we are being launched from the AlarmAlert
@@ -116,7 +129,7 @@ public class AlarmAlertFullScreen extends Activity {
     protected int getLayoutResId() {
         return R.layout.alarm_alert_fullscreen;
     }
-    
+
     private void updateLayout() {
         LayoutInflater inflater = LayoutInflater.from(this);
 
@@ -201,6 +214,10 @@ public class AlarmAlertFullScreen extends Activity {
         return (NotificationManager) getSystemService(NOTIFICATION_SERVICE);
     }
 
+    private SensorManager getSensorManager() {
+        return (SensorManager) getSystemService(Context.SENSOR_SERVICE);
+    }
+
     // Dismiss the alarm.
     private void dismiss(boolean killed) {
         Log.i(killed ? "Alarm killed" : "Alarm dismissed by user");
@@ -213,6 +230,94 @@ public class AlarmAlertFullScreen extends Activity {
             stopService(new Intent(Alarms.ALARM_ALERT_ACTION));
         }
         finish();
+    }
+
+    private void attachOrientationListener() {
+        if (mFlipAction != 0) {
+            mOrientationListener = new SensorEventListener() {
+                private static final int FACE_UP_LOWER_LIMIT = -45;
+                private static final int FACE_UP_UPPER_LIMIT = 45;
+                private static final int FACE_DOWN_UPPER_LIMIT = 135;
+                private static final int FACE_DOWN_LOWER_LIMIT = -135;
+                private static final int TILT_UPPER_LIMIT = 45;
+                private static final int TILT_LOWER_LIMIT = -45;
+                private static final int SENSOR_SAMPLES = 3;
+
+                private boolean mWasFaceUp;
+                private boolean[] mSamples = new boolean[SENSOR_SAMPLES];
+                private int mSampleIndex;
+
+                @Override
+                public void onAccuracyChanged(Sensor sensor, int acc) {
+                }
+
+                @Override
+                public void onSensorChanged(SensorEvent event) {
+                    // Add a sample overwriting the oldest one. Several samples are used
+                    // to avoid the erroneous values the sensor sometimes returns.
+                    float y = event.values[1];
+                    float z = event.values[2];
+
+                    if (!mWasFaceUp) {
+                        // Check if its face up enough.
+                        mSamples[mSampleIndex] =
+                                y > FACE_UP_LOWER_LIMIT && y < FACE_UP_UPPER_LIMIT
+                                && z > TILT_LOWER_LIMIT && z < TILT_UPPER_LIMIT;
+
+                        // The device first needs to be face up.
+                        boolean faceUp = true;
+                        for (boolean sample : mSamples) {
+                               faceUp = faceUp && sample;
+                        }
+                        if (faceUp) {
+                            mWasFaceUp = true;
+                            for (int i = 0; i < SENSOR_SAMPLES; i++)
+                                mSamples[i] = false;
+                        }
+                    } else {
+                        // Check if its face down enough. Note that wanted
+                        // values go from FACE_DOWN_UPPER_LIMIT to 180
+                        // and from -180 to FACE_DOWN_LOWER_LIMIT
+                        mSamples[mSampleIndex] =
+                                (y > FACE_DOWN_UPPER_LIMIT || y < FACE_DOWN_LOWER_LIMIT)
+                                && z > TILT_LOWER_LIMIT && z < TILT_UPPER_LIMIT;
+
+                        boolean faceDown = true;
+                        for (boolean sample : mSamples) {
+                            faceDown = faceDown && sample;
+                        }
+                        if (faceDown) {
+                            switch (mFlipAction) {
+                                case 1:
+                                    snooze();
+                                    break;
+
+                                case 2:
+                                    dismiss(false);
+                                    break;
+
+                                default:
+                                    break;
+                            }
+                        }
+                    }
+
+                    mSampleIndex = ((mSampleIndex + 1) % SENSOR_SAMPLES);
+                }
+            };
+
+            // Register the sensor listener and start to get values
+            getSensorManager().registerListener(mOrientationListener,
+                    getSensorManager().getDefaultSensor(Sensor.TYPE_ORIENTATION),
+                    SensorManager.SENSOR_DELAY_NORMAL);
+        }
+    }
+
+    private void detachAccelerationListener() {
+        if (mOrientationListener != null) {
+            getSensorManager().unregisterListener(mOrientationListener);
+            mOrientationListener = null;
+        }
     }
 
     /**
@@ -228,6 +333,8 @@ public class AlarmAlertFullScreen extends Activity {
         mAlarm = intent.getParcelableExtra(Alarms.ALARM_INTENT_EXTRA);
 
         setTitle();
+
+        detachAccelerationListener();
     }
 
     @Override
@@ -238,6 +345,8 @@ public class AlarmAlertFullScreen extends Activity {
             Button snooze = (Button) findViewById(R.id.snooze);
             snooze.setEnabled(false);
         }
+
+        attachOrientationListener();
     }
 
     @Override
@@ -246,6 +355,12 @@ public class AlarmAlertFullScreen extends Activity {
         if (Log.LOGV) Log.v("AlarmAlert.onDestroy()");
         // No longer care about the alarm being killed.
         unregisterReceiver(mReceiver);
+    }
+
+    @Override
+    public void onPause() {
+        super.onPause();
+        detachAccelerationListener();
     }
 
     @Override
