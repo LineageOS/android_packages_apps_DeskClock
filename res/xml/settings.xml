@@ -59,6 +59,14 @@
             android:streamType="alarm" />
 
         <ListPreference
+            android:key="flip_action"
+            android:title="@string/flip_action_title"
+            android:dialogTitle="@string/flip_action_dialog_title"
+            android:entries="@array/flip_action_entries"
+            android:entryValues="@array/flip_action_values"
+            android:defaultValue="0" />
+
+        <ListPreference
             android:key="volume_button_setting"
             android:title="@string/volume_button_setting_title"
             android:dialogTitle="@string/volume_button_setting_title"

@@ -57,6 +57,8 @@ public class SettingsActivity extends PreferenceActivity
             "automatic_home_clock";
     static final String KEY_VOLUME_BUTTONS =
             "volume_button_setting";
+    static final String KEY_FLIP_ACTION =
+            "flip_action";
 
     private static CharSequence[][] mTimezones;
     private long mTime;
@@ -164,6 +166,10 @@ public class SettingsActivity extends PreferenceActivity
             final ListPreference listPref = (ListPreference) pref;
             final int idx = listPref.findIndexOfValue((String) newValue);
             listPref.setSummary(listPref.getEntries()[idx]);
+        } else if (KEY_FLIP_ACTION.equals(pref.getKey())) {
+            final ListPreference listPref = (ListPreference) pref;
+            String action = (String) newValue;
+            updateFlipActionSummary(listPref, action);
         }
         return true;
     }
@@ -176,6 +182,14 @@ public class SettingsActivity extends PreferenceActivity
         } else {
             listPref.setSummary(getString(R.string.auto_silence_summary, i));
         }
+    }
+
+    private void updateFlipActionSummary(ListPreference listPref,
+            String action) {
+        int i = Integer.parseInt(action);
+        listPref.setSummary(
+                getString(R.string.flip_action_summary,
+                getResources().getStringArray(R.array.flip_action_entries)[i].toLowerCase()));
     }
 
     private void refresh() {
@@ -202,7 +216,13 @@ public class SettingsActivity extends PreferenceActivity
 
         SnoozeLengthDialog snoozePref = (SnoozeLengthDialog) findPreference(KEY_ALARM_SNOOZE);
         snoozePref.setSummary();
+
+        listPref = (ListPreference) findPreference(KEY_FLIP_ACTION);
+        String action = listPref.getValue();
+        updateFlipActionSummary(listPref, action);
+        listPref.setOnPreferenceChangeListener(this);
     }
+
     /**
      * Returns an array of ids/time zones. This returns a double indexed array
      * of ids and time zones for Calendar. It is an inefficient method and
@@ -257,5 +277,7 @@ public class SettingsActivity extends PreferenceActivity
             name.append(" \u2600"); // Sun symbol
         }
         return name.toString();
+=======
+>>>>>>> Added a setting to do nothing/snooze/dismiss an alarm by flipping the device.
     }
 }
