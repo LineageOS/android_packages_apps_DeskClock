@@ -338,7 +338,7 @@ public class DeskClock extends Activity {
         View tintView = findViewById(R.id.window_tint);
         if (tintView == null) return;
 
-        mTime.setSystemUiVisibility(mDimmed ? View.SYSTEM_UI_FLAG_LOW_PROFILE
+        mTime.setSystemUiVisibility(mDimmed ? View.SYSTEM_UI_FLAG_HIDE_NAVIGATION
                 : View.SYSTEM_UI_FLAG_VISIBLE);
 
         Window win = getWindow();
