@@ -38,6 +38,12 @@
         android:defaultValue="10"
         android:dialogTitle="@string/snooze_duration_title" />
 
+    <CheckBoxPreference
+        android:key="flip_to_snooze"
+        android:title="@string/flip_to_snooze_title"
+        android:summary="@string/flip_to_snooze_summary"
+        android:defaultValue="true" />
+        
     <ListPreference
         android:key="auto_silence"
         android:title="@string/auto_silence_title"
