@@ -184,6 +184,30 @@
       <item>30</item>
     </string-array>
 
+    <!-- Setting title for the flip action setting. -->
+    <string name="flip_action_title">Flip action</string>
+
+    <!-- Dialog title of the flip action setting. -->
+    <string name="flip_action_dialog_title">Flip action</string>
+
+    <!-- Setting summary for the flip action setting. -->
+    <string name="flip_action_summary">Flipping the phone down will
+        <xliff:g id="action">%s</xliff:g></string>
+
+    <!-- Entries listed in the setting for the flip action setting. -->
+    <string-array name="flip_action_entries">
+      <item>Do nothing</item>
+      <item>Snooze the alarm</item>
+      <item>Dismiss the alarm</item>
+    </string-array>
+
+    <!-- Values for the flip action setting. -->
+    <string-array name="flip_action_values">
+      <item>0</item>
+      <item>1</item>
+      <item>2</item>
+    </string-array>
+
     <!-- Auto silence preference title -->
     <string name="auto_silence_title">Auto-silence</string>
 

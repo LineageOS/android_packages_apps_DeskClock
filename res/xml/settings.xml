@@ -39,6 +39,14 @@
         android:dialogTitle="@string/snooze_duration_title" />
 
     <ListPreference
+        android:key="flip_action"
+        android:title="@string/flip_action_title"
+        android:dialogTitle="@string/flip_action_dialog_title"
+        android:entries="@array/flip_action_entries"
+        android:entryValues="@array/flip_action_values"
+        android:defaultValue="0" />
+
+    <ListPreference
         android:key="auto_silence"
         android:title="@string/auto_silence_title"
         android:entries="@array/auto_silence_entries"
