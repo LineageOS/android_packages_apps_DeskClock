@@ -48,6 +48,8 @@ public class SettingsActivity extends PreferenceActivity
             "default_ringtone";
     static final String KEY_AUTO_SILENCE =
             "auto_silence";
+    static final String KEY_FLIP_ACTION =
+            "flip_action";
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -104,6 +106,10 @@ public class SettingsActivity extends PreferenceActivity
             final ListPreference listPref = (ListPreference) pref;
             String delay = (String) newValue;
             updateAutoSnoozeSummary(listPref, delay);
+        } else if (KEY_FLIP_ACTION.equals(pref.getKey())) {
+            final ListPreference listPref = (ListPreference) pref;
+            String action = (String) newValue;
+            updateFlipActionSummary(listPref, action);
         }
         return true;
     }
@@ -118,6 +124,13 @@ public class SettingsActivity extends PreferenceActivity
         }
     }
 
+    private void updateFlipActionSummary(ListPreference listPref,
+            String action) {
+        int i = Integer.parseInt(action);
+        listPref.setSummary(
+                getString(R.string.flip_action_summary,
+                getResources().getStringArray(R.array.flip_action_entries)[i].toLowerCase()));
+    }
 
     private void refresh() {
         final CheckBoxPreference alarmInSilentModePref =
@@ -136,6 +149,11 @@ public class SettingsActivity extends PreferenceActivity
         listPref = (ListPreference) findPreference(KEY_AUTO_SILENCE);
         String delay = listPref.getValue();
         updateAutoSnoozeSummary(listPref, delay);
+        listPref.setOnPreferenceChangeListener(this);
+
+        listPref = (ListPreference) findPreference(KEY_FLIP_ACTION);
+        String action = listPref.getValue();
+        updateFlipActionSummary(listPref, action);
         listPref.setOnPreferenceChangeListener(this);
     }
 }
