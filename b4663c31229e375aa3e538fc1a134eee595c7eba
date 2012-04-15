@@ -1,0 +1,21 @@
+{
+  "comments": [
+    {
+      "key": {
+        "uuid": "AAAASn////o\u003d",
+        "filename": "src/com/android/deskclock/AlarmAlertFullScreen.java",
+        "patchSetId": 2
+      },
+      "lineNbr": 99,
+      "author": {
+        "id": 1078
+      },
+      "writtenOn": "2012-04-15T14:08:45Z",
+      "side": 1,
+      "message": "Why not just set mFlipToSnooze \u003d Pre...?",
+      "revId": "b4663c31229e375aa3e538fc1a134eee595c7eba",
+      "serverId": "1ec6b3db-b2c1-4fa4-84a2-4c7efe89ba71",
+      "unresolved": false
+    }
+  ]
+}
