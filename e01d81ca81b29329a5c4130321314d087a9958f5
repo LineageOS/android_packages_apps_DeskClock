@@ -1,0 +1,21 @@
+{
+  "comments": [
+    {
+      "key": {
+        "uuid": "AAAASn//8ow\u003d",
+        "filename": "res/values/strings.xml",
+        "patchSetId": 3
+      },
+      "lineNbr": 199,
+      "author": {
+        "id": 32
+      },
+      "writtenOn": "2012-05-05T15:41:10Z",
+      "side": 1,
+      "message": "Minor nit- I\u0027d point these at @string resources.",
+      "revId": "e01d81ca81b29329a5c4130321314d087a9958f5",
+      "serverId": "1ec6b3db-b2c1-4fa4-84a2-4c7efe89ba71",
+      "unresolved": false
+    }
+  ]
+}
