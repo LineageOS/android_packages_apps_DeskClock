@@ -16,6 +16,24 @@
       "revId": "e01d81ca81b29329a5c4130321314d087a9958f5",
       "serverId": "1ec6b3db-b2c1-4fa4-84a2-4c7efe89ba71",
       "unresolved": false
+    },
+    {
+      "key": {
+        "uuid": "AAAAS3//+uY\u003d",
+        "filename": "res/values/strings.xml",
+        "patchSetId": 3
+      },
+      "lineNbr": 199,
+      "author": {
+        "id": 1078
+      },
+      "writtenOn": "2012-05-12T19:22:59Z",
+      "side": 1,
+      "message": "Seems like some others arrays aren\u0027t using it so it should be fine...",
+      "parentUuid": "AAAASn//8ow\u003d",
+      "revId": "e01d81ca81b29329a5c4130321314d087a9958f5",
+      "serverId": "1ec6b3db-b2c1-4fa4-84a2-4c7efe89ba71",
+      "unresolved": false
     }
   ]
 }
