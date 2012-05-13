@@ -113,6 +113,18 @@
     <item msgid="3204893476515513084">"1"</item>
     <item msgid="7687709558968154577">"2"</item>
   </string-array>
+
+  <!-- START CM -->
+
+  <!-- Setting title for the flip action setting. -->
+  <string name="flip_action_title">Accéléromètre</string>
+  <!-- Setting summary for the flip action setting. -->
+  <string name="flip_action_summary">Pivoter l\'appareil pour : <xliff:g id="action">%s</xliff:g></string>
+  <!-- Dialog title of the flip action setting. -->
+  <string name="flip_action_dialog_title">Effet</string>
+
+  <!-- END CM -->
+
     <string name="default_ringtone_setting_title" msgid="4549726190682964245">"Définir la sonnerie par défaut"</string>
     <string name="alarm_button_description" msgid="740283647046258651">"Alarmes"</string>
     <string name="gallery_button_description" msgid="1151743663255257668">"Galerie"</string>
