@@ -127,4 +127,21 @@
     <string name="loading_ringtone" msgid="6523322777415268044">"Загрузка мелодии звонка..."</string>
     <string name="control_set_alarm" msgid="2194676418924016327">"Установить будильник"</string>
     <string name="control_set_alarm_with_existing" msgid="1128169496817859490">"Будильник установлен на <xliff:g id="TIME">%s</xliff:g>"</string>
+
+    <!-- Setting title for the flip action setting. -->
+    <string name="flip_action_title">Переворот</string>
+
+    <!-- Dialog title of the flip action setting. -->
+    <string name="flip_action_dialog_title">Действия при переворачивании телефона</string>
+
+    <!-- Setting summary for the flip action setting. -->
+    <string name="flip_action_summary">При переворачивании телефона
+        <xliff:g id="action">%s</xliff:g></string>
+
+    <!-- Entries listed in the setting for the flip action setting. -->
+    <string-array name="flip_action_entries">
+      <item>Ничего не делать</item>
+      <item>Отложить будильник</item>
+      <item>Выключить будильник</item>
+    </string-array>
 </resources>
