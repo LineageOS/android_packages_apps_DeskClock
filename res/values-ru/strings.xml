@@ -324,4 +324,21 @@
     <string name="city_delete_confirmation" msgid="1783441538785676299">"Удалить этот город?"</string>
     <string name="widget_loading_ms" msgid="790841709484678848">"Загрузка…"</string>
     <string name="digital_gadget" msgid="2326954556720571358">"Часы"</string>
+
+    <!-- Setting title for the flip action setting. -->
+    <string name="flip_action_title">Переворот</string>
+
+    <!-- Dialog title of the flip action setting. -->
+    <string name="flip_action_dialog_title">Действия при переворачивании телефона</string>
+
+    <!-- Setting summary for the flip action setting. -->
+    <string name="flip_action_summary">При переворачивании телефона
+        <xliff:g id="action">%s</xliff:g></string>
+
+    <!-- Entries listed in the setting for the flip action setting. -->
+    <string-array name="flip_action_entries">
+      <item>Ничего не делать</item>
+      <item>Отложить будильник</item>
+      <item>Выключить будильник</item>
+    </string-array>
 </resources>

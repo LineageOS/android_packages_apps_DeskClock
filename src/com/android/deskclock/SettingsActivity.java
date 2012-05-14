@@ -277,7 +277,5 @@ public class SettingsActivity extends PreferenceActivity
             name.append(" \u2600"); // Sun symbol
         }
         return name.toString();
-=======
->>>>>>> Added a setting to do nothing/snooze/dismiss an alarm by flipping the device.
     }
 }
