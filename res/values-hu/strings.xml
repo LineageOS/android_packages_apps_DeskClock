@@ -113,6 +113,32 @@
     <item msgid="3204893476515513084">"1"</item>
     <item msgid="7687709558968154577">"2"</item>
   </string-array>
+
+    <!-- 20120513 -->
+    <!-- Setting title for the flip action setting. -->
+    <string name="flip_action_title">Telefon megfordítása</string>
+
+    <!-- Dialog title of the flip action setting. -->
+    <string name="flip_action_dialog_title">Telefon megfordítása</string>
+
+    <!-- Setting summary for the flip action setting. -->
+    <string name="flip_action_summary">A telefon megfordítására
+        <xliff:g id="action">%s</xliff:g></string>
+
+    <!-- Entries listed in the setting for the flip action setting. -->
+    <string-array name="flip_action_entries">
+      <item>Nem történik semmi</item>
+      <item>Szundi módba kerül az ébresztés</item>
+      <item>Elveti az ébresztést</item>
+    </string-array>
+
+    <!-- Values for the flip action setting. -->
+    <string-array name="flip_action_values">
+      <item>0</item>
+      <item>1</item>
+      <item>2</item>
+    </string-array>
+
     <string name="default_ringtone_setting_title" msgid="4549726190682964245">"Az alapértelmezett csengőhang beállítása"</string>
     <string name="alarm_button_description" msgid="740283647046258651">"Ébresztések"</string>
     <string name="gallery_button_description" msgid="1151743663255257668">"Galéria"</string>
