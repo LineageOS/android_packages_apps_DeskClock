@@ -324,4 +324,12 @@
     <string name="city_delete_confirmation" msgid="1783441538785676299">"Remover esta cidade?"</string>
     <string name="widget_loading_ms" msgid="790841709484678848">"Carregando"</string>
     <string name="digital_gadget" msgid="2326954556720571358">"Relógio digital"</string>
+    <string name="flip_action_title">Ação de virar</string>
+    <string name="flip_action_dialog_title">Ação de virar</string>
+    <string name="flip_action_summary">Virando o telefone para baixo irá        <xliff:g id="action" xmlns:xliff="urn:oasis:names:tc:xliff:document:1.2">%s</xliff:g></string>
+    <string-array name="flip_action_entries">
+        <item>Fazer nada</item>
+        <item>Colocar alarme em soneca</item>
+        <item>Encerrar o alarme</item>
+    </string-array>
 </resources>
