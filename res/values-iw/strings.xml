@@ -324,4 +324,13 @@
     <string name="city_delete_confirmation" msgid="1783441538785676299">"האם להסיר את העיר הזאת?"</string>
     <string name="widget_loading_ms" msgid="790841709484678848">"טוען"</string>
     <string name="digital_gadget" msgid="2326954556720571358">"שעון דיגיטלי"</string>
+	<string name="flip_action_title">פעולה הפיכה</string>
+    <string name="flip_action_dialog_title">פעולת הפיכה</string>
+    <string name="flip_action_summary">הפיכת המכשיר
+        <xliff:g id="action">%s</xliff:g></string>
+    <string-array name="flip_action_entries">
+        <item>לא תעשה כלום</item>
+        <item>תגרום לנדנוד</item>
+        <item>תפסיק את ההתראה</item>
+    </string-array>
 </resources>
