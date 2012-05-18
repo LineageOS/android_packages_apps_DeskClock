@@ -127,4 +127,12 @@
     <string name="loading_ringtone" msgid="6523322777415268044">"Carregando toque…"</string>
     <string name="control_set_alarm" msgid="2194676418924016327">"Definir alarme"</string>
     <string name="control_set_alarm_with_existing" msgid="1128169496817859490">"Alarme definido: <xliff:g id="TIME">%s</xliff:g>"</string>
+    <string name="flip_action_title">Ação de virar</string>
+    <string name="flip_action_dialog_title">Ação de virar</string>
+    <string name="flip_action_summary">Virando o telefone para baixo irá        <xliff:g id="action" xmlns:xliff="urn:oasis:names:tc:xliff:document:1.2">%s</xliff:g></string>
+    <string-array name="flip_action_entries">
+        <item>Fazer nada</item>
+        <item>Colocar alarme em soneca</item>
+        <item>Encerrar o alarme</item>
+    </string-array>
 </resources>
