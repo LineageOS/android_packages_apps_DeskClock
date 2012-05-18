@@ -1,0 +1,9 @@
+Change-Id: I0b7150051cb9d765c36f5e19043613c6d69d1625
+Code-Review+2: Steve Kondik <shade@chemlab.org>
+Verified+1: Steve Kondik <shade@chemlab.org>
+Code-Review+1: Dmitriy Chermenev <chdiman86@gmail.com>
+Submitted-by: Steve Kondik <shade@chemlab.org>
+Submitted-at: Fri, 18 May 2012 09:07:54 +0400
+Reviewed-on: http://review.cyanogenmod.com/15977
+Project: CyanogenMod/android_packages_apps_DeskClock
+Branch: refs/heads/ics
