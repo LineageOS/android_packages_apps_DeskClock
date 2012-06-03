@@ -324,4 +324,11 @@
     <string name="city_delete_confirmation" msgid="1783441538785676299">"Usunąć to miasto?"</string>
     <string name="widget_loading_ms" msgid="790841709484678848">"Wczytuję"</string>
     <string name="digital_gadget" msgid="2326954556720571358">"Zegar cyfrowy"</string>
+
+    <!-- **** CYANOGENMOD EDITS START **** -->
+    <string name="flip_action_title">Akcja odwrócenia</string>
+    <string name="flip_action_dialog_title">Akcja odwrócenia</string>
+    <string name="flip_action_summary">Odwrócenie urządzenia spowoduje
+        <xliff:g id="action">%s</xliff:g></string>
+    <!-- **** CYANOGENMOD EDITS END **** -->
 </resources>
