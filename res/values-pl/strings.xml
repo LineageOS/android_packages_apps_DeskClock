@@ -127,4 +127,11 @@
     <string name="loading_ringtone" msgid="6523322777415268044">"Wczytywanie dzwonka…"</string>
     <string name="control_set_alarm" msgid="2194676418924016327">"Ustaw alarm"</string>
     <string name="control_set_alarm_with_existing" msgid="1128169496817859490">"Ustawiony alarm: <xliff:g id="TIME">%s</xliff:g>"</string>
+
+    <!-- **** CYANOGENMOD EDITS START **** -->
+    <string name="flip_action_title">Akcja odwrócenia</string>
+    <string name="flip_action_dialog_title">Akcja odwrócenia</string>
+    <string name="flip_action_summary">Odwrócenie urządzenia spowoduje
+        <xliff:g id="action">%s</xliff:g></string>
+    <!-- **** CYANOGENMOD EDITS END **** -->
 </resources>
