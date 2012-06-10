@@ -127,4 +127,17 @@
     <string name="loading_ringtone" msgid="6523322777415268044">"着信音を読み込み中..."</string>
     <string name="control_set_alarm" msgid="2194676418924016327">"アラームを設定"</string>
     <string name="control_set_alarm_with_existing" msgid="1128169496817859490">"アラーム設定時刻: <xliff:g id="TIME">%s</xliff:g>"</string>
+
+    <!-- Setting title for the flip action setting. -->
+    <string name="flip_action_title">フリップアクション</string>
+    <string name="flip_action_dialog_title">フリップアクション</string>
+    <string name="flip_action_summary">端末をフリップダウンしたときの挙動:
+        <xliff:g id="action">%s</xliff:g></string>
+    <string-array name="flip_action_entries">
+      <item>なにもしない</item>
+      <item>アラームをスヌーズ</item>
+      <item>アラームを停止</item>
+    </string-array>
+
+
 </resources>
