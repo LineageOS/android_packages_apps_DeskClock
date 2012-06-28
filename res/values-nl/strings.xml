@@ -1,5 +1,6 @@
-<?xml version="1.0" encoding="UTF-8"?>
+<?xml version="1.0" encoding="utf-8"?>
 <!--  Copyright (C) 2007 The Android Open Source Project
+      Copyright (C) 2012 The CyanogenMod Project
 
      Licensed under the Apache License, Version 2.0 (the "License");
      you may not use this file except in compliance with the License.
@@ -13,7 +14,6 @@
      See the License for the specific language governing permissions and
      limitations under the License.
  -->
-
 <resources xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:xliff="urn:oasis:names:tc:xliff:document:1.2">
     <string name="app_label" msgid="6674495003718166674">"Klok"</string>
@@ -27,12 +27,6 @@
     <string name="delete_alarm_confirm" msgid="4237696873219106907">"Dit alarm wordt verwijderd."</string>
     <string name="label" msgid="162189613902857319">"Label"</string>
     <string name="default_label" msgid="5590025289805630372">"Alarm"</string>
-    <string name="application">Applicatie</string>
-    <string name="application_title">Deze applicatie starten</string>
-    <string name="application_none">Geen</string>
-    <string name="no_dialog">Dialoog verbergen</string>
-    <string name="no_dialog_on">Geen snooze/gemist dialoog</string>
-    <string name="no_dialog_off">Snooze/gemist dialoog weergeven</string>
     <string name="set_alarm" msgid="9148359866152726808">"Alarm instellen"</string>
     <string name="alarm_vibrate" msgid="3476686921490362230">"Trillen"</string>
     <string name="alarm_repeat" msgid="7242985466344233206">"Herhalen"</string>
@@ -41,7 +35,6 @@
     <string name="alarm_alert_dismiss_text" msgid="4942914605480888820">"Negeren"</string>
     <string name="alarm_alert_alert_silenced" msgid="7918075929961104202">"Alarm gaat uit na <xliff:g id="MINUTES">%d</xliff:g> minuten"</string>
     <string name="alarm_alert_snooze_text" msgid="1774416052207651584">"Snooze"</string>
-    <string name="alarm_alert_snooze_text_dual_mode">Snooze (vasthouden om te negeren)</string>
     <string name="alarm_alert_snooze_set" msgid="656470966696912087">"Snooze is ingesteld op <xliff:g id="MINUTES">%d</xliff:g> minuten."</string>
   <string-array name="alarm_set">
     <item msgid="5163476010406761625">"Dit alarm is ingesteld voor minder dan 1 minuut vanaf nu."</item>
@@ -102,8 +95,16 @@
     <string name="weather_fetch_failure" msgid="7517010911981312358">"Er is momenteel geen weerbericht beschikbaar."</string>
     <string name="menu_item_dock_settings" msgid="3524235151132971114">"Dockinstellingen"</string>
     <string name="alarm_klaxon_service_desc" msgid="2153290655559916468">"Service geluidsweergave voor alarmen ingesteld in DeskClock."</string>
-    <string name="alarm_limit_title">Maximale alarmduur</string>
 
+    <!-- CYANOGENMOD EDITS -->
+    <string name="application">Applicatie</string>
+    <string name="application_title">Deze applicatie starten</string>
+    <string name="application_none">Geen</string>
+    <string name="no_dialog">Dialoog verbergen</string>
+    <string name="no_dialog_on">Geen snooze/gemist dialoog</string>
+    <string name="no_dialog_off">Snooze/gemist dialoog weergeven</string>
+    <string name="alarm_alert_snooze_text_dual_mode">Snooze (vasthouden om te negeren)</string>
+    <string name="alarm_limit_title">Maximale alarmduur</string>
     <string-array name="alarm_limit_entries">
       <item>5 minuten</item>
       <item>15 minuten</item>
@@ -113,9 +114,7 @@
       <item>120 minuten</item>
       <item>Oneindig</item>
     </string-array>
-
     <string name="screensaver_timeout_title">Time-out schermbeveiliging</string>
-
     <string-array name="screensaver_timeout_entries">
       <item>1 minuut</item>
       <item>5 minuten</item>
@@ -125,20 +124,14 @@
       <item>60 minuten</item>
       <item>@string/never</item>
     </string-array>
-
     <string name="color_picker">Tijdskleur</string>
     <string name="color_picker_title">Tijdskleur (schermbeveiliging)</string>
-    <string name="color_picker_summary">Verander de tijdskleur gebruikt bij schermbeveiliging</string>
-
-    <string name="color_picker_sample">11:45</string>
-
+    <string name="color_picker_summary">Gebruikte tijdskleur bij schermbeveiliging veranderen</string>
     <string name="color_picker_alpha">Transparent (alleen gedimd)</string>
     <string name="color_picker_red">Rood</string>
     <string name="color_picker_green">Groen</string>
     <string name="color_picker_blue">Blauw</string>
-
     <string name="use_dual_mode_button">Snooze dual-modus</string>
     <string name="use_dual_mode_button_on">Snooze-knop ingedrukt houden om wekker te stoppen</string>
     <string name="use_dual_mode_button_off">Aparte knoppen voor snooze en negeren</string>
-
 </resources>
