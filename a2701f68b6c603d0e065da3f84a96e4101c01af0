@@ -37,6 +37,24 @@
     },
     {
       "key": {
+        "uuid": "AAAAUH//7L8\u003d",
+        "filename": "res/values-nl/strings.xml",
+        "patchSetId": 1
+      },
+      "lineNbr": 35,
+      "author": {
+        "id": 2597
+      },
+      "writtenOn": "2012-06-30T15:46:35Z",
+      "side": 1,
+      "message": "- Uitschakelen",
+      "parentUuid": "AAAAUH//7RA\u003d",
+      "revId": "a2701f68b6c603d0e065da3f84a96e4101c01af0",
+      "serverId": "1ec6b3db-b2c1-4fa4-84a2-4c7efe89ba71",
+      "unresolved": false
+    },
+    {
+      "key": {
         "uuid": "AAAAUH//7Y4\u003d",
         "filename": "res/values-nl/strings.xml",
         "patchSetId": 1
@@ -108,6 +126,24 @@
     },
     {
       "key": {
+        "uuid": "AAAAUH//7L4\u003d",
+        "filename": "res/values-nl/strings.xml",
+        "patchSetId": 1
+      },
+      "lineNbr": 103,
+      "author": {
+        "id": 2597
+      },
+      "writtenOn": "2012-06-30T15:46:35Z",
+      "side": 1,
+      "message": "- Melding verbergen",
+      "parentUuid": "AAAAUH//7Q8\u003d",
+      "revId": "a2701f68b6c603d0e065da3f84a96e4101c01af0",
+      "serverId": "1ec6b3db-b2c1-4fa4-84a2-4c7efe89ba71",
+      "unresolved": false
+    },
+    {
+      "key": {
         "uuid": "AAAAUH//7X0\u003d",
         "filename": "res/values-nl/strings.xml",
         "patchSetId": 1
@@ -143,6 +179,24 @@
     },
     {
       "key": {
+        "uuid": "AAAAUH//7L0\u003d",
+        "filename": "res/values-nl/strings.xml",
+        "patchSetId": 1
+      },
+      "lineNbr": 104,
+      "author": {
+        "id": 2597
+      },
+      "writtenOn": "2012-06-30T15:46:35Z",
+      "side": 1,
+      "message": "- Geen snooze/uitschakelen melding",
+      "parentUuid": "AAAAUH//7Q4\u003d",
+      "revId": "a2701f68b6c603d0e065da3f84a96e4101c01af0",
+      "serverId": "1ec6b3db-b2c1-4fa4-84a2-4c7efe89ba71",
+      "unresolved": false
+    },
+    {
+      "key": {
         "uuid": "AAAAUH//7Q0\u003d",
         "filename": "res/values-nl/strings.xml",
         "patchSetId": 1
@@ -160,6 +214,24 @@
     },
     {
       "key": {
+        "uuid": "AAAAUH//7Lw\u003d",
+        "filename": "res/values-nl/strings.xml",
+        "patchSetId": 1
+      },
+      "lineNbr": 105,
+      "author": {
+        "id": 2597
+      },
+      "writtenOn": "2012-06-30T15:46:35Z",
+      "side": 1,
+      "message": "- Snooze/uitschakelen melding tonen",
+      "parentUuid": "AAAAUH//7Q0\u003d",
+      "revId": "a2701f68b6c603d0e065da3f84a96e4101c01af0",
+      "serverId": "1ec6b3db-b2c1-4fa4-84a2-4c7efe89ba71",
+      "unresolved": false
+    },
+    {
+      "key": {
         "uuid": "AAAAUH//7Qw\u003d",
         "filename": "res/values-nl/strings.xml",
         "patchSetId": 1
@@ -171,6 +243,24 @@
       "writtenOn": "2012-06-30T04:32:02Z",
       "side": 1,
       "message": "Snooze (vasthouden om uit te schakelen)",
+      "revId": "a2701f68b6c603d0e065da3f84a96e4101c01af0",
+      "serverId": "1ec6b3db-b2c1-4fa4-84a2-4c7efe89ba71",
+      "unresolved": false
+    },
+    {
+      "key": {
+        "uuid": "AAAAUH//7Ls\u003d",
+        "filename": "res/values-nl/strings.xml",
+        "patchSetId": 1
+      },
+      "lineNbr": 106,
+      "author": {
+        "id": 2597
+      },
+      "writtenOn": "2012-06-30T15:46:35Z",
+      "side": 1,
+      "message": "Done",
+      "parentUuid": "AAAAUH//7Qw\u003d",
       "revId": "a2701f68b6c603d0e065da3f84a96e4101c01af0",
       "serverId": "1ec6b3db-b2c1-4fa4-84a2-4c7efe89ba71",
       "unresolved": false
@@ -211,6 +301,24 @@
     },
     {
       "key": {
+        "uuid": "AAAAUH//7Lo\u003d",
+        "filename": "res/values-nl/strings.xml",
+        "patchSetId": 1
+      },
+      "lineNbr": 125,
+      "author": {
+        "id": 2597
+      },
+      "writtenOn": "2012-06-30T15:46:35Z",
+      "side": 1,
+      "message": "Iets met \u0027@\u0027 verwijst naar een andere string. In dit geval:\n- \u003cstring name\u003d\"never\"\u003eNooit\u003c/string\u003e\nin\n- strings.xml\nvan de desbetreffende taal.",
+      "parentUuid": "AAAAUH//7Qk\u003d",
+      "revId": "a2701f68b6c603d0e065da3f84a96e4101c01af0",
+      "serverId": "1ec6b3db-b2c1-4fa4-84a2-4c7efe89ba71",
+      "unresolved": false
+    },
+    {
+      "key": {
         "uuid": "AAAAUH//7Qg\u003d",
         "filename": "res/values-nl/strings.xml",
         "patchSetId": 1
@@ -222,6 +330,24 @@
       "writtenOn": "2012-06-30T04:32:02Z",
       "side": 1,
       "message": "negeren \u003d\u003e Afsluiten of stoppen",
+      "revId": "a2701f68b6c603d0e065da3f84a96e4101c01af0",
+      "serverId": "1ec6b3db-b2c1-4fa4-84a2-4c7efe89ba71",
+      "unresolved": false
+    },
+    {
+      "key": {
+        "uuid": "AAAAUH//7Lk\u003d",
+        "filename": "res/values-nl/strings.xml",
+        "patchSetId": 1
+      },
+      "lineNbr": 136,
+      "author": {
+        "id": 2597
+      },
+      "writtenOn": "2012-06-30T15:46:35Z",
+      "side": 1,
+      "message": "Uitschakelen?",
+      "parentUuid": "AAAAUH//7Qg\u003d",
       "revId": "a2701f68b6c603d0e065da3f84a96e4101c01af0",
       "serverId": "1ec6b3db-b2c1-4fa4-84a2-4c7efe89ba71",
       "unresolved": false
