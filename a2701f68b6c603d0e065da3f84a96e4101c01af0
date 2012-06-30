@@ -1,0 +1,21 @@
+{
+  "comments": [
+    {
+      "key": {
+        "uuid": "AAAAUH//7Y4\u003d",
+        "filename": "res/values-nl/strings.xml",
+        "patchSetId": 1
+      },
+      "lineNbr": 103,
+      "author": {
+        "id": 2248
+      },
+      "writtenOn": "2012-06-30T00:42:42Z",
+      "side": 1,
+      "message": "Dialoog klinkt als gesprek, rare vertaling? \"Dialoogvenster verbergen\"",
+      "revId": "a2701f68b6c603d0e065da3f84a96e4101c01af0",
+      "serverId": "1ec6b3db-b2c1-4fa4-84a2-4c7efe89ba71",
+      "unresolved": false
+    }
+  ]
+}
