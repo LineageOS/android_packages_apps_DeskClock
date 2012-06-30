@@ -19,6 +19,24 @@
     },
     {
       "key": {
+        "uuid": "AAAAUH//7RA\u003d",
+        "filename": "res/values-nl/strings.xml",
+        "patchSetId": 1
+      },
+      "lineNbr": 35,
+      "author": {
+        "id": 2881
+      },
+      "writtenOn": "2012-06-30T04:32:02Z",
+      "side": 1,
+      "message": "Ja ik ook! Ik kan m\u0027n alarm ook wel negeren als ie wel blijft afgaan :)\n\nUitschakelen vind ik ook veel mooier.\n\nedit: onderaan wordt er nog gesproken over \"Stoppen\". Ook een optie?",
+      "parentUuid": "AAAAUH//7Xo\u003d",
+      "revId": "a2701f68b6c603d0e065da3f84a96e4101c01af0",
+      "serverId": "1ec6b3db-b2c1-4fa4-84a2-4c7efe89ba71",
+      "unresolved": false
+    },
+    {
+      "key": {
         "uuid": "AAAAUH//7Y4\u003d",
         "filename": "res/values-nl/strings.xml",
         "patchSetId": 1
@@ -72,6 +90,24 @@
     },
     {
       "key": {
+        "uuid": "AAAAUH//7Q8\u003d",
+        "filename": "res/values-nl/strings.xml",
+        "patchSetId": 1
+      },
+      "lineNbr": 103,
+      "author": {
+        "id": 2881
+      },
+      "writtenOn": "2012-06-30T04:32:02Z",
+      "side": 1,
+      "message": "prima, Melding verbergen",
+      "parentUuid": "AAAAUH//7X8\u003d",
+      "revId": "a2701f68b6c603d0e065da3f84a96e4101c01af0",
+      "serverId": "1ec6b3db-b2c1-4fa4-84a2-4c7efe89ba71",
+      "unresolved": false
+    },
+    {
+      "key": {
         "uuid": "AAAAUH//7X0\u003d",
         "filename": "res/values-nl/strings.xml",
         "patchSetId": 1
@@ -83,6 +119,109 @@
       "writtenOn": "2012-06-30T01:01:08Z",
       "side": 1,
       "message": "gemist \u003d\u003e negeren. Vind dit nog steeds een rare vertaling voor Dismiss maar dat komt op de melding...",
+      "revId": "a2701f68b6c603d0e065da3f84a96e4101c01af0",
+      "serverId": "1ec6b3db-b2c1-4fa4-84a2-4c7efe89ba71",
+      "unresolved": false
+    },
+    {
+      "key": {
+        "uuid": "AAAAUH//7Q4\u003d",
+        "filename": "res/values-nl/strings.xml",
+        "patchSetId": 1
+      },
+      "lineNbr": 104,
+      "author": {
+        "id": 2881
+      },
+      "writtenOn": "2012-06-30T04:32:02Z",
+      "side": 1,
+      "message": "Mee eens, en ook ivm bovenstaande, krijg je dan dit: \"Geen snooze/uitschakelen melding\"",
+      "parentUuid": "AAAAUH//7X0\u003d",
+      "revId": "a2701f68b6c603d0e065da3f84a96e4101c01af0",
+      "serverId": "1ec6b3db-b2c1-4fa4-84a2-4c7efe89ba71",
+      "unresolved": false
+    },
+    {
+      "key": {
+        "uuid": "AAAAUH//7Q0\u003d",
+        "filename": "res/values-nl/strings.xml",
+        "patchSetId": 1
+      },
+      "lineNbr": 105,
+      "author": {
+        "id": 2881
+      },
+      "writtenOn": "2012-06-30T04:32:02Z",
+      "side": 1,
+      "message": "Snooze/uitschakelen melding weergeven",
+      "revId": "a2701f68b6c603d0e065da3f84a96e4101c01af0",
+      "serverId": "1ec6b3db-b2c1-4fa4-84a2-4c7efe89ba71",
+      "unresolved": false
+    },
+    {
+      "key": {
+        "uuid": "AAAAUH//7Qw\u003d",
+        "filename": "res/values-nl/strings.xml",
+        "patchSetId": 1
+      },
+      "lineNbr": 106,
+      "author": {
+        "id": 2881
+      },
+      "writtenOn": "2012-06-30T04:32:02Z",
+      "side": 1,
+      "message": "Snooze (vasthouden om uit te schakelen)",
+      "revId": "a2701f68b6c603d0e065da3f84a96e4101c01af0",
+      "serverId": "1ec6b3db-b2c1-4fa4-84a2-4c7efe89ba71",
+      "unresolved": false
+    },
+    {
+      "key": {
+        "uuid": "AAAAUH//7Qs\u003d",
+        "filename": "res/values-nl/strings.xml",
+        "patchSetId": 1
+      },
+      "lineNbr": 117,
+      "author": {
+        "id": 2881
+      },
+      "writtenOn": "2012-06-30T04:32:02Z",
+      "side": 1,
+      "message": "time-out \u003d vertraging?",
+      "revId": "a2701f68b6c603d0e065da3f84a96e4101c01af0",
+      "serverId": "1ec6b3db-b2c1-4fa4-84a2-4c7efe89ba71",
+      "unresolved": false
+    },
+    {
+      "key": {
+        "uuid": "AAAAUH//7Qk\u003d",
+        "filename": "res/values-nl/strings.xml",
+        "patchSetId": 1
+      },
+      "lineNbr": 125,
+      "author": {
+        "id": 2881
+      },
+      "writtenOn": "2012-06-30T04:32:02Z",
+      "side": 1,
+      "message": "moet dit niet vertaald worden?",
+      "revId": "a2701f68b6c603d0e065da3f84a96e4101c01af0",
+      "serverId": "1ec6b3db-b2c1-4fa4-84a2-4c7efe89ba71",
+      "unresolved": false
+    },
+    {
+      "key": {
+        "uuid": "AAAAUH//7Qg\u003d",
+        "filename": "res/values-nl/strings.xml",
+        "patchSetId": 1
+      },
+      "lineNbr": 136,
+      "author": {
+        "id": 2881
+      },
+      "writtenOn": "2012-06-30T04:32:02Z",
+      "side": 1,
+      "message": "negeren \u003d\u003e Afsluiten of stoppen",
       "revId": "a2701f68b6c603d0e065da3f84a96e4101c01af0",
       "serverId": "1ec6b3db-b2c1-4fa4-84a2-4c7efe89ba71",
       "unresolved": false
