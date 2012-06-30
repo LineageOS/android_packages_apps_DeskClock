@@ -2,6 +2,23 @@
   "comments": [
     {
       "key": {
+        "uuid": "AAAAUH//7Xo\u003d",
+        "filename": "res/values-nl/strings.xml",
+        "patchSetId": 1
+      },
+      "lineNbr": 35,
+      "author": {
+        "id": 2049
+      },
+      "writtenOn": "2012-06-30T01:01:08Z",
+      "side": 1,
+      "message": "Is het niet beter \u0027Afwijzen\u0027 of \u0027Uitschakelen\u0027. Negeren heb ik altijd al verwarrend gevonden.",
+      "revId": "a2701f68b6c603d0e065da3f84a96e4101c01af0",
+      "serverId": "1ec6b3db-b2c1-4fa4-84a2-4c7efe89ba71",
+      "unresolved": false
+    },
+    {
+      "key": {
         "uuid": "AAAAUH//7Y4\u003d",
         "filename": "res/values-nl/strings.xml",
         "patchSetId": 1
@@ -49,6 +66,23 @@
       "side": 1,
       "message": "Prima oplossing ja!",
       "parentUuid": "AAAAUH//7YY\u003d",
+      "revId": "a2701f68b6c603d0e065da3f84a96e4101c01af0",
+      "serverId": "1ec6b3db-b2c1-4fa4-84a2-4c7efe89ba71",
+      "unresolved": false
+    },
+    {
+      "key": {
+        "uuid": "AAAAUH//7X0\u003d",
+        "filename": "res/values-nl/strings.xml",
+        "patchSetId": 1
+      },
+      "lineNbr": 104,
+      "author": {
+        "id": 2049
+      },
+      "writtenOn": "2012-06-30T01:01:08Z",
+      "side": 1,
+      "message": "gemist \u003d\u003e negeren. Vind dit nog steeds een rare vertaling voor Dismiss maar dat komt op de melding...",
       "revId": "a2701f68b6c603d0e065da3f84a96e4101c01af0",
       "serverId": "1ec6b3db-b2c1-4fa4-84a2-4c7efe89ba71",
       "unresolved": false
