@@ -1,0 +1,40 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<resources>
+  <string-array name="alarm_set">
+    <item>Alarmă setată peste mai puţin de 1 minut din acest moment.</item>
+    <item>Alarmă setată peste %1$s din acest moment.</item>
+    <item>Alarmă setată peste %2$s din acest moment.</item>
+    <item>Alarmă setată peste %1$1$s şi %2$2$s din acest moment.</item>
+    <item>Alarmă setată peste %3$s din acest moment.</item>
+    <item>Alarmă setată peste %1$1$s şi %2$3$s din acest moment.</item>
+    <item>Alarmă setată peste %1$2$s şi %2$3$s din acest moment.</item>
+    <item>Alarmă setată peste %1$1$s, %2$2$s şi %3$3$s din acest moment.</item>
+  </string-array>
+  <string-array name="snooze_duration_entries">
+    <item>5 minute</item>
+    <item>10 minute</item>
+    <item>15 minute</item>
+    <item>20 de minute</item>
+    <item>25 de minute</item>
+    <item>30 de minute</item>
+  </string-array>
+  <string-array name="auto_silence_entries">
+    <item>Dezactivat</item>
+    <item>5 minute</item>
+    <item>10 minute</item>
+    <item>15 minute</item>
+    <item>20 de minute</item>
+    <item>25 de minute</item>
+    <item>30 de minute</item>
+  </string-array>
+  <string-array name="volume_button_setting_entries">
+    <item>Niciunul</item>
+    <item>Amânaţi</item>
+    <item>Renunţaţi</item>
+  </string-array>
+  <string-array name="flip_action_entries">
+    <item>Nimic</item>
+    <item>Amânare</item>
+    <item>Renunţare</item>
+  </string-array>
+</resources>
