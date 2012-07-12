@@ -19,6 +19,24 @@
     },
     {
       "key": {
+        "uuid": "AAAAUX///X4\u003d",
+        "filename": "res/values-nl/arrays.xml",
+        "patchSetId": 3
+      },
+      "lineNbr": 49,
+      "author": {
+        "id": 2597
+      },
+      "writtenOn": "2012-07-12T23:07:23Z",
+      "side": 1,
+      "message": "Done",
+      "parentUuid": "AAAAUX///Yc\u003d",
+      "revId": "467f2afbef5bc30b8fd747b18a25f29529ae25c6",
+      "serverId": "1ec6b3db-b2c1-4fa4-84a2-4c7efe89ba71",
+      "unresolved": false
+    },
+    {
+      "key": {
         "uuid": "AAAAUX///Yg\u003d",
         "filename": "res/values-nl/arrays.xml",
         "patchSetId": 3
@@ -48,6 +66,24 @@
       "side": 1,
       "message": "Laat maar, ik zie nu dat het wel klopt, behalve de hoofdletter misschien",
       "parentUuid": "AAAAUX///Yg\u003d",
+      "revId": "467f2afbef5bc30b8fd747b18a25f29529ae25c6",
+      "serverId": "1ec6b3db-b2c1-4fa4-84a2-4c7efe89ba71",
+      "unresolved": false
+    },
+    {
+      "key": {
+        "uuid": "AAAAUX///X0\u003d",
+        "filename": "res/values-nl/arrays.xml",
+        "patchSetId": 3
+      },
+      "lineNbr": 54,
+      "author": {
+        "id": 2597
+      },
+      "writtenOn": "2012-07-12T23:07:23Z",
+      "side": 1,
+      "message": "Ook hoofdletters in het Engels...",
+      "parentUuid": "AAAAUX///YI\u003d",
       "revId": "467f2afbef5bc30b8fd747b18a25f29529ae25c6",
       "serverId": "1ec6b3db-b2c1-4fa4-84a2-4c7efe89ba71",
       "unresolved": false
@@ -135,6 +171,24 @@
       "writtenOn": "2012-07-12T23:06:26Z",
       "side": 1,
       "message": "Uitschakelen",
+      "revId": "467f2afbef5bc30b8fd747b18a25f29529ae25c6",
+      "serverId": "1ec6b3db-b2c1-4fa4-84a2-4c7efe89ba71",
+      "unresolved": false
+    },
+    {
+      "key": {
+        "uuid": "AAAAUX///Xw\u003d",
+        "filename": "res/values-nl/strings.xml",
+        "patchSetId": 3
+      },
+      "lineNbr": 37,
+      "author": {
+        "id": 2597
+      },
+      "writtenOn": "2012-07-12T23:07:23Z",
+      "side": 1,
+      "message": "Done",
+      "parentUuid": "AAAAUX///YM\u003d",
       "revId": "467f2afbef5bc30b8fd747b18a25f29529ae25c6",
       "serverId": "1ec6b3db-b2c1-4fa4-84a2-4c7efe89ba71",
       "unresolved": false
