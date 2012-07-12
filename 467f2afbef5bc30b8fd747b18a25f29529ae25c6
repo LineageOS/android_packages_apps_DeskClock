@@ -1,0 +1,72 @@
+{
+  "comments": [
+    {
+      "key": {
+        "uuid": "AAAAUX///Yc\u003d",
+        "filename": "res/values-nl/arrays.xml",
+        "patchSetId": 3
+      },
+      "lineNbr": 49,
+      "author": {
+        "id": 2881
+      },
+      "writtenOn": "2012-07-12T23:02:17Z",
+      "side": 1,
+      "message": "Moest dit niet \"uitschakelen\" worden?",
+      "revId": "467f2afbef5bc30b8fd747b18a25f29529ae25c6",
+      "serverId": "1ec6b3db-b2c1-4fa4-84a2-4c7efe89ba71",
+      "unresolved": false
+    },
+    {
+      "key": {
+        "uuid": "AAAAUX///Yg\u003d",
+        "filename": "res/values-nl/arrays.xml",
+        "patchSetId": 3
+      },
+      "lineNbr": 54,
+      "author": {
+        "id": 2881
+      },
+      "writtenOn": "2012-07-12T23:02:17Z",
+      "side": 1,
+      "message": "rare zin",
+      "revId": "467f2afbef5bc30b8fd747b18a25f29529ae25c6",
+      "serverId": "1ec6b3db-b2c1-4fa4-84a2-4c7efe89ba71",
+      "unresolved": false
+    },
+    {
+      "key": {
+        "uuid": "AAAAUX///YY\u003d",
+        "filename": "res/values-nl/arrays.xml",
+        "patchSetId": 3
+      },
+      "lineNbr": 55,
+      "author": {
+        "id": 2881
+      },
+      "writtenOn": "2012-07-12T23:02:17Z",
+      "side": 1,
+      "message": "wordt",
+      "revId": "467f2afbef5bc30b8fd747b18a25f29529ae25c6",
+      "serverId": "1ec6b3db-b2c1-4fa4-84a2-4c7efe89ba71",
+      "unresolved": false
+    },
+    {
+      "key": {
+        "uuid": "AAAAUX///YU\u003d",
+        "filename": "res/values-nl/arrays.xml",
+        "patchSetId": 3
+      },
+      "lineNbr": 56,
+      "author": {
+        "id": 2881
+      },
+      "writtenOn": "2012-07-12T23:02:17Z",
+      "side": 1,
+      "message": "wordt",
+      "revId": "467f2afbef5bc30b8fd747b18a25f29529ae25c6",
+      "serverId": "1ec6b3db-b2c1-4fa4-84a2-4c7efe89ba71",
+      "unresolved": false
+    }
+  ]
+}
