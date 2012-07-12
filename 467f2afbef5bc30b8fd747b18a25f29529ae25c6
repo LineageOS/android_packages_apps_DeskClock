@@ -36,6 +36,24 @@
     },
     {
       "key": {
+        "uuid": "AAAAUX///YI\u003d",
+        "filename": "res/values-nl/arrays.xml",
+        "patchSetId": 3
+      },
+      "lineNbr": 54,
+      "author": {
+        "id": 2881
+      },
+      "writtenOn": "2012-07-12T23:06:26Z",
+      "side": 1,
+      "message": "Laat maar, ik zie nu dat het wel klopt, behalve de hoofdletter misschien",
+      "parentUuid": "AAAAUX///Yg\u003d",
+      "revId": "467f2afbef5bc30b8fd747b18a25f29529ae25c6",
+      "serverId": "1ec6b3db-b2c1-4fa4-84a2-4c7efe89ba71",
+      "unresolved": false
+    },
+    {
+      "key": {
         "uuid": "AAAAUX///YY\u003d",
         "filename": "res/values-nl/arrays.xml",
         "patchSetId": 3
@@ -53,6 +71,24 @@
     },
     {
       "key": {
+        "uuid": "AAAAUX///YE\u003d",
+        "filename": "res/values-nl/arrays.xml",
+        "patchSetId": 3
+      },
+      "lineNbr": 55,
+      "author": {
+        "id": 2881
+      },
+      "writtenOn": "2012-07-12T23:06:26Z",
+      "side": 1,
+      "message": "never mind",
+      "parentUuid": "AAAAUX///YY\u003d",
+      "revId": "467f2afbef5bc30b8fd747b18a25f29529ae25c6",
+      "serverId": "1ec6b3db-b2c1-4fa4-84a2-4c7efe89ba71",
+      "unresolved": false
+    },
+    {
+      "key": {
         "uuid": "AAAAUX///YU\u003d",
         "filename": "res/values-nl/arrays.xml",
         "patchSetId": 3
@@ -64,6 +100,41 @@
       "writtenOn": "2012-07-12T23:02:17Z",
       "side": 1,
       "message": "wordt",
+      "revId": "467f2afbef5bc30b8fd747b18a25f29529ae25c6",
+      "serverId": "1ec6b3db-b2c1-4fa4-84a2-4c7efe89ba71",
+      "unresolved": false
+    },
+    {
+      "key": {
+        "uuid": "AAAAUX///YA\u003d",
+        "filename": "res/values-nl/arrays.xml",
+        "patchSetId": 3
+      },
+      "lineNbr": 56,
+      "author": {
+        "id": 2881
+      },
+      "writtenOn": "2012-07-12T23:06:26Z",
+      "side": 1,
+      "message": "never mind",
+      "parentUuid": "AAAAUX///YU\u003d",
+      "revId": "467f2afbef5bc30b8fd747b18a25f29529ae25c6",
+      "serverId": "1ec6b3db-b2c1-4fa4-84a2-4c7efe89ba71",
+      "unresolved": false
+    },
+    {
+      "key": {
+        "uuid": "AAAAUX///YM\u003d",
+        "filename": "res/values-nl/strings.xml",
+        "patchSetId": 3
+      },
+      "lineNbr": 37,
+      "author": {
+        "id": 2881
+      },
+      "writtenOn": "2012-07-12T23:06:26Z",
+      "side": 1,
+      "message": "Uitschakelen",
       "revId": "467f2afbef5bc30b8fd747b18a25f29529ae25c6",
       "serverId": "1ec6b3db-b2c1-4fa4-84a2-4c7efe89ba71",
       "unresolved": false
