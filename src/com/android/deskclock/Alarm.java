@@ -58,6 +58,7 @@ public final class Alarm implements Parcelable {
         p.writeString(label);
         p.writeParcelable(alert, flags);
         p.writeInt(silent ? 1 : 0);
+        p.writeInt(incvol ? 1 : 0);
     }
     //////////////////////////////
     // end Parcelable apis
@@ -123,6 +124,12 @@ public final class Alarm implements Parcelable {
         public static final String ALERT = "alert";
 
         /**
+         * True if alarm should start off quiet and slowly increase volume
+         * <P>Type: BOOLEAN</P>
+         */
+        public static final String INCVOL = "incvol";
+
+        /**
          * The default sort order for this table
          */
         public static final String DEFAULT_SORT_ORDER =
@@ -133,7 +140,7 @@ public final class Alarm implements Parcelable {
 
         static final String[] ALARM_QUERY_COLUMNS = {
             _ID, HOUR, MINUTES, DAYS_OF_WEEK, ALARM_TIME,
-            ENABLED, VIBRATE, MESSAGE, ALERT };
+            ENABLED, VIBRATE, MESSAGE, ALERT, INCVOL };
 
         /**
          * These save calls to cursor.getColumnIndexOrThrow()
@@ -148,6 +155,7 @@ public final class Alarm implements Parcelable {
         public static final int ALARM_VIBRATE_INDEX = 6;
         public static final int ALARM_MESSAGE_INDEX = 7;
         public static final int ALARM_ALERT_INDEX = 8;
+        public static final int ALARM_INCVOL_INDEX = 9;
     }
     //////////////////////////////
     // End column definitions
@@ -164,6 +172,7 @@ public final class Alarm implements Parcelable {
     public String     label;
     public Uri        alert;
     public boolean    silent;
+    public boolean    incvol;
 
     public Alarm(Cursor c) {
         id = c.getInt(Columns.ALARM_ID_INDEX);
@@ -192,6 +201,7 @@ public final class Alarm implements Parcelable {
                         RingtoneManager.TYPE_ALARM);
             }
         }
+        incvol = c.getInt(Columns.ALARM_INCVOL_INDEX) == 1;
     }
 
     public Alarm(Parcel p) {
@@ -205,6 +215,7 @@ public final class Alarm implements Parcelable {
         label = p.readString();
         alert = (Uri) p.readParcelable(null);
         silent = p.readInt() == 1;
+        incvol = p.readInt() == 1;
     }
 
     // Creates a default alarm at the current time.
@@ -217,6 +228,7 @@ public final class Alarm implements Parcelable {
         vibrate = true;
         daysOfWeek = new DaysOfWeek(0);
         alert = RingtoneManager.getDefaultUri(RingtoneManager.TYPE_ALARM);
+        incvol = false;
     }
 
     public String getLabelOrDefault(Context context) {
