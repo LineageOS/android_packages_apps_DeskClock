@@ -20,12 +20,15 @@ import android.app.KeyguardManager;
 import android.app.Notification;
 import android.app.NotificationManager;
 import android.app.PendingIntent;
+import android.app.Profile;
+import android.app.ProfileManager;
 import android.content.ContentUris;
 import android.content.Context;
 import android.content.Intent;
 import android.content.BroadcastReceiver;
 import android.database.Cursor;
 import android.os.Parcel;
+import android.os.ParcelUuid;
 import android.os.PowerManager.WakeLock;
 
 /**
@@ -177,6 +180,9 @@ public class AlarmReceiver extends BroadcastReceiver {
         // correct notification.
         NotificationManager nm = getNotificationManager(context);
         nm.notify(alarm.id, n);
+
+        // Change to profile if the alarm defines a profile to change to
+        changeToProfile(context, alarm);
     }
 
     private NotificationManager getNotificationManager(Context context) {
@@ -215,5 +221,45 @@ public class AlarmReceiver extends BroadcastReceiver {
         // notification.
         nm.cancel(alarm.id);
         nm.notify(alarm.id, n);
+    }
+
+    private void changeToProfile(final Context context, final Alarm alarm) {
+        // The alarm is defined to change the active profile?
+        if (alarm.profile != null && !alarm.profile.equals(Alarm.NO_PROFILE)) {
+            final ProfileManager profileManager =
+                    (ProfileManager)context.getSystemService(Context.PROFILE_SERVICE);
+            if (profileManager != null) {
+                // Ensure that the profile still exists
+                Profile profile = profileManager.getProfile(alarm.profile);
+                if (profile == null) {
+                    Log.e(String.format(
+                            "The profile \"%s\" not exists. Can't change to this profile",
+                            alarm.profile));
+                }
+                else {
+                    Profile activeProfile = profileManager.getActiveProfile();
+                    // Is the current profile different?
+                    if (activeProfile == null ||
+                       (activeProfile != null && !profile.getUuid().equals(activeProfile.getUuid())) ) {
+                            // Change to profile
+                            try {
+                                Log.i(String.format(
+                                    "Changing to profile \"%s\" (%s) requesting by alarm \"%s\" (%d)",
+                                    profile.getName(), profile.getUuid().toString(),
+                                    alarm.label, alarm.id));
+                            }catch (Exception e) {}
+                            profileManager.setActiveProfile(profile.getUuid());
+                    } else {
+                        Log.v(String.format(
+                                "The profile \"%s\" (%s) is already active. No need to change to",
+                                profile.getName(), profile.getUuid().toString()));
+                    }
+                }
+            } else {
+                Log.v("ProfileManager is not present");
+            }
+        } else {
+            Log.v("Alarm doesn't define a profile to change to");
+        }
     }
 }

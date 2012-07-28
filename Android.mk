@@ -11,8 +11,6 @@ LOCAL_PACKAGE_NAME := DeskClock
 
 LOCAL_OVERRIDES_PACKAGES := AlarmClock
 
-LOCAL_SDK_VERSION := current
-
 include $(BUILD_PACKAGE)
 
 # Use the following include to make our test apk.
