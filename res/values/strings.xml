@@ -328,6 +328,19 @@
     <!-- Label on the main screen control used to set alarm when there is already an existing alarm [CHAR LIMIT=30]-->
     <string name="control_set_alarm_with_existing">Alarm set: <xliff:g id="time">%s</xliff:g></string>
 
+    <!-- Setting labels on Set alarm screen: Select profile to change to -->
+    <string name="alarm_profile">Profile</string>
+
+    <!-- Option of profile setting of the alarm: No change to profile -->
+    <string name="alarm_profile_no_change_profile">No change profile</string>
+
+    <!-- Summary of alarm profile: No change profile -->
+    <string name="alarm_profile_summary_no_change">No change to profile when alarm triggers</string>
+
+    <!-- Summary of alarm profile: Change profile to -->
+    <string name="alarm_profile_summary_change_to">When alarm triggers, the profile will be changed to
+        <xliff:g id="profile">%s</xliff:g></string>
+
 </resources>
 
 

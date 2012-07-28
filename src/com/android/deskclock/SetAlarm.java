@@ -50,6 +50,7 @@ public class SetAlarm extends PreferenceActivity implements Preference.OnPrefere
     private CheckBoxPreference mEnabledPref;
     private Preference mTimePref;
     private AlarmPreference mAlarmPref;
+    private ProfilePreference mProfilePref;
     private CheckBoxPreference mVibratePref;
     private RepeatPreference mRepeatPref;
 
@@ -81,6 +82,8 @@ public class SetAlarm extends PreferenceActivity implements Preference.OnPrefere
         mTimePref = findPreference("time");
         mAlarmPref = (AlarmPreference) findPreference("alarm");
         mAlarmPref.setOnPreferenceChangeListener(this);
+        mProfilePref = (ProfilePreference) findPreference("profile");
+        mProfilePref.setOnPreferenceChangeListener(this);
         mVibratePref = (CheckBoxPreference) findPreference("vibrate");
         mVibratePref.setOnPreferenceChangeListener(this);
         Vibrator v = (Vibrator) getSystemService(Context.VIBRATOR_SERVICE);
@@ -203,6 +206,8 @@ public class SetAlarm extends PreferenceActivity implements Preference.OnPrefere
         mVibratePref.setChecked(alarm.vibrate);
         // Give the alert uri to the preference.
         mAlarmPref.setAlert(alarm.alert);
+        // Give the profile to the preference
+        mProfilePref.setProfile(alarm.profile);
         updateTime();
     }
 
@@ -286,6 +291,7 @@ public class SetAlarm extends PreferenceActivity implements Preference.OnPrefere
         alarm.vibrate = mVibratePref.isChecked();
         alarm.label = mLabel.getText().toString();
         alarm.alert = mAlarmPref.getAlert();
+        alarm.profile = mProfilePref.getProfile();
         return alarm;
     }
 
