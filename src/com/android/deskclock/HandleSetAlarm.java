@@ -96,7 +96,7 @@ public class HandleSetAlarm extends Activity {
             try {
                 c = cr.query(result, Alarm.Columns.ALARM_QUERY_COLUMNS, null,
                         null, null);
-                handleCursorResult(c, timeInMillis, false, skipUi);
+                handleCursorResult(c, timeInMillis, true, skipUi);
             } finally {
                 if (c != null) c.close();
             }
