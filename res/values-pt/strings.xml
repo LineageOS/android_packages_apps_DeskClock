@@ -135,4 +135,5 @@
         <item>Colocar alarme em soneca</item>
         <item>Encerrar o alarme</item>
     </string-array>
+    <string name="alarm_incvol">Volume Crescente</string>
 </resources>
