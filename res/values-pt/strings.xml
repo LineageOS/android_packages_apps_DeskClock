@@ -135,4 +135,10 @@
         <item>Colocar alarme em soneca</item>
         <item>Encerrar o alarme</item>
     </string-array>
+    <string name="alarm_incvol">Volume Crescente</string>
+    <string name="alarm_profile_summary_change_to">Quando o alarme toca, o perfil será trocado para
+        <xliff:g id="profile" xmlns:xliff="urn:oasis:names:tc:xliff:document:1.2">%s</xliff:g></string>
+    <string name="alarm_profile_summary_no_change">Não troca o perfil quando o alarme toca</string>
+    <string name="alarm_profile_no_change_profile">Não trocar o perfil</string>
+    <string name="alarm_profile">Perfil</string>
 </resources>
