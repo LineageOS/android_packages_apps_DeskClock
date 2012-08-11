@@ -21,6 +21,7 @@ import android.database.Cursor;
 import android.media.RingtoneManager;
 import android.net.Uri;
 import android.os.Parcel;
+import android.os.ParcelUuid;
 import android.os.Parcelable;
 import android.provider.BaseColumns;
 
@@ -28,6 +29,7 @@ import java.text.DateFormatSymbols;
 import java.util.Calendar;
 import java.util.HashMap;
 import java.util.HashSet;
+import java.util.UUID;
 
 public final class Alarm implements Parcelable {
 
@@ -61,6 +63,8 @@ public final class Alarm implements Parcelable {
         p.writeParcelable(alert, flags);
         p.writeInt(silent ? 1 : 0);
         p.writeInt(incvol ? 1 : 0);
+        ParcelUuid uuid = new ParcelUuid(profile);
+        uuid.writeToParcel(p, 0);
     }
     //////////////////////////////
     // end Parcelable apis
@@ -132,6 +136,12 @@ public final class Alarm implements Parcelable {
         public static final String INCVOL = "incvol";
 
         /**
+         * Profile to change to when alarm triggers
+         * <P>Type: STRING</P>
+         */
+         public static final String PROFILE = "profile";
+
+        /**
          * The default sort order for this table
          */
         public static final String DEFAULT_SORT_ORDER =
@@ -142,7 +152,7 @@ public final class Alarm implements Parcelable {
 
         static final String[] ALARM_QUERY_COLUMNS = {
             _ID, HOUR, MINUTES, DAYS_OF_WEEK, ALARM_TIME,
-            ENABLED, VIBRATE, MESSAGE, ALERT, INCVOL };
+            ENABLED, VIBRATE, MESSAGE, ALERT, INCVOL, PROFILE };
 
         /**
          * These save calls to cursor.getColumnIndexOrThrow()
@@ -158,6 +168,7 @@ public final class Alarm implements Parcelable {
         public static final int ALARM_MESSAGE_INDEX = 7;
         public static final int ALARM_ALERT_INDEX = 8;
         public static final int ALARM_INCVOL_INDEX = 9;
+        public static final int ALARM_PROFILE_INDEX = 10;
     }
     //////////////////////////////
     // End column definitions
@@ -175,6 +186,13 @@ public final class Alarm implements Parcelable {
     public Uri        alert;
     public boolean    silent;
     public boolean    incvol;
+    public UUID       profile;
+
+    /**
+     * @hide
+     */
+    protected static final UUID NO_PROFILE =
+            UUID.fromString("00000000-0000-0000-0000-000000000000");
 
     @Override
     public String toString() {
@@ -220,6 +238,16 @@ public final class Alarm implements Parcelable {
             }
         }
         incvol = c.getInt(Columns.ALARM_INCVOL_INDEX) == 1;
+        String profileString = c.getString(Columns.ALARM_PROFILE_INDEX);
+        if (profileString == null || profileString.equals(NO_PROFILE)) {
+            profile = NO_PROFILE;
+        } else {
+            try {
+                profile = UUID.fromString(profileString);
+            } catch (Exception e) {
+                profile = NO_PROFILE;
+            }
+        }
     }
 
     public Alarm(Parcel p) {
@@ -234,6 +262,7 @@ public final class Alarm implements Parcelable {
         alert = (Uri) p.readParcelable(null);
         silent = p.readInt() == 1;
         incvol = p.readInt() == 1;
+        profile = ParcelUuid.CREATOR.createFromParcel(p).getUuid();
     }
 
     // Creates a default alarm at the current time.
@@ -246,6 +275,7 @@ public final class Alarm implements Parcelable {
         label = "";
         alert = RingtoneManager.getDefaultUri(RingtoneManager.TYPE_ALARM);
         incvol = false;
+        profile = NO_PROFILE;
     }
 
     public String getLabelOrDefault(Context context) {
