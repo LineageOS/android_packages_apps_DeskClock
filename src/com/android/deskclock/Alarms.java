@@ -168,6 +168,10 @@ public class Alarms {
 
         values.put(Alarm.Columns.INCVOL, alarm.incvol);
 
+        // A null profile string indicates that profile mustn't be changed
+        values.put(Alarm.Columns.PROFILE, alarm.profile == null ? Alarm.NO_PROFILE.toString()
+                : alarm.profile.toString());
+
         return values;
     }
 
