@@ -17,7 +17,6 @@
 package com.android.deskclock;
 
 import android.app.Activity;
-import android.content.Context;
 import android.content.ContentResolver;
 import android.content.ContentValues;
 import android.content.Intent;
@@ -90,6 +89,7 @@ public class HandleSetAlarm extends Activity {
         values.put(Alarm.Columns.DAYS_OF_WEEK, 0);
         values.put(Alarm.Columns.ALARM_TIME, timeInMillis);
         values.put(Alarm.Columns.INCVOL, 0);
+        values.put(Alarm.Columns.PROFILE, Alarm.NO_PROFILE.toString());
 
         ContentResolver cr = getContentResolver();
         Uri result = cr.insert(Alarm.Columns.CONTENT_URI, values);
