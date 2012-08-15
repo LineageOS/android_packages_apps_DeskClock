@@ -342,4 +342,10 @@
       <item>Отложить будильник</item>
       <item>Выключить будильник</item>
     </string-array>
+
+    <!-- Setting labels on Set alarm screen: Select profile to change to -->
+    <string name="alarm_profile">Профиль</string>
+    <string name="alarm_profile_no_change_profile">Без изменения профиля</string>
+    <string name="alarm_profile_summary_no_change">Не изменять профиль при срабатывании будильника</string>
+    <string name="alarm_profile_summary_change_to">Изменять профиль на <xliff:g id="profile">%s</xliff:g> при срабатывании будильника</string>
 </resources>
