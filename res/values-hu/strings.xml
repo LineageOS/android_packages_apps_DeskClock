@@ -351,4 +351,17 @@
     <string name="city_delete_confirmation" msgid="1783441538785676299">"Eltávolítja ezt a várost?"</string>
     <string name="widget_loading_ms" msgid="790841709484678848">"Betöltés"</string>
     <string name="digital_gadget" msgid="2326954556720571358">"Digitális óra"</string>
+
+    <!-- Setting labels on Set alarm screen: Select profile to change to -->
+    <string name="alarm_profile">Profil</string>
+
+    <!-- Option of profile setting of the alarm: No change to profile -->
+    <string name="alarm_profile_no_change_profile">Ne váltson profilt</string>
+
+    <!-- Summary of alarm profile: No change profile -->
+    <string name="alarm_profile_summary_no_change">Ébresztéskor nem vált profilt</string>
+
+    <!-- Summary of alarm profile: Change profile to -->
+    <string name="alarm_profile_summary_change_to">Ébresztéskor a következő profilra vált: <xliff:g id="profile">%s</xliff:g></string>
+
 </resources>
