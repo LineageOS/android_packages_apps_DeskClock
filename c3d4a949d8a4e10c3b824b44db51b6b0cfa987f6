@@ -1,0 +1,10 @@
+Change-Id: Ie5b9f94e8c4379593de212a894cd6d07f3bc963e
+Code-Review+2: Daniel Hillenbrand <codeworkx@cyanogenmod.com>
+Verified+1: Daniel Hillenbrand <codeworkx@cyanogenmod.com>
+Code-Review+1: Dmitriy Chermenev <chdiman86@gmail.com>
+Code-Review+1: Alexey Alexeevich <madzerling@gmail.com>
+Submitted-by: Daniel Hillenbrand <codeworkx@cyanogenmod.com>
+Submitted-at: Sat, 18 Aug 2012 14:50:17 +0400
+Reviewed-on: http://review.cyanogenmod.com/21286
+Project: CyanogenMod/android_packages_apps_DeskClock
+Branch: refs/heads/jellybean
