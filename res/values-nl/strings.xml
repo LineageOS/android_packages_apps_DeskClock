@@ -88,4 +88,10 @@
     <string name="flip_action_dialog_title">Apparaat omdraaien</string>
     <string name="flip_action_summary">Bij het omdraaien van het apparaat zal
         <xliff:g id="action">%s</xliff:g></string>
+    <string name="alarm_incvol">Verhogend volume</string>
+    <string name="alarm_profile">Profiel</string>
+    <string name="alarm_profile_no_change_profile">Geen wijziging profiel</string>
+    <string name="alarm_profile_summary_no_change">Geen profielwijziging wanneer het alarm afgaat</string>
+    <string name="alarm_profile_summary_change_to">Als het alarm afgaat, wordt het profiel gewijzigd naar
+        <xliff:g id="profile">%s</xliff:g></string>
 </resources>
