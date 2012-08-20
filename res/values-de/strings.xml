@@ -127,4 +127,17 @@
     <string name="loading_ringtone" msgid="6523322777415268044">"Klingelton wird geladen..."</string>
     <string name="control_set_alarm" msgid="2194676418924016327">"Wecker einstellen"</string>
     <string name="control_set_alarm_with_existing" msgid="1128169496817859490">"Wecker eingestellt: <xliff:g id="TIME">%s</xliff:g>"</string>
+
+    <!-- Setting labels on Set alarm screen: Select profile to change to -->
+    <string name="alarm_profile">Profile</string>
+
+    <!-- Option of profile setting of the alarm: No change to profile -->
+    <string name="alarm_profile_no_change_profile">Profil nicht ändern</string>
+
+    <!-- Summary of alarm profile: No change profile -->
+    <string name="alarm_profile_summary_no_change">Beim Klingeln des Weckers Profil nicht ändern</string>
+
+    <!-- Summary of alarm profile: Change profile to -->
+    <string name="alarm_profile_summary_change_to">Beim Klingeln des Weckers wird das Profil <xliff:g id="profile">%s</xliff:g> ausgewählt</string>
+
 </resources>
