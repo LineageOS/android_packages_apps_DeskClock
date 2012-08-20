@@ -1,0 +1,38 @@
+{
+  "comments": [
+    {
+      "key": {
+        "uuid": "AAAAWX//+ug\u003d",
+        "filename": "res/values-de/strings.xml",
+        "patchSetId": 1
+      },
+      "lineNbr": 133,
+      "author": {
+        "id": 70
+      },
+      "writtenOn": "2012-08-20T23:30:35Z",
+      "side": 1,
+      "message": "Kleinigkeit: Leerzeilen nicht nötig, auch wenn der Autor der Erweiterung sich dafür entschieden hat.",
+      "revId": "d3982c3421ac13d30757d76d0cd0c2264210bbf2",
+      "serverId": "1ec6b3db-b2c1-4fa4-84a2-4c7efe89ba71",
+      "unresolved": false
+    },
+    {
+      "key": {
+        "uuid": "AAAAWX//+uo\u003d",
+        "filename": "res/values-de/strings.xml",
+        "patchSetId": 1
+      },
+      "lineNbr": 138,
+      "author": {
+        "id": 70
+      },
+      "writtenOn": "2012-08-20T23:30:35Z",
+      "side": 1,
+      "message": "Kleinigkeit: \"Beim Klingeln des Weckers das Profil nicht ändern\"",
+      "revId": "d3982c3421ac13d30757d76d0cd0c2264210bbf2",
+      "serverId": "1ec6b3db-b2c1-4fa4-84a2-4c7efe89ba71",
+      "unresolved": false
+    }
+  ]
+}
