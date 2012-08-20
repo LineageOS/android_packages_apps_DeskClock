@@ -324,4 +324,14 @@
     <string name="city_delete_confirmation" msgid="1783441538785676299">"Diese Stadt entfernen?"</string>
     <string name="widget_loading_ms" msgid="790841709484678848">"Wird geladen..."</string>
     <string name="digital_gadget" msgid="2326954556720571358">"Digitaluhr"</string>
+
+    <!-- Setting labels on Set alarm screen: Select profile to change to -->
+    <string name="alarm_profile">Profile</string>
+    <!-- Option of profile setting of the alarm: No change to profile -->
+    <string name="alarm_profile_no_change_profile">Profil nicht ändern</string>
+    <!-- Summary of alarm profile: No change profile -->
+    <string name="alarm_profile_summary_no_change">Beim Klingeln des Weckers das Profil nicht ändern</string>
+    <!-- Summary of alarm profile: Change profile to -->
+    <string name="alarm_profile_summary_change_to">Beim Klingeln des Weckers wird das Profil <xliff:g id="profile">%s</xliff:g> ausgewählt</string>
+
 </resources>
