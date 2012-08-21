@@ -1,0 +1,21 @@
+{
+  "comments": [
+    {
+      "key": {
+        "uuid": "AAAAWX//+s0\u003d",
+        "filename": "res/values-nl/strings.xml",
+        "patchSetId": 1
+      },
+      "lineNbr": 91,
+      "author": {
+        "id": 2248
+      },
+      "writtenOn": "2012-08-21T02:57:25Z",
+      "side": 1,
+      "message": "Verhogend volume?",
+      "revId": "f41c15cb5b9b2657c4013faa67eafbbdefb92308",
+      "serverId": "1ec6b3db-b2c1-4fa4-84a2-4c7efe89ba71",
+      "unresolved": false
+    }
+  ]
+}
