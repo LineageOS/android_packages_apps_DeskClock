@@ -1,0 +1,21 @@
+{
+  "comments": [
+    {
+      "key": {
+        "uuid": "AAAAWX//+dg\u003d",
+        "filename": "res/values-nl/strings.xml",
+        "patchSetId": 2
+      },
+      "lineNbr": 91,
+      "author": {
+        "id": 4297
+      },
+      "writtenOn": "2012-08-22T02:32:16Z",
+      "side": 1,
+      "message": "Toenemend volume lijkt me beter",
+      "revId": "47a30b3e010b891e06499291d793e00be18105a2",
+      "serverId": "1ec6b3db-b2c1-4fa4-84a2-4c7efe89ba71",
+      "unresolved": false
+    }
+  ]
+}
