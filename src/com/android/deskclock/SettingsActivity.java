@@ -16,6 +16,8 @@
 
 package com.android.deskclock;
 
+import java.util.Locale;
+
 import android.content.SharedPreferences;
 import android.media.AudioManager;
 import android.media.RingtoneManager;
@@ -127,9 +129,15 @@ public class SettingsActivity extends PreferenceActivity
     private void updateFlipActionSummary(ListPreference listPref,
             String action) {
         int i = Integer.parseInt(action);
-        listPref.setSummary(
-                getString(R.string.flip_action_summary,
-                getResources().getStringArray(R.array.flip_action_entries)[i].toLowerCase()));
+        if (Locale.getDefault().getLanguage().equals("de")) {
+            listPref.setSummary(
+                    getString(R.string.flip_action_summary,
+                    getResources().getStringArray(R.array.flip_action_entries)[i]));
+        } else {
+            listPref.setSummary(
+                    getString(R.string.flip_action_summary,
+                    getResources().getStringArray(R.array.flip_action_entries)[i].toLowerCase()));
+        }
     }
 
     private void refresh() {
