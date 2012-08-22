@@ -1,0 +1,21 @@
+{
+  "comments": [
+    {
+      "key": {
+        "uuid": "AAAAWX//+TE\u003d",
+        "filename": "res/values-nl/strings.xml",
+        "patchSetId": 3
+      },
+      "lineNbr": 8,
+      "author": {
+        "id": 2049
+      },
+      "writtenOn": "2012-08-22T21:11:17Z",
+      "side": 1,
+      "message": "Nog steeds een whitespace",
+      "revId": "e894960addb4c0cd8222d0146adf7d3f7a961891",
+      "serverId": "1ec6b3db-b2c1-4fa4-84a2-4c7efe89ba71",
+      "unresolved": false
+    }
+  ]
+}
