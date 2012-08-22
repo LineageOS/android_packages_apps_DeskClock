@@ -114,6 +114,12 @@
   <string name="flip_action_summary">Pivoter l\'appareil pour : <xliff:g id="action">%s</xliff:g></string>
   <!-- Dialog title of the flip action setting. -->
   <string name="flip_action_dialog_title">Effet</string>
+  <!-- Entries listed in the setting for the flip action setting. -->
+  <string-array name="flip_action_entries">
+    <item>Ne rien faire</item>
+    <item>Répéter l\'alarme</item>
+    <item>Désactiver l\'alarme</item>
+  </string-array>
 
   <!-- END CM -->
 
