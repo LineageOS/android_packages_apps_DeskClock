@@ -127,4 +127,17 @@
     <string name="loading_ringtone" msgid="6523322777415268044">"Indlæser ringetone..."</string>
     <string name="control_set_alarm" msgid="2194676418924016327">"Indstil alarm"</string>
     <string name="control_set_alarm_with_existing" msgid="1128169496817859490">"Alarmen er indstillet til: <xliff:g id="TIME">%s</xliff:g>"</string>
+
+    <!-- CM10 additions -->
+    <string name="alarm_incvol">Stigende lydstyrke</string>
+    <string name="flip_action_title">Vende-handling</string>
+    <string name="flip_action_dialog_title">Vende-handling</string>
+    <string name="flip_action_summary">At vende telefonen vil<xliff:g id="action">%s</xliff:g></string>
+    <string-array name="flip_action_entries">
+      <item>Gøre ingenting</item>
+      <item>Slumre alarmen</item>
+      <item>Afbryde alarmen</item>
+    </string-array>    
+    <!-- CM10 additions end -->
+
 </resources>
