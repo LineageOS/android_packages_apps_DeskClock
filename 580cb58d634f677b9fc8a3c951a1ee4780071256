@@ -1,0 +1,38 @@
+{
+  "comments": [
+    {
+      "key": {
+        "uuid": "AAAAXH///jY\u003d",
+        "filename": "res/values-nl/arrays.xml",
+        "patchSetId": 4
+      },
+      "lineNbr": 9,
+      "author": {
+        "id": 4297
+      },
+      "writtenOn": "2012-08-31T02:15:38Z",
+      "side": 1,
+      "message": "Whitespace, ook op regel 8",
+      "revId": "580cb58d634f677b9fc8a3c951a1ee4780071256",
+      "serverId": "1ec6b3db-b2c1-4fa4-84a2-4c7efe89ba71",
+      "unresolved": false
+    },
+    {
+      "key": {
+        "uuid": "AAAAXH///h4\u003d",
+        "filename": "res/values-nl/arrays.xml",
+        "patchSetId": 4
+      },
+      "lineNbr": 53,
+      "author": {
+        "id": 4297
+      },
+      "writtenOn": "2012-08-31T02:15:38Z",
+      "side": 1,
+      "message": "Dit is niet echt Nederlands. Als je dit in de samenvatting op de knop leest, staat er wel \"Bij het omdraaien van het apparaat zal ...\", dus dan klopt het wel, maar als je op de knop duwt, is het weer een heel erg rare zin. Volgens mij is dat niet in alleen dit bestand op te lossen.",
+      "revId": "580cb58d634f677b9fc8a3c951a1ee4780071256",
+      "serverId": "1ec6b3db-b2c1-4fa4-84a2-4c7efe89ba71",
+      "unresolved": false
+    }
+  ]
+}
