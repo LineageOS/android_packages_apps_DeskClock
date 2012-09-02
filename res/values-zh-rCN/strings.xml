@@ -31,6 +31,8 @@
     <string name="default_label" msgid="5590025289805630372">"闹钟"</string>
     <string name="set_alarm" msgid="9148359866152726808">"设置闹钟"</string>
     <string name="alarm_vibrate" msgid="3476686921490362230">"振动"</string>
+    <!-- Setting labels on Set alarm screen: Increasing volume on or off -->
+    <string name="alarm_incvol">音量逐渐加强</string>
     <string name="alarm_repeat" msgid="7242985466344233206">"重复"</string>
     <string name="alert" msgid="6506982899651975645">"闹钟铃声"</string>
     <string name="ringtone" msgid="9110746249688559579">"铃声"</string>
@@ -81,6 +83,23 @@
     <string name="auto_silence_title" msgid="2012754009554434544">"闹铃时长"</string>
     <string name="auto_silence_summary" msgid="7028508740659733028">"<xliff:g id="MINUTES">%d</xliff:g> 分钟"</string>
     <string name="auto_silence_never" msgid="4821982647348750809">"永不"</string>
+
+    <!-- Setting title for the flip action setting. -->
+    <string name="flip_action_title">翻转动作</string>
+
+    <!-- Dialog title of the flip action setting. -->
+    <string name="flip_action_dialog_title">翻转动作</string>
+
+    <!-- Setting summary for the flip action setting. -->
+    <string name="flip_action_summary">翻转手机将<xliff:g id="action">%s</xliff:g></string>
+
+    <!-- Entries listed in the setting for the flip action setting. -->
+    <string-array name="flip_action_entries">
+      <item>不会有任何作用</item>
+      <item>暂停闹钟</item>
+      <item>取消闹钟</item>
+    </string-array>
+
   <string-array name="auto_silence_entries">
     <item msgid="3693401222993867634">"5 分钟"</item>
     <item msgid="3663730603519549990">"10 分钟"</item>
@@ -324,4 +343,16 @@
     <string name="city_delete_confirmation" msgid="1783441538785676299">"是否删除此城市？"</string>
     <string name="widget_loading_ms" msgid="790841709484678848">"正在加载"</string>
     <string name="digital_gadget" msgid="2326954556720571358">"数字时钟"</string>
+
+    <!-- Setting labels on Set alarm screen: Select profile to change to -->
+    <string name="alarm_profile">场景模式</string>
+
+    <!-- Option of profile setting of the alarm: No change to profile -->
+    <string name="alarm_profile_no_change_profile">无改变</string>
+
+    <!-- Summary of alarm profile: No change profile -->
+    <string name="alarm_profile_summary_no_change">闹钟响起时将不会改变场景</string>
+
+    <!-- Summary of alarm profile: Change profile to -->
+    <string name="alarm_profile_summary_change_to">闹钟响起时, 场景将会被改变为<xliff:g id="profile">%s</xliff:g></string>
 </resources>
