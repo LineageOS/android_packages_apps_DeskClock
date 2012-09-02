@@ -31,6 +31,7 @@
     <string name="default_label" msgid="5590025289805630372">"Alarma"</string>
     <string name="set_alarm" msgid="9148359866152726808">"Establecer alarma"</string>
     <string name="alarm_vibrate" msgid="3476686921490362230">"Vibración"</string>
+    <string name="alarm_incvol">"Incrementar volumen"</string>
     <string name="alarm_repeat" msgid="7242985466344233206">"Repetir"</string>
     <string name="alert" msgid="6506982899651975645">"Tono de alarma"</string>
     <string name="ringtone" msgid="9110746249688559579">"Tono de llamada"</string>
@@ -81,6 +82,14 @@
     <string name="auto_silence_title" msgid="2012754009554434544">"Silenciar después de"</string>
     <string name="auto_silence_summary" msgid="7028508740659733028">"<xliff:g id="MINUTES">%d</xliff:g> minutos"</string>
     <string name="auto_silence_never" msgid="4821982647348750809">"Nunca"</string>
+    <string name="flip_action_title">Agitar</string>
+    <string name="flip_action_dialog_title">Agitar</string>
+    <string name="flip_action_summary">"Agitar el teléfono hará <xliff:g id="action">%s</xliff:g>"</string>
+    <string-array name="flip_action_entries">
+      <item>"Nada"</item>
+      <item>"Posponer la alarma"</item>
+      <item>"Descartar la alarma"</item>
+    </string-array>
   <string-array name="auto_silence_entries">
     <item msgid="3693401222993867634">"5 minutos"</item>
     <item msgid="3663730603519549990">"10 minutos"</item>
@@ -324,4 +333,8 @@
     <string name="city_delete_confirmation" msgid="1783441538785676299">"¿Eliminar esta ciudad?"</string>
     <string name="widget_loading_ms" msgid="790841709484678848">"Cargando..."</string>
     <string name="digital_gadget" msgid="2326954556720571358">"Reloj digital"</string>
+    <string name="alarm_profile">"Perfil"</string>
+    <string name="alarm_profile_no_change_profile">"No cambiar perfil"</string>
+    <string name="alarm_profile_summary_no_change">"No cambiar perfil cuando se dispare la alarma"</string>
+    <string name="alarm_profile_summary_change_to">"Cuando la alarma se dispare, se cambiará al perfil <xliff:g id="profile">%s</xliff:g></string>
 </resources>
