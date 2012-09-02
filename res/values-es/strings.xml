@@ -31,6 +31,7 @@
     <string name="default_label" msgid="5590025289805630372">"Alarma"</string>
     <string name="set_alarm" msgid="9148359866152726808">"Establecer alarma"</string>
     <string name="alarm_vibrate" msgid="3476686921490362230">"Vibración"</string>
+    <string name="alarm_incvol">"Incrementar volumen"</string>
     <string name="alarm_repeat" msgid="7242985466344233206">"Repetir"</string>
     <string name="alert" msgid="6539852766423700221">"Tono"</string>
     <string name="time" msgid="8067216534232296518">"Hora"</string>
@@ -79,6 +80,14 @@
     <item msgid="6048861883552402852">"25"</item>
     <item msgid="2740866721232379791">"30"</item>
   </string-array>
+    <string name="flip_action_title">Agitar</string>
+    <string name="flip_action_dialog_title">Agitar</string>
+    <string name="flip_action_summary">"Agitar el teléfono hará <xliff:g id="action">%s</xliff:g>"</string>
+    <string-array name="flip_action_entries">
+      <item>"Nada"</item>
+      <item>"Posponer la alarma"</item>
+      <item>"Descartar la alarma"</item>
+    </string-array>
     <string name="auto_silence_title" msgid="6940612987809171112">"Silenciar automáticamente"</string>
     <string name="auto_silence_summary" msgid="5757272454196171758">"Las alarmas se silenciarán tras <xliff:g id="MINUTES">%d</xliff:g> minutos"</string>
     <string name="auto_silence_never" msgid="4302257878142130807">"Desactivado"</string>
@@ -124,7 +133,11 @@
     <string name="weather_fetch_failure" msgid="3425804832021006835">"La información meteorológica no está disponible en este momento."</string>
     <string name="menu_item_dock_settings" msgid="3524235151132971114">"Ajustes del conector"</string>
     <string name="alarm_klaxon_service_desc" msgid="2147506334302260256">"Reproducción de alarmas definidas en Reloj"</string>
-    <string name="loading_ringtone" msgid="6523322777415268044">"Cargando tono…"</string>
+    <string name="loading_ringtone" msgid="6523322777415268044">"Cargando tono\u2026"</string>
     <string name="control_set_alarm" msgid="2194676418924016327">"Establecer alarma"</string>
     <string name="control_set_alarm_with_existing" msgid="1128169496817859490">"Alarma establecida: <xliff:g id="TIME">%s</xliff:g>"</string>
+    <string name="alarm_profile">"Perfil"</string>
+    <string name="alarm_profile_no_change_profile">"No cambiar perfil"</string>
+    <string name="alarm_profile_summary_no_change">"No cambiar perfil cuando se dispare la alarma"</string>
+    <string name="alarm_profile_summary_change_to">"Cuando la alarma se dispare, se cambiará al perfil <xliff:g id="profile">%s</xliff:g></string>
 </resources>
