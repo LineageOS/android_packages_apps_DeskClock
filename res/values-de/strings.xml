@@ -31,6 +31,10 @@
     <string name="default_label" msgid="5590025289805630372">"Wecker"</string>
     <string name="set_alarm" msgid="9148359866152726808">"Wecker einstellen"</string>
     <string name="alarm_vibrate" msgid="3476686921490362230">"Vibrieren"</string>
+
+    <!-- Setting labels on Set alarm screen: Increasing volume on or off -->
+    <string name="alarm_incvol">Ansteigende Lautstärke</string>
+
     <string name="alarm_repeat" msgid="7242985466344233206">"Wiederholen"</string>
     <string name="alert" msgid="6539852766423700221">"Klingelton"</string>
     <string name="time" msgid="8067216534232296518">"Uhrzeit"</string>
@@ -63,22 +67,48 @@
     <string name="alarm_in_silent_mode_title" msgid="3892612644543516705">"Auch im Lautlos-Modus"</string>
     <string name="alarm_in_silent_mode_summary" msgid="123772279768441207">"Wecker klingelt auch im Lautlos-Modus"</string>
     <string name="snooze_duration_title" msgid="1471249885139952670">"Snooze-Dauer"</string>
-  <string-array name="snooze_duration_entries">
-    <item msgid="8337408933053603125">"5 Minuten"</item>
-    <item msgid="5294206441496024610">"10 Minuten"</item>
-    <item msgid="2165904039211935470">"15 Minuten"</item>
-    <item msgid="7248236967714374250">"20 Minuten"</item>
-    <item msgid="738394723625179423">"25 Minuten"</item>
-    <item msgid="1180222611308391616">"30 Minuten"</item>
-  </string-array>
-  <string-array name="snooze_duration_values">
-    <item msgid="3655014754453084122">"5"</item>
-    <item msgid="8939029597449573449">"10"</item>
-    <item msgid="3922647341176353315">"15"</item>
-    <item msgid="5821804105985044459">"20"</item>
-    <item msgid="6048861883552402852">"25"</item>
-    <item msgid="2740866721232379791">"30"</item>
-  </string-array>
+
+    <string-array name="snooze_duration_entries">
+      <item msgid="8337408933053603125">"5 Minuten"</item>
+      <item msgid="5294206441496024610">"10 Minuten"</item>
+      <item msgid="2165904039211935470">"15 Minuten"</item>
+      <item msgid="7248236967714374250">"20 Minuten"</item>
+      <item msgid="738394723625179423">"25 Minuten"</item>
+      <item msgid="1180222611308391616">"30 Minuten"</item>
+    </string-array>
+
+    <string-array name="snooze_duration_values">
+      <item msgid="3655014754453084122">"5"</item>
+      <item msgid="8939029597449573449">"10"</item>
+      <item msgid="3922647341176353315">"15"</item>
+      <item msgid="5821804105985044459">"20"</item>
+      <item msgid="6048861883552402852">"25"</item>
+      <item msgid="2740866721232379791">"30"</item>
+    </string-array>
+
+    <!-- Setting title for the flip action setting. -->
+    <string name="flip_action_title">Aktion beim Umdrehen</string>
+
+    <!-- Dialog title of the flip action setting. -->
+    <string name="flip_action_dialog_title">Aktion beim Umdrehen</string>
+
+    <!-- Setting summary for the flip action setting. -->
+    <string name="flip_action_summary"><xliff:g id="action">%s</xliff:g> beim Umdrehen des Geräts</string>
+
+    <!-- Entries listed in the setting for the flip action setting. -->
+    <string-array name="flip_action_entries">
+      <item>Keine Aktion</item>
+      <item>Snooze-Funktion</item>
+      <item>Beenden des Alarms</item>
+    </string-array>
+
+    <!-- Values for the flip action setting. -->
+    <string-array name="flip_action_values">
+      <item>0</item>
+      <item>1</item>
+      <item>2</item>
+    </string-array>
+
     <string name="auto_silence_title" msgid="6940612987809171112">"Automatische Stummschaltung"</string>
     <string name="auto_silence_summary" msgid="5757272454196171758">"Der Wecker wird nach <xliff:g id="MINUTES">%d</xliff:g> Minuten stummgeschaltet."</string>
     <string name="auto_silence_never" msgid="4302257878142130807">"Aus"</string>
