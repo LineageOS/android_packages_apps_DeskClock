@@ -27,6 +27,12 @@
     <string name="delete_alarm_confirm" msgid="4237696873219106907">"Tento budík bude odstránený."</string>
     <string name="label" msgid="162189613902857319">"Menovka"</string>
     <string name="default_label" msgid="5590025289805630372">"Budík"</string>
+    <string name="application">Aplikácia</string>
+    <string name="application_title">Aplikácia na spustenie</string>
+    <string name="application_none">Žiadna</string>
+    <string name="no_dialog">Skryť dialóg</string>
+    <string name="no_dialog_on">Nezobrazovať dialóg odloženia/zrušenia</string>
+    <string name="no_dialog_off">Dialóg odloženia/zrušenia bude zobrazený</string>
     <string name="set_alarm" msgid="9148359866152726808">"Nastaviť budík"</string>
     <string name="alarm_vibrate" msgid="3476686921490362230">"Vibrovať"</string>
     <string name="alarm_repeat" msgid="7242985466344233206">"Opakovanie"</string>
@@ -35,6 +41,7 @@
     <string name="alarm_alert_dismiss_text" msgid="4942914605480888820">"Zrušiť"</string>
     <string name="alarm_alert_alert_silenced" msgid="7918075929961104202">"Budík stíšený po uplynutí <xliff:g id="MINUTES">%d</xliff:g> min."</string>
     <string name="alarm_alert_snooze_text" msgid="1774416052207651584">"Odložiť"</string>
+    <string name="alarm_alert_snooze_text_dual_mode">Odložit (přidržení provede zrušení)</string>
     <string name="alarm_alert_snooze_set" msgid="656470966696912087">"Upozornenie odložené o <xliff:g id="MINUTES">%d</xliff:g> min."</string>
   <string-array name="alarm_set">
     <item msgid="5163476010406761625">"Tento budík sa spustí o menej ako 1 minútu."</item>
@@ -93,6 +100,39 @@
     <string name="desk_clock_button_description" msgid="968868045496561043">"Zobrazenie hodín"</string>
     <string name="battery_charging_level" msgid="4391767951302394083">"<xliff:g id="NUMBER">%d</xliff:g> <xliff:g id="PERCENT">%%</xliff:g>"</string>
     <string name="weather_fetch_failure" msgid="7517010911981312358">"Informácie o počasí aktuálne nie sú k dispozícii."</string>
+    <string name="weather_fetch_failure">Informácie o počasí sú momentálne nedostupné.</string>
     <string name="menu_item_dock_settings" msgid="3524235151132971114">"Nastavenie doku"</string>
+    <string name="alarm_limit_title">Max. doba trvania budíka</string>
     <string name="alarm_klaxon_service_desc" msgid="2153290655559916468">"Služba prehrávania zvuku budíkov nastavených v aplikácii DeskClock."</string>
+  <string-array name="alarm_limit_entries">
+    <item>5 minút</item>
+    <item>15 minút</item>
+    <item>30 minút</item>
+    <item>60 minút</item>
+    <item>90 minút</item>
+    <item>120 minút</item>
+    <item>Nekonečno</item>
+  </string-array>
+
+  <string name="screensaver_timeout_title">Časový limit šetriča</string>
+  <string-array name="screensaver_timeout_entries">
+    <item>1 minúta</item>
+    <item>5 minút</item>
+    <item>10 minút</item>
+    <item>15 minút</item>
+    <item>30 minút</item>
+    <item>60 minút</item>
+    <item>@string/never</item>
+  </string-array>
+
+  <string name="color_picker">Farba zobrazeného času</string>
+  <string name="color_picker_title">Farba času (šetrič)</string>
+  <string name="color_picker_summary">Zmeniť farbu času pri aktívnom šetriči</string>
+  <string name="color_picker_alpha">Priehľadnosť (iba stmavnutie)</string>
+  <string name="color_picker_red">Červená</string>
+  <string name="color_picker_green">Zelená</string>
+  <string name="color_picker_blue">Modrá</string>
+  <string name="use_dual_mode_button">Dvojitý režim odloženia</string>
+  <string name="use_dual_mode_button_on">Dlhé stlačenie tlačidla pre odloženie zruší budík</string>
+  <string name="use_dual_mode_button_off">Oddelené tlačidlá pre odloženie a zrušenie budíka</string>
 </resources>
