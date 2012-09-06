@@ -1,0 +1,38 @@
+{
+  "comments": [
+    {
+      "key": {
+        "uuid": "AAAAXH//9ik\u003d",
+        "filename": "res/values-zh-rCN/strings.xml",
+        "patchSetId": 1
+      },
+      "lineNbr": 92,
+      "author": {
+        "id": 4359
+      },
+      "writtenOn": "2012-09-06T14:43:34Z",
+      "side": 1,
+      "message": "I prefer to translate it to \"?????\u003cxliff:g id\u003d\"action\"\u003e%s\u003c/xliff:g\u003e\"",
+      "revId": "bae7d7611a1ac6bdc4a04f4532c3ccea1a42ffd5",
+      "serverId": "1ec6b3db-b2c1-4fa4-84a2-4c7efe89ba71",
+      "unresolved": false
+    },
+    {
+      "key": {
+        "uuid": "AAAAXH//9iY\u003d",
+        "filename": "res/values-zh-rCN/strings.xml",
+        "patchSetId": 1
+      },
+      "lineNbr": 98,
+      "author": {
+        "id": 4359
+      },
+      "writtenOn": "2012-09-06T14:43:34Z",
+      "side": 1,
+      "message": "I am prefer to translate them into \n \u003citem\u003e???????\u003c/item\u003e\n \u003citem\u003e????\u003c/item\u003e\n \u003citem\u003e????\u003c/item\u003e",
+      "revId": "bae7d7611a1ac6bdc4a04f4532c3ccea1a42ffd5",
+      "serverId": "1ec6b3db-b2c1-4fa4-84a2-4c7efe89ba71",
+      "unresolved": false
+    }
+  ]
+}
