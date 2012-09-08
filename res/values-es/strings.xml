@@ -337,4 +337,103 @@
     <string name="alarm_profile_no_change_profile">"No cambiar perfil"</string>
     <string name="alarm_profile_summary_no_change">"No cambiar perfil cuando se dispare la alarma"</string>
     <string name="alarm_profile_summary_change_to">"Cuando la alarma se dispare, se cambiará al perfil <xliff:g id="profile">%s</xliff:g></string>
+
+<!-- =============== CyanogenMod Entries =============== -->
+
+    <string name="msg_timer_service_is_not_ready">\nEl servidor de tiempo no está disponible\n</string>
+    <string name="msg_timer_creation_fails">\nOcurrió un error al crear el cronómetro: Operación no permitida\n</string>
+    <string name="msg_timer_ui_thread_fails">\nOcurrió un error al actualizar la interfaz: Operación no permitida\n</string>
+    <string name="msg_pref_update_fails">\nOcurrió un error al actualizar las preferencias. El valor no se cambió\n</string>
+    <string name="msg_operation_fails">\nLa operación falló\n</string>
+    <string name="stopwatch_title">Cronómetro</string>
+    <string name="stopwatch_actions_stop">Parar</string>
+    <string name="stopwatch_actions_stop_cd">Parar el cronómetro</string>
+    <string name="stopwatch_actions_start">Iniciar</string>
+    <string name="stopwatch_actions_start_cd">Iniciar el cronómetro</string>
+    <string name="stopwatch_actions_resume">Reanudar</string>
+    <string name="stopwatch_actions_resume_cd">Reanudar el cronómetro</string>
+    <string name="stopwatch_actions_reset">Restablecer</string>
+    <string name="stopwatch_actions_reset_cd">Poner a cero el cronómetro</string>
+    <string name="stopwatch_actions_lap">Vuelta</string>
+    <string name="stopwatch_actions_lap_cd">Tomar el tiempo parcial de una vuelta</string>
+    <string name="stopwatch_actions_sector">Sector</string>
+    <string name="stopwatch_actions_sector_cd">Tomar el sector de tiempo de la vuelta actual</string>
+    <string name="stopwatch_info_panel_last_lap_title">Última vuelta</string>
+    <string name="stopwatch_info_panel_best_lap_title">Mejor vuelta</string>
+    <string name="stopwatch_info_panel_laps_title">Vueltas</string>
+    <string name="stopwatch_info_panel_empty_data">Sin información</string>
+    <string name="stopwatch_info_panel_empty_lap">Vuelta</string>
+    <string name="stopwatch_info_panel_lap_label">Vuelta <xliff:g id="lap">%1$s</xliff:g></string>
+    <string name="stopwatch_info_panel_lap_sector">Sector <xliff:g id="sector">%1$s</xliff:g></string>
+    <string name="stopwatch_menu_hide_last_lap_panel">Ocultar última vuelta</string>
+    <string name="stopwatch_menu_hide_best_lap_panel">Ocultar mejor vuelta</string>
+    <string name="stopwatch_menu_hide_laps_panel">Ocultar vueltas</string>
+    <string name="stopwatch_menu_settings">Ajustes</string>
+    <string name="stopwatch_preferences_lap_sectors">Vueltas/Sectores</string>
+    <string name="stopwatch_preferences_lap_sectors_summary">Ajustar el comportamiento de vueltas y sectores</string>
+    <string name="stopwatch_preferences_sectors">Sectores</string>
+    <string name="stopwatch_preferences_sectors_summary">{0,choice,0#Sectores de vuelta no activados|1#Vueltas configuradas con un sector|1&lt;Vueltas configuradas con {0} sectores}</string>
+    <string name="stopwatch_preferences_best_lap_behaviour">Ajuste mejor vuelta</string>
+    <string name="stopwatch_preferences_about">Acerca de</string>
+    <string name="stopwatch_preferences_about_summary">Cronómetro. CyanogenMod \u00A9 2012</string>
+    <string name="stopwatch_best_lap_lower_pref">Tiempos bajos son mejores</string>
+    <string name="stopwatch_best_lap_lower_pref_summary">La mejor vuelta será la de menor tiempo</string>
+    <string name="stopwatch_best_lap_highest_pref">Tiempos altos son mejores</string>
+    <string name="stopwatch_best_lap_highest_pref_summary">La mejor vuelta será la de mayor tiempo</string>
+    <string name="sectors_dialog_enabled_text">Sectores de vuelta habilitados: </string>
+
+    <string name="countdown_title">Temporizador</string>
+    <string name="countdown_actions_stop">Parar</string>
+    <string name="countdown_actions_stop_cd">Parar la cuenta atrás</string>
+    <string name="countdown_actions_start">Iniciar</string>
+    <string name="countdown_actions_start_cd">Iniciar la cuenta atrás</string>
+    <string name="countdown_actions_resume">Reanudar</string>
+    <string name="countdown_actions_resume_cd">Reanudar la cuenta atrás</string>
+    <string name="countdown_actions_reset">Restablecer</string>
+    <string name="countdown_actions_reset_cd">Restablecer la cuenta atrás actual</string>
+    <string name="countdown_actions_cancel">Cancelar</string>
+    <string name="countdown_actions_cancel_cd">Cancelar la edición de la cuenta atrás</string>
+    <string name="countdown_actions_set">Establecer</string>
+    <string name="countdown_actions_set_cd">Establecer el tiempo para la cuenta atrás</string>
+    <string name="countdown_menu_open_timer_editor">Abrir editor de tiempo</string>
+    <string name="countdown_menu_close_timer_editor">Cerrar editor de tiempo</string>
+    <string name="countdown_menu_settings">Ajustes</string>
+    <string name="countdown_panel_title">Guardar cuenta atrás</string>
+    <string name="countdown_panel_add_text">Añadir tiempo actual</string>
+    <string name="countdown_panel_add_text_cd">Añadir la cuenta atrás actual a la lista</string>
+    <string name="countdown_panel_remove_cd">Eliminar la cuenta atrás de la lista</string>
+    <string name="countdown_dialog_add">Una nueva cuenta atrás será añadida.\n\n¿Continuar?\n</string>
+    <string name="countdown_dialog_delete">La cuenta atrás \'<xliff:g id="timer">%1$s</xliff:g>\' será eliminada.\n\n¿Continuar?\n</string>
+    <string name="countdown_preferences_notifications">Notificaciones</string>
+    <string name="countdown_preferences_notifications_summary">Ajustar las notificaciones para la cuenta atrás</string>
+    <string name="countdown_preferences_about">Acerca de</string>
+    <string name="countdown_preferences_about_summary">Temporizador. CyanogenMod \u00A9 2012</string>
+    <string name="countdown_notification_oncountdown_category">En cuenta atrás</string>
+    <string name="countdown_notification_oncountdown_notifications_title">Notificaciones</string>
+    <string name="countdown_notification_oncountdown_notifications_summary_on">Mostrar notificaciones en la barra de estado</string>
+    <string name="countdown_notification_oncountdown_notifications_summary_off">No mostrar notificaciones en la barra de estado</string>
+    <string name="countdown_notification_onfinalcountdown_category">Al finalizar cuenta atrás</string>
+    <string name="countdown_notification_onfinalcountdown_notifications_title">Notificaciones</string>
+    <string name="countdown_notification_onfinalcountdown_notifications_summary_on">Mostrar notificaciones en la barra de estado</string>
+    <string name="countdown_notification_onfinalcountdown_notifications_summary_off">No mostrar notificaciones en la barra de estado</string>
+    <string name="countdown_notification_onfinalcountdown_open_clock_screen_title">Abrir reloj</string>
+    <string name="countdown_notification_onfinalcountdown_open_clock_screen_summary_on">Cuando finalice la cuenta atrás, el reloj será mostrado (esta opción se ignorará durante una llamada)</string>
+    <string name="countdown_notification_onfinalcountdown_open_clock_screen_summary_off">Cuando finalice la cuenta atrás, el reloj no será mostrado</string>
+    <string name="countdown_notification_onfinalcountdown_ringtone_title">Tono</string>
+    <string name="countdown_notification_onfinalcountdown_ringtone_silent">Silencio</string>
+    <string name="countdown_notification_onfinalcountdown_vibrate_title">Vibrar</string>
+    <string name="countdown_notification_onfinalcountdown_vibrate_always">Siempre</string>
+    <string name="countdown_notification_onfinalcountdown_vibrate_only_when_silent">Solamente en silencio</string>
+    <string name="countdown_notification_onfinalcountdown_vibrate_never">Nunca</string>
+    <string name="countdown_notification_onfinalcountdown_vibrate_on_call_title">Vibrar durante una llamada</string>
+    <string name="countdown_notification_onfinalcountdown_vibrate_on_call_summary_on">Permitir la vibración durante una llamada</string>
+    <string name="countdown_notification_onfinalcountdown_vibrate_on_call_summary_off">No vibrar durante una llamada</string>
+    <string name="service_countdown_notification_title">Temporizador cuenta atrás</string>
+    <string name="service_countdown_notification_msg_progress">Hay una cuenta atrás en progreso</string>
+    <string name="service_countdown_notification_msg_end">El temporizador ha llegado al final de la cuenta atrás</string>
+    <string name="service_countdown_notification_summary">Tiempo restante: <xliff:g id="time">%1$s</xliff:g></string>
+    <string name="cling_deskclock_desc">Deslizar a la izquierda para mostrar el Cronómetro y el Temporizador</string>
+    <string name="cling_stopwatch_desc">Configurar vuelta y sectores en el menú de ajustes</string>
+    <string name="cling_countdown_desc">Para editar un tiempo, tocar y mantener pulsado sobre el reloj</string>
+    <string name="overflow_button_cd">Más opciones</string>
 </resources>
