@@ -1,0 +1,55 @@
+{
+  "comments": [
+    {
+      "key": {
+        "uuid": "AAAAXX///ZU\u003d",
+        "filename": "res/values/arrays.xml",
+        "patchSetId": 14
+      },
+      "lineNbr": 20,
+      "author": {
+        "id": 2597
+      },
+      "writtenOn": "2012-09-09T16:40:34Z",
+      "side": 1,
+      "message": "Please mark this as untranslatable",
+      "revId": "19243c4389331a8306efeb3ffaad6bad511fef96",
+      "serverId": "1ec6b3db-b2c1-4fa4-84a2-4c7efe89ba71",
+      "unresolved": false
+    },
+    {
+      "key": {
+        "uuid": "AAAAXX///ZQ\u003d",
+        "filename": "res/values/arrays.xml",
+        "patchSetId": 14
+      },
+      "lineNbr": 26,
+      "author": {
+        "id": 2597
+      },
+      "writtenOn": "2012-09-09T16:40:34Z",
+      "side": 1,
+      "message": "Please mark this as untranslatable",
+      "revId": "19243c4389331a8306efeb3ffaad6bad511fef96",
+      "serverId": "1ec6b3db-b2c1-4fa4-84a2-4c7efe89ba71",
+      "unresolved": false
+    },
+    {
+      "key": {
+        "uuid": "AAAAXX///ZM\u003d",
+        "filename": "res/values/arrays.xml",
+        "patchSetId": 14
+      },
+      "lineNbr": 38,
+      "author": {
+        "id": 2597
+      },
+      "writtenOn": "2012-09-09T16:40:34Z",
+      "side": 1,
+      "message": "Please mark this as untranslatable",
+      "revId": "19243c4389331a8306efeb3ffaad6bad511fef96",
+      "serverId": "1ec6b3db-b2c1-4fa4-84a2-4c7efe89ba71",
+      "unresolved": false
+    }
+  ]
+}
