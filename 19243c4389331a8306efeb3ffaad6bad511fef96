@@ -50,6 +50,295 @@
       "revId": "19243c4389331a8306efeb3ffaad6bad511fef96",
       "serverId": "1ec6b3db-b2c1-4fa4-84a2-4c7efe89ba71",
       "unresolved": false
+    },
+    {
+      "key": {
+        "uuid": "AAAAXX///Uo\u003d",
+        "filename": "res/values/strings.xml",
+        "patchSetId": 14
+      },
+      "lineNbr": 426,
+      "author": {
+        "id": 3962
+      },
+      "writtenOn": "2012-09-10T04:05:53Z",
+      "side": 1,
+      "message": "StopWatch -\u003e Stopwatch\n\nThese should be one word.",
+      "revId": "19243c4389331a8306efeb3ffaad6bad511fef96",
+      "serverId": "1ec6b3db-b2c1-4fa4-84a2-4c7efe89ba71",
+      "unresolved": false
+    },
+    {
+      "key": {
+        "uuid": "AAAAXX///Uk\u003d",
+        "filename": "res/values/strings.xml",
+        "patchSetId": 14
+      },
+      "lineNbr": 446,
+      "author": {
+        "id": 3962
+      },
+      "writtenOn": "2012-09-10T04:05:53Z",
+      "side": 1,
+      "message": "CountDown -\u003e Countdown\n\nThese should be one word.",
+      "revId": "19243c4389331a8306efeb3ffaad6bad511fef96",
+      "serverId": "1ec6b3db-b2c1-4fa4-84a2-4c7efe89ba71",
+      "unresolved": false
+    },
+    {
+      "key": {
+        "uuid": "AAAAXX///Ug\u003d",
+        "filename": "res/values/strings.xml",
+        "patchSetId": 14
+      },
+      "lineNbr": 450,
+      "author": {
+        "id": 3962
+      },
+      "writtenOn": "2012-09-10T04:05:53Z",
+      "side": 1,
+      "message": "CountDown -\u003e Countdown\n\nThese should be one word.",
+      "revId": "19243c4389331a8306efeb3ffaad6bad511fef96",
+      "serverId": "1ec6b3db-b2c1-4fa4-84a2-4c7efe89ba71",
+      "unresolved": false
+    },
+    {
+      "key": {
+        "uuid": "AAAAXX///Uc\u003d",
+        "filename": "res/values/strings.xml",
+        "patchSetId": 14
+      },
+      "lineNbr": 454,
+      "author": {
+        "id": 3962
+      },
+      "writtenOn": "2012-09-10T04:05:53Z",
+      "side": 1,
+      "message": "CountDown -\u003e Countdown\n\nThese should be one word.",
+      "revId": "19243c4389331a8306efeb3ffaad6bad511fef96",
+      "serverId": "1ec6b3db-b2c1-4fa4-84a2-4c7efe89ba71",
+      "unresolved": false
+    },
+    {
+      "key": {
+        "uuid": "AAAAXX///UY\u003d",
+        "filename": "res/values/strings.xml",
+        "patchSetId": 14
+      },
+      "lineNbr": 458,
+      "author": {
+        "id": 3962
+      },
+      "writtenOn": "2012-09-10T04:05:53Z",
+      "side": 1,
+      "message": "CountDown -\u003e Countdown\n\nThese should be one word.",
+      "revId": "19243c4389331a8306efeb3ffaad6bad511fef96",
+      "serverId": "1ec6b3db-b2c1-4fa4-84a2-4c7efe89ba71",
+      "unresolved": false
+    },
+    {
+      "key": {
+        "uuid": "AAAAXX///UU\u003d",
+        "filename": "res/values/strings.xml",
+        "patchSetId": 14
+      },
+      "lineNbr": 462,
+      "author": {
+        "id": 3962
+      },
+      "writtenOn": "2012-09-10T04:05:53Z",
+      "side": 1,
+      "message": "CountDown -\u003e Countdown\n\nThese should be one word.",
+      "revId": "19243c4389331a8306efeb3ffaad6bad511fef96",
+      "serverId": "1ec6b3db-b2c1-4fa4-84a2-4c7efe89ba71",
+      "unresolved": false
+    },
+    {
+      "key": {
+        "uuid": "AAAAXX///UQ\u003d",
+        "filename": "res/values/strings.xml",
+        "patchSetId": 14
+      },
+      "lineNbr": 466,
+      "author": {
+        "id": 3962
+      },
+      "writtenOn": "2012-09-10T04:05:53Z",
+      "side": 1,
+      "message": "CountDown -\u003e Countdown\n\nThese should be one word.",
+      "revId": "19243c4389331a8306efeb3ffaad6bad511fef96",
+      "serverId": "1ec6b3db-b2c1-4fa4-84a2-4c7efe89ba71",
+      "unresolved": false
+    },
+    {
+      "key": {
+        "uuid": "AAAAXX///UM\u003d",
+        "filename": "res/values/strings.xml",
+        "patchSetId": 14
+      },
+      "lineNbr": 476,
+      "author": {
+        "id": 3962
+      },
+      "writtenOn": "2012-09-10T04:05:53Z",
+      "side": 1,
+      "message": "CountDown -\u003e Countdown\n\nThese should be one word.",
+      "revId": "19243c4389331a8306efeb3ffaad6bad511fef96",
+      "serverId": "1ec6b3db-b2c1-4fa4-84a2-4c7efe89ba71",
+      "unresolved": false
+    },
+    {
+      "key": {
+        "uuid": "AAAAXX///UA\u003d",
+        "filename": "res/values/strings.xml",
+        "patchSetId": 14
+      },
+      "lineNbr": 480,
+      "author": {
+        "id": 3962
+      },
+      "writtenOn": "2012-09-10T04:05:53Z",
+      "side": 1,
+      "message": "CountDown -\u003e Countdown\n\nThese should be one word.",
+      "revId": "19243c4389331a8306efeb3ffaad6bad511fef96",
+      "serverId": "1ec6b3db-b2c1-4fa4-84a2-4c7efe89ba71",
+      "unresolved": false
+    },
+    {
+      "key": {
+        "uuid": "AAAAXX///UE\u003d",
+        "filename": "res/values/strings.xml",
+        "patchSetId": 14
+      },
+      "lineNbr": 482,
+      "author": {
+        "id": 3962
+      },
+      "writtenOn": "2012-09-10T04:05:53Z",
+      "side": 1,
+      "message": "CountDown -\u003e Countdown\n\nThese should be one word.",
+      "revId": "19243c4389331a8306efeb3ffaad6bad511fef96",
+      "serverId": "1ec6b3db-b2c1-4fa4-84a2-4c7efe89ba71",
+      "unresolved": false
+    },
+    {
+      "key": {
+        "uuid": "AAAAXX///UI\u003d",
+        "filename": "res/values/strings.xml",
+        "patchSetId": 14
+      },
+      "lineNbr": 491,
+      "author": {
+        "id": 3962
+      },
+      "writtenOn": "2012-09-10T04:05:53Z",
+      "side": 1,
+      "message": "CountDown -\u003e Countdown\n\nThese should be one word.",
+      "revId": "19243c4389331a8306efeb3ffaad6bad511fef96",
+      "serverId": "1ec6b3db-b2c1-4fa4-84a2-4c7efe89ba71",
+      "unresolved": false
+    },
+    {
+      "key": {
+        "uuid": "AAAAXX///T8\u003d",
+        "filename": "res/values/strings.xml",
+        "patchSetId": 14
+      },
+      "lineNbr": 495,
+      "author": {
+        "id": 3962
+      },
+      "writtenOn": "2012-09-10T04:05:53Z",
+      "side": 1,
+      "message": "CountDown -\u003e Countdown\n\nThese should be one word.",
+      "revId": "19243c4389331a8306efeb3ffaad6bad511fef96",
+      "serverId": "1ec6b3db-b2c1-4fa4-84a2-4c7efe89ba71",
+      "unresolved": false
+    },
+    {
+      "key": {
+        "uuid": "AAAAXX///T4\u003d",
+        "filename": "res/values/strings.xml",
+        "patchSetId": 14
+      },
+      "lineNbr": 498,
+      "author": {
+        "id": 3962
+      },
+      "writtenOn": "2012-09-10T04:05:53Z",
+      "side": 1,
+      "message": "CountDown -\u003e Countdown\n\nThese should be one word.",
+      "revId": "19243c4389331a8306efeb3ffaad6bad511fef96",
+      "serverId": "1ec6b3db-b2c1-4fa4-84a2-4c7efe89ba71",
+      "unresolved": false
+    },
+    {
+      "key": {
+        "uuid": "AAAAXX///T0\u003d",
+        "filename": "res/values/strings.xml",
+        "patchSetId": 14
+      },
+      "lineNbr": 507,
+      "author": {
+        "id": 3962
+      },
+      "writtenOn": "2012-09-10T04:05:53Z",
+      "side": 1,
+      "message": "CountDown -\u003e Countdown\n\nThese should be one word.",
+      "revId": "19243c4389331a8306efeb3ffaad6bad511fef96",
+      "serverId": "1ec6b3db-b2c1-4fa4-84a2-4c7efe89ba71",
+      "unresolved": false
+    },
+    {
+      "key": {
+        "uuid": "AAAAXX///Tw\u003d",
+        "filename": "res/values/strings.xml",
+        "patchSetId": 14
+      },
+      "lineNbr": 518,
+      "author": {
+        "id": 3962
+      },
+      "writtenOn": "2012-09-10T04:05:53Z",
+      "side": 1,
+      "message": "CountDown -\u003e Countdown\n\nThese should be one word.",
+      "revId": "19243c4389331a8306efeb3ffaad6bad511fef96",
+      "serverId": "1ec6b3db-b2c1-4fa4-84a2-4c7efe89ba71",
+      "unresolved": false
+    },
+    {
+      "key": {
+        "uuid": "AAAAXX///Ts\u003d",
+        "filename": "res/values/strings.xml",
+        "patchSetId": 14
+      },
+      "lineNbr": 520,
+      "author": {
+        "id": 3962
+      },
+      "writtenOn": "2012-09-10T04:05:53Z",
+      "side": 1,
+      "message": "CountDown -\u003e Countdown\n\nThese should be one word.",
+      "revId": "19243c4389331a8306efeb3ffaad6bad511fef96",
+      "serverId": "1ec6b3db-b2c1-4fa4-84a2-4c7efe89ba71",
+      "unresolved": false
+    },
+    {
+      "key": {
+        "uuid": "AAAAXX///To\u003d",
+        "filename": "res/values/strings.xml",
+        "patchSetId": 14
+      },
+      "lineNbr": 553,
+      "author": {
+        "id": 3962
+      },
+      "writtenOn": "2012-09-10T04:05:53Z",
+      "side": 1,
+      "message": "CountDown -\u003e Countdown\nStopWatch -\u003e Stopwatch\n\nThese should be one word.",
+      "revId": "19243c4389331a8306efeb3ffaad6bad511fef96",
+      "serverId": "1ec6b3db-b2c1-4fa4-84a2-4c7efe89ba71",
+      "unresolved": false
     }
   ]
 }
