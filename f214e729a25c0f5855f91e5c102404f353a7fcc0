@@ -1,0 +1,10 @@
+Change-Id: If214e729a25c0f5855f91e5c102404f353a7fcc0
+Code-Review+2: Steve Kondik <shade@chemlab.org>
+Verified+1: Steve Kondik <shade@chemlab.org>
+Code-Review+1: Alexey Alexeevich <madzerling@gmail.com>
+Code-Review+1: Anatoly Nechaev <mr.prayer@gmail.com>
+Submitted-by: Steve Kondik <shade@chemlab.org>
+Submitted-at: Tue, 11 Sep 2012 07:23:52 +0400
+Reviewed-on: http://review.cyanogenmod.com/23065
+Project: CyanogenMod/android_packages_apps_DeskClock
+Branch: refs/heads/jellybean
