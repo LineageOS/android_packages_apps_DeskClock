@@ -111,6 +111,11 @@ public class CountDownFragment extends AbstractTimerFragment implements View.OnC
          */
         @SuppressWarnings("synthetic-access")
         public void onRequestAddSavedCountDownTimer() {
+            final long time = CountDownFragment.this.mMainClock.getTime();
+            if (time == 0) {
+                // Don't save timer if is ended
+                return;
+            }
             final DialogInterface.OnClickListener clickListener =
                                         new DialogInterface.OnClickListener() {
                 public void onClick(DialogInterface dialog, int which) {
@@ -121,7 +126,6 @@ public class CountDownFragment extends AbstractTimerFragment implements View.OnC
                             ContentResolver cr =
                                   CountDownFragment.this.
                                           getFragmentActivity().getContentResolver();
-                            long time = CountDownFragment.this.mMainClock.getTime();
                             ContentValues values = new ContentValues();
                             values.put(CountDownTimer.Columns.TIMER, Long.valueOf(time));
                             Uri uri = cr.insert(CountDownTimer.Columns.CONTENT_URI, values);
@@ -658,7 +662,12 @@ public class CountDownFragment extends AbstractTimerFragment implements View.OnC
                                     && TimerClockService.ACTION_END_COUNTDOWN.equals(action)
                                     && !this.mIsCountDownReset;
         boolean endCountDownActivity = !this.mIsCountDownReset && this.mClockTime == 0;
-        if (endCountDownAction || endCountDownActivity) {
+        // When called from onResume isTimerRunning always return false, but this it's not
+        // a problem. When service is connected, it does a call to this method also, and
+        // in this case isTimerRunning returns the real status.
+        // This check is necessary because on change orientation endCountDownAction
+        // could be generate unreal blinks, while the countdown is still running
+        if ((endCountDownAction || endCountDownActivity) && !this.isTimerRunning()) {
             // Reach the countdown
             if (!onlyCheck) {
                 this.mClockTime = 0;
@@ -677,6 +686,9 @@ public class CountDownFragment extends AbstractTimerFragment implements View.OnC
             this.mMainClock.unblink();
             this.mMainClock.blink(false, Animation.INFINITE);
             endCountDown = true;
+        } else {
+            // Remove blinking
+            this.mMainClock.unblink();
         }
 
         // Show the color of the clock

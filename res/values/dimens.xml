@@ -39,7 +39,7 @@
     <dimen name="fragment_titlebar_horizontal_padding">8dip</dimen>
     <dimen name="fragment_titlebar_icon_size">32dp</dimen>
     <dimen name="fragment_titlebar_title_left_padding">5dip</dimen>
-    <dimen name="fragment_titlebar_title_text_size">20dp</dimen>
+    <dimen name="fragment_titlebar_title_text_size">18sp</dimen>
 
     <!-- Timer Clock -->
     <dimen name="main_timer_clock_text_size">38sp</dimen>
