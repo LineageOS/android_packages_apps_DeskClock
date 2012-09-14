@@ -1,0 +1,38 @@
+{
+  "comments": [
+    {
+      "key": {
+        "uuid": "AAAAYX///dw\u003d",
+        "filename": "res/values-pt/strings.xml",
+        "patchSetId": 1
+      },
+      "lineNbr": 159,
+      "author": {
+        "id": 4397
+      },
+      "writtenOn": "2012-09-14T16:42:46Z",
+      "side": 1,
+      "message": "Marca o tempo da volta / Guarda o tempo da volta / Tira uma foto do tempo da volta",
+      "revId": "f48205dfaf0fa5a200c03aae3b60601ffd82c0b0",
+      "serverId": "1ec6b3db-b2c1-4fa4-84a2-4c7efe89ba71",
+      "unresolved": false
+    },
+    {
+      "key": {
+        "uuid": "AAAAYX///dk\u003d",
+        "filename": "res/values-pt/strings.xml",
+        "patchSetId": 1
+      },
+      "lineNbr": 161,
+      "author": {
+        "id": 4397
+      },
+      "writtenOn": "2012-09-14T16:42:46Z",
+      "side": 1,
+      "message": "Marca o tempo do setor atual / Guarda o tempo do setor atual / Tira uma foto do tempo do setor atual",
+      "revId": "f48205dfaf0fa5a200c03aae3b60601ffd82c0b0",
+      "serverId": "1ec6b3db-b2c1-4fa4-84a2-4c7efe89ba71",
+      "unresolved": false
+    }
+  ]
+}
