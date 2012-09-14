@@ -158,4 +158,217 @@
 
     <!-- Summary of alarm profile: Change profile to -->
     <string name="alarm_profile_summary_change_to">闹钟响起时, 场景将会被改变为<xliff:g id="profile">%s</xliff:g></string>
+    <!-- =============== CyanogenMod Entries =============== -->
+
+    <!-- TimerClockService is not ready -->
+    <string name="msg_timer_service_is_not_ready">\n计时服务未就绪. 不允许任何操作.\n</string>
+    <!-- Fails to create a new timer -->
+    <string name="msg_timer_creation_fails">\n计时器创建失败. 不允许任何操作.\n</string>
+    <!-- Ui thread fails  -->
+    <string name="msg_timer_ui_thread_fails">\n绘制界面线程失败. 不允许任何操作.\n</string>
+    <!-- Preferences update fails  -->
+    <string name="msg_pref_update_fails">\n设置更新失败. 值未更改.\n</string>
+    <!-- The operation fails -->
+    <string name="msg_operation_fails">\n操作失败.\n</string>
+
+    <!-- Title of the StopWatch fragment -->
+    <string name="stopwatch_title">秒表</string>
+    <!-- StopWatch. Stop timer button text -->
+    <string name="stopwatch_actions_stop">停止</string>
+    <!-- StopWatch. Stop timer button content description -->
+    <string name="stopwatch_actions_stop_cd">停止秒表计时</string>
+    <!-- StopWatch. Start timer button text -->
+    <string name="stopwatch_actions_start">开始</string>
+    <!-- StopWatch. Start timer button content description -->
+    <string name="stopwatch_actions_start_cd">启动秒表计时</string>
+    <!-- StopWatch. Resume timer button text -->
+    <string name="stopwatch_actions_resume">恢复</string>
+    <!-- StopWatch. Resume timer button content description -->
+    <string name="stopwatch_actions_resume_cd">恢复秒表计时</string>
+    <!-- StopWatch. Reset timer button text -->
+    <string name="stopwatch_actions_reset">重置</string>
+    <!-- StopWatch. Reset timer button content description -->
+    <string name="stopwatch_actions_reset_cd">重置秒表计时</string>
+    <!-- StopWatch. Take lap time button text -->
+    <string name="stopwatch_actions_lap">单圈计时</string>
+    <!-- StopWatch. Take lap time button content description -->
+    <string name="stopwatch_actions_lap_cd">生成单圈计时快照</string>
+    <!-- StopWatch. Take lap sector time button text -->
+    <string name="stopwatch_actions_sector">计时</string>
+    <!-- StopWatch. Take lap sector time button content description -->
+    <string name="stopwatch_actions_sector_cd">生成单圈计时中的扇形计时快照</string>
+
+    <!-- StopWatch. Info Panel. Best lap title -->
+    <string name="stopwatch_info_panel_last_lap_title">最后一圈</string>
+    <!-- StopWatch. Info Panel. Best lap title -->
+    <string name="stopwatch_info_panel_best_lap_title">最佳单圈</string>
+    <!-- StopWatch. Info Panel. Laps title -->
+    <string name="stopwatch_info_panel_laps_title">单圈</string>
+    <!-- StopWatch. Info Panel. No data -->
+    <string name="stopwatch_info_panel_empty_data">没有已收集的数据</string>
+
+    <!-- StopWatch. Info Panel. An empty lap label -->
+    <string name="stopwatch_info_panel_empty_lap">单圈</string>
+    <!-- StopWatch. Info Panel. Lap label -->
+    <string name="stopwatch_info_panel_lap_label">单圈 <xliff:g id="lap">%1$s</xliff:g></string>
+    <!-- StopWatch. Info Panel. Sector label -->
+    <string name="stopwatch_info_panel_lap_sector">赛段 <xliff:g id="sector">%1$s</xliff:g></string>
+
+    <!-- StopWatch. Menu. Hide last lap -->
+    <string name="stopwatch_menu_hide_last_lap_panel">隐藏 \'最后单圈\'</string>
+    <!-- StopWatch. Menu. Hide best lap -->
+    <string name="stopwatch_menu_hide_best_lap_panel">隐藏 \'最佳单圈\'</string>
+    <!-- StopWatch. Menu. Hide best lap -->
+    <string name="stopwatch_menu_hide_laps_panel">隐藏 \'单圈计时\'</string>
+    <!-- StopWatch. Menu. Settings -->
+    <string name="stopwatch_menu_settings">设置</string>
+
+    <!-- StopWatch. Preferences. General -->
+    <string name="stopwatch_preferences_lap_sectors">单圈计时/赛段计时</string>
+    <!-- StopWatch. Preferences. Summary of General catergory -->
+    <string name="stopwatch_preferences_lap_sectors_summary">单圈计时和赛段计时的行为设置.</string>
+    <!-- StopWatch. Preferences. Sectors -->
+    <string name="stopwatch_preferences_sectors">赛段计时</string>
+    <!-- StopWatch. Preferences. Summary of sectors -->
+    <string name="stopwatch_preferences_sectors_summary">{0,choice,0#赛段计时未启用.|1#使用1个赛段来配置赛段计时.|1&lt;使用{0}个赛段来配置赛段计时.}</string>
+    <!-- StopWatch. Preferences. Best lap behaviour -->
+    <string name="stopwatch_preferences_best_lap_behaviour">最佳单圈行为</string>
+    <!-- StopWatch. Preferences. About -->
+    <string name="stopwatch_preferences_about">关于</string>
+    <!-- StopWatch. Preferences. Summary of About catergory -->
+    <string name="stopwatch_preferences_about_summary">秒表. CyanogenMod \u00A9 2012</string>
+
+    <!-- StopWatch. Best lap behaviour. Lower times are better -->
+    <string name="stopwatch_best_lap_lower_pref">计时越短越好</string>
+    <!-- StopWatch. Best lap behaviour. Summary of lower times are better  -->
+    <string name="stopwatch_best_lap_lower_pref_summary">最短的计时为最佳单圈成绩.</string>
+    <!-- StopWatch. Best lap behaviour. Highest times are better -->
+    <string name="stopwatch_best_lap_highest_pref">计时越长越好</string>
+    <!-- StopWatch. Best lap behaviour. Summary of highest times are better -->
+    <string name="stopwatch_best_lap_highest_pref_summary">最长的计时为最佳单圈成绩.</string>
+
+    <!-- StopWatch. Sectors Dialog Preference. Enabled check text -->
+    <string name="sectors_dialog_enabled_text">启用赛段计时:</string>
+
+
+    <!-- Title of the CountDown fragment -->
+    <string name="countdown_title">倒数计时器</string>
+    <!-- CountDown. Stop timer button text -->
+    <string name="countdown_actions_stop">停止</string>
+    <!-- CountDown. Stop timer button content description -->
+    <string name="countdown_actions_stop_cd">停止倒计时</string>
+    <!-- CountDown. Start timer button text -->
+    <string name="countdown_actions_start">开始</string>
+    <!-- CountDown. Start timer button content description -->
+    <string name="countdown_actions_start_cd">开始倒计时</string>
+    <!-- CountDown. Resume timer button text -->
+    <string name="countdown_actions_resume">恢复</string>
+    <!-- CountDown. Resume timer button content description -->
+    <string name="countdown_actions_resume_cd">恢复倒计时</string>
+    <!-- CountDown. Reset timer button text -->
+    <string name="countdown_actions_reset">重置</string>
+    <!-- CountDown. Reset timer button content description -->
+    <string name="countdown_actions_reset_cd">重置倒计时</string>
+    <!-- CountDown. Cancel edition timer button text -->
+    <string name="countdown_actions_cancel">取消</string>
+    <!-- CountDown. Cancel edition button content description -->
+    <string name="countdown_actions_cancel_cd">取消当前倒数计时器的编辑模式</string>
+    <!-- CountDown. Set edition timer button text -->
+    <string name="countdown_actions_set">设置</string>
+    <!-- CountDown. Set edition button content description -->
+    <string name="countdown_actions_set_cd">设置倒计时中的时间</string>
+
+    <!-- CountDown. Menu. Edit timer -->
+    <string name="countdown_menu_open_timer_editor">打开计时编辑</string>
+    <!-- CountDown. Menu. Cancel timer -->
+    <string name="countdown_menu_close_timer_editor">关闭计时编辑</string>
+    <!-- CountDown. Menu. Settings -->
+    <string name="countdown_menu_settings">设置</string>
+
+    <!-- CountDown. Saved CountDown Timers Panel. Title -->
+    <string name="countdown_panel_title">已保存的倒数计时器</string>
+    <!-- CountDown. Saved CountDown Timers Panel. Add timer -->
+    <string name="countdown_panel_add_text">添加计时器</string>
+    <!-- CountDown. Saved CountDown Timers Panel. Add timer. Content description -->
+    <string name="countdown_panel_add_text_cd">添加到计时器列表中.</string>
+    <!-- CountDown. Saved CountDown Timers Panel. Remove timer. Content description -->
+    <string name="countdown_panel_remove_cd">从计时器列表中删除.</string>
+    <!-- CountDown. Saved CountDown Timers. Add confirmation dialog. -->
+    <string name="countdown_dialog_add">是否创建新的计时器?\n</string>
+    <!-- CountDown. Saved CountDown Timers. Delete confirmation dialog. -->
+    <string name="countdown_dialog_delete">是否删除计时器 \'<xliff:g id="timer">%1$s</xliff:g>\'?\n</string>
+
+    <!-- CountDown. Preferences. Notifications -->
+    <string name="countdown_preferences_notifications">通知</string>
+    <!-- CountDown. Preferences. Summary of Notifications category -->
+    <string name="countdown_preferences_notifications_summary">设置倒计时的通知行为.</string>
+    <!-- CountDown. Preferences. About -->
+    <string name="countdown_preferences_about">关于</string>
+    <!-- CountDown. Preferences. Summary of About catergory -->
+    <string name="countdown_preferences_about_summary">倒数计时器. CyanogenMod \u00A9 2012</string>
+
+    <!-- CountDown. Preferences. On CountDown in progress category title -->
+    <string name="countdown_notification_oncountdown_category">倒计时中</string>
+    <!-- CountDown. Preferences. On CountDown in progress. Notifications title -->
+    <string name="countdown_notification_oncountdown_notifications_title">通知</string>
+    <!-- CountDown. Preferences. On CountDown in progress. Notifications summary Off -->
+    <string name="countdown_notification_oncountdown_notifications_summary_on">在状态栏中显示通知.</string>
+    <!-- CountDown. Preferences. On CountDown in progress. Notifications summary On -->
+    <string name="countdown_notification_oncountdown_notifications_summary_off">不要在状态栏中显示通知.</string>
+
+    <!-- CountDown. Preferences. On final CountDown category title -->
+    <string name="countdown_notification_onfinalcountdown_category">最后的倒计时中</string>
+    <!-- CountDown. Preferences. On CountDown in progress. Notifications title -->
+    <string name="countdown_notification_onfinalcountdown_notifications_title">通知</string>
+    <!-- CountDown. Preferences. On CountDown in progress. Notifications summary Off -->
+    <string name="countdown_notification_onfinalcountdown_notifications_summary_on">在状态栏中显示通知.</string>
+    <!-- CountDown. Preferences. On CountDown in progress. Notifications summary On -->
+    <string name="countdown_notification_onfinalcountdown_notifications_summary_off">不要在状态栏中显示通知.</string>
+
+    <!-- CountDown. Preferences. On CountDown in progress. Show clock screen title -->
+    <string name="countdown_notification_onfinalcountdown_open_clock_screen_title">打开时钟界面</string>
+    <!-- CountDown. Preferences. On CountDown in progress. Show clock screen summary On -->
+    <string name="countdown_notification_onfinalcountdown_open_clock_screen_summary_on">当倒计时结束打开时钟界面 (通话中将忽略本设置).</string>
+    <!-- CountDown. Preferences. On CountDown in progress. Show clock screen summary On -->
+    <string name="countdown_notification_onfinalcountdown_open_clock_screen_summary_off">倒计时结束维持当前界面.</string>
+
+    <!-- CountDown. Preferences. On CountDown in progress. Ringtone -->
+    <string name="countdown_notification_onfinalcountdown_ringtone_title">铃声</string>
+    <!-- CountDown. Preferences. On CountDown in progress. Ringtone. Silent option -->
+    <string name="countdown_notification_onfinalcountdown_ringtone_silent">静音</string>
+
+    <!-- CountDown. Preferences. On CountDown in progress. Vibrate title -->
+    <string name="countdown_notification_onfinalcountdown_vibrate_title">震动</string>
+    <!-- CountDown. Preferences. On CountDown in progress. Vibrate always option -->
+    <string name="countdown_notification_onfinalcountdown_vibrate_always">始终</string>
+    <!-- CountDown. Preferences. On CountDown in progress. Vibrate only when silent option -->
+    <string name="countdown_notification_onfinalcountdown_vibrate_only_when_silent">仅限静音模式</string>
+    <!-- CountDown. Preferences. On CountDown in progress. Vibrate never option -->
+    <string name="countdown_notification_onfinalcountdown_vibrate_never">从不</string>
+
+    <!-- CountDown. Preferences. On CountDown in progress. Vibrate on call title -->
+    <string name="countdown_notification_onfinalcountdown_vibrate_on_call_title">通话时震动</string>
+    <!-- CountDown. Preferences. On CountDown in progress. Vibrate on call summary On -->
+    <string name="countdown_notification_onfinalcountdown_vibrate_on_call_summary_on">在通话时允许振动.</string>
+    <!-- CountDown. Preferences. On CountDown in progress. Vibrate on call summary On -->
+    <string name="countdown_notification_onfinalcountdown_vibrate_on_call_summary_off">在通话时不允许振动.</string>
+
+    <!-- Timer Clock Service. CountDown notification title for countdown timer -->
+    <string name="service_countdown_notification_title">倒数计时器</string>
+    <!-- Timer Clock Service. CountDown notification text for countdown in progress -->
+    <string name="service_countdown_notification_msg_progress">有一个正在进行中的倒数计时器.</string>
+    <!-- Timer Clock Service. CountDown notification text for ended countdown -->
+    <string name="service_countdown_notification_msg_end">定时器已经达到了它最后的倒计时.</string>
+    <!-- Timer Clock Service. CountDown notification summary  -->
+    <string name="service_countdown_notification_summary">剩余时间: <xliff:g id="time">%1$s</xliff:g></string>
+
+    <!-- The text showed to advise that other fragment exists in deskclock fragment -->
+    <string name="cling_deskclock_desc">用手指在屏幕上向左侧滑动即可切换显示秒表和倒数计时器.</string>
+    <!-- The text showed to advise the use of lap/sectors -->
+    <string name="cling_stopwatch_desc">在设置菜单上显示单圈计时和赛段计时的行为配置.</string>
+    <!-- The text showed to advise how to edit the countdown clock, with a long press holding -->
+    <string name="cling_countdown_desc">长按计时时钟编辑倒数计时器.</string>
+
+    <!-- The overflow actionbar button -->
+    <string name="overflow_button_cd">更多选项</string>
 </resources>
