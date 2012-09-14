@@ -428,6 +428,9 @@ public class StopWatchFragment extends AbstractTimerFragment implements View.OnC
             this.mPartialButton.setContentDescription(
                     getString(R.string.stopwatch_actions_lap_cd));
         }
+
+        // Set the diff timer color
+        this.mDiffClock.setInvertedColors(this.mBestLapBehaviour == 0);
     }
 
     /**
