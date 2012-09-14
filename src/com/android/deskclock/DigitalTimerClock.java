@@ -101,6 +101,7 @@ public abstract class DigitalTimerClock extends RelativeLayout {
     private long mDefaultValue;
     private int mPositiveColor;
     private int mNegativeColor;
+    private boolean mInvertedColors;
 
     private OnEditListener mOnEditListener;
     private OnResizeListener mOnResizeListener;
@@ -170,6 +171,7 @@ public abstract class DigitalTimerClock extends RelativeLayout {
                 tarray.getColor(
                         R.styleable.DigitalTimerClock_negative_color,
                         android.R.color.holo_red_dark);
+        this.mInvertedColors = false;
 
         // Initialize internal properties
         this.mIsEditMode = false;
@@ -375,6 +377,24 @@ public abstract class DigitalTimerClock extends RelativeLayout {
      */
     public void setOnResizeListener(OnResizeListener onResizeListener) {
         this.mOnResizeListener = onResizeListener;
+    }
+
+    /**
+     * Method that returns of the timer colors are inverted
+     *
+     * @return boolean If the timer colors are inverted
+     */
+    public boolean isInvertedColors() {
+        return this.mInvertedColors;
+    }
+
+    /**
+     * Method that sets of the timer colors are inverted
+     *
+     * @param invertedColors If the timer colors are inverted
+     */
+    public void setInvertedColors(boolean invertedColors) {
+        this.mInvertedColors = invertedColors;
     }
 
     /**
@@ -636,6 +656,9 @@ public abstract class DigitalTimerClock extends RelativeLayout {
         this.mTimerClock[6].setText(String.format("%03d", time[3]));  // Milliseconds //$NON-NLS-1$
         if (this.mShowSign) {
             int color = elapsed >= 0 ? this.mPositiveColor : this.mNegativeColor;
+            if (this.mInvertedColors) {
+                color = elapsed <= 0 ? this.mPositiveColor : this.mNegativeColor;
+            }
             for (int i = 0; i < this.mTimerClock.length; i++) {
                 this.mTimerClock[i].setTextColor(color);
             }

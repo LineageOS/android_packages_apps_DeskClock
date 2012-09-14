@@ -111,6 +111,11 @@ public class CountDownFragment extends AbstractTimerFragment implements View.OnC
          */
         @SuppressWarnings("synthetic-access")
         public void onRequestAddSavedCountDownTimer() {
+            final long time = CountDownFragment.this.mMainClock.getTime();
+            if (time == 0) {
+                // Don't save timer if is ended
+                return;
+            }
             final DialogInterface.OnClickListener clickListener =
                                         new DialogInterface.OnClickListener() {
                 public void onClick(DialogInterface dialog, int which) {
@@ -121,7 +126,6 @@ public class CountDownFragment extends AbstractTimerFragment implements View.OnC
                             ContentResolver cr =
                                   CountDownFragment.this.
                                           getFragmentActivity().getContentResolver();
-                            long time = CountDownFragment.this.mMainClock.getTime();
                             ContentValues values = new ContentValues();
                             values.put(CountDownTimer.Columns.TIMER, Long.valueOf(time));
                             Uri uri = cr.insert(CountDownTimer.Columns.CONTENT_URI, values);

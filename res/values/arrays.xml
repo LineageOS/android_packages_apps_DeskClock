@@ -17,13 +17,13 @@
 <resources xmlns:xliff="urn:oasis:names:tc:xliff:document:1.2">
 
   <!-- StopWatch. Best lap behaviour labels -->
-  <string-array name="stopwatch_best_lap_behaviour_labels">
+  <string-array name="stopwatch_best_lap_behaviour_labels" translable="false">
     <item>@string/stopwatch_best_lap_lower_pref</item>
     <item>@string/stopwatch_best_lap_highest_pref</item>
   </string-array>
 
   <!-- StopWatch. Best lap behaviour summary -->
-  <string-array name="stopwatch_best_lap_behaviour_summary">
+  <string-array name="stopwatch_best_lap_behaviour_summary" translable="false">
     <item>@string/stopwatch_best_lap_lower_pref_summary</item>
     <item>@string/stopwatch_best_lap_highest_pref_summary</item>
   </string-array>
@@ -35,7 +35,7 @@
   </string-array>
 
   <!-- CountDown. Vibrate labels -->
-  <string-array name="countdown_vibrate_labels">
+  <string-array name="countdown_vibrate_labels" translable="false">
     <item>@string/countdown_notification_onfinalcountdown_vibrate_always</item>
     <item>@string/countdown_notification_onfinalcountdown_vibrate_only_when_silent</item>
     <item>@string/countdown_notification_onfinalcountdown_vibrate_never</item>
