@@ -24,7 +24,6 @@ import android.content.Intent;
 import android.content.ServiceConnection;
 import android.content.SharedPreferences;
 import android.content.SharedPreferences.Editor;
-import android.content.res.Configuration;
 import android.graphics.Rect;
 import android.os.Bundle;
 import android.os.Handler;
@@ -61,9 +60,6 @@ public abstract class AbstractTimerFragment extends Fragment implements
 
     private static final long DIM_ON_USER_INACTIVITY_TIME = 60000L;
 
-    private static final long REFRESH_RATE_PORTRAIT = 50L;
-    private static final long REFRESH_RATE_LANDSCAPE = 100L;
-
     // Opacity of black layer between clock display.
     private final float DIM_BEHIND_AMOUNT_NORMAL = 0.4f;
     private final float DIM_BEHIND_AMOUNT_DIMMED = 0.8f; // higher contrast when display dimmed
@@ -79,8 +75,6 @@ public abstract class AbstractTimerFragment extends Fragment implements
     private Activity mActivity;
     private Handler mHandler;
     private Timer mDimTimer = null;
-
-    private long mRefreshRate;
 
     private boolean mDimmed;
 
@@ -178,9 +172,7 @@ public abstract class AbstractTimerFragment extends Fragment implements
                     if (!continueRedrawing()) {
                         this.mCancel = true;
                     } else {
-                        AbstractTimerFragment.this.mHandler.postDelayed(
-                                                    this,
-                                                    AbstractTimerFragment.this.mRefreshRate);
+                        AbstractTimerFragment.this.mHandler.post(this);
                     }
                     onUiChanged();
                 } else {
@@ -544,13 +536,6 @@ public abstract class AbstractTimerFragment extends Fragment implements
     public void onResume() {
         if (DEBUG) Log.v(getLogTag(), "onResume"); //$NON-NLS-1$
         super.onResume();
-
-        // Calculate refresh rate based on orientation (portrait performs better)
-        int orientation = getResources().getConfiguration().orientation;
-        this.mRefreshRate =
-                ( orientation == Configuration.ORIENTATION_LANDSCAPE )
-                ? REFRESH_RATE_LANDSCAPE
-                : REFRESH_RATE_PORTRAIT;
 
         // Restore dimm
         try {

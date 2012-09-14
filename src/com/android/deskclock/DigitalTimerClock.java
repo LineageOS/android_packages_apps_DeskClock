@@ -101,6 +101,8 @@ public abstract class DigitalTimerClock extends RelativeLayout {
     private long mDefaultValue;
     private int mPositiveColor;
     private int mNegativeColor;
+    private boolean mInvertedColors;
+    private boolean mInvertColorsOnNextDraw;
 
     private OnEditListener mOnEditListener;
     private OnResizeListener mOnResizeListener;
@@ -170,6 +172,8 @@ public abstract class DigitalTimerClock extends RelativeLayout {
                 tarray.getColor(
                         R.styleable.DigitalTimerClock_negative_color,
                         android.R.color.holo_red_dark);
+        this.mInvertedColors = false;
+        this.mInvertColorsOnNextDraw = true;
 
         // Initialize internal properties
         this.mIsEditMode = false;
@@ -375,6 +379,25 @@ public abstract class DigitalTimerClock extends RelativeLayout {
      */
     public void setOnResizeListener(OnResizeListener onResizeListener) {
         this.mOnResizeListener = onResizeListener;
+    }
+
+    /**
+     * Method that returns of the timer colors are inverted
+     *
+     * @return boolean If the timer colors are inverted
+     */
+    public boolean isInvertedColors() {
+        return this.mInvertedColors;
+    }
+
+    /**
+     * Method that sets of the timer colors are inverted
+     *
+     * @param invertedColors If the timer colors are inverted
+     */
+    public void setInvertedColors(boolean invertedColors) {
+        this.mInvertedColors = invertedColors;
+        this.mInvertColorsOnNextDraw = true;
     }
 
     /**
@@ -605,6 +628,7 @@ public abstract class DigitalTimerClock extends RelativeLayout {
      * Method that update the time of the digital timer with the elapsed time.
      *
      * @param elapsed The time in milliseconds that elapsed since the timer was started
+     * @param force
      */
     @SuppressWarnings("boxing")
     public synchronized void updateTime(long elapsed) {
@@ -614,6 +638,7 @@ public abstract class DigitalTimerClock extends RelativeLayout {
         }
 
         // Locked ?
+        boolean force = this.mForceRedraw;
         long now = System.currentTimeMillis();
         if ( !this.mForceRedraw &&
              this.mLockedTime != 0 && (now - this.mLastLock) < this.mLockedTime ) {
@@ -625,22 +650,40 @@ public abstract class DigitalTimerClock extends RelativeLayout {
         this.mForceRedraw = false;
 
         // Convert to the appropriate amount of time
+        boolean adjustSize = false;
+        long[] oldTime = TimerHelper.obtainTime(this.mElapsed);
         long[] time = TimerHelper.obtainTime(elapsed);
         String hours = String.valueOf(time[0]);
         if (this.mShowSign) {
             hours = (elapsed >= 0 ? "+" : "-") + hours;  //$NON-NLS-1$//$NON-NLS-2$
         }
-        this.mTimerClock[0].setText(hours);                           // Hours
-        this.mTimerClock[2].setText(String.format("%02d", time[1]));  // Minutes  //$NON-NLS-1$
-        this.mTimerClock[4].setText(String.format("%02d", time[2]));  // Seconds  //$NON-NLS-1$
+        if (force || oldTime[0] != time[0] ||
+                this.mTimerClock[0].getText().equals("")) { //$NON-NLS-1$
+            this.mTimerClock[0].setText(hours);                           // Hours
+            adjustSize = true;
+        }
+        if (force || oldTime[1] != time[1] ||
+                this.mTimerClock[2].getText().equals("")) { //$NON-NLS-1$
+            this.mTimerClock[2].setText(String.format("%02d", time[1]));  // Minutes  //$NON-NLS-1$
+        }
+        if (force || oldTime[2] != time[2] ||
+                this.mTimerClock[4].getText().equals("")) { //$NON-NLS-1$
+            this.mTimerClock[4].setText(String.format("%02d", time[2]));  // Seconds  //$NON-NLS-1$
+        }
         this.mTimerClock[6].setText(String.format("%03d", time[3]));  // Milliseconds //$NON-NLS-1$
-        if (this.mShowSign) {
+        if (this.mShowSign && (this.mInvertColorsOnNextDraw || force)) {
             int color = elapsed >= 0 ? this.mPositiveColor : this.mNegativeColor;
+            if (this.mInvertedColors) {
+                color = elapsed <= 0 ? this.mPositiveColor : this.mNegativeColor;
+            }
             for (int i = 0; i < this.mTimerClock.length; i++) {
                 this.mTimerClock[i].setTextColor(color);
             }
+            this.mInvertColorsOnNextDraw = false;
         }
-        adjustTextSize(getMeasuredWidth(), false);
+        if (adjustSize || force) {
+            adjustTextSize(getMeasuredWidth(), false);
+        }
 
         // Save the time
         this.mElapsed = elapsed;
