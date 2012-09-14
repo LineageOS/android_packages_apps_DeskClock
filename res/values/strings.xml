@@ -550,7 +550,7 @@
     <string name="service_countdown_notification_summary">Remaining time: <xliff:g id="time">%1$s</xliff:g></string>
 
     <!-- The text showed to advise that other fragment exists in deskclock fragment -->
-    <string name="cling_deskclock_desc">Swipe to right to show stopwatch and countdown timers.</string>
+    <string name="cling_deskclock_desc">Swipe to left to show stopwatch and countdown timers.</string>
     <!-- The text showed to advise the use of lap/sectors -->
     <string name="cling_stopwatch_desc">Configure lap and sectors behaviour at the settings menu.</string>
     <!-- The text showed to advise how to edit the countdown clock, with a long press holding -->

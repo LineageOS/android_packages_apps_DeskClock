@@ -91,7 +91,7 @@
           <Button
             android:id="@+id/bt_timer_reset"
             android:layout_width="match_parent"
-            android:layout_height="wrap_content"
+            android:layout_height="match_parent"
             android:layout_weight="1"
             android:textSize="@dimen/main_button_text_size"
             android:text="@string/stopwatch_actions_reset"
@@ -100,7 +100,7 @@
           <Button
             android:id="@+id/bt_timer_main"
             android:layout_width="match_parent"
-            android:layout_height="wrap_content"
+            android:layout_height="match_parent"
             android:layout_weight="1"
             android:textSize="@dimen/main_button_text_size"
             android:text="@string/stopwatch_actions_start"
@@ -109,7 +109,7 @@
           <Button
             android:id="@+id/bt_timer_partial"
             android:layout_width="match_parent"
-            android:layout_height="wrap_content"
+            android:layout_height="match_parent"
             android:layout_weight="1"
             android:textSize="@dimen/main_button_text_size"
             android:text="@string/stopwatch_actions_lap"
