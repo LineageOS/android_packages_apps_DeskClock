@@ -17,32 +17,32 @@
 <resources xmlns:xliff="urn:oasis:names:tc:xliff:document:1.2">
 
   <!-- StopWatch. Best lap behaviour labels -->
-  <string-array name="stopwatch_best_lap_behaviour_labels">
+  <string-array name="stopwatch_best_lap_behaviour_labels" translatable="false">
     <item>@string/stopwatch_best_lap_lower_pref</item>
     <item>@string/stopwatch_best_lap_highest_pref</item>
   </string-array>
 
   <!-- StopWatch. Best lap behaviour summary -->
-  <string-array name="stopwatch_best_lap_behaviour_summary">
+  <string-array name="stopwatch_best_lap_behaviour_summary" translatable="false">
     <item>@string/stopwatch_best_lap_lower_pref_summary</item>
     <item>@string/stopwatch_best_lap_highest_pref_summary</item>
   </string-array>
 
   <!-- StopWatch. Best lap behaviour values -->
-  <string-array name="stopwatch_best_lap_behaviour_values" translable="false">
+  <string-array name="stopwatch_best_lap_behaviour_values" translatable="false">
     <item>0</item>
     <item>1</item>
   </string-array>
 
   <!-- CountDown. Vibrate labels -->
-  <string-array name="countdown_vibrate_labels">
+  <string-array name="countdown_vibrate_labels" translatable="false">
     <item>@string/countdown_notification_onfinalcountdown_vibrate_always</item>
     <item>@string/countdown_notification_onfinalcountdown_vibrate_only_when_silent</item>
     <item>@string/countdown_notification_onfinalcountdown_vibrate_never</item>
   </string-array>
 
   <!-- CountDown. Vibrate values -->
-  <string-array name="countdown_vibrate_values" translable="false">
+  <string-array name="countdown_vibrate_values" translatable="false">
     <item>0</item>
     <item>1</item>
     <item>2</item>

@@ -213,7 +213,13 @@ public class SavedCountDownTimers extends LinearLayout
 
                 // Retrieve the timer
                 long timer = ((Long)v.getTag()).longValue();
-                this.mOnSavedCountDownTimerEvent.onSavedCountDownTimerClick(timer);
+                if (timer == -1) {
+                    // Add
+                    this.mOnSavedCountDownTimerEvent.onRequestAddSavedCountDownTimer();
+                } else {
+                    // Set
+                    this.mOnSavedCountDownTimerEvent.onSavedCountDownTimerClick(timer);
+                }
             }
         }
     }
@@ -365,7 +371,7 @@ public class SavedCountDownTimers extends LinearLayout
             viewHolder.mIcon.setContentDescription(dataHolder.mContentDescription);
             viewHolder.mIcon.setTag(Long.valueOf(dataHolder.mId));
             viewHolder.mText.setText(dataHolder.mText);
-            viewHolder.mText.setTag(Long.valueOf(dataHolder.mTimer));
+            viewHolder.mText.setTag(Long.valueOf(dataHolder.mId == -1 ? -1 : dataHolder.mTimer));
             viewHolder.mText.setTextColor(
                     res.getColor(
                             dataHolder.mId == -1

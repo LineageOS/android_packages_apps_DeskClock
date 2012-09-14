@@ -194,6 +194,7 @@ public class DeskClockFragment extends Fragment implements
 
     private void setWakeLock(boolean hold) {
         if (!this.mHasFocus) return;
+        if (getFragmentActivity() == null) return;
         if (DEBUG) Log.d(LOG_TAG, (hold ? "hold" : " releas") + "ing wake lock");
         Window win = getFragmentActivity().getWindow();
         if (win != null) {
