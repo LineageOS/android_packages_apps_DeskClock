@@ -1,0 +1,123 @@
+{
+  "comments": [
+    {
+      "key": {
+        "uuid": "AAAAYX///ls\u003d",
+        "filename": "res/values-hu/strings.xml",
+        "patchSetId": 1
+      },
+      "lineNbr": 188,
+      "author": {
+        "id": 1573
+      },
+      "writtenOn": "2012-09-14T09:40:19Z",
+      "side": 1,
+      "message": "Idömérés befejezésem vagy Befejezi az idömérést",
+      "revId": "fb74369e6a9afcae5cb0379172e2087e187fc5e8",
+      "serverId": "1ec6b3db-b2c1-4fa4-84a2-4c7efe89ba71",
+      "unresolved": false
+    },
+    {
+      "key": {
+        "uuid": "AAAAYX///lo\u003d",
+        "filename": "res/values-hu/strings.xml",
+        "patchSetId": 1
+      },
+      "lineNbr": 190,
+      "author": {
+        "id": 1573
+      },
+      "writtenOn": "2012-09-14T09:40:19Z",
+      "side": 1,
+      "message": "Start, csak magyarosan :)",
+      "revId": "fb74369e6a9afcae5cb0379172e2087e187fc5e8",
+      "serverId": "1ec6b3db-b2c1-4fa4-84a2-4c7efe89ba71",
+      "unresolved": false
+    },
+    {
+      "key": {
+        "uuid": "AAAAYX///lk\u003d",
+        "filename": "res/values-hu/strings.xml",
+        "patchSetId": 1
+      },
+      "lineNbr": 192,
+      "author": {
+        "id": 1573
+      },
+      "writtenOn": "2012-09-14T09:40:19Z",
+      "side": 1,
+      "message": "Idömérés elinditása, vagy Elinditja az idömérést.",
+      "revId": "fb74369e6a9afcae5cb0379172e2087e187fc5e8",
+      "serverId": "1ec6b3db-b2c1-4fa4-84a2-4c7efe89ba71",
+      "unresolved": false
+    },
+    {
+      "key": {
+        "uuid": "AAAAYX///lg\u003d",
+        "filename": "res/values-hu/strings.xml",
+        "patchSetId": 1
+      },
+      "lineNbr": 196,
+      "author": {
+        "id": 1573
+      },
+      "writtenOn": "2012-09-14T09:40:19Z",
+      "side": 1,
+      "message": "Idömérés folytatása, Folytatja az idömérést",
+      "revId": "fb74369e6a9afcae5cb0379172e2087e187fc5e8",
+      "serverId": "1ec6b3db-b2c1-4fa4-84a2-4c7efe89ba71",
+      "unresolved": false
+    },
+    {
+      "key": {
+        "uuid": "AAAAYX///lY\u003d",
+        "filename": "res/values-hu/strings.xml",
+        "patchSetId": 1
+      },
+      "lineNbr": 200,
+      "author": {
+        "id": 1573
+      },
+      "writtenOn": "2012-09-14T09:40:19Z",
+      "side": 1,
+      "message": "Mért idö törlése, Törli a mért idöt, Visszaállitja a stoppert, ilyenek.",
+      "revId": "fb74369e6a9afcae5cb0379172e2087e187fc5e8",
+      "serverId": "1ec6b3db-b2c1-4fa4-84a2-4c7efe89ba71",
+      "unresolved": false
+    },
+    {
+      "key": {
+        "uuid": "AAAAYX///lU\u003d",
+        "filename": "res/values-hu/strings.xml",
+        "patchSetId": 1
+      },
+      "lineNbr": 242,
+      "author": {
+        "id": 1573
+      },
+      "writtenOn": "2012-09-14T09:40:19Z",
+      "side": 1,
+      "message": "omg, ezt nem bogozom ki, de elhiszem, hogy jó (szintaktikailag)\nDe esetleg egyszer?en Szektoridök nincsenek engedélyezve",
+      "revId": "fb74369e6a9afcae5cb0379172e2087e187fc5e8",
+      "serverId": "1ec6b3db-b2c1-4fa4-84a2-4c7efe89ba71",
+      "unresolved": false
+    },
+    {
+      "key": {
+        "uuid": "AAAAYX///lM\u003d",
+        "filename": "res/values-hu/strings.xml",
+        "patchSetId": 1
+      },
+      "lineNbr": 244,
+      "author": {
+        "id": 1573
+      },
+      "writtenOn": "2012-09-14T09:40:19Z",
+      "side": 1,
+      "message": "Ez nem fekszik, de perpill nincs javaslatom.",
+      "revId": "fb74369e6a9afcae5cb0379172e2087e187fc5e8",
+      "serverId": "1ec6b3db-b2c1-4fa4-84a2-4c7efe89ba71",
+      "unresolved": false
+    }
+  ]
+}
