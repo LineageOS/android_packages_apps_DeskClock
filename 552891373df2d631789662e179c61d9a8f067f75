@@ -2,6 +2,57 @@
   "comments": [
     {
       "key": {
+        "uuid": "AAAAYX///ds\u003d",
+        "filename": "res/values-es/strings.xml",
+        "patchSetId": 1
+      },
+      "lineNbr": 146,
+      "author": {
+        "id": 3134
+      },
+      "writtenOn": "2012-09-14T16:23:32Z",
+      "side": 1,
+      "message": "El servidor de tiempo no está disponible",
+      "revId": "552891373df2d631789662e179c61d9a8f067f75",
+      "serverId": "1ec6b3db-b2c1-4fa4-84a2-4c7efe89ba71",
+      "unresolved": false
+    },
+    {
+      "key": {
+        "uuid": "AAAAYX///d8\u003d",
+        "filename": "res/values-es/strings.xml",
+        "patchSetId": 1
+      },
+      "lineNbr": 148,
+      "author": {
+        "id": 3134
+      },
+      "writtenOn": "2012-09-14T16:23:32Z",
+      "side": 1,
+      "message": "intefaz -\u003e interfaz\n\nAlso, better \u0027Fallo al actualizar la interfaz\u0027",
+      "revId": "552891373df2d631789662e179c61d9a8f067f75",
+      "serverId": "1ec6b3db-b2c1-4fa4-84a2-4c7efe89ba71",
+      "unresolved": false
+    },
+    {
+      "key": {
+        "uuid": "AAAAYX///d4\u003d",
+        "filename": "res/values-es/strings.xml",
+        "patchSetId": 1
+      },
+      "lineNbr": 167,
+      "author": {
+        "id": 3134
+      },
+      "writtenOn": "2012-09-14T16:23:32Z",
+      "side": 1,
+      "message": "Better, \u0027Sin información\u0027. Up to you",
+      "revId": "552891373df2d631789662e179c61d9a8f067f75",
+      "serverId": "1ec6b3db-b2c1-4fa4-84a2-4c7efe89ba71",
+      "unresolved": false
+    },
+    {
+      "key": {
         "uuid": "AAAAYX///eU\u003d",
         "filename": "res/values-es/strings.xml",
         "patchSetId": 1
@@ -30,6 +81,23 @@
       "writtenOn": "2012-09-14T15:59:44Z",
       "side": 1,
       "message": "...CyanogenMod...",
+      "revId": "552891373df2d631789662e179c61d9a8f067f75",
+      "serverId": "1ec6b3db-b2c1-4fa4-84a2-4c7efe89ba71",
+      "unresolved": false
+    },
+    {
+      "key": {
+        "uuid": "AAAAYX///d0\u003d",
+        "filename": "res/values-es/strings.xml",
+        "patchSetId": 1
+      },
+      "lineNbr": 240,
+      "author": {
+        "id": 3134
+      },
+      "writtenOn": "2012-09-14T16:23:32Z",
+      "side": 1,
+      "message": "..y mantener pulsado sobre..",
       "revId": "552891373df2d631789662e179c61d9a8f067f75",
       "serverId": "1ec6b3db-b2c1-4fa4-84a2-4c7efe89ba71",
       "unresolved": false
