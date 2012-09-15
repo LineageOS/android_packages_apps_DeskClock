@@ -19,6 +19,24 @@
     },
     {
       "key": {
+        "uuid": "AAAAYX///PU\u003d",
+        "filename": "res/values-hu/strings.xml",
+        "patchSetId": 1
+      },
+      "lineNbr": 188,
+      "author": {
+        "id": 3214
+      },
+      "writtenOn": "2012-09-15T16:37:35Z",
+      "side": 1,
+      "message": "Ez a funkció csak akkor érvényesül, ha nyomvatartod az aktuális gombot.\nA képernyö alsó harmadában jelenik meg pár másodpercre.",
+      "parentUuid": "AAAAYX///ls\u003d",
+      "revId": "fb74369e6a9afcae5cb0379172e2087e187fc5e8",
+      "serverId": "1ec6b3db-b2c1-4fa4-84a2-4c7efe89ba71",
+      "unresolved": false
+    },
+    {
+      "key": {
         "uuid": "AAAAYX///lo\u003d",
         "filename": "res/values-hu/strings.xml",
         "patchSetId": 1
@@ -30,6 +48,24 @@
       "writtenOn": "2012-09-14T09:40:19Z",
       "side": 1,
       "message": "Start, csak magyarosan :)",
+      "revId": "fb74369e6a9afcae5cb0379172e2087e187fc5e8",
+      "serverId": "1ec6b3db-b2c1-4fa4-84a2-4c7efe89ba71",
+      "unresolved": false
+    },
+    {
+      "key": {
+        "uuid": "AAAAYX///PA\u003d",
+        "filename": "res/values-hu/strings.xml",
+        "patchSetId": 1
+      },
+      "lineNbr": 190,
+      "author": {
+        "id": 3214
+      },
+      "writtenOn": "2012-09-15T16:37:35Z",
+      "side": 1,
+      "message": "És akkor a leállítás meg stop legyen? (De akkor minek fordítunk egyéltalán?)",
+      "parentUuid": "AAAAYX///lo\u003d",
       "revId": "fb74369e6a9afcae5cb0379172e2087e187fc5e8",
       "serverId": "1ec6b3db-b2c1-4fa4-84a2-4c7efe89ba71",
       "unresolved": false
@@ -53,6 +89,24 @@
     },
     {
       "key": {
+        "uuid": "AAAAYX///PQ\u003d",
+        "filename": "res/values-hu/strings.xml",
+        "patchSetId": 1
+      },
+      "lineNbr": 192,
+      "author": {
+        "id": 3214
+      },
+      "writtenOn": "2012-09-15T16:37:35Z",
+      "side": 1,
+      "message": "Ez a funkció csak akkor érvényesül, ha nyomvatartod az aktuális gombot.\nA képernyö alsó harmadában jelenik meg pár másodpercre.",
+      "parentUuid": "AAAAYX///lk\u003d",
+      "revId": "fb74369e6a9afcae5cb0379172e2087e187fc5e8",
+      "serverId": "1ec6b3db-b2c1-4fa4-84a2-4c7efe89ba71",
+      "unresolved": false
+    },
+    {
+      "key": {
         "uuid": "AAAAYX///lg\u003d",
         "filename": "res/values-hu/strings.xml",
         "patchSetId": 1
@@ -64,6 +118,24 @@
       "writtenOn": "2012-09-14T09:40:19Z",
       "side": 1,
       "message": "Idömérés folytatása, Folytatja az idömérést",
+      "revId": "fb74369e6a9afcae5cb0379172e2087e187fc5e8",
+      "serverId": "1ec6b3db-b2c1-4fa4-84a2-4c7efe89ba71",
+      "unresolved": false
+    },
+    {
+      "key": {
+        "uuid": "AAAAYX///PI\u003d",
+        "filename": "res/values-hu/strings.xml",
+        "patchSetId": 1
+      },
+      "lineNbr": 196,
+      "author": {
+        "id": 3214
+      },
+      "writtenOn": "2012-09-15T16:37:35Z",
+      "side": 1,
+      "message": "Ez a funkció csak akkor érvényesül, ha nyomvatartod az aktuális gombot.\nA képernyó alsó harmadában jelenik meg pár másodpercre.",
+      "parentUuid": "AAAAYX///lg\u003d",
       "revId": "fb74369e6a9afcae5cb0379172e2087e187fc5e8",
       "serverId": "1ec6b3db-b2c1-4fa4-84a2-4c7efe89ba71",
       "unresolved": false
@@ -87,6 +159,24 @@
     },
     {
       "key": {
+        "uuid": "AAAAYX///PM\u003d",
+        "filename": "res/values-hu/strings.xml",
+        "patchSetId": 1
+      },
+      "lineNbr": 200,
+      "author": {
+        "id": 3214
+      },
+      "writtenOn": "2012-09-15T16:37:35Z",
+      "side": 1,
+      "message": "Ez a funkció csak akkor érvényesül, ha nyomvatartod az aktuális gombot.\nA képernyö alsó harmadában jelenik meg pár másodpercre.",
+      "parentUuid": "AAAAYX///lY\u003d",
+      "revId": "fb74369e6a9afcae5cb0379172e2087e187fc5e8",
+      "serverId": "1ec6b3db-b2c1-4fa4-84a2-4c7efe89ba71",
+      "unresolved": false
+    },
+    {
+      "key": {
         "uuid": "AAAAYX///lU\u003d",
         "filename": "res/values-hu/strings.xml",
         "patchSetId": 1
@@ -104,6 +194,24 @@
     },
     {
       "key": {
+        "uuid": "AAAAYX///PE\u003d",
+        "filename": "res/values-hu/strings.xml",
+        "patchSetId": 1
+      },
+      "lineNbr": 242,
+      "author": {
+        "id": 3214
+      },
+      "writtenOn": "2012-09-15T16:37:35Z",
+      "side": 1,
+      "message": "Ha már a kategória is Szektorok, akkor itt is csak annyit lesz, hogy \u0027Szektorok nincsenek engedélyezve.\u0027",
+      "parentUuid": "AAAAYX///lU\u003d",
+      "revId": "fb74369e6a9afcae5cb0379172e2087e187fc5e8",
+      "serverId": "1ec6b3db-b2c1-4fa4-84a2-4c7efe89ba71",
+      "unresolved": false
+    },
+    {
+      "key": {
         "uuid": "AAAAYX///lM\u003d",
         "filename": "res/values-hu/strings.xml",
         "patchSetId": 1
@@ -115,6 +223,24 @@
       "writtenOn": "2012-09-14T09:40:19Z",
       "side": 1,
       "message": "Ez nem fekszik, de perpill nincs javaslatom.",
+      "revId": "fb74369e6a9afcae5cb0379172e2087e187fc5e8",
+      "serverId": "1ec6b3db-b2c1-4fa4-84a2-4c7efe89ba71",
+      "unresolved": false
+    },
+    {
+      "key": {
+        "uuid": "AAAAYX///ig\u003d",
+        "filename": "res/values-hu/strings.xml",
+        "patchSetId": 1
+      },
+      "lineNbr": 244,
+      "author": {
+        "id": 3214
+      },
+      "writtenOn": "2012-09-15T16:37:35Z",
+      "side": 1,
+      "message": "Nekem sem tetszik, de magyar megfelelöjét nem tudok a behaviour szónak, ami még passzol is ide. :( Ez egy pop-up ablak fejléce, ahol a \u0027Kisebb idö a jobb\u0027 ill. \u0027Nagyobb idö a jobb\u0027 opciókat lehet kiválasztani.",
+      "parentUuid": "AAAAYX///lM\u003d",
       "revId": "fb74369e6a9afcae5cb0379172e2087e187fc5e8",
       "serverId": "1ec6b3db-b2c1-4fa4-84a2-4c7efe89ba71",
       "unresolved": false
