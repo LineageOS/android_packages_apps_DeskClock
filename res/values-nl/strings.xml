@@ -92,4 +92,216 @@
     <string name="alarm_profile_no_change_profile">Geen wijziging profiel</string>
     <string name="alarm_profile_summary_no_change">Geen profielwijziging wanneer het alarm afgaat</string>
     <string name="alarm_profile_summary_change_to">Na het afgaan van een alarm, profiel wijzigen naar <xliff:g id="profile">%s</xliff:g></string>
+
+    <!-- TimerClockService is not ready -->
+    <string name="msg_timer_service_is_not_ready">\nDe tijdklokservice is niet gereed. U kunt niets doen.\n</string>
+    <!-- Fails to create a new timer -->
+    <string name="msg_timer_creation_fails">\nKan geen tijdklok aanmaken. U kunt niets doen.\n</string>
+    <!-- Ui thread fails  -->
+    <string name="msg_timer_ui_thread_fails">\nKan omgeving niet renderen. U kunt niets doen.\n</string>
+    <!-- Preferences update fails  -->
+    <string name="msg_pref_update_fails">\nKan instellingen niet bijwerken. De instellingen zijn niet gewijzigd.\n</string>
+    <!-- The operation fails -->
+    <string name="msg_operation_fails">\nDe actie is mislukt.\n</string>
+
+    <!-- Title of the StopWatch fragment -->
+    <string name="stopwatch_title">Stopwatch</string>
+    <!-- StopWatch. Stop timer button text -->
+    <string name="stopwatch_actions_stop">Stoppen</string>
+    <!-- StopWatch. Stop timer button content description -->
+    <string name="stopwatch_actions_stop_cd">Huidige stopwatchsessie stoppen</string>
+    <!-- StopWatch. Start timer button text -->
+    <string name="stopwatch_actions_start">Starten</string>
+    <!-- StopWatch. Start timer button content description -->
+    <string name="stopwatch_actions_start_cd">Huidige stopwatchsessie starten</string>
+    <!-- StopWatch. Resume timer button text -->
+    <string name="stopwatch_actions_resume">Hervatten</string>
+    <!-- StopWatch. Resume timer button content description -->
+    <string name="stopwatch_actions_resume_cd">Huidige stopwatchsessie hervatten</string>
+    <!-- StopWatch. Reset timer button text -->
+    <string name="stopwatch_actions_reset">Herstellen</string>
+    <!-- StopWatch. Reset timer button content description -->
+    <string name="stopwatch_actions_reset_cd">Huidige stopwatchsessie herstellen</string>
+    <!-- StopWatch. Take lap time button text -->
+    <string name="stopwatch_actions_lap">Ronde</string>
+    <!-- StopWatch. Take lap time button content description -->
+    <string name="stopwatch_actions_lap_cd">Rondetijd noteren</string>
+    <!-- StopWatch. Take lap sector time button text -->
+    <string name="stopwatch_actions_sector">Sector</string>
+    <!-- StopWatch. Take lap sector time button content description -->
+    <string name="stopwatch_actions_sector_cd">Gedeeltelijke tijd noteren van sector van huidige ronde</string>
+
+    <!-- StopWatch. Info Panel. Best lap title -->
+    <string name="stopwatch_info_panel_last_lap_title">Laatste ronde</string>
+    <!-- StopWatch. Info Panel. Best lap title -->
+    <string name="stopwatch_info_panel_best_lap_title">Beste ronden</string>
+    <!-- StopWatch. Info Panel. Laps title -->
+    <string name="stopwatch_info_panel_laps_title">Ronden</string>
+    <!-- StopWatch. Info Panel. No data -->
+    <string name="stopwatch_info_panel_empty_data">Geen gegevens verzameld</string>
+
+    <!-- StopWatch. Info Panel. An empty lap label -->
+    <string name="stopwatch_info_panel_empty_lap">Ronde</string>
+    <!-- StopWatch. Info Panel. Lap label -->
+    <string name="stopwatch_info_panel_lap_label">Ronde <xliff:g id="lap">%1$s</xliff:g></string>
+    <!-- StopWatch. Info Panel. Sector label -->
+    <string name="stopwatch_info_panel_lap_sector">Sector <xliff:g id="sector">%1$s</xliff:g></string>
+
+    <!-- StopWatch. Menu. Hide last lap -->
+    <string name="stopwatch_menu_hide_last_lap_panel">\'Laatste ronde\' verbergen</string>
+    <!-- StopWatch. Menu. Hide best lap -->
+    <string name="stopwatch_menu_hide_best_lap_panel">\'Beste ronde\' verbergen</string>
+    <!-- StopWatch. Menu. Hide best lap -->
+    <string name="stopwatch_menu_hide_laps_panel">\'Ronden\' verbergen</string>
+    <!-- StopWatch. Menu. Settings -->
+    <string name="stopwatch_menu_settings">Instellingen</string>
+
+    <!-- StopWatch. Preferences. General -->
+    <string name="stopwatch_preferences_lap_sectors">Ronden/sectoren</string>
+    <!-- StopWatch. Preferences. Summary of General catergory -->
+    <string name="stopwatch_preferences_lap_sectors_summary">Gedrag instellen van ronden en sectoren</string>
+    <!-- StopWatch. Preferences. Sectors -->
+    <string name="stopwatch_preferences_sectors">Sectoren</string>
+    <!-- StopWatch. Preferences. Summary of sectors -->
+    <string name="stopwatch_preferences_sectors_summary">{0,keuze,0#Rondesectoren niet ingeschakeld|1#Rondesectoren ingesteld met één sector|1&lt;Rondesectoren ingesteld met {0} sectoren}</string>
+    <!-- StopWatch. Preferences. Best lap behaviour -->
+    <string name="stopwatch_preferences_best_lap_behaviour">Gedrag bij beste ronde</string>
+    <!-- StopWatch. Preferences. About -->
+    <string name="stopwatch_preferences_about">Over</string>
+    <!-- StopWatch. Preferences. Summary of About catergory -->
+    <string name="stopwatch_preferences_about_summary">Stopwatch\nCopyright \u00A9 2012 CyanogenMod</string>
+
+    <!-- StopWatch. Best lap behaviour. Lower times are better -->
+    <string name="stopwatch_best_lap_lower_pref">Langzamere tijden zijn beter</string>
+    <!-- StopWatch. Best lap behaviour. Summary of lower times are better  -->
+    <string name="stopwatch_best_lap_lower_pref_summary">Beste ronde is de langzaamste tijd</string>
+    <!-- StopWatch. Best lap behaviour. Highest times are better -->
+    <string name="stopwatch_best_lap_highest_pref">Snellere tijden zijn beter</string>
+    <!-- StopWatch. Best lap behaviour. Summary of highest times are better -->
+    <string name="stopwatch_best_lap_highest_pref_summary">Beste ronde is de snelste tijd</string>
+
+    <!-- StopWatch. Sectors Dialog Preference. Enabled check text -->
+    <string name="sectors_dialog_enabled_text">Ingeschakelde rondesectoren:</string>
+
+
+    <!-- Title of the CountDown fragment -->
+    <string name="countdown_title">Aftellen</string>
+    <!-- CountDown. Stop timer button text -->
+    <string name="countdown_actions_stop">Stoppen</string>
+    <!-- CountDown. Stop timer button content description -->
+    <string name="countdown_actions_stop_cd">Huidige aftelsessie stoppen</string>
+    <!-- CountDown. Start timer button text -->
+    <string name="countdown_actions_start">Starten</string>
+    <!-- CountDown. Start timer button content description -->
+    <string name="countdown_actions_start_cd">Huidige aftelsessie starten</string>
+    <!-- CountDown. Resume timer button text -->
+    <string name="countdown_actions_resume">Hervatten</string>
+    <!-- CountDown. Resume timer button content description -->
+    <string name="countdown_actions_resume_cd">Huidige aftelsessie hervatten</string>
+    <!-- CountDown. Reset timer button text -->
+    <string name="countdown_actions_reset">Herstellen</string>
+    <!-- CountDown. Reset timer button content description -->
+    <string name="countdown_actions_reset_cd">Huidige aftelsessie herstellen</string>
+    <!-- CountDown. Cancel edition timer button text -->
+    <string name="countdown_actions_cancel">Annuleren</string>
+    <!-- CountDown. Cancel edition button content description -->
+    <string name="countdown_actions_cancel_cd">Bewerkingsmodus van huidige aftelsessie annuleren</string>
+    <!-- CountDown. Set edition timer button text -->
+    <string name="countdown_actions_set">Instellen</string>
+    <!-- CountDown. Set edition button content description -->
+    <string name="countdown_actions_set_cd">Huidige afteltijd instellen</string>
+
+    <!-- CountDown. Menu. Edit timer -->
+    <string name="countdown_menu_open_timer_editor">Tijdbewerking openen</string>
+    <!-- CountDown. Menu. Cancel timer -->
+    <string name="countdown_menu_close_timer_editor">Tijdbewerking sluiten</string>
+    <!-- CountDown. Menu. Settings -->
+    <string name="countdown_menu_settings">Instellingen</string>
+
+    <!-- CountDown. Saved CountDown Timers Panel. Title -->
+    <string name="countdown_panel_title">Opgeslagen aftelsessies</string>
+    <!-- CountDown. Saved CountDown Timers Panel. Add timer -->
+    <string name="countdown_panel_add_text">Huidige toevoegen</string>
+    <!-- CountDown. Saved CountDown Timers Panel. Add timer. Content description -->
+    <string name="countdown_panel_add_text_cd">Huidige sessie opslaan</string>
+    <!-- CountDown. Saved CountDown Timers Panel. Remove timer. Content description -->
+    <string name="countdown_panel_remove_cd">Sessie verwijderen van opgeslagen sessies</string>
+    <!-- CountDown. Saved CountDown Timers. Add confirmation dialog. -->
+    <string name="countdown_dialog_add">Een nieuwe sessie wordt aangemaakt.\n\Weet u het zeker?\n</string>
+    <!-- CountDown. Saved CountDown Timers. Delete confirmation dialog. -->
+    <string name="countdown_dialog_delete">De sessie \'<xliff:g id="timer">%1$s</xliff:g>\' wordt verwijderd.\n\nWeet u het zeker?\n</string>
+
+    <!-- CountDown. Preferences. Notifications -->
+    <string name="countdown_preferences_notifications">Meldingen</string>
+    <!-- CountDown. Preferences. Summary of Notifications category -->
+    <string name="countdown_preferences_notifications_summary">Gedrag instellen van meldingen</string>
+    <!-- CountDown. Preferences. About -->
+    <string name="countdown_preferences_about">Over</string>
+    <!-- CountDown. Preferences. Summary of About catergory -->
+    <string name="countdown_preferences_about_summary">Countdown\nCopyright \u00A9 2012 CyanogenMod</string>
+
+    <!-- CountDown. Preferences. On CountDown in progress category title -->
+    <string name="countdown_notification_oncountdown_category">On countdown</string>
+    <!-- CountDown. Preferences. On CountDown in progress. Notifications title -->
+    <string name="countdown_notification_oncountdown_notifications_title">Meldingen</string>
+    <!-- CountDown. Preferences. On CountDown in progress. Notifications summary Off -->
+    <string name="countdown_notification_oncountdown_notifications_summary_on">Melden in statusbalk</string>
+    <!-- CountDown. Preferences. On CountDown in progress. Notifications summary On -->
+    <string name="countdown_notification_oncountdown_notifications_summary_off">Niet melden in statusbalk</string>
+
+    <!-- CountDown. Preferences. On final CountDown category title -->
+    <string name="countdown_notification_onfinalcountdown_category">On final countdown</string>
+    <!-- CountDown. Preferences. On CountDown in progress. Notifications title -->
+    <string name="countdown_notification_onfinalcountdown_notifications_title">Meldingen</string>
+    <!-- CountDown. Preferences. On CountDown in progress. Notifications summary Off -->
+    <string name="countdown_notification_onfinalcountdown_notifications_summary_on">Melden in statusbalk</string>
+    <!-- CountDown. Preferences. On CountDown in progress. Notifications summary On -->
+    <string name="countdown_notification_onfinalcountdown_notifications_summary_off">Niet melden in statusbalk</string>
+
+    <!-- CountDown. Preferences. On CountDown in progress. Show clock screen title -->
+    <string name="countdown_notification_onfinalcountdown_open_clock_screen_title">Klokscherm openen</string>
+    <!-- CountDown. Preferences. On CountDown in progress. Show clock screen summary On -->
+    <string name="countdown_notification_onfinalcountdown_open_clock_screen_summary_on">Indien het aftellen klaar is, wordt het scherm geopend (behalve in gesprek)</string>
+    <!-- CountDown. Preferences. On CountDown in progress. Show clock screen summary On -->
+    <string name="countdown_notification_onfinalcountdown_open_clock_screen_summary_off">Indien het aftellen klaar is, wordt het scherm niet geopend.</string>
+
+    <!-- CountDown. Preferences. On CountDown in progress. Ringtone -->
+    <string name="countdown_notification_onfinalcountdown_ringtone_title">Beltoon</string>
+    <!-- CountDown. Preferences. On CountDown in progress. Ringtone. Silent option -->
+    <string name="countdown_notification_onfinalcountdown_ringtone_silent">Stil</string>
+
+    <!-- CountDown. Preferences. On CountDown in progress. Vibrate title -->
+    <string name="countdown_notification_onfinalcountdown_vibrate_title">Trillen</string>
+    <!-- CountDown. Preferences. On CountDown in progress. Vibrate always option -->
+    <string name="countdown_notification_onfinalcountdown_vibrate_always">Altijd</string>
+    <!-- CountDown. Preferences. On CountDown in progress. Vibrate only when silent option -->
+    <string name="countdown_notification_onfinalcountdown_vibrate_only_when_silent">Alleen indien stil</string>
+    <!-- CountDown. Preferences. On CountDown in progress. Vibrate never option -->
+    <string name="countdown_notification_onfinalcountdown_vibrate_never">Nooit</string>
+
+    <!-- CountDown. Preferences. On CountDown in progress. Vibrate on call title -->
+    <string name="countdown_notification_onfinalcountdown_vibrate_on_call_title">Trillen in gesprek</string>
+    <!-- CountDown. Preferences. On CountDown in progress. Vibrate on call summary On -->
+    <string name="countdown_notification_onfinalcountdown_vibrate_on_call_summary_on">In een gesprek wordt getrild</string>
+    <!-- CountDown. Preferences. On CountDown in progress. Vibrate on call summary On -->
+    <string name="countdown_notification_onfinalcountdown_vibrate_on_call_summary_off">In een gesprek wordt niet getrild</string>
+
+    <!-- Timer Clock Service. CountDown notification title for countdown timer -->
+    <string name="service_countdown_notification_title">Aftellen</string>
+    <!-- Timer Clock Service. CountDown notification text for countdown in progress -->
+    <string name="service_countdown_notification_msg_progress">Aftelsessie is bezig</string>
+    <!-- Timer Clock Service. CountDown notification text for ended countdown -->
+    <string name="service_countdown_notification_msg_end">Eindtijd is bereikt</string>
+    <!-- Timer Clock Service. CountDown notification summary  -->
+    <string name="service_countdown_notification_summary">Overgebleven tijd: <xliff:g id="time">%1$s</xliff:g></string>
+
+    <!-- The text showed to advise that other fragment exists in deskclock fragment -->
+    <string name="cling_deskclock_desc">Sleep naar links om stopwatch en het aftellen te tonen</string>
+    <!-- The text showed to advise the use of lap/sectors -->
+    <string name="cling_stopwatch_desc">Om het gedrag van ronden en sectoren te wijzigen, gaat u naar de menu-optie Instellingen</string>
+    <!-- The text showed to advise how to edit the countdown clock, with a long press holding -->
+    <string name="cling_countdown_desc">Om de tijd te bewerken, houdt u de klok ingedrukt</string>
+
+    <!-- The overflow actionbar button -->
+    <string name="overflow_button_cd">Meer\u2026</string>
 </resources>
