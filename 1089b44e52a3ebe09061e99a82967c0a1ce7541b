@@ -2,6 +2,40 @@
   "comments": [
     {
       "key": {
+        "uuid": "AAAAYX//+9E\u003d",
+        "filename": "res/values-de/strings.xml",
+        "patchSetId": 2
+      },
+      "lineNbr": 186,
+      "author": {
+        "id": 2597
+      },
+      "writtenOn": "2012-09-16T06:49:06Z",
+      "side": 1,
+      "message": "Why not an infinitive?\nYou did it with \u0027fortsetzen\u0027.",
+      "revId": "1089b44e52a3ebe09061e99a82967c0a1ce7541b",
+      "serverId": "1ec6b3db-b2c1-4fa4-84a2-4c7efe89ba71",
+      "unresolved": false
+    },
+    {
+      "key": {
+        "uuid": "AAAAYX//+9A\u003d",
+        "filename": "res/values-de/strings.xml",
+        "patchSetId": 2
+      },
+      "lineNbr": 190,
+      "author": {
+        "id": 2597
+      },
+      "writtenOn": "2012-09-16T06:49:06Z",
+      "side": 1,
+      "message": "Same as above",
+      "revId": "1089b44e52a3ebe09061e99a82967c0a1ce7541b",
+      "serverId": "1ec6b3db-b2c1-4fa4-84a2-4c7efe89ba71",
+      "unresolved": false
+    },
+    {
+      "key": {
         "uuid": "AAAAYX//++I\u003d",
         "filename": "res/values-de/strings.xml",
         "patchSetId": 2
@@ -30,6 +64,40 @@
       "writtenOn": "2012-09-16T06:36:38Z",
       "side": 1,
       "message": "dito",
+      "revId": "1089b44e52a3ebe09061e99a82967c0a1ce7541b",
+      "serverId": "1ec6b3db-b2c1-4fa4-84a2-4c7efe89ba71",
+      "unresolved": false
+    },
+    {
+      "key": {
+        "uuid": "AAAAYX//+88\u003d",
+        "filename": "res/values-de/strings.xml",
+        "patchSetId": 2
+      },
+      "lineNbr": 265,
+      "author": {
+        "id": 2597
+      },
+      "writtenOn": "2012-09-16T06:49:06Z",
+      "side": 1,
+      "message": "Same as above",
+      "revId": "1089b44e52a3ebe09061e99a82967c0a1ce7541b",
+      "serverId": "1ec6b3db-b2c1-4fa4-84a2-4c7efe89ba71",
+      "unresolved": false
+    },
+    {
+      "key": {
+        "uuid": "AAAAYX//+84\u003d",
+        "filename": "res/values-de/strings.xml",
+        "patchSetId": 2
+      },
+      "lineNbr": 269,
+      "author": {
+        "id": 2597
+      },
+      "writtenOn": "2012-09-16T06:49:06Z",
+      "side": 1,
+      "message": "Same as above",
       "revId": "1089b44e52a3ebe09061e99a82967c0a1ce7541b",
       "serverId": "1ec6b3db-b2c1-4fa4-84a2-4c7efe89ba71",
       "unresolved": false
