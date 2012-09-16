@@ -324,4 +324,19 @@
     <string name="city_delete_confirmation" msgid="1783441538785676299">"Poistetaanko tämä kaupunki?"</string>
     <string name="widget_loading_ms" msgid="790841709484678848">"Ladataan"</string>
     <string name="digital_gadget" msgid="2326954556720571358">"Digitaalinen kello"</string>
+    <string name="flip_action_title">Puhelimen kääntö</string>
+    <string name="flip_action_dialog_title">Puhelimen kääntö</string>
+    <string name="flip_action_summary">Kääntäessäsi puhelimen ympäri
+        <xliff:g id="action">%s</xliff:g></string>
+    <string-array name="flip_action_entries">
+      <item>Älä tee mitään</item>
+      <item>Aseta torkku päälle</item>
+      <item>Hylkää herätys</item>
+    </string-array>
+    <string name="alarm_profile">Profiili</string>
+    <string name="alarm_profile_no_change_profile">Älä vaihda profiilia</string>
+    <string name="alarm_profile_summary_no_change">Älä vaihda profiilia kun herätys alkaa</string>
+    <string name="alarm_profile_summary_change_to">Kun herätys alkaa, profiili vaihdetaan
+        <xliff:g id="profile">%s</xliff:g></string>
+    <string name="alarm_incvol">Nouseva soittoääni</string>
 </resources>
