@@ -19,6 +19,24 @@
     },
     {
       "key": {
+        "uuid": "AAAAYX//+8s\u003d",
+        "filename": "res/values-de/strings.xml",
+        "patchSetId": 2
+      },
+      "lineNbr": 186,
+      "author": {
+        "id": 1053
+      },
+      "writtenOn": "2012-09-16T06:54:48Z",
+      "side": 1,
+      "message": "You\u0027re right! I\u0027will try it, but it may be too long for the button.\nI already lowered the textsize for german.",
+      "parentUuid": "AAAAYX//+9E\u003d",
+      "revId": "1089b44e52a3ebe09061e99a82967c0a1ce7541b",
+      "serverId": "1ec6b3db-b2c1-4fa4-84a2-4c7efe89ba71",
+      "unresolved": false
+    },
+    {
+      "key": {
         "uuid": "AAAAYX//+9A\u003d",
         "filename": "res/values-de/strings.xml",
         "patchSetId": 2
