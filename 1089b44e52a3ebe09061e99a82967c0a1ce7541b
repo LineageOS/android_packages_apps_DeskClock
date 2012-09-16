@@ -1,0 +1,140 @@
+{
+  "comments": [
+    {
+      "key": {
+        "uuid": "AAAAYX//++I\u003d",
+        "filename": "res/values-de/strings.xml",
+        "patchSetId": 2
+      },
+      "lineNbr": 253,
+      "author": {
+        "id": 1053
+      },
+      "writtenOn": "2012-09-16T06:36:38Z",
+      "side": 1,
+      "message": "Gefällt mir besser als meine Übersetzung",
+      "revId": "1089b44e52a3ebe09061e99a82967c0a1ce7541b",
+      "serverId": "1ec6b3db-b2c1-4fa4-84a2-4c7efe89ba71",
+      "unresolved": false
+    },
+    {
+      "key": {
+        "uuid": "AAAAYX//++E\u003d",
+        "filename": "res/values-de/strings.xml",
+        "patchSetId": 2
+      },
+      "lineNbr": 257,
+      "author": {
+        "id": 1053
+      },
+      "writtenOn": "2012-09-16T06:36:38Z",
+      "side": 1,
+      "message": "dito",
+      "revId": "1089b44e52a3ebe09061e99a82967c0a1ce7541b",
+      "serverId": "1ec6b3db-b2c1-4fa4-84a2-4c7efe89ba71",
+      "unresolved": false
+    },
+    {
+      "key": {
+        "uuid": "AAAAYX//+90\u003d",
+        "filename": "res/values-de/strings.xml",
+        "patchSetId": 2
+      },
+      "lineNbr": 328,
+      "author": {
+        "id": 1053
+      },
+      "writtenOn": "2012-09-16T06:36:38Z",
+      "side": 1,
+      "message": "...klingt seltsam.",
+      "revId": "1089b44e52a3ebe09061e99a82967c0a1ce7541b",
+      "serverId": "1ec6b3db-b2c1-4fa4-84a2-4c7efe89ba71",
+      "unresolved": false
+    },
+    {
+      "key": {
+        "uuid": "AAAAYX//+9w\u003d",
+        "filename": "res/values-de/strings.xml",
+        "patchSetId": 2
+      },
+      "lineNbr": 337,
+      "author": {
+        "id": 1053
+      },
+      "writtenOn": "2012-09-16T06:36:38Z",
+      "side": 1,
+      "message": "..es wird der Countdown angezeigt. Ich hatte ursprünglich hierfür \"Countdown-Bildschirm\" stehen, aber das war zu lang.",
+      "revId": "1089b44e52a3ebe09061e99a82967c0a1ce7541b",
+      "serverId": "1ec6b3db-b2c1-4fa4-84a2-4c7efe89ba71",
+      "unresolved": false
+    },
+    {
+      "key": {
+        "uuid": "AAAAYX//+94\u003d",
+        "filename": "res/values-de/strings.xml",
+        "patchSetId": 2
+      },
+      "lineNbr": 339,
+      "author": {
+        "id": 1053
+      },
+      "writtenOn": "2012-09-16T06:36:38Z",
+      "side": 1,
+      "message": "\"Letzter Countdown\" klingt irgendwie seltsam. :-) Habe das im Deutschen noch nie gehört.\n\nWenn der Countdown abgelaufen ist wird der Countdown angezeigt und nicht die Uhr.",
+      "revId": "1089b44e52a3ebe09061e99a82967c0a1ce7541b",
+      "serverId": "1ec6b3db-b2c1-4fa4-84a2-4c7efe89ba71",
+      "unresolved": false
+    },
+    {
+      "key": {
+        "uuid": "AAAAYX//+98\u003d",
+        "filename": "res/values-de/strings.xml",
+        "patchSetId": 2
+      },
+      "lineNbr": 341,
+      "author": {
+        "id": 1053
+      },
+      "writtenOn": "2012-09-16T06:36:38Z",
+      "side": 1,
+      "message": "Im Englischen steht folgendes:\n\nWhen countdown finishes, don\\\u0027t disrupt user activity opening the countdown clock screen.",
+      "revId": "1089b44e52a3ebe09061e99a82967c0a1ce7541b",
+      "serverId": "1ec6b3db-b2c1-4fa4-84a2-4c7efe89ba71",
+      "unresolved": false
+    },
+    {
+      "key": {
+        "uuid": "AAAAYX//+9o\u003d",
+        "filename": "res/values-de/strings.xml",
+        "patchSetId": 2
+      },
+      "lineNbr": 376,
+      "author": {
+        "id": 1053
+      },
+      "writtenOn": "2012-09-16T06:36:38Z",
+      "side": 1,
+      "message": "..gefällt mir.",
+      "revId": "1089b44e52a3ebe09061e99a82967c0a1ce7541b",
+      "serverId": "1ec6b3db-b2c1-4fa4-84a2-4c7efe89ba71",
+      "unresolved": false
+    },
+    {
+      "key": {
+        "uuid": "AAAAYX//+9s\u003d",
+        "filename": "res/values-de/strings.xml",
+        "patchSetId": 2
+      },
+      "lineNbr": 378,
+      "author": {
+        "id": 1053
+      },
+      "writtenOn": "2012-09-16T06:36:38Z",
+      "side": 1,
+      "message": "Besser als meine Übersetzung.",
+      "revId": "1089b44e52a3ebe09061e99a82967c0a1ce7541b",
+      "serverId": "1ec6b3db-b2c1-4fa4-84a2-4c7efe89ba71",
+      "unresolved": false
+    }
+  ]
+}
