@@ -1,0 +1,871 @@
+{
+  "comments": [
+    {
+      "key": {
+        "uuid": "AAAAYX//+yY\u003d",
+        "filename": "res/values-nl/strings.xml",
+        "patchSetId": 1
+      },
+      "lineNbr": 101,
+      "author": {
+        "id": 2881
+      },
+      "writtenOn": "2012-09-16T19:46:58Z",
+      "side": 1,
+      "message": "UI thread -\u003e weergave?",
+      "revId": "bfb3f086b569e48ad2ed0fe008da46cf919d2ed3",
+      "serverId": "1ec6b3db-b2c1-4fa4-84a2-4c7efe89ba71",
+      "unresolved": false
+    },
+    {
+      "key": {
+        "uuid": "AAAAYX//+yM\u003d",
+        "filename": "res/values-nl/strings.xml",
+        "patchSetId": 1
+      },
+      "lineNbr": 110,
+      "author": {
+        "id": 2881
+      },
+      "writtenOn": "2012-09-16T19:46:58Z",
+      "side": 1,
+      "message": "Ik zou het kort houden\n\n- Stop",
+      "revId": "bfb3f086b569e48ad2ed0fe008da46cf919d2ed3",
+      "serverId": "1ec6b3db-b2c1-4fa4-84a2-4c7efe89ba71",
+      "unresolved": false
+    },
+    {
+      "key": {
+        "uuid": "AAAAYX//+yA\u003d",
+        "filename": "res/values-nl/strings.xml",
+        "patchSetId": 1
+      },
+      "lineNbr": 114,
+      "author": {
+        "id": 2881
+      },
+      "writtenOn": "2012-09-16T19:46:58Z",
+      "side": 1,
+      "message": "- Start",
+      "revId": "bfb3f086b569e48ad2ed0fe008da46cf919d2ed3",
+      "serverId": "1ec6b3db-b2c1-4fa4-84a2-4c7efe89ba71",
+      "unresolved": false
+    },
+    {
+      "key": {
+        "uuid": "AAAAYX//+x4\u003d",
+        "filename": "res/values-nl/strings.xml",
+        "patchSetId": 1
+      },
+      "lineNbr": 122,
+      "author": {
+        "id": 2881
+      },
+      "writtenOn": "2012-09-16T19:46:58Z",
+      "side": 1,
+      "message": "Reset moet eigenlijk \"opnieuw instellen\" zijn, maar dat past niet...\n\n- Opnieuw\n\nof gewoon\n\n- Reset",
+      "revId": "bfb3f086b569e48ad2ed0fe008da46cf919d2ed3",
+      "serverId": "1ec6b3db-b2c1-4fa4-84a2-4c7efe89ba71",
+      "unresolved": false
+    },
+    {
+      "key": {
+        "uuid": "AAAAYX//+x8\u003d",
+        "filename": "res/values-nl/strings.xml",
+        "patchSetId": 1
+      },
+      "lineNbr": 122,
+      "author": {
+        "id": 2881
+      },
+      "writtenOn": "2012-09-16T19:46:58Z",
+      "side": 1,
+      "message": "Reset moet eigenlijk \"opnieuw instellen\" zijn, maar dat past niet...\n\n- Opnieuw",
+      "revId": "bfb3f086b569e48ad2ed0fe008da46cf919d2ed3",
+      "serverId": "1ec6b3db-b2c1-4fa4-84a2-4c7efe89ba71",
+      "unresolved": false
+    },
+    {
+      "key": {
+        "uuid": "AAAAYX//+x0\u003d",
+        "filename": "res/values-nl/strings.xml",
+        "patchSetId": 1
+      },
+      "lineNbr": 124,
+      "author": {
+        "id": 2881
+      },
+      "writtenOn": "2012-09-16T19:46:58Z",
+      "side": 1,
+      "message": "- Huidige stopwatchsessie opnieuw instellen",
+      "revId": "bfb3f086b569e48ad2ed0fe008da46cf919d2ed3",
+      "serverId": "1ec6b3db-b2c1-4fa4-84a2-4c7efe89ba71",
+      "unresolved": false
+    },
+    {
+      "key": {
+        "uuid": "AAAAYX//+xw\u003d",
+        "filename": "res/values-nl/strings.xml",
+        "patchSetId": 1
+      },
+      "lineNbr": 130,
+      "author": {
+        "id": 2881
+      },
+      "writtenOn": "2012-09-16T19:46:58Z",
+      "side": 1,
+      "message": "- Tussentijd",
+      "revId": "bfb3f086b569e48ad2ed0fe008da46cf919d2ed3",
+      "serverId": "1ec6b3db-b2c1-4fa4-84a2-4c7efe89ba71",
+      "unresolved": false
+    },
+    {
+      "key": {
+        "uuid": "AAAAYX//+xs\u003d",
+        "filename": "res/values-nl/strings.xml",
+        "patchSetId": 1
+      },
+      "lineNbr": 132,
+      "author": {
+        "id": 2881
+      },
+      "writtenOn": "2012-09-16T19:46:58Z",
+      "side": 1,
+      "message": "- Tussentijd noteren van huidige ronde",
+      "revId": "bfb3f086b569e48ad2ed0fe008da46cf919d2ed3",
+      "serverId": "1ec6b3db-b2c1-4fa4-84a2-4c7efe89ba71",
+      "unresolved": false
+    },
+    {
+      "key": {
+        "uuid": "AAAAYX//+xY\u003d",
+        "filename": "res/values-nl/strings.xml",
+        "patchSetId": 1
+      },
+      "lineNbr": 134,
+      "author": {
+        "id": 2881
+      },
+      "writtenOn": "2012-09-16T19:46:58Z",
+      "side": 1,
+      "message": "-  \u003c!-- StopWatch. Info Panel. Last lap title --\u003e\n\nNiet Best, maar Last lap (Best staat hieronder al)",
+      "revId": "bfb3f086b569e48ad2ed0fe008da46cf919d2ed3",
+      "serverId": "1ec6b3db-b2c1-4fa4-84a2-4c7efe89ba71",
+      "unresolved": false
+    },
+    {
+      "key": {
+        "uuid": "AAAAYX//+xc\u003d",
+        "filename": "res/values-nl/strings.xml",
+        "patchSetId": 1
+      },
+      "lineNbr": 137,
+      "author": {
+        "id": 2881
+      },
+      "writtenOn": "2012-09-16T19:46:58Z",
+      "side": 1,
+      "message": "- Beste ronde\n\nenkelvoud, er is maar 1 beste",
+      "revId": "bfb3f086b569e48ad2ed0fe008da46cf919d2ed3",
+      "serverId": "1ec6b3db-b2c1-4fa4-84a2-4c7efe89ba71",
+      "unresolved": false
+    },
+    {
+      "key": {
+        "uuid": "AAAAYX//+xU\u003d",
+        "filename": "res/values-nl/strings.xml",
+        "patchSetId": 1
+      },
+      "lineNbr": 148,
+      "author": {
+        "id": 2881
+      },
+      "writtenOn": "2012-09-16T19:46:58Z",
+      "side": 1,
+      "message": "- Tussentijd",
+      "revId": "bfb3f086b569e48ad2ed0fe008da46cf919d2ed3",
+      "serverId": "1ec6b3db-b2c1-4fa4-84a2-4c7efe89ba71",
+      "unresolved": false
+    },
+    {
+      "key": {
+        "uuid": "AAAAYX//+xQ\u003d",
+        "filename": "res/values-nl/strings.xml",
+        "patchSetId": 1
+      },
+      "lineNbr": 160,
+      "author": {
+        "id": 2881
+      },
+      "writtenOn": "2012-09-16T19:46:58Z",
+      "side": 1,
+      "message": "-Ronde/tussentijd",
+      "revId": "bfb3f086b569e48ad2ed0fe008da46cf919d2ed3",
+      "serverId": "1ec6b3db-b2c1-4fa4-84a2-4c7efe89ba71",
+      "unresolved": false
+    },
+    {
+      "key": {
+        "uuid": "AAAAYX//+xM\u003d",
+        "filename": "res/values-nl/strings.xml",
+        "patchSetId": 1
+      },
+      "lineNbr": 162,
+      "author": {
+        "id": 2881
+      },
+      "writtenOn": "2012-09-16T19:46:58Z",
+      "side": 1,
+      "message": "- Gedrag van ronde en tussentijd instellen",
+      "revId": "bfb3f086b569e48ad2ed0fe008da46cf919d2ed3",
+      "serverId": "1ec6b3db-b2c1-4fa4-84a2-4c7efe89ba71",
+      "unresolved": false
+    },
+    {
+      "key": {
+        "uuid": "AAAAYX//+xI\u003d",
+        "filename": "res/values-nl/strings.xml",
+        "patchSetId": 1
+      },
+      "lineNbr": 164,
+      "author": {
+        "id": 2881
+      },
+      "writtenOn": "2012-09-16T19:46:58Z",
+      "side": 1,
+      "message": "Tussentijden",
+      "revId": "bfb3f086b569e48ad2ed0fe008da46cf919d2ed3",
+      "serverId": "1ec6b3db-b2c1-4fa4-84a2-4c7efe89ba71",
+      "unresolved": false
+    },
+    {
+      "key": {
+        "uuid": "AAAAYX//+xE\u003d",
+        "filename": "res/values-nl/strings.xml",
+        "patchSetId": 1
+      },
+      "lineNbr": 166,
+      "author": {
+        "id": 2881
+      },
+      "writtenOn": "2012-09-16T19:46:58Z",
+      "side": 1,
+      "message": "{0,keuze,0#Tussentijd niet ingeschakeld|\n1#Ronden ingesteld met één tussentijd|1\u0026lt;Ronden ingesteld met {0} tussentijden}",
+      "revId": "bfb3f086b569e48ad2ed0fe008da46cf919d2ed3",
+      "serverId": "1ec6b3db-b2c1-4fa4-84a2-4c7efe89ba71",
+      "unresolved": false
+    },
+    {
+      "key": {
+        "uuid": "AAAAYX//+w8\u003d",
+        "filename": "res/values-nl/strings.xml",
+        "patchSetId": 1
+      },
+      "lineNbr": 172,
+      "author": {
+        "id": 2881
+      },
+      "writtenOn": "2012-09-16T19:46:58Z",
+      "side": 1,
+      "message": "Staat die \\n er in het origineel ook? Volgens mij niet...",
+      "revId": "bfb3f086b569e48ad2ed0fe008da46cf919d2ed3",
+      "serverId": "1ec6b3db-b2c1-4fa4-84a2-4c7efe89ba71",
+      "unresolved": false
+    },
+    {
+      "key": {
+        "uuid": "AAAAYX//+xA\u003d",
+        "filename": "res/values-nl/strings.xml",
+        "patchSetId": 1
+      },
+      "lineNbr": 184,
+      "author": {
+        "id": 2881
+      },
+      "writtenOn": "2012-09-16T19:46:58Z",
+      "side": 1,
+      "message": "- Ingeschakelde tussentijd:\n\nMaar moet het niet zijn \"Enable lap sectors\", dus als vertaling\n\n- Tussentijden inschakelen:",
+      "revId": "bfb3f086b569e48ad2ed0fe008da46cf919d2ed3",
+      "serverId": "1ec6b3db-b2c1-4fa4-84a2-4c7efe89ba71",
+      "unresolved": false
+    },
+    {
+      "key": {
+        "uuid": "AAAAYX//+w4\u003d",
+        "filename": "res/values-nl/strings.xml",
+        "patchSetId": 1
+      },
+      "lineNbr": 188,
+      "author": {
+        "id": 2881
+      },
+      "writtenOn": "2012-09-16T19:46:58Z",
+      "side": 1,
+      "message": "- Aftelklok\n\nIk twijfel hier, maar het is wel een \u0027ding\u0027, dus vind een werkwoord als titel raar.",
+      "revId": "bfb3f086b569e48ad2ed0fe008da46cf919d2ed3",
+      "serverId": "1ec6b3db-b2c1-4fa4-84a2-4c7efe89ba71",
+      "unresolved": false
+    },
+    {
+      "key": {
+        "uuid": "AAAAYX//+w0\u003d",
+        "filename": "res/values-nl/strings.xml",
+        "patchSetId": 1
+      },
+      "lineNbr": 190,
+      "author": {
+        "id": 2881
+      },
+      "writtenOn": "2012-09-16T19:46:58Z",
+      "side": 1,
+      "message": "- Stop",
+      "revId": "bfb3f086b569e48ad2ed0fe008da46cf919d2ed3",
+      "serverId": "1ec6b3db-b2c1-4fa4-84a2-4c7efe89ba71",
+      "unresolved": false
+    },
+    {
+      "key": {
+        "uuid": "AAAAYX//+wk\u003d",
+        "filename": "res/values-nl/strings.xml",
+        "patchSetId": 1
+      },
+      "lineNbr": 192,
+      "author": {
+        "id": 2881
+      },
+      "writtenOn": "2012-09-16T19:46:58Z",
+      "side": 1,
+      "message": "aftelsessie -\u003e aftelklok\n\n- Huidige aftelklok stoppen",
+      "revId": "bfb3f086b569e48ad2ed0fe008da46cf919d2ed3",
+      "serverId": "1ec6b3db-b2c1-4fa4-84a2-4c7efe89ba71",
+      "unresolved": false
+    },
+    {
+      "key": {
+        "uuid": "AAAAYX//+ww\u003d",
+        "filename": "res/values-nl/strings.xml",
+        "patchSetId": 1
+      },
+      "lineNbr": 194,
+      "author": {
+        "id": 2881
+      },
+      "writtenOn": "2012-09-16T19:46:58Z",
+      "side": 1,
+      "message": "- Start",
+      "revId": "bfb3f086b569e48ad2ed0fe008da46cf919d2ed3",
+      "serverId": "1ec6b3db-b2c1-4fa4-84a2-4c7efe89ba71",
+      "unresolved": false
+    },
+    {
+      "key": {
+        "uuid": "AAAAYX//+wo\u003d",
+        "filename": "res/values-nl/strings.xml",
+        "patchSetId": 1
+      },
+      "lineNbr": 196,
+      "author": {
+        "id": 2881
+      },
+      "writtenOn": "2012-09-16T19:46:58Z",
+      "side": 1,
+      "message": "- Huidige aftelklok starten",
+      "revId": "bfb3f086b569e48ad2ed0fe008da46cf919d2ed3",
+      "serverId": "1ec6b3db-b2c1-4fa4-84a2-4c7efe89ba71",
+      "unresolved": false
+    },
+    {
+      "key": {
+        "uuid": "AAAAYX//+wg\u003d",
+        "filename": "res/values-nl/strings.xml",
+        "patchSetId": 1
+      },
+      "lineNbr": 200,
+      "author": {
+        "id": 2881
+      },
+      "writtenOn": "2012-09-16T19:46:58Z",
+      "side": 1,
+      "message": "- Huidige aftelklok hervatten",
+      "revId": "bfb3f086b569e48ad2ed0fe008da46cf919d2ed3",
+      "serverId": "1ec6b3db-b2c1-4fa4-84a2-4c7efe89ba71",
+      "unresolved": false
+    },
+    {
+      "key": {
+        "uuid": "AAAAYX//+ws\u003d",
+        "filename": "res/values-nl/strings.xml",
+        "patchSetId": 1
+      },
+      "lineNbr": 202,
+      "author": {
+        "id": 2881
+      },
+      "writtenOn": "2012-09-16T19:46:58Z",
+      "side": 1,
+      "message": "- Opnieuw\n\n- Reset",
+      "revId": "bfb3f086b569e48ad2ed0fe008da46cf919d2ed3",
+      "serverId": "1ec6b3db-b2c1-4fa4-84a2-4c7efe89ba71",
+      "unresolved": false
+    },
+    {
+      "key": {
+        "uuid": "AAAAYX//+wc\u003d",
+        "filename": "res/values-nl/strings.xml",
+        "patchSetId": 1
+      },
+      "lineNbr": 204,
+      "author": {
+        "id": 2881
+      },
+      "writtenOn": "2012-09-16T19:46:58Z",
+      "side": 1,
+      "message": "- Huidige aftelklok opnieuw instellen",
+      "revId": "bfb3f086b569e48ad2ed0fe008da46cf919d2ed3",
+      "serverId": "1ec6b3db-b2c1-4fa4-84a2-4c7efe89ba71",
+      "unresolved": false
+    },
+    {
+      "key": {
+        "uuid": "AAAAYX//+wY\u003d",
+        "filename": "res/values-nl/strings.xml",
+        "patchSetId": 1
+      },
+      "lineNbr": 208,
+      "author": {
+        "id": 2881
+      },
+      "writtenOn": "2012-09-16T19:46:58Z",
+      "side": 1,
+      "message": "- Bewerking van huidige aftelklok annuleren",
+      "revId": "bfb3f086b569e48ad2ed0fe008da46cf919d2ed3",
+      "serverId": "1ec6b3db-b2c1-4fa4-84a2-4c7efe89ba71",
+      "unresolved": false
+    },
+    {
+      "key": {
+        "uuid": "AAAAYX//+wU\u003d",
+        "filename": "res/values-nl/strings.xml",
+        "patchSetId": 1
+      },
+      "lineNbr": 212,
+      "author": {
+        "id": 2881
+      },
+      "writtenOn": "2012-09-16T19:46:58Z",
+      "side": 1,
+      "message": "- Huidige aftelklok instellen",
+      "revId": "bfb3f086b569e48ad2ed0fe008da46cf919d2ed3",
+      "serverId": "1ec6b3db-b2c1-4fa4-84a2-4c7efe89ba71",
+      "unresolved": false
+    },
+    {
+      "key": {
+        "uuid": "AAAAYX//+wQ\u003d",
+        "filename": "res/values-nl/strings.xml",
+        "patchSetId": 1
+      },
+      "lineNbr": 215,
+      "author": {
+        "id": 2881
+      },
+      "writtenOn": "2012-09-16T19:46:58Z",
+      "side": 1,
+      "message": "kan volgens mij veel simpeler?\n\n-Tijd bewerken",
+      "revId": "bfb3f086b569e48ad2ed0fe008da46cf919d2ed3",
+      "serverId": "1ec6b3db-b2c1-4fa4-84a2-4c7efe89ba71",
+      "unresolved": false
+    },
+    {
+      "key": {
+        "uuid": "AAAAYX//+wM\u003d",
+        "filename": "res/values-nl/strings.xml",
+        "patchSetId": 1
+      },
+      "lineNbr": 222,
+      "author": {
+        "id": 2881
+      },
+      "writtenOn": "2012-09-16T19:46:58Z",
+      "side": 1,
+      "message": "- Opgeslagen aftelklokken",
+      "revId": "bfb3f086b569e48ad2ed0fe008da46cf919d2ed3",
+      "serverId": "1ec6b3db-b2c1-4fa4-84a2-4c7efe89ba71",
+      "unresolved": false
+    },
+    {
+      "key": {
+        "uuid": "AAAAYX//+wI\u003d",
+        "filename": "res/values-nl/strings.xml",
+        "patchSetId": 1
+      },
+      "lineNbr": 224,
+      "author": {
+        "id": 2881
+      },
+      "writtenOn": "2012-09-16T19:46:58Z",
+      "side": 1,
+      "message": "- Huidige aftelklok toevoegen",
+      "revId": "bfb3f086b569e48ad2ed0fe008da46cf919d2ed3",
+      "serverId": "1ec6b3db-b2c1-4fa4-84a2-4c7efe89ba71",
+      "unresolved": false
+    },
+    {
+      "key": {
+        "uuid": "AAAAYX//+wE\u003d",
+        "filename": "res/values-nl/strings.xml",
+        "patchSetId": 1
+      },
+      "lineNbr": 226,
+      "author": {
+        "id": 2881
+      },
+      "writtenOn": "2012-09-16T19:46:58Z",
+      "side": 1,
+      "message": "- Huidige aftelklok opslaan",
+      "revId": "bfb3f086b569e48ad2ed0fe008da46cf919d2ed3",
+      "serverId": "1ec6b3db-b2c1-4fa4-84a2-4c7efe89ba71",
+      "unresolved": false
+    },
+    {
+      "key": {
+        "uuid": "AAAAYX//+v0\u003d",
+        "filename": "res/values-nl/strings.xml",
+        "patchSetId": 1
+      },
+      "lineNbr": 228,
+      "author": {
+        "id": 2881
+      },
+      "writtenOn": "2012-09-16T19:46:58Z",
+      "side": 1,
+      "message": "- Aftelklok verwijderenn uit opgeslagen aftelklokken",
+      "revId": "bfb3f086b569e48ad2ed0fe008da46cf919d2ed3",
+      "serverId": "1ec6b3db-b2c1-4fa4-84a2-4c7efe89ba71",
+      "unresolved": false
+    },
+    {
+      "key": {
+        "uuid": "AAAAYX//+v4\u003d",
+        "filename": "res/values-nl/strings.xml",
+        "patchSetId": 1
+      },
+      "lineNbr": 230,
+      "author": {
+        "id": 2881
+      },
+      "writtenOn": "2012-09-16T19:46:58Z",
+      "side": 1,
+      "message": "- Er wordt een nieuwe aftelklok aangemaakt.\\n\\Weet u het zeker?\\n\n\nMaar ook dit kan volgens mij veel simpeler\n\n- Een nieuwe aftelklok aanmaken?",
+      "revId": "bfb3f086b569e48ad2ed0fe008da46cf919d2ed3",
+      "serverId": "1ec6b3db-b2c1-4fa4-84a2-4c7efe89ba71",
+      "unresolved": false
+    },
+    {
+      "key": {
+        "uuid": "AAAAYX//+vw\u003d",
+        "filename": "res/values-nl/strings.xml",
+        "patchSetId": 1
+      },
+      "lineNbr": 232,
+      "author": {
+        "id": 2881
+      },
+      "writtenOn": "2012-09-16T19:46:58Z",
+      "side": 1,
+      "message": "De aftelklok \\\u0027\u003cxliff:g id\u003d\"timer\"\u003e%1$s\u003c/xliff:g\u003e\\\u0027 wordt verwijderd.\\n\\nWeet u het zeker?\\n",
+      "revId": "bfb3f086b569e48ad2ed0fe008da46cf919d2ed3",
+      "serverId": "1ec6b3db-b2c1-4fa4-84a2-4c7efe89ba71",
+      "unresolved": false
+    },
+    {
+      "key": {
+        "uuid": "AAAAYX//+vs\u003d",
+        "filename": "res/values-nl/strings.xml",
+        "patchSetId": 1
+      },
+      "lineNbr": 237,
+      "author": {
+        "id": 2881
+      },
+      "writtenOn": "2012-09-16T19:46:58Z",
+      "side": 1,
+      "message": "Gedrag van meldingen instellen",
+      "revId": "bfb3f086b569e48ad2ed0fe008da46cf919d2ed3",
+      "serverId": "1ec6b3db-b2c1-4fa4-84a2-4c7efe89ba71",
+      "unresolved": false
+    },
+    {
+      "key": {
+        "uuid": "AAAAYX//+vo\u003d",
+        "filename": "res/values-nl/strings.xml",
+        "patchSetId": 1
+      },
+      "lineNbr": 241,
+      "author": {
+        "id": 2881
+      },
+      "writtenOn": "2012-09-16T19:46:58Z",
+      "side": 1,
+      "message": "Staat die \\n er in het origineel ook? Volgens mij niet...",
+      "revId": "bfb3f086b569e48ad2ed0fe008da46cf919d2ed3",
+      "serverId": "1ec6b3db-b2c1-4fa4-84a2-4c7efe89ba71",
+      "unresolved": false
+    },
+    {
+      "key": {
+        "uuid": "AAAAYX//+vk\u003d",
+        "filename": "res/values-nl/strings.xml",
+        "patchSetId": 1
+      },
+      "lineNbr": 244,
+      "author": {
+        "id": 2881
+      },
+      "writtenOn": "2012-09-16T19:46:58Z",
+      "side": 1,
+      "message": "- Bij aftellen",
+      "revId": "bfb3f086b569e48ad2ed0fe008da46cf919d2ed3",
+      "serverId": "1ec6b3db-b2c1-4fa4-84a2-4c7efe89ba71",
+      "unresolved": false
+    },
+    {
+      "key": {
+        "uuid": "AAAAYX//+vg\u003d",
+        "filename": "res/values-nl/strings.xml",
+        "patchSetId": 1
+      },
+      "lineNbr": 248,
+      "author": {
+        "id": 2881
+      },
+      "writtenOn": "2012-09-16T19:46:58Z",
+      "side": 1,
+      "message": "- Melding in statusbalk weergeven",
+      "revId": "bfb3f086b569e48ad2ed0fe008da46cf919d2ed3",
+      "serverId": "1ec6b3db-b2c1-4fa4-84a2-4c7efe89ba71",
+      "unresolved": false
+    },
+    {
+      "key": {
+        "uuid": "AAAAYX//+vc\u003d",
+        "filename": "res/values-nl/strings.xml",
+        "patchSetId": 1
+      },
+      "lineNbr": 250,
+      "author": {
+        "id": 2881
+      },
+      "writtenOn": "2012-09-16T19:46:58Z",
+      "side": 1,
+      "message": "- Geen melding in statusbalk weergeven",
+      "revId": "bfb3f086b569e48ad2ed0fe008da46cf919d2ed3",
+      "serverId": "1ec6b3db-b2c1-4fa4-84a2-4c7efe89ba71",
+      "unresolved": false
+    },
+    {
+      "key": {
+        "uuid": "AAAAYX//+vY\u003d",
+        "filename": "res/values-nl/strings.xml",
+        "patchSetId": 1
+      },
+      "lineNbr": 253,
+      "author": {
+        "id": 2881
+      },
+      "writtenOn": "2012-09-16T19:46:58Z",
+      "side": 1,
+      "message": "- Bij aflopen (?)\n\n- Bij einde van de aftelklok",
+      "revId": "bfb3f086b569e48ad2ed0fe008da46cf919d2ed3",
+      "serverId": "1ec6b3db-b2c1-4fa4-84a2-4c7efe89ba71",
+      "unresolved": false
+    },
+    {
+      "key": {
+        "uuid": "AAAAYX//+vQ\u003d",
+        "filename": "res/values-nl/strings.xml",
+        "patchSetId": 1
+      },
+      "lineNbr": 257,
+      "author": {
+        "id": 2881
+      },
+      "writtenOn": "2012-09-16T19:46:58Z",
+      "side": 1,
+      "message": "- Melding in statusbalk weergeven",
+      "revId": "bfb3f086b569e48ad2ed0fe008da46cf919d2ed3",
+      "serverId": "1ec6b3db-b2c1-4fa4-84a2-4c7efe89ba71",
+      "unresolved": false
+    },
+    {
+      "key": {
+        "uuid": "AAAAYX//+vU\u003d",
+        "filename": "res/values-nl/strings.xml",
+        "patchSetId": 1
+      },
+      "lineNbr": 259,
+      "author": {
+        "id": 2881
+      },
+      "writtenOn": "2012-09-16T19:46:58Z",
+      "side": 1,
+      "message": "- Geen melding in statusbalk weergeven",
+      "revId": "bfb3f086b569e48ad2ed0fe008da46cf919d2ed3",
+      "serverId": "1ec6b3db-b2c1-4fa4-84a2-4c7efe89ba71",
+      "unresolved": false
+    },
+    {
+      "key": {
+        "uuid": "AAAAYX//+vM\u003d",
+        "filename": "res/values-nl/strings.xml",
+        "patchSetId": 1
+      },
+      "lineNbr": 264,
+      "author": {
+        "id": 2881
+      },
+      "writtenOn": "2012-09-16T19:46:58Z",
+      "side": 1,
+      "message": "scherm -\u003e aftelscherm",
+      "revId": "bfb3f086b569e48ad2ed0fe008da46cf919d2ed3",
+      "serverId": "1ec6b3db-b2c1-4fa4-84a2-4c7efe89ba71",
+      "unresolved": false
+    },
+    {
+      "key": {
+        "uuid": "AAAAYX//+vI\u003d",
+        "filename": "res/values-nl/strings.xml",
+        "patchSetId": 1
+      },
+      "lineNbr": 266,
+      "author": {
+        "id": 2881
+      },
+      "writtenOn": "2012-09-16T19:46:58Z",
+      "side": 1,
+      "message": "scherm -\u003e aftelscherm",
+      "revId": "bfb3f086b569e48ad2ed0fe008da46cf919d2ed3",
+      "serverId": "1ec6b3db-b2c1-4fa4-84a2-4c7efe89ba71",
+      "unresolved": false
+    },
+    {
+      "key": {
+        "uuid": "AAAAYX//+vA\u003d",
+        "filename": "res/values-nl/strings.xml",
+        "patchSetId": 1
+      },
+      "lineNbr": 285,
+      "author": {
+        "id": 2881
+      },
+      "writtenOn": "2012-09-16T19:46:58Z",
+      "side": 1,
+      "message": "- Trillen in een gesprek",
+      "revId": "bfb3f086b569e48ad2ed0fe008da46cf919d2ed3",
+      "serverId": "1ec6b3db-b2c1-4fa4-84a2-4c7efe89ba71",
+      "unresolved": false
+    },
+    {
+      "key": {
+        "uuid": "AAAAYX//+vE\u003d",
+        "filename": "res/values-nl/strings.xml",
+        "patchSetId": 1
+      },
+      "lineNbr": 287,
+      "author": {
+        "id": 2881
+      },
+      "writtenOn": "2012-09-16T19:46:58Z",
+      "side": 1,
+      "message": "- Niet trillen in een gesprek",
+      "revId": "bfb3f086b569e48ad2ed0fe008da46cf919d2ed3",
+      "serverId": "1ec6b3db-b2c1-4fa4-84a2-4c7efe89ba71",
+      "unresolved": false
+    },
+    {
+      "key": {
+        "uuid": "AAAAYX//+u8\u003d",
+        "filename": "res/values-nl/strings.xml",
+        "patchSetId": 1
+      },
+      "lineNbr": 290,
+      "author": {
+        "id": 2881
+      },
+      "writtenOn": "2012-09-16T19:46:58Z",
+      "side": 1,
+      "message": "- Aftelklok",
+      "revId": "bfb3f086b569e48ad2ed0fe008da46cf919d2ed3",
+      "serverId": "1ec6b3db-b2c1-4fa4-84a2-4c7efe89ba71",
+      "unresolved": false
+    },
+    {
+      "key": {
+        "uuid": "AAAAYX//+u4\u003d",
+        "filename": "res/values-nl/strings.xml",
+        "patchSetId": 1
+      },
+      "lineNbr": 292,
+      "author": {
+        "id": 2881
+      },
+      "writtenOn": "2012-09-16T19:46:58Z",
+      "side": 1,
+      "message": "- Aftelklok loopt\n\n- Er loopt een aftelklok\n\n- Klok is aan het aftellen",
+      "revId": "bfb3f086b569e48ad2ed0fe008da46cf919d2ed3",
+      "serverId": "1ec6b3db-b2c1-4fa4-84a2-4c7efe89ba71",
+      "unresolved": false
+    },
+    {
+      "key": {
+        "uuid": "AAAAYX//+uo\u003d",
+        "filename": "res/values-nl/strings.xml",
+        "patchSetId": 1
+      },
+      "lineNbr": 296,
+      "author": {
+        "id": 2881
+      },
+      "writtenOn": "2012-09-16T19:46:58Z",
+      "side": 1,
+      "message": "Resterende tijd: \u003cxliff:g id\u003d\"time\"\u003e%1$s",
+      "revId": "bfb3f086b569e48ad2ed0fe008da46cf919d2ed3",
+      "serverId": "1ec6b3db-b2c1-4fa4-84a2-4c7efe89ba71",
+      "unresolved": false
+    },
+    {
+      "key": {
+        "uuid": "AAAAYX//+u0\u003d",
+        "filename": "res/values-nl/strings.xml",
+        "patchSetId": 1
+      },
+      "lineNbr": 299,
+      "author": {
+        "id": 2881
+      },
+      "writtenOn": "2012-09-16T19:46:58Z",
+      "side": 1,
+      "message": "- Sleep naar links om stopwatch en aftelklok te tonen",
+      "revId": "bfb3f086b569e48ad2ed0fe008da46cf919d2ed3",
+      "serverId": "1ec6b3db-b2c1-4fa4-84a2-4c7efe89ba71",
+      "unresolved": false
+    },
+    {
+      "key": {
+        "uuid": "AAAAYX//+uw\u003d",
+        "filename": "res/values-nl/strings.xml",
+        "patchSetId": 1
+      },
+      "lineNbr": 301,
+      "author": {
+        "id": 2881
+      },
+      "writtenOn": "2012-09-16T19:46:58Z",
+      "side": 1,
+      "message": "- Om het gedrag van ronde en tussentijd te wijzigen, gaat u naar de menu-optie Instellingen",
+      "revId": "bfb3f086b569e48ad2ed0fe008da46cf919d2ed3",
+      "serverId": "1ec6b3db-b2c1-4fa4-84a2-4c7efe89ba71",
+      "unresolved": false
+    }
+  ]
+}
