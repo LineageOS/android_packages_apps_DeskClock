@@ -1,0 +1,21 @@
+{
+  "comments": [
+    {
+      "key": {
+        "uuid": "AAAAYX//+Zw\u003d",
+        "filename": "res/values/strings.xml",
+        "patchSetId": 6
+      },
+      "lineNbr": 495,
+      "author": {
+        "id": 3134
+      },
+      "writtenOn": "2012-09-17T16:33:49Z",
+      "side": 1,
+      "message": "If you change this string, the stopwatch copyright need to be updated also (line 426)",
+      "revId": "6f6b5afd998076bfbb1e3e139ee087577d7b80f7",
+      "serverId": "1ec6b3db-b2c1-4fa4-84a2-4c7efe89ba71",
+      "unresolved": false
+    }
+  ]
+}
