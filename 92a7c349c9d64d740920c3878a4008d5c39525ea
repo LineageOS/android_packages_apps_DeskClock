@@ -1,0 +1,55 @@
+{
+  "comments": [
+    {
+      "key": {
+        "uuid": "AAAAYX//+UA\u003d",
+        "filename": "res/values-pt/strings.xml",
+        "patchSetId": 5
+      },
+      "lineNbr": 174,
+      "author": {
+        "id": 4397
+      },
+      "writtenOn": "2012-09-18T02:33:34Z",
+      "side": 1,
+      "message": "\"Preferências para configurar\" is a little weird. What do you think about \"Configurar preferências de voltas e setores\" ? It is implied that some behavior is being changed and the description is a bit more succinct.",
+      "revId": "92a7c349c9d64d740920c3878a4008d5c39525ea",
+      "serverId": "1ec6b3db-b2c1-4fa4-84a2-4c7efe89ba71",
+      "unresolved": false
+    },
+    {
+      "key": {
+        "uuid": "AAAAYX//+Tw\u003d",
+        "filename": "res/values-pt/strings.xml",
+        "patchSetId": 5
+      },
+      "lineNbr": 208,
+      "author": {
+        "id": 4397
+      },
+      "writtenOn": "2012-09-18T02:33:34Z",
+      "side": 1,
+      "message": "Same thing here. We could use \"Configurar preferências de notificação da contágem regressiva\"",
+      "revId": "92a7c349c9d64d740920c3878a4008d5c39525ea",
+      "serverId": "1ec6b3db-b2c1-4fa4-84a2-4c7efe89ba71",
+      "unresolved": false
+    },
+    {
+      "key": {
+        "uuid": "AAAAYX//+UE\u003d",
+        "filename": "res/values-pt/strings.xml",
+        "patchSetId": 5
+      },
+      "lineNbr": 236,
+      "author": {
+        "id": 4397
+      },
+      "writtenOn": "2012-09-18T02:33:34Z",
+      "side": 1,
+      "message": "\"Acesse o menu para configurar as preferências de voltas e setores\" is my suggestiong here.",
+      "revId": "92a7c349c9d64d740920c3878a4008d5c39525ea",
+      "serverId": "1ec6b3db-b2c1-4fa4-84a2-4c7efe89ba71",
+      "unresolved": false
+    }
+  ]
+}
