@@ -129,18 +129,248 @@
     <string name="control_set_alarm_with_existing" msgid="1128169496817859490">"Alarmen er indstillet til: <xliff:g id="TIME">%s</xliff:g>"</string>
 
     <!-- CM10 additions -->
+
+    <!-- TimerClockService is not ready -->
+    <string name="msg_timer_service_is_not_ready">\nTidstjenesten er ikke klar. Ingen operation er tilladt.\n</string>
+    <!-- Fails to create a new timer -->
+    <string name="msg_timer_creation_fails">\nTidsoprettelsen mislykkedes. Ingen operation er tilladt.\n</string>
+    <!-- Ui thread fails  -->
+    <string name="msg_timer_ui_thread_fails">\nTegning af UI-tråd mislykkedes. Ingen operation er tilladt.\n</string>
+    <!-- Preferences update fails  -->
+    <string name="msg_pref_update_fails">\nPræferenceopdatering mislykkedes. Værdien blev ikke ændret.\n</string>
+    <!-- The operation fails -->
+    <string name="msg_operation_fails">\nOperationen mislykkes.\n</string>
+
+    <!-- Title of the StopWatch fragment -->
+    <string name="stopwatch_title">Stopur</string>
+    <!-- StopWatch. Stop timer button text -->
+    <string name="stopwatch_actions_stop">Stop</string>
+    <!-- StopWatch. Stop timer button content description -->
+    <string name="stopwatch_actions_stop_cd">Stop det aktuelle stopur</string>
+    <!-- StopWatch. Start timer button text -->
+    <string name="stopwatch_actions_start">Start</string>
+    <!-- StopWatch. Start timer button content description -->
+    <string name="stopwatch_actions_start_cd">Start det aktuelle stopur</string>
+    <!-- StopWatch. Resume timer button text -->
+    <string name="stopwatch_actions_resume">Genoptag</string>
+    <!-- StopWatch. Resume timer button content description -->
+    <string name="stopwatch_actions_resume_cd">Genoptag det aktuelle stopur</string>
+    <!-- StopWatch. Reset timer button text -->
+    <string name="stopwatch_actions_reset">Nulstil</string>
+    <!-- StopWatch. Reset timer button content description -->
+    <string name="stopwatch_actions_reset_cd">Nulstil det aktuelle stopur</string>
+    <!-- StopWatch. Take lap time button text -->
+    <string name="stopwatch_actions_lap">Omgang</string>
+    <!-- StopWatch. Take lap time button content description -->
+    <string name="stopwatch_actions_lap_cd">Tag et skærmbillede af omgangstiden</string>
+    <!-- StopWatch. Take lap sector time button text -->
+    <string name="stopwatch_actions_sector">Sektor</string>
+    <!-- StopWatch. Take lap sector time button content description -->
+    <string name="stopwatch_actions_sector_cd">Tag et skærmbillede af deltiden for sektoren på nuværende omgang</string>
+
+    <!-- StopWatch. Info Panel. Best lap title -->
+    <string name="stopwatch_info_panel_last_lap_title">Sidste omgang</string>
+    <!-- StopWatch. Info Panel. Best lap title -->
+    <string name="stopwatch_info_panel_best_lap_title">Bedste omgang</string>
+    <!-- StopWatch. Info Panel. Laps title -->
+    <string name="stopwatch_info_panel_laps_title">Omgange</string>
+    <!-- StopWatch. Info Panel. No data -->
+    <string name="stopwatch_info_panel_empty_data">Ingen data indsamlet</string>
+
+    <!-- StopWatch. Info Panel. An empty lap label -->
+    <string name="stopwatch_info_panel_empty_lap">Omgang</string>
+    <!-- StopWatch. Info Panel. Lap label -->
+    <string name="stopwatch_info_panel_lap_label">Omgang <xliff:g id="lap">%1$s</xliff:g></string>
+    <!-- StopWatch. Info Panel. Sector label -->
+    <string name="stopwatch_info_panel_lap_sector">Sektor <xliff:g id="sector">%1$s</xliff:g></string>
+
+    <!-- StopWatch. Menu. Hide last lap -->
+    <string name="stopwatch_menu_hide_last_lap_panel">Skjul \'Sidste omgang\'</string>
+    <!-- StopWatch. Menu. Hide best lap -->
+    <string name="stopwatch_menu_hide_best_lap_panel">Skjul \'Bedste omgang\'</string>
+    <!-- StopWatch. Menu. Hide best lap -->
+    <string name="stopwatch_menu_hide_laps_panel">Skjul \'Omgange\'</string>
+    <!-- StopWatch. Menu. Settings -->
+    <string name="stopwatch_menu_settings">Indstillinger</string>
+
+    <!-- StopWatch. Preferences. General -->
+    <string name="stopwatch_preferences_lap_sectors">Omgange/sektorer</string>
+    <!-- StopWatch. Preferences. Summary of General catergory -->
+    <string name="stopwatch_preferences_lap_sectors_summary">Indstillinger for konfiguration af omgange og sektorer.</string>
+    <!-- StopWatch. Preferences. Sectors -->
+    <string name="stopwatch_preferences_sectors">Sektorer</string>
+    <!-- StopWatch. Preferences. Summary of sectors -->
+    <string name="stopwatch_preferences_sectors_summary">{0,valg,0#Omgangssektorer ikke aktiveret.|1#Omgangssektorer konfigureret med 1 sektor.|1&lt;Omgangssektorer konfigureret med {0} sektorer.}</string>
+    <!-- StopWatch. Preferences. Best lap behaviour -->
+    <string name="stopwatch_preferences_best_lap_behaviour">Adfærd for bedste omgang</string>
+    <!-- StopWatch. Preferences. About -->
+    <string name="stopwatch_preferences_about">Om</string>
+    <!-- StopWatch. Preferences. Summary of About catergory -->
+    <string name="stopwatch_preferences_about_summary">Stopur: Copyright \u00A9 2012 CyanogenMod</string>
+
+    <!-- StopWatch. Best lap behaviour. Lower times are better -->
+    <string name="stopwatch_best_lap_lower_pref">Lavere tider er bedre</string>
+    <!-- StopWatch. Best lap behaviour. Summary of lower times are better  -->
+    <string name="stopwatch_best_lap_lower_pref_summary">Bedste omgang er den laveste tid.</string>
+    <!-- StopWatch. Best lap behaviour. Highest times are better -->
+    <string name="stopwatch_best_lap_highest_pref">Højere tider er bedre</string>
+    <!-- StopWatch. Best lap behaviour. Summary of highest times are better -->
+    <string name="stopwatch_best_lap_highest_pref_summary">Bedste omgang er den højeste tid.</string>
+
+    <!-- StopWatch. Sectors Dialog Preference. Enabled check text -->
+    <string name="sectors_dialog_enabled_text">Aktiverede omgangssektorer:</string>
+
+    <!-- Title of the CountDown fragment -->
+    <string name="countdown_title">Nedtælling</string>
+    <!-- CountDown. Stop timer button text -->
+    <string name="countdown_actions_stop">Stop</string>
+    <!-- CountDown. Stop timer button content description -->
+    <string name="countdown_actions_stop_cd">Stop det aktuelle nedtællingsur</string>
+    <!-- CountDown. Start timer button text -->
+    <string name="countdown_actions_start">Start</string>
+    <!-- CountDown. Start timer button content description -->
+    <string name="countdown_actions_start_cd">Start det aktuelle nedtællingsur</string>
+    <!-- CountDown. Resume timer button text -->
+    <string name="countdown_actions_resume">Genoptag</string>
+    <!-- CountDown. Resume timer button content description -->
+    <string name="countdown_actions_resume_cd">Genoptag det aktuelle nedtællingsur</string>
+    <!-- CountDown. Reset timer button text -->
+    <string name="countdown_actions_reset">Nulstil</string>
+    <!-- CountDown. Reset timer button content description -->
+    <string name="countdown_actions_reset_cd">Nulstil det aktuelle nedtællingsur</string>
+    <!-- CountDown. Cancel edition timer button text -->
+    <string name="countdown_actions_cancel">Annuller</string>
+    <!-- CountDown. Cancel edition button content description -->
+    <string name="countdown_actions_cancel_cd">Annuller udgavetilstanden for det aktuelle nedtællingsur</string>
+    <!-- CountDown. Set edition timer button text -->
+    <string name="countdown_actions_set">Indstil</string>
+    <!-- CountDown. Set edition button content description -->
+    <string name="countdown_actions_set_cd">Indstil tiden for det aktuelle nedtællingsur</string>
+
+    <!-- CountDown. Menu. Edit timer -->
+    <string name="countdown_menu_open_timer_editor">Åbn tidsredigering</string>
+    <!-- CountDown. Menu. Cancel timer -->
+    <string name="countdown_menu_close_timer_editor">Luk tidsredigering</string>
+    <!-- CountDown. Menu. Settings -->
+    <string name="countdown_menu_settings">Indstillinger</string>
+
+    <!-- CountDown. Saved CountDown Timers Panel. Title -->
+    <string name="countdown_panel_title">Gemte nedtællingstider</string>
+    <!-- CountDown. Saved CountDown Timers Panel. Add timer -->
+    <string name="countdown_panel_add_text">Tilføj aktuelle tid</string>
+    <!-- CountDown. Saved CountDown Timers Panel. Add timer. Content description -->
+    <string name="countdown_panel_add_text_cd">Tilføj nedtællingstiden til listen over gemte tider.</string>
+    <!-- CountDown. Saved CountDown Timers Panel. Remove timer. Content description -->
+    <string name="countdown_panel_remove_cd">Fjern nedtællingstiden fra listen over gemte tider.</string>
+    <!-- CountDown. Saved CountDown Timers. Add confirmation dialog. -->
+    <string name="countdown_dialog_add">En ny tid vil blive oprettet.\n\Fortsæt?\n</string>
+    <!-- CountDown. Saved CountDown Timers. Delete confirmation dialog. -->
+    <string name="countdown_dialog_delete">Tiden \'<xliff:g id="timer">%1$s</xliff:g>\' slettes.\n\nEr du sikker?\n</string>
+
+    <!-- CountDown. Preferences. Notifications -->
+    <string name="countdown_preferences_notifications">Meddelelser</string>
+    <!-- CountDown. Preferences. Summary of Notifications category -->
+    <string name="countdown_preferences_notifications_summary">Indstillinger for konfigurering af nedtællingsmeddelelser.</string>
+    <!-- CountDown. Preferences. About -->
+    <string name="countdown_preferences_about">Om</string>
+    <!-- CountDown. Preferences. Summary of About catergory -->
+    <string name="countdown_preferences_about_summary">Nedtælling: Copyright \u00A9 2012 CyanogenMod</string>
+
+    <!-- CountDown. Preferences. On CountDown in progress category title -->
+    <string name="countdown_notification_oncountdown_category">Ved nedtælling</string>
+    <!-- CountDown. Preferences. On CountDown in progress. Notifications title -->
+    <string name="countdown_notification_oncountdown_notifications_title">Meddelelser</string>
+    <!-- CountDown. Preferences. On CountDown in progress. Notifications summary Off -->
+    <string name="countdown_notification_oncountdown_notifications_summary_on">Vis meddelelser i statuslinjen.</string>
+    <!-- CountDown. Preferences. On CountDown in progress. Notifications summary On -->
+    <string name="countdown_notification_oncountdown_notifications_summary_off">Vis ikke meddelelser i statuslinjen.</string>
+
+    <!-- CountDown. Preferences. On final CountDown category title -->
+    <string name="countdown_notification_onfinalcountdown_category">Ved afsluttet nedtælling</string>
+    <!-- CountDown. Preferences. On CountDown in progress. Notifications title -->
+    <string name="countdown_notification_onfinalcountdown_notifications_title">Meddelelser</string>
+    <!-- CountDown. Preferences. On CountDown in progress. Notifications summary Off -->
+    <string name="countdown_notification_onfinalcountdown_notifications_summary_on">Vis meddelelser i statuslinjen.</string>
+    <!-- CountDown. Preferences. On CountDown in progress. Notifications summary On -->
+    <string name="countdown_notification_onfinalcountdown_notifications_summary_off">Vis ikke meddelelser i statuslinjen.</string>
+
+    <!-- CountDown. Preferences. On CountDown in progress. Show clock screen title -->
+    <string name="countdown_notification_onfinalcountdown_open_clock_screen_title">Åbn ur-skærmen</string>
+    <!-- CountDown. Preferences. On CountDown in progress. Show clock screen summary On -->
+    <string name="countdown_notification_onfinalcountdown_open_clock_screen_summary_on">Når nedtællingen er færdig, åbnes skærmen med nedtællingsuret (Denne indstilling ignoreres under et opkald).</string>
+    <!-- CountDown. Preferences. On CountDown in progress. Show clock screen summary On -->
+    <string name="countdown_notification_onfinalcountdown_open_clock_screen_summary_off">Når nedtællingen er færdig, skal brugerens aktivitet ikke forstyrres ved at åbne skærmen med nedtællingsuret.</string>
+
+    <!-- CountDown. Preferences. On CountDown in progress. Ringtone -->
+    <string name="countdown_notification_onfinalcountdown_ringtone_title">Ringetone</string>
+    <!-- CountDown. Preferences. On CountDown in progress. Ringtone. Silent option -->
+    <string name="countdown_notification_onfinalcountdown_ringtone_silent">Lydløs</string>
+
+    <!-- CountDown. Preferences. On CountDown in progress. Vibrate title -->
+    <string name="countdown_notification_onfinalcountdown_vibrate_title">Vibrer</string>
+    <!-- CountDown. Preferences. On CountDown in progress. Vibrate always option -->
+    <string name="countdown_notification_onfinalcountdown_vibrate_always">Altid</string>
+    <!-- CountDown. Preferences. On CountDown in progress. Vibrate only when silent option -->
+    <string name="countdown_notification_onfinalcountdown_vibrate_only_when_silent">Kun ved lydløs</string>
+    <!-- CountDown. Preferences. On CountDown in progress. Vibrate never option -->
+    <string name="countdown_notification_onfinalcountdown_vibrate_never">Aldrig</string>
+
+    <!-- CountDown. Preferences. On CountDown in progress. Vibrate on call title -->
+    <string name="countdown_notification_onfinalcountdown_vibrate_on_call_title">Vibrer ved opkald</string>
+    <!-- CountDown. Preferences. On CountDown in progress. Vibrate on call summary On -->
+    <string name="countdown_notification_onfinalcountdown_vibrate_on_call_summary_on">Tillad vibration under et opkald.</string>
+    <!-- CountDown. Preferences. On CountDown in progress. Vibrate on call summary On -->
+    <string name="countdown_notification_onfinalcountdown_vibrate_on_call_summary_off">Ingen vibration under et opkald.</string>
+
+    <!-- Timer Clock Service. CountDown notification title for countdown timer -->
+    <string name="service_countdown_notification_title">Nedtællingsur</string>
+    <!-- Timer Clock Service. CountDown notification text for countdown in progress -->
+    <string name="service_countdown_notification_msg_progress">Der er en nedtælling i gang.</string>
+    <!-- Timer Clock Service. CountDown notification text for ended countdown -->
+    <string name="service_countdown_notification_msg_end">Nedtællingsuret har nået den afsluttende nedtælling.</string>
+    <!-- Timer Clock Service. CountDown notification summary  -->
+    <string name="service_countdown_notification_summary">Resterende tid: <xliff:g id="time">%1$s</xliff:g></string>
+
+    <!-- The text showed to advise that other fragment exists in deskclock fragment -->
+    <string name="cling_deskclock_desc">For at vise tidstællere for stop- og nedtællingsur, glid til venstre.</string>
+    <!-- The text showed to advise the use of lap/sectors -->
+    <string name="cling_stopwatch_desc">For at konfigurere adfærd for omgange og sektore, gå til menuen indstillinger.</string>
+    <!-- The text showed to advise how to edit the countdown clock, with a long press holding -->
+    <string name="cling_countdown_desc">For at redigere nedtællingen, tryk og hold nede på uret.</string>
+
+    <!-- The overflow actionbar button -->
+    <string name="overflow_button_cd">Flere muligheder</string>
+
+    <!-- Setting labels on Set alarm screen: Increasing volume on or off -->
     <string name="alarm_incvol">Stigende lydstyrke</string>
+
+    <!-- Setting title for the flip action setting. -->
     <string name="flip_action_title">Vende-handling</string>
+
+    <!-- Dialog title of the flip action setting. -->
     <string name="flip_action_dialog_title">Vende-handling</string>
+
+    <!-- Setting summary for the flip action setting. -->
     <string name="flip_action_summary">At vende telefonen vil <xliff:g id="action">%s</xliff:g></string>
+
+    <!-- Entries listed in the setting for the flip action setting. -->
     <string-array name="flip_action_entries">
       <item>Gøre ingenting</item>
       <item>Slumre alarmen</item>
       <item>Afbryde alarmen</item>
     </string-array>
+
+    <!-- Setting labels on Set alarm screen: Select profile to change to -->
     <string name="alarm_profile">Profil</string>
+
+    <!-- Option of profile setting of the alarm: No change to profile -->
     <string name="alarm_profile_no_change_profile">Ingen ændring af profil</string>
+
+    <!-- Summary of alarm profile: No change profile -->
     <string name="alarm_profile_summary_no_change">Ingen ændring af profil når alarmen udløses</string>
+
+    <!-- Summary of alarm profile: Change profile to -->
     <string name="alarm_profile_summary_change_to">Når alarmen udløses, vil profilen blive ændret til <xliff:g id="profile">%s</xliff:g></string>
+
     <!-- CM10 additions end -->
 </resources>
