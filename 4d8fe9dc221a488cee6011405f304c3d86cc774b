@@ -1,0 +1,72 @@
+{
+  "comments": [
+    {
+      "key": {
+        "uuid": "AAAAYX//+C4\u003d",
+        "filename": "res/values-hu/strings.xml",
+        "patchSetId": 2
+      },
+      "lineNbr": 190,
+      "author": {
+        "id": 3214
+      },
+      "writtenOn": "2012-09-18T08:55:06Z",
+      "side": 1,
+      "message": "Itt megmaradt az indítás a start helyett. Sorry",
+      "revId": "4d8fe9dc221a488cee6011405f304c3d86cc774b",
+      "serverId": "1ec6b3db-b2c1-4fa4-84a2-4c7efe89ba71",
+      "unresolved": false
+    },
+    {
+      "key": {
+        "uuid": "AAAAYX//+C0\u003d",
+        "filename": "res/values-hu/strings.xml",
+        "patchSetId": 2
+      },
+      "lineNbr": 208,
+      "author": {
+        "id": 3214
+      },
+      "writtenOn": "2012-09-18T08:55:06Z",
+      "side": 1,
+      "message": "A fenti \u0027aktuális\u0027-okat javítottam, de itt maradt, mert hogy több kör is lehet.",
+      "revId": "4d8fe9dc221a488cee6011405f304c3d86cc774b",
+      "serverId": "1ec6b3db-b2c1-4fa4-84a2-4c7efe89ba71",
+      "unresolved": false
+    },
+    {
+      "key": {
+        "uuid": "AAAAYX//+Cw\u003d",
+        "filename": "res/values-hu/strings.xml",
+        "patchSetId": 2
+      },
+      "lineNbr": 242,
+      "author": {
+        "id": 3214
+      },
+      "writtenOn": "2012-09-18T08:55:06Z",
+      "side": 1,
+      "message": "Ezt is javítottam.",
+      "revId": "4d8fe9dc221a488cee6011405f304c3d86cc774b",
+      "serverId": "1ec6b3db-b2c1-4fa4-84a2-4c7efe89ba71",
+      "unresolved": false
+    },
+    {
+      "key": {
+        "uuid": "AAAAYX//+Cs\u003d",
+        "filename": "res/values-hu/strings.xml",
+        "patchSetId": 2
+      },
+      "lineNbr": 244,
+      "author": {
+        "id": 3214
+      },
+      "writtenOn": "2012-09-18T08:55:06Z",
+      "side": 1,
+      "message": "Viszont ide még mindig nem tudok jobbat.",
+      "revId": "4d8fe9dc221a488cee6011405f304c3d86cc774b",
+      "serverId": "1ec6b3db-b2c1-4fa4-84a2-4c7efe89ba71",
+      "unresolved": false
+    }
+  ]
+}
