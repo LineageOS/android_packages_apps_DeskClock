@@ -1,0 +1,140 @@
+{
+  "comments": [
+    {
+      "key": {
+        "uuid": "AAAAYX//+Ew\u003d",
+        "filename": "res/values-nl/strings.xml",
+        "patchSetId": 2
+      },
+      "lineNbr": 138,
+      "author": {
+        "id": 2881
+      },
+      "writtenOn": "2012-09-18T08:02:40Z",
+      "side": 1,
+      "message": "- Tussentijden\n\nEngels is ook meervoud toch?",
+      "revId": "491120b35316c5b82fe7e10402c862c74616f781",
+      "serverId": "1ec6b3db-b2c1-4fa4-84a2-4c7efe89ba71",
+      "unresolved": false
+    },
+    {
+      "key": {
+        "uuid": "AAAAYX//+Es\u003d",
+        "filename": "res/values-nl/strings.xml",
+        "patchSetId": 2
+      },
+      "lineNbr": 151,
+      "author": {
+        "id": 2881
+      },
+      "writtenOn": "2012-09-18T08:02:40Z",
+      "side": 1,
+      "message": "Hier ben ik het (ook in het Engels) niet mee eens:\nHier is het origineel: https://www.dropbox.com/s/sgkev5031484zpz/Screenshot_2012-09-18-12-38-58.png\n\n\"Enabled lap sectors\" slaat op het aantal tussentijden wat je daaronder kiest, maar het vinkje wat erachter staat, maakt het verwarrend.\n\nWant als het vinkje uit staat, zijn er helemaal geen \"Enabled lap sectors\" dus klopt de tekst niet.\n\nDaarom was mijn voorstel om van de Engelse vertaling af te wijken en het duidelijker te maken.\n\n- Aantal tussentijden inschakelen:",
+      "revId": "491120b35316c5b82fe7e10402c862c74616f781",
+      "serverId": "1ec6b3db-b2c1-4fa4-84a2-4c7efe89ba71",
+      "unresolved": false
+    },
+    {
+      "key": {
+        "uuid": "AAAAYX//+Eg\u003d",
+        "filename": "res/values-nl/strings.xml",
+        "patchSetId": 2
+      },
+      "lineNbr": 177,
+      "author": {
+        "id": 2881
+      },
+      "writtenOn": "2012-09-18T08:02:40Z",
+      "side": 1,
+      "message": "verwijderen van -\u003e verwijderen uit\n\nJe verwijdert uit een lijst van klokken",
+      "revId": "491120b35316c5b82fe7e10402c862c74616f781",
+      "serverId": "1ec6b3db-b2c1-4fa4-84a2-4c7efe89ba71",
+      "unresolved": false
+    },
+    {
+      "key": {
+        "uuid": "AAAAYX//+Ec\u003d",
+        "filename": "res/values-nl/strings.xml",
+        "patchSetId": 2
+      },
+      "lineNbr": 204,
+      "author": {
+        "id": 2881
+      },
+      "writtenOn": "2012-09-18T08:02:40Z",
+      "side": 1,
+      "message": "scherm -\u003e aftelscherm",
+      "revId": "491120b35316c5b82fe7e10402c862c74616f781",
+      "serverId": "1ec6b3db-b2c1-4fa4-84a2-4c7efe89ba71",
+      "unresolved": false
+    },
+    {
+      "key": {
+        "uuid": "AAAAYX//+D4\u003d",
+        "filename": "res/values-nl/strings.xml",
+        "patchSetId": 2
+      },
+      "lineNbr": 217,
+      "author": {
+        "id": 2881
+      },
+      "writtenOn": "2012-09-18T08:02:40Z",
+      "side": 1,
+      "message": "- Trillen tijdens bellen\n\nVoor redenering, zie onder",
+      "revId": "491120b35316c5b82fe7e10402c862c74616f781",
+      "serverId": "1ec6b3db-b2c1-4fa4-84a2-4c7efe89ba71",
+      "unresolved": false
+    },
+    {
+      "key": {
+        "uuid": "AAAAYX//+EI\u003d",
+        "filename": "res/values-nl/strings.xml",
+        "patchSetId": 2
+      },
+      "lineNbr": 218,
+      "author": {
+        "id": 2881
+      },
+      "writtenOn": "2012-09-18T08:02:40Z",
+      "side": 1,
+      "message": "Je uitleg in Patch set 1 is mooi, maar toch vind ik de tekst erg lelijk zo :) Volg dan meer het Engels en maak er dit van:\n\n- Trillen in een gesprek toestaan\n\nBij de SMS instelling wordt een soortgelijke vertaling gebruikt (ook al is het daar een statische beschrijving).\nDaar staat namelijk \"Trillen tijdens het bellen toestaan\".\nDie vertaling zou hier ook niet misstaan en dan hou je de vertaling ook consequent.\n\n- Trillen tijdens het bellen toestaan",
+      "revId": "491120b35316c5b82fe7e10402c862c74616f781",
+      "serverId": "1ec6b3db-b2c1-4fa4-84a2-4c7efe89ba71",
+      "unresolved": false
+    },
+    {
+      "key": {
+        "uuid": "AAAAYX//+EE\u003d",
+        "filename": "res/values-nl/strings.xml",
+        "patchSetId": 2
+      },
+      "lineNbr": 219,
+      "author": {
+        "id": 2881
+      },
+      "writtenOn": "2012-09-18T08:02:40Z",
+      "side": 1,
+      "message": "- Trillen tijdens het bellen niet toestaan",
+      "revId": "491120b35316c5b82fe7e10402c862c74616f781",
+      "serverId": "1ec6b3db-b2c1-4fa4-84a2-4c7efe89ba71",
+      "unresolved": false
+    },
+    {
+      "key": {
+        "uuid": "AAAAYX//+EA\u003d",
+        "filename": "res/values-nl/strings.xml",
+        "patchSetId": 2
+      },
+      "lineNbr": 229,
+      "author": {
+        "id": 2881
+      },
+      "writtenOn": "2012-09-18T08:02:40Z",
+      "side": 1,
+      "message": "sectoren -\u003e tussentijden",
+      "revId": "491120b35316c5b82fe7e10402c862c74616f781",
+      "serverId": "1ec6b3db-b2c1-4fa4-84a2-4c7efe89ba71",
+      "unresolved": false
+    }
+  ]
+}
