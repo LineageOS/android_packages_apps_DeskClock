@@ -176,7 +176,7 @@
     <string name="stopwatch_preferences_sectors_summary">{0,scelta,0#Settori di giro non abilitati.|1#Settori di giro configurati con un solo settore.|1&lt;Settori di giro configurati con {0} settori.}</string>
     <string name="stopwatch_preferences_best_lap_behaviour">Configurazione miglior giro</string>
     <string name="stopwatch_preferences_about">Info</string>
-    <string name="stopwatch_preferences_about_summary">Cronometro. CyanogenMod © 2012</string>
+    <string name="stopwatch_preferences_about_summary">Cronometro. Copyright CyanogenMod \u00A9 2012</string>
     <string name="stopwatch_best_lap_lower_pref">I tempi più bassi sono i migliori</string>
     <string name="stopwatch_best_lap_lower_pref_summary">Il miglior giro è quello con tempo più basso.</string>
     <string name="stopwatch_best_lap_highest_pref">I tempi più alti sono i migliori</string>
@@ -207,7 +207,7 @@
     <string name="countdown_preferences_notifications">Notifiche</string>
     <string name="countdown_preferences_notifications_summary">Configurazione delle notifiche del conto alla rovescia.</string>
     <string name="countdown_preferences_about">Info</string>
-    <string name="countdown_preferences_about_summary">Conto alla rovescia. CyanogenMod © 2012</string>
+    <string name="countdown_preferences_about_summary">Conto alla rovescia. Copyright CyanogenMod \u00A9 2012</string>
     <string name="countdown_notification_oncountdown_category">Conto alla rovescia</string>
     <string name="countdown_notification_oncountdown_notifications_title">Notifiche</string>
     <string name="countdown_notification_oncountdown_notifications_summary_on">Mostra le notifiche nella barra di stato.</string>
