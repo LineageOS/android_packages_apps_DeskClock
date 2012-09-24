@@ -127,4 +127,100 @@
     <string name="loading_ringtone" msgid="6523322777415268044">"Načítání vyzváněcího tónu..."</string>
     <string name="control_set_alarm" msgid="2194676418924016327">"Nastavit budík"</string>
     <string name="control_set_alarm_with_existing" msgid="1128169496817859490">"Nastavení budíku: <xliff:g id="TIME">%s</xliff:g>"</string>
+
+    <string name="msg_timer_service_is_not_ready">\nSlužba časovače není připravena. Není povolena žádná operace.\n</string>
+    <string name="msg_timer_creation_fails">\nVytváření časovače selhalo. Není povolena žádná operace.\n</string>
+    <string name="msg_timer_ui_thread_fails">\nVykreslování UI selhalo. Není povolena žádná operace.\n</string>
+    <string name="msg_pref_update_fails">\nAktualizace nastavení selhala. Hodnota nebyla změněna.\n</string>
+    <string name="msg_operation_fails">\nOperace selhala.\n</string>
+    <string name="stopwatch_title">Stopky</string>
+    <string name="stopwatch_actions_stop">Zastavit</string>
+    <string name="stopwatch_actions_stop_cd">Zastavit aktuální běh stopek</string>
+    <string name="stopwatch_actions_start">Spustit</string>
+    <string name="stopwatch_actions_start_cd">Spustit aktuální běh stopek</string>
+    <string name="stopwatch_actions_resume">Pokračovat</string>
+    <string name="stopwatch_actions_resume_cd">Pokračovat v aktuálním běhu stopek</string>
+    <string name="stopwatch_actions_reset">Resetovat</string>
+    <string name="stopwatch_actions_reset_cd">Resetovat aktuální běh stopek</string>
+    <string name="stopwatch_actions_lap">Etapa</string>
+    <string name="stopwatch_actions_lap_cd">Pořídit snímek času etapy</string>
+    <string name="stopwatch_actions_sector">Úsek</string>
+    <string name="stopwatch_actions_sector_cd">Pořídit snímek času úseku aktuální etapy</string>
+    <string name="stopwatch_info_panel_last_lap_title">Poslední etapa</string>
+    <string name="stopwatch_info_panel_best_lap_title">Nejlepší etapa</string>
+    <string name="stopwatch_info_panel_laps_title">Etapy</string>
+    <string name="stopwatch_info_panel_empty_data">Nejsou shromážděna žádná data</string>
+    <string name="stopwatch_info_panel_empty_lap">Etapa</string>
+    <string name="stopwatch_info_panel_lap_label">Etapa <xliff:g id="lap">%1$s</xliff:g></string>
+    <string name="stopwatch_info_panel_lap_sector">Úsek <xliff:g id="sector">%1$s</xliff:g></string>
+    <string name="stopwatch_menu_hide_last_lap_panel">Skrýt \'poslední etapu\'</string>
+    <string name="stopwatch_menu_hide_best_lap_panel">Skrýt \'nejlepší etapu\'</string>
+    <string name="stopwatch_menu_hide_laps_panel">Skrýt \'etapy\'</string>
+    <string name="stopwatch_menu_settings">Nastavení</string>
+    <string name="stopwatch_preferences_lap_sectors">Etapy/úseky</string>
+    <string name="stopwatch_preferences_lap_sectors_summary">Konfigurace chování etap a úseků.</string>
+    <string name="stopwatch_preferences_sectors">Úseky</string>
+    <string name="stopwatch_preferences_sectors_summary">{0,choice,0#Úseky etapy nejsou zapnuty.|1#Úseky etapy konfigurovány s 1 úsekem.|1&lt;Úseky etapy konfigurovány s {0} úseky.}</string>
+    <string name="stopwatch_preferences_best_lap_behaviour">Chování nejlepší etapy</string>
+    <string name="stopwatch_preferences_about">O aplikaci</string>
+    <string name="stopwatch_preferences_about_summary">Stopwatch. CyanogenMod © 2012</string>
+    <string name="stopwatch_best_lap_lower_pref">Kratší časy jsou lepší</string>
+    <string name="stopwatch_best_lap_lower_pref_summary">Nejlepší etapa má nejkratší čas.</string>
+    <string name="stopwatch_best_lap_highest_pref">Delší časy jsou lepší</string>
+    <string name="stopwatch_best_lap_highest_pref_summary">Nejlepší etapa má nejdelší čas.</string>
+    <string name="sectors_dialog_enabled_text">Zapnuté úseky etapy:</string>
+    <string name="countdown_title">Odpočítávání</string>
+    <string name="countdown_actions_stop">Zastavit</string>
+    <string name="countdown_actions_stop_cd">Zastavit aktuální běh odpočítávání</string>
+    <string name="countdown_actions_start">Spustit</string>
+    <string name="countdown_actions_start_cd">Spustit aktuální běh odpočítávání</string>
+    <string name="countdown_actions_resume">Pokračovat</string>
+    <string name="countdown_actions_resume_cd">Pokračovat v aktuálním běhu odpočítávání</string>
+    <string name="countdown_actions_reset">Resetovat</string>
+    <string name="countdown_actions_reset_cd">Resetovat aktuální běh odpočítávání</string>
+    <string name="countdown_actions_cancel">Zrušit</string>
+    <string name="countdown_actions_cancel_cd">Zrušit režim úprav pro aktuální běh odpočítávání</string>
+    <string name="countdown_actions_set">Nastavit</string>
+    <string name="countdown_actions_set_cd">Nastavit čas aktuálního odpočítávání</string>
+    <string name="countdown_menu_open_timer_editor">Otevřít časový editor</string>
+    <string name="countdown_menu_close_timer_editor">Zavřít časový editor</string>
+    <string name="countdown_menu_settings">Nastavení</string>
+    <string name="countdown_panel_title">Uložené časovače odpočítávání</string>
+    <string name="countdown_panel_add_text">Přidat aktuální časovač</string>
+    <string name="countdown_panel_add_text_cd">Přidat odpočítávání na seznam uložených časovačů.</string>
+    <string name="countdown_panel_remove_cd">Odebrat odpočítávání ze seznamu uložených časovačů.</string>
+    <string name="countdown_dialog_add">Bude vytvořen nový časovač.\n\nPokračovat?\n</string>
+    <string name="countdown_dialog_delete">Časovač \'<xliff:g id="timer">%1$s</xliff:g>\' bude vymazán.\n\nOpravdu smazat?\n</string>
+    <string name="countdown_preferences_notifications">Upozornění</string>
+    <string name="countdown_preferences_notifications_summary">Nastavení chování upozornění odpočítávání.</string>
+    <string name="countdown_preferences_about">O aplikaci</string>
+    <string name="countdown_preferences_about_summary">Countdown. CyanogenMod © 2012</string>
+    <string name="countdown_notification_oncountdown_category">Při odpočítávání</string>
+    <string name="countdown_notification_oncountdown_notifications_title">Upozornění</string>
+    <string name="countdown_notification_oncountdown_notifications_summary_on">Zobrazit upozornění ve stavové liště.</string>
+    <string name="countdown_notification_oncountdown_notifications_summary_off">Nezobrazovat upozornění ve stavové liště.</string>
+    <string name="countdown_notification_onfinalcountdown_category">Při cílovém stavu odpočítávání</string>
+    <string name="countdown_notification_onfinalcountdown_notifications_title">Upozornění</string>
+    <string name="countdown_notification_onfinalcountdown_notifications_summary_on">Zobrazit upozornění ve stavové liště.</string>
+    <string name="countdown_notification_onfinalcountdown_notifications_summary_off">Nezobrazovat upozornění ve stavové liště.</string>
+    <string name="countdown_notification_onfinalcountdown_open_clock_screen_title">Otevřít obrazovku hodin</string>
+    <string name="countdown_notification_onfinalcountdown_open_clock_screen_summary_on">Po skončení odpočítávání se otevře obrazovka hodin (tato vobla je během hovoru ignorována).</string>
+    <string name="countdown_notification_onfinalcountdown_open_clock_screen_summary_off">Po skončení odpočítávání nevyrušovat otevíráním obrazovky hodin.</string>
+    <string name="countdown_notification_onfinalcountdown_ringtone_title">Vyzváněcí tón</string>
+    <string name="countdown_notification_onfinalcountdown_ringtone_silent">Tichý režim</string>
+    <string name="countdown_notification_onfinalcountdown_vibrate_title">Vibrace</string>
+    <string name="countdown_notification_onfinalcountdown_vibrate_always">Vždy</string>
+    <string name="countdown_notification_onfinalcountdown_vibrate_only_when_silent">Jen v tichém režimu</string>
+    <string name="countdown_notification_onfinalcountdown_vibrate_never">Nikdy</string>
+    <string name="countdown_notification_onfinalcountdown_vibrate_on_call_title">Vibrace při hovoru</string>
+    <string name="countdown_notification_onfinalcountdown_vibrate_on_call_summary_on">Umožnit vibrace během hovoru.</string>
+    <string name="countdown_notification_onfinalcountdown_vibrate_on_call_summary_off">Během hovoru nevibrovat.</string>
+    <string name="service_countdown_notification_title">Odpočítávání</string>
+    <string name="service_countdown_notification_msg_progress">Právě probíhá odpočítávání.</string>
+    <string name="service_countdown_notification_msg_end">Časovač dosáhl cílového stavu.</string>
+    <string name="service_countdown_notification_summary">Zbývající čas: <xliff:g id="time">%1$s</xliff:g></string>
+    <string name="cling_deskclock_desc">Posunutím doprava se zobrazí stopky a odpočítávání.</string>
+    <string name="cling_stopwatch_desc">Konfigurace chování etap a úseků v menu nastavení.</string>
+    <string name="cling_countdown_desc">Pro úpravu časovače podržet stisknuté hodiny.</string>
+    <string name="overflow_button_cd">Další možnosti</string>
 </resources>
