@@ -231,7 +231,7 @@
     <string name="service_countdown_notification_msg_progress">Ajastin on käytössä.</string>
     <string name="service_countdown_notification_msg_end">Ajastin on päättynyt.</string>
     <string name="service_countdown_notification_summary">Jäljellä oleva aika: <xliff:g id="time">%1$s</xliff:g></string>
-    <string name="cling_deskclock_desc">Liu'ta sivulle siirtyäksesi sekuntikelloon ja ajastimeen.</string>
+    <string name="cling_deskclock_desc">Liu\'ta sivulle siirtyäksesi sekuntikelloon ja ajastimeen.</string>
     <string name="cling_stopwatch_desc">Säädä kierrosten ja sektoreiden toimintaa asetuksista.</string>
     <string name="cling_countdown_desc">Muokataksesi ajastinta, paina kelloa pitkään</string>
     <string name="overflow_button_cd">Lisää asetuksia</string>
