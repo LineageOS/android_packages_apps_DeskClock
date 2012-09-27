@@ -127,4 +127,218 @@
     <string name="loading_ringtone" msgid="6523322777415268044">"Učitavanje melodije zvona…"</string>
     <string name="control_set_alarm" msgid="2194676418924016327">"Postavi alarm"</string>
     <string name="control_set_alarm_with_existing" msgid="1128169496817859490">"Alarm postavljen na: <xliff:g id="TIME">%s</xliff:g>"</string>
+
+<!-- =============== CyanogenMod Entries =============== -->
+
+    <!-- TimerClockService is not ready -->
+    <string name="msg_timer_service_is_not_ready">\nServis Tajmera nije spreman. Operacija nije dozvoljena.\n</string>
+    <!-- Fails to create a new timer -->
+    <string name="msg_timer_creation_fails">\nNije uspjelo postavljanje Tajmera. Operacija nije dozvoljena.\n</string>
+    <!-- UI thread fails  -->
+    <string name="msg_timer_ui_thread_fails">\nNije uspjelo stvaranje UI threada. Operacija nije dozvoljena.\n</string>
+    <!-- Preferences update fails  -->
+    <string name="msg_pref_update_fails">\nNije uspjelo spremanje postavki. Vrijednosti nisu promjenjene.\n</string>
+    <!-- The operation fails -->
+    <string name="msg_operation_fails">\nNeuspješna operacija.\n</string>
+
+    <!-- Title of the Stopwatch fragment -->
+    <string name="stopwatch_title">Štoperica</string>
+    <!-- Stopwatch. Stop timer button text -->
+    <string name="stopwatch_actions_stop">Stop</string>
+    <!-- Stopwatch. Stop timer button content description -->
+    <string name="stopwatch_actions_stop_cd">Zaustavi štopericu</string>
+    <!-- Stopwatch. Start timer button text -->
+    <string name="stopwatch_actions_start">Pokreni</string>
+    <!-- Stopwatch. Start timer button content description -->
+    <string name="stopwatch_actions_start_cd">Pokreni štopericu</string>
+    <!-- Stopwatch. Resume timer button text -->
+    <string name="stopwatch_actions_resume">Nastavi</string>
+    <!-- Stopwatch. Resume timer button content description -->
+    <string name="stopwatch_actions_resume_cd">Nastavi štopericu</string>
+    <!-- Stopwatch. Reset timer button text -->
+    <string name="stopwatch_actions_reset">Poništi</string>
+    <!-- Stopwatch. Reset timer button content description -->
+    <string name="stopwatch_actions_reset_cd">Poništi štopericu</string>
+    <!-- Stopwatch. Take lap time button text -->
+    <string name="stopwatch_actions_lap">Krug</string>
+    <!-- Stopwatch. Take lap time button content description -->
+    <string name="stopwatch_actions_lap_cd">Uzmi trenutnu vrijednost kao krug</string>
+    <!-- Stopwatch. Take lap sector time button text -->
+    <string name="stopwatch_actions_sector">Sektor</string>
+    <!-- Stopwatch. Take lap sector time button content description -->
+    <string name="stopwatch_actions_sector_cd">Uzmi trenutnu vrijednost kao sektor trenutnog kruga</string>
+
+    <!-- Stopwatch. Info Panel. Last lap title -->
+    <string name="stopwatch_info_panel_last_lap_title">Posljednji krug</string>
+    <!-- Stopwatch. Info Panel. Best lap title -->
+    <string name="stopwatch_info_panel_best_lap_title">Najbolji krug</string>
+    <!-- Stopwatch. Info Panel. Laps title -->
+    <string name="stopwatch_info_panel_laps_title">Krugovi</string>
+    <!-- Stopwatch. Info Panel. No data -->
+    <string name="stopwatch_info_panel_empty_data">Nije ništa spremljeno</string>
+
+    <!-- Stopwatch. Info Panel. An empty lap label -->
+    <string name="stopwatch_info_panel_empty_lap">Krug</string>
+    <!-- Stopwatch. Info Panel. Lap label -->
+    <string name="stopwatch_info_panel_lap_label">Krug <xliff:g id="lap">%1$s</xliff:g></string>
+    <!-- Stopwatch. Info Panel. Sector label -->
+    <string name="stopwatch_info_panel_lap_sector">Sektor <xliff:g id="sector">%1$s</xliff:g></string>
+
+    <!-- Stopwatch. Menu. Hide last lap -->
+    <string name="stopwatch_menu_hide_last_lap_panel">Sakrij \'Posljednji krug\'</string>
+    <!-- Stopwatch. Menu. Hide best lap -->
+    <string name="stopwatch_menu_hide_best_lap_panel">Sakrij \'Najbolji krug\'</string>
+    <!-- Stopwatch. Menu. Hide best lap -->
+    <string name="stopwatch_menu_hide_laps_panel">Sakrij \'Krugove\'</string>
+    <!-- Stopwatch. Menu. Settings -->
+    <string name="stopwatch_menu_settings">Postavke</string>
+
+    <!-- Stopwatch. Preferences. General -->
+    <string name="stopwatch_preferences_lap_sectors">Krugovi/sektori</string>
+    <!-- Stopwatch. Preferences. Summary of General catergory -->
+    <string name="stopwatch_preferences_lap_sectors_summary">Postavke ponašanja krugova i sektora.</string>
+    <!-- Stopwatch. Preferences. Sectors -->
+    <string name="stopwatch_preferences_sectors">Sektori</string>
+    <!-- Stopwatch. Preferences. Summary of sectors -->
+    <string name="stopwatch_preferences_sectors_summary">{0,choice,0#Sektori krugova nisu uključeni.|1#Krug se sastoji od jednog sektora.|1&lt;Krug se sastoji od {0} sektora.}</string>
+    <!-- Stopwatch. Preferences. Best lap behaviour -->
+    <string name="stopwatch_preferences_best_lap_behaviour">Najbolji krug</string>
+    <!-- Stopwatch. Preferences. About -->
+    <string name="stopwatch_preferences_about">O</string>
+    <!-- Stopwatch. Preferences. Summary of About catergory -->
+    <string name="stopwatch_preferences_about_summary">Štoperica: Copyright \u00A9 2012 CyanogenMod</string>
+
+    <!-- Stopwatch. Best lap behaviour. Lower times are better -->
+    <string name="stopwatch_best_lap_lower_pref">Manja vremena su bolja</string>
+    <!-- Stopwatch. Best lap behaviour. Summary of lower times are better  -->
+    <string name="stopwatch_best_lap_lower_pref_summary">Najmanje vrijeme ima najbolji krug.</string>
+    <!-- Stopwatch. Best lap behaviour. Highest times are better -->
+    <string name="stopwatch_best_lap_highest_pref">Veća vremena su bolja</string>
+    <!-- Stopwatch. Best lap behaviour. Summary of highest times are better -->
+    <string name="stopwatch_best_lap_highest_pref_summary">Veća vremena imaju najbolji krug.</string>
+
+    <!-- Stopwatch. Sectors Dialog Preference. Enabled check text -->
+    <string name="sectors_dialog_enabled_text">Uključeni sektori kruga:</string>
+
+
+    <!-- Title of the Countdown fragment -->
+    <string name="countdown_title">Odbrojavanje</string>
+    <!-- Countdown. Stop timer button text -->
+    <string name="countdown_actions_stop">Stop</string>
+    <!-- Countdown. Stop timer button content description -->
+    <string name="countdown_actions_stop_cd">Zaustavi odbrojavanje</string>
+    <!-- Countdown. Start timer button text -->
+    <string name="countdown_actions_start">Pokreni</string>
+    <!-- Countdown. Start timer button content description -->
+    <string name="countdown_actions_start_cd">Pokreni odbrojavanje</string>
+    <!-- Countdown. Resume timer button text -->
+    <string name="countdown_actions_resume">Nastavi</string>
+    <!-- Countdown. Resume timer button content description -->
+    <string name="countdown_actions_resume_cd">Nastavi odbrojavanje</string>
+    <!-- Countdown. Reset timer button text -->
+    <string name="countdown_actions_reset">Poništi</string>
+    <!-- Countdown. Reset timer button content description -->
+    <string name="countdown_actions_reset_cd">Poništi odbrojavanje</string>
+    <!-- Countdown. Cancel edition timer button text -->
+    <string name="countdown_actions_cancel">Prekini</string>
+    <!-- Countdown. Cancel edition button content description -->
+    <string name="countdown_actions_cancel_cd">Prekini uređivanje odbrojavanja</string>
+    <!-- Countdown. Set edition timer button text -->
+    <string name="countdown_actions_set">Postavi</string>
+    <!-- Countdown. Set edition button content description -->
+    <string name="countdown_actions_set_cd">Postavi odbrojavanje</string>
+
+    <!-- Countdown. Menu. Edit timer -->
+    <string name="countdown_menu_open_timer_editor">Otvori uređivanje brojača</string>
+    <!-- Countdown. Menu. Cancel timer -->
+    <string name="countdown_menu_close_timer_editor">Zatvori uređivanje brojača</string>
+    <!-- Countdown. Menu. Settings -->
+    <string name="countdown_menu_settings">Postavke</string>
+
+    <!-- Countdown. Saved Countdown Timers Panel. Title -->
+    <string name="countdown_panel_title">Spremljena odbrojavanja</string>
+    <!-- Countdown. Saved Countdown Timers Panel. Add timer -->
+    <string name="countdown_panel_add_text">Dodaj trenutno</string>
+    <!-- Countdown. Saved Countdown Timers Panel. Add timer. Content description -->
+    <string name="countdown_panel_add_text_cd">Dodaj trenutnu vrijednost brojača na listu spremljenih odbrojavanja.</string>
+    <!-- Countdown. Saved Countdown Timers Panel. Remove timer. Content description -->
+    <string name="countdown_panel_remove_cd">Ukloni spremljeno odbrojavanje s liste.</string>
+    <!-- Countdown. Saved Countdown Timers. Add confirmation dialog. -->
+    <string name="countdown_dialog_add">Novo odbrojavanje će biti spremljen.\n\nNastaviti?\n</string>
+    <!-- Countdown. Saved Countdown Timers. Delete confirmation dialog. -->
+    <string name="countdown_dialog_delete">Odbrojavanje \'<xliff:g id="timer">%1$s</xliff:g>\' biti će obrisano.\n\nJeste li sigurni?\n</string>
+
+    <!-- Countdown. Preferences. Notifications -->
+    <string name="countdown_preferences_notifications">Obavijesti</string>
+    <!-- Countdown. Preferences. Summary of Notifications category -->
+    <string name="countdown_preferences_notifications_summary">Postavke ponašanja obavijesti na odbrojavanje.</string>
+    <!-- Countdown. Preferences. About -->
+    <string name="countdown_preferences_about">O</string>
+    <!-- Countdown. Preferences. Summary of About catergory -->
+    <string name="countdown_preferences_about_summary">Odbrojavanje: Copyright \u00A9 2012 CyanogenMod</string>
+
+    <!-- Countdown. Preferences. On Countdown in progress category title -->
+    <string name="countdown_notification_oncountdown_category">Na odbrojavanje</string>
+    <!-- Countdown. Preferences. On Countdown in progress. Notifications title -->
+    <string name="countdown_notification_oncountdown_notifications_title">Obavijesti</string>
+    <!-- Countdown. Preferences. On Countdown in progress. Notifications summary Off -->
+    <string name="countdown_notification_oncountdown_notifications_summary_on">Prikaži obavijesti u statusnoj traci.</string>
+    <!-- Countdown. Preferences. On Countdown in progress. Notifications summary On -->
+    <string name="countdown_notification_oncountdown_notifications_summary_off">Ne prikazuj obavijesti u statusnoj traci.</string>
+
+    <!-- Countdown. Preferences. On final Countdown category title -->
+    <string name="countdown_notification_onfinalcountdown_category">Na konačno odbrojavanje</string>
+    <!-- Countdown. Preferences. On Countdown in progress. Notifications title -->
+    <string name="countdown_notification_onfinalcountdown_notifications_title">Obavijesti</string>
+    <!-- Countdown. Preferences. On Countdown in progress. Notifications summary Off -->
+    <string name="countdown_notification_onfinalcountdown_notifications_summary_on">Prikaži obavijesti u statusnoj traci.</string>
+    <!-- Countdown. Preferences. On Countdown in progress. Notifications summary On -->
+    <string name="countdown_notification_onfinalcountdown_notifications_summary_off">Ne prikazuj obavijesti u statusnoj traci.</string>
+
+    <!-- Countdown. Preferences. On Countdown in progress. Show clock screen title -->
+    <string name="countdown_notification_onfinalcountdown_open_clock_screen_title">Otvori sat</string>
+    <!-- Countdown. Preferences. On Countdown in progress. Show clock screen summary On -->
+    <string name="countdown_notification_onfinalcountdown_open_clock_screen_summary_on">Kad odbrojavanje završi, sat s odbrojavanjem će se prikazati.(Ako primite poziv ova opcija neće vrijedit).</string>
+    <!-- Countdown. Preferences. On Countdown in progress. Show clock screen summary On -->
+    <string name="countdown_notification_onfinalcountdown_open_clock_screen_summary_off">Kad odbrojavanje završi ne prekidaj otvorene korisnikove aplikacije.</string>
+
+    <!-- Countdown. Preferences. On Countdown in progress. Ringtone -->
+    <string name="countdown_notification_onfinalcountdown_ringtone_title">Ton zvona</string>
+    <!-- Countdown. Preferences. On Countdown in progress. Ringtone. Silent option -->
+    <string name="countdown_notification_onfinalcountdown_ringtone_silent">Nečujno</string>
+
+    <!-- Countdown. Preferences. On Countdown in progress. Vibrate title -->
+    <string name="countdown_notification_onfinalcountdown_vibrate_title">Vibriraj</string>
+    <!-- Countdown. Preferences. On Countdown in progress. Vibrate always option -->
+    <string name="countdown_notification_onfinalcountdown_vibrate_always">Uvijek</string>
+    <!-- Countdown. Preferences. On Countdown in progress. Vibrate only when silent option -->
+    <string name="countdown_notification_onfinalcountdown_vibrate_only_when_silent">Samo u nečujnom</string>
+    <!-- Countdown. Preferences. On Countdown in progress. Vibrate never option -->
+    <string name="countdown_notification_onfinalcountdown_vibrate_never">Nikad</string>
+
+    <!-- Countdown. Preferences. On Countdown in progress. Vibrate on call title -->
+    <string name="countdown_notification_onfinalcountdown_vibrate_on_call_title">Vibriraj na poziv</string>
+    <!-- Countdown. Preferences. On Countdown in progress. Vibrate on call summary On -->
+    <string name="countdown_notification_onfinalcountdown_vibrate_on_call_summary_on">Dozvoli vibracije dok pričate na telefonu.</string>
+    <!-- Countdown. Preferences. On Countdown in progress. Vibrate on call summary On -->
+    <string name="countdown_notification_onfinalcountdown_vibrate_on_call_summary_off">Nema vibracija dok pričate na telefonu.</string>
+
+    <!-- Timer Clock Service. Countdown notification title for countdown timer -->
+    <string name="service_countdown_notification_title">Odbrojavanje</string>
+    <!-- Timer Clock Service. Countdown notification text for countdown in progress -->
+    <string name="service_countdown_notification_msg_progress">Odbrojavanje je u tijeku.</string>
+    <!-- Timer Clock Service. Countdown notification text for ended countdown -->
+    <string name="service_countdown_notification_msg_end">Brojač je došao do konačnog odbrojavanja.</string>
+    <!-- Timer Clock Service. Countdown notification summary  -->
+    <string name="service_countdown_notification_summary">Preostalo vrijeme: <xliff:g id="time">%1$s</xliff:g></string>
+
+    <!-- The text showed to advise that other fragment exists in deskclock fragment -->
+    <string name="cling_deskclock_desc">Za prikazivanje štoperice i brojača odbrojavanja povucite prstom nalijevo..</string>
+    <!-- The text showed to advise the use of lap/sectors -->
+    <string name="cling_stopwatch_desc">Za namještanje krugova i sektora otiđite u postavke.</string>
+    <!-- The text showed to advise how to edit the countdown clock, with a long press holding -->
+    <string name="cling_countdown_desc">Za uređivanje brojača pritisnite i držite sat.</string>
+
+    <!-- The overflow actionbar button -->
+    <string name="overflow_button_cd">Više opcija</string>
 </resources>
