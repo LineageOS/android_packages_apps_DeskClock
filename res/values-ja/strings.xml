@@ -139,5 +139,229 @@
       <item>アラームを停止</item>
     </string-array>
 
+<!-- =============== CyanogenMod Entries =============== -->
+    <string name="alarm_incvol">音量を増大させる</string>
+    <!-- Setting labels on Set alarm screen: Select profile to change to -->
+    <string name="alarm_profile">プロファイル</string>
 
+    <!-- Option of profile setting of the alarm: No change to profile -->
+    <string name="alarm_profile_no_change_profile">プロファイルを変更しない</string>
+
+    <!-- Summary of alarm profile: No change profile -->
+    <string name="alarm_profile_summary_no_change">アラームが鳴った時にプロファイルを変更しない</string>
+
+    <!-- Summary of alarm profile: Change profile to -->
+    <string name="alarm_profile_summary_change_to">アラームが鳴った時にプロファイルを <xliff:g id="profile">%s</xliff:g> に変更する</string>
+
+    <!-- TimerClockService is not ready -->
+    <string name="msg_timer_service_is_not_ready">\nタイマーサービスが準備できていません。オペレーションは許可されません。\n</string>
+    <!-- Fails to create a new timer -->
+    <string name="msg_timer_creation_fails">\nタイマーの作成に失敗しました。オペレーションは許可されません。\n</string>
+    <!-- UI thread fails  -->
+    <string name="msg_timer_ui_thread_fails">\nUIスレッドの描画に失敗しました。オペレーションは許可されません。\n</string>
+    <!-- Preferences update fails  -->
+    <string name="msg_pref_update_fails">\n設定の更新に失敗しました。 値は変更されません。\n</string>
+    <!-- The operation fails -->
+    <string name="msg_operation_fails">\nオペレーションは失敗しました。\n</string>
+
+    <!-- Title of the Stopwatch fragment -->
+    <string name="stopwatch_title">ストップウォッチ</string>
+    <!-- Stopwatch. Stop timer button text -->
+    <string name="stopwatch_actions_stop">ストップ</string>
+    <!-- Stopwatch. Stop timer button content description -->
+    <string name="stopwatch_actions_stop_cd">現在のストップウォッチタイマーを停止する</string>
+    <!-- Stopwatch. Start timer button text -->
+    <string name="stopwatch_actions_start">スタート</string>
+    <!-- Stopwatch. Start timer button content description -->
+    <string name="stopwatch_actions_start_cd">現在のストップウォッチタイマーを開始する</string>
+    <!-- Stopwatch. Resume timer button text -->
+    <string name="stopwatch_actions_resume">レジューム</string>
+    <!-- Stopwatch. Resume timer button content description -->
+    <string name="stopwatch_actions_resume_cd">現在のストップウォッチタイマーを再開する</string>
+    <!-- Stopwatch. Reset timer button text -->
+    <string name="stopwatch_actions_reset">リセット</string>
+    <!-- Stopwatch. Reset timer button content description -->
+    <string name="stopwatch_actions_reset_cd">現在のストップウォッチタイマーをリセットする</string>
+    <!-- Stopwatch. Take lap time button text -->
+    <string name="stopwatch_actions_lap">ラップ</string>
+    <!-- Stopwatch. Take lap time button content description -->
+    <string name="stopwatch_actions_lap_cd">ラップタイムのスナップショットをとる</string>
+    <!-- Stopwatch. Take lap sector time button text -->
+    <string name="stopwatch_actions_sector">区間</string>
+    <!-- Stopwatch. Take lap sector time button content description -->
+    <string name="stopwatch_actions_sector_cd">現在のラップにおける区間タイムのスナップショットをとる</string>
+
+    <!-- Stopwatch. Info Panel. Last lap title -->
+    <string name="stopwatch_info_panel_last_lap_title">最終ラップ</string>
+    <!-- Stopwatch. Info Panel. Best lap title -->
+    <string name="stopwatch_info_panel_best_lap_title">ベストラップ</string>
+    <!-- Stopwatch. Info Panel. Laps title -->
+    <string name="stopwatch_info_panel_laps_title">ラップ</string>
+    <!-- Stopwatch. Info Panel. No data -->
+    <string name="stopwatch_info_panel_empty_data">収集データはありません</string>
+
+    <!-- Stopwatch. Info Panel. An empty lap label -->
+    <string name="stopwatch_info_panel_empty_lap">ラップ</string>
+    <!-- Stopwatch. Info Panel. Lap label -->
+    <string name="stopwatch_info_panel_lap_label">ラップ <xliff:g id="lap">%1$s</xliff:g></string>
+    <!-- Stopwatch. Info Panel. Sector label -->
+    <string name="stopwatch_info_panel_lap_sector">区間 <xliff:g id="sector">%1$s</xliff:g></string>
+
+    <!-- Stopwatch. Menu. Hide last lap -->
+    <string name="stopwatch_menu_hide_last_lap_panel">\'最終ラップ\'を隠す</string>
+    <!-- Stopwatch. Menu. Hide best lap -->
+    <string name="stopwatch_menu_hide_best_lap_panel">\'ベストラップ\'を隠す</string>
+    <!-- Stopwatch. Menu. Hide best lap -->
+    <string name="stopwatch_menu_hide_laps_panel">\'ラップ\'を隠す</string>
+    <!-- Stopwatch. Menu. Settings -->
+    <string name="stopwatch_menu_settings">設定</string>
+
+    <!-- Stopwatch. Preferences. General -->
+    <string name="stopwatch_preferences_lap_sectors">ラップ/区間</string>
+    <!-- Stopwatch. Preferences. Summary of General catergory -->
+    <string name="stopwatch_preferences_lap_sectors_summary">ラップと区間の設定を変更する</string>
+    <!-- Stopwatch. Preferences. Sectors -->
+    <string name="stopwatch_preferences_sectors">区間</string>
+    <!-- Stopwatch. Preferences. Summary of sectors -->
+    <string name="stopwatch_preferences_sectors_summary">{0,choice,0#ラップ区間は無効.|1#ラップの区間数は 1 .|1&lt;ラップの区間数は {0} .}</string>
+    <!-- Stopwatch. Preferences. Best lap behaviour -->
+    <string name="stopwatch_preferences_best_lap_behaviour">ベストラップの挙動</string>
+    <!-- Stopwatch. Preferences. About -->
+    <string name="stopwatch_preferences_about">情報</string>
+    <!-- Stopwatch. Preferences. Summary of About catergory -->
+    <string name="stopwatch_preferences_about_summary">ストップウォッチ: Copyright \u00A9 2012 CyanogenMod</string>
+
+    <!-- Stopwatch. Best lap behaviour. Lower times are better -->
+    <string name="stopwatch_best_lap_lower_pref">少ない時間がより良い</string>
+    <!-- Stopwatch. Best lap behaviour. Summary of lower times are better  -->
+    <string name="stopwatch_best_lap_lower_pref_summary">ベストラップは最も少ない時間</string>
+    <!-- Stopwatch. Best lap behaviour. Highest times are better -->
+    <string name="stopwatch_best_lap_highest_pref">長い時間がより良い</string>
+    <!-- Stopwatch. Best lap behaviour. Summary of highest times are better -->
+    <string name="stopwatch_best_lap_highest_pref_summary">ベストラップは最も長い時間</string>
+
+    <!-- Stopwatch. Sectors Dialog Preference. Enabled check text -->
+    <string name="sectors_dialog_enabled_text">有効なラップ区間:</string>
+
+
+    <!-- Title of the Countdown fragment -->
+    <string name="countdown_title">カウントダウン</string>
+    <!-- Countdown. Stop timer button text -->
+    <string name="countdown_actions_stop">ストップ</string>
+    <!-- Countdown. Stop timer button content description -->
+    <string name="countdown_actions_stop_cd">現在のカウントダウンタイマーを停止する</string>
+    <!-- Countdown. Start timer button text -->
+    <string name="countdown_actions_start">スタート</string>
+    <!-- Countdown. Start timer button content description -->
+    <string name="countdown_actions_start_cd">現在のカウントダウンタイマーを開始する</string>
+    <!-- Countdown. Resume timer button text -->
+    <string name="countdown_actions_resume">レジューム</string>
+    <!-- Countdown. Resume timer button content description -->
+    <string name="countdown_actions_resume_cd">現在のカウントダウンタイマーを再開する</string>
+    <!-- Countdown. Reset timer button text -->
+    <string name="countdown_actions_reset">リセット</string>
+    <!-- Countdown. Reset timer button content description -->
+    <string name="countdown_actions_reset_cd">現在のカウントダウンタイマーをリセットする</string>
+    <!-- Countdown. Cancel edition timer button text -->
+    <string name="countdown_actions_cancel">キャンセル</string>
+    <!-- Countdown. Cancel edition button content description -->
+    <string name="countdown_actions_cancel_cd">現在のカウントダウンタイマーの編集モードをキャンセルする</string>
+    <!-- Countdown. Set edition timer button text -->
+    <string name="countdown_actions_set">セット</string>
+    <!-- Countdown. Set edition button content description -->
+    <string name="countdown_actions_set_cd">現在のカウントダウンタイマーの時間をセットする</string>
+
+    <!-- Countdown. Menu. Edit timer -->
+    <string name="countdown_menu_open_timer_editor">タイマーエディタを開く</string>
+    <!-- Countdown. Menu. Cancel timer -->
+    <string name="countdown_menu_close_timer_editor">タイマーエディタを閉じる</string>
+    <!-- Countdown. Menu. Settings -->
+    <string name="countdown_menu_settings">設定</string>
+
+    <!-- Countdown. Saved Countdown Timers Panel. Title -->
+    <string name="countdown_panel_title">保存済みのカウントダウンタイマー</string>
+    <!-- Countdown. Saved Countdown Timers Panel. Add timer -->
+    <string name="countdown_panel_add_text">現在のカウントダウンタイマーを追加</string>
+    <!-- Countdown. Saved Countdown Timers Panel. Add timer. Content description -->
+    <string name="countdown_panel_add_text_cd">保存済みリストに現在のカウントダウンタイマーを追加する</string>
+    <!-- Countdown. Saved Countdown Timers Panel. Remove timer. Content description -->
+    <string name="countdown_panel_remove_cd">保存済みリストからカウントダウンタイマーを削除する</string>
+    <!-- Countdown. Saved Countdown Timers. Add confirmation dialog. -->
+    <string name="countdown_dialog_add">新しいタイマーが作成されます\n\n続けますか?\n</string>
+    <!-- Countdown. Saved Countdown Timers. Delete confirmation dialog. -->
+    <string name="countdown_dialog_delete">タイマー \'<xliff:g id="timer">%1$s</xliff:g>\' は削除されます\n\nよろしいですか?\n</string>
+
+    <!-- Countdown. Preferences. Notifications -->
+    <string name="countdown_preferences_notifications">通知</string>
+    <!-- Countdown. Preferences. Summary of Notifications category -->
+    <string name="countdown_preferences_notifications_summary">カウントダウンの通知に関する挙動を設定する</string>
+    <!-- Countdown. Preferences. About -->
+    <string name="countdown_preferences_about">情報</string>
+    <!-- Countdown. Preferences. Summary of About catergory -->
+    <string name="countdown_preferences_about_summary">カウントダウン: Copyright \u00A9 2012 CyanogenMod</string>
+
+    <!-- Countdown. Preferences. On Countdown in progress category title -->
+    <string name="countdown_notification_oncountdown_category">カウントダウン中</string>
+    <!-- Countdown. Preferences. On Countdown in progress. Notifications title -->
+    <string name="countdown_notification_oncountdown_notifications_title">通知</string>
+    <!-- Countdown. Preferences. On Countdown in progress. Notifications summary Off -->
+    <string name="countdown_notification_oncountdown_notifications_summary_on">ステータスバーに通知を表示</string>
+    <!-- Countdown. Preferences. On Countdown in progress. Notifications summary On -->
+    <string name="countdown_notification_oncountdown_notifications_summary_off">ステータスバーに通知を表示しない</string>
+
+    <!-- Countdown. Preferences. On final Countdown category title -->
+    <string name="countdown_notification_onfinalcountdown_category">最終カウントダウン</string>
+    <!-- Countdown. Preferences. On Countdown in progress. Notifications title -->
+    <string name="countdown_notification_onfinalcountdown_notifications_title">通知</string>
+    <!-- Countdown. Preferences. On Countdown in progress. Notifications summary Off -->
+    <string name="countdown_notification_onfinalcountdown_notifications_summary_on">ステータスバーに通知を表示</string>
+    <!-- Countdown. Preferences. On Countdown in progress. Notifications summary On -->
+    <string name="countdown_notification_onfinalcountdown_notifications_summary_off">ステータスバーに通知を表示しない</string>
+
+    <!-- Countdown. Preferences. On Countdown in progress. Show clock screen title -->
+    <string name="countdown_notification_onfinalcountdown_open_clock_screen_title">カウントダウン画面を開く</string>
+    <!-- Countdown. Preferences. On Countdown in progress. Show clock screen summary On -->
+    <string name="countdown_notification_onfinalcountdown_open_clock_screen_summary_on">カウントダウンが終了したらカウントダウンの画面を開く(このオプションは通話中は無効になります)</string>
+    <!-- Countdown. Preferences. On Countdown in progress. Show clock screen summary On -->
+    <string name="countdown_notification_onfinalcountdown_open_clock_screen_summary_off">カウントダウンが終了してもユーザのアクティビティを維持する</string>
+
+    <!-- Countdown. Preferences. On Countdown in progress. Ringtone -->
+    <string name="countdown_notification_onfinalcountdown_ringtone_title">着信音</string>
+    <!-- Countdown. Preferences. On Countdown in progress. Ringtone. Silent option -->
+    <string name="countdown_notification_onfinalcountdown_ringtone_silent">サイレント</string>
+
+    <!-- Countdown. Preferences. On Countdown in progress. Vibrate title -->
+    <string name="countdown_notification_onfinalcountdown_vibrate_title">バイブレーション</string>
+    <!-- Countdown. Preferences. On Countdown in progress. Vibrate always option -->
+    <string name="countdown_notification_onfinalcountdown_vibrate_always">常に</string>
+    <!-- Countdown. Preferences. On Countdown in progress. Vibrate only when silent option -->
+    <string name="countdown_notification_onfinalcountdown_vibrate_only_when_silent">サイレントモード時のみ</string>
+    <!-- Countdown. Preferences. On Countdown in progress. Vibrate never option -->
+    <string name="countdown_notification_onfinalcountdown_vibrate_never">無効</string>
+
+    <!-- Countdown. Preferences. On Countdown in progress. Vibrate on call title -->
+    <string name="countdown_notification_onfinalcountdown_vibrate_on_call_title">着信時バイブレーション</string>
+    <!-- Countdown. Preferences. On Countdown in progress. Vibrate on call summary On -->
+    <string name="countdown_notification_onfinalcountdown_vibrate_on_call_summary_on">着信時にバイブレーションを許可する</string>
+    <!-- Countdown. Preferences. On Countdown in progress. Vibrate on call summary On -->
+    <string name="countdown_notification_onfinalcountdown_vibrate_on_call_summary_off">着信時にバイブレーションしない</string>
+
+    <!-- Timer Clock Service. Countdown notification title for countdown timer -->
+    <string name="service_countdown_notification_title">カウントダウンタイマー</string>
+    <!-- Timer Clock Service. Countdown notification text for countdown in progress -->
+    <string name="service_countdown_notification_msg_progress">実行中のカウントダウンタイマーがあります</string>
+    <!-- Timer Clock Service. Countdown notification text for ended countdown -->
+    <string name="service_countdown_notification_msg_end">カウントダウンタイマーが終了しました</string>
+    <!-- Timer Clock Service. Countdown notification summary  -->
+    <string name="service_countdown_notification_summary">残り時間: <xliff:g id="time">%1$s</xliff:g></string>
+
+    <!-- The text showed to advise that other fragment exists in deskclock fragment -->
+    <string name="cling_deskclock_desc">ストップウォッチやカウントダウンタイマーを表示するには左にスワイプ</string>
+    <!-- The text showed to advise the use of lap/sectors -->
+    <string name="cling_stopwatch_desc">設定メニューでラップや区間の設定を変更できます。</string>
+    <!-- The text showed to advise how to edit the countdown clock, with a long press holding -->
+    <string name="cling_countdown_desc">時計を長押ししてタイマーの編集ができます。</string>
+
+    <!-- The overflow actionbar button -->
+    <string name="overflow_button_cd">詳細オプション</string>
 </resources>
