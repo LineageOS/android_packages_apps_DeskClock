@@ -71,14 +71,6 @@
     <item msgid="738394723625179423">"25 minutos"</item>
     <item msgid="1180222611308391616">"30 minutos"</item>
   </string-array>
-  <string-array name="snooze_duration_values">
-    <item msgid="3655014754453084122">"5"</item>
-    <item msgid="8939029597449573449">"10"</item>
-    <item msgid="3922647341176353315">"15"</item>
-    <item msgid="5821804105985044459">"20"</item>
-    <item msgid="6048861883552402852">"25"</item>
-    <item msgid="2740866721232379791">"30"</item>
-  </string-array>
     <string name="auto_silence_title" msgid="6940612987809171112">"Silenciar automaticamente"</string>
     <string name="auto_silence_summary" msgid="5757272454196171758">"Os alarmes serão silenciados após <xliff:g id="MINUTES">%d</xliff:g> minutos"</string>
     <string name="auto_silence_never" msgid="4302257878142130807">"Desativado"</string>
@@ -108,11 +100,6 @@
     <item msgid="7111908302622811168">"Colocar em modo soneca"</item>
     <item msgid="8573552194573068996">"Descartar"</item>
   </string-array>
-  <string-array name="volume_button_setting_values">
-    <item msgid="4851033050639608752">"0"</item>
-    <item msgid="3204893476515513084">"1"</item>
-    <item msgid="7687709558968154577">"2"</item>
-  </string-array>
     <string name="default_ringtone_setting_title" msgid="4549726190682964245">"Definir toque padrão"</string>
     <string name="alarm_button_description" msgid="740283647046258651">"Alarmes"</string>
     <string name="gallery_button_description" msgid="1151743663255257668">"Galeria"</string>
@@ -129,7 +116,7 @@
     <string name="control_set_alarm_with_existing" msgid="1128169496817859490">"Alarme definido: <xliff:g id="TIME">%s</xliff:g>"</string>
     <string name="flip_action_title">Ação de virar</string>
     <string name="flip_action_dialog_title">Ação de virar</string>
-    <string name="flip_action_summary">Virando o telefone para baixo irá        <xliff:g id="action" xmlns:xliff="urn:oasis:names:tc:xliff:document:1.2">%s</xliff:g></string>
+    <string name="flip_action_summary">Virando o telefone para baixo irá <xliff:g id="action" xmlns:xliff="urn:oasis:names:tc:xliff:document:1.2">%s</xliff:g></string>
     <string-array name="flip_action_entries">
         <item>Fazer nada</item>
         <item>Colocar alarme em soneca</item>
