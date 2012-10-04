@@ -71,14 +71,6 @@
     <item msgid="738394723625179423">"25 minit"</item>
     <item msgid="1180222611308391616">"30 minit"</item>
   </string-array>
-  <string-array name="snooze_duration_values">
-    <item msgid="3655014754453084122">"5"</item>
-    <item msgid="8939029597449573449">"10"</item>
-    <item msgid="3922647341176353315">"15"</item>
-    <item msgid="5821804105985044459">"20"</item>
-    <item msgid="6048861883552402852">"25"</item>
-    <item msgid="2740866721232379791">"30"</item>
-  </string-array>
     <string name="auto_silence_title" msgid="6940612987809171112">"Autosenyap"</string>
     <string name="auto_silence_summary" msgid="5757272454196171758">"Penggera akan senyap selepas <xliff:g id="MINUTES">%d</xliff:g> minit"</string>
     <string name="auto_silence_never" msgid="4302257878142130807">"Mati"</string>
@@ -107,11 +99,6 @@
     <item msgid="4520420953175098625">"Tiada"</item>
     <item msgid="7111908302622811168">"Tidur sekejap"</item>
     <item msgid="8573552194573068996">"Ketepikan"</item>
-  </string-array>
-  <string-array name="volume_button_setting_values">
-    <item msgid="4851033050639608752">"0"</item>
-    <item msgid="3204893476515513084">"1"</item>
-    <item msgid="7687709558968154577">"2"</item>
   </string-array>
     <string name="default_ringtone_setting_title" msgid="4549726190682964245">"Tetapkan nada dering lalai"</string>
     <string name="alarm_button_description" msgid="740283647046258651">"Penggera"</string>

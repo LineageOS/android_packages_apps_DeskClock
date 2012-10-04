@@ -78,15 +78,6 @@
       <item msgid="1180222611308391616">"30 Minuten"</item>
     </string-array>
 
-    <string-array name="snooze_duration_values">
-      <item msgid="3655014754453084122">"5"</item>
-      <item msgid="8939029597449573449">"10"</item>
-      <item msgid="3922647341176353315">"15"</item>
-      <item msgid="5821804105985044459">"20"</item>
-      <item msgid="6048861883552402852">"25"</item>
-      <item msgid="2740866721232379791">"30"</item>
-    </string-array>
-
     <!-- Setting title for the flip action setting. -->
     <string name="flip_action_title">Aktion beim Umdrehen</string>
 
@@ -101,13 +92,6 @@
       <item>Keine Aktion</item>
       <item>Snooze-Funktion</item>
       <item>Beenden des Alarms</item>
-    </string-array>
-
-    <!-- Values for the flip action setting. -->
-    <string-array name="flip_action_values">
-      <item>0</item>
-      <item>1</item>
-      <item>2</item>
     </string-array>
 
     <string name="auto_silence_title" msgid="6940612987809171112">"Automatische Stummschaltung"</string>
@@ -138,11 +122,6 @@
     <item msgid="4520420953175098625">"Keine"</item>
     <item msgid="7111908302622811168">"Snooze"</item>
     <item msgid="8573552194573068996">"Beenden"</item>
-  </string-array>
-  <string-array name="volume_button_setting_values">
-    <item msgid="4851033050639608752">"0"</item>
-    <item msgid="3204893476515513084">"1"</item>
-    <item msgid="7687709558968154577">"2"</item>
   </string-array>
     <string name="default_ringtone_setting_title" msgid="4549726190682964245">"Standard-Klingelton einstellen"</string>
     <string name="alarm_button_description" msgid="740283647046258651">"Wecker"</string>
