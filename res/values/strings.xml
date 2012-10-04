@@ -178,7 +178,7 @@
 
     <!-- Values that are retrieved from the ListPreference. These must match
          the snooze_duration_entries above. -->
-    <string-array name="snooze_duration_values">
+    <string-array name="snooze_duration_values" translatable="false">
       <item>5</item>
       <item>10</item>
       <item>15</item>
@@ -205,7 +205,7 @@
     </string-array>
 
     <!-- Values for the flip action setting. -->
-    <string-array name="flip_action_values">
+    <string-array name="flip_action_values" translatable="false">
       <item>0</item>
       <item>1</item>
       <item>2</item>
@@ -290,7 +290,7 @@
     </string-array>
 
     <!-- Values for the side-button setting. -->
-    <string-array name="volume_button_setting_values">
+    <string-array name="volume_button_setting_values" translatable="false">
       <item>0</item>
       <item>1</item>
       <item>2</item>
