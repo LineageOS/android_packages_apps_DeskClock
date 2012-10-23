@@ -239,7 +239,7 @@ public final class Alarm implements Parcelable {
         }
         incvol = c.getInt(Columns.ALARM_INCVOL_INDEX) == 1;
         String profileString = c.getString(Columns.ALARM_PROFILE_INDEX);
-        if (profileString == null || profileString.equals(NO_PROFILE)) {
+        if (profileString == null) {
             profile = NO_PROFILE;
         } else {
             try {
