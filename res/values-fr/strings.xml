@@ -28,6 +28,7 @@
     <string name="show_clock" msgid="8358759982675616915">"Afficher l\'horloge"</string>
     <string name="hide_clock" msgid="3217727306480505694">"Masquer l\'horloge"</string>
     <string name="label" msgid="162189613902857319">"Libellé"</string>
+    <string name="alarm_incvol">Volume progressif</string>
     <string name="default_label" msgid="5590025289805630372">"Alarme"</string>
     <string name="set_alarm" msgid="9148359866152726808">"Régler l\'alarme"</string>
     <string name="alarm_vibrate" msgid="3476686921490362230">"Vibreur"</string>
@@ -132,4 +133,232 @@
     <string name="loading_ringtone" msgid="6523322777415268044">"Chargement de la sonnerie..."</string>
     <string name="control_set_alarm" msgid="2194676418924016327">"Régler l\'alarme"</string>
     <string name="control_set_alarm_with_existing" msgid="1128169496817859490">"Alarme réglée : <xliff:g id="TIME">%s</xliff:g>"</string>
+
+    <!-- Setting labels on Set alarm screen: Select profile to change to -->
+    <string name="alarm_profile">Profil</string>
+
+    <!-- Option of profile setting of the alarm: No change to profile -->
+    <string name="alarm_profile_no_change_profile">Ne pas changer de profil</string>
+
+    <!-- Summary of alarm profile: No change profile -->
+    <string name="alarm_profile_summary_no_change">Ne pas changer de profil quand l\'alarme se déclenche</string>
+
+    <!-- Summary of alarm profile: Change profile to -->
+    <string name="alarm_profile_summary_change_to">Quand l\'alarme se déclenche basculer sur le profil : <xliff:g id="profile">%s</xliff:g></string>
+
+
+  <!-- =============== CyanogenMod Entries =============== -->
+
+    <!-- TimerClockService is not ready -->
+    <string name="msg_timer_service_is_not_ready">\nLe service de temps n\'est pas prêt. Pas d\'opération autorisée.\n</string>
+    <!-- Fails to create a new timer -->
+    <string name="msg_timer_creation_fails">\nCréation du chronomètre échouée. Pas d\'opération autorisée.\n</string>
+    <!-- UI thread fails  -->
+    <string name="msg_timer_ui_thread_fails">\nCréation de l\'interface échouée. Pas d\'opération autorisée.\n</string>
+    <!-- Preferences update fails  -->
+    <string name="msg_pref_update_fails">\nLa mise à jour des paramètres a échoué. Les valeurs n\'ont pas été modifié.\n</string>
+    <!-- The operation fails -->
+    <string name="msg_operation_fails">\nL\'opération a échoué.\n</string>
+
+    <!-- Title of the Stopwatch fragment -->
+    <string name="stopwatch_title">Chronomètre</string>
+    <!-- Stopwatch. Stop timer button text -->
+    <string name="stopwatch_actions_stop">Arrêter</string>
+    <!-- Stopwatch. Stop timer button content description -->
+    <string name="stopwatch_actions_stop_cd">Arrête le chronomètre</string>
+    <!-- Stopwatch. Start timer button text -->
+    <string name="stopwatch_actions_start">Démarrer</string>
+    <!-- Stopwatch. Start timer button content description -->
+    <string name="stopwatch_actions_start_cd">Démarre le chronomètre</string>
+    <!-- Stopwatch. Resume timer button text -->
+    <string name="stopwatch_actions_resume">Reprendre</string>
+    <!-- Stopwatch. Resume timer button content description -->
+    <string name="stopwatch_actions_resume_cd">Reprend le chronomètre en cours</string>
+    <!-- Stopwatch. Reset timer button text -->
+    <string name="stopwatch_actions_reset">Réinitialiser</string>
+    <!-- Stopwatch. Reset timer button content description -->
+    <string name="stopwatch_actions_reset_cd">Réinitialise le chronomètre</string>
+    <!-- Stopwatch. Take lap time button text -->
+    <string name="stopwatch_actions_lap">Temps</string>
+    <!-- Stopwatch. Take lap time button content description -->
+    <string name="stopwatch_actions_lap_cd">Enregistre le temps du tour</string>
+    <!-- Stopwatch. Take lap sector time button text -->
+    <string name="stopwatch_actions_sector">Temps int.</string>
+    <!-- Stopwatch. Take lap sector time button content description -->
+    <string name="stopwatch_actions_sector_cd">Enregistre le temps intermédiaire du tour en cours</string>
+
+    <!-- Stopwatch. Info Panel. Last lap title -->
+    <string name="stopwatch_info_panel_last_lap_title">Dernier temps</string>
+    <!-- Stopwatch. Info Panel. Best lap title -->
+    <string name="stopwatch_info_panel_best_lap_title">Meilleur temps</string>
+    <!-- Stopwatch. Info Panel. Laps title -->
+    <string name="stopwatch_info_panel_laps_title">Temps</string>
+    <!-- Stopwatch. Info Panel. No data -->
+    <string name="stopwatch_info_panel_empty_data">Pas de données enregistrées</string>
+
+    <!-- Stopwatch. Info Panel. An empty lap label -->
+    <string name="stopwatch_info_panel_empty_lap">Temps</string>
+    <!-- Stopwatch. Info Panel. Lap label -->
+    <string name="stopwatch_info_panel_lap_label">Temps <xliff:g id="lap">%1$s</xliff:g></string>
+    <!-- Stopwatch. Info Panel. Sector label -->
+    <string name="stopwatch_info_panel_lap_sector">Tps int. <xliff:g id="sector">%1$s</xliff:g></string>
+
+    <!-- Stopwatch. Menu. Hide last lap -->
+    <string name="stopwatch_menu_hide_last_lap_panel">Cacher \'Dernier lemps\'</string>
+    <!-- Stopwatch. Menu. Hide best lap -->
+    <string name="stopwatch_menu_hide_best_lap_panel">Cacher \'Meilleur lemps\'</string>
+    <!-- Stopwatch. Menu. Hide best lap -->
+    <string name="stopwatch_menu_hide_laps_panel">Cacher \'Temps\'</string>
+    <!-- Stopwatch. Menu. Settings -->
+    <string name="stopwatch_menu_settings">Paramètres</string>
+
+    <!-- Stopwatch. Preferences. General -->
+    <string name="stopwatch_preferences_lap_sectors">Temps/Temps intermédiaire</string>
+    <!-- Stopwatch. Preferences. Summary of General catergory -->
+    <string name="stopwatch_preferences_lap_sectors_summary">Paramètres pour configurer les temps et temps intermédiaires.</string>
+    <!-- Stopwatch. Preferences. Sectors -->
+    <string name="stopwatch_preferences_sectors">Temps intermédiaire</string>
+    <!-- Stopwatch. Preferences. Summary of sectors -->
+    <string name="stopwatch_preferences_sectors_summary">{0,choice,0#Temps intermédiaire désactivé.|1#Temps intermédiaire configuré à 1.|1&lt;Temps intermédiaire configuré à {0}.}</string>
+    <!-- Stopwatch. Preferences. Best lap behaviour -->
+    <string name="stopwatch_preferences_best_lap_behaviour">Configuration du meilleur temps</string>
+    <!-- Stopwatch. Preferences. About -->
+    <string name="stopwatch_preferences_about">A propos</string>
+    <!-- Stopwatch. Preferences. Summary of About catergory -->
+    <string name="stopwatch_preferences_about_summary">Stopwatch: Copyright \u00A9 2012 CyanogenMod</string>
+
+    <!-- Stopwatch. Best lap behaviour. Lower times are better -->
+    <string name="stopwatch_best_lap_lower_pref">Le meilleur temps est le plus court</string>
+    <!-- Stopwatch. Best lap behaviour. Summary of lower times are better  -->
+    <string name="stopwatch_best_lap_lower_pref_summary">Le meilleur temps est le plus court.</string>
+    <!-- Stopwatch. Best lap behaviour. Highest times are better -->
+    <string name="stopwatch_best_lap_highest_pref">Le meilleur temps est le plus long</string>
+    <!-- Stopwatch. Best lap behaviour. Summary of highest times are better -->
+    <string name="stopwatch_best_lap_highest_pref_summary">Le meilleur temps est le plus long.</string>
+
+    <!-- Stopwatch. Sectors Dialog Preference. Enabled check text -->
+    <string name="sectors_dialog_enabled_text">Activer les temps intermédiaire :</string>
+
+
+    <!-- Title of the Countdown fragment -->
+    <string name="countdown_title">Compte à rebourd</string>
+    <!-- Countdown. Stop timer button text -->
+    <string name="countdown_actions_stop">Arrêter</string>
+    <!-- Countdown. Stop timer button content description -->
+    <string name="countdown_actions_stop_cd">Arrête le compte à rebourd</string>
+    <!-- Countdown. Start timer button text -->
+    <string name="countdown_actions_start">Démarrer</string>
+    <!-- Countdown. Start timer button content description -->
+    <string name="countdown_actions_start_cd">Démarre le compte à rebourd</string>
+    <!-- Countdown. Resume timer button text -->
+    <string name="countdown_actions_resume">Reprendre</string>
+    <!-- Countdown. Resume timer button content description -->
+    <string name="countdown_actions_resume_cd">Reprend le compte à rebourd</string>
+    <!-- Countdown. Reset timer button text -->
+    <string name="countdown_actions_reset">Réinitialiser</string>
+    <!-- Countdown. Reset timer button content description -->
+    <string name="countdown_actions_reset_cd">Réinitialise le compte à rebourd</string>
+    <!-- Countdown. Cancel edition timer button text -->
+    <string name="countdown_actions_cancel">Annuler</string>
+    <!-- Countdown. Cancel edition button content description -->
+    <string name="countdown_actions_cancel_cd">Annule le mode d\'édition du compte à rebourd courrant</string>
+    <!-- Countdown. Set edition timer button text -->
+    <string name="countdown_actions_set">Enregsitrer</string>
+    <!-- Countdown. Set edition button content description -->
+    <string name="countdown_actions_set_cd">Enregistre le compte à rebourd</string>
+
+    <!-- Countdown. Menu. Edit timer -->
+    <string name="countdown_menu_open_timer_editor">Ouvrir l\'éditeur</string>
+    <!-- Countdown. Menu. Cancel timer -->
+    <string name="countdown_menu_close_timer_editor">Fermer l\'éditeur</string>
+    <!-- Countdown. Menu. Settings -->
+    <string name="countdown_menu_settings">Paramètres</string>
+
+    <!-- Countdown. Saved Countdown Timers Panel. Title -->
+    <string name="countdown_panel_title">Compte à rebourd enregistré</string>
+    <!-- Countdown. Saved Countdown Timers Panel. Add timer -->
+    <string name="countdown_panel_add_text">Ajouter le compte à rebourd courrant</string>
+    <!-- Countdown. Saved Countdown Timers Panel. Add timer. Content description -->
+    <string name="countdown_panel_add_text_cd">Ajoute le compte à rebourd à la liste.</string>
+    <!-- Countdown. Saved Countdown Timers Panel. Remove timer. Content description -->
+    <string name="countdown_panel_remove_cd">Supprime le compte à rebourd de la liste.</string>
+    <!-- Countdown. Saved Countdown Timers. Add confirmation dialog. -->
+    <string name="countdown_dialog_add">Créer un nouveau compte à rebourd.\n\nContinuer?\n</string>
+    <!-- Countdown. Saved Countdown Timers. Delete confirmation dialog. -->
+    <string name="countdown_dialog_delete">Supprimer le compte à rebourd \'<xliff:g id="timer">%1$s</xliff:g>\'\n\nEtes-vous sur(e)?\n</string>
+
+    <!-- Countdown. Preferences. Notifications -->
+    <string name="countdown_preferences_notifications">Notifications</string>
+    <!-- Countdown. Preferences. Summary of Notifications category -->
+    <string name="countdown_preferences_notifications_summary">Configuration des notifications des comptes à rebourd.</string>
+    <!-- Countdown. Preferences. About -->
+    <string name="countdown_preferences_about">A propos</string>
+    <!-- Countdown. Preferences. Summary of About catergory -->
+    <string name="countdown_preferences_about_summary">Countdown: Copyright \u00A9 2012 CyanogenMod</string>
+
+    <!-- Countdown. Preferences. On Countdown in progress category title -->
+    <string name="countdown_notification_oncountdown_category">Pendant un compte à rebourd</string>
+    <!-- Countdown. Preferences. On Countdown in progress. Notifications title -->
+    <string name="countdown_notification_oncountdown_notifications_title">Notifications</string>
+    <!-- Countdown. Preferences. On Countdown in progress. Notifications summary Off -->
+    <string name="countdown_notification_oncountdown_notifications_summary_on">Afficher les notifications dans la barre d\'état.</string>
+    <!-- Countdown. Preferences. On Countdown in progress. Notifications summary On -->
+    <string name="countdown_notification_oncountdown_notifications_summary_off">Ne pas afficher les notifications dans la barre d\'état.</string>
+
+    <!-- Countdown. Preferences. On final Countdown category title -->
+    <string name="countdown_notification_onfinalcountdown_category">A la fin du compte à rebourd</string>
+    <!-- Countdown. Preferences. On Countdown in progress. Notifications title -->
+    <string name="countdown_notification_onfinalcountdown_notifications_title">Notifications</string>
+    <!-- Countdown. Preferences. On Countdown in progress. Notifications summary Off -->
+    <string name="countdown_notification_onfinalcountdown_notifications_summary_on">Afficher les notifications dans la barre d\'état.</string>
+    <!-- Countdown. Preferences. On Countdown in progress. Notifications summary On -->
+    <string name="countdown_notification_onfinalcountdown_notifications_summary_off">Ne pas afficher les notifications dans la barre d\'état.</string>
+
+    <!-- Countdown. Preferences. On Countdown in progress. Show clock screen title -->
+    <string name="countdown_notification_onfinalcountdown_open_clock_screen_title">Ouvrir le compte à rebourd</string>
+    <!-- Countdown. Preferences. On Countdown in progress. Show clock screen summary On -->
+    <string name="countdown_notification_onfinalcountdown_open_clock_screen_summary_on">Quand le compte à rebourd touche à sa fin, l\'écran de compte à rebourd est ouvert (Cette option est ignorée si un appel est en cours).</string>
+    <!-- Countdown. Preferences. On Countdown in progress. Show clock screen summary On -->
+    <string name="countdown_notification_onfinalcountdown_open_clock_screen_summary_off">Quand le compte à rebourd touche à sa fin il n\'y pas retour à l\'écran de compte à rebourd, l\'utilisateur n\'est pas dérangé.</string>
+
+    <!-- Countdown. Preferences. On Countdown in progress. Ringtone -->
+    <string name="countdown_notification_onfinalcountdown_ringtone_title">Sonnerie</string>
+    <!-- Countdown. Preferences. On Countdown in progress. Ringtone. Silent option -->
+    <string name="countdown_notification_onfinalcountdown_ringtone_silent">Silencieux</string>
+
+    <!-- Countdown. Preferences. On Countdown in progress. Vibrate title -->
+    <string name="countdown_notification_onfinalcountdown_vibrate_title">Vibreur</string>
+    <!-- Countdown. Preferences. On Countdown in progress. Vibrate always option -->
+    <string name="countdown_notification_onfinalcountdown_vibrate_always">Toujours</string>
+    <!-- Countdown. Preferences. On Countdown in progress. Vibrate only when silent option -->
+    <string name="countdown_notification_onfinalcountdown_vibrate_only_when_silent">Seulement en silencieux</string>
+    <!-- Countdown. Preferences. On Countdown in progress. Vibrate never option -->
+    <string name="countdown_notification_onfinalcountdown_vibrate_never">Jamais</string>
+
+    <!-- Countdown. Preferences. On Countdown in progress. Vibrate on call title -->
+    <string name="countdown_notification_onfinalcountdown_vibrate_on_call_title">Vibreur pendant un appel</string>
+    <!-- Countdown. Preferences. On Countdown in progress. Vibrate on call summary On -->
+    <string name="countdown_notification_onfinalcountdown_vibrate_on_call_summary_on">Laissez vibrer pendant un appel.</string>
+    <!-- Countdown. Preferences. On Countdown in progress. Vibrate on call summary On -->
+    <string name="countdown_notification_onfinalcountdown_vibrate_on_call_summary_off">Ne pas laissez vibrer pendant un appel.</string>
+
+    <!-- Timer Clock Service. Countdown notification title for countdown timer -->
+    <string name="service_countdown_notification_title">Compte à rebourd</string>
+    <!-- Timer Clock Service. Countdown notification text for countdown in progress -->
+    <string name="service_countdown_notification_msg_progress">Il y a un compte à rebourd en cours.</string>
+    <!-- Timer Clock Service. Countdown notification text for ended countdown -->
+    <string name="service_countdown_notification_msg_end">Le compte à rebourd est terminé.</string>
+    <!-- Timer Clock Service. Countdown notification summary  -->
+    <string name="service_countdown_notification_summary">Temps restant: <xliff:g id="time">%1$s</xliff:g></string>
+
+    <!-- The text showed to advise that other fragment exists in deskclock fragment -->
+    <string name="cling_deskclock_desc">Pour afficher le chronométre et le compte à rebourd faites glisser sur la gauche.</string>
+    <!-- The text showed to advise the use of lap/sectors -->
+    <string name="cling_stopwatch_desc">Pour configurer les paramétres des temps et temps intermédiaire, allez dans le menu paramétre.</string>
+    <!-- The text showed to advise how to edit the countdown clock, with a long press holding -->
+    <string name="cling_countdown_desc">Pour éditer un compte à rebourd, restez appuyé sur le compteur.</string>
+
+    <!-- The overflow actionbar button -->
+    <string name="overflow_button_cd">Plus d\'options</string>
+
 </resources>
