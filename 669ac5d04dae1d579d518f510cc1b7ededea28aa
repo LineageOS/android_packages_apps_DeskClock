@@ -1,0 +1,9 @@
+Change-Id: I669ac5d04dae1d579d518f510cc1b7ededea28aa
+Code-Review+2: Ricardo Cerqueira <cyanogenmod@cerqueira.org>
+Verified+1: Ricardo Cerqueira <cyanogenmod@cerqueira.org>
+Code-Review+1: Delphin PETER <delphinpeter@gmail.com>
+Submitted-by: Ricardo Cerqueira <cyanogenmod@cerqueira.org>
+Submitted-at: Sat, 03 Nov 2012 18:03:47 -0700
+Reviewed-on: http://review.cyanogenmod.org/25785
+Project: CyanogenMod/android_packages_apps_DeskClock
+Branch: refs/heads/jellybean
