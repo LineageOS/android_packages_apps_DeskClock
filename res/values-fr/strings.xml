@@ -204,9 +204,9 @@
     <string name="stopwatch_info_panel_lap_sector">Tps int. <xliff:g id="sector">%1$s</xliff:g></string>
 
     <!-- Stopwatch. Menu. Hide last lap -->
-    <string name="stopwatch_menu_hide_last_lap_panel">Cacher \'Dernier lemps\'</string>
+    <string name="stopwatch_menu_hide_last_lap_panel">Cacher \'Dernier temps\'</string>
     <!-- Stopwatch. Menu. Hide best lap -->
-    <string name="stopwatch_menu_hide_best_lap_panel">Cacher \'Meilleur lemps\'</string>
+    <string name="stopwatch_menu_hide_best_lap_panel">Cacher \'Meilleur temps\'</string>
     <!-- Stopwatch. Menu. Hide best lap -->
     <string name="stopwatch_menu_hide_laps_panel">Cacher \'Temps\'</string>
     <!-- Stopwatch. Menu. Settings -->
