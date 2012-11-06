@@ -30,11 +30,16 @@
     <string name="label" msgid="162189613902857319">"Popis"</string>
     <string name="default_label" msgid="5590025289805630372">"Budík"</string>
     <string name="set_alarm" msgid="9148359866152726808">"Nastavit budík"</string>
+    <string name="alarm_profile">Profil</string>
+    <string name="alarm_profile_no_change_profile">Neměnit profil</string>
+    <string name="alarm_profile_summary_no_change">Neměnit profil, když budík zazvoní</string>
+    <string name="alarm_profile_summary_change_to">Když budík zazvoní, změnit profil na <xliff:g id="profile">%s</xliff:g></string>
     <string name="alarm_vibrate" msgid="3476686921490362230">"Vibrace"</string>
+    <string name="alarm_incvol">Zvyšování hlasitosti</string>
     <string name="alarm_repeat" msgid="7242985466344233206">"Opakovat"</string>
     <string name="alert" msgid="6539852766423700221">"Vyzváněcí tón"</string>
     <string name="time" msgid="8067216534232296518">"Čas"</string>
-    <string name="alarm_alert_dismiss_text" msgid="4942914605480888820">"Zavřít"</string>
+    <string name="alarm_alert_dismiss_text" msgid="4942914605480888820">"Zrušit"</string>
     <string name="alarm_alert_alert_silenced" msgid="2704775170733835993">"Budík ztišen po uplynutí <xliff:g id="MINUTES">%d</xliff:g> min."</string>
     <string name="alarm_alert_snooze_text" msgid="1774416052207651584">"Odložit"</string>
     <string name="alarm_alert_snooze_set" msgid="656470966696912087">"Upozornění odloženo o <xliff:g id="MINUTES">%d</xliff:g> min."</string>
@@ -83,13 +88,21 @@
     <item msgid="7809240121716151904">"25 minut"</item>
     <item msgid="2807487305575255986">"30 minut"</item>
   </string-array>
+    <string name="flip_action_title">Akce při otočení</string>
+    <string name="flip_action_dialog_title">Akce při otočení</string>
+    <string name="flip_action_summary">Při otočení telefonu displejem dolů <xliff:g id="action">%s</xliff:g></string>
+    <string-array name="flip_action_entries">
+      <item>Nedělat nic</item>
+      <item>Odložit budík</item>
+      <item>Zrušit budík</item>
+    </string-array>
     <string name="done" msgid="6509722361933858451">"Hotovo"</string>
     <string name="revert" msgid="9100911171235162926">"Vrátit zpět"</string>
     <string name="delete" msgid="5732434972457000541">"Smazat"</string>
     <string name="alarm_volume_title" msgid="8506245173912428522">"Hlasitost budíku"</string>
     <string name="alarm_volume_summary" msgid="8957440373896242438">"Nastavení hlasitosti budíků"</string>
     <string name="silent_alarm_summary" msgid="8605302849408279221">"Tichý"</string>
-    <string name="alarm_notify_text" msgid="4891014685945904766">"Odložit nebo zavřít budík"</string>
+    <string name="alarm_notify_text" msgid="4891014685945904766">"Odložit nebo zrušit budík"</string>
     <string name="alarm_notify_snooze_label" msgid="5404083762646377829">"<xliff:g id="LABEL">%s</xliff:g> (odloženo)"</string>
     <string name="alarm_notify_snooze_text" msgid="4819324081410990368">"Budík je nastaven na <xliff:g id="TIME">%s</xliff:g>. Dotykem jej zrušíte."</string>
     <string name="volume_button_setting_title" msgid="6937131248843413357">"Tlačítka hlasitosti"</string>
@@ -98,7 +111,7 @@
   <string-array name="volume_button_setting_entries">
     <item msgid="4520420953175098625">"Žádná"</item>
     <item msgid="7111908302622811168">"Odložit"</item>
-    <item msgid="8573552194573068996">"Ukončit"</item>
+    <item msgid="8573552194573068996">"Zrušit"</item>
   </string-array>
     <string name="default_ringtone_setting_title" msgid="4549726190682964245">"Nastavení výchozího vyzvánění"</string>
     <string name="alarm_button_description" msgid="740283647046258651">"Budíky"</string>
@@ -127,7 +140,7 @@
     <string name="stopwatch_actions_start_cd">Spustit aktuální běh stopek</string>
     <string name="stopwatch_actions_resume">Pokračovat</string>
     <string name="stopwatch_actions_resume_cd">Pokračovat v aktuálním běhu stopek</string>
-    <string name="stopwatch_actions_reset">Resetovat</string>
+    <string name="stopwatch_actions_reset">Reset</string>
     <string name="stopwatch_actions_reset_cd">Resetovat aktuální běh stopek</string>
     <string name="stopwatch_actions_lap">Etapa</string>
     <string name="stopwatch_actions_lap_cd">Pořídit snímek času etapy</string>
@@ -163,7 +176,7 @@
     <string name="countdown_actions_start_cd">Spustit aktuální běh odpočítávání</string>
     <string name="countdown_actions_resume">Pokračovat</string>
     <string name="countdown_actions_resume_cd">Pokračovat v aktuálním běhu odpočítávání</string>
-    <string name="countdown_actions_reset">Resetovat</string>
+    <string name="countdown_actions_reset">Reset</string>
     <string name="countdown_actions_reset_cd">Resetovat aktuální běh odpočítávání</string>
     <string name="countdown_actions_cancel">Zrušit</string>
     <string name="countdown_actions_cancel_cd">Zrušit režim úprav pro aktuální běh odpočítávání</string>
