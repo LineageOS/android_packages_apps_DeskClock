@@ -127,7 +127,7 @@
     <string name="stopwatch_actions_start_cd">Spustit aktuální běh stopek</string>
     <string name="stopwatch_actions_resume">Pokračovat</string>
     <string name="stopwatch_actions_resume_cd">Pokračovat v aktuálním běhu stopek</string>
-    <string name="stopwatch_actions_reset">Resetovat</string>
+    <string name="stopwatch_actions_reset">Reset</string>
     <string name="stopwatch_actions_reset_cd">Resetovat aktuální běh stopek</string>
     <string name="stopwatch_actions_lap">Etapa</string>
     <string name="stopwatch_actions_lap_cd">Pořídit snímek času etapy</string>
@@ -163,7 +163,7 @@
     <string name="countdown_actions_start_cd">Spustit aktuální běh odpočítávání</string>
     <string name="countdown_actions_resume">Pokračovat</string>
     <string name="countdown_actions_resume_cd">Pokračovat v aktuálním běhu odpočítávání</string>
-    <string name="countdown_actions_reset">Resetovat</string>
+    <string name="countdown_actions_reset">Reset</string>
     <string name="countdown_actions_reset_cd">Resetovat aktuální běh odpočítávání</string>
     <string name="countdown_actions_cancel">Zrušit</string>
     <string name="countdown_actions_cancel_cd">Zrušit režim úprav pro aktuální běh odpočítávání</string>
