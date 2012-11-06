@@ -63,7 +63,6 @@
     <string name="settings" msgid="5849739030579520686">"Ajustes"</string>
     <string name="alarm_in_silent_mode_title" msgid="3892612644543516705">"Alarma en modo silencio"</string>
     <string name="alarm_in_silent_mode_summary" msgid="123772279768441207">"Reproducir alarma incluso en modo silencio"</string>
-    <string name="hide_status_bar_icon_title">Ocultar icono de la barra de estado aunque hay una alarma establecida</string>
     <string name="snooze_duration_title" msgid="1471249885139952670">"Repetir alarma cada"</string>
   <string-array name="snooze_duration_entries">
     <item msgid="8337408933053603125">"5 minutos"</item>
