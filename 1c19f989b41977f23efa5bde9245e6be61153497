@@ -1,0 +1,21 @@
+{
+  "comments": [
+    {
+      "key": {
+        "uuid": "AAAAa3//+jE\u003d",
+        "filename": "res/values-cs/strings.xml",
+        "patchSetId": 2
+      },
+      "lineNbr": 97,
+      "author": {
+        "id": 1558
+      },
+      "writtenOn": "2012-11-07T16:49:43Z",
+      "side": 1,
+      "message": "pouzil bych misto \"zavrit\" slovo \"zrusit\", jak je to i v GB\nme osobne se \"zavrit\" nezda, ale nic jineho nez \"zrusit\" me nenapada",
+      "revId": "1c19f989b41977f23efa5bde9245e6be61153497",
+      "serverId": "1ec6b3db-b2c1-4fa4-84a2-4c7efe89ba71",
+      "unresolved": false
+    }
+  ]
+}
