@@ -148,7 +148,7 @@ public class TimerClockService extends Service {
 
             // Set the remaining time
             this.mTimer.mNotificationBuilder.setSummaryText(summary);
-            updateCountDownNotification(this.mTimer);
+            updateCountDownNotification(this.mTimer, false);
             this.mTimer.mHandler.postDelayed(this, 1000L);
         }
     }
@@ -277,7 +277,7 @@ public class TimerClockService extends Service {
                 // Remove notification if exist
                 Timer timer = getTimer(Long.valueOf(timerId));
                 if (timer.mType.compareTo(TIMER_TYPE.COUNTDOWN) == 0) {
-                    TimerClockService.this.mNotificationManager.cancel(timer.mNotificationId);
+                    stopForeground(true);
                 }
 
                 // Remove timer
@@ -602,7 +602,7 @@ public class TimerClockService extends Service {
             } catch (Exception ex) {/**NON BLOCK**/}
             try {
                 if (timer != null && timer.mNotificationId != 0) {
-                    this.mNotificationManager.cancel(timer.mNotificationId);
+                    stopForeground(true);
                 }
             } catch (Exception ex) {/**NON BLOCK**/}
             this.mTimers.remove(timerId);
@@ -723,7 +723,7 @@ public class TimerClockService extends Service {
 
         // Cancels active notification
         if (timer.mNotificationId != 0) {
-            TimerClockService.this.mNotificationManager.cancel(timer.mNotificationId);
+            stopForeground(true);
         }
 
         // Create the intent to associate to notification
@@ -752,7 +752,7 @@ public class TimerClockService extends Service {
         timer.mNotificationBuilder = bigBuilder;
 
         // Send notification
-        updateCountDownNotification(timer);
+        updateCountDownNotification(timer, true);
     }
 
     /**
@@ -760,7 +760,7 @@ public class TimerClockService extends Service {
      *
      * @param timer The timer
      */
-    private void updateCountDownNotification(Timer timer) {
+    private void updateCountDownNotification(Timer timer, boolean newTimer) {
         // Build notification
         Notification notification = timer.mNotificationBuilder.build();
         notification.flags = Notification.FLAG_ONGOING_EVENT;
@@ -768,7 +768,11 @@ public class TimerClockService extends Service {
             timer.mNotificationId = ++sNotificationsIds;
         }
         // Send notification
-        this.mNotificationManager.notify(timer.mNotificationId, notification);
+        if (!newTimer) {
+            this.mNotificationManager.notify(timer.mNotificationId, notification);
+        } else {
+            startForeground(timer.mNotificationId, notification);
+        }
     }
 
     /**
@@ -793,10 +797,9 @@ public class TimerClockService extends Service {
                     true);
         } else {
             // In case the notification preference has changed
-            // Cancels active notification
+            // cancels active notification
             if (timer.mNotificationId != 0) {
-                TimerClockService.this.
-                    mNotificationManager.cancel(timer.mNotificationId);
+                stopForeground(true);
             }
         }
     }
