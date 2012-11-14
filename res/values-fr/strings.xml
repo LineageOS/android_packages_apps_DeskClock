@@ -263,7 +263,7 @@
     <!-- Countdown. Cancel edition button content description -->
     <string name="countdown_actions_cancel_cd">Annule le mode d\'édition du compte à rebourd courrant</string>
     <!-- Countdown. Set edition timer button text -->
-    <string name="countdown_actions_set">Enregsitrer</string>
+    <string name="countdown_actions_set">Enregistrer</string>
     <!-- Countdown. Set edition button content description -->
     <string name="countdown_actions_set_cd">Enregistre le compte à rebourd</string>
 
@@ -283,9 +283,9 @@
     <!-- Countdown. Saved Countdown Timers Panel. Remove timer. Content description -->
     <string name="countdown_panel_remove_cd">Supprime le compte à rebourd de la liste.</string>
     <!-- Countdown. Saved Countdown Timers. Add confirmation dialog. -->
-    <string name="countdown_dialog_add">Créer un nouveau compte à rebourd.\n\nContinuer?\n</string>
+    <string name="countdown_dialog_add">Créer un nouveau compte à rebourd.\n\nContinuer ?\n</string>
     <!-- Countdown. Saved Countdown Timers. Delete confirmation dialog. -->
-    <string name="countdown_dialog_delete">Supprimer le compte à rebourd \'<xliff:g id="timer">%1$s</xliff:g>\'\n\nEtes-vous sur(e)?\n</string>
+    <string name="countdown_dialog_delete">Supprimer le compte à rebourd \'<xliff:g id="timer">%1$s</xliff:g>\'\n\nEtes-vous sur(e) ?\n</string>
 
     <!-- Countdown. Preferences. Notifications -->
     <string name="countdown_preferences_notifications">Notifications</string>
@@ -349,7 +349,7 @@
     <!-- Timer Clock Service. Countdown notification text for ended countdown -->
     <string name="service_countdown_notification_msg_end">Le compte à rebourd est terminé.</string>
     <!-- Timer Clock Service. Countdown notification summary  -->
-    <string name="service_countdown_notification_summary">Temps restant: <xliff:g id="time">%1$s</xliff:g></string>
+    <string name="service_countdown_notification_summary">Temps restant : <xliff:g id="time">%1$s</xliff:g></string>
 
     <!-- The text showed to advise that other fragment exists in deskclock fragment -->
     <string name="cling_deskclock_desc">Pour afficher le chronométre et le compte à rebourd faites glisser sur la gauche.</string>
