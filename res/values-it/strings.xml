@@ -1,5 +1,6 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<!-- Copyright (C) 2012 The Android Open Source Project
+<!--
+     Copyright (C) 2012 The Android Open Source Project
 
     Licensed under the Apache License, Version 2.0 (the "License");
     you may not use this file except in compliance with the License.
@@ -13,8 +14,8 @@
     See the License for the specific language governing permissions and
     limitations under the License.
 -->
-<resources xmlns:android="http://schemas.android.com/apk/res/android"
-    xmlns:xliff="urn:oasis:names:tc:xliff:document:1.2">
+<resources xmlns:android="http://schemas.android.com/apk/res/android" xmlns:xliff="urn:oasis:names:tc:xliff:document:1.2">
+
     <string name="app_label" msgid="6674495003718166674">"Orologio"</string>
     <string name="alarm_list_title" msgid="7589940465292950600">"Allarmi"</string>
     <string name="add_alarm" msgid="5976616107390962899">"Aggiungi allarme"</string>
@@ -38,16 +39,18 @@
     <string name="alarm_alert_alert_silenced" msgid="2704775170733835993">"Allarme disattivato dopo <xliff:g id="MINUTES">%d</xliff:g> minuti."</string>
     <string name="alarm_alert_snooze_text" msgid="1774416052207651584">"Posponi"</string>
     <string name="alarm_alert_snooze_set" msgid="656470966696912087">"Sospensione per <xliff:g id="MINUTES">%d</xliff:g> minuti."</string>
-  <string-array name="alarm_set">
-    <item msgid="6450913786084215050">"L\'allarme sarà attivato tra meno di 1 minuto."</item>
-    <item msgid="6002066367368421848">"L\'allarme sarà attivato tra <xliff:g id="DAYS">%1$s</xliff:g>."</item>
-    <item msgid="8824719306247973774">"L\'allarme sarà attivato tra <xliff:g id="HOURS">%2$s</xliff:g>."</item>
-    <item msgid="8182406852935468862">"L\'allarme sarà attivato tra <xliff:g id="DAYS">%1$s</xliff:g> e <xliff:g id="HOURS">%2$s</xliff:g>."</item>
-    <item msgid="2532279224777213194">"L\'allarme sarà attivato tra <xliff:g id="MINUTES">%3$s</xliff:g>."</item>
-    <item msgid="5936557894247187717">"L\'allarme sarà attivato tra <xliff:g id="DAYS">%1$s</xliff:g> e <xliff:g id="MINUTES">%3$s</xliff:g>."</item>
-    <item msgid="9115697840826129603">"L\'allarme sarà attivato tra <xliff:g id="HOURS">%2$s</xliff:g> e <xliff:g id="MINUTES">%3$s</xliff:g>."</item>
-    <item msgid="2332583385137381060">"L\'allarme sarà attivato tra <xliff:g id="DAYS">%1$s</xliff:g>, <xliff:g id="HOURS">%2$s</xliff:g> e <xliff:g id="MINUTES">%3$s</xliff:g>."</item>
-  </string-array>
+
+    <string-array name="alarm_set">
+        <item msgid="6450913786084215050">"L\'allarme sarà attivato tra meno di 1 minuto."</item>
+        <item msgid="6002066367368421848">"L\'allarme sarà attivato tra <xliff:g id="DAYS">%1$s</xliff:g>."</item>
+        <item msgid="8824719306247973774">"L\'allarme sarà attivato tra <xliff:g id="HOURS">%2$s</xliff:g>."</item>
+        <item msgid="8182406852935468862">"L\'allarme sarà attivato tra <xliff:g id="DAYS">%1$s</xliff:g> e <xliff:g id="HOURS">%2$s</xliff:g>."</item>
+        <item msgid="2532279224777213194">"L\'allarme sarà attivato tra <xliff:g id="MINUTES">%3$s</xliff:g>."</item>
+        <item msgid="5936557894247187717">"L\'allarme sarà attivato tra <xliff:g id="DAYS">%1$s</xliff:g> e <xliff:g id="MINUTES">%3$s</xliff:g>."</item>
+        <item msgid="9115697840826129603">"L\'allarme sarà attivato tra <xliff:g id="HOURS">%2$s</xliff:g> e <xliff:g id="MINUTES">%3$s</xliff:g>."</item>
+        <item msgid="2332583385137381060">"L\'allarme sarà attivato tra <xliff:g id="DAYS">%1$s</xliff:g>, <xliff:g id="HOURS">%2$s</xliff:g> e <xliff:g id="MINUTES">%3$s</xliff:g>."</item>
+    </string-array>
+
     <string name="day" msgid="7984755014526510295">"1 giorno"</string>
     <string name="days" msgid="2070509222727852210">"<xliff:g id="DAYS">%s</xliff:g> giorni"</string>
     <string name="hour" msgid="2546819039651509323">"1 ora"</string>
@@ -63,35 +66,40 @@
     <string name="alarm_in_silent_mode_title" msgid="3892612644543516705">"Allarme in mod. silenz."</string>
     <string name="alarm_in_silent_mode_summary" msgid="123772279768441207">"Riproduci allarme anche con dispositivo in modalità Silenzioso"</string>
     <string name="snooze_duration_title" msgid="1471249885139952670">"Durata sospensione"</string>
-  <string-array name="snooze_duration_entries">
-    <item msgid="8337408933053603125">"5 minuti"</item>
-    <item msgid="5294206441496024610">"10 minuti"</item>
-    <item msgid="2165904039211935470">"15 minuti"</item>
-    <item msgid="7248236967714374250">"20 minuti"</item>
-    <item msgid="738394723625179423">"25 minuti"</item>
-    <item msgid="1180222611308391616">"30 minuti"</item>
-  </string-array>
+
+    <string-array name="snooze_duration_entries">
+        <item msgid="8337408933053603125">"5 minuti"</item>
+        <item msgid="5294206441496024610">"10 minuti"</item>
+        <item msgid="2165904039211935470">"15 minuti"</item>
+        <item msgid="7248236967714374250">"20 minuti"</item>
+        <item msgid="738394723625179423">"25 minuti"</item>
+        <item msgid="1180222611308391616">"30 minuti"</item>
+    </string-array>
+
     <string name="flip_action_title">Azione capovolgimento</string>
     <string name="flip_action_dialog_title">Azione capovolgimento</string>
-    <string name="flip_action_summary">Girare il telofono a schermo in giù farà
-      <xliff:g id="action">%s</xliff:g></string>
+    <string name="flip_action_summary">Girare il telofono a schermo in giù farà<xliff:g id="action">%s</xliff:g></string>
+
     <string-array name="flip_action_entries">
-      <item>Nulla</item>
-      <item>Sospendere l\'allarme</item>
-      <item>Eliminare l\'allarme</item>
+        <item>Nulla</item>
+        <item>Sospendere l\'allarme</item>
+        <item>Eliminare l\'allarme</item>
     </string-array>
+
     <string name="auto_silence_title" msgid="6940612987809171112">"Silenziatore automatico"</string>
     <string name="auto_silence_summary" msgid="5757272454196171758">"Gli allarmi verranno disattivati dopo <xliff:g id="MINUTES">%d</xliff:g> minuti"</string>
     <string name="auto_silence_never" msgid="4302257878142130807">"Non attivo"</string>
-  <string-array name="auto_silence_entries">
-    <item msgid="7718972982871612080">"Non attivo"</item>
-    <item msgid="5431906692406316549">"5 minuti"</item>
-    <item msgid="7742728812068919959">"10 minuti"</item>
-    <item msgid="2855948657259647629">"15 minuti"</item>
-    <item msgid="6330196381284475079">"20 minuti"</item>
-    <item msgid="7809240121716151904">"25 minuti"</item>
-    <item msgid="2807487305575255986">"30 minuti"</item>
-  </string-array>
+
+    <string-array name="auto_silence_entries">
+        <item msgid="7718972982871612080">"Non attivo"</item>
+        <item msgid="5431906692406316549">"5 minuti"</item>
+        <item msgid="7742728812068919959">"10 minuti"</item>
+        <item msgid="2855948657259647629">"15 minuti"</item>
+        <item msgid="6330196381284475079">"20 minuti"</item>
+        <item msgid="7809240121716151904">"25 minuti"</item>
+        <item msgid="2807487305575255986">"30 minuti"</item>
+    </string-array>
+
     <string name="done" msgid="6509722361933858451">"Fine"</string>
     <string name="revert" msgid="9100911171235162926">"Annulla modifiche"</string>
     <string name="delete" msgid="5732434972457000541">"Elimina"</string>
@@ -104,11 +112,13 @@
     <string name="volume_button_setting_title" msgid="6937131248843413357">"Pulsanti volume"</string>
     <string name="volume_button_dialog_title" msgid="8768042543750036853">"Effetto pulsante"</string>
     <string name="volume_button_setting_summary" msgid="4776447991226047070">"Imposta le azioni di questi tasti quando vengono premuti se l\'allarme è attivo"</string>
-  <string-array name="volume_button_setting_entries">
-    <item msgid="4520420953175098625">"Nessuno"</item>
-    <item msgid="7111908302622811168">"Sospendi"</item>
-    <item msgid="8573552194573068996">"Spegni"</item>
-  </string-array>
+
+    <string-array name="volume_button_setting_entries">
+        <item msgid="4520420953175098625">"Nessuno"</item>
+        <item msgid="7111908302622811168">"Sospendi"</item>
+        <item msgid="8573552194573068996">"Spegni"</item>
+    </string-array>
+
     <string name="default_ringtone_setting_title" msgid="4549726190682964245">"Imposta suoneria predefinita"</string>
     <string name="alarm_button_description" msgid="740283647046258651">"Allarmi"</string>
     <string name="gallery_button_description" msgid="1151743663255257668">"Galleria"</string>
@@ -218,4 +228,7 @@
     <string name="cling_stopwatch_desc">Configura i giri e i settori di giro nel menu impostazioni.</string>
     <string name="cling_countdown_desc">Per modificare un timer, premere e tenere premuto.</string>
     <string name="overflow_button_cd">Altre opzioni</string>
+    <string name="type">Tipologia</string>
+    <string name="music">Musica</string>
+
 </resources>

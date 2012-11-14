@@ -1,5 +1,6 @@
 <?xml version="1.0" encoding="utf-8"?>
-<!-- Copyright (C) 2012 The CyanogenMod Project
+<!--
+     Copyright (C) 2012 The CyanogenMod Project
 
      Licensed under the Apache License, Version 2.0 (the "License");
      you may not use this file except in compliance with the License.
@@ -43,6 +44,17 @@
         <item>0</item>
         <item>1</item>
         <item>2</item>
+    </string-array>
+
+    <!-- Type values -->
+
+    <string-array name="type">
+        <item name="ringtone">@string/alert</item>
+        <item name="music">@string/music</item>
+    </string-array>
+    <string-array name="typeValues">
+        <item name="ringtone">@string/alert</item>
+        <item name="music">@string/music</item>
     </string-array>
 
 </resources>

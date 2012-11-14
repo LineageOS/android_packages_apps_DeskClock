@@ -25,62 +25,65 @@ import android.database.sqlite.SQLiteOpenHelper;
 import android.net.Uri;
 
 /**
- * Helper class for opening the database from multiple providers.  Also provides
+ * Helper class for opening the database from multiple providers. Also provides
  * some common functionality.
  */
 class AlarmDatabaseHelper extends SQLiteOpenHelper {
 
-    private static final String DATABASE_NAME = "alarms.db";
-    private static final int DATABASE_VERSION = 7;
+	private static final String DATABASE_NAME = "alarms.db";
+	private static final int DATABASE_VERSION = 8;
 
-    public AlarmDatabaseHelper(Context context) {
-        super(context, DATABASE_NAME, null, DATABASE_VERSION);
-    }
+	public AlarmDatabaseHelper(Context context) {
+		super(context, DATABASE_NAME, null, DATABASE_VERSION);
+	}
 
-    @Override
-    public void onCreate(SQLiteDatabase db) {
-        db.execSQL("CREATE TABLE alarms (" +
-                   "_id INTEGER PRIMARY KEY," +
-                   "hour INTEGER, " +
-                   "minutes INTEGER, " +
-                   "daysofweek INTEGER, " +
-                   "alarmtime INTEGER, " +
-                   "enabled INTEGER, " +
-                   "vibrate INTEGER, " +
-                   "message TEXT, " +
-                   "alert TEXT, " +
-                   "incvol INTEGER, " +
-                   "profile TEXT);");
+	@Override
+	public void onCreate(SQLiteDatabase db) {
+		db.execSQL("CREATE TABLE alarms (" +
+				"_id INTEGER PRIMARY KEY," +
+				"hour INTEGER, " +
+				"minutes INTEGER, " +
+				"daysofweek INTEGER, " +
+				"alarmtime INTEGER, " +
+				"enabled INTEGER, " +
+				"vibrate INTEGER, " +
+				"message TEXT, " +
+				"alert TEXT, " +
+				"incvol INTEGER, " +
+				"profile TEXT, " +
+				"type TEXT);");
 
-        // insert default alarms
-        String insertMe = "INSERT INTO alarms " +
-                "(hour, minutes, daysofweek, alarmtime, enabled, vibrate, " +
-                " message, alert, incvol, profile) VALUES ";
-        db.execSQL(insertMe +
-                String.format("(8, 30, 31, 0, 0, 1, '', '', 0, '%s');", Alarm.NO_PROFILE));
-        db.execSQL(insertMe +
-                String.format("(9, 00, 96, 0, 0, 1, '', '', 0, '%s');", Alarm.NO_PROFILE));
-    }
+		// insert default alarms
+		String insertMe = "INSERT INTO alarms " +
+				"(hour, minutes, daysofweek, alarmtime, enabled, vibrate, " +
+				" message, alert, incvol, profile, type) VALUES ";
+		db.execSQL(insertMe +
+				String.format("(8, 30, 31, 0, 0, 1, '', '', 0, '%s', 'Ringtone');", Alarm.NO_PROFILE));
+		db.execSQL(insertMe +
+				String.format("(9, 00, 96, 0, 0, 1, '', '', 0, '%s', 'Ringtone');", Alarm.NO_PROFILE));
+	}
 
-    @Override
-    public void onUpgrade(SQLiteDatabase db, int oldVersion,
-            int currentVersion) {
-        if (Log.LOGV) Log.v(
-                "Upgrading alarms database from version " +
-                oldVersion + " to " + currentVersion +
-                ", which will destroy all old data");
-        db.execSQL("DROP TABLE IF EXISTS alarms");
-        onCreate(db);
-    }
+	@Override
+	public void onUpgrade(SQLiteDatabase db, int oldVersion,
+			int currentVersion) {
+		if (Log.LOGV)
+			Log.v(
+					"Upgrading alarms database from version " +
+							oldVersion + " to " + currentVersion +
+							", which will destroy all old data");
+		db.execSQL("DROP TABLE IF EXISTS alarms");
+		onCreate(db);
+	}
 
-    Uri commonInsert(ContentValues values) {
-        SQLiteDatabase db = getWritableDatabase();
-        long rowId = db.insert("alarms", Alarm.Columns.MESSAGE, values);
-        if (rowId < 0) {
-            throw new SQLException("Failed to insert row");
-        }
-        if (Log.LOGV) Log.v("Added alarm rowId = " + rowId);
+	Uri commonInsert(ContentValues values) {
+		SQLiteDatabase db = getWritableDatabase();
+		long rowId = db.insert("alarms", Alarm.Columns.MESSAGE, values);
+		if (rowId < 0) {
+			throw new SQLException("Failed to insert row");
+		}
+		if (Log.LOGV)
+			Log.v("Added alarm rowId = " + rowId);
 
-        return ContentUris.withAppendedId(Alarm.Columns.CONTENT_URI, rowId);
-    }
+		return ContentUris.withAppendedId(Alarm.Columns.CONTENT_URI, rowId);
+	}
 }

@@ -1,5 +1,6 @@
 <?xml version="1.0" encoding="utf-8"?>
-<!-- Copyright (C) 2008 The Android Open Source Project
+<!--
+     Copyright (C) 2008 The Android Open Source Project
 
      Licensed under the Apache License, Version 2.0 (the "License");
      you may not use this file except in compliance with the License.
@@ -15,32 +16,55 @@
 -->
 
 <PreferenceScreen xmlns:android="http://schemas.android.com/apk/res/android"
-        android:title="@string/set_alarm">
-    <CheckBoxPreference android:key="enabled"
+    android:title="@string/set_alarm" >
+
+    <CheckBoxPreference
+        android:key="enabled"
         android:persistent="false"
         android:title="@string/enable_alarm" />
-    <Preference android:key="time"
+
+    <Preference
+        android:key="time"
         android:persistent="false"
-        android:title="@string/time"/>
+        android:title="@string/time" />
+
     <com.android.deskclock.RepeatPreference
-        android:persistent="false"
         android:key="setRepeat"
+        android:persistent="false"
         android:title="@string/alarm_repeat" />
+
+    <ListPreference
+        android:defaultValue="@string/alert"
+        android:entries="@array/type"
+        android:entryValues="@array/typeValues"
+        android:key="type"
+        android:title="@string/type" />
+
+    <Preference
+        android:enabled="false"
+        android:key="music"
+        android:title="@string/music" />
+
     <com.android.deskclock.AlarmPreference
         android:key="alarm"
-        android:title="@string/alert"
+        android:persistent="false"
         android:ringtoneType="alarm"
-        android:persistent="false"
         android:showDefault="false"
-        android:showSilent="true" />
+        android:showSilent="true"
+        android:title="@string/alert" />
+
     <com.android.deskclock.ProfilePreference
-        android:persistent="false"
         android:key="profile"
-        android:title="@string/alarm_profile" />
-    <CheckBoxPreference android:key="vibrate"
         android:persistent="false"
-        android:title="@string/alarm_vibrate"/>
-    <CheckBoxPreference android:key="incvol"
+        android:title="@string/alarm_profile" />
+
+    <CheckBoxPreference
+        android:key="vibrate"
+        android:persistent="false"
+        android:title="@string/alarm_vibrate" />
+    <CheckBoxPreference
+        android:key="incvol"
         android:persistent="false"
         android:title="@string/alarm_incvol" />
+
 </PreferenceScreen>
