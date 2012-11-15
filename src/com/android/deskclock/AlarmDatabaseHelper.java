@@ -31,7 +31,7 @@ import android.net.Uri;
 class AlarmDatabaseHelper extends SQLiteOpenHelper {
 
     private static final String DATABASE_NAME = "alarms.db";
-    private static final int DATABASE_VERSION = 7;
+    private static final int DATABASE_VERSION = 8;
 
     public AlarmDatabaseHelper(Context context) {
         super(context, DATABASE_NAME, null, DATABASE_VERSION);
@@ -50,16 +50,17 @@ class AlarmDatabaseHelper extends SQLiteOpenHelper {
                    "message TEXT, " +
                    "alert TEXT, " +
                    "incvol INTEGER, " +
-                   "profile TEXT);");
+                   "profile TEXT, " +
+                   "type TEXT);");
 
         // insert default alarms
         String insertMe = "INSERT INTO alarms " +
                 "(hour, minutes, daysofweek, alarmtime, enabled, vibrate, " +
-                " message, alert, incvol, profile) VALUES ";
+                " message, alert, incvol, profile, type) VALUES ";
         db.execSQL(insertMe +
-                String.format("(8, 30, 31, 0, 0, 1, '', '', 0, '%s');", Alarm.NO_PROFILE));
+                String.format("(8, 30, 31, 0, 0, 1, '', '', 0, '%s', 'ringtone');", Alarm.NO_PROFILE));
         db.execSQL(insertMe +
-                String.format("(9, 00, 96, 0, 0, 1, '', '', 0, '%s');", Alarm.NO_PROFILE));
+                String.format("(9, 00, 96, 0, 0, 1, '', '', 0, '%s', 'ringtone');", Alarm.NO_PROFILE));
     }
 
     @Override
