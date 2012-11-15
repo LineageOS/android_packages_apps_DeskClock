@@ -44,5 +44,13 @@
         <item>1</item>
         <item>2</item>
     </string-array>
+    <string-array name="type" translatable="false">
+        <item name="ringtone">@string/alert</item>
+        <item name="music">@string/music</item>
+    </string-array>
+    <string-array name="typeValues" translatable="false">
+        <item name="ringtone">@string/alert</item>
+        <item name="music">@string/music</item>
+    </string-array>
 
 </resources>
