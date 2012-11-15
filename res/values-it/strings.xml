@@ -218,4 +218,6 @@
     <string name="cling_stopwatch_desc">Configura i giri e i settori di giro nel menu impostazioni.</string>
     <string name="cling_countdown_desc">Per modificare un timer, premere e tenere premuto.</string>
     <string name="overflow_button_cd">Altre opzioni</string>
+    <string name="type">Tipologia</string>
+    <string name="music">Musica</string>
 </resources>
