@@ -26,6 +26,16 @@
         android:persistent="false"
         android:key="setRepeat"
         android:title="@string/alarm_repeat" />
+    <ListPreference
+        android:defaultValue="@string/alert"
+        android:entries="@array/type"
+        android:entryValues="@array/typeValues"
+        android:key="type"
+        android:title="@string/type" />
+    <Preference
+        android:enabled="false"
+        android:key="music"
+        android:title="@string/music" />
     <com.android.deskclock.AlarmPreference
         android:key="alarm"
         android:title="@string/alert"

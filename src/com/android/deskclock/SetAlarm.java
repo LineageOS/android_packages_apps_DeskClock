@@ -23,10 +23,12 @@ import android.content.Context;
 import android.content.DialogInterface;
 import android.content.DialogInterface.OnCancelListener;
 import android.content.Intent;
+import android.net.Uri;
 import android.os.Bundle;
 import android.os.Handler;
 import android.os.Vibrator;
 import android.preference.CheckBoxPreference;
+import android.preference.ListPreference;
 import android.preference.Preference;
 import android.preference.PreferenceActivity;
 import android.preference.PreferenceScreen;
@@ -52,6 +54,8 @@ public class SetAlarm extends PreferenceActivity implements Preference.OnPrefere
     private static final String KEY_CURRENT_ALARM = "currentAlarm";
     private static final String KEY_ORIGINAL_ALARM = "originalAlarm";
     private static final String KEY_TIME_PICKER_BUNDLE = "timePickerBundle";
+    private static final int PICK_MUSIC_CODE = 1;
+
 
     private EditText mLabel;
     private CheckBoxPreference mEnabledPref;
@@ -61,12 +65,15 @@ public class SetAlarm extends PreferenceActivity implements Preference.OnPrefere
     private CheckBoxPreference mIncVolPref;
     private ProfilePreference mProfilePref;
     private RepeatPreference mRepeatPref;
+    private ListPreference mTypePref;
+    private Preference mMusicPref;
 
     private int     mId;
     private int     mHour;
     private int     mMinute;
     private TimePickerDialog mTimePickerDialog;
     private Alarm   mOriginalAlarm;
+    private Uri musicPath;
 
     @Override
     protected void onCreate(Bundle icicle) {
@@ -103,6 +110,12 @@ public class SetAlarm extends PreferenceActivity implements Preference.OnPrefere
         updateProfilesStatus();
         mRepeatPref = (RepeatPreference) findPreference("setRepeat");
         mRepeatPref.setOnPreferenceChangeListener(this);
+
+        mTypePref = (ListPreference) findPreference("type");
+        mTypePref.setOnPreferenceChangeListener(this);
+
+        mMusicPref = (Preference) findPreference("music");
+        mMusicPref.setOnPreferenceChangeListener(this);
 
         Intent i = getIntent();
         Alarm alarm = i.getParcelableExtra(Alarms.ALARM_INTENT_EXTRA);
@@ -248,6 +261,16 @@ public class SetAlarm extends PreferenceActivity implements Preference.OnPrefere
                 if (p != mEnabledPref) {
                     mEnabledPref.setChecked(true);
                 }
+                if (p == mTypePref) {
+                    mTypePref.setSummary(mTypePref.getEntry());
+                    if (mTypePref.getEntry().equals(getString(R.string.music))) {
+                        mAlarmPref.setEnabled(false);
+                        mMusicPref.setEnabled(true);
+                    } else {
+                        mMusicPref.setEnabled(false);
+                        mAlarmPref.setEnabled(true);
+                    }
+                }
                 saveAlarm(null);
             }
         });
@@ -264,17 +287,37 @@ public class SetAlarm extends PreferenceActivity implements Preference.OnPrefere
         mVibratePref.setChecked(alarm.vibrate);
         mIncVolPref.setChecked(alarm.incvol);
         // Give the alert uri to the preference.
-        mAlarmPref.setAlert(alarm.alert);
+        if (alarm.type.equals("music")) {
+            mTypePref.setValue(getString(R.string.music));
+            mTypePref.setSummary(getString(R.string.music));
+            mAlarmPref.setEnabled(false);
+            mMusicPref.setEnabled(true);
+            if (alarm.alert != null) {
+                mMusicPref.setSummary(alarm.alert.getLastPathSegment());
+                musicPath = alarm.alert;
+            }
+        } else {
+            mTypePref.setValue(getString(R.string.alert));
+            mTypePref.setSummary(getString(R.string.alert));
+            mMusicPref.setEnabled(false);
+            mAlarmPref.setEnabled(true);
+            mAlarmPref.setAlert(alarm.alert);
+        }
         // Give the profile to the preference
         mProfilePref.setProfile(alarm.profile);
         updateTime();
     }
+
 
     @Override
     public boolean onPreferenceTreeClick(PreferenceScreen preferenceScreen,
             Preference preference) {
         if (preference == mTimePref) {
             showTimePicker();
+        } else if (preference == mMusicPref) {
+            Intent intent = new Intent(Intent.ACTION_GET_CONTENT);
+            intent.setType("audio/*");
+            startActivityForResult(intent, PICK_MUSIC_CODE);
         }
 
         return super.onPreferenceTreeClick(preferenceScreen, preference);
@@ -300,6 +343,7 @@ public class SetAlarm extends PreferenceActivity implements Preference.OnPrefere
                 DateFormat.is24HourFormat(this));
         mTimePickerDialog.setOnCancelListener(this);
         mTimePickerDialog.show();
+
     }
 
     public void onTimeSet(TimePicker view, int hourOfDay, int minute) {
@@ -349,7 +393,13 @@ public class SetAlarm extends PreferenceActivity implements Preference.OnPrefere
         alarm.daysOfWeek = mRepeatPref.getDaysOfWeek();
         alarm.vibrate = mVibratePref.isChecked();
         alarm.label = mLabel.getText().toString();
-        alarm.alert = mAlarmPref.getAlert();
+        if (mTypePref.getEntry()!=null && mTypePref.getEntry().equals(getString(R.string.music)) && musicPath != null) {
+            alarm.alert = musicPath;
+            alarm.type = "music";
+        } else {
+            alarm.alert = mAlarmPref.getAlert();
+            alarm.type = "ringtone";
+        }
         alarm.incvol = mIncVolPref.isChecked();
         alarm.profile = mProfilePref.getProfile();
         return alarm;
@@ -455,5 +505,17 @@ public class SetAlarm extends PreferenceActivity implements Preference.OnPrefere
                 Settings.System.getInt(getContentResolver(),
                         Settings.System.SYSTEM_PROFILES_ENABLED, 1) == 1;
         mProfilePref.setEnabled(isProfilesEnabled);
+    }
+
+    protected void onActivityResult(int requestCode, int resultCode, Intent data) {
+        super.onActivityResult(requestCode, resultCode, data);
+        if (requestCode == PICK_MUSIC_CODE) {
+            if (resultCode == RESULT_OK && data != null) {
+                Uri file = data.getData();
+
+                mMusicPref.setSummary(file.getLastPathSegment());
+                musicPath = Uri.parse(file.getPath());
+            }
+        }
     }
 }

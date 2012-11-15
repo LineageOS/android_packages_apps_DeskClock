@@ -161,13 +161,11 @@ public class Alarms {
         values.put(Alarm.Columns.DAYS_OF_WEEK, alarm.daysOfWeek.getCoded());
         values.put(Alarm.Columns.VIBRATE, alarm.vibrate);
         values.put(Alarm.Columns.MESSAGE, alarm.label);
-
         // A null alert Uri indicates a silent alarm.
         values.put(Alarm.Columns.ALERT, alarm.alert == null ? ALARM_ALERT_SILENT
                 : alarm.alert.toString());
-
+        values.put(Alarm.Columns.TYPE, alarm.type);
         values.put(Alarm.Columns.INCVOL, alarm.incvol);
-
         // A null profile string indicates that profile mustn't be changed
         values.put(Alarm.Columns.PROFILE, alarm.profile == null ? Alarm.NO_PROFILE.toString()
                 : alarm.profile.toString());
