@@ -558,5 +558,8 @@
 
     <!-- The overflow actionbar button -->
     <string name="overflow_button_cd">More options</string>
-
+    <!-- Type of alert -->
+    <string name="type">Type</string>
+    <string name="music">Music</string>
+    
 </resources>
