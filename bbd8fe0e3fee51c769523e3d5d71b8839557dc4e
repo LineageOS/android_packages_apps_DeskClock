@@ -1,0 +1,21 @@
+{
+  "comments": [
+    {
+      "key": {
+        "uuid": "AAAAa3//77Q\u003d",
+        "filename": "res/values-fr/strings.xml",
+        "patchSetId": 3
+      },
+      "lineNbr": 322,
+      "author": {
+        "id": 4808
+      },
+      "writtenOn": "2012-11-17T03:41:49Z",
+      "side": 1,
+      "message": "il n\u0027y a pas \"de\" retour à ...",
+      "revId": "bbd8fe0e3fee51c769523e3d5d71b8839557dc4e",
+      "serverId": "1ec6b3db-b2c1-4fa4-84a2-4c7efe89ba71",
+      "unresolved": false
+    }
+  ]
+}
