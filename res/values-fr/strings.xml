@@ -97,9 +97,9 @@
     <string name="alarm_volume_title" msgid="8506245173912428522">"Volume"</string>
     <string name="alarm_volume_summary" msgid="8957440373896242438">"Définir le volume des alarmes"</string>
     <string name="silent_alarm_summary" msgid="8605302849408279221">"Silencieuse"</string>
-    <string name="alarm_notify_text" msgid="4891014685945904766">"Répétez ou ignorez l\'alarme."</string>
+    <string name="alarm_notify_text" msgid="4891014685945904766">"Répéter ou ignorer l\'alarme."</string>
     <string name="alarm_notify_snooze_label" msgid="5404083762646377829">"<xliff:g id="LABEL">%s</xliff:g> (répétition)"</string>
-    <string name="alarm_notify_snooze_text" msgid="4819324081410990368">"Prochaine alarme à <xliff:g id="TIME">%s</xliff:g>. Appuyez pour annuler."</string>
+    <string name="alarm_notify_snooze_text" msgid="4819324081410990368">"Prochaine alarme à <xliff:g id="TIME">%s</xliff:g>. Appuyer pour annuler."</string>
     <string name="volume_button_setting_title" msgid="6937131248843413357">"Boutons du volume"</string>
     <string name="volume_button_dialog_title" msgid="8768042543750036853">"Effet des boutons"</string>
     <string name="volume_button_setting_summary" msgid="4776447991226047070">"Définir les actions de ces boutons lorsqu\'ils sont utilisés pendant une alarme"</string>
@@ -119,7 +119,7 @@
   <!-- Setting title for the flip action setting. -->
   <string name="flip_action_title">Accéléromètre</string>
   <!-- Setting summary for the flip action setting. -->
-  <string name="flip_action_summary">Pivoter l\'appareil pour : <xliff:g id="action">%s</xliff:g></string>
+  <string name="flip_action_summary">Pivoter l\'appareil pour\u00A0: <xliff:g id="action">%s</xliff:g></string>
   <!-- Dialog title of the flip action setting. -->
   <string name="flip_action_dialog_title">Effet</string>
 
@@ -139,4 +139,5 @@
     <string name="loading_ringtone" msgid="6523322777415268044">"Chargement de la sonnerie..."</string>
     <string name="control_set_alarm" msgid="2194676418924016327">"Régler l\'alarme"</string>
     <string name="control_set_alarm_with_existing" msgid="1128169496817859490">"Alarme réglée : <xliff:g id="TIME">%s</xliff:g>"</string>
+
 </resources>
