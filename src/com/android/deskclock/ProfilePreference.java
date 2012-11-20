@@ -17,8 +17,8 @@
 package com.android.deskclock;
 
 import android.app.AlertDialog.Builder;
-import android.app.Profile;
-import android.app.ProfileManager;
+/*import android.app.Profile;
+import android.app.ProfileManager;*/
 import android.content.Context;
 import android.content.DialogInterface;
 import android.preference.ListPreference;
@@ -51,8 +51,8 @@ public class ProfilePreference extends ListPreference {
         super(context, attrs);
 
         mContext = context;
-        final ProfileManager profileManager =
-                (ProfileManager)context.getSystemService(Context.PROFILE_SERVICE);
+        /*final ProfileManager profileManager =
+                (ProfileManager)context.getSystemService(Context.PROFILE_SERVICE);*/
 
         // Load the list of defined profiles
         List<CharSequence> names = new ArrayList<CharSequence>();
@@ -63,7 +63,7 @@ public class ProfilePreference extends ListPreference {
         uuids.add(Alarm.NO_PROFILE.toString()); // No UUID
 
         // Get names and uuids of current list of profiles
-        if( profileManager != null ) {
+        /*if( profileManager != null ) {
             Profile[] profiles = profileManager.getProfiles();
             if (profiles != null) {
                 for (int i = 0; i < profiles.length; i++) {
@@ -71,14 +71,13 @@ public class ProfilePreference extends ListPreference {
                     uuids.add(profiles[i].getUuid().toString());
                 }
             }
-        }
+        }*/
 
         mNames = names.toArray(new CharSequence[names.size()]);
         mUuids = uuids.toArray(new CharSequence[uuids.size()]);
         setEntries(mNames);
         setEntryValues(mUuids);
     }
-
     /**
      * {@inheritDoc}
      */

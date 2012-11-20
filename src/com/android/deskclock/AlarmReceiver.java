@@ -22,8 +22,9 @@ import android.app.PendingIntent;
 import android.content.BroadcastReceiver;
 import android.content.Context;
 import android.content.Intent;
-import android.app.Profile;
-import android.app.ProfileManager;
+//missing api
+//import android.app.Profile;
+//import android.app.ProfileManager;
 import android.os.Parcel;
 import android.os.PowerManager.WakeLock;
 import android.provider.Settings;
@@ -250,10 +251,11 @@ public class AlarmReceiver extends BroadcastReceiver {
     }
 
     private void changeToProfile(final Context context, final Alarm alarm) {
-        // The alarm is defined to change the active profile?
+        // stubbed for now profile merge
+        /*// The alarm is defined to change the active profile?
         if (alarm.profile != null && !alarm.profile.equals(Alarm.NO_PROFILE)) {
-            final ProfileManager profileManager =
-                    (ProfileManager)context.getSystemService(Context.PROFILE_SERVICE);
+            //final ProfileManager profileManager =
+              //      (ProfileManager)context.getSystemService(Context.PROFILE_SERVICE);
             if (profileManager != null) {
                 boolean isProfilesEnabled =
                     Settings.System.getInt(context.getContentResolver(),
@@ -295,6 +297,6 @@ public class AlarmReceiver extends BroadcastReceiver {
             }
         } else {
             Log.v("Alarm doesn't define a profile to change to");
-        }
+        }*/
     }
 }

@@ -401,9 +401,9 @@ public class SetAlarm extends PreferenceActivity implements Preference.OnPrefere
     }
 
     private void updateProfilesStatus() {
-        boolean isProfilesEnabled =
-                Settings.System.getInt(getContentResolver(),
-                        Settings.System.SYSTEM_PROFILES_ENABLED, 1) == 1;
+        boolean isProfilesEnabled = false;
+                /*Settings.System.getInt(getContentResolver(),
+                        Settings.System.SYSTEM_PROFILES_ENABLED, 1) == 1;*/
         mProfilePref.setEnabled(isProfilesEnabled);
     }
 }
