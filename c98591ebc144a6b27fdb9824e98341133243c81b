@@ -1,0 +1,38 @@
+{
+  "comments": [
+    {
+      "key": {
+        "uuid": "AAAAa3//7cY\u003d",
+        "filename": "res/values-fr/strings.xml",
+        "patchSetId": 5
+      },
+      "lineNbr": 355,
+      "author": {
+        "id": 2990
+      },
+      "writtenOn": "2012-11-20T16:33:49Z",
+      "side": 1,
+      "message": "chronomètre",
+      "revId": "c98591ebc144a6b27fdb9824e98341133243c81b",
+      "serverId": "1ec6b3db-b2c1-4fa4-84a2-4c7efe89ba71",
+      "unresolved": false
+    },
+    {
+      "key": {
+        "uuid": "AAAAa3//7cU\u003d",
+        "filename": "res/values-fr/strings.xml",
+        "patchSetId": 5
+      },
+      "lineNbr": 357,
+      "author": {
+        "id": 2990
+      },
+      "writtenOn": "2012-11-20T16:33:49Z",
+      "side": 1,
+      "message": "intermédiaires",
+      "revId": "c98591ebc144a6b27fdb9824e98341133243c81b",
+      "serverId": "1ec6b3db-b2c1-4fa4-84a2-4c7efe89ba71",
+      "unresolved": false
+    }
+  ]
+}
