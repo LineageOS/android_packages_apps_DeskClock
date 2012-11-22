@@ -1,0 +1,89 @@
+{
+  "comments": [
+    {
+      "key": {
+        "uuid": "AAAAa3//7Eg\u003d",
+        "filename": "src/com/android/deskclock/Alarm.java",
+        "patchSetId": 4
+      },
+      "lineNbr": 235,
+      "author": {
+        "id": 32
+      },
+      "writtenOn": "2012-11-22T18:51:25Z",
+      "side": 1,
+      "message": "} else {",
+      "revId": "676623203a5798ae220fb5dfdac017b37fb064bd",
+      "serverId": "1ec6b3db-b2c1-4fa4-84a2-4c7efe89ba71",
+      "unresolved": false
+    },
+    {
+      "key": {
+        "uuid": "AAAAa3//7Ec\u003d",
+        "filename": "src/com/android/deskclock/AlarmDatabaseHelper.java",
+        "patchSetId": 4
+      },
+      "lineNbr": 34,
+      "author": {
+        "id": 32
+      },
+      "writtenOn": "2012-11-22T18:51:25Z",
+      "side": 1,
+      "message": "You need to implement onUpgrade to add the new column to existing databases.",
+      "revId": "676623203a5798ae220fb5dfdac017b37fb064bd",
+      "serverId": "1ec6b3db-b2c1-4fa4-84a2-4c7efe89ba71",
+      "unresolved": false
+    },
+    {
+      "key": {
+        "uuid": "AAAAa3//7Es\u003d",
+        "filename": "src/com/android/deskclock/SetAlarm.java",
+        "patchSetId": 4
+      },
+      "lineNbr": 67,
+      "author": {
+        "id": 32
+      },
+      "writtenOn": "2012-11-22T18:51:25Z",
+      "side": 1,
+      "message": "No tabs",
+      "revId": "676623203a5798ae220fb5dfdac017b37fb064bd",
+      "serverId": "1ec6b3db-b2c1-4fa4-84a2-4c7efe89ba71",
+      "unresolved": false
+    },
+    {
+      "key": {
+        "uuid": "AAAAa3//7Eo\u003d",
+        "filename": "src/com/android/deskclock/SetAlarm.java",
+        "patchSetId": 4
+      },
+      "lineNbr": 298,
+      "author": {
+        "id": 32
+      },
+      "writtenOn": "2012-11-22T18:51:25Z",
+      "side": 1,
+      "message": "} else {",
+      "revId": "676623203a5798ae220fb5dfdac017b37fb064bd",
+      "serverId": "1ec6b3db-b2c1-4fa4-84a2-4c7efe89ba71",
+      "unresolved": false
+    },
+    {
+      "key": {
+        "uuid": "AAAAa3//7Ek\u003d",
+        "filename": "src/com/android/deskclock/SetAlarm.java",
+        "patchSetId": 4
+      },
+      "lineNbr": 319,
+      "author": {
+        "id": 32
+      },
+      "writtenOn": "2012-11-22T18:51:25Z",
+      "side": 1,
+      "message": "magic number?",
+      "revId": "676623203a5798ae220fb5dfdac017b37fb064bd",
+      "serverId": "1ec6b3db-b2c1-4fa4-84a2-4c7efe89ba71",
+      "unresolved": false
+    }
+  ]
+}
