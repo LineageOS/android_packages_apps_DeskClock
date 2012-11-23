@@ -36,6 +36,24 @@
     },
     {
       "key": {
+        "uuid": "AAAAa3//694\u003d",
+        "filename": "src/com/android/deskclock/AlarmDatabaseHelper.java",
+        "patchSetId": 4
+      },
+      "lineNbr": 34,
+      "author": {
+        "id": 5049
+      },
+      "writtenOn": "2012-11-23T00:12:22Z",
+      "side": 1,
+      "message": "onUpgrade was already implemented and it drops the old table.\nDid the older \"database_version increments\" simply drops the table?\nBtw if you confirm I can do that.",
+      "parentUuid": "AAAAa3//7Ec\u003d",
+      "revId": "676623203a5798ae220fb5dfdac017b37fb064bd",
+      "serverId": "1ec6b3db-b2c1-4fa4-84a2-4c7efe89ba71",
+      "unresolved": false
+    },
+    {
+      "key": {
         "uuid": "AAAAa3//7Es\u003d",
         "filename": "src/com/android/deskclock/SetAlarm.java",
         "patchSetId": 4
