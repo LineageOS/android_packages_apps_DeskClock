@@ -63,6 +63,8 @@
     <string name="settings" msgid="5849739030579520686">"Beállítások"</string>
     <string name="alarm_in_silent_mode_title" msgid="3892612644543516705">"Ébresztés néma üzemmódban"</string>
     <string name="alarm_in_silent_mode_summary" msgid="123772279768441207">"Legyen ébresztés néma üzemmódban is."</string>
+    <string name="show_status_bar_icon_title">Ikon megjelenítése</string>
+    <string name="show_status_bar_icon_summary">Aktív ébresztés esetén ikon megjelenítése a státusz soron</string>
     <string name="snooze_duration_title" msgid="1471249885139952670">"Szundi hossza"</string>
   <string-array name="snooze_duration_entries">
     <item msgid="8337408933053603125">"5 perc"</item>
