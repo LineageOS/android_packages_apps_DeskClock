@@ -62,6 +62,8 @@
     <string name="settings" msgid="5849739030579520686">"Impostazioni"</string>
     <string name="alarm_in_silent_mode_title" msgid="3892612644543516705">"Allarme in mod. silenz."</string>
     <string name="alarm_in_silent_mode_summary" msgid="123772279768441207">"Riproduci allarme anche con dispositivo in modalità Silenzioso"</string>
+    <string name="show_status_bar_icon_title">Mostra icona</string>
+    <string name="show_status_bar_icon_summary">Mostra un\'icona nella barra di stato quando è impostato un allarme</string>
     <string name="snooze_duration_title" msgid="1471249885139952670">"Durata sospensione"</string>
   <string-array name="snooze_duration_entries">
     <item msgid="8337408933053603125">"5 minuti"</item>
@@ -123,6 +125,10 @@
     <string name="loading_ringtone" msgid="6523322777415268044">"Caricamento suoneria..."</string>
     <string name="control_set_alarm" msgid="2194676418924016327">"Imposta allarme"</string>
     <string name="control_set_alarm_with_existing" msgid="1128169496817859490">"Allarme impostato: <xliff:g id="TIME">%s</xliff:g>"</string>
+    <string name="alarm_profile">Profilo</string>
+    <string name="alarm_profile_no_change_profile">Nessun cambiamento</string>
+    <string name="alarm_profile_summary_no_change">Il profilo corrente non verrà cambiato all\'attivarsi dell\'allarme</string>
+    <string name="alarm_profile_summary_change_to">All\'attivarsi dell\'allarme, il profilo verrà cambiato in <xliff:g id="profile">%s</xliff:g></string>
     <string name="msg_timer_service_is_not_ready">\nIl servizio timer non è attivo. Non sono consentite operazioni.\n</string>
     <string name="msg_timer_creation_fails">\nCreazione timer fallita. Non sono consentite operazioni.\n</string>
     <string name="msg_timer_ui_thread_fails">\nErrore UI thread. Non sono consentite operazioni.\n</string>
