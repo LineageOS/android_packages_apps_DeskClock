@@ -222,5 +222,6 @@
     <string name="cling_stopwatch_desc">Säädä kierrosten ja sektoreiden toimintaa asetuksista.</string>
     <string name="cling_countdown_desc">Muokataksesi ajastinta, paina kelloa pitkään</string>
     <string name="overflow_button_cd">Lisää asetuksia</string>
-
+    <string name="show_status_bar_icon_title">Näytä kuvake</string>
+    <string name="show_status_bar_icon_summary">Näytä kuvake tilapalkissa kun hälytys on käytössä</string>
 </resources>
