@@ -361,4 +361,10 @@
 
     <!-- The overflow actionbar button -->
     <string name="overflow_button_cd">Περισσότερες επιλογές</string>
+
+    <!-- Setting title for showing/hiding the alarm status bar icon -->
+    <string name="show_status_bar_icon_title">Εμφάνιση εικονιδίου</string>
+
+    <!-- Setting summary for showing/hiding the alarm statusbar icon -->
+    <string name="show_status_bar_icon_summary">Εμφάνιση εικονιδίου στη μπάρα κατάστασης όταν είναι ενεργό ένα ξυπνητήρι</string>
 </resources>
