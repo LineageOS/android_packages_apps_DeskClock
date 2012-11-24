@@ -19,6 +19,24 @@
     },
     {
       "key": {
+        "uuid": "AAAAa3//6p0\u003d",
+        "filename": "res/values-de/strings.xml",
+        "patchSetId": 2
+      },
+      "lineNbr": 72,
+      "author": {
+        "id": 1053
+      },
+      "writtenOn": "2012-11-24T00:22:29Z",
+      "side": 1,
+      "message": "Werde ich umsetzen.",
+      "parentUuid": "AAAAa3//6wc\u003d",
+      "revId": "485a5c5cb921a18b09ec9fbbf0e7c0ec294f1506",
+      "serverId": "1ec6b3db-b2c1-4fa4-84a2-4c7efe89ba71",
+      "unresolved": false
+    },
+    {
+      "key": {
         "uuid": "AAAAa3//6wg\u003d",
         "filename": "res/values-de/strings.xml",
         "patchSetId": 2
@@ -30,6 +48,24 @@
       "writtenOn": "2012-11-23T17:04:06Z",
       "side": 1,
       "message": "Wecker-Symbol in der Statusleiste anzeigen, wenn aktiviert.",
+      "revId": "485a5c5cb921a18b09ec9fbbf0e7c0ec294f1506",
+      "serverId": "1ec6b3db-b2c1-4fa4-84a2-4c7efe89ba71",
+      "unresolved": false
+    },
+    {
+      "key": {
+        "uuid": "AAAAa3//6pw\u003d",
+        "filename": "res/values-de/strings.xml",
+        "patchSetId": 2
+      },
+      "lineNbr": 75,
+      "author": {
+        "id": 1053
+      },
+      "writtenOn": "2012-11-24T00:22:29Z",
+      "side": 1,
+      "message": "Das finde ich nicht verständlich! Das Wecker-Symbol wird ja nur angezeigt, wenn der Wecker gestellt und zusätzlich diese Option aktiviert ist.",
+      "parentUuid": "AAAAa3//6wg\u003d",
       "revId": "485a5c5cb921a18b09ec9fbbf0e7c0ec294f1506",
       "serverId": "1ec6b3db-b2c1-4fa4-84a2-4c7efe89ba71",
       "unresolved": false
