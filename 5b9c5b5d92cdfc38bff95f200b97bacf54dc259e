@@ -16,6 +16,23 @@
       "revId": "5b9c5b5d92cdfc38bff95f200b97bacf54dc259e",
       "serverId": "1ec6b3db-b2c1-4fa4-84a2-4c7efe89ba71",
       "unresolved": false
+    },
+    {
+      "key": {
+        "uuid": "AAAAa3//54M\u003d",
+        "filename": "src/com/android/deskclock/SettingsActivity.java",
+        "patchSetId": 1
+      },
+      "lineNbr": 289,
+      "author": {
+        "id": 4581
+      },
+      "writtenOn": "2012-11-27T05:06:36Z",
+      "side": 1,
+      "message": "this is in the wrong spot.  it builds if you move this section to line 229.",
+      "revId": "5b9c5b5d92cdfc38bff95f200b97bacf54dc259e",
+      "serverId": "1ec6b3db-b2c1-4fa4-84a2-4c7efe89ba71",
+      "unresolved": false
     }
   ]
 }
