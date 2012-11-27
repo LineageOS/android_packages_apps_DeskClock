@@ -419,25 +419,25 @@
     <!-- Stopwatch. Preferences. General -->
     <string name="stopwatch_preferences_lap_sectors">Lap/sectors</string>
     <!-- Stopwatch. Preferences. Summary of General catergory -->
-    <string name="stopwatch_preferences_lap_sectors_summary">Settings to configure the behaviour of laps and sectors.</string>
+    <string name="stopwatch_preferences_lap_sectors_summary">Settings to configure the behavior of laps and sectors.</string>
     <!-- Stopwatch. Preferences. Sectors -->
     <string name="stopwatch_preferences_sectors">Sectors</string>
     <!-- Stopwatch. Preferences. Summary of sectors -->
     <string name="stopwatch_preferences_sectors_summary">{0,choice,0#Lap sectors not enabled.|1#Lap sectors configured with 1 sector.|1&lt;Lap sectors configured with {0} sectors.}</string>
-    <!-- Stopwatch. Preferences. Best lap behaviour -->
-    <string name="stopwatch_preferences_best_lap_behaviour">Best lap behaviour</string>
+    <!-- Stopwatch. Preferences. Best lap behavior -->
+    <string name="stopwatch_preferences_best_lap_behavior">Best lap behavior</string>
     <!-- Stopwatch. Preferences. About -->
     <string name="stopwatch_preferences_about">About</string>
     <!-- Stopwatch. Preferences. Summary of About catergory -->
     <string name="stopwatch_preferences_about_summary">Stopwatch: Copyright \u00A9 2012 CyanogenMod</string>
 
-    <!-- Stopwatch. Best lap behaviour. Lower times are better -->
+    <!-- Stopwatch. Best lap behavior. Lower times are better -->
     <string name="stopwatch_best_lap_lower_pref">Lower times are better</string>
-    <!-- Stopwatch. Best lap behaviour. Summary of lower times are better  -->
+    <!-- Stopwatch. Best lap behavior. Summary of lower times are better  -->
     <string name="stopwatch_best_lap_lower_pref_summary">Best lap is the lower time.</string>
-    <!-- Stopwatch. Best lap behaviour. Highest times are better -->
+    <!-- Stopwatch. Best lap behavior. Highest times are better -->
     <string name="stopwatch_best_lap_highest_pref">Greater times are better</string>
-    <!-- Stopwatch. Best lap behaviour. Summary of highest times are better -->
+    <!-- Stopwatch. Best lap behavior. Summary of highest times are better -->
     <string name="stopwatch_best_lap_highest_pref_summary">Best lap is the highest time.</string>
 
     <!-- Stopwatch. Sectors Dialog Preference. Enabled check text -->
@@ -494,7 +494,7 @@
     <!-- Countdown. Preferences. Notifications -->
     <string name="countdown_preferences_notifications">Notifications</string>
     <!-- Countdown. Preferences. Summary of Notifications category -->
-    <string name="countdown_preferences_notifications_summary">Settings to configure the behaviour of countdown notifications.</string>
+    <string name="countdown_preferences_notifications_summary">Settings to configure the behavior of countdown notifications.</string>
     <!-- Countdown. Preferences. About -->
     <string name="countdown_preferences_about">About</string>
     <!-- Countdown. Preferences. Summary of About catergory -->
@@ -558,7 +558,7 @@
     <!-- The text showed to advise that other fragment exists in deskclock fragment -->
     <string name="cling_deskclock_desc">To show stopwatch and countdown timers, swipe to the left.</string>
     <!-- The text showed to advise the use of lap/sectors -->
-    <string name="cling_stopwatch_desc">To configure lap and sectors behaviour, go to the settings menu.</string>
+    <string name="cling_stopwatch_desc">To configure lap and sectors behavior, go to the settings menu.</string>
     <!-- The text showed to advise how to edit the countdown clock, with a long press holding -->
     <string name="cling_countdown_desc">To edit the timer, press and hold over the clock.</string>
 
