@@ -1,4 +1,4 @@
-<?xml version="1.0" encoding="UTF-8"?>
+﻿<?xml version="1.0" encoding="UTF-8"?>
 <!--  Copyright (C) 2007 The Android Open Source Project
 
      Licensed under the Apache License, Version 2.0 (the "License");
@@ -67,6 +67,8 @@
     <string name="settings" msgid="5849739030579520686">"Nastavení"</string>
     <string name="alarm_in_silent_mode_title" msgid="3892612644543516705">"Budík v tichém režimu"</string>
     <string name="alarm_in_silent_mode_summary" msgid="123772279768441207">"Aktivovat budík i v případě, že je zařízení v tichém režimu."</string>
+    <string name="show_status_bar_icon_title">Zobrazovat ikonu</string>
+    <string name="show_status_bar_icon_summary">Zobrazovat ikonu ve stavovém řádku při nastaveném budíku.</string>
     <string name="snooze_duration_title" msgid="1471249885139952670">"Doba odložení"</string>
   <string-array name="snooze_duration_entries">
     <item msgid="8337408933053603125">"5 min"</item>
