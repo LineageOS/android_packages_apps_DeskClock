@@ -161,7 +161,7 @@
     <string name="stopwatch_preferences_lap_sectors_summary">Configurar preferências de voltas e setores</string>
     <string name="stopwatch_preferences_sectors">Setor</string>
     <string name="stopwatch_preferences_sectors_summary">{0,opção,0#Setores de volta não estão ativados.|1#Setores de volta configurados com 1 setor.|1&lt;Setores de volta configurados com {0} setores.}</string>
-    <string name="stopwatch_preferences_best_lap_behaviour">Comportamento da melhor volta</string>
+    <string name="stopwatch_preferences_best_lap_behavior">Comportamento da melhor volta</string>
     <string name="stopwatch_preferences_about">Sobre</string>
     <string name="stopwatch_preferences_about_summary">Cronômetro: Copyright \u00A9 2012 CyanogenMod</string>
     <string name="stopwatch_best_lap_lower_pref">Tempos menores são melhores</string>

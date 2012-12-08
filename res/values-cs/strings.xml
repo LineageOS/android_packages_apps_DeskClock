@@ -163,7 +163,7 @@
     <string name="stopwatch_preferences_lap_sectors_summary">Konfigurace chování etap a úseků.</string>
     <string name="stopwatch_preferences_sectors">Úseky</string>
     <string name="stopwatch_preferences_sectors_summary">{0,choice,0#Úseky etapy nejsou zapnuty.|1#Úseky etapy konfigurovány s 1 úsekem.|1&lt;Úseky etapy konfigurovány s {0} úseky.}</string>
-    <string name="stopwatch_preferences_best_lap_behaviour">Chování nejlepší etapy</string>
+    <string name="stopwatch_preferences_best_lap_behavior">Chování nejlepší etapy</string>
     <string name="stopwatch_preferences_about">O aplikaci</string>
     <string name="stopwatch_preferences_about_summary">Stopwatch. CyanogenMod © 2012</string>
     <string name="stopwatch_best_lap_lower_pref">Kratší časy jsou lepší</string>

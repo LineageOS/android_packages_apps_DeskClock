@@ -227,20 +227,20 @@
     <string name="stopwatch_preferences_sectors">Zwischenzeiten</string>
     <!-- Stopwatch. Preferences. Summary of sectors -->
     <string name="stopwatch_preferences_sectors_summary">{0,choice,0#Zwischenzeiten sind nicht aktiviert.|1#Eine Zwischenzeit pro Runde konfiguriert.|1&lt;{0} Zwischenzeiten pro Runde konfiguriert.}</string>
-    <!-- Stopwatch. Preferences. Best lap behaviour -->
-    <string name="stopwatch_preferences_best_lap_behaviour">Beste Runde</string>
+    <!-- Stopwatch. Preferences. Best lap behavior -->
+    <string name="stopwatch_preferences_best_lap_behavior">Beste Runde</string>
     <!-- Stopwatch. Preferences. About -->
     <string name="stopwatch_preferences_about">Über</string>
     <!-- Stopwatch. Preferences. Summary of About catergory -->
     <string name="stopwatch_preferences_about_summary">Stopwatch: Copyright \u00A9 2012 CyanogenMod</string>
 
-    <!-- Stopwatch. Best lap behaviour. Lower times are better -->
+    <!-- Stopwatch. Best lap behavior. Lower times are better -->
     <string name="stopwatch_best_lap_lower_pref">Niedrige Zeiten sind besser</string>
-    <!-- Stopwatch. Best lap behaviour. Summary of lower times are better  -->
+    <!-- Stopwatch. Best lap behavior. Summary of lower times are better  -->
     <string name="stopwatch_best_lap_lower_pref_summary">Schnellste Zeit ist die beste Runde.</string>
-    <!-- Stopwatch. Best lap behaviour. Highest times are better -->
+    <!-- Stopwatch. Best lap behavior. Highest times are better -->
     <string name="stopwatch_best_lap_highest_pref">Höhere Zeiten sind besser</string>
-    <!-- Stopwatch. Best lap behaviour. Summary of highest times are better -->
+    <!-- Stopwatch. Best lap behavior. Summary of highest times are better -->
     <string name="stopwatch_best_lap_highest_pref_summary">Langsamste Zeit ist die beste Runde.</string>
 
     <!-- Stopwatch. Sectors Dialog Preference. Enabled check text -->

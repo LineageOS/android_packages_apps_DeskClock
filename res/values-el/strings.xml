@@ -222,7 +222,7 @@
     <!-- Stopwatch. Preferences. Summary of sectors -->
     <string name="stopwatch_preferences_sectors_summary">{0,choice,0#Οι τομείς είναι απενεργοποιημένοι.|1#Οι τομείς ρυθμίστηκαν με 1 τομέα.|1&lt;Οι τομείς ρυθμίστηκαν με {0} τομείς.}</string>
     <!-- Stopwatch. Preferences. Best lap behaviour -->
-    <string name="stopwatch_preferences_best_lap_behaviour">Καλύτερος γύρος</string>
+    <string name="stopwatch_preferences_best_lap_behavior">Καλύτερος γύρος</string>
     <!-- Stopwatch. Preferences. About -->
     <string name="stopwatch_preferences_about">Σχετικά</string>
     <!-- Stopwatch. Preferences. Summary of About catergory -->

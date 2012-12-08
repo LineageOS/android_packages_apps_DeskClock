@@ -162,7 +162,7 @@
     <string name="stopwatch_preferences_lap_sectors_summary">Muuta kierrosten ja sektoreiden asetuksia.</string>
     <string name="stopwatch_preferences_sectors">Sektorit</string>
     <string name="stopwatch_preferences_sectors_summary">{0,choice,0#Kierroksen sektorit ei käytössä.|1#Kierroksen sektorit käytössä 1 sektorilla.|1&lt;Kierroksen sektorit käytössä {0} sektorilla.}</string>
-    <string name="stopwatch_preferences_best_lap_behaviour">Parhaan kierroksen asetukset</string>
+    <string name="stopwatch_preferences_best_lap_behavior">Parhaan kierroksen asetukset</string>
     <string name="stopwatch_preferences_about">Tietoja</string>
     <string name="stopwatch_best_lap_lower_pref">Pienemmät ajat ovat parempia</string>
     <string name="stopwatch_best_lap_lower_pref_summary">Paras kierros on pienin aika.</string>

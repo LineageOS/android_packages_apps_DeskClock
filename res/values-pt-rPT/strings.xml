@@ -194,7 +194,7 @@
     <!-- Stopwatch. Preferences. Summary of sectors -->
     <string name="stopwatch_preferences_sectors_summary">{0,escolha,0#Sectores de volta inactivos.|1#Sectores de volta configurados com 1 sector.|1&lt;Sectores de volta configurados com {0} sectores.}</string>
     <!-- Stopwatch. Preferences. Best lap behaviour -->
-    <string name="stopwatch_preferences_best_lap_behaviour">Comportamento de Melhor volta</string>
+    <string name="stopwatch_preferences_best_lap_behavior">Comportamento de Melhor volta</string>
     <!-- Stopwatch. Preferences. About -->
     <string name="stopwatch_preferences_about">Sobre</string>
     <!-- Stopwatch. Preferences. Summary of About catergory -->
