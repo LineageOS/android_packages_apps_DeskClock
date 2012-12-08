@@ -189,7 +189,7 @@
     <!-- Stopwatch. Preferences. Summary of sectors -->
     <string name="stopwatch_preferences_sectors_summary">{0,choice,0#Sektori krugova nisu uključeni.|1#Krug se sastoji od jednog sektora.|1&lt;Krug se sastoji od {0} sektora.}</string>
     <!-- Stopwatch. Preferences. Best lap behaviour -->
-    <string name="stopwatch_preferences_best_lap_behaviour">Najbolji krug</string>
+    <string name="stopwatch_preferences_best_lap_behavior">Najbolji krug</string>
     <!-- Stopwatch. Preferences. About -->
     <string name="stopwatch_preferences_about">O</string>
     <!-- Stopwatch. Preferences. Summary of About catergory -->

@@ -223,7 +223,7 @@
     <!-- StopWatch. Preferences. Summary of sectors -->
     <string name="stopwatch_preferences_sectors_summary">{0,choice,0#Szektorok nincsenek engedélyezve.|1#Körönként 1 szektor.|1&lt;Körönkénti {0} szektor.}</string>
     <!-- StopWatch. Preferences. Best lap behaviour -->
-    <string name="stopwatch_preferences_best_lap_behaviour">Legjobb kör logika</string>
+    <string name="stopwatch_preferences_best_lap_behavior">Legjobb kör logika</string>
     <!-- StopWatch. Preferences. About -->
     <string name="stopwatch_preferences_about">Névjegy</string>
     <!-- StopWatch. Preferences. Summary of About catergory -->

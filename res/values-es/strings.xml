@@ -165,7 +165,7 @@
     <string name="stopwatch_preferences_lap_sectors_summary">Ajustar el comportamiento de vueltas y sectores</string>
     <string name="stopwatch_preferences_sectors">Sectores</string>
     <string name="stopwatch_preferences_sectors_summary">{0,choice,0#Sectores de vuelta no activados|1#Vueltas configuradas con un sector|1&lt;Vueltas configuradas con {0} sectores}</string>
-    <string name="stopwatch_preferences_best_lap_behaviour">Ajuste mejor vuelta</string>
+    <string name="stopwatch_preferences_best_lap_behavior">Ajuste mejor vuelta</string>
     <string name="stopwatch_preferences_about">Acerca de</string>
     <string name="stopwatch_preferences_about_summary">Cronómetro. CyanogenMod \u00A9 2012</string>
     <string name="stopwatch_best_lap_lower_pref">Tiempos bajos son mejores</string>

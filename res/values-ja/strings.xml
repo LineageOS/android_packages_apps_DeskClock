@@ -212,7 +212,7 @@
     <!-- Stopwatch. Preferences. Summary of sectors -->
     <string name="stopwatch_preferences_sectors_summary">{0,choice,0#ラップ区間は無効.|1#ラップの区間数は 1 .|1&lt;ラップの区間数は {0} .}</string>
     <!-- Stopwatch. Preferences. Best lap behaviour -->
-    <string name="stopwatch_preferences_best_lap_behaviour">ベストラップの挙動</string>
+    <string name="stopwatch_preferences_best_lap_behavior">ベストラップの挙動</string>
     <!-- Stopwatch. Preferences. About -->
     <string name="stopwatch_preferences_about">情報</string>
     <!-- Stopwatch. Preferences. Summary of About catergory -->

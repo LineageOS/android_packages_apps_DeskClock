@@ -226,7 +226,7 @@
     <!-- StopWatch. Preferences. Summary of sectors -->
     <string name="stopwatch_preferences_sectors_summary">{0,choice,0#赛段计时未启用.|1#使用1个赛段来配置赛段计时.|1&lt;使用{0}个赛段来配置赛段计时.}</string>
     <!-- StopWatch. Preferences. Best lap behaviour -->
-    <string name="stopwatch_preferences_best_lap_behaviour">最佳单圈行为</string>
+    <string name="stopwatch_preferences_best_lap_behavior">最佳单圈行为</string>
     <!-- StopWatch. Preferences. About -->
     <string name="stopwatch_preferences_about">关于</string>
     <!-- StopWatch. Preferences. Summary of About catergory -->

@@ -189,7 +189,7 @@
     <!-- StopWatch. Preferences. Summary of sectors -->
     <string name="stopwatch_preferences_sectors_summary">{0,valg,0#Omgangssektorer ikke aktiveret.|1#Omgangssektorer konfigureret med 1 sektor.|1&lt;Omgangssektorer konfigureret med {0} sektorer.}</string>
     <!-- StopWatch. Preferences. Best lap behaviour -->
-    <string name="stopwatch_preferences_best_lap_behaviour">Adfærd for bedste omgang</string>
+    <string name="stopwatch_preferences_best_lap_behavior">Adfærd for bedste omgang</string>
     <!-- StopWatch. Preferences. About -->
     <string name="stopwatch_preferences_about">Om</string>
     <!-- StopWatch. Preferences. Summary of About catergory -->

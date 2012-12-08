@@ -27,7 +27,7 @@
       deskclock:max="3" />
 
     <ListPreference
-      android:title="@string/stopwatch_preferences_best_lap_behaviour"
+      android:title="@string/stopwatch_preferences_best_lap_behavior"
       android:key="stopwatch_best_lap_behaviour"
       android:entries="@array/stopwatch_best_lap_behaviour_labels"
       android:entryValues="@array/stopwatch_best_lap_behaviour_values"

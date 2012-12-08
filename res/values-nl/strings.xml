@@ -137,7 +137,7 @@
     <string name="stopwatch_preferences_lap_sectors_summary">Gedrag instellen van ronde en tussentijd</string>
     <string name="stopwatch_preferences_sectors">Tussentijd</string>
     <string name="stopwatch_preferences_sectors_summary">{0,keuze,0#Tussentijd niet ingeschakeld|1#Ronden ingesteld met één tussentijd|1&lt;Ronden ingesteld met {0} tussentijden}</string>
-    <string name="stopwatch_preferences_best_lap_behaviour">Gedrag bij beste ronde</string>
+    <string name="stopwatch_preferences_best_lap_behavior">Gedrag bij beste ronde</string>
     <string name="stopwatch_preferences_about">Over</string>
     <string name="stopwatch_preferences_about_summary">Stopwatch: Copyright \u00A9 2012 CyanogenMod</string>
 
