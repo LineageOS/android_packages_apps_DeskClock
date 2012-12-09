@@ -1,0 +1,38 @@
+{
+  "comments": [
+    {
+      "key": {
+        "uuid": "AAAAa3//3Qw\u003d",
+        "filename": "src/com/android/deskclock/SettingsActivity.java",
+        "patchSetId": 3
+      },
+      "lineNbr": 48,
+      "author": {
+        "id": 1576
+      },
+      "writtenOn": "2012-12-09T02:03:12Z",
+      "side": 1,
+      "message": "Tabs",
+      "revId": "842729788063cba31b67e301c327acb4fdad27d1",
+      "serverId": "1ec6b3db-b2c1-4fa4-84a2-4c7efe89ba71",
+      "unresolved": false
+    },
+    {
+      "key": {
+        "uuid": "AAAAa3//3Qs\u003d",
+        "filename": "src/com/android/deskclock/SettingsActivity.java",
+        "patchSetId": 3
+      },
+      "lineNbr": 180,
+      "author": {
+        "id": 1576
+      },
+      "writtenOn": "2012-12-09T02:03:12Z",
+      "side": 1,
+      "message": "Whitespace",
+      "revId": "842729788063cba31b67e301c327acb4fdad27d1",
+      "serverId": "1ec6b3db-b2c1-4fa4-84a2-4c7efe89ba71",
+      "unresolved": false
+    }
+  ]
+}
