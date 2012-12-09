@@ -1,0 +1,72 @@
+{
+  "comments": [
+    {
+      "key": {
+        "uuid": "AAAAa3//3Eg\u003d",
+        "filename": "res/xml/settings.xml",
+        "patchSetId": 4
+      },
+      "lineNbr": 59,
+      "author": {
+        "id": 1078
+      },
+      "writtenOn": "2012-12-09T22:41:50Z",
+      "side": 1,
+      "message": "These should be ordered the same way as the other preferences.",
+      "revId": "27e94727140ac32849a4ba06dbcaf7ac4ca5b26d",
+      "serverId": "1ec6b3db-b2c1-4fa4-84a2-4c7efe89ba71",
+      "unresolved": false
+    },
+    {
+      "key": {
+        "uuid": "AAAAa3//3Ec\u003d",
+        "filename": "src/com/android/deskclock/AlarmAlertFullScreen.java",
+        "patchSetId": 4
+      },
+      "lineNbr": 81,
+      "author": {
+        "id": 1078
+      },
+      "writtenOn": "2012-12-09T22:41:50Z",
+      "side": 1,
+      "message": "private",
+      "revId": "27e94727140ac32849a4ba06dbcaf7ac4ca5b26d",
+      "serverId": "1ec6b3db-b2c1-4fa4-84a2-4c7efe89ba71",
+      "unresolved": false
+    },
+    {
+      "key": {
+        "uuid": "AAAAa3//3EY\u003d",
+        "filename": "src/com/android/deskclock/AlarmAlertFullScreen.java",
+        "patchSetId": 4
+      },
+      "lineNbr": 283,
+      "author": {
+        "id": 1078
+      },
+      "writtenOn": "2012-12-09T22:41:50Z",
+      "side": 1,
+      "message": "No need for Context.",
+      "revId": "27e94727140ac32849a4ba06dbcaf7ac4ca5b26d",
+      "serverId": "1ec6b3db-b2c1-4fa4-84a2-4c7efe89ba71",
+      "unresolved": false
+    },
+    {
+      "key": {
+        "uuid": "AAAAa3//3EU\u003d",
+        "filename": "src/com/android/deskclock/AlarmAlertFullScreen.java",
+        "patchSetId": 4
+      },
+      "lineNbr": 361,
+      "author": {
+        "id": 1078
+      },
+      "writtenOn": "2012-12-09T22:41:50Z",
+      "side": 1,
+      "message": "Turn these into FLIP_ACTION_SNOOZE and FLIP_ACTION_DISMISS",
+      "revId": "27e94727140ac32849a4ba06dbcaf7ac4ca5b26d",
+      "serverId": "1ec6b3db-b2c1-4fa4-84a2-4c7efe89ba71",
+      "unresolved": false
+    }
+  ]
+}
