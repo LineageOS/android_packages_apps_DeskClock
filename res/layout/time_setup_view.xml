@@ -23,7 +23,7 @@
         <com.android.deskclock.timer.TimerView
             android:id="@+id/timer_time_text"
             android:layout_width="0dip"
-            android:layout_weight="2"
+            android:layout_weight="@integer/timer_weight"
             android:layout_height="wrap_content"
             android:paddingTop="@dimen/medium_font_padding"
             android:paddingBottom="@dimen/medium_font_padding"

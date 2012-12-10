@@ -152,4 +152,5 @@
     <dimen name="def_digital_widget_height">70dip</dimen>
     <dimen name="digital_widget_list_margin_top">12dip</dimen>
 
+    <integer name="timer_weight">4</integer>
 </resources>
