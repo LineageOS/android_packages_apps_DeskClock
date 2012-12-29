@@ -233,4 +233,7 @@
     <string name="cling_stopwatch_desc">Настройте \"Круги\" и \"Секторы\" в пункте меню \"Настройки\".</string>
     <string name="cling_countdown_desc">Для редактирования Таймера, нажмите и удерживайте часы.</string>
     <string name="overflow_button_cd">Дополнительные настройки</string>
+
+    <string name="show_status_bar_icon_title">Показывать иконку</string>
+    <string name="show_status_bar_icon_summary">Отображать иконку в строке состояния при установленном будильнике</string>
 </resources>
