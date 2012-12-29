@@ -70,6 +70,12 @@ class AlarmDatabaseHelper extends SQLiteOpenHelper {
         onCreate(db);
     }
 
+    @Override
+    public void onDowngrade(SQLiteDatabase db, int oldVersion,
+            int currentVersion) {
+        onUpgrade(db, oldVersion, currentVersion);
+    }
+
     Uri commonInsert(ContentValues values) {
         SQLiteDatabase db = getWritableDatabase();
         db.beginTransaction();
