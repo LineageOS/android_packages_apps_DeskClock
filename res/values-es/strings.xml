@@ -323,4 +323,11 @@
     <string name="timer_delete_confirmation" msgid="2815524107015816453">"¿Eliminar este temporizador?"</string>
     <string name="city_delete_confirmation" msgid="1783441538785676299">"¿Eliminar esta ciudad?"</string>
     <string name="digital_gadget" msgid="2326954556720571358">"Reloj digital"</string>
+
+    <!-- CYANOGENMOD EDITS START -->
+
+    <string name="show_status_bar_icon_title">Mostrar icono</string>
+    <string name="show_status_bar_icon_summary">Mostrar un icono en la barra de estado cuando haya alguna alarma establecida</string>
+
+    <!-- CYANOGENMOD ADDITIONS END -->
 </resources>
