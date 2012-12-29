@@ -1,0 +1,13 @@
+Change-Id: Ib386427ce8df426d87b8c26430b441ee503433a7
+Code-Review+2: Danny Baumann <dannybaumann@web.de>
+Verified+1: Danny Baumann <dannybaumann@web.de>
+Code-Review+1: nebkat <nebkat@gmail.com>
+Code-Review+1: djMesias <djmesias@terra.es>
+Code-Review+1: Paul Beeler <sparksco@gmail.com>
+Code-Review+1: Piotr Bochenski <bochenski.piotr@gmail.com>
+Code-Review+1: Nicholas Musumeci <thefascmailbox@gmail.com>
+Submitted-by: Danny Baumann <dannybaumann@web.de>
+Submitted-at: Fri, 28 Dec 2012 22:40:03 -0800
+Reviewed-on: http://review.cyanogenmod.org/29106
+Project: CyanogenMod/android_packages_apps_DeskClock
+Branch: refs/heads/cm-10.1
