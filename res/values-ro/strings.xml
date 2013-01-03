@@ -323,4 +323,7 @@
     <string name="timer_delete_confirmation" msgid="2815524107015816453">"Ştergeţi acest contor?"</string>
     <string name="city_delete_confirmation" msgid="1783441538785676299">"Eliminaţi acest oraş?"</string>
     <string name="digital_gadget" msgid="2326954556720571358">"Ceas digital"</string>
+
+    <string name="show_status_bar_icon_title">"Arătați pictograma"</string>
+    <string name="show_status_bar_icon_summary">"Arătați o pictogramă în bara de stare atunci când o alarmă este setată"</string>
 </resources>
