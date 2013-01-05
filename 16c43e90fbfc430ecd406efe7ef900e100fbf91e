@@ -1,0 +1,9 @@
+Change-Id: I16c43e90fbfc430ecd406efe7ef900e100fbf91e
+Code-Review+1: Igor Sokolov <wildfatduck@gmail.com>
+Code-Review+2: Marco Brohet <therbom@gmail.com>
+Verified+1: Marco Brohet <therbom@gmail.com>
+Submitted-by: Marco Brohet <therbom@gmail.com>
+Submitted-at: Sat, 05 Jan 2013 09:12:00 -0800
+Reviewed-on: http://review.cyanogenmod.org/29321
+Project: CyanogenMod/android_packages_apps_DeskClock
+Branch: refs/heads/jellybean
