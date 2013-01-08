@@ -20,6 +20,8 @@ import android.app.Activity;
 import android.content.Context;
 import android.content.Intent;
 import android.content.res.Resources;
+import android.hardware.Sensor;
+import android.hardware.SensorManager;
 import android.media.AudioManager;
 import android.os.Bundle;
 import android.preference.ListPreference;
@@ -65,7 +67,11 @@ public final class SettingsActivity extends BaseActivity {
     public static final String KEY_VOLUME_BUTTONS = "volume_button_setting";
     public static final String KEY_WEEK_START = "week_start";
 
+    public static final String KEY_FLIP_ACTION = "flip_action";
+    public static final String KEY_SHAKE_ACTION = "shake_action";
+
     public static final String TIMEZONE_LOCALE = "tz_locale";
+
 
     public static final String DEFAULT_VOLUME_BEHAVIOR = "0";
     public static final String VOLUME_BEHAVIOR_SNOOZE = "1";
@@ -169,10 +175,24 @@ public final class SettingsActivity extends BaseActivity {
                             findPreference(KEY_TIMER_RINGTONE);
                     timerRingtonePref.setSummary(DataModel.getDataModel().getTimerRingtoneTitle());
                     break;
+                case KEY_FLIP_ACTION:
+                    final ListPreference listPref = (ListPreference) pref;
+                    updateActionSummary(listPref, (String) newValue, R.string.flip_action_summary);
+                    break;
+                case KEY_SHAKE_ACTION:
+                    final ListPreference listPref = (ListPreference) pref;
+                    updateActionSummary(listPref, (String) newValue, R.string.shake_action_summary);
+                    break;
             }
             // Set result so DeskClock knows to refresh itself
             getActivity().setResult(RESULT_OK);
             return true;
+        }
+
+        private void updateActionSummary(ListPreference listPref, String action, int summaryResId) {
+            int i = Integer.parseInt(action);
+            listPref.setSummary(getString(summaryResId,
+            getResources().getStringArray(R.array.action_summary_entries)[i]));
         }
 
         @Override
@@ -302,6 +322,14 @@ public final class SettingsActivity extends BaseActivity {
                     (RingtonePreference) findPreference(KEY_TIMER_RINGTONE);
             timerRingtonePref.setSummary(DataModel.getDataModel().getTimerRingtoneTitle());
             timerRingtonePref.setOnPreferenceChangeListener(this);
+
+            listPref = (ListPreference) findPreference(KEY_FLIP_ACTION);
+            updateActionSummary(listPref, listPref.getValue(), R.string.flip_action_summary);
+            listPref.setOnPreferenceChangeListener(this);
+
+            listPref = (ListPreference) findPreference(KEY_SHAKE_ACTION);
+            updateActionSummary(listPref, listPref.getValue(), R.string.shake_action_summary);
+            listPref.setOnPreferenceChangeListener(this);
         }
 
         private void updateAutoSnoozeSummary(ListPreference listPref, String delay) {
