@@ -1,0 +1,89 @@
+{
+  "comments": [
+    {
+      "key": {
+        "uuid": "AAAAcn///ZI\u003d",
+        "filename": "res/values/strings.xml",
+        "patchSetId": 5
+      },
+      "lineNbr": 199,
+      "author": {
+        "id": 2597
+      },
+      "writtenOn": "2013-01-10T00:27:23Z",
+      "side": 1,
+      "message": "Flip action (without capital A)?",
+      "revId": "b1d4555102ff9e922b21fdc8b8607c6fd4a34568",
+      "serverId": "1ec6b3db-b2c1-4fa4-84a2-4c7efe89ba71",
+      "unresolved": false
+    },
+    {
+      "key": {
+        "uuid": "AAAAcn///ZE\u003d",
+        "filename": "res/values/strings.xml",
+        "patchSetId": 5
+      },
+      "lineNbr": 202,
+      "author": {
+        "id": 2597
+      },
+      "writtenOn": "2013-01-10T00:27:23Z",
+      "side": 1,
+      "message": "Flip action (without capital A)?",
+      "revId": "b1d4555102ff9e922b21fdc8b8607c6fd4a34568",
+      "serverId": "1ec6b3db-b2c1-4fa4-84a2-4c7efe89ba71",
+      "unresolved": false
+    },
+    {
+      "key": {
+        "uuid": "AAAAcn///ZM\u003d",
+        "filename": "res/values/strings.xml",
+        "patchSetId": 5
+      },
+      "lineNbr": 216,
+      "author": {
+        "id": 2597
+      },
+      "writtenOn": "2013-01-10T00:27:23Z",
+      "side": 1,
+      "message": "Please add a translatable\u003d\"false\"",
+      "revId": "b1d4555102ff9e922b21fdc8b8607c6fd4a34568",
+      "serverId": "1ec6b3db-b2c1-4fa4-84a2-4c7efe89ba71",
+      "unresolved": false
+    },
+    {
+      "key": {
+        "uuid": "AAAAcn///ZA\u003d",
+        "filename": "res/values/strings.xml",
+        "patchSetId": 5
+      },
+      "lineNbr": 333,
+      "author": {
+        "id": 2597
+      },
+      "writtenOn": "2013-01-10T00:27:23Z",
+      "side": 1,
+      "message": "I don\u0027t see why you\u0027ve added a newline, and it\u0027s inconsistent with the other translations",
+      "revId": "b1d4555102ff9e922b21fdc8b8607c6fd4a34568",
+      "serverId": "1ec6b3db-b2c1-4fa4-84a2-4c7efe89ba71",
+      "unresolved": false
+    },
+    {
+      "key": {
+        "uuid": "AAAAcn///Y8\u003d",
+        "filename": "res/values/strings.xml",
+        "patchSetId": 5
+      },
+      "lineNbr": 493,
+      "author": {
+        "id": 2597
+      },
+      "writtenOn": "2013-01-10T00:27:23Z",
+      "side": 1,
+      "message": "\u0026#8230; \u003d\u003e \\u2026",
+      "revId": "b1d4555102ff9e922b21fdc8b8607c6fd4a34568",
+      "serverId": "1ec6b3db-b2c1-4fa4-84a2-4c7efe89ba71",
+      "unresolved": false
+    }
+  ]
+}
