@@ -55,6 +55,24 @@
     },
     {
       "key": {
+        "uuid": "AAAAcn//8vQ\u003d",
+        "filename": "res/values-iw/strings.xml",
+        "patchSetId": 1
+      },
+      "lineNbr": 177,
+      "author": {
+        "id": 5248
+      },
+      "writtenOn": "2013-01-16T05:00:34Z",
+      "side": 1,
+      "message": "Oh, I haven\u0027t seen it.\r\nI looked at the line above, the comment was in the wrong place and somehow I didn\u0027t notice :)",
+      "parentUuid": "AAAAcn//82Q\u003d",
+      "revId": "fc06d831472c6f56fa02acb6563417117bca6c35",
+      "serverId": "1ec6b3db-b2c1-4fa4-84a2-4c7efe89ba71",
+      "unresolved": false
+    },
+    {
+      "key": {
         "uuid": "AAAAcn//9E4\u003d",
         "filename": "res/values-iw/strings.xml",
         "patchSetId": 1
