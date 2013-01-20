@@ -1,0 +1,157 @@
+{
+  "comments": [
+    {
+      "key": {
+        "uuid": "AAAAcn//7Zw\u003d",
+        "filename": "src/com/android/deskclock/AlarmAlertFullScreen.java",
+        "patchSetId": 6
+      },
+      "lineNbr": 146,
+      "author": {
+        "id": 1063
+      },
+      "writtenOn": "2013-01-20T20:23:43Z",
+      "side": 1,
+      "message": "The code style is off here:\n\n- The Log.v line should be removed\n- The shared pref instance returned by PreferenceManager.getDefaultSharedPreferences(this) should be kept in a local variable\n- Why are the two blocks formatted differently?\n- The indention of line 146 is off.\n\nSuggestion:\n\nfinal SharedPreferences prefs \u003d PreferenceManager.getDefaultSharedPreferences(this);\n\nmFlipAction \u003d Integer.parseInt(prefs.getString(\n        SettingsActivity.KEY_FLIP_ACTION, DEFAULT_FLIP_ACTION));\nmShakeAction \u003d Integer.parseInt(prefs.getString(\n        SettingsActivity.KEY_SHAKE_ACTION, DEFAULT_SHAKE_ACTION));\n\nAlso, those values should be fetched in onResume, not onCreate.",
+      "revId": "f87c110344eba01625c4d672a22963928f46c29e",
+      "serverId": "1ec6b3db-b2c1-4fa4-84a2-4c7efe89ba71",
+      "unresolved": false
+    },
+    {
+      "key": {
+        "uuid": "AAAAcn//7ZM\u003d",
+        "filename": "src/com/android/deskclock/AlarmAlertFullScreen.java",
+        "patchSetId": 6
+      },
+      "lineNbr": 340,
+      "author": {
+        "id": 1063
+      },
+      "writtenOn": "2013-01-20T20:23:43Z",
+      "side": 1,
+      "message": "Braces needed here.",
+      "revId": "f87c110344eba01625c4d672a22963928f46c29e",
+      "serverId": "1ec6b3db-b2c1-4fa4-84a2-4c7efe89ba71",
+      "unresolved": false
+    },
+    {
+      "key": {
+        "uuid": "AAAAcn//7Zs\u003d",
+        "filename": "src/com/android/deskclock/AlarmAlertFullScreen.java",
+        "patchSetId": 6
+      },
+      "lineNbr": 356,
+      "author": {
+        "id": 1063
+      },
+      "writtenOn": "2013-01-20T20:23:43Z",
+      "side": 1,
+      "message": "There should be constants for those magic numbers. (Also for the 0 value).",
+      "revId": "f87c110344eba01625c4d672a22963928f46c29e",
+      "serverId": "1ec6b3db-b2c1-4fa4-84a2-4c7efe89ba71",
+      "unresolved": false
+    },
+    {
+      "key": {
+        "uuid": "AAAAcn//7Zo\u003d",
+        "filename": "src/com/android/deskclock/AlarmAlertFullScreen.java",
+        "patchSetId": 6
+      },
+      "lineNbr": 426,
+      "author": {
+        "id": 1063
+      },
+      "writtenOn": "2013-01-20T20:23:43Z",
+      "side": 1,
+      "message": "Please add braces instead of the semicolon.",
+      "revId": "f87c110344eba01625c4d672a22963928f46c29e",
+      "serverId": "1ec6b3db-b2c1-4fa4-84a2-4c7efe89ba71",
+      "unresolved": false
+    },
+    {
+      "key": {
+        "uuid": "AAAAcn//7Zg\u003d",
+        "filename": "src/com/android/deskclock/SettingsActivity.java",
+        "patchSetId": 6
+      },
+      "lineNbr": 203,
+      "author": {
+        "id": 1063
+      },
+      "writtenOn": "2013-01-20T20:23:43Z",
+      "side": 1,
+      "message": "This breaks translatability by making assumptions of the translated strings. The action strings for the summary should have their own array so the toLowerCase() is no longer needed.",
+      "revId": "f87c110344eba01625c4d672a22963928f46c29e",
+      "serverId": "1ec6b3db-b2c1-4fa4-84a2-4c7efe89ba71",
+      "unresolved": false
+    },
+    {
+      "key": {
+        "uuid": "AAAAcn//7Zc\u003d",
+        "filename": "src/com/android/deskclock/SettingsActivity.java",
+        "patchSetId": 6
+      },
+      "lineNbr": 209,
+      "author": {
+        "id": 1063
+      },
+      "writtenOn": "2013-01-20T20:23:43Z",
+      "side": 1,
+      "message": "Same here. The two methods also should be collapsed into one by passing the summary resource id into it.",
+      "revId": "f87c110344eba01625c4d672a22963928f46c29e",
+      "serverId": "1ec6b3db-b2c1-4fa4-84a2-4c7efe89ba71",
+      "unresolved": false
+    },
+    {
+      "key": {
+        "uuid": "AAAAcn//7ZY\u003d",
+        "filename": "src/com/android/deskclock/SettingsActivity.java",
+        "patchSetId": 6
+      },
+      "lineNbr": 236,
+      "author": {
+        "id": 1063
+      },
+      "writtenOn": "2013-01-20T20:23:43Z",
+      "side": 1,
+      "message": "updateFlipActionSummary(listPref, listPref.getValue());",
+      "revId": "f87c110344eba01625c4d672a22963928f46c29e",
+      "serverId": "1ec6b3db-b2c1-4fa4-84a2-4c7efe89ba71",
+      "unresolved": false
+    },
+    {
+      "key": {
+        "uuid": "AAAAcn//7ZU\u003d",
+        "filename": "src/com/android/deskclock/SettingsActivity.java",
+        "patchSetId": 6
+      },
+      "lineNbr": 241,
+      "author": {
+        "id": 1063
+      },
+      "writtenOn": "2013-01-20T20:23:43Z",
+      "side": 1,
+      "message": "Same here.",
+      "revId": "f87c110344eba01625c4d672a22963928f46c29e",
+      "serverId": "1ec6b3db-b2c1-4fa4-84a2-4c7efe89ba71",
+      "unresolved": false
+    },
+    {
+      "key": {
+        "uuid": "AAAAcn//7ZQ\u003d",
+        "filename": "src/com/android/deskclock/SettingsActivity.java",
+        "patchSetId": 6
+      },
+      "lineNbr": 304,
+      "author": {
+        "id": 1063
+      },
+      "writtenOn": "2013-01-20T20:23:43Z",
+      "side": 1,
+      "message": "Pointless change, please remove.",
+      "revId": "f87c110344eba01625c4d672a22963928f46c29e",
+      "serverId": "1ec6b3db-b2c1-4fa4-84a2-4c7efe89ba71",
+      "unresolved": false
+    }
+  ]
+}
