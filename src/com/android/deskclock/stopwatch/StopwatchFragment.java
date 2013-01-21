@@ -13,6 +13,7 @@ import android.preference.PreferenceManager;
 import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
+import android.view.WindowManager.LayoutParams;
 import android.widget.AdapterView;
 import android.widget.AdapterView.OnItemClickListener;
 import android.widget.ArrayAdapter;
@@ -32,6 +33,7 @@ import com.android.deskclock.DeskClock.OnTapListener;
 import com.android.deskclock.DeskClockFragment;
 import com.android.deskclock.Log;
 import com.android.deskclock.R;
+import com.android.deskclock.SettingsActivity;
 import com.android.deskclock.Utils;
 import com.android.deskclock.timer.CountingTimerView;
 
@@ -293,6 +295,13 @@ public class StopwatchFragment extends DeskClockFragment implements OnSharedPref
     public void onResume() {
         SharedPreferences prefs = PreferenceManager.getDefaultSharedPreferences(getActivity());
         prefs.registerOnSharedPreferenceChangeListener(this);
+
+        if (prefs.getBoolean(SettingsActivity.KEY_KEEP_DISPLAY_ON, false)) {
+            getActivity().getWindow().addFlags(LayoutParams.FLAG_KEEP_SCREEN_ON);
+        } else {
+            getActivity().getWindow().clearFlags(LayoutParams.FLAG_KEEP_SCREEN_ON);
+        }
+
         readFromSharedPref(prefs);
         mTime.readFromSharedPref(prefs, "sw");
         mTime.postInvalidate();

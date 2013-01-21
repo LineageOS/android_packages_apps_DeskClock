@@ -52,6 +52,7 @@ import com.android.deskclock.CircleButtonsLinearLayout;
 import com.android.deskclock.DeskClockFragment;
 import com.android.deskclock.LabelDialogFragment;
 import com.android.deskclock.R;
+import com.android.deskclock.SettingsActivity;
 import com.android.deskclock.TimerSetupView;
 import com.android.deskclock.Utils;
 import com.android.deskclock.DeskClock.OnTapListener;
@@ -464,6 +465,14 @@ public class TimerFragment extends DeskClockFragment
     public void onResume() {
         super.onResume();
         mPrefs.registerOnSharedPreferenceChangeListener(this);
+
+        if (mPrefs.getBoolean(SettingsActivity.KEY_KEEP_DISPLAY_ON, false)) {
+            getActivity().getWindow().addFlags(
+                    android.view.WindowManager.LayoutParams.FLAG_KEEP_SCREEN_ON);
+        } else {
+            getActivity().getWindow().clearFlags(
+                    android.view.WindowManager.LayoutParams.FLAG_KEEP_SCREEN_ON);
+        }
 
         mAdapter = createAdapter(getActivity(), mPrefs);
         mAdapter.onRestoreInstanceState(null);

@@ -72,4 +72,14 @@
             android:summary="@string/show_status_bar_icon_summary"
             android:defaultValue="true"  />
     </PreferenceCategory>
+
+    <PreferenceCategory
+        android:title="@string/other_settings">
+        <CheckBoxPreference
+            android:key="keep_display_on"
+            android:title="@string/keep_display_on"
+            android:summary="@string/keep_display_on_summary"
+            android:defaultValue="false"  />
+    </PreferenceCategory>
+
 </PreferenceScreen>
