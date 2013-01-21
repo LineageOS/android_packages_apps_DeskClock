@@ -61,6 +61,8 @@ public class SettingsActivity extends PreferenceActivity
             "home_time_zone";
     public static final String KEY_AUTO_HOME_CLOCK =
             "automatic_home_clock";
+    public static final String KEY_KEEP_DISPLAY_ON_STOPWATCH =
+            "keep_display_on_stopwatch";
     static final String KEY_VOLUME_BUTTONS =
             "volume_button_setting";
 

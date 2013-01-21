@@ -89,4 +89,14 @@
             android:summary="@string/show_status_bar_icon_summary"
             android:defaultValue="true"  />
     </PreferenceCategory>
+
+    <PreferenceCategory
+        android:title="@string/stopwatch_settings">
+        <CheckBoxPreference
+            android:key="keep_display_on_stopwatch"
+            android:title="@string/keep_display_on_stopwatch"
+            android:summary="@string/keep_display_on_stopwatch_summary"
+            android:defaultValue="true" />
+    </PreferenceCategory>
+
 </PreferenceScreen>
