@@ -442,6 +442,10 @@
     <string name="alarm_off">OFF</string>
 
     <!-- Settings strings -->
+    <string name="stopwatch_settings">STOPWATCH</string>
+    <string name="keep_display_on_stopwatch">Keep the display on</string>
+    <string name="keep_display_on_stopwatch_summary">Keep the display on while stopwatch is running</string>
+
     <!-- Header in the preferences settings for the section pertaining to clocks on the main fragment -->
     <string name="clock_settings">CLOCK</string>
     <!-- Header for a Clock Dream Setting referring to choosing analog or digital style -->
