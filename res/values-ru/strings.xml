@@ -326,4 +326,29 @@
 
     <string name="show_status_bar_icon_title">Показывать иконку</string>
     <string name="show_status_bar_icon_summary">Отображать иконку в строке состояния при установленном будильнике</string>
+
+    <!-- Setting title for the flip action setting. -->
+    <string name="flip_action_title">Переворот</string>
+
+    <!-- Dialog title of the flip action setting. -->
+    <string name="flip_action_dialog_title">Переворачивать телефон для\u2026</string>
+
+    <!-- Setting summary for the flip action setting. -->
+    <string name="flip_action_summary">При переворачивании телефона <xliff:g id="action">%s</xliff:g></string>
+
+    <!-- Setting title for the shake action setting. -->
+    <string name="shake_action_title">Встряхивание</string>
+
+    <!-- Dialog title for the shake action setting. -->
+    <string name="shake_action_dialog_title">Встряхивать телефон для\u2026</string>
+
+    <!-- Setting summary for the shake action setting. -->
+    <string name="shake_action_summary">При встряхивании телефона <xliff:g id="action">%s</xliff:g></string>
+
+    <!-- Summary texts for shake and flip actions. Must be ordered by numerical value (do nothing = 0, snooze = 1, dismiss = 2) -->
+    <string-array name="action_summary_entries">
+      <item>ничего не делать</item>
+      <item>отложить будильник</item>
+      <item>выключить будильник</item>
+    </string-array>
 </resources>
