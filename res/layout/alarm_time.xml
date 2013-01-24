@@ -199,6 +199,15 @@
                 android:layout_width="wrap_content"
                 android:layout_gravity="center_vertical|right"
                 style="@style/body"/>
+            <CheckBox
+                android:id="@+id/incvol_onoff"
+                android:text="@string/alarm_incvol"
+                android:includeFontPadding="false"
+                android:textColor="@color/clock_gray"
+                android:layout_height="wrap_content"
+                android:layout_width="wrap_content"
+                android:layout_gravity="center_vertical|right"
+                style="@style/body"/>
         </LinearLayout>
         <View
             android:id="@+id/hairline"
