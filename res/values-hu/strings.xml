@@ -78,6 +78,12 @@
     <item quantity="one" msgid="3783171637798575068">"perc"</item>
     <item quantity="other" msgid="1304056759541595077">"perc"</item>
   </plurals>
+    <string name="flip_action_title">Telefon megfordítása</string>
+    <string name="flip_action_dialog_title">Telefon megfordítása\u2026</string>
+    <string name="flip_action_summary">A telefon megfordítására <xliff:g id="action">%s</xliff:g></string>
+    <string name="shake_action_title">Telefon rázása</string>
+    <string name="shake_action_dialog_title">Telefon rázása\u2026</string>
+    <string name="shake_action_summary">A telefon rázására <xliff:g id="action">%s</xliff:g></string>
     <string name="auto_silence_title" msgid="2012754009554434544">"Elnémítás ennyi idő után:"</string>
     <string name="auto_silence_summary" msgid="7028508740659733028">"<xliff:g id="MINUTES">%d</xliff:g> perc"</string>
     <string name="auto_silence_never" msgid="4821982647348750809">"Soha"</string>
