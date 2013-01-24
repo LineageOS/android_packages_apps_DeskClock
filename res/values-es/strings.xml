@@ -101,8 +101,8 @@
     <string name="volume_button_setting_title" msgid="6937131248843413357">"Botones de volumen"</string>
     <string name="volume_button_dialog_title" msgid="8768042543750036853">"Acción de los botones"</string>
   <string-array name="volume_button_setting_entries">
-    <item msgid="7972756698723318690">"Posponer"</item>
-    <item msgid="3450979320164769576">"Ignorar"</item>
+    <item msgid="7972756698723318690">"Posponer la alarma"</item>
+    <item msgid="3450979320164769576">"Descartar la alarma"</item>
     <item msgid="6302517608411378024">"No hacer nada"</item>
   </string-array>
     <string name="default_ringtone_setting_title" msgid="4549726190682964245">"Establecer tono predeterminado"</string>
@@ -117,7 +117,7 @@
     <string name="battery_charging_level" msgid="5251483622085889693">"<xliff:g id="NUMBER">%d</xliff:g><xliff:g id="PERCENT">%%</xliff:g>"</string>
     <string name="weather_fetch_failure" msgid="3425804832021006835">"La información meteorológica no está disponible en este momento."</string>
     <string name="alarm_klaxon_service_desc" msgid="2147506334302260256">"Reproducción de alarmas definidas en Reloj"</string>
-    <string name="loading_ringtone" msgid="6523322777415268044">"Cargando tono…"</string>
+    <string name="loading_ringtone" msgid="6523322777415268044">"Cargando tono\u2026"</string>
     <string name="timer_ring_service_desc" msgid="2620214305660322415">"Reproducción de temporizadores definidos en el reloj"</string>
     <string name="control_set_alarm" msgid="2194676418924016327">"Establecer alarma"</string>
     <!-- no translation found for control_set_alarm_with_existing (3359285346655630660) -->
@@ -291,7 +291,7 @@
     <item msgid="5911600083231840181">"Tonga"</item>
   </string-array>
     <string name="alarm_settings" msgid="6049627772103646753">"ALARMAS"</string>
-    <string name="see_all" msgid="775983396630163739">"Ver todo…"</string>
+    <string name="see_all" msgid="775983396630163739">"Ver todo\u2026"</string>
     <string name="stopwatch_service_desc" msgid="8416624630388063996">"Servicio de cronómetro para ejecutar la notificación"</string>
     <string name="swn_stopped" msgid="783124901663086172">"Detenido"</string>
     <string name="description_direction_right" msgid="1615911557926085934">"Deslizar el dedo hacia la derecha para descartar"</string>
@@ -324,10 +324,21 @@
     <string name="city_delete_confirmation" msgid="1783441538785676299">"¿Eliminar esta ciudad?"</string>
     <string name="digital_gadget" msgid="2326954556720571358">"Reloj digital"</string>
 
-    <!-- CYANOGENMOD EDITS START -->
+    <!-- CYANOGENMOD ADDITIONS START -->
 
     <string name="show_status_bar_icon_title">Mostrar icono</string>
     <string name="show_status_bar_icon_summary">Mostrar un icono en la barra de estado cuando haya alguna alarma establecida</string>
+    <string name="flip_action_title">Acción al voltear</string>
+    <string name="flip_action_dialog_title">Al voltear\u2026</string>
+    <string name="flip_action_summary">Al voltear el terminal, <xliff:g id="action">%s</xliff:g></string>
+    <string name="shake_action_title">Acción al agitar</string>
+    <string name="shake_action_dialog_title">Al agitar\u2026</string>
+    <string name="shake_action_summary">Al agitar el terminal, <xliff:g id="action">%s</xliff:g></string>
+    <string-array name="action_summary_entries">
+      <item>no hacer nada</item>
+      <item>posponer la alarma</item>
+      <item>descartar la alarma</item>
+    </string-array>
 
     <!-- CYANOGENMOD ADDITIONS END -->
 </resources>
