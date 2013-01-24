@@ -1,0 +1,38 @@
+{
+  "comments": [
+    {
+      "key": {
+        "uuid": "AAAAc3//+sM\u003d",
+        "filename": "res/values-ru/strings.xml",
+        "patchSetId": 1
+      },
+      "lineNbr": 331,
+      "author": {
+        "id": 4
+      },
+      "writtenOn": "2013-01-24T09:56:25Z",
+      "side": 1,
+      "message": "Perevernut\u0027?",
+      "revId": "ef29ea0d704afe6c1ed141416e8b83ee1f04c3d7",
+      "serverId": "1ec6b3db-b2c1-4fa4-84a2-4c7efe89ba71",
+      "unresolved": false
+    },
+    {
+      "key": {
+        "uuid": "AAAAc3//+sI\u003d",
+        "filename": "res/values-ru/strings.xml",
+        "patchSetId": 1
+      },
+      "lineNbr": 340,
+      "author": {
+        "id": 4
+      },
+      "writtenOn": "2013-01-24T09:56:25Z",
+      "side": 1,
+      "message": "Potryasti?",
+      "revId": "ef29ea0d704afe6c1ed141416e8b83ee1f04c3d7",
+      "serverId": "1ec6b3db-b2c1-4fa4-84a2-4c7efe89ba71",
+      "unresolved": false
+    }
+  ]
+}
