@@ -117,7 +117,7 @@
     <string name="battery_charging_level" msgid="5251483622085889693">"<xliff:g id="NUMBER">%d</xliff:g> <xliff:g id="PERCENT">%%</xliff:g>"</string>
     <string name="weather_fetch_failure" msgid="3425804832021006835">"Informace o počasí nejsou momentálně k dispozici."</string>
     <string name="alarm_klaxon_service_desc" msgid="2147506334302260256">"Služba přehrávání zvuku budíků nastavených v aplikaci Hodiny."</string>
-    <string name="loading_ringtone" msgid="6523322777415268044">"Načítání vyzváněcího tónu..."</string>
+    <string name="loading_ringtone" msgid="6523322777415268044">"Načítání vyzváněcího tónu\u2026"</string>
     <string name="timer_ring_service_desc" msgid="2620214305660322415">"Služba přehrávání zvuku časovačů nastavených v aplikaci Hodiny."</string>
     <string name="control_set_alarm" msgid="2194676418924016327">"Nastavit budík"</string>
     <!-- no translation found for control_set_alarm_with_existing (3359285346655630660) -->
@@ -298,7 +298,7 @@
     <item msgid="5911600083231840181">"Tonga"</item>
   </string-array>
     <string name="alarm_settings" msgid="6049627772103646753">"BUDÍKY"</string>
-    <string name="see_all" msgid="775983396630163739">"Zobrazit vše..."</string>
+    <string name="see_all" msgid="775983396630163739">"Zobrazit vše\u2026"</string>
     <string name="stopwatch_service_desc" msgid="8416624630388063996">"Služba Stopky ke spouštění upozornění."</string>
     <string name="swn_stopped" msgid="783124901663086172">"Zastaveno"</string>
     <string name="description_direction_right" msgid="1615911557926085934">"Přejetím vpravo budík zrušíte"</string>
@@ -331,10 +331,20 @@
     <string name="city_delete_confirmation" msgid="1783441538785676299">"Chcete toto město odebrat?"</string>
     <string name="digital_gadget" msgid="2326954556720571358">"Digitální hodiny"</string>
 
-    <!-- CYANOGENMOD EDITS START -->
+    <!-- CYANOGENMOD ADDITIONS -->
 
     <string name="show_status_bar_icon_title">Zobrazovat ikonu</string>
     <string name="show_status_bar_icon_summary">Zobrazovat ikonu ve stavovém řádku při nastaveném budíku.</string>
+    <string name="flip_action_title">Akce při otočení</string>
+    <string name="flip_action_dialog_title">Po otočení přístroje\u2026</string>
+    <string name="flip_action_summary">Otočením přístroje dojde k <xliff:g id="action">%s</xliff:g></string>
+    <string name="shake_action_title">Akce při zatřesení</string>
+    <string name="shake_action_dialog_title">Po zatřesení přístrojem\u2026</string>
+    <string name="shake_action_summary">Zatřesením přístroje dojde k <xliff:g id="action">%s</xliff:g></string>
 
-    <!-- CYANOGENMOD ADDITIONS END -->
+    <string-array name="action_summary_entries">
+        <item>ničemu</item>
+        <item>odložení buzení</item>
+        <item>ukončení buzení</item>
+    </string-array>
 </resources>
