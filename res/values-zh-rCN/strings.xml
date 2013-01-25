@@ -69,6 +69,13 @@
     <string name="analog_gadget" msgid="1670505720837152766">"指针时钟"</string>
     <string name="help" msgid="7786263119482654015">"帮助"</string>
     <string name="settings" msgid="5849739030579520686">"设置"</string>
+
+    <!-- Setting title for showing/hiding the alarm status bar icon -->
+    <string name="show_status_bar_icon_title">显示图标</string>
+
+    <!-- Setting summary for showing/hiding the alarm statusbar icon -->
+    <string name="show_status_bar_icon_summary">闹钟设定时在状态栏上显示一个图标</string>
+
     <string name="snooze_duration_title" msgid="1097309861110780483">"暂停时长"</string>
   <plurals name="snooze_duration">
     <item quantity="one" msgid="7406963706727564418">"1 分钟"</item>
@@ -78,6 +85,24 @@
     <item quantity="one" msgid="3783171637798575068">"分钟"</item>
     <item quantity="other" msgid="1304056759541595077">"分钟"</item>
   </plurals>
+
+    <!-- Setting title for the flip action setting. -->
+    <string name="flip_action_title">翻转行为</string>
+
+    <!-- Dialog title of the flip action setting. -->
+    <string name="flip_action_dialog_title">翻转设备将\u2026</string>
+
+    <!-- Setting summary for the flip action setting. -->
+    <string name="flip_action_summary">翻转设备将<xliff:g id="action">%s</xliff:g></string>
+
+    <!-- Setting title for the shake action setting. -->
+    <string name="shake_action_title">摇动行为</string>
+
+    <!-- Dialog title for the shake action setting. -->
+    <string name="shake_action_dialog_title">摇动设备将\u2026</string>
+
+    <!-- Setting summary for the shake action setting. -->
+    <string name="shake_action_summary">翻转设备将<xliff:g id="action">%s</xliff:g></string>
     <string name="auto_silence_title" msgid="2012754009554434544">"闹铃时长"</string>
     <string name="auto_silence_summary" msgid="7028508740659733028">"<xliff:g id="MINUTES">%d</xliff:g> 分钟"</string>
     <string name="auto_silence_never" msgid="4821982647348750809">"永不"</string>
@@ -101,10 +126,19 @@
     <string name="volume_button_setting_title" msgid="6937131248843413357">"音量按钮"</string>
     <string name="volume_button_dialog_title" msgid="8768042543750036853">"按钮的作用"</string>
   <string-array name="volume_button_setting_entries">
-    <item msgid="7972756698723318690">"暂停"</item>
-    <item msgid="3450979320164769576">"关闭"</item>
-    <item msgid="6302517608411378024">"不进行任何操作"</item>
+    <item msgid="7972756698723318690">"暂停闹钟"</item>
+    <item msgid="3450979320164769576">"关闭闹钟"</item>
+    <item msgid="6302517608411378024">"不产生任何作用"</item>
   </string-array>
+
+    <!-- Summary texts for shake and flip actions. Must be ordered by numerical
+         value (do nothing = 0, snooze = 1, dismiss = 2) -->
+    <string-array name="action_summary_entries">
+      <item>不产生任何作用</item>
+      <item>暂停闹钟</item>
+      <item>关闭闹钟</item>
+    </string-array>
+
     <string name="default_ringtone_setting_title" msgid="4549726190682964245">"设置默认铃声"</string>
     <string name="alarm_button_description" msgid="740283647046258651">"闹钟"</string>
     <string name="gallery_button_description" msgid="1151743663255257668">"图库"</string>
@@ -188,6 +222,12 @@
     <string name="cities_activity_title" msgid="8552462751129256730">"城市"</string>
     <string name="alarm_on" msgid="4344630320756422804">"开启"</string>
     <string name="alarm_off" msgid="6478058633710013612">"关闭"</string>
+
+    <!-- Settings strings -->
+    <string name="stopwatch_settings">秒表</string>
+    <string name="keep_display_on_stopwatch">保持打开屏幕</string>
+    <string name="keep_display_on_stopwatch_summary">秒表运行时不让屏幕自动关闭</string>
+
     <string name="clock_settings" msgid="8887845806151785393">"时钟"</string>
     <string name="clock_style" msgid="2265011060429742344">"样式"</string>
   <string-array name="clock_style_entries">
