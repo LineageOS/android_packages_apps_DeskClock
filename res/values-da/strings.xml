@@ -330,5 +330,37 @@
 
     <!-- Setting summary for showing/hiding the alarm statusbar icon -->
     <string name="show_status_bar_icon_summary">Vis et ikon i statuslinjen, når en alarm er sat</string>
+
+    <!-- Setting title for the flip action setting. -->
+    <string name="flip_action_title">Vendehandling</string>
+
+    <!-- Dialog title of the flip action setting. -->
+    <string name="flip_action_dialog_title">Vend enheden for at\u2026</string>
+
+    <!-- Setting summary for the flip action setting. -->
+    <string name="flip_action_summary">At vende enheden vil <xliff:g id="action">%s</xliff:g></string>
+
+    <!-- Setting title for the shake action setting. -->
+    <string name="shake_action_title">Rystehandling</string>
+
+    <!-- Dialog title for the shake action setting. -->
+    <string name="shake_action_dialog_title">Ryst enheden for at\u2026</string>
+
+    <!-- Setting summary for the shake action setting. -->
+    <string name="shake_action_summary">At ryste telefonen vil <xliff:g id="action">%s</xliff:g></string>
+
+    <!-- Summary texts for shake and flip actions. Must be ordered by numerical
+         value (do nothing = 0, snooze = 1, dismiss = 2) -->
+    <string-array name="action_summary_entries">
+      <item>gøre ingenting</item>
+      <item>udsætte alarm</item>
+      <item>afbryde alarm</item>
+    </string-array>
+
+    <!-- Settings strings -->
+    <string name="stopwatch_settings">STOPUR</string>
+    <string name="keep_display_on_stopwatch">Hold skærmen tændt</string>
+    <string name="keep_display_on_stopwatch_summary">Hold skærmen tændt, når stopuret kører</string>
+
     <!-- CYANOGENMOD ADDITIONS END -->
 </resources>
