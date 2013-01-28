@@ -336,4 +336,7 @@
         <item>soneca</item>
         <item>dispensar</item>
     </string-array>
+    <string name="stopwatch_settings">CRONÔMETRO</string>
+    <string name="keep_display_on_stopwatch">Manter a tela ligada</string>
+    <string name="keep_display_on_stopwatch_summary">Manter a tela ligada enquanto o cronômetro estiver rodando</string>
 </resources>
