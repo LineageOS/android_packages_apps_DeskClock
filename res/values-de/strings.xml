@@ -323,13 +323,34 @@
     <string name="timer_delete_confirmation" msgid="2815524107015816453">"Diesen Timer löschen?"</string>
     <string name="city_delete_confirmation" msgid="1783441538785676299">"Diese Stadt entfernen?"</string>
     <string name="digital_gadget" msgid="2326954556720571358">"Digitaluhr"</string>
-    <!-- CYANOGENMOD EDITS START -->
 
-    <!-- Setting title for showing/hiding the alarm status bar icon -->
-    <string name="show_status_bar_icon_title">Wecker-Symbol</string>
+    <!-- **** CYANOGENMOD ADDITIONS START **** -->
 
-    <!-- Setting summary for showing/hiding the alarm statusbar icon -->
+    <!-- Flip action settings -->
+    <string name="flip_action_title">Gerät umdrehen</string>
+    <string name="flip_action_dialog_title">Gerät umdrehen</string>
+    <string name="flip_action_summary">Beim Umdrehen des Gerätes <xliff:g id="action">%s</xliff:g></string>
+
+    <!-- Shake action setting -->
+    <string name="shake_action_title">Gerät schütteln</string>
+    <string name="shake_action_dialog_title">Gerät schütteln</string>
+    <string name="shake_action_summary">Beim Schütteln des Gerätes <xliff:g id="action">%s</xliff:g></string>
+
+    <!-- Summary texts for shake and flip actions -->
+    <string-array name="action_summary_entries">
+      <item>keine Aktion ausführen</item>
+      <item>die Schlummerfunktion aktivieren</item>
+      <item>den Alarm beenden</item>
+    </string-array>
+
+    <!-- Show alarm status bar icon -->
+    <string name="show_status_bar_icon_title">Weckersymbol anzeigen</string>
     <string name="show_status_bar_icon_summary">Bei aktivem Wecker das Symbol in der Statusleiste anzeigen</string>
 
-    <!-- CYANOGENMOD ADDITIONS END -->
+    <!-- Stoppwatch - Keep display on -->
+    <string name="stopwatch_settings">STOPPUHR</string>
+    <string name="keep_display_on_stopwatch">Bildschirm aktiv lassen</string>
+    <string name="keep_display_on_stopwatch_summary">Bei aktiver Stoppuhr verhindern, dass der Bildschirm in den Ruhezustand wechselt</string>
+
+    <!-- **** CYANOGENMOD ADDITIONS END **** -->
 </resources>
