@@ -178,6 +178,24 @@
     },
     {
       "key": {
+        "uuid": "AAAAc3//9Fw\u003d",
+        "filename": "res/values-de/strings.xml",
+        "patchSetId": 1
+      },
+      "lineNbr": 337,
+      "author": {
+        "id": 4977
+      },
+      "writtenOn": "2013-01-29T20:29:49Z",
+      "side": 1,
+      "message": "Auf \u0027Geräts\u0027 einigen wir uns aber, oder? ;)",
+      "parentUuid": "AAAAc3//9G0\u003d",
+      "revId": "8b8377169a76713d6d6e393e86b1030b7ddba194",
+      "serverId": "1ec6b3db-b2c1-4fa4-84a2-4c7efe89ba71",
+      "unresolved": false
+    },
+    {
+      "key": {
         "uuid": "AAAAc3//9Hk\u003d",
         "filename": "res/values-de/strings.xml",
         "patchSetId": 1
@@ -231,6 +249,24 @@
     },
     {
       "key": {
+        "uuid": "AAAAc3//9F4\u003d",
+        "filename": "res/values-de/strings.xml",
+        "patchSetId": 1
+      },
+      "lineNbr": 340,
+      "author": {
+        "id": 4977
+      },
+      "writtenOn": "2013-01-29T20:29:49Z",
+      "side": 1,
+      "message": "OK, nun sehe ich den Zusammenhang der beiden Strings. :)",
+      "parentUuid": "AAAAc3//9Gc\u003d",
+      "revId": "8b8377169a76713d6d6e393e86b1030b7ddba194",
+      "serverId": "1ec6b3db-b2c1-4fa4-84a2-4c7efe89ba71",
+      "unresolved": false
+    },
+    {
+      "key": {
         "uuid": "AAAAc3//9Hg\u003d",
         "filename": "res/values-de/strings.xml",
         "patchSetId": 1
@@ -260,6 +296,24 @@
       "side": 1,
       "message": "Es ist eine eine Kategorie. In der originalen Übersetzung ist es auch in Großbuchstaben geschrieben, ich muss aber noch mal nachgucken, ob nicht der tag fürs alles groß schreiben gesetzt ist, dann kann man es auch normal schreiben.",
       "parentUuid": "AAAAc3//9Hg\u003d",
+      "revId": "8b8377169a76713d6d6e393e86b1030b7ddba194",
+      "serverId": "1ec6b3db-b2c1-4fa4-84a2-4c7efe89ba71",
+      "unresolved": false
+    },
+    {
+      "key": {
+        "uuid": "AAAAc3//9Fs\u003d",
+        "filename": "res/values-de/strings.xml",
+        "patchSetId": 1
+      },
+      "lineNbr": 351,
+      "author": {
+        "id": 4977
+      },
+      "writtenOn": "2013-01-29T20:29:49Z",
+      "side": 1,
+      "message": "Danke.",
+      "parentUuid": "AAAAc3//9G8\u003d",
       "revId": "8b8377169a76713d6d6e393e86b1030b7ddba194",
       "serverId": "1ec6b3db-b2c1-4fa4-84a2-4c7efe89ba71",
       "unresolved": false
@@ -313,6 +367,24 @@
       "side": 1,
       "message": "Eventuell \u0027laufender Stoppuhr\u0027 an Stelle von \u0027aktiver Stoppuhr\u0027?",
       "parentUuid": "AAAAc3//9HA\u003d",
+      "revId": "8b8377169a76713d6d6e393e86b1030b7ddba194",
+      "serverId": "1ec6b3db-b2c1-4fa4-84a2-4c7efe89ba71",
+      "unresolved": false
+    },
+    {
+      "key": {
+        "uuid": "AAAAc3//9Fo\u003d",
+        "filename": "res/values-de/strings.xml",
+        "patchSetId": 1
+      },
+      "lineNbr": 353,
+      "author": {
+        "id": 4977
+      },
+      "writtenOn": "2013-01-29T20:29:49Z",
+      "side": 1,
+      "message": "Klingt gut.",
+      "parentUuid": "AAAAc3//9GY\u003d",
       "revId": "8b8377169a76713d6d6e393e86b1030b7ddba194",
       "serverId": "1ec6b3db-b2c1-4fa4-84a2-4c7efe89ba71",
       "unresolved": false
