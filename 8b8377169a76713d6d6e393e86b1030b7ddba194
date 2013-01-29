@@ -73,6 +73,24 @@
     },
     {
       "key": {
+        "uuid": "AAAAc3//9D0\u003d",
+        "filename": "res/values-de/strings.xml",
+        "patchSetId": 1
+      },
+      "lineNbr": 330,
+      "author": {
+        "id": 4884
+      },
+      "writtenOn": "2013-01-29T21:00:02Z",
+      "side": 1,
+      "message": "\u0027Aktion beim Umdrehen\u0027 finde ich gut",
+      "parentUuid": "AAAAc3//9Gg\u003d",
+      "revId": "8b8377169a76713d6d6e393e86b1030b7ddba194",
+      "serverId": "1ec6b3db-b2c1-4fa4-84a2-4c7efe89ba71",
+      "unresolved": false
+    },
+    {
+      "key": {
         "uuid": "AAAAc3//9JI\u003d",
         "filename": "res/values-de/strings.xml",
         "patchSetId": 1
@@ -84,6 +102,23 @@
       "writtenOn": "2013-01-29T15:26:25Z",
       "side": 1,
       "message": "Beim Umdrehen des Gerätes...\n\n(evtl. kann man \u0027des Gerätes\u0027 auch weglassen)",
+      "revId": "8b8377169a76713d6d6e393e86b1030b7ddba194",
+      "serverId": "1ec6b3db-b2c1-4fa4-84a2-4c7efe89ba71",
+      "unresolved": false
+    },
+    {
+      "key": {
+        "uuid": "AAAAc3//9Do\u003d",
+        "filename": "res/values-de/strings.xml",
+        "patchSetId": 1
+      },
+      "lineNbr": 331,
+      "author": {
+        "id": 4884
+      },
+      "writtenOn": "2013-01-29T21:00:02Z",
+      "side": 1,
+      "message": "Hier würde ich dann \u0027Beim umdrehen\u0027 nehmen und dann hat man ja die Auswahlmethoden. Man sollte aber noch \u0027Beenden\u0027 in \u0027Alarm beenden\u0027 ändern.",
       "revId": "8b8377169a76713d6d6e393e86b1030b7ddba194",
       "serverId": "1ec6b3db-b2c1-4fa4-84a2-4c7efe89ba71",
       "unresolved": false
@@ -208,6 +243,24 @@
       "side": 1,
       "message": "IMHO ist \u0027Gerätes\u0027 korrekt.",
       "parentUuid": "AAAAc3//9Fw\u003d",
+      "revId": "8b8377169a76713d6d6e393e86b1030b7ddba194",
+      "serverId": "1ec6b3db-b2c1-4fa4-84a2-4c7efe89ba71",
+      "unresolved": false
+    },
+    {
+      "key": {
+        "uuid": "AAAAc3//9DY\u003d",
+        "filename": "res/values-de/strings.xml",
+        "patchSetId": 1
+      },
+      "lineNbr": 337,
+      "author": {
+        "id": 4884
+      },
+      "writtenOn": "2013-01-29T21:00:02Z",
+      "side": 1,
+      "message": "\u0027Gerätes\u0027 ist richtig, werde ich dann übernehmen. http://de.wiktionary.org/wiki/Ger%C3%A4t",
+      "parentUuid": "AAAAc3//9Es\u003d",
       "revId": "8b8377169a76713d6d6e393e86b1030b7ddba194",
       "serverId": "1ec6b3db-b2c1-4fa4-84a2-4c7efe89ba71",
       "unresolved": false
@@ -403,6 +456,24 @@
       "side": 1,
       "message": "Klingt gut.",
       "parentUuid": "AAAAc3//9GY\u003d",
+      "revId": "8b8377169a76713d6d6e393e86b1030b7ddba194",
+      "serverId": "1ec6b3db-b2c1-4fa4-84a2-4c7efe89ba71",
+      "unresolved": false
+    },
+    {
+      "key": {
+        "uuid": "AAAAc3//9DU\u003d",
+        "filename": "res/values-de/strings.xml",
+        "patchSetId": 1
+      },
+      "lineNbr": 353,
+      "author": {
+        "id": 4884
+      },
+      "writtenOn": "2013-01-29T21:00:02Z",
+      "side": 1,
+      "message": "Guter Vorschlag.",
+      "parentUuid": "AAAAc3//9Fo\u003d",
       "revId": "8b8377169a76713d6d6e393e86b1030b7ddba194",
       "serverId": "1ec6b3db-b2c1-4fa4-84a2-4c7efe89ba71",
       "unresolved": false
