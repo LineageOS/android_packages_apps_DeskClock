@@ -267,6 +267,24 @@
     },
     {
       "key": {
+        "uuid": "AAAAc3//9DA\u003d",
+        "filename": "res/values-de/strings.xml",
+        "patchSetId": 1
+      },
+      "lineNbr": 337,
+      "author": {
+        "id": 1053
+      },
+      "writtenOn": "2013-01-29T21:09:37Z",
+      "side": 1,
+      "message": "Ist nicht sowohl \"Geräts\" als auch \"Gerätes\" richtig?\r\nWenn ich mich richtig erinnere hatten wir bei den anderen Übersetzungen oft aus Platzgründen \"Geräts\" gewählt.",
+      "parentUuid": "AAAAc3//9DY\u003d",
+      "revId": "8b8377169a76713d6d6e393e86b1030b7ddba194",
+      "serverId": "1ec6b3db-b2c1-4fa4-84a2-4c7efe89ba71",
+      "unresolved": false
+    },
+    {
+      "key": {
         "uuid": "AAAAc3//9Hk\u003d",
         "filename": "res/values-de/strings.xml",
         "patchSetId": 1
@@ -474,6 +492,24 @@
       "side": 1,
       "message": "Guter Vorschlag.",
       "parentUuid": "AAAAc3//9Fo\u003d",
+      "revId": "8b8377169a76713d6d6e393e86b1030b7ddba194",
+      "serverId": "1ec6b3db-b2c1-4fa4-84a2-4c7efe89ba71",
+      "unresolved": false
+    },
+    {
+      "key": {
+        "uuid": "AAAAc3//9C0\u003d",
+        "filename": "res/values-de/strings.xml",
+        "patchSetId": 1
+      },
+      "lineNbr": 353,
+      "author": {
+        "id": 1053
+      },
+      "writtenOn": "2013-01-29T21:09:37Z",
+      "side": 1,
+      "message": "Warum so kompliziert?\r\nVorschlag:\r\n\"Bei laufender Stoppuhr den Bildschirm nicht automatisch ab/ausschalten\"",
+      "parentUuid": "AAAAc3//9DU\u003d",
       "revId": "8b8377169a76713d6d6e393e86b1030b7ddba194",
       "serverId": "1ec6b3db-b2c1-4fa4-84a2-4c7efe89ba71",
       "unresolved": false
