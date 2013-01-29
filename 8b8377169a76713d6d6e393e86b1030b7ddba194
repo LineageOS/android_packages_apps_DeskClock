@@ -37,6 +37,24 @@
     },
     {
       "key": {
+        "uuid": "AAAAc3//9Hw\u003d",
+        "filename": "res/values-de/strings.xml",
+        "patchSetId": 1
+      },
+      "lineNbr": 330,
+      "author": {
+        "id": 4977
+      },
+      "writtenOn": "2013-01-29T16:36:19Z",
+      "side": 1,
+      "message": "Schwieriger Fall. Umdreh-Aktion verwirrt mich, Gerät umdrehen ist nicht ausreichend.\n\nIch wäre eher für Umdreh-Aktion und eine sprechende Zusammenfassung.",
+      "parentUuid": "AAAAc3//9Is\u003d",
+      "revId": "8b8377169a76713d6d6e393e86b1030b7ddba194",
+      "serverId": "1ec6b3db-b2c1-4fa4-84a2-4c7efe89ba71",
+      "unresolved": false
+    },
+    {
+      "key": {
         "uuid": "AAAAc3//9JI\u003d",
         "filename": "res/values-de/strings.xml",
         "patchSetId": 1
@@ -83,6 +101,92 @@
       "side": 1,
       "message": "Es würde es zwar verkürzen, aber ich finde man sollte es lassen, da ja durch deinen anderen Vorschlag nicht mehr beschrieben wird worauf sich das alles bezieht - das Gerät.",
       "parentUuid": "AAAAc3//9JE\u003d",
+      "revId": "8b8377169a76713d6d6e393e86b1030b7ddba194",
+      "serverId": "1ec6b3db-b2c1-4fa4-84a2-4c7efe89ba71",
+      "unresolved": false
+    },
+    {
+      "key": {
+        "uuid": "AAAAc3//9Hs\u003d",
+        "filename": "res/values-de/strings.xml",
+        "patchSetId": 1
+      },
+      "lineNbr": 336,
+      "author": {
+        "id": 4977
+      },
+      "writtenOn": "2013-01-29T16:36:19Z",
+      "side": 1,
+      "message": "Schüttel-Aktion und in der Zusammenfassung sprechend erklären, was damit gemeint ist.",
+      "parentUuid": "AAAAc3//9Ik\u003d",
+      "revId": "8b8377169a76713d6d6e393e86b1030b7ddba194",
+      "serverId": "1ec6b3db-b2c1-4fa4-84a2-4c7efe89ba71",
+      "unresolved": false
+    },
+    {
+      "key": {
+        "uuid": "AAAAc3//9Ho\u003d",
+        "filename": "res/values-de/strings.xml",
+        "patchSetId": 1
+      },
+      "lineNbr": 337,
+      "author": {
+        "id": 4977
+      },
+      "writtenOn": "2013-01-29T16:36:19Z",
+      "side": 1,
+      "message": "Vorschlag: Beim Schütteln des Geräts folgende Aktion ausführen: ...",
+      "revId": "8b8377169a76713d6d6e393e86b1030b7ddba194",
+      "serverId": "1ec6b3db-b2c1-4fa4-84a2-4c7efe89ba71",
+      "unresolved": false
+    },
+    {
+      "key": {
+        "uuid": "AAAAc3//9Hk\u003d",
+        "filename": "res/values-de/strings.xml",
+        "patchSetId": 1
+      },
+      "lineNbr": 340,
+      "author": {
+        "id": 4977
+      },
+      "writtenOn": "2013-01-29T16:36:19Z",
+      "side": 1,
+      "message": "ruhig abkürzen\n- Keine Aktion\n- Schlummerfunktion aktivieren\n- Alarm beenden",
+      "revId": "8b8377169a76713d6d6e393e86b1030b7ddba194",
+      "serverId": "1ec6b3db-b2c1-4fa4-84a2-4c7efe89ba71",
+      "unresolved": false
+    },
+    {
+      "key": {
+        "uuid": "AAAAc3//9Hg\u003d",
+        "filename": "res/values-de/strings.xml",
+        "patchSetId": 1
+      },
+      "lineNbr": 351,
+      "author": {
+        "id": 4977
+      },
+      "writtenOn": "2013-01-29T16:36:19Z",
+      "side": 1,
+      "message": "Warum alles groß?",
+      "revId": "8b8377169a76713d6d6e393e86b1030b7ddba194",
+      "serverId": "1ec6b3db-b2c1-4fa4-84a2-4c7efe89ba71",
+      "unresolved": false
+    },
+    {
+      "key": {
+        "uuid": "AAAAc3//9Hc\u003d",
+        "filename": "res/values-de/strings.xml",
+        "patchSetId": 1
+      },
+      "lineNbr": 353,
+      "author": {
+        "id": 4977
+      },
+      "writtenOn": "2013-01-29T16:36:19Z",
+      "side": 1,
+      "message": "Bildschirm aktiv aus title und bei aktiver Stoppuhr \"beißt\" sich ein wenig.\n\nEvtl. Verhindern, dass der Bildschirm in den Ruhezustand wechselt, wenn die Stoppuhr eingeschaltet ist.",
       "revId": "8b8377169a76713d6d6e393e86b1030b7ddba194",
       "serverId": "1ec6b3db-b2c1-4fa4-84a2-4c7efe89ba71",
       "unresolved": false
