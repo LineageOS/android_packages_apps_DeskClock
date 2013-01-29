@@ -142,6 +142,24 @@
     },
     {
       "key": {
+        "uuid": "AAAAc3//9G0\u003d",
+        "filename": "res/values-de/strings.xml",
+        "patchSetId": 1
+      },
+      "lineNbr": 337,
+      "author": {
+        "id": 4884
+      },
+      "writtenOn": "2013-01-29T18:17:37Z",
+      "side": 1,
+      "message": "Siehe eins weiter unten",
+      "parentUuid": "AAAAc3//9Ho\u003d",
+      "revId": "8b8377169a76713d6d6e393e86b1030b7ddba194",
+      "serverId": "1ec6b3db-b2c1-4fa4-84a2-4c7efe89ba71",
+      "unresolved": false
+    },
+    {
+      "key": {
         "uuid": "AAAAc3//9Hk\u003d",
         "filename": "res/values-de/strings.xml",
         "patchSetId": 1
@@ -153,6 +171,24 @@
       "writtenOn": "2013-01-29T16:36:19Z",
       "side": 1,
       "message": "ruhig abkürzen\n- Keine Aktion\n- Schlummerfunktion aktivieren\n- Alarm beenden",
+      "revId": "8b8377169a76713d6d6e393e86b1030b7ddba194",
+      "serverId": "1ec6b3db-b2c1-4fa4-84a2-4c7efe89ba71",
+      "unresolved": false
+    },
+    {
+      "key": {
+        "uuid": "AAAAc3//9G4\u003d",
+        "filename": "res/values-de/strings.xml",
+        "patchSetId": 1
+      },
+      "lineNbr": 340,
+      "author": {
+        "id": 4884
+      },
+      "writtenOn": "2013-01-29T18:17:37Z",
+      "side": 1,
+      "message": "Finde ich persönlich nicht sehr gut. Dein Vorschlag sieht bei einem Umbruch sehr bescheiden aus und ein Doppelpunkt in einer Beschreibung sollte man auch immer vermeiden und eher einen Satz variabel formulieren.",
+      "parentUuid": "AAAAc3//9Hk\u003d",
       "revId": "8b8377169a76713d6d6e393e86b1030b7ddba194",
       "serverId": "1ec6b3db-b2c1-4fa4-84a2-4c7efe89ba71",
       "unresolved": false
@@ -176,6 +212,24 @@
     },
     {
       "key": {
+        "uuid": "AAAAc3//9G8\u003d",
+        "filename": "res/values-de/strings.xml",
+        "patchSetId": 1
+      },
+      "lineNbr": 351,
+      "author": {
+        "id": 4884
+      },
+      "writtenOn": "2013-01-29T18:17:37Z",
+      "side": 1,
+      "message": "Es ist eine eine Kategorie. In der originalen Übersetzung ist es auch in Großbuchstaben geschrieben, ich muss aber noch mal nachgucken, ob nicht der tag fürs alles groß schreiben gesetzt ist, dann kann man es auch normal schreiben.",
+      "parentUuid": "AAAAc3//9Hg\u003d",
+      "revId": "8b8377169a76713d6d6e393e86b1030b7ddba194",
+      "serverId": "1ec6b3db-b2c1-4fa4-84a2-4c7efe89ba71",
+      "unresolved": false
+    },
+    {
+      "key": {
         "uuid": "AAAAc3//9Hc\u003d",
         "filename": "res/values-de/strings.xml",
         "patchSetId": 1
@@ -187,6 +241,24 @@
       "writtenOn": "2013-01-29T16:36:19Z",
       "side": 1,
       "message": "Bildschirm aktiv aus title und bei aktiver Stoppuhr \"beißt\" sich ein wenig.\n\nEvtl. Verhindern, dass der Bildschirm in den Ruhezustand wechselt, wenn die Stoppuhr eingeschaltet ist.",
+      "revId": "8b8377169a76713d6d6e393e86b1030b7ddba194",
+      "serverId": "1ec6b3db-b2c1-4fa4-84a2-4c7efe89ba71",
+      "unresolved": false
+    },
+    {
+      "key": {
+        "uuid": "AAAAc3//9HA\u003d",
+        "filename": "res/values-de/strings.xml",
+        "patchSetId": 1
+      },
+      "lineNbr": 353,
+      "author": {
+        "id": 4884
+      },
+      "writtenOn": "2013-01-29T18:17:37Z",
+      "side": 1,
+      "message": "Ich wollte einen Satz mit einem Komma grad nach dem ersten Wort vermeiden. Sieht immer komisch aus.",
+      "parentUuid": "AAAAc3//9Hc\u003d",
       "revId": "8b8377169a76713d6d6e393e86b1030b7ddba194",
       "serverId": "1ec6b3db-b2c1-4fa4-84a2-4c7efe89ba71",
       "unresolved": false
