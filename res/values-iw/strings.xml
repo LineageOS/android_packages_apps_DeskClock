@@ -331,6 +331,34 @@
     <!-- Setting summary for showing/hiding the alarm statusbar icon -->
     <string name="show_status_bar_icon_summary">הצג סמל בשורת המצב כשיש התראה מוגדרת</string>
 
+    <!-- Flip and shake actions -->
+
+    <!-- Setting title for the flip action setting. -->
+    <string name="flip_action_title">פעולת הפיכה</string>
+    <!-- Dialog title of the flip action setting. -->
+    <string name="flip_action_dialog_title">הפוך את המכשיר כדי\u2026</string>
+    <!-- Setting summary for the flip action setting. -->
+    <string name="flip_action_summary">הפיכת המכשיר כלפי מטה <xliff:g id="action">%s</xliff:g></string>
+    <!-- Setting title for the shake action setting. -->
+    <string name="shake_action_title">פעולת ניעור</string>
+    <!-- Dialog title for the shake action setting. -->
+    <string name="shake_action_dialog_title">נער את המכשיר כדי\u2026</string>
+    <!-- Setting summary for the shake action setting. -->
+    <string name="shake_action_summary">פעולת ניעור המכשיר <xliff:g id="action">%s</xliff:g></string>
+
+    <!-- Summary texts for shake and flip actions. Must be ordered by numerical
+         value (do nothing = 0, snooze = 1, dismiss = 2) -->
+    <string-array name="action_summary_entries">
+      <item>לא תעשה כלום</item>
+      <item>תעביר למצב נמנום</item>
+      <item>תבטל את ההתראה</item>
+    </string-array>
+
+    <!-- Stopwatch settings -->
+    <string name="stopwatch_settings">שעון עצר</string>
+    <string name="keep_display_on_stopwatch">השאר את המסך דולק</string>
+    <string name="keep_display_on_stopwatch_summary">השאר את המסך דולק כששעון העצר פועל</string>
+
     <!-- **** CYANOGENMOD ADDITIONS END **** -->
 
 </resources>
