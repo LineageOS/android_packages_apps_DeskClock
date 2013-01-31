@@ -1,0 +1,21 @@
+{
+  "comments": [
+    {
+      "key": {
+        "uuid": "AAAAc3//8XQ\u003d",
+        "filename": "src/com/android/deskclock/AlarmClock.java",
+        "patchSetId": 1
+      },
+      "lineNbr": 998,
+      "author": {
+        "id": 1063
+      },
+      "writtenOn": "2013-01-31T22:37:20Z",
+      "side": 1,
+      "message": "A space is missing after the \u0027if\u0027.\n\nAlso, I think this would look nicer:\n\nif (ringTone !\u003d null) {\n    title \u003d ringTone.getTitle(mContext);\n    if (title !\u003d null) {\n        mRingtoneTitleCache.putString(uri.toString(), title);\n    }\n}",
+      "revId": "23116060b332af9b666e88014fa2325a23cb333c",
+      "serverId": "1ec6b3db-b2c1-4fa4-84a2-4c7efe89ba71",
+      "unresolved": false
+    }
+  ]
+}
