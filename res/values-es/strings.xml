@@ -1,4 +1,4 @@
-<?xml version="1.0" encoding="UTF-8"?>
+<?xml version="1.0" encoding="utf-8"?>
 <!--  Copyright (C) 2007 The Android Open Source Project
 
      Licensed under the Apache License, Version 2.0 (the "License");
@@ -339,6 +339,9 @@
       <item>posponer la alarma</item>
       <item>descartar la alarma</item>
     </string-array>
+    <string name="stopwatch_settings">CRONÓMETRO</string>
+    <string name="keep_display_on_stopwatch">Mantener pantalla encendida</string>
+    <string name="keep_display_on_stopwatch_summary">La pantalla permanecerá encendida mientras el cronómetro esté en marcha</string>
 
     <!-- CYANOGENMOD ADDITIONS END -->
 </resources>
