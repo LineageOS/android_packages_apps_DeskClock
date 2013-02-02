@@ -51,7 +51,7 @@
     <item msgid="6002066367368421848">"Alarm is ingesteld voor <xliff:g id="DAYS">%1$s</xliff:g> vanaf nu."</item>
     <item msgid="8824719306247973774">"Alarm is ingesteld voor <xliff:g id="HOURS">%2$s</xliff:g> vanaf nu."</item>
     <item msgid="8182406852935468862">"Alarm is ingesteld voor <xliff:g id="DAYS">%1$s</xliff:g> en <xliff:g id="HOURS">%2$s</xliff:g> vanaf nu."</item>
-    <item msgid="2532279224777213194">"Alarm gaat over <xliff:g id="MINUTES">%3$s</xliff:g> minuten af."</item>
+    <item msgid="2532279224777213194">"Alarm gaat over <xliff:g id="MINUTES">%3$s</xliff:g> af."</item>
     <item msgid="5936557894247187717">"Alarm is ingesteld voor <xliff:g id="DAYS">%1$s</xliff:g> en <xliff:g id="MINUTES">%3$s</xliff:g> vanaf nu."</item>
     <item msgid="9115697840826129603">"Alarm is ingesteld voor <xliff:g id="HOURS">%2$s</xliff:g> en <xliff:g id="MINUTES">%3$s</xliff:g> vanaf nu."</item>
     <item msgid="2332583385137381060">"Alarm is ingesteld voor <xliff:g id="DAYS">%1$s</xliff:g>, <xliff:g id="HOURS">%2$s</xliff:g> en <xliff:g id="MINUTES">%3$s</xliff:g> vanaf nu."</item>
@@ -102,7 +102,7 @@
     <string name="volume_button_dialog_title" msgid="8768042543750036853">"Knopeffect"</string>
   <string-array name="volume_button_setting_entries">
     <item msgid="7972756698723318690">"Snooze"</item>
-    <item msgid="3450979320164769576">"Sluiten"</item>
+    <item msgid="3450979320164769576">"Uitschakelen"</item>
     <item msgid="6302517608411378024">"Niets doen"</item>
   </string-array>
     <string name="default_ringtone_setting_title" msgid="4549726190682964245">"Standaardbeltoon instellen"</string>
@@ -120,8 +120,6 @@
     <string name="loading_ringtone" msgid="6523322777415268044">"Beltoon laden…"</string>
     <string name="timer_ring_service_desc" msgid="2620214305660322415">"Geluidsweergaveservice voor timers ingesteld in Klok."</string>
     <string name="control_set_alarm" msgid="2194676418924016327">"Alarm instellen"</string>
-    <!-- no translation found for control_set_alarm_with_existing (3359285346655630660) -->
-    <skip />
     <string name="menu_timer" msgid="6459070074762877114">"Timer"</string>
     <string name="menu_clock" msgid="5612760670606829805">"Klok"</string>
     <string name="menu_stopwatch" msgid="3396117705293574701">"Stopwatch"</string>
@@ -324,7 +322,23 @@
     <string name="city_delete_confirmation" msgid="1783441538785676299">"Deze stad verwijderen?"</string>
     <string name="digital_gadget" msgid="2326954556720571358">"Digitale klok"</string>
 
-    <!-- CYANOGENMOD EDITS -->
+    <!-- CYANOGENMOD ADDITIONS: STRINGS -->
     <string name="show_status_bar_icon_title">Pictogram tonen</string>
     <string name="show_status_bar_icon_summary">Pictogram tonen in de statusbalk als een alarm is ingesteld</string>
+    <string name="flip_action_title">Omdraai-actie</string>
+    <string name="flip_action_dialog_title">Apparaat omdraaien zal\u2026</string>
+    <string name="flip_action_summary">Omdraaien van uw apparaat zal <xliff:g id="action">%s</xliff:g></string>
+    <string name="shake_action_title">Schudactie</string>
+    <string name="shake_action_dialog_title">Apparaat schudden zal\u2026</string>
+    <string name="shake_action_summary">Schudden van uw apparaat zal <xliff:g id="action">%s</xliff:g></string>
+    <string name="stopwatch_settings">STOPWATCH</string>
+    <string name="keep_display_on_stopwatch">Scherm actief houden</string>
+    <string name="keep_display_on_stopwatch_summary">Scherm actief houden indien stopwatch draait</string>
+
+    <!-- CYANOGENMOD ADDITIONS: ARRAYS -->
+    <string-array name="action_summary_entries">
+        <item>niets doen</item>
+        <item>het alarm snoozen</item>
+        <item>het alarm uitschakelen</item>
+    </string-array>
 </resources>
