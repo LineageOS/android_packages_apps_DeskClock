@@ -1,0 +1,21 @@
+{
+  "comments": [
+    {
+      "key": {
+        "uuid": "AAAAc3//7j0\u003d",
+        "filename": "res/values-zh-rCN/strings.xml",
+        "patchSetId": 4
+      },
+      "lineNbr": 77,
+      "author": {
+        "id": 1642
+      },
+      "writtenOn": "2013-02-02T23:36:42Z",
+      "side": 1,
+      "message": "http://paste.ubuntu.com/1601900/",
+      "revId": "d659fb9c6790d44d2b0b9241f00bc08b19a8c1bf",
+      "serverId": "1ec6b3db-b2c1-4fa4-84a2-4c7efe89ba71",
+      "unresolved": false
+    }
+  ]
+}
