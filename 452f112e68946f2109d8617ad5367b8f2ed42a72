@@ -1,0 +1,21 @@
+{
+  "comments": [
+    {
+      "key": {
+        "uuid": "AAAAc3//7UY\u003d",
+        "filename": "res/values-nl/strings.xml",
+        "patchSetId": 3
+      },
+      "lineNbr": 54,
+      "author": {
+        "id": 2248
+      },
+      "writtenOn": "2013-02-03T17:53:25Z",
+      "side": 1,
+      "message": "Misschien zie ik iets over het hoofd, maar waarom hier het woord minuten verwijderd? of zit dat al in het automatisch gegenereerde deel van de string?",
+      "revId": "452f112e68946f2109d8617ad5367b8f2ed42a72",
+      "serverId": "1ec6b3db-b2c1-4fa4-84a2-4c7efe89ba71",
+      "unresolved": false
+    }
+  ]
+}
