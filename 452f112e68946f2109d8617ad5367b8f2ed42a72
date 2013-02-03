@@ -16,6 +16,24 @@
       "revId": "452f112e68946f2109d8617ad5367b8f2ed42a72",
       "serverId": "1ec6b3db-b2c1-4fa4-84a2-4c7efe89ba71",
       "unresolved": false
+    },
+    {
+      "key": {
+        "uuid": "AAAAc3//7UA\u003d",
+        "filename": "res/values-nl/strings.xml",
+        "patchSetId": 3
+      },
+      "lineNbr": 54,
+      "author": {
+        "id": 2597
+      },
+      "writtenOn": "2013-02-03T17:59:46Z",
+      "side": 1,
+      "message": "Dat wordt inderdaad automatisch gegenereerd. Zie http://review.cyanogenmod.org/#/c/22454",
+      "parentUuid": "AAAAc3//7UY\u003d",
+      "revId": "452f112e68946f2109d8617ad5367b8f2ed42a72",
+      "serverId": "1ec6b3db-b2c1-4fa4-84a2-4c7efe89ba71",
+      "unresolved": false
     }
   ]
 }
