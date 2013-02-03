@@ -54,6 +54,24 @@
     },
     {
       "key": {
+        "uuid": "AAAAc3//7PI\u003d",
+        "filename": "res/values-nl/strings.xml",
+        "patchSetId": 3
+      },
+      "lineNbr": 104,
+      "author": {
+        "id": 2597
+      },
+      "writtenOn": "2013-02-03T22:50:05Z",
+      "side": 1,
+      "message": "In principe zou ik dan de AOSP-vertaling overnemen, maar ik vind uitschakelen er beter bij passen.\nDone",
+      "parentUuid": "AAAAc3//7QM\u003d",
+      "revId": "452f112e68946f2109d8617ad5367b8f2ed42a72",
+      "serverId": "1ec6b3db-b2c1-4fa4-84a2-4c7efe89ba71",
+      "unresolved": false
+    },
+    {
+      "key": {
         "uuid": "AAAAc3//7Po\u003d",
         "filename": "res/values-nl/strings.xml",
         "patchSetId": 3
@@ -65,6 +83,24 @@
       "writtenOn": "2013-02-03T22:42:04Z",
       "side": 1,
       "message": "- Apparaat omdraaien zal\\u2026\n\nen hier komt dan r.103 als opties onder.",
+      "revId": "452f112e68946f2109d8617ad5367b8f2ed42a72",
+      "serverId": "1ec6b3db-b2c1-4fa4-84a2-4c7efe89ba71",
+      "unresolved": false
+    },
+    {
+      "key": {
+        "uuid": "AAAAc3//7PA\u003d",
+        "filename": "res/values-nl/strings.xml",
+        "patchSetId": 3
+      },
+      "lineNbr": 331,
+      "author": {
+        "id": 2597
+      },
+      "writtenOn": "2013-02-03T22:50:05Z",
+      "side": 1,
+      "message": "Done",
+      "parentUuid": "AAAAc3//7Po\u003d",
       "revId": "452f112e68946f2109d8617ad5367b8f2ed42a72",
       "serverId": "1ec6b3db-b2c1-4fa4-84a2-4c7efe89ba71",
       "unresolved": false
@@ -88,6 +124,24 @@
     },
     {
       "key": {
+        "uuid": "AAAAc3//7O4\u003d",
+        "filename": "res/values-nl/strings.xml",
+        "patchSetId": 3
+      },
+      "lineNbr": 332,
+      "author": {
+        "id": 2597
+      },
+      "writtenOn": "2013-02-03T22:50:05Z",
+      "side": 1,
+      "message": "Done",
+      "parentUuid": "AAAAc3//7QA\u003d",
+      "revId": "452f112e68946f2109d8617ad5367b8f2ed42a72",
+      "serverId": "1ec6b3db-b2c1-4fa4-84a2-4c7efe89ba71",
+      "unresolved": false
+    },
+    {
+      "key": {
         "uuid": "AAAAc3//7Pk\u003d",
         "filename": "res/values-nl/strings.xml",
         "patchSetId": 3
@@ -99,6 +153,24 @@
       "writtenOn": "2013-02-03T22:42:04Z",
       "side": 1,
       "message": "- Apparaat schudden zal\\u2026",
+      "revId": "452f112e68946f2109d8617ad5367b8f2ed42a72",
+      "serverId": "1ec6b3db-b2c1-4fa4-84a2-4c7efe89ba71",
+      "unresolved": false
+    },
+    {
+      "key": {
+        "uuid": "AAAAc3//7O0\u003d",
+        "filename": "res/values-nl/strings.xml",
+        "patchSetId": 3
+      },
+      "lineNbr": 334,
+      "author": {
+        "id": 2597
+      },
+      "writtenOn": "2013-02-03T22:50:05Z",
+      "side": 1,
+      "message": "Done",
+      "parentUuid": "AAAAc3//7Pk\u003d",
       "revId": "452f112e68946f2109d8617ad5367b8f2ed42a72",
       "serverId": "1ec6b3db-b2c1-4fa4-84a2-4c7efe89ba71",
       "unresolved": false
@@ -122,6 +194,24 @@
     },
     {
       "key": {
+        "uuid": "AAAAc3//7Ow\u003d",
+        "filename": "res/values-nl/strings.xml",
+        "patchSetId": 3
+      },
+      "lineNbr": 335,
+      "author": {
+        "id": 2597
+      },
+      "writtenOn": "2013-02-03T22:50:05Z",
+      "side": 1,
+      "message": "Done",
+      "parentUuid": "AAAAc3//7P4\u003d",
+      "revId": "452f112e68946f2109d8617ad5367b8f2ed42a72",
+      "serverId": "1ec6b3db-b2c1-4fa4-84a2-4c7efe89ba71",
+      "unresolved": false
+    },
+    {
+      "key": {
         "uuid": "AAAAc3//7P0\u003d",
         "filename": "res/values-nl/strings.xml",
         "patchSetId": 3
@@ -139,6 +229,24 @@
     },
     {
       "key": {
+        "uuid": "AAAAc3//7Os\u003d",
+        "filename": "res/values-nl/strings.xml",
+        "patchSetId": 3
+      },
+      "lineNbr": 343,
+      "author": {
+        "id": 2597
+      },
+      "writtenOn": "2013-02-03T22:50:05Z",
+      "side": 1,
+      "message": "Done",
+      "parentUuid": "AAAAc3//7P0\u003d",
+      "revId": "452f112e68946f2109d8617ad5367b8f2ed42a72",
+      "serverId": "1ec6b3db-b2c1-4fa4-84a2-4c7efe89ba71",
+      "unresolved": false
+    },
+    {
+      "key": {
         "uuid": "AAAAc3//7Pw\u003d",
         "filename": "res/values-nl/strings.xml",
         "patchSetId": 3
@@ -150,6 +258,24 @@
       "writtenOn": "2013-02-03T22:42:04Z",
       "side": 1,
       "message": "het alarm uitschakelen",
+      "revId": "452f112e68946f2109d8617ad5367b8f2ed42a72",
+      "serverId": "1ec6b3db-b2c1-4fa4-84a2-4c7efe89ba71",
+      "unresolved": false
+    },
+    {
+      "key": {
+        "uuid": "AAAAc3//7Oo\u003d",
+        "filename": "res/values-nl/strings.xml",
+        "patchSetId": 3
+      },
+      "lineNbr": 344,
+      "author": {
+        "id": 2597
+      },
+      "writtenOn": "2013-02-03T22:50:05Z",
+      "side": 1,
+      "message": "Done",
+      "parentUuid": "AAAAc3//7Pw\u003d",
       "revId": "452f112e68946f2109d8617ad5367b8f2ed42a72",
       "serverId": "1ec6b3db-b2c1-4fa4-84a2-4c7efe89ba71",
       "unresolved": false
