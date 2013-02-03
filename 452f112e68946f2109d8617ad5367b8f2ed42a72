@@ -34,6 +34,125 @@
       "revId": "452f112e68946f2109d8617ad5367b8f2ed42a72",
       "serverId": "1ec6b3db-b2c1-4fa4-84a2-4c7efe89ba71",
       "unresolved": false
+    },
+    {
+      "key": {
+        "uuid": "AAAAc3//7QM\u003d",
+        "filename": "res/values-nl/strings.xml",
+        "patchSetId": 3
+      },
+      "lineNbr": 104,
+      "author": {
+        "id": 2881
+      },
+      "writtenOn": "2013-02-03T22:42:04Z",
+      "side": 1,
+      "message": "Sluiten moet eigenlijk Uitschakelen zijn, in overeenkomst met r344",
+      "revId": "452f112e68946f2109d8617ad5367b8f2ed42a72",
+      "serverId": "1ec6b3db-b2c1-4fa4-84a2-4c7efe89ba71",
+      "unresolved": false
+    },
+    {
+      "key": {
+        "uuid": "AAAAc3//7Po\u003d",
+        "filename": "res/values-nl/strings.xml",
+        "patchSetId": 3
+      },
+      "lineNbr": 331,
+      "author": {
+        "id": 2881
+      },
+      "writtenOn": "2013-02-03T22:42:04Z",
+      "side": 1,
+      "message": "- Apparaat omdraaien zal\\u2026\n\nen hier komt dan r.103 als opties onder.",
+      "revId": "452f112e68946f2109d8617ad5367b8f2ed42a72",
+      "serverId": "1ec6b3db-b2c1-4fa4-84a2-4c7efe89ba71",
+      "unresolved": false
+    },
+    {
+      "key": {
+        "uuid": "AAAAc3//7QA\u003d",
+        "filename": "res/values-nl/strings.xml",
+        "patchSetId": 3
+      },
+      "lineNbr": 332,
+      "author": {
+        "id": 2881
+      },
+      "writtenOn": "2013-02-03T22:42:04Z",
+      "side": 1,
+      "message": "- Omdraaien van uw apparaat zal \u003cxliff:g id\u003d\"action\"\u003e%s\u003c/xliff:g\u003e",
+      "revId": "452f112e68946f2109d8617ad5367b8f2ed42a72",
+      "serverId": "1ec6b3db-b2c1-4fa4-84a2-4c7efe89ba71",
+      "unresolved": false
+    },
+    {
+      "key": {
+        "uuid": "AAAAc3//7Pk\u003d",
+        "filename": "res/values-nl/strings.xml",
+        "patchSetId": 3
+      },
+      "lineNbr": 334,
+      "author": {
+        "id": 2881
+      },
+      "writtenOn": "2013-02-03T22:42:04Z",
+      "side": 1,
+      "message": "- Apparaat schudden zal\\u2026",
+      "revId": "452f112e68946f2109d8617ad5367b8f2ed42a72",
+      "serverId": "1ec6b3db-b2c1-4fa4-84a2-4c7efe89ba71",
+      "unresolved": false
+    },
+    {
+      "key": {
+        "uuid": "AAAAc3//7P4\u003d",
+        "filename": "res/values-nl/strings.xml",
+        "patchSetId": 3
+      },
+      "lineNbr": 335,
+      "author": {
+        "id": 2881
+      },
+      "writtenOn": "2013-02-03T22:42:04Z",
+      "side": 1,
+      "message": "- Schudden van uw apparaat zal \u003cxliff:g id\u003d\"action\"\u003e%s\u003c/xliff:g\u003e",
+      "revId": "452f112e68946f2109d8617ad5367b8f2ed42a72",
+      "serverId": "1ec6b3db-b2c1-4fa4-84a2-4c7efe89ba71",
+      "unresolved": false
+    },
+    {
+      "key": {
+        "uuid": "AAAAc3//7P0\u003d",
+        "filename": "res/values-nl/strings.xml",
+        "patchSetId": 3
+      },
+      "lineNbr": 343,
+      "author": {
+        "id": 2881
+      },
+      "writtenOn": "2013-02-03T22:42:04Z",
+      "side": 1,
+      "message": "- het alarm snoozen\n\nvervolg van r.332",
+      "revId": "452f112e68946f2109d8617ad5367b8f2ed42a72",
+      "serverId": "1ec6b3db-b2c1-4fa4-84a2-4c7efe89ba71",
+      "unresolved": false
+    },
+    {
+      "key": {
+        "uuid": "AAAAc3//7Pw\u003d",
+        "filename": "res/values-nl/strings.xml",
+        "patchSetId": 3
+      },
+      "lineNbr": 344,
+      "author": {
+        "id": 2881
+      },
+      "writtenOn": "2013-02-03T22:42:04Z",
+      "side": 1,
+      "message": "het alarm uitschakelen",
+      "revId": "452f112e68946f2109d8617ad5367b8f2ed42a72",
+      "serverId": "1ec6b3db-b2c1-4fa4-84a2-4c7efe89ba71",
+      "unresolved": false
     }
   ]
 }
