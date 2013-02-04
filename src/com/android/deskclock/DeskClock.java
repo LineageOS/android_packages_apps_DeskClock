@@ -250,6 +250,10 @@ public class DeskClock extends Activity implements LabelDialogFragment.TimerLabe
         if (help != null) {
             Utils.prepareHelpMenuItem(this, help);
         }
+        MenuItem nightMode = menu.findItem(R.id.menu_item_night_mode);
+        if (nightMode != null) {
+            nightMode.setVisible(mTabsAdapter.mPager.getCurrentItem() == CLOCK_TAB_INDEX);
+        }
         popupMenu.show();
     }
 
