@@ -25,6 +25,7 @@ import android.content.ActivityNotFoundException;
 import android.content.Context;
 import android.content.Intent;
 import android.content.SharedPreferences;
+import android.content.SharedPreferences.OnSharedPreferenceChangeListener;
 import android.graphics.drawable.TransitionDrawable;
 import android.os.Bundle;
 import android.os.Handler;
@@ -85,6 +86,15 @@ public class DeskClock extends Activity implements LabelDialogFragment.TimerLabe
 
     private int mSelectedTab;
 
+    private OnSharedPreferenceChangeListener preferenceChangeListener = new OnSharedPreferenceChangeListener() {
+        @Override
+        public void onSharedPreferenceChanged(SharedPreferences prefs, String key) {
+            if (SettingsActivity.KEY_KEEP_DISPLAY_ON_STOPWATCH.equals(key)) {
+                refreshKeepScreenOn();
+            }
+        }
+    };
+
     @Override
     public void onNewIntent(Intent newIntent) {
         super.onNewIntent(newIntent);
@@ -100,6 +110,16 @@ public class DeskClock extends Activity implements LabelDialogFragment.TimerLabe
             if (mActionBar != null) {
                 mActionBar.setSelectedNavigationItem(tab);
             }
+        }
+    }
+
+    private void refreshKeepScreenOn() {
+        SharedPreferences prefs = PreferenceManager.getDefaultSharedPreferences(this);
+        if (mTabsAdapter.mPager.getCurrentItem() == STOPWATCH_TAB_INDEX
+                && prefs.getBoolean(SettingsActivity.KEY_KEEP_DISPLAY_ON_STOPWATCH, true)) {
+            getWindow().addFlags(LayoutParams.FLAG_KEEP_SCREEN_ON);
+        } else {
+            getWindow().clearFlags(LayoutParams.FLAG_KEEP_SCREEN_ON);
         }
     }
 
@@ -157,6 +177,9 @@ public class DeskClock extends Activity implements LabelDialogFragment.TimerLabe
         }
         initViews();
         setHomeTimeZone();
+
+        SharedPreferences prefs = PreferenceManager.getDefaultSharedPreferences(this);
+        prefs.registerOnSharedPreferenceChangeListener(preferenceChangeListener);
     }
 
     @Override
@@ -190,6 +213,13 @@ public class DeskClock extends Activity implements LabelDialogFragment.TimerLabe
         Utils.showInUseNotifications(this);
 
         super.onPause();
+    }
+
+    @Override
+    protected void onDestroy() {
+        super.onDestroy();
+        SharedPreferences prefs = PreferenceManager.getDefaultSharedPreferences(this);
+        prefs.unregisterOnSharedPreferenceChangeListener(preferenceChangeListener);
     }
 
     @Override
@@ -249,6 +279,10 @@ public class DeskClock extends Activity implements LabelDialogFragment.TimerLabe
         MenuItem help = menu.findItem(R.id.menu_item_help);
         if (help != null) {
             Utils.prepareHelpMenuItem(this, help);
+        }
+        MenuItem nightMode = menu.findItem(R.id.menu_item_night_mode);
+        if (nightMode != null) {
+            nightMode.setVisible(mTabsAdapter.mPager.getCurrentItem() == CLOCK_TAB_INDEX);
         }
         popupMenu.show();
     }
@@ -357,13 +391,7 @@ public class DeskClock extends Activity implements LabelDialogFragment.TimerLabe
         public void onTabSelected(Tab tab, FragmentTransaction ft) {
             TabInfo info = (TabInfo)tab.getTag();
             mPager.setCurrentItem(info.getPosition());
-            SharedPreferences prefs = PreferenceManager.getDefaultSharedPreferences(mContext);
-            if (info.getPosition() == STOPWATCH_TAB_INDEX
-                    && prefs.getBoolean(SettingsActivity.KEY_KEEP_DISPLAY_ON_STOPWATCH, true)) {
-                getWindow().addFlags(LayoutParams.FLAG_KEEP_SCREEN_ON);
-            } else {
-                getWindow().clearFlags(LayoutParams.FLAG_KEEP_SCREEN_ON);
-            }
+            refreshKeepScreenOn();
         }
 
         @Override
