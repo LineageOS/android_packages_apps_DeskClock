@@ -1,0 +1,21 @@
+{
+  "comments": [
+    {
+      "key": {
+        "uuid": "AAAAc3//7Ik\u003d",
+        "filename": "res/values-nl/strings.xml",
+        "patchSetId": 4
+      },
+      "lineNbr": 336,
+      "author": {
+        "id": 2881
+      },
+      "writtenOn": "2013-02-04T06:52:30Z",
+      "side": 1,
+      "message": "Een stopwatch draait niet, maar loopt. Volgens mij gaat het hier niet om de app, maar om het feit dat de stopwatch gestart is.\n\n- Scherm actief houden indien stopwatch loopt.",
+      "revId": "92e6bd18a746602ecdda6a35620cc8ee77fa39d4",
+      "serverId": "1ec6b3db-b2c1-4fa4-84a2-4c7efe89ba71",
+      "unresolved": false
+    }
+  ]
+}
