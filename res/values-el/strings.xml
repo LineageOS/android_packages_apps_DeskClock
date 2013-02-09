@@ -101,7 +101,7 @@
     <string name="volume_button_setting_title" msgid="6937131248843413357">"Κουμπί έντασης"</string>
     <string name="volume_button_dialog_title" msgid="8768042543750036853">"Εφέ κουμπιού"</string>
   <string-array name="volume_button_setting_entries">
-    <item msgid="7972756698723318690">"Αφύπνιση"</item>
+    <item msgid="7972756698723318690">"Αναβολή"</item>
     <item msgid="3450979320164769576">"Παράβλεψη"</item>
     <item msgid="6302517608411378024">"Να μη γίνει καμία ενέργεια"</item>
   </string-array>
@@ -120,8 +120,7 @@
     <string name="loading_ringtone" msgid="6523322777415268044">"Φόρτωση ήχου κλήσης"</string>
     <string name="timer_ring_service_desc" msgid="2620214305660322415">"Η υπηρεσία αναπαραγωγής ήχου για ξυπνητήρια έχει ρυθμιστεί στο Ρολόι."</string>
     <string name="control_set_alarm" msgid="2194676418924016327">"Ορισμός ξυπνητηριού"</string>
-    <!-- no translation found for control_set_alarm_with_existing (3359285346655630660) -->
-    <skip />
+    <string name="control_set_alarm_with_existing"><xliff:g id="time">%s</xliff:g></string>
     <string name="menu_timer" msgid="6459070074762877114">"Χρονόμετρο"</string>
     <string name="menu_clock" msgid="5612760670606829805">"Ρολόι"</string>
     <string name="menu_stopwatch" msgid="3396117705293574701">"Χρονόμετρο"</string>
@@ -291,7 +290,7 @@
     <item msgid="5911600083231840181">"Τόνγκα"</item>
   </string-array>
     <string name="alarm_settings" msgid="6049627772103646753">"ΞΥΠΝΗΤΗΡΙΑ"</string>
-    <string name="see_all" msgid="775983396630163739">"Εμφάνιση όλων…"</string>
+    <string name="see_all" msgid="775983396630163739">"Εμφάνιση όλων\u2026"</string>
     <string name="stopwatch_service_desc" msgid="8416624630388063996">"Υπηρεσία χρονόμετρου για την εκτέλεση της ειδοποίησης."</string>
     <string name="swn_stopped" msgid="783124901663086172">"Διακόπηκε"</string>
     <string name="description_direction_right" msgid="1615911557926085934">"Ολίσθηση δεξιά για παράλειψη"</string>
@@ -324,10 +323,40 @@
     <string name="city_delete_confirmation" msgid="1783441538785676299">"Να διαγραφεί αυτή η πόλη;"</string>
     <string name="digital_gadget" msgid="2326954556720571358">"Ψηφιακό ρολόι"</string>
 
-    <!-- CYANOGENMOD EDITS START -->
+    <!-- CYANOGENMOD ADDITIONS START -->
 
     <string name="show_status_bar_icon_title">Εμφάνιση εικονιδίου</string>
     <string name="show_status_bar_icon_summary">Εμφάνιση εικονιδίου στη μπάρα κατάστασης όταν είναι ενεργό ένα ξυπνητήρι</string>
+
+    <!-- Setting title for the flip action setting. -->
+    <string name="flip_action_title">Ενέργεια αναποδογυρίσματος</string>
+
+    <!-- Dialog title of the flip action setting. -->
+    <string name="flip_action_dialog_title">Το αναποδογύρισμα τη συσκευής\u2026</string>
+
+    <!-- Setting summary for the flip action setting. -->
+    <string name="flip_action_summary">Το αναποδογύρισμα της συσκευής <xliff:g id="action">%s</xliff:g></string>
+
+    <!-- Setting title for the shake action setting. -->
+    <string name="shake_action_title">Ενέργεια κουνήματος</string>
+
+    <!-- Dialog title for the shake action setting. -->
+    <string name="shake_action_dialog_title">Το κούνημα της συσκευής\u2026</string>
+
+    <!-- Setting summary for the shake action setting. -->
+    <string name="shake_action_summary">Το κούνημα της συσκευής <xliff:g id="action">%s</xliff:g></string>
+
+    <!-- Summary texts for shake and flip actions. Must be ordered by numerical
+         value (do nothing = 0, snooze = 1, dismiss = 2) -->
+    <string-array name="action_summary_entries">
+      <item>δεν θα εκτελέι καμία ενέργεια</item>
+      <item>θα αναβάλλει το ξυπνητήρι</item>
+      <item>Θα παραβλέπει το ξυπνητήρι</item>
+    </string-array>
+
+    <string name="stopwatch_settings">ΧΡΟΝΟΜΕΤΡΟ</string>
+    <string name="keep_display_on_stopwatch">Διατήρηση ενεργής οθόνης</string>
+    <string name="keep_display_on_stopwatch_summary">Κρατήστε την οθόνη σε λειτουργία ενώ το χρονόμετρο τρέχει</string>
 
     <!-- CYANOGENMOD ADDITIONS END -->
 </resources>
