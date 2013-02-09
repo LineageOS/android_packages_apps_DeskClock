@@ -55,6 +55,24 @@
     },
     {
       "key": {
+        "uuid": "AAAAc3//7ZQ\u003d",
+        "filename": "res/values-iw/strings.xml",
+        "patchSetId": 1
+      },
+      "lineNbr": 352,
+      "author": {
+        "id": 5248
+      },
+      "writtenOn": "2013-02-09T06:59:40Z",
+      "side": 1,
+      "message": "Its a part of a sentence,\r\nPeulat nioor hamachshir lo taase kloom\r\nHafichat hamachshir kalpey mata lo taase kloom\r\netc.\r\nMaybe davar instead of kloom",
+      "parentUuid": "AAAAc3//7Zg\u003d",
+      "revId": "890fcc5385c970f4c2175477bd0e451e2ab896a4",
+      "serverId": "1ec6b3db-b2c1-4fa4-84a2-4c7efe89ba71",
+      "unresolved": false
+    },
+    {
+      "key": {
         "uuid": "AAAAc3//7iA\u003d",
         "filename": "res/values-iw/strings.xml",
         "patchSetId": 1
