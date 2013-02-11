@@ -78,7 +78,7 @@
                <Button
                     android:id="@+id/timer_cancel"
                     android:text="@string/timer_cancel"
-                    android:layout_width="wrap_content"
+                    android:layout_width="0dip"
                     style="@style/button"
                     android:layout_weight="1"
                     android:background="@drawable/item_background"
@@ -93,15 +93,11 @@
                <Button
                     android:id="@+id/timer_start"
                     android:text="@string/timer_start"
-                    android:layout_width="wrap_content"
+                    android:layout_width="0dip"
                     style="@style/button"
                     android:layout_weight="1"
                     android:background="@drawable/item_background"
                     android:layout_height="wrap_content" />
-               <Space
-                   android:layout_height="match_parent"
-                   android:layout_width="0dip"
-                   android:layout_weight="1"/>
                <ImageButton
                    android:id="@+id/menu_button"
                    android:contentDescription="@string/button_menu"
