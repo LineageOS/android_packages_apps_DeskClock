@@ -1,0 +1,21 @@
+{
+  "comments": [
+    {
+      "key": {
+        "uuid": "AAAAdH//96A\u003d",
+        "filename": "res/values-ru/strings.xml",
+        "patchSetId": 1
+      },
+      "lineNbr": 34,
+      "author": {
+        "id": 4832
+      },
+      "writtenOn": "2013-02-11T17:38:40Z",
+      "side": 1,
+      "message": "Wrong translate",
+      "revId": "648c921876782333a90b95372c9b22ba7e1dc714",
+      "serverId": "1ec6b3db-b2c1-4fa4-84a2-4c7efe89ba71",
+      "unresolved": false
+    }
+  ]
+}
