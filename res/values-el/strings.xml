@@ -97,7 +97,7 @@
     <string name="volume_button_setting_summary" msgid="4776447991226047070">"Ορίζει τι κάνουν τα κουμπιά όταν πατηθούν κατά τη διάρκεια μιας ειδοποίησης"</string>
   <string-array name="volume_button_setting_entries">
     <item msgid="4520420953175098625">"Καμία"</item>
-    <item msgid="7111908302622811168">"Αφύπνιση"</item>
+    <item msgid="7111908302622811168">"Αναβολή"</item>
     <item msgid="8573552194573068996">"Παράβλεψη"</item>
   </string-array>
     <string name="default_ringtone_setting_title" msgid="4549726190682964245">"Ορισμός προεπιλεγμένου ήχου κλήσης"</string>
