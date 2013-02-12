@@ -199,6 +199,14 @@
                 android:layout_width="wrap_content"
                 android:layout_gravity="center_vertical|right"
                 style="@style/body"/>
+        </LinearLayout>
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="64dp"
+            android:layout_marginLeft="10dp"
+            android:layout_marginRight="16dp"
+            android:gravity="center_vertical">
+
             <CheckBox
                 android:id="@+id/incvol_onoff"
                 android:text="@string/alarm_incvol"
