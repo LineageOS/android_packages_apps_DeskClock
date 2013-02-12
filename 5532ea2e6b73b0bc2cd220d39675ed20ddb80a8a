@@ -1,0 +1,21 @@
+{
+  "comments": [
+    {
+      "key": {
+        "uuid": "AAAAdX///2o\u003d",
+        "filename": "res/layout/alarm_time.xml",
+        "patchSetId": 1
+      },
+      "lineNbr": 205,
+      "author": {
+        "id": 2134
+      },
+      "writtenOn": "2013-02-12T22:31:33Z",
+      "side": 1,
+      "message": "android:layout_height\u003d\"48dp\" would be better.",
+      "revId": "5532ea2e6b73b0bc2cd220d39675ed20ddb80a8a",
+      "serverId": "1ec6b3db-b2c1-4fa4-84a2-4c7efe89ba71",
+      "unresolved": false
+    }
+  ]
+}
