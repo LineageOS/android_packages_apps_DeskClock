@@ -80,34 +80,4 @@
         android:layout_weight="2"
         android:layout_width="match_parent"
         android:layout_height="0dip" />
-
-    <FrameLayout
-        android:id="@+id/stopwatch_footer"
-        android:background="@drawable/footer_bg"
-        android:layout_width="match_parent"
-        android:layout_height="wrap_content">
-        <View
-            android:layout_width="match_parent"
-            android:layout_height="1dip"
-            android:background="#28ffffff" />
-        <LinearLayout
-            android:id="@+id/stopwatch_buttons"
-            android:gravity="bottom"
-            android:layout_width="match_parent"
-            android:layout_height="@dimen/button_footer_height" >
-            <Space
-                android:layout_height="match_parent"
-                android:layout_width="0dip"
-                android:layout_weight="1"/>
-            <ImageButton
-                android:id="@+id/menu_button"
-                android:contentDescription="@string/button_menu"
-                style="?android:attr/actionOverflowButtonStyle"
-                android:background="@drawable/item_background"
-                android:onClick="clockButtonsOnClick"
-                android:layout_gravity="right"
-                android:layout_width="64dip"
-                android:layout_height="match_parent" />
-         </LinearLayout>
-    </FrameLayout>
 </com.android.deskclock.CircleButtonsLinearLayout>
