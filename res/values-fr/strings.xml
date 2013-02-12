@@ -337,6 +337,9 @@
     <string name="shake_action_dialog_title">Secouer l\'appareil\u2026</string>
     <string name="shake_action_summary">Secouer l\'appareil <xliff:g id="action">%s</xliff:g></string>
 
+    <!-- Setting labels on Set alarm screen: Increasing volume on or off -->
+    <string name="alarm_incvol">Volume progressif</string>
+
     <!-- Summary texts for shake and flip actions. Must be ordered by numerical
          value (do nothing = 0, snooze = 1, dismiss = 2) -->
     <string-array name="action_summary_entries">
