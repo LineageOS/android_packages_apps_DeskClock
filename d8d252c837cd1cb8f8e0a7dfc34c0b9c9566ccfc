@@ -1,0 +1,38 @@
+{
+  "comments": [
+    {
+      "key": {
+        "uuid": "AAAAdX///ko\u003d",
+        "filename": "res/layout/alarm_time.xml",
+        "patchSetId": 3
+      },
+      "lineNbr": 172,
+      "author": {
+        "id": 1576
+      },
+      "writtenOn": "2013-02-13T20:36:41Z",
+      "side": 1,
+      "message": "This comment applies to all lines where we set top/bottom margins.\n\nIn this case 16dp is probably too much...  The Design Guidelines here ( http://developer.android.com/design/style/metrics-grids.html ) talks about the appropriate grids, IMHO bottom/top should be 4dp or at most 8dp.",
+      "revId": "d8d252c837cd1cb8f8e0a7dfc34c0b9c9566ccfc",
+      "serverId": "1ec6b3db-b2c1-4fa4-84a2-4c7efe89ba71",
+      "unresolved": false
+    },
+    {
+      "key": {
+        "uuid": "AAAAdX///kw\u003d",
+        "filename": "res/values/strings.xml",
+        "patchSetId": 3
+      },
+      "lineNbr": 68,
+      "author": {
+        "id": 1576
+      },
+      "writtenOn": "2013-02-13T20:36:41Z",
+      "side": 1,
+      "message": "Lower case v for volume, please.",
+      "revId": "d8d252c837cd1cb8f8e0a7dfc34c0b9c9566ccfc",
+      "serverId": "1ec6b3db-b2c1-4fa4-84a2-4c7efe89ba71",
+      "unresolved": false
+    }
+  ]
+}
