@@ -31,7 +31,7 @@
     <string name="default_label" msgid="5590025289805630372">"Будильник"</string>
     <string name="set_alarm" msgid="9148359866152726808">"Установить будильник"</string>
     <string name="alarm_vibrate" msgid="3476686921490362230">"Вибросигнал"</string>
-    <string name="alarm_repeat" msgid="7242985466344233206">"Дни недели"</string>
+    <string name="alarm_repeat" msgid="7242985466344233206">"Повторять"</string>
     <string name="alert" msgid="6506982899651975645">"Звонок будильника"</string>
     <string name="ringtone" msgid="9110746249688559579">"Рингтон"</string>
     <string name="time" msgid="8067216534232296518">"Время"</string>
@@ -41,10 +41,10 @@
     <string name="alarm_alert_snooze_set" msgid="656470966696912087">"Повтор сигнала через <xliff:g id="MINUTES">%d</xliff:g> мин."</string>
     <string name="alarm_alert_snooze_until" msgid="6958013659168344550">"Повтор в <xliff:g id="TIME">%s</xliff:g>"</string>
   <string-array name="timer_notifications">
-    <item msgid="7760558912503484257">"Осталось меньше минуты"</item>
-    <item msgid="83197792732433351">"Осталось <xliff:g id="HOURS">%1$s</xliff:g>"</item>
-    <item msgid="8919698220200894252">"Осталось <xliff:g id="MINUTES">%2$s</xliff:g>"</item>
-    <item msgid="8458069283817013813">"Осталось <xliff:g id="HOURS">%1$s</xliff:g> <xliff:g id="MINUTES">%2$s</xliff:g>"</item>
+    <item msgid="7760558912503484257">"Осталось: меньше минуты"</item>
+    <item msgid="83197792732433351">"Осталось: <xliff:g id="HOURS">%1$s</xliff:g>"</item>
+    <item msgid="8919698220200894252">"Осталось: <xliff:g id="MINUTES">%2$s</xliff:g>"</item>
+    <item msgid="8458069283817013813">"Осталось: <xliff:g id="HOURS">%1$s</xliff:g> <xliff:g id="MINUTES">%2$s</xliff:g>"</item>
   </string-array>
   <string-array name="alarm_set">
     <item msgid="6450913786084215050">"Будильник зазвонит менее чем через минуту."</item>
@@ -58,9 +58,9 @@
   </string-array>
     <string name="day" msgid="7984755014526510295">"1 день"</string>
     <string name="days" msgid="2070509222727852210">"<xliff:g id="DAYS">%s</xliff:g> дн."</string>
-    <string name="hour" msgid="2546819039651509323">"1 час"</string>
+    <string name="hour" msgid="2546819039651509323">"1 ч."</string>
     <string name="hours" msgid="2071487018566991613">"<xliff:g id="HOURS">%s</xliff:g> ч."</string>
-    <string name="minute" msgid="2486157997434653710">"1 минуту"</string>
+    <string name="minute" msgid="2486157997434653710">"1 мин."</string>
     <string name="minutes" msgid="6115838729146292526">"<xliff:g id="MINUTES">%s</xliff:g> мин."</string>
     <string name="every_day" msgid="4100909974923444602">"Каждый день"</string>
     <string name="never" msgid="54104287800571769">"Не выбрано"</string>
@@ -147,6 +147,13 @@
     <string name="sw_share_main" msgid="7703563468204234405">"Мое время: <xliff:g id="TIME">%s</xliff:g>"</string>
     <string name="sw_share_laps" msgid="614390674795945007">"Время круга"</string>
     <string name="sw_notification_lap_number" msgid="3535420316052647126">"Круг <xliff:g id="NUMBER">%d</xliff:g>"</string>
+  <string-array name="stopwatch_format_set">
+    <item msgid="7855304148648938406">"<xliff:g id="M">%2$d</xliff:g>м <xliff:g id="S">%3$02d</xliff:g>с.<xliff:g id="D">%4$02d</xliff:g>"</item>
+    <item msgid="3964356050933061913">"<xliff:g id="M">%2$02d</xliff:g>м <xliff:g id="S">%3$02d</xliff:g>с.<xliff:g id="D">%4$02d</xliff:g>"</item>
+    <item msgid="4906928997138522728">"<xliff:g id="H">%1$d</xliff:g>ч <xliff:g id="M">%2$02d</xliff:g>м <xliff:g id="S">%3$02d</xliff:g>с.<xliff:g id="D">%4$02d</xliff:g>"</item>
+    <item msgid="1167529664702951052">"<xliff:g id="H">%1$02d</xliff:g>ч <xliff:g id="M">%2$02d</xliff:g>м <xliff:g id="S">%3$02d</xliff:g>с.<xliff:g id="D">%4$02d</xliff:g>"</item>
+    <item msgid="4383974684898411623">"<xliff:g id="H">%1$03d</xliff:g>ч <xliff:g id="M">%2$02d</xliff:g>м <xliff:g id="S">%3$02d</xliff:g>с.<xliff:g id="D">%4$02d</xliff:g>"</item>
+  </string-array>
   <plurals name="Nhours_description">
     <item quantity="one" msgid="371227238759147245">"1 ч."</item>
     <item quantity="other" msgid="7018184076091344797">"<xliff:g id="NUMBER">%d</xliff:g> ч."</item>

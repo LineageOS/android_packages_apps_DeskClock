@@ -27,7 +27,7 @@
     <dimen name="time_margin_right">8dip</dimen>
     <dimen name="time_margin_left">8dip</dimen>
     <dimen name="time_margin_bottom">14dip</dimen>
-    <dimen name="time_margin_top">16dip</dimen>
+    <dimen name="time_margin_top">32dip</dimen>
     <dimen name="ampm_margin_top">28dip</dimen>
     <dimen name="font_margin_adjust">8dip</dimen>
     <dimen name="next_alarm_margin_top">-5dip</dimen>
@@ -38,8 +38,11 @@
     <!-- Size of margin for circles. -->
     <dimen name="circle_margin_top">16dp</dimen>
     <dimen name="circle_margin">48dp</dimen>
-    <dimen name="laps_margin">36dp</dimen>
     <dimen name="analog_clock_margin">48dp</dimen>
+    <dimen name="timer_circle_margin">48dp</dimen>
+
+    <dimen name="world_clock_margin">48dp</dimen>
+    <dimen name="sw_right_margin">48dp</dimen>
 
     <!-- Empty space at the edges of the +1 and reset button icons. Based off of 56dip width.-->
     <dimen name="plusone_reset_button_padding">23dip</dimen>
@@ -52,5 +55,7 @@
 
     <dimen name="glowpadview_margin_right">-64dip</dimen>
 
-    <dimen name="def_digital_widget_height">200dip</dimen>
+    <dimen name="min_digital_widget_resize_width">370dip</dimen>
+    <dimen name="min_digital_widget_height">200dip</dimen>
+    <dimen name="digital_widget_list_min_height">200dip</dimen>
 </resources>

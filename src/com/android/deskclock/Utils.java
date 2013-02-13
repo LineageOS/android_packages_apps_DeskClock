@@ -20,11 +20,14 @@ import android.animation.Animator;
 import android.animation.AnimatorSet;
 import android.animation.ObjectAnimator;
 import android.animation.TimeInterpolator;
+import android.app.AlarmManager;
+import android.app.PendingIntent;
 import android.content.Context;
 import android.content.Intent;
 import android.content.SharedPreferences;
 import android.content.pm.PackageInfo;
 import android.content.pm.PackageManager.NameNotFoundException;
+import android.content.res.Resources;
 import android.graphics.Color;
 import android.graphics.Paint;
 import android.graphics.PorterDuff;
@@ -44,8 +47,12 @@ import android.widget.TextView;
 
 import com.android.deskclock.stopwatch.Stopwatches;
 import com.android.deskclock.timer.Timers;
+import com.android.deskclock.worldclock.CityObj;
 
+import java.text.Collator;
+import java.util.Arrays;
 import java.util.Calendar;
+import java.util.Comparator;
 import java.util.Locale;
 
 
@@ -308,7 +315,7 @@ public class Utils {
     }
 
     /** Setup to find out when the quarter-hour changes (e.g. Kathmandu is GMT+5:45) **/
-    public static long getAlarmOnQuarterHour() {
+    private static long getAlarmOnQuarterHour() {
         Calendar nextQuarter = Calendar.getInstance();
         //  Set 1 second to ensure quarter-hour threshold passed.
         nextQuarter.set(Calendar.SECOND, 1);
@@ -320,6 +327,33 @@ public class Utils {
             Log.wtf("quarterly alarm calculation error");
         }
         return alarmOnQuarterHour;
+    }
+
+    /** Setup alarm refresh when the quarter-hour changes **/
+    public static PendingIntent startAlarmOnQuarterHour(Context context) {
+        if (context != null) {
+            PendingIntent quarterlyIntent = PendingIntent.getBroadcast(
+                    context, 0, new Intent(Utils.ACTION_ON_QUARTER_HOUR), 0);
+            ((AlarmManager) context.getSystemService(Context.ALARM_SERVICE)).setRepeating(
+                    AlarmManager.RTC, getAlarmOnQuarterHour(),
+                    AlarmManager.INTERVAL_FIFTEEN_MINUTES, quarterlyIntent);
+            return quarterlyIntent;
+        } else {
+            return null;
+        }
+    }
+
+    public static void cancelAlarmOnQuarterHour(Context context, PendingIntent quarterlyIntent) {
+        if (quarterlyIntent != null && context != null) {
+            ((AlarmManager) context.getSystemService(Context.ALARM_SERVICE)).cancel(
+                    quarterlyIntent);
+        }
+    }
+
+    public static PendingIntent refreshAlarmOnQuarterHour(
+            Context context, PendingIntent quarterlyIntent) {
+        cancelAlarmOnQuarterHour(context, quarterlyIntent);
+        return startAlarmOnQuarterHour(context);
     }
 
     /**
@@ -390,4 +424,34 @@ public class Utils {
         }
     }
 
+    public static CityObj[] loadCitiesDataBase(Context c) {
+        final Collator collator = Collator.getInstance();
+        Resources r = c.getResources();
+        // Read strings array of name,timezone, id
+        // make sure the list are the same length
+        String[] cities = r.getStringArray(R.array.cities_names);
+        String[] timezones = r.getStringArray(R.array.cities_tz);
+        String[] ids = r.getStringArray(R.array.cities_id);
+        if (cities.length != timezones.length || ids.length != cities.length) {
+            Log.wtf("City lists sizes are not the same, cannot use the data");
+            return null;
+        }
+        CityObj[] tempList = new CityObj[cities.length];
+        for (int i = 0; i < cities.length; i++) {
+            tempList[i] = new CityObj(cities[i], timezones[i], ids[i]);
+        }
+        // Sort alphabetically
+        Arrays.sort(tempList, new Comparator<CityObj> () {
+            @Override
+            public int compare(CityObj c1, CityObj c2) {
+                Comparator<CityObj> mCollator;
+                return collator.compare(c1.mCityName, c2.mCityName);
+            }
+        });
+        return tempList;
+    }
+
+    public static String getCityName(CityObj city, CityObj dbCity) {
+        return (city.mCityId == null || dbCity == null) ? city.mCityName : dbCity.mCityName;
+    }
 }

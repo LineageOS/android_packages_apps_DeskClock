@@ -96,7 +96,7 @@
             android:key="keep_display_on_stopwatch"
             android:title="@string/keep_display_on_stopwatch"
             android:summary="@string/keep_display_on_stopwatch_summary"
-            android:defaultValue="true" />
+            android:defaultValue="0" />
     </PreferenceCategory>
 
 </PreferenceScreen>

@@ -17,6 +17,7 @@
 package com.android.deskclock;
 
 import android.app.ActionBar;
+import android.content.Intent;
 import android.content.res.Resources;
 import android.media.AudioManager;
 import android.os.Bundle;
@@ -30,6 +31,11 @@ import android.text.format.DateUtils;
 import android.view.Menu;
 import android.view.MenuItem;
 
+import com.android.deskclock.worldclock.Cities;
+
+import java.util.ArrayList;
+import java.util.Collections;
+import java.util.List;
 import java.util.TimeZone;
 
 /**
@@ -66,10 +72,11 @@ public class SettingsActivity extends PreferenceActivity
     static final String KEY_VOLUME_BUTTONS =
             "volume_button_setting";
 
+    public static final String DEFAULT_VOLUME_BEHAVIOR = "0";
+
     private static CharSequence[][] mTimezones;
     private long mTime;
 
-    private static final boolean SHOW_DAYLIGHT_SAVINGS_INDICATOR = false;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -164,10 +171,12 @@ public class SettingsActivity extends PreferenceActivity
             final ListPreference listPref = (ListPreference) pref;
             final int idx = listPref.findIndexOfValue((String) newValue);
             listPref.setSummary(listPref.getEntries()[idx]);
+            notifyHomeTimeZoneChanged();
         } else if (KEY_AUTO_HOME_CLOCK.equals(pref.getKey())) {
             boolean state =((CheckBoxPreference) pref).isChecked();
             Preference homeTimeZone = findPreference(KEY_HOME_TZ);
             homeTimeZone.setEnabled(!state);
+            notifyHomeTimeZoneChanged();
         } else if (KEY_VOLUME_BUTTONS.equals(pref.getKey())) {
             final ListPreference listPref = (ListPreference) pref;
             final int idx = listPref.findIndexOfValue((String) newValue);
@@ -203,6 +212,12 @@ public class SettingsActivity extends PreferenceActivity
         listPref.setSummary(getString(summaryResId,
             getResources().getStringArray(R.array.action_summary_entries)[i]));
     }
+
+    private void notifyHomeTimeZoneChanged() {
+        Intent i = new Intent(Cities.WORLDCLOCK_UPDATE_INTENT);
+        sendBroadcast(i);
+    }
+
 
     private void refresh() {
         ListPreference listPref = (ListPreference) findPreference(KEY_AUTO_SILENCE);
@@ -240,6 +255,52 @@ public class SettingsActivity extends PreferenceActivity
         SnoozeLengthDialog snoozePref = (SnoozeLengthDialog) findPreference(KEY_ALARM_SNOOZE);
         snoozePref.setSummary();
     }
+
+    private class TimeZoneRow implements Comparable<TimeZoneRow> {
+        private static final boolean SHOW_DAYLIGHT_SAVINGS_INDICATOR = false;
+
+        public final String mId;
+        public final String mDisplayName;
+        public final int mOffset;
+
+        public TimeZoneRow(String id, String name) {
+            mId = id;
+            TimeZone tz = TimeZone.getTimeZone(id);
+            boolean useDaylightTime = tz.useDaylightTime();
+            mOffset = tz.getOffset(mTime);
+            mDisplayName = buildGmtDisplayName(id, name, useDaylightTime);
+        }
+
+        @Override
+        public int compareTo(TimeZoneRow another) {
+            return mOffset - another.mOffset;
+        }
+
+        public String buildGmtDisplayName(String id, String displayName, boolean useDaylightTime) {
+            int p = Math.abs(mOffset);
+            StringBuilder name = new StringBuilder("(GMT");
+            name.append(mOffset < 0 ? '-' : '+');
+
+            name.append(p / DateUtils.HOUR_IN_MILLIS);
+            name.append(':');
+
+            int min = p / 60000;
+            min %= 60;
+
+            if (min < 10) {
+                name.append('0');
+            }
+            name.append(min);
+            name.append(") ");
+            name.append(displayName);
+            if (useDaylightTime && SHOW_DAYLIGHT_SAVINGS_INDICATOR) {
+                name.append(" \u2600"); // Sun symbol
+            }
+            return name.toString();
+        }
+    }
+
+
     /**
      * Returns an array of ids/time zones. This returns a double indexed array
      * of ids and time zones for Calendar. It is an inefficient method and
@@ -255,44 +316,19 @@ public class SettingsActivity extends PreferenceActivity
         if (ids.length != labels.length) {
             Log.wtf("Timezone ids and labels have different length!");
         }
-        CharSequence[][] timeZones = new CharSequence[2][ids.length];
+        List<TimeZoneRow> timezones = new ArrayList<TimeZoneRow>();
         for (int i = 0; i < ids.length; i++) {
-            timeZones[0][i] = ids[i];
-            timeZones[1][i] = buildGmtDisplayName(ids[i], labels[i]);
+            timezones.add(new TimeZoneRow(ids[i], labels[i]));
+        }
+        Collections.sort(timezones);
+
+        CharSequence[][] timeZones = new CharSequence[2][timezones.size()];
+        int i = 0;
+        for (TimeZoneRow row : timezones) {
+            timeZones[0][i] = row.mId;
+            timeZones[1][i++] = row.mDisplayName;
         }
         return timeZones;
     }
 
-    public String buildGmtDisplayName(String id, String displayName) {
-        TimeZone tz = TimeZone.getTimeZone(id);
-        boolean mUseDaylightTime = tz.useDaylightTime();
-        int mOffset = tz.getOffset(mTime);
-        int p = Math.abs(mOffset);
-        StringBuilder name = new StringBuilder();
-        name.append("GMT");
-
-        if (mOffset < 0) {
-            name.append('-');
-        } else {
-            name.append('+');
-        }
-
-        name.append(p / (DateUtils.HOUR_IN_MILLIS));
-        name.append(':');
-
-        int min = p / 60000;
-        min %= 60;
-
-        if (min < 10) {
-            name.append('0');
-        }
-        name.append(min);
-        name.insert(0, "(");
-        name.append(") ");
-        name.append(displayName);
-        if (mUseDaylightTime && SHOW_DAYLIGHT_SAVINGS_INDICATOR) {
-            name.append(" \u2600"); // Sun symbol
-        }
-        return name.toString();
-    }
 }
