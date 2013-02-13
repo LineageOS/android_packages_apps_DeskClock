@@ -366,7 +366,7 @@
     <string name="keep_display_on_stopwatch_summary">Κρατήστε την οθόνη σε λειτουργία ενώ το χρονόμετρο τρέχει</string>
 
     <!-- Setting labels on Set alarm screen: Increasing volume on or off -->
-    <string name="alarm_incvol">Αυξανόμενη ένταση</string>
+    <string name="alarm_increasing_volume">Αυξανόμενη ένταση</string>
 
     <!-- CYANOGENMOD ADDITIONS END -->
 </resources>

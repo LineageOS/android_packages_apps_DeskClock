@@ -65,7 +65,7 @@
     <string name="alarm_vibrate">Vibrate</string>
 
     <!-- Setting labels on Set alarm screen: Increasing volume on or off -->
-    <string name="alarm_incvol">Increasing Volume</string>
+    <string name="alarm_increasing_volume">Increasing volume</string>
 
     <!-- Setting labels on Set alarm screen: Repeat -->
     <string name="alarm_repeat">Repeat</string>

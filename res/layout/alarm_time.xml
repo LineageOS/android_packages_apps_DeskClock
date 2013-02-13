@@ -165,9 +165,11 @@
             android:visibility="gone">
             <!-- Day buttons are put here programatically -->
         </LinearLayout>
-        <LinearLayout
+        <RelativeLayout
             android:layout_width="match_parent"
-            android:layout_height="64dp"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="16dp"
+            android:layout_marginBottom="16dp"
             android:layout_marginLeft="10dp"
             android:layout_marginRight="16dp"
             android:gravity="center_vertical">
@@ -175,10 +177,9 @@
             <TextView
                 android:id="@+id/choose_ringtone"
                 android:layout_height="match_parent"
-                android:layout_width="0dp"
-                android:layout_weight="1"
-                android:layout_marginRight="16dp"
-                android:gravity="center_vertical"
+                android:layout_width="match_parent"
+                android:layout_marginRight="10dp"
+                android:layout_marginBottom="10dp"
                 style="@style/body"
                 android:background="@drawable/item_background"
                 android:clickable="true"
@@ -197,18 +198,22 @@
                 android:textColor="@color/clock_gray"
                 android:layout_height="wrap_content"
                 android:layout_width="wrap_content"
-                android:layout_gravity="center_vertical|right"
+                android:layout_below="@id/choose_ringtone"
+                android:layout_alignParentLeft="true"
+                android:layout_marginRight="10dp"
                 style="@style/body"/>
             <CheckBox
-                android:id="@+id/incvol_onoff"
-                android:text="@string/alarm_incvol"
+                android:id="@+id/increasing_volume_onoff"
+                android:text="@string/alarm_increasing_volume"
                 android:includeFontPadding="false"
                 android:textColor="@color/clock_gray"
                 android:layout_height="wrap_content"
                 android:layout_width="wrap_content"
-                android:layout_gravity="center_vertical|right"
+                android:layout_below="@id/choose_ringtone"
+                android:layout_toRightOf="@id/vibrate_onoff"
+                android:layout_marginRight="10dp"
                 style="@style/body"/>
-        </LinearLayout>
+        </RelativeLayout>
         <View
             android:id="@+id/hairline"
             android:layout_height="1dp"

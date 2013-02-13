@@ -468,7 +468,7 @@ public class AlarmClock extends Activity implements LoaderManager.LoaderCallback
             ViewGroup[] dayButtonParents = new ViewGroup[7];
             ToggleButton[] dayButtons = new ToggleButton[7];
             CheckBox vibrate;
-            CheckBox incvol;
+            CheckBox increasingVolume;
             ViewGroup collapse;
             TextView ringtone;
             View hairLine;
@@ -609,7 +609,7 @@ public class AlarmClock extends Activity implements LoaderManager.LoaderCallback
                 holder.dayButtonParents[i] = viewgroup;
             }
             holder.vibrate = (CheckBox) view.findViewById(R.id.vibrate_onoff);
-            holder.incvol = (CheckBox) view.findViewById(R.id.incvol_onoff);
+            holder.increasingVolume = (CheckBox) view.findViewById(R.id.increasing_volume_onoff);
             holder.collapse = (ViewGroup) view.findViewById(R.id.collapse);
             holder.ringtone = (TextView) view.findViewById(R.id.choose_ringtone);
 
@@ -888,17 +888,13 @@ public class AlarmClock extends Activity implements LoaderManager.LoaderCallback
                 }
             });
 
-            itemHolder.incvol.setVisibility(View.VISIBLE);
-            if (!alarm.incvol) {
-                itemHolder.incvol.setChecked(false);
-                itemHolder.incvol.setTextColor(mColorDim);
-            } else {
-                itemHolder.incvol.setChecked(true);
-                itemHolder.incvol.setTextColor(mColorLit);
-            }
-            itemHolder.incvol.setOnLongClickListener(mLongClickListener);
+            itemHolder.increasingVolume.setVisibility(View.VISIBLE);
+            itemHolder.increasingVolume.setChecked(alarm.increasingVolume);
+            itemHolder.increasingVolume.setTextColor(
+                    alarm.increasingVolume ? mColorLit : mColorDim);
+            itemHolder.increasingVolume.setOnLongClickListener(mLongClickListener);
 
-            itemHolder.incvol.setOnClickListener(new View.OnClickListener() {
+            itemHolder.increasingVolume.setOnClickListener(new View.OnClickListener() {
                 @Override
                 public void onClick(View v) {
                     final boolean checked = ((CheckBox) v).isChecked();
@@ -907,11 +903,11 @@ public class AlarmClock extends Activity implements LoaderManager.LoaderCallback
                         return;
                     }
                     if (checked) {
-                        itemHolder.incvol.setTextColor(mColorLit);
+                        itemHolder.increasingVolume.setTextColor(mColorLit);
                     } else {
-                        itemHolder.incvol.setTextColor(mColorDim);
+                        itemHolder.increasingVolume.setTextColor(mColorDim);
                     }
-                    alarm.incvol = checked;
+                    alarm.increasingVolume = checked;
                     asyncUpdateAlarm(alarm, false);
                 }
             });

@@ -36,7 +36,7 @@
     <CheckBoxPreference android:key="vibrate"
         android:persistent="false"
         android:title="@string/alarm_vibrate"/>
-    <CheckBoxPreference android:key="incvol"
+    <CheckBoxPreference android:key="increasingVolume"
         android:persistent="false"
-        android:title="@string/alarm_incvol" />
+        android:title="@string/alarm_increasing_volume" />
 </PreferenceScreen>
