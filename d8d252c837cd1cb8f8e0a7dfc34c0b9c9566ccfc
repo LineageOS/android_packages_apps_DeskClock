@@ -19,6 +19,24 @@
     },
     {
       "key": {
+        "uuid": "AAAAdX///kc\u003d",
+        "filename": "res/layout/alarm_time.xml",
+        "patchSetId": 3
+      },
+      "lineNbr": 172,
+      "author": {
+        "id": 1063
+      },
+      "writtenOn": "2013-02-13T20:44:53Z",
+      "side": 1,
+      "message": "I think the best way would be measuring the margins resulting from the hardcoded height + center_vertical gravity which was in place previously. I\u0027m pretty sure they won\u0027t be far away from the 16dp, at least everything looks somewhat evenly spaced now.\n\nCan you check the old spacing?",
+      "parentUuid": "AAAAdX///ko\u003d",
+      "revId": "d8d252c837cd1cb8f8e0a7dfc34c0b9c9566ccfc",
+      "serverId": "1ec6b3db-b2c1-4fa4-84a2-4c7efe89ba71",
+      "unresolved": false
+    },
+    {
+      "key": {
         "uuid": "AAAAdX///kw\u003d",
         "filename": "res/values/strings.xml",
         "patchSetId": 3
@@ -30,6 +48,24 @@
       "writtenOn": "2013-02-13T20:36:41Z",
       "side": 1,
       "message": "Lower case v for volume, please.",
+      "revId": "d8d252c837cd1cb8f8e0a7dfc34c0b9c9566ccfc",
+      "serverId": "1ec6b3db-b2c1-4fa4-84a2-4c7efe89ba71",
+      "unresolved": false
+    },
+    {
+      "key": {
+        "uuid": "AAAAdX///kg\u003d",
+        "filename": "res/values/strings.xml",
+        "patchSetId": 3
+      },
+      "lineNbr": 68,
+      "author": {
+        "id": 1063
+      },
+      "writtenOn": "2013-02-13T20:44:53Z",
+      "side": 1,
+      "message": "Indeed, will update this in the next PS.",
+      "parentUuid": "AAAAdX///kw\u003d",
       "revId": "d8d252c837cd1cb8f8e0a7dfc34c0b9c9566ccfc",
       "serverId": "1ec6b3db-b2c1-4fa4-84a2-4c7efe89ba71",
       "unresolved": false
