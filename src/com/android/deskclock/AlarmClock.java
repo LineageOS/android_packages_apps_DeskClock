@@ -18,10 +18,12 @@ package com.android.deskclock;
 
 import android.app.ActionBar;
 import android.app.Activity;
+import android.app.AlertDialog;
 import android.app.Fragment;
 import android.app.FragmentTransaction;
 import android.app.LoaderManager;
 import android.content.Context;
+import android.content.DialogInterface;
 import android.content.Intent;
 import android.content.Loader;
 import android.content.res.Resources;
@@ -65,7 +67,7 @@ import java.util.HashSet;
 public class AlarmClock extends Activity implements LoaderManager.LoaderCallbacks<Cursor>,
         AlarmTimePickerDialogFragment.AlarmTimePickerDialogHandler,
         LabelDialogFragment.AlarmLabelDialogHandler,
-        OnLongClickListener, Callback {
+        OnLongClickListener, Callback, DialogInterface.OnClickListener {
 
     private static final String KEY_EXPANDED_IDS = "expandedIds";
     private static final String KEY_REPEAT_CHECKED_IDS = "repeatCheckedIds";
@@ -75,6 +77,7 @@ public class AlarmClock extends Activity implements LoaderManager.LoaderCallback
     private static final String KEY_UNDO_SHOWING = "undoShowing";
     private static final String KEY_PREVIOUS_DAY_MAP = "previousDayMap";
     private static final String KEY_SELECTED_ALARM = "selectedAlarm";
+    private static final String KEY_DELETE_CONFIRMATION = "deleteConfirmation";
 
     private static final int REQUEST_CODE_RINGTONE = 1;
 
@@ -86,6 +89,7 @@ public class AlarmClock extends Activity implements LoaderManager.LoaderCallback
 
     private Alarm mSelectedAlarm;
     private int mScrollToAlarmId = -1;
+    private boolean mInDeleteConfirmation = false;
 
     // This flag relies on the activity having a "standard" launchMode and a new instance of this
     // activity being created when launched.
@@ -118,6 +122,7 @@ public class AlarmClock extends Activity implements LoaderManager.LoaderCallback
             selectedAlarms = savedState.getIntArray(KEY_SELECTED_ALARMS);
             previousDayMap = savedState.getBundle(KEY_PREVIOUS_DAY_MAP);
             mSelectedAlarm = savedState.getParcelable(KEY_SELECTED_ALARM);
+            mInDeleteConfirmation = savedState.getBoolean(KEY_DELETE_CONFIRMATION, false);
         }
 
         mAlarmsList = (SwipeableListView) findViewById(R.id.alarms_list);
@@ -174,6 +179,13 @@ public class AlarmClock extends Activity implements LoaderManager.LoaderCallback
 
     }
 
+    @Override
+    public void onResume() {
+        super.onResume();
+        if (mInDeleteConfirmation) {
+            showConfirmationDialog();
+        }
+    }
     private void hideUndoBar(boolean animate, MotionEvent event) {
         if (mUndoBar != null) {
             if (event != null && mUndoBar.isEventInToastBar(event)) {
@@ -197,6 +209,7 @@ public class AlarmClock extends Activity implements LoaderManager.LoaderCallback
         outState.putBoolean(KEY_UNDO_SHOWING, mUndoShowing);
         outState.putBundle(KEY_PREVIOUS_DAY_MAP, mAdapter.getPreviousDaysOfWeekMap());
         outState.putParcelable(KEY_SELECTED_ALARM, mSelectedAlarm);
+        outState.putBoolean(KEY_DELETE_CONFIRMATION, mInDeleteConfirmation);
     }
 
     private void updateLayout() {
@@ -458,6 +471,7 @@ public class AlarmClock extends Activity implements LoaderManager.LoaderCallback
             CheckBox incvol;
             ViewGroup collapse;
             TextView ringtone;
+            View hairLine;
 
             // Other states
             Alarm alarm;
@@ -577,6 +591,7 @@ public class AlarmClock extends Activity implements LoaderManager.LoaderCallback
             holder.infoArea = view.findViewById(R.id.info_area);
             holder.repeat = (CheckBox) view.findViewById(R.id.repeat_onoff);
             holder.clickableLabel = (TextView) view.findViewById(R.id.edit_label);
+            holder.hairLine = view.findViewById(R.id.hairline);
             holder.repeatDays = (LinearLayout) view.findViewById(R.id.repeat_days);
 
             // Build button for each day.
@@ -614,14 +629,12 @@ public class AlarmClock extends Activity implements LoaderManager.LoaderCallback
             itemHolder.onoff.setChecked(alarm.enabled);
             if (mSelectedAlarms.contains(itemHolder.alarm.id)) {
                 itemHolder.alarmItem.setBackgroundColor(mBackgroundColorSelected);
-                itemHolder.alarmItem.setAlpha(1f);
+                setItemAlpha(itemHolder, true);
+                itemHolder.onoff.setEnabled(false);
             } else {
+                itemHolder.onoff.setEnabled(true);
                 itemHolder.alarmItem.setBackgroundColor(mBackgroundColor);
-                if (itemHolder.onoff.isChecked()) {
-                    itemHolder.alarmItem.setAlpha(1f);
-                } else {
-                    itemHolder.alarmItem.setAlpha(0.5f);
-                }
+                setItemAlpha(itemHolder, itemHolder.onoff.isChecked());
             }
             final CompoundButton.OnCheckedChangeListener onOffListener =
                     new CompoundButton.OnCheckedChangeListener() {
@@ -633,11 +646,7 @@ public class AlarmClock extends Activity implements LoaderManager.LoaderCallback
                                 return;
                             }
                             if (checked != alarm.enabled) {
-                                if (checked) {
-                                    itemHolder.alarmItem.setAlpha(1f);
-                                } else {
-                                    itemHolder.alarmItem.setAlpha(0.5f);
-                                }
+                                setItemAlpha(itemHolder, checked);
                                 alarm.enabled = checked;
                                 asyncUpdateAlarm(alarm, alarm.enabled);
                             }
@@ -944,6 +953,16 @@ public class AlarmClock extends Activity implements LoaderManager.LoaderCallback
             itemHolder.ringtone.setOnLongClickListener(mLongClickListener);
         }
 
+        // Sets the alpha of the item except the on/off switch. This gives a visual effect
+        // for enabled/disabled alarm while leaving the on/off switch more visible
+        private void setItemAlpha(ItemHolder holder, boolean enabled) {
+            float alpha = enabled ? 1f : 0.5f;
+            holder.clock.setAlpha(alpha);
+            holder.infoArea.setAlpha(alpha);
+            holder.expandArea.setAlpha(alpha);
+            holder.hairLine.setAlpha(alpha);
+        }
+
         private void updateDaysOfWeekButtons(ItemHolder holder, Alarm.DaysOfWeek daysOfWeek) {
             HashSet<Integer> setDays = daysOfWeek.getSetDays();
             for (int i = 0; i < 7; i++) {
@@ -1246,10 +1265,7 @@ public class AlarmClock extends Activity implements LoaderManager.LoaderCallback
         switch (item.getItemId()) {
             // Delete selected items and close CAB.
             case R.id.menu_item_delete_alarm:
-                if (mAdapter != null) {
-                    mAdapter.deleteSelectedAlarms();
-                    mode.finish();
-                }
+                showConfirmationDialog();
                 break;
             default:
                 break;
@@ -1274,6 +1290,32 @@ public class AlarmClock extends Activity implements LoaderManager.LoaderCallback
     @Override
     public boolean onPrepareActionMode(ActionMode arg0, Menu arg1) {
         return false;
+    }
+
+    /***
+     * Handle the delete alarms confirmation dialog
+     */
+
+    private void showConfirmationDialog() {
+        AlertDialog.Builder b = new AlertDialog.Builder(this);
+        Resources res = getResources();
+        String msg = String.format(res.getQuantityText(R.plurals.alarm_delete_confirmation,
+                mAdapter.getSelectedItemsNum()).toString());
+        b.setCancelable(true).setMessage(msg)
+                .setNegativeButton(res.getString(android.R.string.cancel), this)
+                .setPositiveButton(res.getString(android.R.string.ok), this).show();
+        mInDeleteConfirmation = true;
+    }
+    @Override
+    public void onClick(DialogInterface dialog, int which) {
+        if (which == -1) {
+            if (mAdapter != null) {
+                mAdapter.deleteSelectedAlarms();
+                mActionMode.finish();
+            }
+        }
+        dialog.dismiss();
+        mInDeleteConfirmation = false;
     }
 
 }
