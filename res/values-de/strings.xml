@@ -133,12 +133,12 @@
     <string name="menu_item_night_mode" msgid="3486930302245398975">"Nachtmodus"</string>
     <string name="sw_resume_button" msgid="2569360966002022248">"Fortsetzen"</string>
     <string name="sw_start_button" msgid="8373422516681242270">"Starten"</string>
-    <string name="sw_stop_button" msgid="8322958613123274451">"Stoppen"</string>
+    <string name="sw_stop_button" msgid="8322958613123274451">"Anhalten"</string>
     <string name="sw_lap_button" msgid="6992264696039004233">"Runde"</string>
     <string name="sw_reset_button" msgid="6616804728322906117">"Reset"</string>
     <string name="sw_share_button" msgid="4478648110382859382">"Teilen"</string>
     <string name="hours_label" msgid="3393478155635368097">"h"</string>
-    <string name="minutes_label" msgid="3568098128251438588">"min"</string>
+    <string name="minutes_label" msgid="3568098128251438588">"Min"</string>
     <string name="seconds_label" msgid="124655952824003246">"s"</string>
     <string name="hours_label_description" msgid="8652842524970971830">"Stunden"</string>
     <string name="minutes_label_description" msgid="965686733490357796">"Minuten"</string>
@@ -147,6 +147,13 @@
     <string name="sw_share_main" msgid="7703563468204234405">"Meine Zeit: <xliff:g id="TIME">%s</xliff:g>"</string>
     <string name="sw_share_laps" msgid="614390674795945007">"Rundenzeiten:"</string>
     <string name="sw_notification_lap_number" msgid="3535420316052647126">"<xliff:g id="NUMBER">%d</xliff:g>. Runde"</string>
+  <string-array name="stopwatch_format_set">
+    <item msgid="7855304148648938406">"<xliff:g id="M">%2$d</xliff:g>m <xliff:g id="S">%3$02d</xliff:g>s <xliff:g id="D">%4$02d</xliff:g>"</item>
+    <item msgid="3964356050933061913">"<xliff:g id="M">%2$02d</xliff:g>m <xliff:g id="S">%3$02d</xliff:g>s <xliff:g id="D">%4$02d</xliff:g>"</item>
+    <item msgid="4906928997138522728">"<xliff:g id="H">%1$d</xliff:g>h <xliff:g id="M">%2$02d</xliff:g>m <xliff:g id="S">%3$02d</xliff:g>s <xliff:g id="D">%4$02d</xliff:g>"</item>
+    <item msgid="1167529664702951052">"<xliff:g id="H">%1$02d</xliff:g>h <xliff:g id="M">%2$02d</xliff:g>m <xliff:g id="S">%3$02d</xliff:g>s <xliff:g id="D">%4$02d</xliff:g>"</item>
+    <item msgid="4383974684898411623">"<xliff:g id="H">%1$03d</xliff:g>h <xliff:g id="M">%2$02d</xliff:g>m <xliff:g id="S">%3$02d</xliff:g>s <xliff:g id="D">%4$02d</xliff:g>"</item>
+  </string-array>
   <plurals name="Nhours_description">
     <item quantity="one" msgid="371227238759147245">"1 Stunde"</item>
     <item quantity="other" msgid="7018184076091344797">"<xliff:g id="NUMBER">%d</xliff:g> Stunden"</item>
@@ -160,7 +167,7 @@
     <item quantity="other" msgid="7583230315175387547">"<xliff:g id="NUMBER">%d</xliff:g> Sekunden"</item>
   </plurals>
     <string name="timer_add_timer" msgid="862733633862574752">"Timer hinzufügen"</string>
-    <string name="timer_start" msgid="6158486445614356442">"Start"</string>
+    <string name="timer_start" msgid="6158486445614356442">"Starten"</string>
     <string name="timer_delete" msgid="8699122001991909302">"Löschen"</string>
     <string name="timer_plus_one" msgid="6631211310420106116">"1 Minute hinzufügen"</string>
     <string name="timer_stop" msgid="3361154678667736722">"Anhalten"</string>
@@ -226,7 +233,7 @@
     <item msgid="8513382867172014244">"Manaus"</item>
     <item msgid="7776299003105932407">"Santiago"</item>
     <item msgid="8636989494746218677">"Neufundland"</item>
-    <item msgid="4402541016410147505">"Brasilia"</item>
+    <item msgid="4402541016410147505">"Brasília"</item>
     <item msgid="2251184440733164084">"Buenos Aires"</item>
     <item msgid="6202926618569004969">"Grönland"</item>
     <item msgid="2355275037115290628">"Montevideo"</item>

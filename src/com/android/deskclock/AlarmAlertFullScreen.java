@@ -95,11 +95,12 @@ public class AlarmAlertFullScreen extends Activity implements GlowPadView.OnTrig
             if (action.equals(Alarms.ALARM_SNOOZE_ACTION)) {
                 snooze();
             } else if (action.equals(Alarms.ALARM_DISMISS_ACTION)) {
-                dismiss(false);
+                dismiss(false, false);
             } else {
                 Alarm alarm = intent.getParcelableExtra(Alarms.ALARM_INTENT_EXTRA);
+                boolean replaced = intent.getBooleanExtra(Alarms.ALARM_REPLACED, false);
                 if (alarm != null && mAlarm.id == alarm.id) {
-                    dismiss(true);
+                    dismiss(true, replaced);
                 }
             }
         }
@@ -232,7 +233,7 @@ public class AlarmAlertFullScreen extends Activity implements GlowPadView.OnTrig
         final String vol =
                 PreferenceManager.getDefaultSharedPreferences(this)
                 .getString(SettingsActivity.KEY_VOLUME_BEHAVIOR,
-                        DEFAULT_VOLUME_BEHAVIOR);
+                        SettingsActivity.DEFAULT_VOLUME_BEHAVIOR);
         mVolumeBehavior = Integer.parseInt(vol);
 
         final Window win = getWindow();
@@ -373,8 +374,12 @@ public class AlarmAlertFullScreen extends Activity implements GlowPadView.OnTrig
     }
 
     // Dismiss the alarm.
-    private void dismiss(boolean killed) {
-        Log.i(killed ? "Alarm killed" : "Alarm dismissed by user");
+    private void dismiss(boolean killed, boolean replaced) {
+        if (LOG) {
+            Log.v("AlarmAlertFullScreen - dismiss");
+        }
+
+        Log.i("Alarm id=" + mAlarm.id + (killed ? (replaced ? " replaced" : " killed") : " dismissed by user"));
         // The service told us that the alarm has been killed, do not modify
         // the notification or stop the service.
         if (!killed) {
@@ -383,7 +388,9 @@ public class AlarmAlertFullScreen extends Activity implements GlowPadView.OnTrig
             nm.cancel(mAlarm.id);
             stopService(new Intent(Alarms.ALARM_ALERT_ACTION));
         }
-        finish();
+        if (!replaced) {
+            finish();
+        }
     }
 
     private void attachListeners() {
@@ -417,7 +424,7 @@ public class AlarmAlertFullScreen extends Activity implements GlowPadView.OnTrig
                 snooze();
                 break;
             case ALARM_DISMISS:
-                dismiss(false);
+                dismiss(false, false);
                 break;
             case ALARM_NO_ACTION:
             default:
@@ -514,7 +521,7 @@ public class AlarmAlertFullScreen extends Activity implements GlowPadView.OnTrig
                             break;
 
                         case 2:
-                            dismiss(false);
+                            dismiss(false, false);
                             break;
 
                         default:
@@ -559,7 +566,7 @@ public class AlarmAlertFullScreen extends Activity implements GlowPadView.OnTrig
                 break;
 
             case R.drawable.ic_alarm_alert_dismiss:
-                dismiss(false);
+                dismiss(false, false);
                 break;
             default:
                 // Code should never reach here.
