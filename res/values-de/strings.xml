@@ -1,5 +1,6 @@
-<?xml version="1.0" encoding="UTF-8"?>
-<!--  Copyright (C) 2007 The Android Open Source Project
+<?xml version="1.0" encoding="utf-8"?>
+<!-- Copyright (C) 2007 The Android Open Source Project
+     Copyright (C) 2013 The CyanogenMod Project
 
      Licensed under the Apache License, Version 2.0 (the "License");
      you may not use this file except in compliance with the License.
@@ -358,6 +359,9 @@
     <string name="stopwatch_settings">STOPPUHR</string>
     <string name="keep_display_on_stopwatch">Bildschirm aktiv lassen</string>
     <string name="keep_display_on_stopwatch_summary">Bei laufender Stoppuhr den Bildschirm nicht automatisch ausschalten</string>
+
+    <!-- Increasing volume -->
+    <string name="alarm_increasing_volume">Anst. Lautstärke</string>
 
     <!-- **** CYANOGENMOD ADDITIONS END **** -->
 </resources>
