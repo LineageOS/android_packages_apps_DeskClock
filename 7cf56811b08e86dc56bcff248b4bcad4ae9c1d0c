@@ -16,6 +16,24 @@
       "revId": "7cf56811b08e86dc56bcff248b4bcad4ae9c1d0c",
       "serverId": "1ec6b3db-b2c1-4fa4-84a2-4c7efe89ba71",
       "unresolved": false
+    },
+    {
+      "key": {
+        "uuid": "AAAAdX//+bM\u003d",
+        "filename": "res/values-de/strings.xml",
+        "patchSetId": 1
+      },
+      "lineNbr": 363,
+      "author": {
+        "id": 1063
+      },
+      "writtenOn": "2013-02-16T18:47:06Z",
+      "side": 1,
+      "message": "Das Verschieben\n- kann man nicht pro Übersetzung machen\n- sieht nicht schön aus\n\nIch finde die Abkürzung vollkommen ok. Ein Alternativvorschlag meinerseits war noch \u0027Ansteigend\u0027, d.h. \u0027Lautstärke\u0027 wegzulassen.",
+      "parentUuid": "AAAAdX//+ko\u003d",
+      "revId": "7cf56811b08e86dc56bcff248b4bcad4ae9c1d0c",
+      "serverId": "1ec6b3db-b2c1-4fa4-84a2-4c7efe89ba71",
+      "unresolved": false
     }
   ]
 }
