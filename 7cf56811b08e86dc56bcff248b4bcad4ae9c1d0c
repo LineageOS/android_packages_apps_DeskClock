@@ -1,0 +1,21 @@
+{
+  "comments": [
+    {
+      "key": {
+        "uuid": "AAAAdX//+ko\u003d",
+        "filename": "res/values-de/strings.xml",
+        "patchSetId": 1
+      },
+      "lineNbr": 363,
+      "author": {
+        "id": 1053
+      },
+      "writtenOn": "2013-02-16T06:27:13Z",
+      "side": 1,
+      "message": "Geht das nicht ohne Abkürzung? Evtl. die Checkbox in eine neue Zeile verschieben.",
+      "revId": "7cf56811b08e86dc56bcff248b4bcad4ae9c1d0c",
+      "serverId": "1ec6b3db-b2c1-4fa4-84a2-4c7efe89ba71",
+      "unresolved": false
+    }
+  ]
+}
