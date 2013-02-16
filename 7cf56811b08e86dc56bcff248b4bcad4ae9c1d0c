@@ -34,6 +34,24 @@
       "revId": "7cf56811b08e86dc56bcff248b4bcad4ae9c1d0c",
       "serverId": "1ec6b3db-b2c1-4fa4-84a2-4c7efe89ba71",
       "unresolved": false
+    },
+    {
+      "key": {
+        "uuid": "AAAAdX//+Y0\u003d",
+        "filename": "res/values-de/strings.xml",
+        "patchSetId": 1
+      },
+      "lineNbr": 363,
+      "author": {
+        "id": 4884
+      },
+      "writtenOn": "2013-02-16T20:24:05Z",
+      "side": 1,
+      "message": "Aber ansteigend bringt es nicht auf den Punkt, worum es geht. Man könnte es ja auch falsch in Bezug auf eine ansteigende Zeit oder so etwas verstehen.",
+      "parentUuid": "AAAAdX//+bM\u003d",
+      "revId": "7cf56811b08e86dc56bcff248b4bcad4ae9c1d0c",
+      "serverId": "1ec6b3db-b2c1-4fa4-84a2-4c7efe89ba71",
+      "unresolved": false
     }
   ]
 }
