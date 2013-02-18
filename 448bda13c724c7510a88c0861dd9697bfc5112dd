@@ -1,0 +1,21 @@
+{
+  "comments": [
+    {
+      "key": {
+        "uuid": "AAAAdX//9rg\u003d",
+        "filename": "res/values-de/strings.xml",
+        "patchSetId": 4
+      },
+      "lineNbr": 364,
+      "author": {
+        "id": 4884
+      },
+      "writtenOn": "2013-02-18T16:11:18Z",
+      "side": 1,
+      "message": "Wenn das http://review.cyanogenmod.org/#/c/32065/ gemerged wir können wir auch \u0027Ansteigende Laustärke\u0027 ausschreiben.",
+      "revId": "448bda13c724c7510a88c0861dd9697bfc5112dd",
+      "serverId": "1ec6b3db-b2c1-4fa4-84a2-4c7efe89ba71",
+      "unresolved": false
+    }
+  ]
+}
