@@ -16,6 +16,24 @@
       "revId": "448bda13c724c7510a88c0861dd9697bfc5112dd",
       "serverId": "1ec6b3db-b2c1-4fa4-84a2-4c7efe89ba71",
       "unresolved": false
+    },
+    {
+      "key": {
+        "uuid": "AAAAdX//9YY\u003d",
+        "filename": "res/values-de/strings.xml",
+        "patchSetId": 4
+      },
+      "lineNbr": 364,
+      "author": {
+        "id": 4884
+      },
+      "writtenOn": "2013-02-19T02:31:32Z",
+      "side": 1,
+      "message": "Sollten wir jetzt hierbei bleiben oder es ausschreiben?",
+      "parentUuid": "AAAAdX//9rg\u003d",
+      "revId": "448bda13c724c7510a88c0861dd9697bfc5112dd",
+      "serverId": "1ec6b3db-b2c1-4fa4-84a2-4c7efe89ba71",
+      "unresolved": false
     }
   ]
 }
