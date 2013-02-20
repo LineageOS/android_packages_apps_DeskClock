@@ -58,7 +58,7 @@ public class AlarmKlaxon extends Service {
     private TelephonyManager mTelephonyManager;
     private int mInitialCallState;
     private int mCurrentVolume;
-    private int mAlarmVolumeSetting;
+    private int mAlarmVolumeSetting = -1;
 
     // Internal messages
     private static final int KILLER = 1000;
@@ -109,6 +109,7 @@ public class AlarmKlaxon extends Service {
 
     @Override
     public void onCreate() {
+        mAudioManager = (AudioManager)getSystemService(Context.AUDIO_SERVICE);
         mVibrator = (Vibrator) getSystemService(Context.VIBRATOR_SERVICE);
         // Listen for incoming calls to kill the alarm.
         mTelephonyManager =
@@ -197,10 +198,6 @@ public class AlarmKlaxon extends Service {
                 }
             }
 
-            mAudioManager = (AudioManager)getSystemService(Context.AUDIO_SERVICE);
-            // save current value
-            mAlarmVolumeSetting = mAudioManager.getStreamVolume(AudioManager.STREAM_ALARM);
-
             // TODO: Reuse mMediaPlayer instead of creating a new one and/or use
             // RingtoneManager.
             mMediaPlayer = new MediaPlayer();
@@ -268,9 +265,7 @@ public class AlarmKlaxon extends Service {
         }
 
         if (useIncreasingVolume) {
-            mCurrentVolume = INCVOL_START;
-            mAudioManager.setStreamVolume(AudioManager.STREAM_ALARM, mCurrentVolume, 0);
-            mHandler.sendEmptyMessageDelayed(INCREASE_VOLUME, INCVOL_DELAY);
+            startVolumeIncrease();
         }
 
         player.setAudioStreamType(AudioManager.STREAM_ALARM);
@@ -298,10 +293,6 @@ public class AlarmKlaxon extends Service {
         if (mPlaying) {
             mPlaying = false;
 
-            mHandler.removeMessages(INCREASE_VOLUME);
-            // reset to default from before
-            mAudioManager.setStreamVolume(AudioManager.STREAM_ALARM, mAlarmVolumeSetting, 0);
-
             // Stop audio playing
             if (mMediaPlayer != null) {
                 mMediaPlayer.stop();
@@ -313,6 +304,7 @@ public class AlarmKlaxon extends Service {
             mVibrator.cancel();
         }
         disableKiller();
+        stopVolumeIncrease();
     }
 
     /**
@@ -338,5 +330,21 @@ public class AlarmKlaxon extends Service {
         mHandler.removeMessages(KILLER);
     }
 
+    private void startVolumeIncrease() {
+        // save current value
+        mAlarmVolumeSetting = mAudioManager.getStreamVolume(AudioManager.STREAM_ALARM);
 
+        mCurrentVolume = INCVOL_START;
+        mAudioManager.setStreamVolume(AudioManager.STREAM_ALARM, mCurrentVolume, 0);
+        mHandler.sendEmptyMessageDelayed(INCREASE_VOLUME, INCVOL_DELAY);
+    }
+
+    private void stopVolumeIncrease() {
+        mHandler.removeMessages(INCREASE_VOLUME);
+        if (mAlarmVolumeSetting >= 0) {
+            // reset to default from before
+            mAudioManager.setStreamVolume(AudioManager.STREAM_ALARM, mAlarmVolumeSetting, 0);
+            mAlarmVolumeSetting = -1;
+        }
+    }
 }
