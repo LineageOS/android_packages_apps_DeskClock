@@ -34,13 +34,63 @@ class AlarmDatabaseHelper extends SQLiteOpenHelper {
     private static final String DATABASE_NAME = "alarms.db";
     private static final int DATABASE_VERSION = 6;
 
+    private static final String FIELDS =
+                                "hour,minutes,daysofweek,alarmtime," +
+                                "enabled,vibrate,message,alert,incvol";
+    private static final String ALL_FIELDS = "_id," + FIELDS;
+
     public AlarmDatabaseHelper(Context context) {
         super(context, DATABASE_NAME, null, DATABASE_VERSION);
     }
 
     @Override
     public void onCreate(SQLiteDatabase db) {
-        db.execSQL("CREATE TABLE alarms (" +
+        createAlarmsTable(db, false);
+
+        // insert default alarms
+        String insertMe = "INSERT INTO alarms (" + FIELDS + ") VALUES ";
+        db.execSQL(insertMe + "(8, 30, 31, 0, 0, 1, '', '', 0);");
+        db.execSQL(insertMe + "(9, 00, 96, 0, 0, 1, '', '', 0);");
+    }
+
+    @Override
+    public void onUpgrade(SQLiteDatabase db, int oldVersion, int currentVersion) {
+        if (Log.LOGV) Log.v("Upgrading alarms database from version " + oldVersion + " to "
+                + currentVersion);
+
+        int upgradeVersion = oldVersion;
+
+        if (upgradeVersion == 5) {
+            db.execSQL("ALTER TABLE alarms ADD incvol INTEGER;");
+            db.execSQL("UPDATE alarms SET incvol=0;");
+            upgradeVersion = 6;
+        }
+
+        if (Log.LOGV) Log.v("Alarms database upgrade done.");
+    }
+
+    @Override
+    public void onDowngrade(SQLiteDatabase db, int oldVersion, int currentVersion) {
+
+        if (Log.LOGV) Log.v("Downgrading alarms database from version " + oldVersion + " to "
+                + currentVersion);
+
+        db.execSQL("BEGIN TRANSACTION;");
+        createAlarmsTable(db, true);
+        db.execSQL("INSERT INTO alarms_tmp SELECT " + ALL_FIELDS + " FROM alarms;");
+        db.execSQL("DROP TABLE alarms;");
+        createAlarmsTable(db, false);
+        db.execSQL("INSERT INTO alarms SELECT " + ALL_FIELDS + " FROM alarms_tmp;");
+        db.execSQL("DROP TABLE alarms_tmp;");
+        db.execSQL("COMMIT;");
+
+        if (Log.LOGV) Log.v("Alarms database downgrade done.");
+    }
+
+    private void createAlarmsTable(SQLiteDatabase db, boolean temporary) {
+        String temporaryClause = (temporary) ? "TEMPORARY" : "";
+        String tableName = (temporary) ? "alarms_tmp" : "alarms";
+        db.execSQL("CREATE " + temporaryClause + " TABLE " + tableName + " (" +
                    "_id INTEGER PRIMARY KEY," +
                    "hour INTEGER, " +
                    "minutes INTEGER, " +
@@ -51,30 +101,6 @@ class AlarmDatabaseHelper extends SQLiteOpenHelper {
                    "message TEXT, " +
                    "alert TEXT, " +
                    "incvol INTEGER);");
-
-        // insert default alarms
-        String insertMe = "INSERT INTO alarms " +
-                "(hour, minutes, daysofweek, alarmtime, enabled, vibrate, " +
-                " message, alert, incvol) VALUES ";
-        db.execSQL(insertMe + "(8, 30, 31, 0, 0, 1, '', '', 0);");
-        db.execSQL(insertMe + "(9, 00, 96, 0, 0, 1, '', '', 0);");
-    }
-
-    @Override
-    public void onUpgrade(SQLiteDatabase db, int oldVersion,
-            int currentVersion) {
-        if (Log.LOGV) Log.v(
-                "Upgrading alarms database from version " +
-                oldVersion + " to " + currentVersion +
-                ", which will destroy all old data");
-        db.execSQL("DROP TABLE IF EXISTS alarms");
-        onCreate(db);
-    }
-
-    @Override
-    public void onDowngrade(SQLiteDatabase db, int oldVersion,
-            int currentVersion) {
-        onUpgrade(db, oldVersion, currentVersion);
     }
 
     Uri commonInsert(ContentValues values) {
