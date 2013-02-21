@@ -61,20 +61,19 @@ class AlarmDatabaseHelper extends SQLiteOpenHelper {
     }
 
     @Override
-    public void onUpgrade(SQLiteDatabase db, int oldVersion,
-            int currentVersion) {
-        if (Log.LOGV) Log.v(
-                "Upgrading alarms database from version " +
-                oldVersion + " to " + currentVersion +
-                ", which will destroy all old data");
-        db.execSQL("DROP TABLE IF EXISTS alarms");
-        onCreate(db);
-    }
+    public void onUpgrade(SQLiteDatabase db, int oldVersion, int currentVersion) {
+        if (Log.LOGV) Log.v("Upgrading alarms database from version " + oldVersion + " to "
+                + currentVersion);
 
-    @Override
-    public void onDowngrade(SQLiteDatabase db, int oldVersion,
-            int currentVersion) {
-        onUpgrade(db, oldVersion, currentVersion);
+        int upgradeVersion = oldVersion;
+
+        if (upgradeVersion == 5) {
+            db.execSQL("ALTER TABLE alarms ADD incvol INTEGER;");
+            db.execSQL("UPDATE alarms SET incvol=0;");
+            upgradeVersion = 6;
+        }
+
+        if (Log.LOGV) Log.v("Alarms database upgrade done.");
     }
 
     Uri commonInsert(ContentValues values) {
