@@ -369,5 +369,8 @@
     <string name="keep_display_on_stopwatch">Hold skærmen tændt</string>
     <string name="keep_display_on_stopwatch_summary">Hold skærmen tændt, når stopuret kører</string>
 
+    <!-- Setting labels on Set alarm screen: Increasing volume on or off -->
+    <string name="alarm_increasing_volume">Stigende lydstyrke</string>
+
     <!-- CYANOGENMOD ADDITIONS END -->
 </resources>
