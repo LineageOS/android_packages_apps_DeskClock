@@ -341,6 +341,7 @@
     <string name="stopwatch_settings">STOPWATCH</string>
     <string name="keep_display_on_stopwatch">Scherm actief houden</string>
     <string name="keep_display_on_stopwatch_summary">Scherm actief houden indien stopwatch loopt</string>
+    <string name="alarm_increasing_volume">Toenemend volume</string>
 
     <!-- CYANOGENMOD ADDITIONS: ARRAYS -->
     <string-array name="action_summary_entries">
