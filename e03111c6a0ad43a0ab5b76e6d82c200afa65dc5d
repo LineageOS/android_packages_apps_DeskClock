@@ -1,0 +1,21 @@
+{
+  "comments": [
+    {
+      "key": {
+        "uuid": "AAAAdX//7Nk\u003d",
+        "filename": "src/com/android/deskclock/AlarmDatabaseHelper.java",
+        "patchSetId": 2
+      },
+      "lineNbr": 68,
+      "author": {
+        "id": 4785
+      },
+      "writtenOn": "2013-02-24T19:20:34Z",
+      "side": 1,
+      "message": "Isn\u0027t the \u0027upgradeVersion\u0027 variable useless ?\nCan\u0027t the if check below just use \u0027oldVersion\u0027 and don\u0027t bother updating it to 6 ?",
+      "revId": "e03111c6a0ad43a0ab5b76e6d82c200afa65dc5d",
+      "serverId": "1ec6b3db-b2c1-4fa4-84a2-4c7efe89ba71",
+      "unresolved": false
+    }
+  ]
+}
