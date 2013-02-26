@@ -194,6 +194,7 @@
         <item>Kiev</item>
         <item>Lisbon</item>
         <item>London</item>
+        <item>UTC</item>
         <item>Luxembourg</item>
         <item>Madrid</item>
         <item>Malta</item>
@@ -477,6 +478,7 @@
         <item>Europe/Kiev</item>
         <item>Europe/Lisbon</item>
         <item>Europe/London</item>
+        <item>UTC</item>
         <item>Europe/Luxembourg</item>
         <item>Europe/Madrid</item>
         <item>Europe/Malta</item>
@@ -862,6 +864,7 @@
         <item>C278</item>
         <item>C279</item>
         <item>C280</item>
+        <item>C281</item>
     </string-array>
 
     <array name="snooze_dismiss_drawables">

@@ -540,6 +540,7 @@
         <item>"Cape Verde Islands"</item>
         <item>"Casablanca"</item>
         <item>"London, Dublin"</item>
+        <item>"UTC"</item>
         <item>"Amsterdam, Berlin"</item>
         <item>"Belgrade"</item>
         <item>"Brussels"</item>
@@ -629,6 +630,7 @@
         <item>"Atlantic/Cape_Verde"</item>
         <item>"Africa/Casablanca"</item>
         <item>"Europe/London"</item>
+        <item>"UTC"</item>
         <item>"Europe/Amsterdam"</item>
         <item>"Europe/Belgrade"</item>
         <item>"Europe/Brussels"</item>
