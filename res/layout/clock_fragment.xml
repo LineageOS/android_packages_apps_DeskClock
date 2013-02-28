@@ -17,13 +17,11 @@
 <FrameLayout xmlns:android="http://schemas.android.com/apk/res/android"
     android:id="@+id/clock_background"
     android:layout_width="match_parent"
-    android:background="@drawable/blackish_transition"
     android:layout_height="match_parent" >
     <FrameLayout
         android:id="@+id/clock_foreground"
         android:layout_width="match_parent"
-        android:layout_height="match_parent"
-        android:background="@drawable/blackish_transition" >
+        android:layout_height="match_parent" >
 
       <LinearLayout
           android:id="@+id/desk_clock"
