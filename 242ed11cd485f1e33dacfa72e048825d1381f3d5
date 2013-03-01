@@ -1,0 +1,21 @@
+{
+  "comments": [
+    {
+      "key": {
+        "uuid": "AAAAdX//5rM\u003d",
+        "filename": "res/values-es/strings.xml",
+        "patchSetId": 1
+      },
+      "lineNbr": 47,
+      "author": {
+        "id": 3134
+      },
+      "writtenOn": "2013-03-01T19:25:37Z",
+      "side": 1,
+      "message": "I do not aggre with these strings. IHMO, magnitude name is needed here.",
+      "revId": "242ed11cd485f1e33dacfa72e048825d1381f3d5",
+      "serverId": "1ec6b3db-b2c1-4fa4-84a2-4c7efe89ba71",
+      "unresolved": false
+    }
+  ]
+}
