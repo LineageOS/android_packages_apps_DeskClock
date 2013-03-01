@@ -13,6 +13,8 @@
     <uses-permission android:name="android.permission.READ_PHONE_STATE" />
     <uses-permission android:name="android.permission.DEVICE_POWER" />
     <uses-permission android:name="android.permission.READ_EXTERNAL_STORAGE" />
+    <uses-permission android:name="android.permission.ACCESS_FINE_LOCATION" />
+    <uses-permission android:name="android.permission.ACCESS_COARSE_LOCATION" />
     <uses-sdk android:minSdkVersion="15"></uses-sdk>
 
     <application android:label="@string/app_label"
@@ -20,6 +22,10 @@
 
         <provider android:name="AlarmProvider"
                 android:authorities="com.android.deskclock"
+                android:exported="false" />
+
+        <provider android:name="com.android.deskclock.worldclock.db.DbCityProvider"
+                android:authorities="com.android.deskclock.worldclock.db"
                 android:exported="false" />
 
         <activity android:name="DeskClock"
