@@ -445,6 +445,22 @@
     <!-- Menu item on Cities screen to sort by alphabetical order -->
     <string name="menu_item_sort_by_name">Sort by name</string>
 
+    <!-- User-defined cities -->
+    <string name="menu_item_add">Add</string>
+    <string name="cities_add_city_title">Add city</string>
+    <string name="cities_add_city_city">City:</string>
+    <string name="cities_add_city_timezone">Timezone:</string>
+    <string name="cities_add_city_gps_cd">Tap to localize your current city</string>
+    <string name="cities_add_loading">Loading\u2026</string>
+    <string name="cities_add_searching">Searching\u2026</string>
+    <string name="cities_add_gps_no_results">GPS query returns no location results</string>
+    <string name="cities_add_gps_not_available">GPS not available</string>
+    <string name="cities_add_already_exists">The city already exists in the database</string>
+    <string name="cities_add_city_failed">Can\'t create the city</string>
+    <string name="cities_delete_city_title">Delete city</string>
+    <string name="cities_delete_city_msg">Do you want to delete <xliff:g id="city">%s</xliff:g>?</string>
+    <string name="cities_delete_city_failed">Can\'t delete the city</string>
+
     <!-- Label for selected cities in Cities list view -->
     <string name="selected_cities_label">Selected Cities</string>
 

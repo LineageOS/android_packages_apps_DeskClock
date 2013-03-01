@@ -26,6 +26,10 @@
             android:visible="false"
             app:actionViewClass="android.support.v7.widget.SearchView"
             app:showAsAction="ifRoom"/>
+        <item android:id="@+id/menu_item_add"
+            android:title="@string/menu_item_add"
+            android:icon="@drawable/ic_menu_add"
+            android:showAsAction="ifRoom|withText"/>
         <item
             android:id="@+id/menu_item_sort"
             android:title="@string/menu_item_sort_by_gmt_offset"

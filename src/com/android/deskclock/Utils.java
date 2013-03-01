@@ -68,6 +68,13 @@ import java.util.Calendar;
 import java.util.Collection;
 import java.util.Date;
 import java.util.GregorianCalendar;
+
+import com.android.deskclock.worldclock.db.DbCities;
+import com.android.deskclock.worldclock.db.DbCity;
+import java.util.ArrayList;
+import java.util.Collections;
+import java.util.List;
+
 import java.util.Locale;
 import java.util.TimeZone;
 
@@ -700,6 +707,43 @@ public class Utils {
         final ArraySet<E> arraySet = new ArraySet<>(collection.size());
         arraySet.addAll(collection);
         return arraySet;
+
+    public static CityObj[] loadCitiesDataBase(Context c) {
+        final Collator collator = Collator.getInstance();
+        Resources r = c.getResources();
+
+        // Get list of cities defined by the app (App-defined has the prefix C)
+        // Read strings array of name,timezone, id
+        // make sure the list are the same length
+        String[] cities = r.getStringArray(R.array.cities_names);
+        String[] timezones = r.getStringArray(R.array.cities_tz);
+        String[] ids = r.getStringArray(R.array.cities_id);
+        if (cities.length != timezones.length || ids.length != cities.length) {
+            Log.wtf("City lists sizes are not the same, cannot use the data");
+            return null;
+        }
+        List<CityObj> tempList = new ArrayList<CityObj>(cities.length);
+        for (int i = 0; i < cities.length; i++) {
+            tempList.add(new CityObj(cities[i], timezones[i], ids[i]));
+        }
+
+        // Get the list of user-defined cities (User-defined has the prefix UD)
+        List<DbCity> dbcities = DbCities.getCities(c.getContentResolver());
+        for (int i = 0; i < dbcities.size(); i++) {
+            DbCity dbCity = dbcities.get(i);
+            CityObj city = new CityObj(dbCity.name, dbCity.tz, "UD" + dbCity.id);
+            city.mUserDefined = true;
+            tempList.add(city);
+        }
+
+        // Sort alphabetically
+        Collections.sort(tempList, new Comparator<CityObj> () {
+            @Override
+            public int compare(CityObj c1, CityObj c2) {
+                return collator.compare(c1.mCityName, c2.mCityName);
+            }
+        });
+        return tempList.toArray(new CityObj[tempList.size()]);
     }
 
     /**
