@@ -1,0 +1,55 @@
+{
+  "comments": [
+    {
+      "key": {
+        "uuid": "AAAAdX//4+w\u003d",
+        "filename": "res/values/strings.xml",
+        "patchSetId": 3
+      },
+      "lineNbr": 817,
+      "author": {
+        "id": 2597
+      },
+      "writtenOn": "2013-03-03T04:42:53Z",
+      "side": 1,
+      "message": "- Timezone",
+      "revId": "037bea7d07ad974bdca1c9f7d50532171652d5a7",
+      "serverId": "1ec6b3db-b2c1-4fa4-84a2-4c7efe89ba71",
+      "unresolved": false
+    },
+    {
+      "key": {
+        "uuid": "AAAAdX//4+s\u003d",
+        "filename": "res/values/strings.xml",
+        "patchSetId": 3
+      },
+      "lineNbr": 823,
+      "author": {
+        "id": 2597
+      },
+      "writtenOn": "2013-03-03T04:42:53Z",
+      "side": 1,
+      "message": "- Can\\\u0027t create the city",
+      "revId": "037bea7d07ad974bdca1c9f7d50532171652d5a7",
+      "serverId": "1ec6b3db-b2c1-4fa4-84a2-4c7efe89ba71",
+      "unresolved": false
+    },
+    {
+      "key": {
+        "uuid": "AAAAdX//4+o\u003d",
+        "filename": "res/values/strings.xml",
+        "patchSetId": 3
+      },
+      "lineNbr": 826,
+      "author": {
+        "id": 2597
+      },
+      "writtenOn": "2013-03-03T04:42:53Z",
+      "side": 1,
+      "message": "- Can\\\u0027t delete the city",
+      "revId": "037bea7d07ad974bdca1c9f7d50532171652d5a7",
+      "serverId": "1ec6b3db-b2c1-4fa4-84a2-4c7efe89ba71",
+      "unresolved": false
+    }
+  ]
+}
