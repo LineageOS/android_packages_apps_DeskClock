@@ -808,5 +808,9 @@
     <string name="widget_12_hours_format_m" translatable="false">:mm<font size="15">aa</font></string>
     <string name="widget_24_hours_format_h" translatable="false">kk</string>
     <string name="widget_24_hours_format_m" translatable="false">:mm</string>
+
+    <!-- Empty list message -->
+    <string name="no_alarms">No alarms set</string>
+
 </resources>
 

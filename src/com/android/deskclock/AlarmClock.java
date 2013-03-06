@@ -313,6 +313,9 @@ public class AlarmClock extends Activity implements LoaderManager.LoaderCallback
     public void onLoadFinished(Loader<Cursor> cursorLoader, final Cursor data) {
         mAdapter.swapCursor(data);
         gotoAlarmIfSpecified();
+        // Setting the empty view after swapCursor prevents the view from
+        // flickering on the first run.
+        mAlarmsList.setEmptyView(findViewById(android.R.id.empty));
     }
 
     /** If an alarm was passed in via intent and goes to that particular alarm in the list. */
