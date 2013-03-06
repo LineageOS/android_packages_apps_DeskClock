@@ -20,6 +20,16 @@
     android:layout_width="match_parent"
     android:layout_height="match_parent">
 
+    <TextView
+        android:id="@android:id/empty"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:gravity="center"
+        android:text="@string/no_alarms"
+        android:textColor="@color/clock_red"
+        android:textSize="@dimen/actionbar_title_font_size"
+        android:visibility="gone" />
+
     <com.android.deskclock.widget.swipeablelistview.SwipeableListView
         android:id="@+id/alarms_list"
         android:layout_width="match_parent"

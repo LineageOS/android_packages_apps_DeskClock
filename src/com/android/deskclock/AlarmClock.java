@@ -134,6 +134,7 @@ public class AlarmClock extends Activity implements LoaderManager.LoaderCallback
             mRingtoneTitleCache = new Bundle();
         }
 
+        mAlarmsList.setEmptyView(findViewById(android.R.id.empty));
         mAlarmsList.setAdapter(mAdapter);
         mAlarmsList.setVerticalScrollBarEnabled(true);
         mAlarmsList.enableSwipe(true);
