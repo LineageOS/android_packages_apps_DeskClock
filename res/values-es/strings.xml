@@ -1,5 +1,5 @@
-<?xml version="1.0" encoding="utf-8"?>
-<!-- Copyright (C) 2007 The Android Open Source Project
+<?xml version="1.0" encoding="UTF-8"?>
+<!--  Copyright (C) 2007 The Android Open Source Project
 
      Licensed under the Apache License, Version 2.0 (the "License");
      you may not use this file except in compliance with the License.
@@ -12,7 +12,7 @@
      WITHOUT WARRANTIES OR CONDITIONS OF ANY KIND, either express or implied.
      See the License for the specific language governing permissions and
      limitations under the License.
--->
+ -->
 
 <resources xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:xliff="urn:oasis:names:tc:xliff:document:1.2">
@@ -117,7 +117,7 @@
     <string name="battery_charging_level" msgid="5251483622085889693">"<xliff:g id="NUMBER">%d</xliff:g><xliff:g id="PERCENT">%%</xliff:g>"</string>
     <string name="weather_fetch_failure" msgid="3425804832021006835">"La información meteorológica no está disponible en este momento."</string>
     <string name="alarm_klaxon_service_desc" msgid="2147506334302260256">"Reproducción de alarmas definidas en Reloj"</string>
-    <string name="loading_ringtone" msgid="6523322777415268044">"Cargando tono\u2026"</string>
+    <string name="loading_ringtone" msgid="6523322777415268044">"Cargando tono…"</string>
     <string name="timer_ring_service_desc" msgid="2620214305660322415">"Reproducción de temporizadores definidos en el reloj"</string>
     <string name="control_set_alarm" msgid="2194676418924016327">"Establecer alarma"</string>
     <!-- no translation found for control_set_alarm_with_existing (3359285346655630660) -->
@@ -298,7 +298,7 @@
     <item msgid="5911600083231840181">"Tonga"</item>
   </string-array>
     <string name="alarm_settings" msgid="6049627772103646753">"ALARMAS"</string>
-    <string name="see_all" msgid="775983396630163739">"Ver todo\u2026"</string>
+    <string name="see_all" msgid="775983396630163739">"Ver todo…"</string>
     <string name="stopwatch_service_desc" msgid="8416624630388063996">"Servicio de cronómetro para ejecutar la notificación"</string>
     <string name="swn_stopped" msgid="783124901663086172">"Detenido"</string>
     <string name="description_direction_right" msgid="1615911557926085934">"Deslizar el dedo hacia la derecha para descartar"</string>
