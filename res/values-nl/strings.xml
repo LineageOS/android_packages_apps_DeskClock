@@ -51,7 +51,7 @@
     <item msgid="6002066367368421848">"Alarm is ingesteld voor <xliff:g id="DAYS">%1$s</xliff:g> vanaf nu."</item>
     <item msgid="8824719306247973774">"Alarm is ingesteld voor <xliff:g id="HOURS">%2$s</xliff:g> vanaf nu."</item>
     <item msgid="8182406852935468862">"Alarm is ingesteld voor <xliff:g id="DAYS">%1$s</xliff:g> en <xliff:g id="HOURS">%2$s</xliff:g> vanaf nu."</item>
-    <item msgid="2532279224777213194">"Alarm is ingesteld voor <xliff:g id="MINUTES">%3$s</xliff:g> vanaf nu."</item>
+    <item msgid="2532279224777213194">"Alarm gaat over <xliff:g id="MINUTES">%3$s</xliff:g> minuten af."</item>
     <item msgid="5936557894247187717">"Alarm is ingesteld voor <xliff:g id="DAYS">%1$s</xliff:g> en <xliff:g id="MINUTES">%3$s</xliff:g> vanaf nu."</item>
     <item msgid="9115697840826129603">"Alarm is ingesteld voor <xliff:g id="HOURS">%2$s</xliff:g> en <xliff:g id="MINUTES">%3$s</xliff:g> vanaf nu."</item>
     <item msgid="2332583385137381060">"Alarm is ingesteld voor <xliff:g id="DAYS">%1$s</xliff:g>, <xliff:g id="HOURS">%2$s</xliff:g> en <xliff:g id="MINUTES">%3$s</xliff:g> vanaf nu."</item>
@@ -102,7 +102,7 @@
     <string name="volume_button_dialog_title" msgid="8768042543750036853">"Knopeffect"</string>
   <string-array name="volume_button_setting_entries">
     <item msgid="7972756698723318690">"Snooze"</item>
-    <item msgid="3450979320164769576">"Uitschakelen"</item>
+    <item msgid="3450979320164769576">"Sluiten"</item>
     <item msgid="6302517608411378024">"Niets doen"</item>
   </string-array>
     <string name="default_ringtone_setting_title" msgid="4549726190682964245">"Standaardbeltoon instellen"</string>
@@ -120,6 +120,8 @@
     <string name="loading_ringtone" msgid="6523322777415268044">"Beltoon laden…"</string>
     <string name="timer_ring_service_desc" msgid="2620214305660322415">"Geluidsweergaveservice voor timers ingesteld in Klok."</string>
     <string name="control_set_alarm" msgid="2194676418924016327">"Alarm instellen"</string>
+    <!-- no translation found for control_set_alarm_with_existing (3359285346655630660) -->
+    <skip />
     <string name="menu_timer" msgid="6459070074762877114">"Timer"</string>
     <string name="menu_clock" msgid="5612760670606829805">"Klok"</string>
     <string name="menu_stopwatch" msgid="3396117705293574701">"Stopwatch"</string>
@@ -157,7 +159,7 @@
     <item quantity="other" msgid="7018184076091344797">"<xliff:g id="NUMBER">%d</xliff:g> uur"</item>
   </plurals>
   <plurals name="Nminutes_description">
-    <item quantity="one" msgid="1001391305885322059">"1 minuut"</item>
+    <item quantity="one" msgid="1001391305885322059">"1 minuut"</item>
     <item quantity="other" msgid="6948360065351547776">"<xliff:g id="NUMBER">%d</xliff:g> minuten"</item>
   </plurals>
   <plurals name="Nseconds_description">
