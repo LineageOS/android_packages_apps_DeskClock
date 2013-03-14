@@ -1,0 +1,38 @@
+{
+  "comments": [
+    {
+      "key": {
+        "uuid": "AAAAeX//7rc\u003d",
+        "filename": "res/values-iw/strings.xml",
+        "patchSetId": 2
+      },
+      "lineNbr": 38,
+      "author": {
+        "id": 2597
+      },
+      "writtenOn": "2013-03-14T21:05:03Z",
+      "side": 1,
+      "message": "Was this change really necessary?",
+      "revId": "de8153d97d2870390ae9d0f2bad48d38a6e769a5",
+      "serverId": "1ec6b3db-b2c1-4fa4-84a2-4c7efe89ba71",
+      "unresolved": false
+    },
+    {
+      "key": {
+        "uuid": "AAAAeX//7rg\u003d",
+        "filename": "res/values-iw/strings.xml",
+        "patchSetId": 2
+      },
+      "lineNbr": 105,
+      "author": {
+        "id": 2597
+      },
+      "writtenOn": "2013-03-14T21:05:03Z",
+      "side": 1,
+      "message": "Was this change really necessary? We are going to avoid altering AOSP translations.\n\nPlease also accept the invitation to the CyanogenMod Translations community; it\u0027s the only way of official direct communication.",
+      "revId": "de8153d97d2870390ae9d0f2bad48d38a6e769a5",
+      "serverId": "1ec6b3db-b2c1-4fa4-84a2-4c7efe89ba71",
+      "unresolved": false
+    }
+  ]
+}
