@@ -330,4 +330,43 @@
     <string name="timer_delete_confirmation" msgid="2815524107015816453">"Usunąć ten minutnik?"</string>
     <string name="city_delete_confirmation" msgid="1783441538785676299">"Usunąć to miasto?"</string>
     <string name="digital_gadget" msgid="2326954556720571358">"Zegar cyfrowy"</string>
+
+    <!-- CYANOGENMOD ADDITIONS -->
+
+    <!-- Setting title for showing/hiding the alarm status bar icon -->
+    <string name="show_status_bar_icon_title">Pokaż ikonę</string>
+
+    <!-- Setting summary for showing/hiding the alarm statusbar icon -->
+    <string name="show_status_bar_icon_summary">Pokaż ikonę na pasku stanu, kiedy zaplanowano alarm</string>
+
+    <!-- Setting title for the flip action setting. -->
+    <string name="flip_action_title">Akcja po odwróceniu telefonu</string>
+
+    <!-- Dialog title of the flip action setting. -->
+    <string name="flip_action_dialog_title">Po odwróceniu telefon\u2026</string>
+
+    <!-- Setting summary for the flip action setting. -->
+    <string name="flip_action_summary">Telefon po odwróceniu ekranem do dołu <xliff:g id="action">%s</xliff:g></string>
+
+    <!-- Setting title for the shake action setting. -->
+    <string name="shake_action_title">Akcja po potrząśnięciu</string>
+
+    <!-- Dialog title for the shake action setting. -->
+    <string name="shake_action_dialog_title">Po potrząśnięciu telefonem\u2026</string>
+
+    <!-- Setting summary for the shake action setting. -->
+    <string name="shake_action_summary">Potrząśnięcie telefonem <xliff:g id="action">%s</xliff:g></string>
+
+    <!-- Summary texts for shake and flip actions. Must be ordered by numerical
+         value (do nothing = 0, snooze = 1, dismiss = 2) -->
+    <string-array name="action_summary_entries">
+      <item>nic nie robi</item>
+      <item>włącza drzemkę</item>
+      <item>wyłącza alarm</item>
+    </string-array>
+
+    <!-- Settings strings -->
+    <string name="stopwatch_settings">STOPER</string>
+    <string name="keep_display_on_stopwatch">Nie wygaszaj ekranu</string>
+    <string name="keep_display_on_stopwatch_summary">Ekran nie zostanie wygaszony, gdy działa stoper</string>
 </resources>
