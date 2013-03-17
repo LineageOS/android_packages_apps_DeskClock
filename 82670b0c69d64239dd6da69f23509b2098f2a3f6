@@ -1,0 +1,21 @@
+{
+  "comments": [
+    {
+      "key": {
+        "uuid": "AAAAeX//66o\u003d",
+        "filename": "res/values-pl/strings.xml",
+        "patchSetId": 1
+      },
+      "lineNbr": 337,
+      "author": {
+        "id": 4449
+      },
+      "writtenOn": "2013-03-17T19:07:29Z",
+      "side": 1,
+      "message": "pokaz ikone alarmu ?",
+      "revId": "82670b0c69d64239dd6da69f23509b2098f2a3f6",
+      "serverId": "1ec6b3db-b2c1-4fa4-84a2-4c7efe89ba71",
+      "unresolved": false
+    }
+  ]
+}
