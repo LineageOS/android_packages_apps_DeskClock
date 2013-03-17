@@ -1,0 +1,21 @@
+{
+  "comments": [
+    {
+      "key": {
+        "uuid": "AAAAeX//7Kc\u003d",
+        "filename": "res/values/strings.xml",
+        "patchSetId": 5
+      },
+      "lineNbr": 361,
+      "author": {
+        "id": 2597
+      },
+      "writtenOn": "2013-03-17T01:37:08Z",
+      "side": 1,
+      "message": "Please move this line (and line 362) below AOSP strings",
+      "revId": "a95221b8730177cca6b9354eed5175b72578e23f",
+      "serverId": "1ec6b3db-b2c1-4fa4-84a2-4c7efe89ba71",
+      "unresolved": false
+    }
+  ]
+}
