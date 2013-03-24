@@ -812,5 +812,8 @@
     <!-- Empty list message -->
     <string name="no_alarms">No alarms set</string>
 
-</resources>
+    <!-- Suggested sleep times -->
+    <string name="bedtime_calculator">Bedtime calculator</string>
+    <string name="bedtime_calculator_explained">Bedtime calculator determines when you should fall asleep to wake up feeling refreshed.\n\nWaking up in the middle of a sleep cycle leaves you feeling tired and groggy, but waking up in between cycles lets you wake up feeling refreshed and alert.\n\n<b>Please keep in mind that you should be falling asleep at these times.</b></string>
 
+</resources>

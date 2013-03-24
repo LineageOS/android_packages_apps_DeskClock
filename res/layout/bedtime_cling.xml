@@ -1,0 +1,44 @@
+<?xml version="1.0" encoding="utf-8"?>
+<ScrollView xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content" >
+
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:background="#990099cc" >
+
+        <TextView
+            android:id="@+id/bedtime_title"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_alignParentTop="true"
+            android:fontFamily="sans-serif-condensed"
+            android:gravity="center"
+            android:padding="15dp"
+            android:text="@string/bedtime_calculator"
+            android:textAllCaps="true"
+            android:textColor="@color/clock_white"
+            android:textSize="25sp" />
+
+        <TextView
+            android:id="@+id/bedtime_explained"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_below="@+id/bedtime_title"
+            android:fontFamily="sans-serif-condensed"
+            android:padding="15dp"
+            android:text="@string/bedtime_calculator_explained"
+            android:textColor="@color/clock_white"
+            android:textSize="18sp" />
+
+        <Button
+            android:id="@+id/bedtime_ok"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_below="@+id/bedtime_explained"
+            android:background="?android:attr/selectableItemBackground"
+            android:text="@android:string/ok" />
+    </RelativeLayout>
+
+</ScrollView>
