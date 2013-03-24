@@ -1,0 +1,55 @@
+{
+  "comments": [
+    {
+      "key": {
+        "uuid": "AAAAeX//4Xk\u003d",
+        "filename": "res/values/strings.xml",
+        "patchSetId": 1
+      },
+      "lineNbr": 814,
+      "author": {
+        "id": 2597
+      },
+      "writtenOn": "2013-03-24T23:16:23Z",
+      "side": 1,
+      "message": "calculator (lower case)",
+      "revId": "7ad932da7955d8f058392562ffc85c9af0f5206f",
+      "serverId": "1ec6b3db-b2c1-4fa4-84a2-4c7efe89ba71",
+      "unresolved": false
+    },
+    {
+      "key": {
+        "uuid": "AAAAeX//4Xg\u003d",
+        "filename": "res/values/strings.xml",
+        "patchSetId": 1
+      },
+      "lineNbr": 815,
+      "author": {
+        "id": 2597
+      },
+      "writtenOn": "2013-03-24T23:16:23Z",
+      "side": 1,
+      "message": "- calculator (lower case)",
+      "revId": "7ad932da7955d8f058392562ffc85c9af0f5206f",
+      "serverId": "1ec6b3db-b2c1-4fa4-84a2-4c7efe89ba71",
+      "unresolved": false
+    },
+    {
+      "key": {
+        "uuid": "AAAAeX//4Xc\u003d",
+        "filename": "res/values/strings.xml",
+        "patchSetId": 1
+      },
+      "lineNbr": 817,
+      "author": {
+        "id": 2597
+      },
+      "writtenOn": "2013-03-24T23:16:23Z",
+      "side": 1,
+      "message": "Please remove this line (will cause build error)",
+      "revId": "7ad932da7955d8f058392562ffc85c9af0f5206f",
+      "serverId": "1ec6b3db-b2c1-4fa4-84a2-4c7efe89ba71",
+      "unresolved": false
+    }
+  ]
+}
