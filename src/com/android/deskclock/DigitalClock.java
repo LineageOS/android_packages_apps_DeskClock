@@ -32,7 +32,11 @@ import android.widget.TextView;
 
 import java.text.DateFormatSymbols;
 import java.util.Calendar;
+import java.util.Date;
+import java.util.Iterator;
+import java.util.Set;
 import java.util.TimeZone;
+import java.util.TreeSet;
 
 /**
  * Displays the time
@@ -42,6 +46,11 @@ public class DigitalClock extends LinearLayout {
     private final static String HOURS_24 = "kk";
     private final static String HOURS = "h";
     private final static String MINUTES = ":mm";
+    private final static String AM_PM = " aa";
+
+    private final static int SLEEP_CYCLE = 90;
+    private final static int APPROX_BEDTIME = 194;
+    private final static int BEDTIMES = 4;
 
     private Calendar mCalendar;
     private String mHoursFormat;
@@ -223,5 +232,40 @@ public class DigitalClock extends LinearLayout {
     public void setTimeZone(String id) {
         mTimeZoneId = id;
         updateTime();
+    }
+
+    public String getSuggestedSleepTimes() {
+        // The DateFormat pattern
+        String pattern = mHoursFormat + MINUTES + AM_PM;
+        if (Alarms.get24HourMode(getContext())) {
+            pattern = mHoursFormat + MINUTES;
+        }
+
+        // Keeps the set of suggested sleep times
+        final Set<Date> dateSet = new TreeSet<Date>();
+
+        final Calendar calendar = Calendar.getInstance();
+        // Get the alarm time
+        calendar.setTime(mCalendar.getTime());
+        // The fourteen minutes it takes to fall asleep plus two sleep cycles
+        calendar.add(Calendar.MINUTE, -APPROX_BEDTIME);
+        // Return four possible sleep times
+        for (int i = 0; i < BEDTIMES; i++) {
+            // Go back one sleep cycle from here to calculate the times
+            calendar.add(Calendar.MINUTE, -SLEEP_CYCLE);
+            dateSet.add(calendar.getTime());
+        }
+
+        // Format each sleep time and separate them by a comma
+        final StringBuilder builder = new StringBuilder();
+        final Iterator<Date> iterator = dateSet.iterator();
+        while (iterator.hasNext()) {
+            final Date date = iterator.next();
+            builder.append(DateFormat.format(pattern, date));
+            if (iterator.hasNext()) {
+                builder.append(", ");
+            }
+        }
+        return builder.toString();
     }
 }
