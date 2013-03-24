@@ -83,7 +83,8 @@ public class AlarmClock extends Activity implements LoaderManager.LoaderCallback
 
     private SwipeableListView mAlarmsList;
     private AlarmItemAdapter mAdapter;
-    private Bundle mRingtoneTitleCache; // Key: ringtone uri, value: ringtone title
+    private Bundle mRingtoneTitleCache; // Key: ringtone uri, value: ringtone
+                                        // title
     private ActionableToastBar mUndoBar;
     private ActionMode mActionMode;
 
@@ -91,7 +92,8 @@ public class AlarmClock extends Activity implements LoaderManager.LoaderCallback
     private int mScrollToAlarmId = -1;
     private boolean mInDeleteConfirmation = false;
 
-    // This flag relies on the activity having a "standard" launchMode and a new instance of this
+    // This flag relies on the activity having a "standard" launchMode and a new
+    // instance of this
     // activity being created when launched.
     private boolean mFirstLoad = true;
 
@@ -171,7 +173,7 @@ public class AlarmClock extends Activity implements LoaderManager.LoaderCallback
         }
 
         // Show action mode if needed
-        int selectedNum = mAdapter.getSelectedItemsNum();
+        final int selectedNum = mAdapter.getSelectedItemsNum();
         if (selectedNum > 0) {
             mActionMode = startActionMode(this);
             setActionModeTitle(selectedNum);
@@ -186,6 +188,7 @@ public class AlarmClock extends Activity implements LoaderManager.LoaderCallback
             showConfirmationDialog();
         }
     }
+
     private void hideUndoBar(boolean animate, MotionEvent event) {
         if (mUndoBar != null) {
             if (event != null && mUndoBar.isEventInToastBar(event)) {
@@ -241,7 +244,7 @@ public class AlarmClock extends Activity implements LoaderManager.LoaderCallback
                 }
                 return true;
             case android.R.id.home:
-                Intent intent = new Intent(this, DeskClock.class);
+                final Intent intent = new Intent(this, DeskClock.class);
                 intent.addFlags(Intent.FLAG_ACTIVITY_CLEAR_TASK | Intent.FLAG_ACTIVITY_CLEAR_TOP);
                 startActivity(intent);
                 return true;
@@ -255,7 +258,7 @@ public class AlarmClock extends Activity implements LoaderManager.LoaderCallback
     @Override
     public boolean onCreateOptionsMenu(Menu menu) {
         getMenuInflater().inflate(R.menu.alarm_list_menu, menu);
-        MenuItem help = menu.findItem(R.id.menu_item_help);
+        final MenuItem help = menu.findItem(R.id.menu_item_help);
         if (help != null) {
             Utils.prepareHelpMenuItem(this, help);
         }
@@ -313,9 +316,15 @@ public class AlarmClock extends Activity implements LoaderManager.LoaderCallback
     public void onLoadFinished(Loader<Cursor> cursorLoader, final Cursor data) {
         mAdapter.swapCursor(data);
         gotoAlarmIfSpecified();
+        // Setting the empty view after swapCursor prevents the view from
+        // flickering on the first run.
+        mAlarmsList.setEmptyView(findViewById(android.R.id.empty));
     }
 
-    /** If an alarm was passed in via intent and goes to that particular alarm in the list. */
+    /**
+     * If an alarm was passed in via intent and goes to that particular alarm in
+     * the list.
+     */
     private void gotoAlarmIfSpecified() {
         final Intent intent = getIntent();
         if (mFirstLoad && intent != null) {
@@ -332,12 +341,12 @@ public class AlarmClock extends Activity implements LoaderManager.LoaderCallback
 
     /**
      * Scroll to alarm with given alarm id.
-     *
+     * 
      * @param alarmId The alarm id to scroll to.
      */
     private void scrollToAlarm(int alarmId) {
         for (int i = 0; i < mAdapter.getCount(); i++) {
-            long id = mAdapter.getItemId(i);
+            final long id = mAdapter.getItemId(i);
             if (id == alarmId) {
                 mAdapter.setNewAlarm(alarmId);
                 mAlarmsList.smoothScrollToPositionFromTop(i, 0);
@@ -388,7 +397,8 @@ public class AlarmClock extends Activity implements LoaderManager.LoaderCallback
     }
 
     /***
-     * On long click, mark/unmark the selected view and activate/deactivate action mode
+     * On long click, mark/unmark the selected view and activate/deactivate
+     * action mode
      */
     @Override
     public boolean onLongClick(View v) {
@@ -399,10 +409,11 @@ public class AlarmClock extends Activity implements LoaderManager.LoaderCallback
     }
 
     /***
-     * Activate/update/close action mode according to the number of selected views.
+     * Activate/update/close action mode according to the number of selected
+     * views.
      */
     private void updateActionMode() {
-        int selectedNum = mAdapter.getSelectedItemsNum();
+        final int selectedNum = mAdapter.getSelectedItemsNum();
         if (mActionMode == null && selectedNum > 0) {
             // Start the action mode
             mActionMode = startActionMode(this);
@@ -421,6 +432,7 @@ public class AlarmClock extends Activity implements LoaderManager.LoaderCallback
 
     /***
      * Display the number of selected items on the action bar in action mode
+     * 
      * @param items - number of selected items
      */
     private void setActionModeTitle(int items) {
@@ -449,7 +461,8 @@ public class AlarmClock extends Activity implements LoaderManager.LoaderCallback
 
         private final boolean mHasVibrator;
 
-        // This determines the order in which it is shown and processed in the UI.
+        // This determines the order in which it is shown and processed in the
+        // UI.
         private final int[] DAY_ORDER;
 
         public class ItemHolder {
@@ -477,15 +490,17 @@ public class AlarmClock extends Activity implements LoaderManager.LoaderCallback
             Alarm alarm;
         }
 
-        // Used for scrolling an expanded item in the list to make sure it is fully visible.
+        // Used for scrolling an expanded item in the list to make sure it is
+        // fully visible.
         private int mScrollAlarmId = -1;
         private final Runnable mScrollRunnable = new Runnable() {
             @Override
             public void run() {
                 if (mScrollAlarmId != -1) {
-                    View v = getViewById(mScrollAlarmId);
+                    final View v = getViewById(mScrollAlarmId);
                     if (v != null) {
-                        Rect rect = new Rect(v.getLeft(), v.getTop(), v.getRight(), v.getBottom());
+                        final Rect rect = new Rect(v.getLeft(), v.getTop(), v.getRight(),
+                                v.getBottom());
                         mList.requestChildRectangleOnScreen(v, rect, false);
                     }
                     mScrollAlarmId = -1;
@@ -500,16 +515,15 @@ public class AlarmClock extends Activity implements LoaderManager.LoaderCallback
             mFactory = LayoutInflater.from(context);
             mList = list;
 
-            DateFormatSymbols dfs = new DateFormatSymbols();
+            final DateFormatSymbols dfs = new DateFormatSymbols();
             mShortWeekDayStrings = dfs.getShortWeekdays();
             mLongWeekDayStrings = dfs.getWeekdays();
 
-            Resources res = mContext.getResources();
+            final Resources res = mContext.getResources();
             mColorLit = res.getColor(R.color.clock_white);
             mColorDim = res.getColor(R.color.clock_gray);
             mBackgroundColorSelected = res.getColor(R.color.alarm_selected_color);
             mBackgroundColor = res.getColor(R.color.alarm_whiteish);
-
 
             mRobotoBold = Typeface.create("sans-serif-condensed", Typeface.BOLD);
             mRobotoNormal = Typeface.create("sans-serif-condensed", Typeface.NORMAL);
@@ -530,11 +544,10 @@ public class AlarmClock extends Activity implements LoaderManager.LoaderCallback
             mHasVibrator = ((Vibrator) context.getSystemService(Context.VIBRATOR_SERVICE))
                     .hasVibrator();
 
-
             DAY_ORDER = new int[7];
             int firstDay = Calendar.getInstance().getFirstDayOfWeek();
             int day;
-            for(day = 0; day < 7; day++)
+            for (day = 0; day < 7; day++)
             {
                 DAY_ORDER[day] = firstDay;
                 firstDay = firstDay % 7 + 1;
@@ -552,7 +565,8 @@ public class AlarmClock extends Activity implements LoaderManager.LoaderCallback
         @Override
         public View getView(int position, View convertView, ViewGroup parent) {
             if (!getCursor().moveToPosition(position)) {
-                // May happen if the last alarm was deleted and the cursor refreshed while the
+                // May happen if the last alarm was deleted and the cursor
+                // refreshed while the
                 // list is updated.
                 Log.v("couldn't move cursor to position " + position);
                 return null;
@@ -561,7 +575,8 @@ public class AlarmClock extends Activity implements LoaderManager.LoaderCallback
             if (convertView == null) {
                 v = newView(mContext, getCursor(), parent);
             } else {
-                // Do a translation check to test for animation. Change this to something more
+                // Do a translation check to test for animation. Change this to
+                // something more
                 // reliable and robust in the future.
                 if (convertView.getTranslationX() != 0 || convertView.getTranslationY() != 0) {
                     // view was animated, reset
@@ -623,7 +638,8 @@ public class AlarmClock extends Activity implements LoaderManager.LoaderCallback
             final ItemHolder itemHolder = (ItemHolder) view.getTag();
             itemHolder.alarm = alarm;
 
-            // We must unset the listener first because this maybe a recycled view so changing the
+            // We must unset the listener first because this maybe a recycled
+            // view so changing the
             // state would affect the wrong alarm.
             itemHolder.onoff.setOnCheckedChangeListener(null);
             itemHolder.onoff.setChecked(alarm.enabled);
@@ -641,7 +657,7 @@ public class AlarmClock extends Activity implements LoaderManager.LoaderCallback
                         @Override
                         public void onCheckedChanged(CompoundButton compoundButton,
                                 boolean checked) {
-                            //When action mode is on - simulate long click
+                            // When action mode is on - simulate long click
                             if (doLongClick(compoundButton)) {
                                 return;
                             }
@@ -661,11 +677,11 @@ public class AlarmClock extends Activity implements LoaderManager.LoaderCallback
             itemHolder.clock.setOnClickListener(new View.OnClickListener() {
                 @Override
                 public void onClick(View view) {
-                    //When action mode is on - simulate long click
+                    // When action mode is on - simulate long click
                     if (doLongClick(view)) {
                         return;
                     }
-                    AlarmUtils.showTimeEditDialog(AlarmClock.this.getFragmentManager(), alarm);
+                    AlarmUtils.showTimeEditDialog(getFragmentManager(), alarm);
                     expandAlarm(itemHolder);
                     itemHolder.alarmItem.post(mScrollRunnable);
                 }
@@ -678,7 +694,7 @@ public class AlarmClock extends Activity implements LoaderManager.LoaderCallback
             itemHolder.infoArea.setOnClickListener(new View.OnClickListener() {
                 @Override
                 public void onClick(View view) {
-                    //When action mode is on - simulate long click
+                    // When action mode is on - simulate long click
                     if (doLongClick(view)) {
                         return;
                     }
@@ -700,7 +716,7 @@ public class AlarmClock extends Activity implements LoaderManager.LoaderCallback
                 itemHolder.daysOfWeek.setOnClickListener(new View.OnClickListener() {
                     @Override
                     public void onClick(View view) {
-                        //When action mode is on - simulate long click
+                        // When action mode is on - simulate long click
                         if (doLongClick(view)) {
                             return;
                         }
@@ -719,11 +735,11 @@ public class AlarmClock extends Activity implements LoaderManager.LoaderCallback
                 itemHolder.label.setVisibility(View.VISIBLE);
                 itemHolder.label.setContentDescription(
                         mContext.getResources().getString(R.string.label_description) + " "
-                        + alarm.label);
+                                + alarm.label);
                 itemHolder.label.setOnClickListener(new View.OnClickListener() {
                     @Override
                     public void onClick(View view) {
-                        //When action mode is on - simulate long click
+                        // When action mode is on - simulate long click
                         if (doLongClick(view)) {
                             return;
                         }
@@ -743,7 +759,7 @@ public class AlarmClock extends Activity implements LoaderManager.LoaderCallback
             view.setOnClickListener(new View.OnClickListener() {
                 @Override
                 public void onClick(View view) {
-                    //When action mode is on - simulate long click
+                    // When action mode is on - simulate long click
                     doLongClick(view);
                 }
             });
@@ -762,7 +778,7 @@ public class AlarmClock extends Activity implements LoaderManager.LoaderCallback
             itemHolder.clickableLabel.setOnClickListener(new View.OnClickListener() {
                 @Override
                 public void onClick(View view) {
-                    //When action mode is on - simulate long click
+                    // When action mode is on - simulate long click
                     if (doLongClick(view)) {
                         return;
                     }
@@ -782,7 +798,7 @@ public class AlarmClock extends Activity implements LoaderManager.LoaderCallback
             itemHolder.repeat.setOnClickListener(new View.OnClickListener() {
                 @Override
                 public void onClick(View view) {
-                    //When action mode is on - simulate long click
+                    // When action mode is on - simulate long click
                     if (doLongClick(view)) {
                         return;
                     }
@@ -797,7 +813,7 @@ public class AlarmClock extends Activity implements LoaderManager.LoaderCallback
                         // Set all days if no previous.
                         final int daysOfWeekCoded = mPreviousDaysOfWeekMap.getInt("" + alarm.id);
                         if (daysOfWeekCoded == 0) {
-                            for (int day : DAY_ORDER) {
+                            for (final int day : DAY_ORDER) {
                                 alarm.daysOfWeek.setDayOfWeek(day, true);
                             }
                         } else {
@@ -827,26 +843,28 @@ public class AlarmClock extends Activity implements LoaderManager.LoaderCallback
                 itemHolder.dayButtonParents[i].setOnClickListener(new View.OnClickListener() {
                     @Override
                     public void onClick(View view) {
-                        //When action mode is on - simulate long click
+                        // When action mode is on - simulate long click
                         if (doLongClick(view)) {
                             return;
                         }
                         itemHolder.dayButtons[buttonIndex].toggle();
                         final boolean checked = itemHolder.dayButtons[buttonIndex].isChecked();
-                        int day = DAY_ORDER[buttonIndex];
+                        final int day = DAY_ORDER[buttonIndex];
                         alarm.daysOfWeek.setDayOfWeek(day, checked);
                         if (checked) {
                             turnOnDayOfWeek(itemHolder, buttonIndex);
                         } else {
                             turnOffDayOfWeek(itemHolder, buttonIndex);
 
-                            // See if this was the last day, if so, un-check the repeat box.
+                            // See if this was the last day, if so, un-check the
+                            // repeat box.
                             if (alarm.daysOfWeek.getCoded() == 0) {
                                 itemHolder.repeatDays.setVisibility(View.GONE);
                                 itemHolder.repeat.setTextColor(mColorDim);
                                 mRepeatChecked.remove(alarm.id);
 
-                                // Remember the set days in case the user wants it back.
+                                // Remember the set days in case the user wants
+                                // it back.
                                 mPreviousDaysOfWeekMap.putInt("" + alarm.id, 0);
                             }
                         }
@@ -854,7 +872,6 @@ public class AlarmClock extends Activity implements LoaderManager.LoaderCallback
                     }
                 });
             }
-
 
             if (!mHasVibrator) {
                 itemHolder.vibrate.setVisibility(View.INVISIBLE);
@@ -874,7 +891,7 @@ public class AlarmClock extends Activity implements LoaderManager.LoaderCallback
                 @Override
                 public void onClick(View v) {
                     final boolean checked = ((CheckBox) v).isChecked();
-                    //When action mode is on - simulate long click
+                    // When action mode is on - simulate long click
                     if (doLongClick(v)) {
                         return;
                     }
@@ -898,7 +915,7 @@ public class AlarmClock extends Activity implements LoaderManager.LoaderCallback
                 @Override
                 public void onClick(View v) {
                     final boolean checked = ((CheckBox) v).isChecked();
-                    //When action mode is on - simulate long click
+                    // When action mode is on - simulate long click
                     if (doLongClick(v)) {
                         return;
                     }
@@ -915,11 +932,11 @@ public class AlarmClock extends Activity implements LoaderManager.LoaderCallback
             itemHolder.collapse.setOnClickListener(new View.OnClickListener() {
                 @Override
                 public void onClick(View v) {
-                    //When action mode is on - simulate long click
+                    // When action mode is on - simulate long click
                     if (doLongClick(v)) {
                         return;
                     }
-                    itemHolder.expandArea.setVisibility(LinearLayout.GONE);
+                    itemHolder.expandArea.setVisibility(View.GONE);
                     itemHolder.infoArea.setVisibility(View.VISIBLE);
                     collapseAlarm(alarm);
                 }
@@ -939,7 +956,7 @@ public class AlarmClock extends Activity implements LoaderManager.LoaderCallback
             itemHolder.ringtone.setOnClickListener(new View.OnClickListener() {
                 @Override
                 public void onClick(View view) {
-                    //When action mode is on - simulate long click
+                    // When action mode is on - simulate long click
                     if (doLongClick(view)) {
                         return;
                     }
@@ -949,10 +966,12 @@ public class AlarmClock extends Activity implements LoaderManager.LoaderCallback
             itemHolder.ringtone.setOnLongClickListener(mLongClickListener);
         }
 
-        // Sets the alpha of the item except the on/off switch. This gives a visual effect
-        // for enabled/disabled alarm while leaving the on/off switch more visible
+        // Sets the alpha of the item except the on/off switch. This gives a
+        // visual effect
+        // for enabled/disabled alarm while leaving the on/off switch more
+        // visible
         private void setItemAlpha(ItemHolder holder, boolean enabled) {
-            float alpha = enabled ? 1f : 0.5f;
+            final float alpha = enabled ? 1f : 0.5f;
             holder.clock.setAlpha(alpha);
             holder.infoArea.setAlpha(alpha);
             holder.expandArea.setAlpha(alpha);
@@ -960,7 +979,7 @@ public class AlarmClock extends Activity implements LoaderManager.LoaderCallback
         }
 
         private void updateDaysOfWeekButtons(ItemHolder holder, Alarm.DaysOfWeek daysOfWeek) {
-            HashSet<Integer> setDays = daysOfWeek.getSetDays();
+            final HashSet<Integer> setDays = daysOfWeek.getSetDays();
             for (int i = 0; i < 7; i++) {
                 if (setDays.contains(DAY_ORDER[i])) {
                     turnOnDayOfWeek(holder, i);
@@ -971,8 +990,8 @@ public class AlarmClock extends Activity implements LoaderManager.LoaderCallback
         }
 
         /***
-         * Simulate a long click to override clicks on view when ActionMode is on
-         * Returns true if handled a long click, false if not
+         * Simulate a long click to override clicks on view when ActionMode is
+         * on Returns true if handled a long click, false if not
          */
         private boolean doLongClick(View v) {
             if (mActionMode == null) {
@@ -988,10 +1007,11 @@ public class AlarmClock extends Activity implements LoaderManager.LoaderCallback
         }
 
         public void toggleSelectState(View v) {
-            // long press could be on the parent view or one of its childs, so find the parent view
+            // long press could be on the parent view or one of its childs, so
+            // find the parent view
             v = getTopParent(v);
             if (v != null) {
-                int id = ((ItemHolder)v.getTag()).alarm.id;
+                final int id = ((ItemHolder) v.getTag()).alarm.id;
                 if (mSelectedAlarms.contains(id)) {
                     mSelectedAlarms.remove(id);
                 } else {
@@ -1023,19 +1043,20 @@ public class AlarmClock extends Activity implements LoaderManager.LoaderCallback
             holder.dayButtons[dayIndex].setTypeface(mRobotoBold);
         }
 
-
         /**
          * Does a read-through cache for ringtone titles.
-         *
+         * 
          * @param uri The uri of the ringtone.
-         * @return The ringtone title. {@literal null} if no matching ringtone found.
+         * @return The ringtone title. {@literal null} if no matching ringtone
+         *         found.
          */
         private String getRingToneTitle(Uri uri) {
             // Try the cache first
             String title = mRingtoneTitleCache.getString(uri.toString());
             if (title == null) {
-                // This is slow because a media player is created during Ringtone object creation.
-                Ringtone ringTone = RingtoneManager.getRingtone(mContext, uri);
+                // This is slow because a media player is created during
+                // Ringtone object creation.
+                final Ringtone ringTone = RingtoneManager.getRingtone(mContext, uri);
                 if (ringTone == null) {
                     return null;
                 }
@@ -1053,7 +1074,7 @@ public class AlarmClock extends Activity implements LoaderManager.LoaderCallback
 
         /**
          * Expands the alarm for editing.
-         *
+         * 
          * @param itemHolder The item holder instance.
          */
         private void expandAlarm(ItemHolder itemHolder) {
@@ -1061,7 +1082,7 @@ public class AlarmClock extends Activity implements LoaderManager.LoaderCallback
             itemHolder.expandArea.setOnClickListener(new View.OnClickListener() {
                 @Override
                 public void onClick(View view) {
-                    //When action mode is on - simulate long click
+                    // When action mode is on - simulate long click
                     doLongClick(view);
                 }
             });
@@ -1088,9 +1109,9 @@ public class AlarmClock extends Activity implements LoaderManager.LoaderCallback
 
         private View getViewById(int id) {
             for (int i = 0; i < mList.getCount(); i++) {
-                View v = mList.getChildAt(i);
+                final View v = mList.getChildAt(i);
                 if (v != null) {
-                    ItemHolder h = (ItemHolder)(v.getTag());
+                    final ItemHolder h = (ItemHolder) (v.getTag());
                     if (h != null && h.alarm.id == id) {
                         return v;
                     }
@@ -1102,7 +1123,7 @@ public class AlarmClock extends Activity implements LoaderManager.LoaderCallback
         public int[] getExpandedArray() {
             final int[] ids = new int[mExpanded.size()];
             int index = 0;
-            for (int id : mExpanded) {
+            for (final int id : mExpanded) {
                 ids[index] = id;
                 index++;
             }
@@ -1112,7 +1133,7 @@ public class AlarmClock extends Activity implements LoaderManager.LoaderCallback
         public int[] getSelectedAlarmsArray() {
             final int[] ids = new int[mSelectedAlarms.size()];
             int index = 0;
-            for (int id : mSelectedAlarms) {
+            for (final int id : mSelectedAlarms) {
                 ids[index] = id;
                 index++;
             }
@@ -1122,7 +1143,7 @@ public class AlarmClock extends Activity implements LoaderManager.LoaderCallback
         public int[] getRepeatArray() {
             final int[] ids = new int[mRepeatChecked.size()];
             int index = 0;
-            for (int id : mRepeatChecked) {
+            for (final int id : mRepeatChecked) {
                 ids[index] = id;
                 index++;
             }
@@ -1134,17 +1155,17 @@ public class AlarmClock extends Activity implements LoaderManager.LoaderCallback
         }
 
         private void buildHashSetFromArray(int[] ids, HashSet<Integer> set) {
-            for (int id : ids) {
+            for (final int id : ids) {
                 set.add(id);
             }
         }
 
         public void deleteSelectedAlarms() {
-            Integer ids [] = new Integer[mSelectedAlarms.size()];
+            final Integer ids[] = new Integer[mSelectedAlarms.size()];
             int index = 0;
-            for (int id : mSelectedAlarms) {
+            for (final int id : mSelectedAlarms) {
                 ids[index] = id;
-                index ++;
+                index++;
             }
             asyncDeleteAlarm(ids);
             clearSelectedAlarms();
@@ -1157,12 +1178,12 @@ public class AlarmClock extends Activity implements LoaderManager.LoaderCallback
     }
 
     private void asyncAddAlarm() {
-        Alarm a = new Alarm();
+        final Alarm a = new Alarm();
         a.alert = RingtoneManager.getActualDefaultRingtoneUri(this, RingtoneManager.TYPE_ALARM);
         asyncAddAlarm(a, true);
     }
 
-    private void asyncDeleteAlarm(final Integer [] alarmIds) {
+    private void asyncDeleteAlarm(final Integer[] alarmIds) {
         final AsyncTask<Integer, Void, Void> deleteTask = new AsyncTask<Integer, Void, Void>() {
             @Override
             protected Void doInBackground(Integer... ids) {
@@ -1215,10 +1236,12 @@ public class AlarmClock extends Activity implements LoaderManager.LoaderCallback
                 mAdapter.setNewAlarm(alarm.id);
                 scrollToAlarm(alarm.id);
 
-                // We need to refresh the first view item because bindView may have been called
-                // before setNewAlarm took effect. In that case, the newly created alarm will not be
+                // We need to refresh the first view item because bindView may
+                // have been called
+                // before setNewAlarm took effect. In that case, the newly
+                // created alarm will not be
                 // expanded.
-                View view = mAlarmsList.getChildAt(0);
+                final View view = mAlarmsList.getChildAt(0);
                 mAdapter.getView(0, view, mAlarmsList);
                 if (showTimePicker) {
                     AlarmUtils.showTimeEditDialog(AlarmClock.this.getFragmentManager(), alarm);
@@ -1253,13 +1276,14 @@ public class AlarmClock extends Activity implements LoaderManager.LoaderCallback
     }
 
     /***
-     * Support for action mode when the user long presses an item in the alarms list
+     * Support for action mode when the user long presses an item in the alarms
+     * list
      */
 
     @Override
     public boolean onActionItemClicked(ActionMode mode, MenuItem item) {
         switch (item.getItemId()) {
-            // Delete selected items and close CAB.
+        // Delete selected items and close CAB.
             case R.id.menu_item_delete_alarm:
                 showConfirmationDialog();
                 break;
@@ -1277,7 +1301,7 @@ public class AlarmClock extends Activity implements LoaderManager.LoaderCallback
 
     @Override
     public void onDestroyActionMode(ActionMode arg0) {
-        if(mAdapter != null) {
+        if (mAdapter != null) {
             mAdapter.clearSelectedAlarms();
         }
         mActionMode = null;
@@ -1293,15 +1317,16 @@ public class AlarmClock extends Activity implements LoaderManager.LoaderCallback
      */
 
     private void showConfirmationDialog() {
-        AlertDialog.Builder b = new AlertDialog.Builder(this);
-        Resources res = getResources();
-        String msg = String.format(res.getQuantityText(R.plurals.alarm_delete_confirmation,
+        final AlertDialog.Builder b = new AlertDialog.Builder(this);
+        final Resources res = getResources();
+        final String msg = String.format(res.getQuantityText(R.plurals.alarm_delete_confirmation,
                 mAdapter.getSelectedItemsNum()).toString());
         b.setCancelable(true).setMessage(msg)
                 .setNegativeButton(res.getString(android.R.string.cancel), this)
                 .setPositiveButton(res.getString(android.R.string.ok), this).show();
         mInDeleteConfirmation = true;
     }
+
     @Override
     public void onClick(DialogInterface dialog, int which) {
         if (which == -1) {
