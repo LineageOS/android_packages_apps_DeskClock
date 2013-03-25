@@ -365,4 +365,7 @@
     <string name="keep_display_on_stopwatch">Не выключать экран</string>
     <string name="keep_display_on_stopwatch_summary">Держать экран включённым, пока секундомер работает</string>
 
+    <!-- Empty list message -->
+    <string name="no_alarms">Будильник не установлен</string>
+
 </resources>
