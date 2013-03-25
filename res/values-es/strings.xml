@@ -350,6 +350,7 @@
     <string name="keep_display_on_stopwatch">Mantener pantalla encendida</string>
     <string name="keep_display_on_stopwatch_summary">La pantalla permanecerá encendida mientras el cronómetro esté en marcha</string>
     <string name="alarm_increasing_volume">Volumen ascendente</string>
+    <string name="no_alarms">No hay alarmas</string>
 
     <!-- CYANOGENMOD ADDITIONS END -->
 </resources>
