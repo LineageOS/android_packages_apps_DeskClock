@@ -1,0 +1,21 @@
+{
+  "comments": [
+    {
+      "key": {
+        "uuid": "AAAAeX//3mY\u003d",
+        "filename": "src/com/android/deskclock/BedtimeCling.java",
+        "patchSetId": 3
+      },
+      "lineNbr": 33,
+      "author": {
+        "id": 1579
+      },
+      "writtenOn": "2013-03-26T20:21:00Z",
+      "side": 1,
+      "message": "please remove this trailing space",
+      "revId": "798b23e9e6df9de5228156c70503b6417d01477c",
+      "serverId": "1ec6b3db-b2c1-4fa4-84a2-4c7efe89ba71",
+      "unresolved": false
+    }
+  ]
+}
