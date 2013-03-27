@@ -69,6 +69,24 @@
       "revId": "798b23e9e6df9de5228156c70503b6417d01477c",
       "serverId": "1ec6b3db-b2c1-4fa4-84a2-4c7efe89ba71",
       "unresolved": false
+    },
+    {
+      "key": {
+        "uuid": "AAAAeX//3DE\u003d",
+        "filename": "src/com/android/deskclock/DigitalClock.java",
+        "patchSetId": 3
+      },
+      "lineNbr": 256,
+      "author": {
+        "id": 3843
+      },
+      "writtenOn": "2013-03-27T19:35:55Z",
+      "side": 1,
+      "message": "I think we don\u0027t have to deal with the cost of TreeSet, because there are only four items. I suggest to use only one iteration, because the source code would be simplier. e.g.: http://pastebin.com/ygipY4VJ\nBut it is not an important thing, the code looks good to me. :)",
+      "parentUuid": "AAAAeX//3KI\u003d",
+      "revId": "798b23e9e6df9de5228156c70503b6417d01477c",
+      "serverId": "1ec6b3db-b2c1-4fa4-84a2-4c7efe89ba71",
+      "unresolved": false
     }
   ]
 }
