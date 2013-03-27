@@ -1,0 +1,21 @@
+{
+  "comments": [
+    {
+      "key": {
+        "uuid": "AAAAeX//3Ok\u003d",
+        "filename": "res/values-it/cm_strings.xml",
+        "patchSetId": 5
+      },
+      "lineNbr": 2,
+      "author": {
+        "id": 3916
+      },
+      "writtenOn": "2013-03-27T04:54:04Z",
+      "side": 1,
+      "message": "One only doubt about this license header: shouldn\u0027t we include the cyanogenmod team here?",
+      "revId": "8458bdb5be8864d296e8cd83b1bbd871c9d29049",
+      "serverId": "1ec6b3db-b2c1-4fa4-84a2-4c7efe89ba71",
+      "unresolved": false
+    }
+  ]
+}
