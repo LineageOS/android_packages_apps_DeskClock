@@ -19,6 +19,24 @@
     },
     {
       "key": {
+        "uuid": "AAAAeX//3Do\u003d",
+        "filename": "src/com/android/deskclock/BedtimeCling.java",
+        "patchSetId": 3
+      },
+      "lineNbr": 33,
+      "author": {
+        "id": 1639
+      },
+      "writtenOn": "2013-03-27T18:29:40Z",
+      "side": 1,
+      "message": "Done",
+      "parentUuid": "AAAAeX//3mY\u003d",
+      "revId": "798b23e9e6df9de5228156c70503b6417d01477c",
+      "serverId": "1ec6b3db-b2c1-4fa4-84a2-4c7efe89ba71",
+      "unresolved": false
+    },
+    {
+      "key": {
         "uuid": "AAAAeX//3Sw\u003d",
         "filename": "src/com/android/deskclock/DigitalClock.java",
         "patchSetId": 3
@@ -30,6 +48,24 @@
       "writtenOn": "2013-03-27T02:43:33Z",
       "side": 1,
       "message": "Suggestion: You can add the formatted date directly to the StringBuilder, the TreeSet is unnecessary.",
+      "revId": "798b23e9e6df9de5228156c70503b6417d01477c",
+      "serverId": "1ec6b3db-b2c1-4fa4-84a2-4c7efe89ba71",
+      "unresolved": false
+    },
+    {
+      "key": {
+        "uuid": "AAAAeX//3KI\u003d",
+        "filename": "src/com/android/deskclock/DigitalClock.java",
+        "patchSetId": 3
+      },
+      "lineNbr": 256,
+      "author": {
+        "id": 1639
+      },
+      "writtenOn": "2013-03-27T18:29:40Z",
+      "side": 1,
+      "message": "The TreeSet is useful for correctly sorting the times. I suppose I could use a List and then sort that later instead, but is the TreeSet that expensive?",
+      "parentUuid": "AAAAeX//3Sw\u003d",
       "revId": "798b23e9e6df9de5228156c70503b6417d01477c",
       "serverId": "1ec6b3db-b2c1-4fa4-84a2-4c7efe89ba71",
       "unresolved": false
