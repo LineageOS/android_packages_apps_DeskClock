@@ -1,0 +1,21 @@
+{
+  "comments": [
+    {
+      "key": {
+        "uuid": "AAAAeX//3Uk\u003d",
+        "filename": "res/values-pl/strings.xml",
+        "patchSetId": 1
+      },
+      "lineNbr": 363,
+      "author": {
+        "id": 3784
+      },
+      "writtenOn": "2013-03-27T02:02:03Z",
+      "side": 1,
+      "message": "That sounds a little weird to me, maybe \"Nie ustawiono ?adnych alarmów\"?",
+      "revId": "dc796ef05858c64aedb4c960f4b9b6cae041b0d1",
+      "serverId": "1ec6b3db-b2c1-4fa4-84a2-4c7efe89ba71",
+      "unresolved": false
+    }
+  ]
+}
