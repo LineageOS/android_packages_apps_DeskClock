@@ -364,4 +364,7 @@
     <string name="keep_display_on_stopwatch">Garder l\'affichage activé</string>
     <string name="keep_display_on_stopwatch_summary">Laisser l\'écran allumé pendant que le chronomètre est en marche</string>
 
+    <!-- Empty list message -->
+    <string name="no_alarms">Aucune alarme définie</string>
+
 </resources>
