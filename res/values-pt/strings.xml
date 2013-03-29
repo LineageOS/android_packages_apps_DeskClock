@@ -347,4 +347,5 @@
     <string name="keep_display_on_stopwatch">Manter a tela ligada</string>
     <string name="keep_display_on_stopwatch_summary">Manter a tela ligada enquanto o cronômetro estiver rodando</string>
     <string name="alarm_increasing_volume">Volume crescente</string>
+    <string name="no_alarms">Nenhum alarme definido</string>
 </resources>
