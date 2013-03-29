@@ -330,4 +330,7 @@
     <string name="timer_delete_confirmation" msgid="2815524107015816453">"Moet hierdie tydhouer uitgevee word?"</string>
     <string name="city_delete_confirmation" msgid="1783441538785676299">"Moet hierdie stad verwyder word?"</string>
     <string name="digital_gadget" msgid="2326954556720571358">"Digitale horlosie"</string>
+
+    <string name="no_alarms">Geen alarm gestel</string>
+
 </resources>
