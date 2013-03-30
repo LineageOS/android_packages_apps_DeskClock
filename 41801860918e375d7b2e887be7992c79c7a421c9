@@ -1,0 +1,21 @@
+{
+  "comments": [
+    {
+      "key": {
+        "uuid": "AAAAeX//17Y\u003d",
+        "filename": "res/values-af/strings.xml",
+        "patchSetId": 1
+      },
+      "lineNbr": 334,
+      "author": {
+        "id": 1576
+      },
+      "writtenOn": "2013-03-30T21:36:09Z",
+      "side": 1,
+      "message": "Geen alarms ingestel nie",
+      "revId": "41801860918e375d7b2e887be7992c79c7a421c9",
+      "serverId": "1ec6b3db-b2c1-4fa4-84a2-4c7efe89ba71",
+      "unresolved": false
+    }
+  ]
+}
