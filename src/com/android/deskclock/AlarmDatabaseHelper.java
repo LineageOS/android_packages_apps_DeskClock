@@ -32,7 +32,7 @@ import android.net.Uri;
 class AlarmDatabaseHelper extends SQLiteOpenHelper {
 
     private static final String DATABASE_NAME = "alarms.db";
-    private static final int DATABASE_VERSION = 6;
+    private static final int DATABASE_VERSION = 8;
 
     public AlarmDatabaseHelper(Context context) {
         super(context, DATABASE_NAME, null, DATABASE_VERSION);
@@ -65,13 +65,9 @@ class AlarmDatabaseHelper extends SQLiteOpenHelper {
         if (Log.LOGV) Log.v("Upgrading alarms database from version " + oldVersion + " to "
                 + currentVersion);
 
-        int upgradeVersion = oldVersion;
+        db.execSQL("DROP TABLE IF EXISTS alarms");
+        onCreate(db);
 
-        if (upgradeVersion == 5) {
-            db.execSQL("ALTER TABLE alarms ADD incvol INTEGER;");
-            db.execSQL("UPDATE alarms SET incvol=0;");
-            upgradeVersion = 6;
-        }
 
         if (Log.LOGV) Log.v("Alarms database upgrade done.");
     }
