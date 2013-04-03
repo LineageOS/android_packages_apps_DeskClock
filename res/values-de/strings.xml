@@ -363,5 +363,8 @@
     <!-- Increasing volume -->
     <string name="alarm_increasing_volume">Ansteigend</string>
 
+    <!-- Empty list message -->
+    <string name="no_alarms">Kein Wecker eingerichtet</string>
+
     <!-- **** CYANOGENMOD ADDITIONS END **** -->
 </resources>
