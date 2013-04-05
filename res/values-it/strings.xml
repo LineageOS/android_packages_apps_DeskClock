@@ -31,7 +31,6 @@
     <string name="default_label" msgid="5590025289805630372">"Allarme"</string>
     <string name="set_alarm" msgid="9148359866152726808">"Imposta allarme"</string>
     <string name="alarm_vibrate" msgid="3476686921490362230">"Vibrazione"</string>
-    <string name="alarm_increasing_volume">Volume incrementale</string>
     <string name="alarm_repeat" msgid="7242985466344233206">"Ripeti"</string>
     <string name="alert" msgid="6506982899651975645">"Suoneria allarme"</string>
     <string name="ringtone" msgid="9110746249688559579">"Suoneria"</string>
@@ -70,8 +69,6 @@
     <string name="analog_gadget" msgid="1670505720837152766">"Orologio analogico"</string>
     <string name="help" msgid="7786263119482654015">"guida"</string>
     <string name="settings" msgid="5849739030579520686">"Impostazioni"</string>
-    <string name="show_status_bar_icon_title">Mostra icona</string>
-    <string name="show_status_bar_icon_summary">Mostra un\'icona nella barra di stato quando è impostata la sveglia</string>
     <string name="snooze_duration_title" msgid="1097309861110780483">"Intervallo ripetizione allarme"</string>
   <plurals name="snooze_duration">
     <item quantity="one" msgid="7406963706727564418">"1 minuto"</item>
@@ -81,12 +78,6 @@
     <item quantity="one" msgid="3783171637798575068">"minuto"</item>
     <item quantity="other" msgid="1304056759541595077">"minuti"</item>
   </plurals>
-    <string name="flip_action_title">Azione capovolgimento</string>
-    <string name="flip_action_dialog_title">Capovolgi dispositivo per\u2026</string>
-    <string name="flip_action_summary">Capovolgere il telefono verso il basso <xliff:g id="action">%s</xliff:g></string>
-    <string name="shake_action_title">Azione scuotimento</string>
-    <string name="shake_action_dialog_title">Agitare il telefono per\u2026</string>
-    <string name="shake_action_summary">Agitare il telefono farà <xliff:g id="action">%s</xliff:g></string>
     <string name="auto_silence_title" msgid="2012754009554434544">"Disattiva suoneria dopo"</string>
     <string name="auto_silence_summary" msgid="7028508740659733028">"<xliff:g id="MINUTES">%d</xliff:g> minuti"</string>
     <string name="auto_silence_never" msgid="4821982647348750809">"Mai"</string>
@@ -114,11 +105,6 @@
     <item msgid="3450979320164769576">"Ignora"</item>
     <item msgid="6302517608411378024">"Nessuna azione"</item>
   </string-array>
-  <string-array name="action_summary_entries">
-    <item>non farà nulla</item>
-    <item>farà posporre l\'allarme</item>
-    <item>farà interrompere l\'allarme</item>
-  </string-array>
     <string name="default_ringtone_setting_title" msgid="4549726190682964245">"Imposta suoneria predefinita"</string>
     <string name="alarm_button_description" msgid="740283647046258651">"Allarmi"</string>
     <string name="gallery_button_description" msgid="1151743663255257668">"Galleria"</string>
@@ -134,6 +120,8 @@
     <string name="loading_ringtone" msgid="6523322777415268044">"Caricamento suoneria..."</string>
     <string name="timer_ring_service_desc" msgid="2620214305660322415">"Servizio di riproduzione dei suoni per i timer impostati in Orologio."</string>
     <string name="control_set_alarm" msgid="2194676418924016327">"Imposta allarme"</string>
+    <!-- no translation found for control_set_alarm_with_existing (3359285346655630660) -->
+    <skip />
     <string name="menu_timer" msgid="6459070074762877114">"Timer"</string>
     <string name="menu_clock" msgid="5612760670606829805">"Orologio"</string>
     <string name="menu_stopwatch" msgid="3396117705293574701">"Cronometro"</string>
@@ -207,9 +195,6 @@
     <string name="cities_activity_title" msgid="8552462751129256730">"Città"</string>
     <string name="alarm_on" msgid="4344630320756422804">"ON"</string>
     <string name="alarm_off" msgid="6478058633710013612">"OFF"</string>
-    <string name="stopwatch_settings">CRONOMETRO</string>
-    <string name="keep_display_on_stopwatch">Tenere il display acceso</string>
-    <string name="keep_display_on_stopwatch_summary">Tenere il display acceso quando il cronometro è in funzione</string>
     <string name="clock_settings" msgid="8887845806151785393">"OROLOGIO"</string>
     <string name="clock_style" msgid="2265011060429742344">"Stile"</string>
   <string-array name="clock_style_entries">
