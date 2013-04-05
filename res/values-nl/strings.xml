@@ -120,6 +120,8 @@
     <string name="loading_ringtone" msgid="6523322777415268044">"Beltoon laden…"</string>
     <string name="timer_ring_service_desc" msgid="2620214305660322415">"Geluidsweergaveservice voor timers ingesteld in Klok."</string>
     <string name="control_set_alarm" msgid="2194676418924016327">"Alarm instellen"</string>
+    <!-- no translation found for control_set_alarm_with_existing (3359285346655630660) -->
+    <skip />
     <string name="menu_timer" msgid="6459070074762877114">"Timer"</string>
     <string name="menu_clock" msgid="5612760670606829805">"Klok"</string>
     <string name="menu_stopwatch" msgid="3396117705293574701">"Stopwatch"</string>
@@ -157,7 +159,7 @@
     <item quantity="other" msgid="7018184076091344797">"<xliff:g id="NUMBER">%d</xliff:g> uur"</item>
   </plurals>
   <plurals name="Nminutes_description">
-    <item quantity="one" msgid="1001391305885322059">"1 minuut"</item>
+    <item quantity="one" msgid="1001391305885322059">"1 minuut"</item>
     <item quantity="other" msgid="6948360065351547776">"<xliff:g id="NUMBER">%d</xliff:g> minuten"</item>
   </plurals>
   <plurals name="Nseconds_description">
@@ -328,25 +330,4 @@
     <string name="timer_delete_confirmation" msgid="2815524107015816453">"Deze timer verwijderen?"</string>
     <string name="city_delete_confirmation" msgid="1783441538785676299">"Deze stad verwijderen?"</string>
     <string name="digital_gadget" msgid="2326954556720571358">"Digitale klok"</string>
-
-    <!-- CYANOGENMOD ADDITIONS: STRINGS -->
-    <string name="show_status_bar_icon_title">Pictogram tonen</string>
-    <string name="show_status_bar_icon_summary">Pictogram tonen in de statusbalk als een alarm is ingesteld</string>
-    <string name="flip_action_title">Omdraai-actie</string>
-    <string name="flip_action_dialog_title">Apparaat omdraaien zal\u2026</string>
-    <string name="flip_action_summary">Omdraaien van uw apparaat zal <xliff:g id="action">%s</xliff:g></string>
-    <string name="shake_action_title">Schudactie</string>
-    <string name="shake_action_dialog_title">Apparaat schudden zal\u2026</string>
-    <string name="shake_action_summary">Schudden van uw apparaat zal <xliff:g id="action">%s</xliff:g></string>
-    <string name="stopwatch_settings">STOPWATCH</string>
-    <string name="keep_display_on_stopwatch">Scherm actief houden</string>
-    <string name="keep_display_on_stopwatch_summary">Scherm actief houden indien stopwatch loopt</string>
-    <string name="alarm_increasing_volume">Toenemend volume</string>
-
-    <!-- CYANOGENMOD ADDITIONS: ARRAYS -->
-    <string-array name="action_summary_entries">
-        <item>niets doen</item>
-        <item>het alarm snoozen</item>
-        <item>het alarm uitschakelen</item>
-    </string-array>
 </resources>
