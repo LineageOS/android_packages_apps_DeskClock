@@ -330,22 +330,4 @@
     <string name="timer_delete_confirmation" msgid="2815524107015816453">"Excluir este temporizador?"</string>
     <string name="city_delete_confirmation" msgid="1783441538785676299">"Remover esta cidade?"</string>
     <string name="digital_gadget" msgid="2326954556720571358">"Relógio digital"</string>
-    <string name="show_status_bar_icon_title">Exibir ícone</string>
-    <string name="show_status_bar_icon_summary">Exibir um ícone na barra de status quando um alarme for definido</string>
-    <string name="flip_action_title">Ação de virar</string>
-    <string name="flip_action_dialog_title">Virar o dispositivo para \u2026</string>
-    <string name="flip_action_summary">Virar o dispositivo irá <xliff:g id="action" xmlns:xliff="urn:oasis:names:tc:xliff:document:1.2">%s</xliff:g></string>
-    <string name="shake_action_title">Ação de agitar</string>
-    <string name="shake_action_dialog_title">Agite o dispositivo para \u2026</string>
-    <string name="shake_action_summary">Agitar o dispositivo irá <xliff:g id="action" xmlns:xliff="urn:oasis:names:tc:xliff:document:1.2">%s</xliff:g></string>
-    <string-array name="action_summary_entries">
-        <item>não fazer nada</item>
-        <item>soneca</item>
-        <item>dispensar</item>
-    </string-array>
-    <string name="stopwatch_settings">CRONÔMETRO</string>
-    <string name="keep_display_on_stopwatch">Manter a tela ligada</string>
-    <string name="keep_display_on_stopwatch_summary">Manter a tela ligada enquanto o cronômetro estiver rodando</string>
-    <string name="alarm_increasing_volume">Volume crescente</string>
-    <string name="no_alarms">Nenhum alarme definido</string>
 </resources>
