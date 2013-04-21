@@ -64,9 +64,6 @@
     <!-- Setting labels on Set alarm screen: Vibration on or off -->
     <string name="alarm_vibrate">Vibrate</string>
 
-    <!-- Setting labels on Set alarm screen: Increasing volume on or off -->
-    <string name="alarm_increasing_volume">Increasing volume</string>
-
     <!-- Setting labels on Set alarm screen: Repeat -->
     <string name="alarm_repeat">Repeat</string>
 
@@ -175,12 +172,6 @@
     <!-- Label for the Settings activity displayed on-screen when that activity must be represented to the user. -->
     <string name="settings">Settings</string>
 
-    <!-- Setting title for showing/hiding the alarm status bar icon -->
-    <string name="show_status_bar_icon_title">Show icon</string>
-
-    <!-- Setting summary for showing/hiding the alarm statusbar icon -->
-    <string name="show_status_bar_icon_summary">Show an icon in the status bar when an alarm is set</string>
-
     <!-- Setting title for changing the snooze duration. -->
     <string name="snooze_duration_title">Snooze length</string>
 
@@ -197,24 +188,6 @@
         <!-- Duration for more than one minute -->
         <item quantity="other">minutes</item>
     </plurals>
-
-    <!-- Setting title for the flip action setting. -->
-    <string name="flip_action_title">Flip action</string>
-
-    <!-- Dialog title of the flip action setting. -->
-    <string name="flip_action_dialog_title">Flip device to\u2026</string>
-
-    <!-- Setting summary for the flip action setting. -->
-    <string name="flip_action_summary">Flipping the phone down will <xliff:g id="action">%s</xliff:g></string>
-
-    <!-- Setting title for the shake action setting. -->
-    <string name="shake_action_title">Shake action</string>
-
-    <!-- Dialog title for the shake action setting. -->
-    <string name="shake_action_dialog_title">Shake device to\u2026</string>
-
-    <!-- Setting summary for the shake action setting. -->
-    <string name="shake_action_summary">Shaking the phone will <xliff:g id="action">%s</xliff:g></string>
 
     <!-- Auto silence preference title -->
     <string name="auto_silence_title">Silence after</string>
@@ -285,15 +258,7 @@
       <item>Snooze</item>
       <item>Dismiss</item>
       <item>Do nothing</item>
-    </string-array>
-
-    <!-- Summary texts for shake and flip actions. Must be ordered by numerical
-         value (do nothing = 0, snooze = 1, dismiss = 2) -->
-    <string-array name="action_summary_entries">
-      <item>do nothing</item>
-      <item>snooze alarm</item>
-      <item>dismiss alarm</item>
-    </string-array>
+      </string-array>
 
     <!-- Values for the side-button setting. -->
     <string-array name="volume_button_setting_values" translatable="false">
@@ -503,10 +468,6 @@
     <string name="alarm_off">OFF</string>
 
     <!-- Settings strings -->
-    <string name="stopwatch_settings">STOPWATCH</string>
-    <string name="keep_display_on_stopwatch">Keep the display on</string>
-    <string name="keep_display_on_stopwatch_summary">Keep the display on while stopwatch is running</string>
-
     <!-- Header in the preferences settings for the section pertaining to clocks on the main fragment -->
     <string name="clock_settings">CLOCK</string>
     <!-- Header for a Clock Dream Setting referring to choosing analog or digital style -->
@@ -808,9 +769,5 @@
     <string name="widget_12_hours_format_m" translatable="false">:mm<font size="15">aa</font></string>
     <string name="widget_24_hours_format_h" translatable="false">kk</string>
     <string name="widget_24_hours_format_m" translatable="false">:mm</string>
-
-    <!-- Empty list message -->
-    <string name="no_alarms">No alarms set</string>
-
 </resources>
 
