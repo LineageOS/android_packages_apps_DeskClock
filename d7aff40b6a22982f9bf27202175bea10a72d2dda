@@ -1,0 +1,11 @@
+Change-Id: Id7aff40b6a22982f9bf27202175bea10a72d2dda
+Code-Review+2: Marco Brohet <therbom@gmail.com>
+Code-Review+1: Dmitriy Chermenev <chdiman86@gmail.com>
+Verified+1: Cid
+Code-Review+1: Vladislav Koldobskiy <nevergone.ru@gmail.com>
+Code-Review+1: Vladimir Belkov <belladimir@gmail.com>
+Submitted-by: Marco Brohet <therbom@gmail.com>
+Submitted-at: Sat, 27 Apr 2013 10:13:10 -0700
+Reviewed-on: http://review.cyanogenmod.org/36467
+Project: CyanogenMod/android_packages_apps_DeskClock
+Branch: refs/heads/cm-10.1
