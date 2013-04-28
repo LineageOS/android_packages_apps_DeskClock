@@ -24,11 +24,6 @@
     <string name="shake_action_title">Azione scuotimento</string>
     <string name="shake_action_dialog_title">Agitare il telefono per\u2026</string>
     <string name="shake_action_summary">Agitare il telefono farà <xliff:g id="action">%s</xliff:g></string>
-  <string-array name="action_summary_entries">
-    <item>non farà nulla</item>
-    <item>farà posporre l\'allarme</item>
-    <item>farà interrompere l\'allarme</item>
-  </string-array>
     <string name="stopwatch_settings">CRONOMETRO</string>
     <string name="keep_display_on_stopwatch">Tenere il display acceso</string>
     <string name="keep_display_on_stopwatch_summary">Tenere il display acceso quando il cronometro è in funzione</string>
