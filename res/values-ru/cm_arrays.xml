@@ -15,8 +15,8 @@
 -->
 <resources xmlns:xliff="urn:oasis:names:tc:xliff:document:1.2">
     <string-array name="action_summary_entries">
-      <item>ne fait rien</item>
-      <item>répète l\'alarme</item>
-      <item>ignore l\'alarme</item>
+      <item>ничего не делать</item>
+      <item>отложить будильник</item>
+      <item>выключить будильник</item>
     </string-array>
 </resources>

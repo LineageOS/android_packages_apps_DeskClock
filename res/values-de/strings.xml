@@ -1,6 +1,5 @@
-<?xml version="1.0" encoding="utf-8"?>
-<!-- Copyright (C) 2007 The Android Open Source Project
-     Copyright (C) 2013 The CyanogenMod Project
+<?xml version="1.0" encoding="UTF-8"?>
+<!--  Copyright (C) 2007 The Android Open Source Project
 
      Licensed under the Apache License, Version 2.0 (the "License");
      you may not use this file except in compliance with the License.
@@ -331,40 +330,4 @@
     <string name="timer_delete_confirmation" msgid="2815524107015816453">"Diesen Timer löschen?"</string>
     <string name="city_delete_confirmation" msgid="1783441538785676299">"Diese Stadt entfernen?"</string>
     <string name="digital_gadget" msgid="2326954556720571358">"Digitaluhr"</string>
-
-    <!-- **** CYANOGENMOD ADDITIONS START **** -->
-
-    <!-- Flip action settings -->
-    <string name="flip_action_title">Aktion beim Umdrehen</string>
-    <string name="flip_action_dialog_title">Beim Umdrehen\u2026</string>
-    <string name="flip_action_summary">Beim Umdrehen des Gerätes <xliff:g id="action">%s</xliff:g></string>
-
-    <!-- Shake action setting -->
-    <string name="shake_action_title">Aktion beim Schütteln</string>
-    <string name="shake_action_dialog_title">Beim Schütteln\u2026</string>
-    <string name="shake_action_summary">Beim Schütteln des Gerätes <xliff:g id="action">%s</xliff:g></string>
-
-    <!-- Summary texts for shake and flip actions -->
-    <string-array name="action_summary_entries">
-      <item>keine Aktion ausführen</item>
-      <item>die Schlummerfunktion aktivieren</item>
-      <item>den Alarm beenden</item>
-    </string-array>
-
-    <!-- Show alarm status bar icon -->
-    <string name="show_status_bar_icon_title">Weckersymbol anzeigen</string>
-    <string name="show_status_bar_icon_summary">Bei aktivem Wecker das Symbol in der Statusleiste anzeigen</string>
-
-    <!-- Stoppwatch - Keep display on -->
-    <string name="stopwatch_settings">STOPPUHR</string>
-    <string name="keep_display_on_stopwatch">Bildschirm aktiv lassen</string>
-    <string name="keep_display_on_stopwatch_summary">Bei laufender Stoppuhr den Bildschirm nicht automatisch ausschalten</string>
-
-    <!-- Increasing volume -->
-    <string name="alarm_increasing_volume">Ansteigend</string>
-
-    <!-- Empty list message -->
-    <string name="no_alarms">Kein Wecker eingerichtet</string>
-
-    <!-- **** CYANOGENMOD ADDITIONS END **** -->
 </resources>
