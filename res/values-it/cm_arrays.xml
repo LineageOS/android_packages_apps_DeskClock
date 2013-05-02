@@ -15,8 +15,8 @@
 -->
 <resources xmlns:xliff="urn:oasis:names:tc:xliff:document:1.2">
     <string-array name="action_summary_entries">
-        <item>non far nulla</item>
-        <item>sospendi allarme</item>
-        <item>spegni allarme</item>
+        <item>non farà nulla</item>
+        <item>farà posporre l\'allarme</item>
+        <item>farà interrompere l\'allarme</item>
     </string-array>
 </resources>
