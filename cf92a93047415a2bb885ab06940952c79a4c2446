@@ -1,0 +1,38 @@
+{
+  "comments": [
+    {
+      "key": {
+        "uuid": "AAAAfX//+nI\u003d",
+        "filename": "res/values-nb/cm_strings.xml",
+        "patchSetId": 1
+      },
+      "lineNbr": 23,
+      "author": {
+        "id": 444
+      },
+      "writtenOn": "2013-05-04T23:04:29Z",
+      "side": 1,
+      "message": "Handling",
+      "revId": "cf92a93047415a2bb885ab06940952c79a4c2446",
+      "serverId": "1ec6b3db-b2c1-4fa4-84a2-4c7efe89ba71",
+      "unresolved": false
+    },
+    {
+      "key": {
+        "uuid": "AAAAfX//+nE\u003d",
+        "filename": "res/values-nb/cm_strings.xml",
+        "patchSetId": 1
+      },
+      "lineNbr": 28,
+      "author": {
+        "id": 444
+      },
+      "writtenOn": "2013-05-04T23:04:29Z",
+      "side": 1,
+      "message": "stoppeklokken",
+      "revId": "cf92a93047415a2bb885ab06940952c79a4c2446",
+      "serverId": "1ec6b3db-b2c1-4fa4-84a2-4c7efe89ba71",
+      "unresolved": false
+    }
+  ]
+}
