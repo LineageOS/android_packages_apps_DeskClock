@@ -25,7 +25,7 @@
     <string name="shake_action_dialog_title">Agitare il telefono per\u2026</string>
     <string name="shake_action_summary">Agitare il telefono <xliff:g id="action">%s</xliff:g></string>
     <string name="stopwatch_settings">CRONOMETRO</string>
-    <string name="keep_display_on_stopwatch">Tenere il display acceso</string>
-    <string name="keep_display_on_stopwatch_summary">Tenere il display acceso quando il cronometro è in funzione</string>
+    <string name="keep_display_on_stopwatch">Tieni display attivo</string>
+    <string name="keep_display_on_stopwatch_summary">Tieni il display attivo quando il cronometro è in funzione</string>
     <string name="no_alarms">Nessun allarme impostato</string>
 </resources>
