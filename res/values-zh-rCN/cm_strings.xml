@@ -26,4 +26,5 @@
     <string name="stopwatch_settings">秒表</string>
     <string name="keep_display_on_stopwatch">保持屏幕开启</string>
     <string name="keep_display_on_stopwatch_summary">秒表运行时不让屏幕自动关闭</string>
+    <string name="no_alarms">尚未设定闹钟</string>
 </resources>
