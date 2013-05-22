@@ -64,4 +64,10 @@
     <string name="cities_delete_city_title">Delete city</string>
     <string name="cities_delete_city_msg">Do you want to delete <xliff:g id="city">%s</xliff:g>?</string>
     <string name="cities_delete_city_failed">Can\'t delete the city</string>
+
+    <!-- Accessibility labels for alarm buttons -->
+    <string name="profile_description">Profile <xliff:g id="profile">%s</xliff:g></string>
+
+    <!-- No profile selected label -->
+    <string name="profile_no_selected">No profile selected</string>
 </resources>
