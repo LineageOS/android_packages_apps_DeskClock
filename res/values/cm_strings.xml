@@ -48,4 +48,10 @@
 
     <!-- Empty list message -->
     <string name="no_alarms">No alarms set</string>
+
+    <!-- Accessibility labels for alarm buttons -->
+    <string name="profile_description">Profile <xliff:g id="profile">%s</xliff:g></string>
+
+    <!-- No profile selected label -->
+    <string name="profile_no_selected">No profile selected</string>
 </resources>

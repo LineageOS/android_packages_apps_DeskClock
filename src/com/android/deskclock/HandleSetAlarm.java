@@ -23,6 +23,7 @@ import static android.provider.AlarmClock.EXTRA_MINUTES;
 import static android.provider.AlarmClock.EXTRA_SKIP_UI;
 
 import android.app.Activity;
+import android.app.ProfileManager;
 import android.content.ContentResolver;
 import android.content.ContentValues;
 import android.content.Intent;
@@ -90,6 +91,7 @@ public class HandleSetAlarm extends Activity {
         values.put(Alarm.Columns.DAYS_OF_WEEK, 0);
         values.put(Alarm.Columns.ALARM_TIME, timeInMillis);
         values.put(Alarm.Columns.INCREASING_VOLUME, 0);
+        values.put(Alarm.Columns.PROFILE, String.valueOf(ProfileManager.NO_PROFILE));
 
         ContentResolver cr = getContentResolver();
         Uri result = cr.insert(Alarm.Columns.CONTENT_URI, values);
