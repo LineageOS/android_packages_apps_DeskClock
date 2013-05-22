@@ -19,6 +19,7 @@ package com.android.deskclock;
 import android.app.AlarmManager;
 import android.app.NotificationManager;
 import android.app.PendingIntent;
+import android.app.ProfileManager;
 import android.content.ContentResolver;
 import android.content.ContentUris;
 import android.content.ContentValues;
@@ -193,6 +194,11 @@ public class Alarms {
                 : alarm.alert.toString());
 
         values.put(Alarm.Columns.INCREASING_VOLUME, alarm.increasingVolume);
+
+        // A null profile string indicates that profile mustn't be changed
+        values.put(Alarm.Columns.PROFILE, alarm.profile == null
+                ? String.valueOf(ProfileManager.NO_PROFILE)
+                : alarm.profile.toString());
 
         return values;
     }

@@ -16,6 +16,7 @@
 
 package com.android.deskclock;
 
+import android.app.ProfileManager;
 import android.content.ContentUris;
 import android.content.ContentValues;
 import android.content.Context;
@@ -32,7 +33,7 @@ import android.net.Uri;
 class AlarmDatabaseHelper extends SQLiteOpenHelper {
 
     private static final String DATABASE_NAME = "alarms.db";
-    private static final int DATABASE_VERSION = 6;
+    private static final int DATABASE_VERSION = 7;
 
     public AlarmDatabaseHelper(Context context) {
         super(context, DATABASE_NAME, null, DATABASE_VERSION);
@@ -50,14 +51,17 @@ class AlarmDatabaseHelper extends SQLiteOpenHelper {
                    "vibrate INTEGER, " +
                    "message TEXT, " +
                    "alert TEXT, " +
-                   "incvol INTEGER);");
+                   "incvol INTEGER, " +
+                   "profile TEXT);");
 
         // insert default alarms
         String insertMe = "INSERT INTO alarms " +
                 "(hour, minutes, daysofweek, alarmtime, enabled, vibrate, " +
-                " message, alert, incvol) VALUES ";
-        db.execSQL(insertMe + "(8, 30, 31, 0, 0, 1, '', '', 0);");
-        db.execSQL(insertMe + "(9, 00, 96, 0, 0, 1, '', '', 0);");
+                " message, alert, incvol, profile) VALUES ";
+        db.execSQL(insertMe +
+                String.format("(8, 30, 31, 0, 0, 1, '', '', 0, '%s');", ProfileManager.NO_PROFILE));
+        db.execSQL(insertMe +
+                String.format("(9, 00, 96, 0, 0, 1, '', '', 0, '%s');", ProfileManager.NO_PROFILE));
     }
 
     @Override
@@ -71,6 +75,11 @@ class AlarmDatabaseHelper extends SQLiteOpenHelper {
             db.execSQL("ALTER TABLE alarms ADD incvol INTEGER;");
             db.execSQL("UPDATE alarms SET incvol=0;");
             upgradeVersion = 6;
+        }
+        if (upgradeVersion == 6) {
+            db.execSQL("ALTER TABLE alarms ADD profile TEXT;");
+            db.execSQL(String.format("UPDATE alarms SET profile='%s';", ProfileManager.NO_PROFILE));
+            upgradeVersion = 7;
         }
 
         if (Log.LOGV) Log.v("Alarms database upgrade done.");
