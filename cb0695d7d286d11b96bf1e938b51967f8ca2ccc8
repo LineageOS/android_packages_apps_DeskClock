@@ -1,0 +1,21 @@
+{
+  "comments": [
+    {
+      "key": {
+        "uuid": "iMAOEuU",
+        "filename": "Android.mk",
+        "patchSetId": 1
+      },
+      "lineNbr": 15,
+      "author": {
+        "id": 1576
+      },
+      "writtenOn": "2013-05-23T04:04:52Z",
+      "side": 0,
+      "message": "Is the SDK version not required?  This app will not work on 4.1 or earlier versions since it uses a widget type and the textclock object that did not exist in previous versions of Android",
+      "revId": "cb0695d7d286d11b96bf1e938b51967f8ca2ccc8",
+      "serverId": "1ec6b3db-b2c1-4fa4-84a2-4c7efe89ba71",
+      "unresolved": false
+    }
+  ]
+}
