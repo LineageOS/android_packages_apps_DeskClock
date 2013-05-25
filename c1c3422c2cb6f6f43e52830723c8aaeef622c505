@@ -1,0 +1,327 @@
+{
+  "comments": [
+    {
+      "key": {
+        "uuid": "iMFF8Rc",
+        "filename": "src/com/android/deskclock/Alarm.java",
+        "patchSetId": 1
+      },
+      "lineNbr": 190,
+      "author": {
+        "id": 1063
+      },
+      "writtenOn": "2013-05-25T15:53:35Z",
+      "side": 1,
+      "message": "Alignment missing",
+      "revId": "c1c3422c2cb6f6f43e52830723c8aaeef622c505",
+      "serverId": "1ec6b3db-b2c1-4fa4-84a2-4c7efe89ba71",
+      "unresolved": false
+    },
+    {
+      "key": {
+        "uuid": "iKFLHSs",
+        "filename": "src/com/android/deskclock/Alarm.java",
+        "patchSetId": 1
+      },
+      "lineNbr": 205,
+      "author": {
+        "id": 1063
+      },
+      "writtenOn": "2013-05-25T15:53:35Z",
+      "side": 1,
+      "message": "Should probably also include profile here?",
+      "revId": "c1c3422c2cb6f6f43e52830723c8aaeef622c505",
+      "serverId": "1ec6b3db-b2c1-4fa4-84a2-4c7efe89ba71",
+      "unresolved": false
+    },
+    {
+      "key": {
+        "uuid": "iIFIGS8",
+        "filename": "src/com/android/deskclock/Alarm.java",
+        "patchSetId": 1
+      },
+      "lineNbr": 243,
+      "author": {
+        "id": 1063
+      },
+      "writtenOn": "2013-05-25T15:53:35Z",
+      "side": 1,
+      "message": "Catching IllegalArgumentException is sufficient here.",
+      "revId": "c1c3422c2cb6f6f43e52830723c8aaeef622c505",
+      "serverId": "1ec6b3db-b2c1-4fa4-84a2-4c7efe89ba71",
+      "unresolved": false
+    },
+    {
+      "key": {
+        "uuid": "iGFVBcU",
+        "filename": "src/com/android/deskclock/AlarmClock.java",
+        "patchSetId": 1
+      },
+      "lineNbr": 425,
+      "author": {
+        "id": 1063
+      },
+      "writtenOn": "2013-05-25T15:53:35Z",
+      "side": 1,
+      "message": "I think this can be collapsed:\n\nintent.putExtra(ProfileManager.EXTRA_PROFILE_EXISTING_UUID,\n        String.valueOf(alarm.profile \u003d\u003d null ? ProfileManager.NO_PROFILE : alarm.profile));",
+      "revId": "c1c3422c2cb6f6f43e52830723c8aaeef622c505",
+      "serverId": "1ec6b3db-b2c1-4fa4-84a2-4c7efe89ba71",
+      "unresolved": false
+    },
+    {
+      "key": {
+        "uuid": "iEFSAd8",
+        "filename": "src/com/android/deskclock/AlarmClock.java",
+        "patchSetId": 1
+      },
+      "lineNbr": 434,
+      "author": {
+        "id": 1063
+      },
+      "writtenOn": "2013-05-25T15:53:35Z",
+      "side": 1,
+      "message": "How can mProfileManager be \u003d\u003d null?",
+      "revId": "c1c3422c2cb6f6f43e52830723c8aaeef622c505",
+      "serverId": "1ec6b3db-b2c1-4fa4-84a2-4c7efe89ba71",
+      "unresolved": false
+    },
+    {
+      "key": {
+        "uuid": "iCFe7ek",
+        "filename": "src/com/android/deskclock/AlarmClock.java",
+        "patchSetId": 1
+      },
+      "lineNbr": 438,
+      "author": {
+        "id": 1063
+      },
+      "writtenOn": "2013-05-25T15:53:35Z",
+      "side": 1,
+      "message": "Space missing before {",
+      "revId": "c1c3422c2cb6f6f43e52830723c8aaeef622c505",
+      "serverId": "1ec6b3db-b2c1-4fa4-84a2-4c7efe89ba71",
+      "unresolved": false
+    },
+    {
+      "key": {
+        "uuid": "iAFj6bI",
+        "filename": "src/com/android/deskclock/AlarmClock.java",
+        "patchSetId": 1
+      },
+      "lineNbr": 442,
+      "author": {
+        "id": 1063
+      },
+      "writtenOn": "2013-05-25T15:53:35Z",
+      "side": 1,
+      "message": "getName() can\u0027t be null AFAICT, can it?",
+      "revId": "c1c3422c2cb6f6f43e52830723c8aaeef622c505",
+      "serverId": "1ec6b3db-b2c1-4fa4-84a2-4c7efe89ba71",
+      "unresolved": false
+    },
+    {
+      "key": {
+        "uuid": "iOFX1cg",
+        "filename": "src/com/android/deskclock/AlarmClock.java",
+        "patchSetId": 1
+      },
+      "lineNbr": 468,
+      "author": {
+        "id": 1063
+      },
+      "writtenOn": "2013-05-25T15:53:35Z",
+      "side": 1,
+      "message": "As above, only IllegalArgumentException should be catched.",
+      "revId": "c1c3422c2cb6f6f43e52830723c8aaeef622c505",
+      "serverId": "1ec6b3db-b2c1-4fa4-84a2-4c7efe89ba71",
+      "unresolved": false
+    },
+    {
+      "key": {
+        "uuid": "iMFc0e8",
+        "filename": "src/com/android/deskclock/AlarmClock.java",
+        "patchSetId": 1
+      },
+      "lineNbr": 469,
+      "author": {
+        "id": 1063
+      },
+      "writtenOn": "2013-05-25T15:53:35Z",
+      "side": 1,
+      "message": "No need to print the exception here as it\u0027s clear what went wrong. Shouldn\u0027t mSelectedAlarm.profile be set to NO_PROFILE here as well?",
+      "revId": "c1c3422c2cb6f6f43e52830723c8aaeef622c505",
+      "serverId": "1ec6b3db-b2c1-4fa4-84a2-4c7efe89ba71",
+      "unresolved": false
+    },
+    {
+      "key": {
+        "uuid": "iKFy-Xo",
+        "filename": "src/com/android/deskclock/AlarmClock.java",
+        "patchSetId": 1
+      },
+      "lineNbr": 546,
+      "author": {
+        "id": 1063
+      },
+      "writtenOn": "2013-05-25T15:53:35Z",
+      "side": 1,
+      "message": "This null check seems unnecessary.",
+      "revId": "c1c3422c2cb6f6f43e52830723c8aaeef622c505",
+      "serverId": "1ec6b3db-b2c1-4fa4-84a2-4c7efe89ba71",
+      "unresolved": false
+    },
+    {
+      "key": {
+        "uuid": "iIFv.ZE",
+        "filename": "src/com/android/deskclock/AlarmClock.java",
+        "patchSetId": 1
+      },
+      "lineNbr": 1083,
+      "author": {
+        "id": 1063
+      },
+      "writtenOn": "2013-05-25T15:53:35Z",
+      "side": 1,
+      "message": "R.string.profile_description should be made formattable:\n\u003cstring name\u003d\"profile_description\"\u003eProfile \u003cxliff:g id\u003d\"profile\"\u003e%s\u003c/xliff:g\u003e\u003c/string\u003e\n\nso that the formatting can be localized, if required. It also simplifies the code:\n\nitemHolder.profile.setContentDescription(mContext.getResources().getString(R.string.profile_description, profile));",
+      "revId": "c1c3422c2cb6f6f43e52830723c8aaeef622c505",
+      "serverId": "1ec6b3db-b2c1-4fa4-84a2-4c7efe89ba71",
+      "unresolved": false
+    },
+    {
+      "key": {
+        "uuid": "iGFs5Zw",
+        "filename": "src/com/android/deskclock/AlarmReceiver.java",
+        "patchSetId": 1
+      },
+      "lineNbr": 254,
+      "author": {
+        "id": 1063
+      },
+      "writtenOn": "2013-05-25T15:53:35Z",
+      "side": 1,
+      "message": "This code would probably be better readable when reducing nesting depth:\n\nif (alarm.profile \u003d\u003d null || alarm.profile.equals(ProfileManager.NO_PROFILE) {\n    Log.v(TAG, \"Alarm doesn\u0027t define a profile\");\n    return;\n}\n\n(same for the other conditions)",
+      "revId": "c1c3422c2cb6f6f43e52830723c8aaeef622c505",
+      "serverId": "1ec6b3db-b2c1-4fa4-84a2-4c7efe89ba71",
+      "unresolved": false
+    },
+    {
+      "key": {
+        "uuid": "iEFp4Yo",
+        "filename": "src/com/android/deskclock/AlarmReceiver.java",
+        "patchSetId": 1
+      },
+      "lineNbr": 257,
+      "author": {
+        "id": 1063
+      },
+      "writtenOn": "2013-05-25T15:53:35Z",
+      "side": 1,
+      "message": "Can this happen?",
+      "revId": "c1c3422c2cb6f6f43e52830723c8aaeef622c505",
+      "serverId": "1ec6b3db-b2c1-4fa4-84a2-4c7efe89ba71",
+      "unresolved": false
+    },
+    {
+      "key": {
+        "uuid": "iCEFzcE",
+        "filename": "src/com/android/deskclock/AlarmReceiver.java",
+        "patchSetId": 1
+      },
+      "lineNbr": 261,
+      "author": {
+        "id": 1063
+      },
+      "writtenOn": "2013-05-25T15:53:35Z",
+      "side": 1,
+      "message": "if (isProfilesEnabled) {",
+      "revId": "c1c3422c2cb6f6f43e52830723c8aaeef622c505",
+      "serverId": "1ec6b3db-b2c1-4fa4-84a2-4c7efe89ba71",
+      "unresolved": false
+    },
+    {
+      "key": {
+        "uuid": "iOEOteQ",
+        "filename": "src/com/android/deskclock/AlarmReceiver.java",
+        "patchSetId": 1
+      },
+      "lineNbr": 266,
+      "author": {
+        "id": 1063
+      },
+      "writtenOn": "2013-05-25T15:53:35Z",
+      "side": 1,
+      "message": "not exists -\u003e does not exist",
+      "revId": "c1c3422c2cb6f6f43e52830723c8aaeef622c505",
+      "serverId": "1ec6b3db-b2c1-4fa4-84a2-4c7efe89ba71",
+      "unresolved": false
+    },
+    {
+      "key": {
+        "uuid": "iAEKydI",
+        "filename": "src/com/android/deskclock/AlarmReceiver.java",
+        "patchSetId": 1
+      },
+      "lineNbr": 269,
+      "author": {
+        "id": 1063
+      },
+      "writtenOn": "2013-05-25T15:53:35Z",
+      "side": 1,
+      "message": "} else {",
+      "revId": "c1c3422c2cb6f6f43e52830723c8aaeef622c505",
+      "serverId": "1ec6b3db-b2c1-4fa4-84a2-4c7efe89ba71",
+      "unresolved": false
+    },
+    {
+      "key": {
+        "uuid": "iMETsQw",
+        "filename": "src/com/android/deskclock/AlarmReceiver.java",
+        "patchSetId": 1
+      },
+      "lineNbr": 273,
+      "author": {
+        "id": 1063
+      },
+      "writtenOn": "2013-05-25T15:53:35Z",
+      "side": 1,
+      "message": "The activeProfile !\u003d null check is useless.",
+      "revId": "c1c3422c2cb6f6f43e52830723c8aaeef622c505",
+      "serverId": "1ec6b3db-b2c1-4fa4-84a2-4c7efe89ba71",
+      "unresolved": false
+    },
+    {
+      "key": {
+        "uuid": "iKH53co",
+        "filename": "src/com/android/deskclock/AlarmReceiver.java",
+        "patchSetId": 1
+      },
+      "lineNbr": 278,
+      "author": {
+        "id": 1063
+      },
+      "writtenOn": "2013-05-25T15:53:35Z",
+      "side": 1,
+      "message": "requesting -\u003e requested",
+      "revId": "c1c3422c2cb6f6f43e52830723c8aaeef622c505",
+      "serverId": "1ec6b3db-b2c1-4fa4-84a2-4c7efe89ba71",
+      "unresolved": false
+    },
+    {
+      "key": {
+        "uuid": "iEEAwao",
+        "filename": "src/com/android/deskclock/AlarmReceiver.java",
+        "patchSetId": 1
+      },
+      "lineNbr": 282,
+      "author": {
+        "id": 1063
+      },
+      "writtenOn": "2013-05-25T15:53:35Z",
+      "side": 1,
+      "message": "What exception is supposed to be catched here? Catch-all clauses shouldn\u0027t be used. (also, space missing before catch)",
+      "revId": "c1c3422c2cb6f6f43e52830723c8aaeef622c505",
+      "serverId": "1ec6b3db-b2c1-4fa4-84a2-4c7efe89ba71",
+      "unresolved": false
+    }
+  ]
+}
