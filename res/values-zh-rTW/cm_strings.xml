@@ -1,0 +1,30 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!-- Copyright (C) 2012-2013 The CyanogenMod Project
+
+     Licensed under the Apache License, Version 2.0 (the "License");
+     you may not use this file except in compliance with the License.
+     You may obtain a copy of the License at
+
+          http://www.apache.org/licenses/LICENSE-2.0
+
+     Unless required by applicable law or agreed to in writing, software
+     distributed under the License is distributed on an "AS IS" BASIS,
+     WITHOUT WARRANTIES OR CONDITIONS OF ANY KIND, either express or implied.
+     See the License for the specific language governing permissions and
+     limitations under the License.
+-->
+<resources xmlns:xliff="urn:oasis:names:tc:xliff:document:1.2">
+    <string name="alarm_increasing_volume">音量漸增</string>
+    <string name="show_status_bar_icon_title">顯示圖標</string>
+    <string name="show_status_bar_icon_summary">當鬧鐘已設定時，在狀態欄顯示圖標</string>
+    <string name="flip_action_title">翻轉動作</string>
+    <string name="flip_action_dialog_title">翻轉設備以\u2026</string>
+    <string name="flip_action_summary">翻轉手機將會<xliff:g id="action">%s</xliff:g></string>
+    <string name="shake_action_title">搖動動作</string>
+    <string name="shake_action_dialog_title">搖動設備以\u2026</string>
+    <string name="shake_action_summary">搖動手機將會<xliff:g id="action">%s</xliff:g></string>
+    <string name="stopwatch_settings">碼表</string>
+    <string name="keep_display_on_stopwatch">保持螢幕開啟</string>
+    <string name="keep_display_on_stopwatch_summary">當碼表運行時，保持螢幕開啟</string>
+    <string name="no_alarms">尚未設定鬧鐘</string>
+</resources>
