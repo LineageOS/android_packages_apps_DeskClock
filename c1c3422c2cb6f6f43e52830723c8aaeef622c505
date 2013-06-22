@@ -19,6 +19,24 @@
     },
     {
       "key": {
+        "uuid": "iCtVjU8",
+        "filename": "src/com/android/deskclock/Alarm.java",
+        "patchSetId": 1
+      },
+      "lineNbr": 190,
+      "author": {
+        "id": 3134
+      },
+      "writtenOn": "2013-06-22T22:35:32Z",
+      "side": 1,
+      "message": "Done",
+      "parentUuid": "iMFF8Rc",
+      "revId": "c1c3422c2cb6f6f43e52830723c8aaeef622c505",
+      "serverId": "1ec6b3db-b2c1-4fa4-84a2-4c7efe89ba71",
+      "unresolved": false
+    },
+    {
+      "key": {
         "uuid": "iKFLHSs",
         "filename": "src/com/android/deskclock/Alarm.java",
         "patchSetId": 1
@@ -30,6 +48,24 @@
       "writtenOn": "2013-05-25T15:53:35Z",
       "side": 1,
       "message": "Should probably also include profile here?",
+      "revId": "c1c3422c2cb6f6f43e52830723c8aaeef622c505",
+      "serverId": "1ec6b3db-b2c1-4fa4-84a2-4c7efe89ba71",
+      "unresolved": false
+    },
+    {
+      "key": {
+        "uuid": "iAtSyWc",
+        "filename": "src/com/android/deskclock/Alarm.java",
+        "patchSetId": 1
+      },
+      "lineNbr": 205,
+      "author": {
+        "id": 3134
+      },
+      "writtenOn": "2013-06-22T22:35:32Z",
+      "side": 1,
+      "message": "Done",
+      "parentUuid": "iKFLHSs",
       "revId": "c1c3422c2cb6f6f43e52830723c8aaeef622c505",
       "serverId": "1ec6b3db-b2c1-4fa4-84a2-4c7efe89ba71",
       "unresolved": false
@@ -53,6 +89,24 @@
     },
     {
       "key": {
+        "uuid": "iOtOdcA",
+        "filename": "src/com/android/deskclock/Alarm.java",
+        "patchSetId": 1
+      },
+      "lineNbr": 243,
+      "author": {
+        "id": 3134
+      },
+      "writtenOn": "2013-06-22T22:35:32Z",
+      "side": 1,
+      "message": "Done",
+      "parentUuid": "iIFIGS8",
+      "revId": "c1c3422c2cb6f6f43e52830723c8aaeef622c505",
+      "serverId": "1ec6b3db-b2c1-4fa4-84a2-4c7efe89ba71",
+      "unresolved": false
+    },
+    {
+      "key": {
         "uuid": "iGFVBcU",
         "filename": "src/com/android/deskclock/AlarmClock.java",
         "patchSetId": 1
@@ -64,6 +118,24 @@
       "writtenOn": "2013-05-25T15:53:35Z",
       "side": 1,
       "message": "I think this can be collapsed:\n\nintent.putExtra(ProfileManager.EXTRA_PROFILE_EXISTING_UUID,\n        String.valueOf(alarm.profile \u003d\u003d null ? ProfileManager.NO_PROFILE : alarm.profile));",
+      "revId": "c1c3422c2cb6f6f43e52830723c8aaeef622c505",
+      "serverId": "1ec6b3db-b2c1-4fa4-84a2-4c7efe89ba71",
+      "unresolved": false
+    },
+    {
+      "key": {
+        "uuid": "iMtLsa8",
+        "filename": "src/com/android/deskclock/AlarmClock.java",
+        "patchSetId": 1
+      },
+      "lineNbr": 425,
+      "author": {
+        "id": 3134
+      },
+      "writtenOn": "2013-06-22T22:35:32Z",
+      "side": 1,
+      "message": "Done",
+      "parentUuid": "iGFVBcU",
       "revId": "c1c3422c2cb6f6f43e52830723c8aaeef622c505",
       "serverId": "1ec6b3db-b2c1-4fa4-84a2-4c7efe89ba71",
       "unresolved": false
@@ -87,6 +159,24 @@
     },
     {
       "key": {
+        "uuid": "iKvHXRE",
+        "filename": "src/com/android/deskclock/AlarmClock.java",
+        "patchSetId": 1
+      },
+      "lineNbr": 434,
+      "author": {
+        "id": 3134
+      },
+      "writtenOn": "2013-06-22T22:35:32Z",
+      "side": 1,
+      "message": "Done",
+      "parentUuid": "iEFSAd8",
+      "revId": "c1c3422c2cb6f6f43e52830723c8aaeef622c505",
+      "serverId": "1ec6b3db-b2c1-4fa4-84a2-4c7efe89ba71",
+      "unresolved": false
+    },
+    {
+      "key": {
         "uuid": "iCFe7ek",
         "filename": "src/com/android/deskclock/AlarmClock.java",
         "patchSetId": 1
@@ -98,6 +188,24 @@
       "writtenOn": "2013-05-25T15:53:35Z",
       "side": 1,
       "message": "Space missing before {",
+      "revId": "c1c3422c2cb6f6f43e52830723c8aaeef622c505",
+      "serverId": "1ec6b3db-b2c1-4fa4-84a2-4c7efe89ba71",
+      "unresolved": false
+    },
+    {
+      "key": {
+        "uuid": "iIvMmTY",
+        "filename": "src/com/android/deskclock/AlarmClock.java",
+        "patchSetId": 1
+      },
+      "lineNbr": 438,
+      "author": {
+        "id": 3134
+      },
+      "writtenOn": "2013-06-22T22:35:32Z",
+      "side": 1,
+      "message": "Done",
+      "parentUuid": "iCFe7ek",
       "revId": "c1c3422c2cb6f6f43e52830723c8aaeef622c505",
       "serverId": "1ec6b3db-b2c1-4fa4-84a2-4c7efe89ba71",
       "unresolved": false
@@ -121,6 +229,24 @@
     },
     {
       "key": {
+        "uuid": "iGvRRc0",
+        "filename": "src/com/android/deskclock/AlarmClock.java",
+        "patchSetId": 1
+      },
+      "lineNbr": 442,
+      "author": {
+        "id": 3134
+      },
+      "writtenOn": "2013-06-22T22:35:32Z",
+      "side": 1,
+      "message": "Done",
+      "parentUuid": "iAFj6bI",
+      "revId": "c1c3422c2cb6f6f43e52830723c8aaeef622c505",
+      "serverId": "1ec6b3db-b2c1-4fa4-84a2-4c7efe89ba71",
+      "unresolved": false
+    },
+    {
+      "key": {
         "uuid": "iOFX1cg",
         "filename": "src/com/android/deskclock/AlarmClock.java",
         "patchSetId": 1
@@ -132,6 +258,24 @@
       "writtenOn": "2013-05-25T15:53:35Z",
       "side": 1,
       "message": "As above, only IllegalArgumentException should be catched.",
+      "revId": "c1c3422c2cb6f6f43e52830723c8aaeef622c505",
+      "serverId": "1ec6b3db-b2c1-4fa4-84a2-4c7efe89ba71",
+      "unresolved": false
+    },
+    {
+      "key": {
+        "uuid": "iEvWgcY",
+        "filename": "src/com/android/deskclock/AlarmClock.java",
+        "patchSetId": 1
+      },
+      "lineNbr": 468,
+      "author": {
+        "id": 3134
+      },
+      "writtenOn": "2013-06-22T22:35:32Z",
+      "side": 1,
+      "message": "Done",
+      "parentUuid": "iOFX1cg",
       "revId": "c1c3422c2cb6f6f43e52830723c8aaeef622c505",
       "serverId": "1ec6b3db-b2c1-4fa4-84a2-4c7efe89ba71",
       "unresolved": false
@@ -155,6 +299,24 @@
     },
     {
       "key": {
+        "uuid": "iCvcbeM",
+        "filename": "src/com/android/deskclock/AlarmClock.java",
+        "patchSetId": 1
+      },
+      "lineNbr": 469,
+      "author": {
+        "id": 3134
+      },
+      "writtenOn": "2013-06-22T22:35:32Z",
+      "side": 1,
+      "message": "Done",
+      "parentUuid": "iMFc0e8",
+      "revId": "c1c3422c2cb6f6f43e52830723c8aaeef622c505",
+      "serverId": "1ec6b3db-b2c1-4fa4-84a2-4c7efe89ba71",
+      "unresolved": false
+    },
+    {
+      "key": {
         "uuid": "iKFy-Xo",
         "filename": "src/com/android/deskclock/AlarmClock.java",
         "patchSetId": 1
@@ -166,6 +328,24 @@
       "writtenOn": "2013-05-25T15:53:35Z",
       "side": 1,
       "message": "This null check seems unnecessary.",
+      "revId": "c1c3422c2cb6f6f43e52830723c8aaeef622c505",
+      "serverId": "1ec6b3db-b2c1-4fa4-84a2-4c7efe89ba71",
+      "unresolved": false
+    },
+    {
+      "key": {
+        "uuid": "iAvZqfM",
+        "filename": "src/com/android/deskclock/AlarmClock.java",
+        "patchSetId": 1
+      },
+      "lineNbr": 546,
+      "author": {
+        "id": 3134
+      },
+      "writtenOn": "2013-06-22T22:35:32Z",
+      "side": 1,
+      "message": "For compatibility, i used the \"public void onChange(boolean selfChange)\" method:\n\n\"To ensure correct operation on older versions of the framework that did not provide a Uri argument, applications should also implement the onChange(boolean) overload of this method whenever they implement the onChange(boolean, Uri) overload.\"\n\nThis method call the overladed with a null uri.",
+      "parentUuid": "iKFy-Xo",
       "revId": "c1c3422c2cb6f6f43e52830723c8aaeef622c505",
       "serverId": "1ec6b3db-b2c1-4fa4-84a2-4c7efe89ba71",
       "unresolved": false
@@ -189,6 +369,24 @@
     },
     {
       "key": {
+        "uuid": "iOvlVag",
+        "filename": "src/com/android/deskclock/AlarmClock.java",
+        "patchSetId": 1
+      },
+      "lineNbr": 1083,
+      "author": {
+        "id": 3134
+      },
+      "writtenOn": "2013-06-22T22:35:32Z",
+      "side": 1,
+      "message": "Done",
+      "parentUuid": "iIFv.ZE",
+      "revId": "c1c3422c2cb6f6f43e52830723c8aaeef622c505",
+      "serverId": "1ec6b3db-b2c1-4fa4-84a2-4c7efe89ba71",
+      "unresolved": false
+    },
+    {
+      "key": {
         "uuid": "iGFs5Zw",
         "filename": "src/com/android/deskclock/AlarmReceiver.java",
         "patchSetId": 1
@@ -200,6 +398,24 @@
       "writtenOn": "2013-05-25T15:53:35Z",
       "side": 1,
       "message": "This code would probably be better readable when reducing nesting depth:\n\nif (alarm.profile \u003d\u003d null || alarm.profile.equals(ProfileManager.NO_PROFILE) {\n    Log.v(TAG, \"Alarm doesn\u0027t define a profile\");\n    return;\n}\n\n(same for the other conditions)",
+      "revId": "c1c3422c2cb6f6f43e52830723c8aaeef622c505",
+      "serverId": "1ec6b3db-b2c1-4fa4-84a2-4c7efe89ba71",
+      "unresolved": false
+    },
+    {
+      "key": {
+        "uuid": "iMvikZ8",
+        "filename": "src/com/android/deskclock/AlarmReceiver.java",
+        "patchSetId": 1
+      },
+      "lineNbr": 254,
+      "author": {
+        "id": 3134
+      },
+      "writtenOn": "2013-06-22T22:35:32Z",
+      "side": 1,
+      "message": "Done",
+      "parentUuid": "iGFs5Zw",
       "revId": "c1c3422c2cb6f6f43e52830723c8aaeef622c505",
       "serverId": "1ec6b3db-b2c1-4fa4-84a2-4c7efe89ba71",
       "unresolved": false
@@ -223,6 +439,24 @@
     },
     {
       "key": {
+        "uuid": "iKvuPYk",
+        "filename": "src/com/android/deskclock/AlarmReceiver.java",
+        "patchSetId": 1
+      },
+      "lineNbr": 257,
+      "author": {
+        "id": 3134
+      },
+      "writtenOn": "2013-06-22T22:35:32Z",
+      "side": 1,
+      "message": "Done",
+      "parentUuid": "iEFp4Yo",
+      "revId": "c1c3422c2cb6f6f43e52830723c8aaeef622c505",
+      "serverId": "1ec6b3db-b2c1-4fa4-84a2-4c7efe89ba71",
+      "unresolved": false
+    },
+    {
+      "key": {
         "uuid": "iCEFzcE",
         "filename": "src/com/android/deskclock/AlarmReceiver.java",
         "patchSetId": 1
@@ -234,6 +468,24 @@
       "writtenOn": "2013-05-25T15:53:35Z",
       "side": 1,
       "message": "if (isProfilesEnabled) {",
+      "revId": "c1c3422c2cb6f6f43e52830723c8aaeef622c505",
+      "serverId": "1ec6b3db-b2c1-4fa4-84a2-4c7efe89ba71",
+      "unresolved": false
+    },
+    {
+      "key": {
+        "uuid": "iIvzeXM",
+        "filename": "src/com/android/deskclock/AlarmReceiver.java",
+        "patchSetId": 1
+      },
+      "lineNbr": 261,
+      "author": {
+        "id": 3134
+      },
+      "writtenOn": "2013-06-22T22:35:32Z",
+      "side": 1,
+      "message": "Done",
+      "parentUuid": "iCEFzcE",
       "revId": "c1c3422c2cb6f6f43e52830723c8aaeef622c505",
       "serverId": "1ec6b3db-b2c1-4fa4-84a2-4c7efe89ba71",
       "unresolved": false
@@ -257,6 +509,24 @@
     },
     {
       "key": {
+        "uuid": "iGvoJX0",
+        "filename": "src/com/android/deskclock/AlarmReceiver.java",
+        "patchSetId": 1
+      },
+      "lineNbr": 266,
+      "author": {
+        "id": 3134
+      },
+      "writtenOn": "2013-06-22T22:35:32Z",
+      "side": 1,
+      "message": "Done",
+      "parentUuid": "iOEOteQ",
+      "revId": "c1c3422c2cb6f6f43e52830723c8aaeef622c505",
+      "serverId": "1ec6b3db-b2c1-4fa4-84a2-4c7efe89ba71",
+      "unresolved": false
+    },
+    {
+      "key": {
         "uuid": "iAEKydI",
         "filename": "src/com/android/deskclock/AlarmReceiver.java",
         "patchSetId": 1
@@ -268,6 +538,24 @@
       "writtenOn": "2013-05-25T15:53:35Z",
       "side": 1,
       "message": "} else {",
+      "revId": "c1c3422c2cb6f6f43e52830723c8aaeef622c505",
+      "serverId": "1ec6b3db-b2c1-4fa4-84a2-4c7efe89ba71",
+      "unresolved": false
+    },
+    {
+      "key": {
+        "uuid": "iEvtYYo",
+        "filename": "src/com/android/deskclock/AlarmReceiver.java",
+        "patchSetId": 1
+      },
+      "lineNbr": 269,
+      "author": {
+        "id": 3134
+      },
+      "writtenOn": "2013-06-22T22:35:32Z",
+      "side": 1,
+      "message": "Done",
+      "parentUuid": "iAEKydI",
       "revId": "c1c3422c2cb6f6f43e52830723c8aaeef622c505",
       "serverId": "1ec6b3db-b2c1-4fa4-84a2-4c7efe89ba71",
       "unresolved": false
@@ -291,6 +579,24 @@
     },
     {
       "key": {
+        "uuid": "iCsDTUQ",
+        "filename": "src/com/android/deskclock/AlarmReceiver.java",
+        "patchSetId": 1
+      },
+      "lineNbr": 273,
+      "author": {
+        "id": 3134
+      },
+      "writtenOn": "2013-06-22T22:35:32Z",
+      "side": 1,
+      "message": "Done",
+      "parentUuid": "iMETsQw",
+      "revId": "c1c3422c2cb6f6f43e52830723c8aaeef622c505",
+      "serverId": "1ec6b3db-b2c1-4fa4-84a2-4c7efe89ba71",
+      "unresolved": false
+    },
+    {
+      "key": {
         "uuid": "iKH53co",
         "filename": "src/com/android/deskclock/AlarmReceiver.java",
         "patchSetId": 1
@@ -308,6 +614,24 @@
     },
     {
       "key": {
+        "uuid": "iAsAiTM",
+        "filename": "src/com/android/deskclock/AlarmReceiver.java",
+        "patchSetId": 1
+      },
+      "lineNbr": 278,
+      "author": {
+        "id": 3134
+      },
+      "writtenOn": "2013-06-22T22:35:32Z",
+      "side": 1,
+      "message": "Done",
+      "parentUuid": "iKH53co",
+      "revId": "c1c3422c2cb6f6f43e52830723c8aaeef622c505",
+      "serverId": "1ec6b3db-b2c1-4fa4-84a2-4c7efe89ba71",
+      "unresolved": false
+    },
+    {
+      "key": {
         "uuid": "iEEAwao",
         "filename": "src/com/android/deskclock/AlarmReceiver.java",
         "patchSetId": 1
@@ -319,6 +643,24 @@
       "writtenOn": "2013-05-25T15:53:35Z",
       "side": 1,
       "message": "What exception is supposed to be catched here? Catch-all clauses shouldn\u0027t be used. (also, space missing before catch)",
+      "revId": "c1c3422c2cb6f6f43e52830723c8aaeef622c505",
+      "serverId": "1ec6b3db-b2c1-4fa4-84a2-4c7efe89ba71",
+      "unresolved": false
+    },
+    {
+      "key": {
+        "uuid": "iOv8NUA",
+        "filename": "src/com/android/deskclock/AlarmReceiver.java",
+        "patchSetId": 1
+      },
+      "lineNbr": 282,
+      "author": {
+        "id": 3134
+      },
+      "writtenOn": "2013-06-22T22:35:32Z",
+      "side": 1,
+      "message": "Done",
+      "parentUuid": "iEEAwao",
       "revId": "c1c3422c2cb6f6f43e52830723c8aaeef622c505",
       "serverId": "1ec6b3db-b2c1-4fa4-84a2-4c7efe89ba71",
       "unresolved": false
