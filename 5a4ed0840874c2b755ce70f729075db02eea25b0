@@ -19,6 +19,24 @@
     },
     {
       "key": {
+        "uuid": "dac4157f_9c808948",
+        "filename": "src/com/android/deskclock/worldclock/AddCityDialog.java",
+        "patchSetId": 12
+      },
+      "lineNbr": 165,
+      "author": {
+        "id": 1063
+      },
+      "writtenOn": "2013-06-25T17:37:44Z",
+      "side": 1,
+      "message": "No, this is on purpose: I want to filter out if e.g. CEST appears a couple of times (Amsterdam, Berlin, Brussels, ...) to keep the list shorter.",
+      "parentUuid": "dac4157f_fc7305b3",
+      "revId": "5a4ed0840874c2b755ce70f729075db02eea25b0",
+      "serverId": "1ec6b3db-b2c1-4fa4-84a2-4c7efe89ba71",
+      "unresolved": false
+    },
+    {
+      "key": {
         "uuid": "dac4157f_bc6d8dce",
         "filename": "src/com/android/deskclock/worldclock/AddCityDialog.java",
         "patchSetId": 12
@@ -36,6 +54,24 @@
     },
     {
       "key": {
+        "uuid": "dac4157f_5c9311a4",
+        "filename": "src/com/android/deskclock/worldclock/AddCityDialog.java",
+        "patchSetId": 12
+      },
+      "lineNbr": 337,
+      "author": {
+        "id": 1063
+      },
+      "writtenOn": "2013-06-25T17:37:44Z",
+      "side": 1,
+      "message": "Oops, fail. I\u0027ll fix this.",
+      "parentUuid": "dac4157f_bc6d8dce",
+      "revId": "5a4ed0840874c2b755ce70f729075db02eea25b0",
+      "serverId": "1ec6b3db-b2c1-4fa4-84a2-4c7efe89ba71",
+      "unresolved": false
+    },
+    {
+      "key": {
         "uuid": "dac4157f_9c72c9ac",
         "filename": "src/com/android/deskclock/worldclock/AddCityDialog.java",
         "patchSetId": 12
@@ -47,6 +83,24 @@
       "writtenOn": "2013-06-25T16:01:00Z",
       "side": 1,
       "message": "ctzInfo retuns null label (toCityTimeZone) while mCurrentTimeZones (mCurrentTimeZones) returns localized label. toString should return the same in both cases. Otherwise, the timezone will be add every time.",
+      "revId": "5a4ed0840874c2b755ce70f729075db02eea25b0",
+      "serverId": "1ec6b3db-b2c1-4fa4-84a2-4c7efe89ba71",
+      "unresolved": false
+    },
+    {
+      "key": {
+        "uuid": "dac4157f_bcc90daf",
+        "filename": "src/com/android/deskclock/worldclock/AddCityDialog.java",
+        "patchSetId": 12
+      },
+      "lineNbr": 461,
+      "author": {
+        "id": 1063
+      },
+      "writtenOn": "2013-06-25T17:37:44Z",
+      "side": 1,
+      "message": "Right. The problem is that mLabel is null.",
+      "parentUuid": "dac4157f_9c72c9ac",
       "revId": "5a4ed0840874c2b755ce70f729075db02eea25b0",
       "serverId": "1ec6b3db-b2c1-4fa4-84a2-4c7efe89ba71",
       "unresolved": false
