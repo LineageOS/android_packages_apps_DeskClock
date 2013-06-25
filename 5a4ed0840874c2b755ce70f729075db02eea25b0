@@ -1,0 +1,55 @@
+{
+  "comments": [
+    {
+      "key": {
+        "uuid": "dac4157f_fc7305b3",
+        "filename": "src/com/android/deskclock/worldclock/AddCityDialog.java",
+        "patchSetId": 12
+      },
+      "lineNbr": 165,
+      "author": {
+        "id": 3134
+      },
+      "writtenOn": "2013-06-25T16:01:00Z",
+      "side": 1,
+      "message": "Isn\u0027t better to use \"mId.compareTo(other.mid)\" here? Id always contatins the English timezone. Google maps api service returns ids in English. Check toCityTimeZone",
+      "revId": "5a4ed0840874c2b755ce70f729075db02eea25b0",
+      "serverId": "1ec6b3db-b2c1-4fa4-84a2-4c7efe89ba71",
+      "unresolved": false
+    },
+    {
+      "key": {
+        "uuid": "dac4157f_bc6d8dce",
+        "filename": "src/com/android/deskclock/worldclock/AddCityDialog.java",
+        "patchSetId": 12
+      },
+      "lineNbr": 337,
+      "author": {
+        "id": 3134
+      },
+      "writtenOn": "2013-06-25T16:01:00Z",
+      "side": 1,
+      "message": "Label is null here. Maybe timeZone.mLabel \u003d info.name also, or resolve the timezone and put a label",
+      "revId": "5a4ed0840874c2b755ce70f729075db02eea25b0",
+      "serverId": "1ec6b3db-b2c1-4fa4-84a2-4c7efe89ba71",
+      "unresolved": false
+    },
+    {
+      "key": {
+        "uuid": "dac4157f_9c72c9ac",
+        "filename": "src/com/android/deskclock/worldclock/AddCityDialog.java",
+        "patchSetId": 12
+      },
+      "lineNbr": 461,
+      "author": {
+        "id": 3134
+      },
+      "writtenOn": "2013-06-25T16:01:00Z",
+      "side": 1,
+      "message": "ctzInfo retuns null label (toCityTimeZone) while mCurrentTimeZones (mCurrentTimeZones) returns localized label. toString should return the same in both cases. Otherwise, the timezone will be add every time.",
+      "revId": "5a4ed0840874c2b755ce70f729075db02eea25b0",
+      "serverId": "1ec6b3db-b2c1-4fa4-84a2-4c7efe89ba71",
+      "unresolved": false
+    }
+  ]
+}
