@@ -27,4 +27,20 @@
     <string name="keep_display_on_stopwatch_summary">Manter a tela ligada enquanto o cronômetro estiver rodando</string>
     <string name="alarm_increasing_volume">Volume crescente</string>
     <string name="no_alarms">Nenhum alarme definido</string>
+    <string name="menu_item_add">Adicionar</string>
+    <string name="cities_add_city_title">Adicionar cidade</string>
+    <string name="cities_add_city_city">Cidade:</string>
+    <string name="cities_add_city_timezone">Fuso horário:</string>
+    <string name="cities_add_city_gps_cd">Toque para localizar sua cidade atual</string>
+    <string name="cities_add_loading">Carregando\2026</string>
+    <string name="cities_add_searching">Buscando\2026</string>
+    <string name="cities_add_gps_no_results">A busca com GPS não retornou nenhum local</string>
+    <string name="cities_add_gps_not_available">GPS não está disponível</string>
+    <string name="cities_add_already_exists">A cidade já existe no banco de dados</string>
+    <string name="cities_add_city_failed">Não foi possível criar a cidade</string>
+    <string name="cities_delete_city_title">Excluir cidade</string>
+    <string name="cities_delete_city_msg">Você deseja excluir <xliff:g id="city" xmlns:xliff="urn:oasis:names:tc:xliff:document:1.2">%s</xliff:g>?</string>
+    <string name="cities_delete_city_failed">Não foi possível excluir a cidade</string>
+    <string name="profile_description">Perfil <xliff:g id="profile" xmlns:xliff="urn:oasis:names:tc:xliff:document:1.2">%s</xliff:g></string>
+    <string name="profile_no_selected">Nenhum perfil selecionado</string>
 </resources>
