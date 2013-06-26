@@ -1,0 +1,21 @@
+{
+  "comments": [
+    {
+      "key": {
+        "uuid": "dac4157f_9fa3db4f",
+        "filename": "res/values-ru/cm_strings.xml",
+        "patchSetId": 3
+      },
+      "lineNbr": 48,
+      "author": {
+        "id": 5896
+      },
+      "writtenOn": "2013-06-26T18:02:16Z",
+      "side": 1,
+      "message": "Ne mnogovato li punktuatsii, mozhet dvoetochie togda stoit ubrat\u0027?",
+      "revId": "cf244d08961b18203ea3f0f143bcc3498b35c3b2",
+      "serverId": "1ec6b3db-b2c1-4fa4-84a2-4c7efe89ba71",
+      "unresolved": false
+    }
+  ]
+}
