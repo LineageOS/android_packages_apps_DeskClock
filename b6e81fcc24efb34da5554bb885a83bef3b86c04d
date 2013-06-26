@@ -1,0 +1,21 @@
+{
+  "comments": [
+    {
+      "key": {
+        "uuid": "dac4157f_1f9c6b68",
+        "filename": "res/values-ru/cm_strings.xml",
+        "patchSetId": 1
+      },
+      "lineNbr": 40,
+      "author": {
+        "id": 5896
+      },
+      "writtenOn": "2013-06-26T13:31:41Z",
+      "side": 1,
+      "message": "Po-moemu \"nedostupen\" slitno.",
+      "revId": "b6e81fcc24efb34da5554bb885a83bef3b86c04d",
+      "serverId": "1ec6b3db-b2c1-4fa4-84a2-4c7efe89ba71",
+      "unresolved": false
+    }
+  ]
+}
