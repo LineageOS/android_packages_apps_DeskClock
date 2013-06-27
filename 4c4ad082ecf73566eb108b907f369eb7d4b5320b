@@ -16,6 +16,24 @@
       "revId": "4c4ad082ecf73566eb108b907f369eb7d4b5320b",
       "serverId": "1ec6b3db-b2c1-4fa4-84a2-4c7efe89ba71",
       "unresolved": false
+    },
+    {
+      "key": {
+        "uuid": "dac4157f_22a71451",
+        "filename": "src/com/android/deskclock/worldclock/AddCityDialog.java",
+        "patchSetId": 2
+      },
+      "lineNbr": 508,
+      "author": {
+        "id": 3134
+      },
+      "writtenOn": "2013-06-27T12:59:51Z",
+      "side": 1,
+      "message": "Yes, typo. Sorry, my bad.",
+      "parentUuid": "dac4157f_62d86cf0",
+      "revId": "4c4ad082ecf73566eb108b907f369eb7d4b5320b",
+      "serverId": "1ec6b3db-b2c1-4fa4-84a2-4c7efe89ba71",
+      "unresolved": false
     }
   ]
 }
