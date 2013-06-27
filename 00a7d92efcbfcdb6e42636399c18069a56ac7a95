@@ -1,0 +1,38 @@
+{
+  "comments": [
+    {
+      "key": {
+        "uuid": "dac4157f_8220204b",
+        "filename": "src/com/android/deskclock/worldclock/AddCityDialog.java",
+        "patchSetId": 15
+      },
+      "lineNbr": 434,
+      "author": {
+        "id": 1063
+      },
+      "writtenOn": "2013-06-27T00:37:09Z",
+      "side": 1,
+      "message": "This doesn\u0027t work anymore (and never was a good idea to begin with), as the I\u0027d is no longer part of the user-visible string. I guess the adapter should be an ArrayAdapter\u003cCityTimeZone\u003e, keep the I\u0027d in CityTimeZone and fetch it from the adapter here.",
+      "revId": "00a7d92efcbfcdb6e42636399c18069a56ac7a95",
+      "serverId": "1ec6b3db-b2c1-4fa4-84a2-4c7efe89ba71",
+      "unresolved": false
+    },
+    {
+      "key": {
+        "uuid": "dac4157f_621d0c0f",
+        "filename": "src/com/android/deskclock/worldclock/AddCityDialog.java",
+        "patchSetId": 15
+      },
+      "lineNbr": 511,
+      "author": {
+        "id": 1063
+      },
+      "writtenOn": "2013-06-27T00:37:09Z",
+      "side": 1,
+      "message": "While we\u0027re at it, we should match this by I\u0027d as well, I guess.",
+      "revId": "00a7d92efcbfcdb6e42636399c18069a56ac7a95",
+      "serverId": "1ec6b3db-b2c1-4fa4-84a2-4c7efe89ba71",
+      "unresolved": false
+    }
+  ]
+}
