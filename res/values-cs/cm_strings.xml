@@ -32,4 +32,22 @@
     <string name="keep_display_on_stopwatch_summary">Při spuštěných stopkách ponechat obrazovku zapnutou</string>
 
     <string name="no_alarms">Žádné budíky</string>
+
+    <string name="menu_item_add">Přidat</string>
+    <string name="cities_add_city_title">Přidat město</string>
+    <string name="cities_add_city_city">Město:</string>
+    <string name="cities_add_city_timezone">Časová zóna:</string>
+    <string name="cities_add_city_gps_cd">Dotykem určíte polohu aktuálního města</string>
+    <string name="cities_add_loading">Načítání\u2026</string>
+    <string name="cities_add_searching">Vyhledávání\u2026</string>
+    <string name="cities_add_gps_no_results">Požadavek o určení polohy pomocí GPS byl neúspěšný</string>
+    <string name="cities_add_gps_not_available">GPS není dostupné</string>
+    <string name="cities_add_already_exists">Zvolené město již v databázi existuje</string>
+    <string name="cities_add_city_failed">Město nelze vytvořit</string>
+    <string name="cities_delete_city_title">Smazat město</string>
+    <string name="cities_delete_city_msg">Opravdu chcete smazat <xliff:g id="city">%s</xliff:g>?</string>
+    <string name="cities_delete_city_failed">Město nelze smazat</string>
+
+    <string name="profile_description">Profil <xliff:g id="profile">%s</xliff:g></string>
+    <string name="profile_no_selected">Není zvolen žádný profil</string>
 </resources>
