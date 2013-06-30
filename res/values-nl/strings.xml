@@ -101,7 +101,7 @@
     <string name="volume_button_setting_title" msgid="6937131248843413357">"Volumeknoppen"</string>
     <string name="volume_button_dialog_title" msgid="8768042543750036853">"Knopeffect"</string>
   <string-array name="volume_button_setting_entries">
-    <item msgid="7972756698723318690">"Snooze"</item>
+    <item msgid="7972756698723318690">"Snoozen"</item>
     <item msgid="3450979320164769576">"Uitschakelen"</item>
     <item msgid="6302517608411378024">"Niets doen"</item>
   </string-array>
