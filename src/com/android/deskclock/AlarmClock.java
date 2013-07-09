@@ -54,6 +54,7 @@ import android.view.ViewGroup;
 import android.widget.CheckBox;
 import android.widget.CompoundButton;
 import android.widget.CursorAdapter;
+import android.widget.ImageButton;
 import android.widget.LinearLayout;
 import android.widget.ListView;
 import android.widget.Switch;
@@ -88,6 +89,7 @@ public class AlarmClock extends Activity implements LoaderManager.LoaderCallback
 
     private static final int REQUEST_CODE_RINGTONE = 1;
     private static final int REQUEST_CODE_PROFILE = 2;
+    private static final int REQUEST_CODE_SONG = 3;
 
     private Handler mHandler;
     private ProfileManager mProfileManager;
@@ -414,6 +416,12 @@ public class AlarmClock extends Activity implements LoaderManager.LoaderCallback
         intent.putExtra(RingtoneManager.EXTRA_RINGTONE_SHOW_DEFAULT, false);
         startActivityForResult(intent, REQUEST_CODE_RINGTONE);
     }
+    
+    private void launchSongPicker(Alarm alarm) {
+    	mSelectedAlarm = alarm;
+    	final Intent intent = new Intent(this, AlarmSongPicker.class);
+    	startActivityForResult(intent, REQUEST_CODE_SONG);
+    }
 
     private void launchProfilePicker(Alarm alarm) {
         mSelectedAlarm = alarm;
@@ -456,6 +464,13 @@ public class AlarmClock extends Activity implements LoaderManager.LoaderCallback
         RingtoneManager.setActualDefaultRingtoneUri(this, RingtoneManager.TYPE_ALARM, uri);
         asyncUpdateAlarm(mSelectedAlarm, false);
     }
+    
+    private void saveSongUri(Intent intent) {
+    	final Uri uri = intent.getParcelableExtra(AlarmSongPicker.EXTRA_SELECTED_SONG_URI);
+    	mSelectedAlarm.alert = uri;
+    	Log.v("Received Song URI: '" + uri.toSafeString() + "' as result of AlarmSongPicker activity");
+    	asyncUpdateAlarm(mSelectedAlarm, false);
+    }
 
     private void saveProfile(Intent intent) {
         final String uuid = intent.getStringExtra(ProfileManager.EXTRA_PROFILE_PICKED_UUID);
@@ -481,6 +496,9 @@ public class AlarmClock extends Activity implements LoaderManager.LoaderCallback
                 case REQUEST_CODE_PROFILE:
                     saveProfile(data);
                     break;
+                case REQUEST_CODE_SONG:
+                	saveSongUri(data);
+                	break;
                 default:
                     Log.w("Unhandled request code in onActivityResult: " + requestCode);
             }
@@ -591,6 +609,7 @@ public class AlarmClock extends Activity implements LoaderManager.LoaderCallback
             CheckBox vibrate;
             CheckBox increasingVolume;
             ViewGroup collapse;
+            ImageButton ringtoneType;
             TextView ringtone;
             TextView profile;
             View hairLine;
@@ -733,6 +752,7 @@ public class AlarmClock extends Activity implements LoaderManager.LoaderCallback
             holder.vibrate = (CheckBox) view.findViewById(R.id.vibrate_onoff);
             holder.increasingVolume = (CheckBox) view.findViewById(R.id.increasing_volume_onoff);
             holder.collapse = (ViewGroup) view.findViewById(R.id.collapse);
+            holder.ringtoneType = (ImageButton) view.findViewById(R.id.ringtone_type);
             holder.ringtone = (TextView) view.findViewById(R.id.choose_ringtone);
             holder.profile = (TextView) view.findViewById(R.id.choose_profile);
 
@@ -1049,6 +1069,30 @@ public class AlarmClock extends Activity implements LoaderManager.LoaderCallback
                 }
             });
             itemHolder.collapse.setOnLongClickListener(mLongClickListener);
+            
+            if(alarm.alertIsSong)
+            	itemHolder.ringtoneType.setImageResource(R.drawable.ic_ringtone);
+            else
+            	itemHolder.ringtoneType.setImageResource(R.drawable.ic_alarm);
+            
+            itemHolder.ringtoneType.setOnClickListener(new View.OnClickListener() {
+				@Override
+				public void onClick(View v) {
+					if(alarm.alertIsSong) {
+						ImageButton btn = (ImageButton) v;
+						btn.setImageResource(R.drawable.ic_alarm);
+						alarm.alert = RingtoneManager.getDefaultUri(RingtoneManager.TYPE_ALARM);
+					}
+					else {
+						ImageButton btn = (ImageButton) v;
+						btn.setImageResource(R.drawable.ic_ringtone);
+						alarm.alert = Uri.EMPTY;
+					}
+					alarm.alertIsSong = !alarm.alertIsSong;
+					asyncUpdateAlarm(alarm, false);
+				}
+			});
+            itemHolder.ringtoneType.setOnLongClickListener(mLongClickListener);
 
             final String ringtone;
             if (alarm.alert == null) {
@@ -1067,7 +1111,10 @@ public class AlarmClock extends Activity implements LoaderManager.LoaderCallback
                     if (doLongClick(view)) {
                         return;
                     }
-                    launchRingTonePicker(alarm);
+                    if(alarm.alertIsSong)
+                    	launchSongPicker(alarm);
+                    else
+                    	launchRingTonePicker(alarm);
                 }
             });
             itemHolder.ringtone.setOnLongClickListener(mLongClickListener);

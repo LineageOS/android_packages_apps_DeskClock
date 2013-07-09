@@ -1,0 +1,57 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:padding="10dp" >
+
+    <ImageView
+        android:id="@+id/alarm_song_picker_item_image"
+        android:layout_width="48dp"
+        android:layout_height="48dp"
+        android:layout_alignParentLeft="true"
+        android:layout_centerVertical="true"
+        android:layout_marginRight="10dp"
+        android:contentDescription="@string/alarm_song_picker_albumart_description"
+        android:src="@drawable/ic_ringtone" />
+
+    <TextView
+        android:id="@+id/alarm_song_picker_item_title"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignParentTop="true"
+        android:layout_toRightOf="@id/alarm_song_picker_item_image"
+        android:textColor="#eee"
+        android:fontFamily="sans-serif-condensed"
+        style="?android:textAppearanceMedium"
+        android:maxLines="2"
+        android:ellipsize="end"
+        android:singleLine="true"
+        android:textIsSelectable="false"
+        android:scrollHorizontally="true"
+        android:paddingRight="48dp" />
+
+    <TextView
+        android:id="@+id/alarm_song_picker_item_text"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignLeft="@id/alarm_song_picker_item_title"
+        android:layout_below="@id/alarm_song_picker_item_title"
+        style="?android:textAppearanceSmall"
+        android:fontFamily="sans-serif-condensed"
+        android:textAllCaps="true"
+        android:textColor="#aaa"
+        android:textIsSelectable="false"
+        android:scrollHorizontally="true"
+        android:maxLines="1"
+        android:ellipsize="end"
+        android:paddingRight="48dp" />
+    
+    <ImageView
+        android:id="@+id/alarm_song_picker_item_play"
+        android:layout_width="32dp"
+        android:layout_height="32dp"
+        android:layout_alignParentRight="true"
+        android:layout_centerVertical="true"
+        android:contentDescription="@string/alarm_song_picker_playing_description" />
+
+</RelativeLayout>

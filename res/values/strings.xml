@@ -69,6 +69,9 @@
 
     <!-- Setting labels on Set alarm screen: Select alarm ringtone  -->
     <string name="alert">Alarm Ringtone</string>
+    
+    <!-- Alarm Music Picker strings -->
+    <string name="alarm_song_picker">Song Picker</string>
 
     <!-- Label on expanded alarm edit view. -->
     <string name="ringtone">Ringtone</string>
@@ -281,6 +284,10 @@
     <!-- Accessibility labels for alarm buttons -->
     <string name="label_description">Label</string>
     <string name="ringtone_description">Ringtone</string>
+    
+    <!-- Accessibility labels for Song Picker -->
+    <string name="alarm_song_picker_albumart_description">Album Art</string>
+    <string name="alarm_song_picker_playing_description">Now playing</string>
 
     <!-- A short representation of charging information, e.g "34%" -->
     <string name="battery_charging_level"><xliff:g id="number">%d</xliff:g><xliff:g id="percent">%%</xliff:g></string>
