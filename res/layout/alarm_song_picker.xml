@@ -1,0 +1,68 @@
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical"
+    tools:context=".AlarmMusicPicker" >
+
+    <ListView
+        android:id="@+id/alarm_song_picker_listview"
+        android:layout_width="fill_parent"
+        android:layout_height="0dp"
+        android:layout_weight="1"
+        android:choiceMode="singleChoice" >
+    </ListView>
+
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="48dp" >
+
+        <View
+            android:layout_width="match_parent"
+            android:layout_height="1dip"
+            android:layout_alignParentTop="true"
+            android:layout_marginLeft="4dip"
+            android:layout_marginRight="4dip"
+            android:background="?android:attr/dividerVertical" />
+
+        <View
+            android:id="@+id/alarm_song_picker_bottombtnview"
+            android:layout_width="1dp"
+            android:layout_height="wrap_content"
+            android:layout_alignParentBottom="true"
+            android:layout_alignParentTop="true"
+            android:layout_centerHorizontal="true"
+            android:layout_marginBottom="4dip"
+            android:layout_marginTop="4dip"
+            android:background="?android:attr/dividerVertical" />
+
+        <Button
+            android:id="@+id/alarm_song_picker_cancel_button"
+            style="?android:textAppearanceMedium"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignParentBottom="true"
+            android:layout_alignParentLeft="true"
+            android:layout_alignParentTop="true"
+            android:layout_toLeftOf="@id/alarm_song_picker_bottombtnview"
+            android:background="?android:attr/selectableItemBackground"
+            android:fontFamily="sans-serif"
+            android:text="@android:string/cancel"
+            android:textColor="#eee" />
+
+        <Button
+            android:id="@+id/alarm_song_picker_ok_button"
+            style="?android:textAppearanceMedium"
+            android:layout_width="wrap_content"
+            android:layout_height="match_parent"
+            android:layout_alignParentBottom="true"
+            android:layout_alignParentRight="true"
+            android:layout_alignParentTop="true"
+            android:layout_toRightOf="@id/alarm_song_picker_bottombtnview"
+            android:background="?android:attr/selectableItemBackground"
+            android:fontFamily="sans-serif"
+            android:text="@android:string/ok"
+            android:textColor="#eee" />
+    </RelativeLayout>
+
+</LinearLayout>
