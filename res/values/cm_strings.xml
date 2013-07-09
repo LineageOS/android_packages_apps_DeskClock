@@ -46,6 +46,19 @@
     <string name="keep_display_on_stopwatch">Keep the display on</string>
     <string name="keep_display_on_stopwatch_summary">Keep the display on while stopwatch is running</string>
 
+    <!-- Alarm Music Picker strings -->
+    <string name="alarm_song_picker">Song Picker</string>
+    <string name="alarm_song_picker_menu_search">Search a song</string>
+
+    <!-- Do not translate. Duration format for duration < 1 hour -->
+    <string name="durationformatshort" translatable="false"><xliff:g id="format">%2$d:%5$02d</xliff:g></string>
+    <!-- Do not translate. Duration format for duration >= 1 hour -->
+    <string name="durationformatlong" translatable="false"><xliff:g id="format">%1$d:%3$02d:%5$02d</xliff:g></string>
+
+    <!-- Accessibility labels for Song Picker -->
+    <string name="alarm_song_picker_albumart_description">Album Art</string>
+    <string name="alarm_song_picker_playing_description">Now playing</string>
+
     <!-- Empty list message -->
     <string name="no_alarms">No alarms set</string>
 
