@@ -64,6 +64,7 @@ public final class Alarm implements Parcelable {
         p.writeParcelable(alert, flags);
         p.writeInt(silent ? 1 : 0);
         p.writeInt(increasingVolume ? 1 : 0);
+        p.writeInt(alertIsSong ? 1 : 0);
         ParcelUuid uuid = new ParcelUuid(profile);
         uuid.writeToParcel(p, 0);
     }
@@ -131,6 +132,12 @@ public final class Alarm implements Parcelable {
         public static final String ALERT = "alert";
 
         /**
+         * If alert is a song
+         * <P>Type: BOOLEAN</P>
+         */
+        public static final String ALERT_IS_SONG = "type";
+
+        /**
          * True if alarm should start off quiet and slowly increase volume
          * <P>Type: BOOLEAN</P>
          */
@@ -153,7 +160,7 @@ public final class Alarm implements Parcelable {
 
         static final String[] ALARM_QUERY_COLUMNS = {
             _ID, HOUR, MINUTES, DAYS_OF_WEEK, ALARM_TIME,
-            ENABLED, VIBRATE, MESSAGE, ALERT, INCREASING_VOLUME, PROFILE };
+            ENABLED, VIBRATE, MESSAGE, ALERT, INCREASING_VOLUME, PROFILE, ALERT_IS_SONG };
 
         /**
          * These save calls to cursor.getColumnIndexOrThrow()
@@ -170,6 +177,7 @@ public final class Alarm implements Parcelable {
         public static final int ALARM_ALERT_INDEX = 8;
         public static final int ALARM_INCREASING_VOLUME_INDEX = 9;
         public static final int ALARM_PROFILE_INDEX = 10;
+        public static final int ALARM_ALERT_IS_SONG_INDEX = 11;
     }
     //////////////////////////////
     // End column definitions
@@ -188,6 +196,7 @@ public final class Alarm implements Parcelable {
     public boolean    silent;
     public boolean    increasingVolume;
     public UUID       profile;
+    public boolean    alertIsSong;
 
     @Override
     public String toString() {
@@ -204,6 +213,7 @@ public final class Alarm implements Parcelable {
                 ", label='" + label + '\'' +
                 ", silent=" + silent +
                 ", profile=" + profile +
+                ", type=" + alertIsSong +
                 '}';
     }
 
@@ -234,6 +244,7 @@ public final class Alarm implements Parcelable {
                         RingtoneManager.TYPE_ALARM);
             }
         }
+        alertIsSong = c.getInt(Columns.ALARM_ALERT_IS_SONG_INDEX) == 1;
         increasingVolume = c.getInt(Columns.ALARM_INCREASING_VOLUME_INDEX) == 1;
         String alarmProfile = c.getString(Columns.ALARM_PROFILE_INDEX);
         if (alarmProfile == null || alarmProfile.equals(String.valueOf(ProfileManager.NO_PROFILE))) {
@@ -259,6 +270,7 @@ public final class Alarm implements Parcelable {
         alert = (Uri) p.readParcelable(null);
         silent = p.readInt() == 1;
         increasingVolume = p.readInt() == 1;
+        alertIsSong = p.readInt() == 1;
         profile = ParcelUuid.CREATOR.createFromParcel(p).getUuid();
     }
 
@@ -273,6 +285,7 @@ public final class Alarm implements Parcelable {
         alert = RingtoneManager.getDefaultUri(RingtoneManager.TYPE_ALARM);
         increasingVolume = false;
         profile = ProfileManager.NO_PROFILE;
+        alertIsSong = false;
     }
 
     public String getLabelOrDefault(Context context) {

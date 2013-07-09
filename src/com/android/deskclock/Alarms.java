@@ -200,6 +200,8 @@ public class Alarms {
                 ? String.valueOf(ProfileManager.NO_PROFILE)
                 : alarm.profile.toString());
 
+        values.put(Alarm.Columns.ALERT_IS_SONG, alarm.alertIsSong);
+
         return values;
     }
 
