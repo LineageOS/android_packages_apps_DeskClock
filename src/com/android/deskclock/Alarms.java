@@ -199,6 +199,8 @@ public class Alarms {
         values.put(Alarm.Columns.PROFILE, alarm.profile == null
                 ? String.valueOf(ProfileManager.NO_PROFILE)
                 : alarm.profile.toString());
+        
+        values.put(Alarm.Columns.ALERT_IS_MUSIC, alarm.alertIsSong);
 
         return values;
     }

@@ -69,6 +69,13 @@
                 android:excludeFromRecents="true"
                 android:launchMode="standard"
                 android:exported="true" />
+                
+        <activity android:name="AlarmSongPicker"
+            	android:label="@string/alarm_song_picker"
+                android:theme="@style/AlarmClockTheme"
+                android:excludeFromRecents="true"
+                android:launchMode="standard"
+                android:exported="true" />
 
         <activity-alias android:name="com.android.alarmclock.AlarmClock"
                 android:targetActivity="com.android.deskclock.AlarmClock"
