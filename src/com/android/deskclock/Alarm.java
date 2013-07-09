@@ -16,6 +16,12 @@
 
 package com.android.deskclock;
 
+import java.text.DateFormatSymbols;
+import java.util.Calendar;
+import java.util.HashMap;
+import java.util.HashSet;
+import java.util.UUID;
+
 import android.app.ProfileManager;
 import android.content.Context;
 import android.database.Cursor;
@@ -26,27 +32,20 @@ import android.os.ParcelUuid;
 import android.os.Parcelable;
 import android.provider.BaseColumns;
 
-import java.text.DateFormatSymbols;
-import java.util.Calendar;
-import java.util.HashMap;
-import java.util.HashSet;
-import java.util.UUID;
-
 public final class Alarm implements Parcelable {
 
-    //////////////////////////////
+    // ////////////////////////////
     // Parcelable apis
-    //////////////////////////////
-    public static final Parcelable.Creator<Alarm> CREATOR
-            = new Parcelable.Creator<Alarm>() {
-                public Alarm createFromParcel(Parcel p) {
-                    return new Alarm(p);
-                }
+    // ////////////////////////////
+    public static final Parcelable.Creator<Alarm> CREATOR = new Parcelable.Creator<Alarm>() {
+        public Alarm createFromParcel(Parcel p) {
+            return new Alarm(p);
+        }
 
-                public Alarm[] newArray(int size) {
-                    return new Alarm[size];
-                }
-            };
+        public Alarm[] newArray(int size) {
+            return new Alarm[size];
+        }
+    };
 
     public int describeContents() {
         return 0;
@@ -64,16 +63,18 @@ public final class Alarm implements Parcelable {
         p.writeParcelable(alert, flags);
         p.writeInt(silent ? 1 : 0);
         p.writeInt(increasingVolume ? 1 : 0);
+        p.writeInt(alertIsSong ? 1 : 0);
         ParcelUuid uuid = new ParcelUuid(profile);
         uuid.writeToParcel(p, 0);
     }
-    //////////////////////////////
-    // end Parcelable apis
-    //////////////////////////////
 
-    //////////////////////////////
+    // ////////////////////////////
+    // end Parcelable apis
+    // ////////////////////////////
+
+    // ////////////////////////////
     // Column definitions
-    //////////////////////////////
+    // ////////////////////////////
     public static class Columns implements BaseColumns {
         /**
          * The content:// style URL for this table
@@ -83,64 +84,91 @@ public final class Alarm implements Parcelable {
 
         /**
          * Hour in 24-hour localtime 0 - 23.
-         * <P>Type: INTEGER</P>
+         * <P>
+         * Type: INTEGER
+         * </P>
          */
         public static final String HOUR = "hour";
 
         /**
          * Minutes in localtime 0 - 59
-         * <P>Type: INTEGER</P>
+         * <P>
+         * Type: INTEGER
+         * </P>
          */
         public static final String MINUTES = "minutes";
 
         /**
          * Days of week coded as integer
-         * <P>Type: INTEGER</P>
+         * <P>
+         * Type: INTEGER
+         * </P>
          */
         public static final String DAYS_OF_WEEK = "daysofweek";
 
         /**
          * Alarm time in UTC milliseconds from the epoch.
-         * <P>Type: INTEGER</P>
+         * <P>
+         * Type: INTEGER
+         * </P>
          */
         public static final String ALARM_TIME = "alarmtime";
 
         /**
          * True if alarm is active
-         * <P>Type: BOOLEAN</P>
+         * <P>
+         * Type: BOOLEAN
+         * </P>
          */
         public static final String ENABLED = "enabled";
 
         /**
          * True if alarm should vibrate
-         * <P>Type: BOOLEAN</P>
+         * <P>
+         * Type: BOOLEAN
+         * </P>
          */
         public static final String VIBRATE = "vibrate";
 
         /**
-         * Message to show when alarm triggers
-         * Note: not currently used
-         * <P>Type: STRING</P>
+         * Message to show when alarm triggers Note: not currently used
+         * <P>
+         * Type: STRING
+         * </P>
          */
         public static final String MESSAGE = "message";
 
         /**
          * Audio alert to play when alarm triggers
-         * <P>Type: STRING</P>
+         * <P>
+         * Type: STRING
+         * </P>
          */
         public static final String ALERT = "alert";
 
         /**
+         * If the alert is music
+         * <P>
+         * Type: BOOLEAN
+         * </P>
+         */
+        public static final String ALERT_IS_SONG = "type";
+
+        /**
          * True if alarm should start off quiet and slowly increase volume
-         * <P>Type: BOOLEAN</P>
+         * <P>
+         * Type: BOOLEAN
+         * </P>
          */
         public static final String INCREASING_VOLUME = "incvol";
 
         /**
          * Profile to change to when alarm triggers
-         * <P>Type: STRING</P>
+         * <P>
+         * Type: STRING
+         * </P>
          */
-         public static final String PROFILE = "profile";
+        public static final String PROFILE = "profile";
 
         /**
          * The default sort order for this table
@@ -152,12 +180,13 @@ public final class Alarm implements Parcelable {
         public static final String WHERE_ENABLED = ENABLED + "=1";
 
         static final String[] ALARM_QUERY_COLUMNS = {
-            _ID, HOUR, MINUTES, DAYS_OF_WEEK, ALARM_TIME,
-            ENABLED, VIBRATE, MESSAGE, ALERT, INCREASING_VOLUME, PROFILE };
+                _ID, HOUR, MINUTES, DAYS_OF_WEEK, ALARM_TIME,
+                ENABLED, VIBRATE, MESSAGE, ALERT, INCREASING_VOLUME, PROFILE, ALERT_IS_SONG
+        };
 
         /**
-         * These save calls to cursor.getColumnIndexOrThrow()
-         * THEY MUST BE KEPT IN SYNC WITH ABOVE QUERY COLUMNS
+         * These save calls to cursor.getColumnIndexOrThrow() THEY MUST BE KEPT
+         * IN SYNC WITH ABOVE QUERY COLUMNS
          */
         public static final int ALARM_ID_INDEX = 0;
         public static final int ALARM_HOUR_INDEX = 1;
@@ -170,24 +199,27 @@ public final class Alarm implements Parcelable {
         public static final int ALARM_ALERT_INDEX = 8;
         public static final int ALARM_INCREASING_VOLUME_INDEX = 9;
         public static final int ALARM_PROFILE_INDEX = 10;
+        public static final int ALARM_ALERT_IS_SONG_INDEX = 11;
     }
-    //////////////////////////////
+
+    // ////////////////////////////
     // End column definitions
-    //////////////////////////////
+    // ////////////////////////////
 
     // Public fields
-    public int        id;
-    public boolean    enabled;
-    public int        hour;
-    public int        minutes;
+    public int id;
+    public boolean enabled;
+    public int hour;
+    public int minutes;
     public DaysOfWeek daysOfWeek;
-    public long       time;
-    public boolean    vibrate;
-    public String     label;
-    public Uri        alert;
-    public boolean    silent;
-    public boolean    increasingVolume;
-    public UUID       profile;
+    public long time;
+    public boolean vibrate;
+    public String label;
+    public Uri alert;
+    public boolean silent;
+    public boolean increasingVolume;
+    public UUID profile;
+    public boolean alertIsSong;
 
     @Override
     public String toString() {
@@ -204,6 +236,7 @@ public final class Alarm implements Parcelable {
                 ", label='" + label + '\'' +
                 ", silent=" + silent +
                 ", profile=" + profile +
+                ", type=" + alertIsSong +
                 '}';
     }
 
@@ -234,6 +267,7 @@ public final class Alarm implements Parcelable {
                         RingtoneManager.TYPE_ALARM);
             }
         }
+        alertIsSong = c.getInt(Columns.ALARM_ALERT_IS_SONG_INDEX) == 1;
         increasingVolume = c.getInt(Columns.ALARM_INCREASING_VOLUME_INDEX) == 1;
         String alarmProfile = c.getString(Columns.ALARM_PROFILE_INDEX);
         if (alarmProfile == null || alarmProfile.equals(String.valueOf(ProfileManager.NO_PROFILE))) {
@@ -259,6 +293,7 @@ public final class Alarm implements Parcelable {
         alert = (Uri) p.readParcelable(null);
         silent = p.readInt() == 1;
         increasingVolume = p.readInt() == 1;
+        alertIsSong = p.readInt() == 1;
         profile = ParcelUuid.CREATOR.createFromParcel(p).getUuid();
     }
 
@@ -273,6 +308,7 @@ public final class Alarm implements Parcelable {
         alert = RingtoneManager.getDefaultUri(RingtoneManager.TYPE_ALARM);
         increasingVolume = false;
         profile = ProfileManager.NO_PROFILE;
+        alertIsSong = false;
     }
 
     public String getLabelOrDefault(Context context) {
@@ -289,35 +325,28 @@ public final class Alarm implements Parcelable {
 
     @Override
     public boolean equals(Object o) {
-        if (!(o instanceof Alarm)) return false;
+        if (!(o instanceof Alarm))
+            return false;
         final Alarm other = (Alarm) o;
         return id == other.id;
     }
 
-
     /*
-     * Days of week code as a single int.
-     * 0x00: no day
-     * 0x01: Monday
-     * 0x02: Tuesday
-     * 0x04: Wednesday
-     * 0x08: Thursday
-     * 0x10: Friday
-     * 0x20: Saturday
-     * 0x40: Sunday
+     * Days of week code as a single int. 0x00: no day 0x01: Monday 0x02:
+     * Tuesday 0x04: Wednesday 0x08: Thursday 0x10: Friday 0x20: Saturday 0x40:
+     * Sunday
      */
     static final class DaysOfWeek {
 
         private static int[] DAY_MAP = new int[] {
-            Calendar.MONDAY,
-            Calendar.TUESDAY,
-            Calendar.WEDNESDAY,
-            Calendar.THURSDAY,
-            Calendar.FRIDAY,
-            Calendar.SATURDAY,
-            Calendar.SUNDAY,
+                Calendar.MONDAY,
+                Calendar.TUESDAY,
+                Calendar.WEDNESDAY,
+                Calendar.THURSDAY,
+                Calendar.FRIDAY,
+                Calendar.SATURDAY,
+                Calendar.SUNDAY,
         };
-
 
         private static HashMap<Integer, Integer> DAY_TO_BIT_MASK = new HashMap<Integer, Integer>();
         static {
@@ -358,23 +387,25 @@ public final class Alarm implements Parcelable {
             // count selected days
             int dayCount = 0, days = mDays;
             while (days > 0) {
-                if ((days & 1) == 1) dayCount++;
+                if ((days & 1) == 1)
+                    dayCount++;
                 days >>= 1;
             }
 
             // short or long form?
             DateFormatSymbols dfs = new DateFormatSymbols();
             String[] dayList = (forAccessibility || dayCount <= 1) ?
-                            dfs.getWeekdays() :
-                            dfs.getShortWeekdays();
+                    dfs.getWeekdays() :
+                    dfs.getShortWeekdays();
 
             // selected days
             for (int i = 0; i < 7; i++) {
                 if ((mDays & (1 << i)) != 0) {
                     ret.append(dayList[DAY_MAP[i]]);
                     dayCount -= 1;
-                    if (dayCount > 0) ret.append(
-                            context.getText(R.string.day_concat));
+                    if (dayCount > 0)
+                        ret.append(
+                                context.getText(R.string.day_concat));
                 }
             }
             return ret.toString();
@@ -386,8 +417,9 @@ public final class Alarm implements Parcelable {
 
         /**
          * Sets the repeat day for the alarm.
-         *
-         * @param dayOfWeek One of: Calendar.SUNDAY, Calendar.MONDAY, Calendar.TUESDAY, etc.
+         * 
+         * @param dayOfWeek One of: Calendar.SUNDAY, Calendar.MONDAY,
+         *            Calendar.TUESDAY, etc.
          * @param set Whether to set or unset.
          */
         public void setDayOfWeek(int dayOfWeek, boolean set) {
@@ -436,6 +468,7 @@ public final class Alarm implements Parcelable {
 
         /**
          * returns number of days from today until next alarm
+         * 
          * @param c must be set to today
          */
         public int getNextAlarm(Calendar c) {
