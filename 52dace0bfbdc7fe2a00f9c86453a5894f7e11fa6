@@ -1,0 +1,174 @@
+{
+  "comments": [
+    {
+      "key": {
+        "uuid": "dac4157f_7c76bf3f",
+        "filename": "src/com/android/deskclock/AlarmClock.java",
+        "patchSetId": 6
+      },
+      "lineNbr": 1089,
+      "author": {
+        "id": 1063
+      },
+      "writtenOn": "2013-07-12T17:35:50Z",
+      "side": 1,
+      "message": "} else {",
+      "revId": "52dace0bfbdc7fe2a00f9c86453a5894f7e11fa6",
+      "serverId": "1ec6b3db-b2c1-4fa4-84a2-4c7efe89ba71",
+      "unresolved": false
+    },
+    {
+      "key": {
+        "uuid": "dac4157f_5c73fb4d",
+        "filename": "src/com/android/deskclock/AlarmClock.java",
+        "patchSetId": 6
+      },
+      "lineNbr": 1097,
+      "author": {
+        "id": 1063
+      },
+      "writtenOn": "2013-07-12T17:35:50Z",
+      "side": 1,
+      "message": "This line can go out of the if ... else block.",
+      "revId": "52dace0bfbdc7fe2a00f9c86453a5894f7e11fa6",
+      "serverId": "1ec6b3db-b2c1-4fa4-84a2-4c7efe89ba71",
+      "unresolved": false
+    },
+    {
+      "key": {
+        "uuid": "dac4157f_3c8f2725",
+        "filename": "src/com/android/deskclock/AlarmClock.java",
+        "patchSetId": 6
+      },
+      "lineNbr": 1101,
+      "author": {
+        "id": 1063
+      },
+      "writtenOn": "2013-07-12T17:35:50Z",
+      "side": 1,
+      "message": "} else {",
+      "revId": "52dace0bfbdc7fe2a00f9c86453a5894f7e11fa6",
+      "serverId": "1ec6b3db-b2c1-4fa4-84a2-4c7efe89ba71",
+      "unresolved": false
+    },
+    {
+      "key": {
+        "uuid": "dac4157f_bc7c5721",
+        "filename": "src/com/android/deskclock/AlarmSongPicker.java",
+        "patchSetId": 6
+      },
+      "lineNbr": 1,
+      "author": {
+        "id": 1063
+      },
+      "writtenOn": "2013-07-12T17:35:50Z",
+      "side": 1,
+      "message": "There should be a license here.",
+      "revId": "52dace0bfbdc7fe2a00f9c86453a5894f7e11fa6",
+      "serverId": "1ec6b3db-b2c1-4fa4-84a2-4c7efe89ba71",
+      "unresolved": false
+    },
+    {
+      "key": {
+        "uuid": "dac4157f_9c799332",
+        "filename": "src/com/android/deskclock/AlarmSongPicker.java",
+        "patchSetId": 6
+      },
+      "lineNbr": 10,
+      "author": {
+        "id": 1063
+      },
+      "writtenOn": "2013-07-12T17:35:50Z",
+      "side": 1,
+      "message": "Java imports should be after the android imports according to the coding style guidelines.",
+      "revId": "52dace0bfbdc7fe2a00f9c86453a5894f7e11fa6",
+      "serverId": "1ec6b3db-b2c1-4fa4-84a2-4c7efe89ba71",
+      "unresolved": false
+    },
+    {
+      "key": {
+        "uuid": "dac4157f_9c92b356",
+        "filename": "src/com/android/deskclock/AlarmSongPicker.java",
+        "patchSetId": 6
+      },
+      "lineNbr": 55,
+      "author": {
+        "id": 1063
+      },
+      "writtenOn": "2013-07-12T17:35:50Z",
+      "side": 1,
+      "message": "This must be done asynchronously. There\u0027s a noticable delay in fetching the song data even on my device which only has 2 albums.\nPlease change this to use a Loader (http://developer.android.com/guide/components/loaders.html)",
+      "revId": "52dace0bfbdc7fe2a00f9c86453a5894f7e11fa6",
+      "serverId": "1ec6b3db-b2c1-4fa4-84a2-4c7efe89ba71",
+      "unresolved": false
+    },
+    {
+      "key": {
+        "uuid": "dac4157f_7c9fdf5f",
+        "filename": "src/com/android/deskclock/AlarmSongPicker.java",
+        "patchSetId": 6
+      },
+      "lineNbr": 58,
+      "author": {
+        "id": 1063
+      },
+      "writtenOn": "2013-07-12T17:35:50Z",
+      "side": 1,
+      "message": "When using a loader, this should become a CursorAdapter.",
+      "revId": "52dace0bfbdc7fe2a00f9c86453a5894f7e11fa6",
+      "serverId": "1ec6b3db-b2c1-4fa4-84a2-4c7efe89ba71",
+      "unresolved": false
+    },
+    {
+      "key": {
+        "uuid": "dac4157f_5c9c1b69",
+        "filename": "src/com/android/deskclock/AlarmSongPicker.java",
+        "patchSetId": 6
+      },
+      "lineNbr": 101,
+      "author": {
+        "id": 1063
+      },
+      "writtenOn": "2013-07-12T17:35:50Z",
+      "side": 1,
+      "message": "Why are those methods protected?",
+      "revId": "52dace0bfbdc7fe2a00f9c86453a5894f7e11fa6",
+      "serverId": "1ec6b3db-b2c1-4fa4-84a2-4c7efe89ba71",
+      "unresolved": false
+    },
+    {
+      "key": {
+        "uuid": "dac4157f_1c8d8331",
+        "filename": "src/com/android/deskclock/AlarmSongPicker.java",
+        "patchSetId": 6
+      },
+      "lineNbr": 271,
+      "author": {
+        "id": 1063
+      },
+      "writtenOn": "2013-07-12T17:35:50Z",
+      "side": 1,
+      "message": "This is unneeded.",
+      "revId": "52dace0bfbdc7fe2a00f9c86453a5894f7e11fa6",
+      "serverId": "1ec6b3db-b2c1-4fa4-84a2-4c7efe89ba71",
+      "unresolved": false
+    },
+    {
+      "key": {
+        "uuid": "dac4157f_fc81affc",
+        "filename": "src/com/android/deskclock/AlarmSongPicker.java",
+        "patchSetId": 6
+      },
+      "lineNbr": 312,
+      "author": {
+        "id": 1063
+      },
+      "writtenOn": "2013-07-12T17:35:50Z",
+      "side": 1,
+      "message": "album_art -\u003e albumArt\nnow_playing -\u003e nowPlaying",
+      "revId": "52dace0bfbdc7fe2a00f9c86453a5894f7e11fa6",
+      "serverId": "1ec6b3db-b2c1-4fa4-84a2-4c7efe89ba71",
+      "unresolved": false
+    }
+  ]
+}
