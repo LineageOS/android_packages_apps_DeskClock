@@ -19,6 +19,24 @@
     },
     {
       "key": {
+        "uuid": "dac4157f_e95561c6",
+        "filename": "src/com/android/deskclock/AlarmClock.java",
+        "patchSetId": 6
+      },
+      "lineNbr": 1089,
+      "author": {
+        "id": 4930
+      },
+      "writtenOn": "2013-07-18T02:44:38Z",
+      "side": 1,
+      "message": "Done",
+      "parentUuid": "dac4157f_7c76bf3f",
+      "revId": "52dace0bfbdc7fe2a00f9c86453a5894f7e11fa6",
+      "serverId": "1ec6b3db-b2c1-4fa4-84a2-4c7efe89ba71",
+      "unresolved": false
+    },
+    {
+      "key": {
         "uuid": "dac4157f_5c73fb4d",
         "filename": "src/com/android/deskclock/AlarmClock.java",
         "patchSetId": 6
@@ -30,6 +48,24 @@
       "writtenOn": "2013-07-12T17:35:50Z",
       "side": 1,
       "message": "This line can go out of the if ... else block.",
+      "revId": "52dace0bfbdc7fe2a00f9c86453a5894f7e11fa6",
+      "serverId": "1ec6b3db-b2c1-4fa4-84a2-4c7efe89ba71",
+      "unresolved": false
+    },
+    {
+      "key": {
+        "uuid": "dac4157f_c9529ddd",
+        "filename": "src/com/android/deskclock/AlarmClock.java",
+        "patchSetId": 6
+      },
+      "lineNbr": 1097,
+      "author": {
+        "id": 4930
+      },
+      "writtenOn": "2013-07-18T02:44:38Z",
+      "side": 1,
+      "message": "Done",
+      "parentUuid": "dac4157f_5c73fb4d",
       "revId": "52dace0bfbdc7fe2a00f9c86453a5894f7e11fa6",
       "serverId": "1ec6b3db-b2c1-4fa4-84a2-4c7efe89ba71",
       "unresolved": false
@@ -53,6 +89,24 @@
     },
     {
       "key": {
+        "uuid": "dac4157f_a95e49e7",
+        "filename": "src/com/android/deskclock/AlarmClock.java",
+        "patchSetId": 6
+      },
+      "lineNbr": 1101,
+      "author": {
+        "id": 4930
+      },
+      "writtenOn": "2013-07-18T02:44:38Z",
+      "side": 1,
+      "message": "Done",
+      "parentUuid": "dac4157f_3c8f2725",
+      "revId": "52dace0bfbdc7fe2a00f9c86453a5894f7e11fa6",
+      "serverId": "1ec6b3db-b2c1-4fa4-84a2-4c7efe89ba71",
+      "unresolved": false
+    },
+    {
+      "key": {
         "uuid": "dac4157f_bc7c5721",
         "filename": "src/com/android/deskclock/AlarmSongPicker.java",
         "patchSetId": 6
@@ -70,6 +124,24 @@
     },
     {
       "key": {
+        "uuid": "dac4157f_1e6e8d2f",
+        "filename": "src/com/android/deskclock/AlarmSongPicker.java",
+        "patchSetId": 6
+      },
+      "lineNbr": 1,
+      "author": {
+        "id": 4930
+      },
+      "writtenOn": "2013-07-18T02:44:38Z",
+      "side": 1,
+      "message": "Done",
+      "parentUuid": "dac4157f_bc7c5721",
+      "revId": "52dace0bfbdc7fe2a00f9c86453a5894f7e11fa6",
+      "serverId": "1ec6b3db-b2c1-4fa4-84a2-4c7efe89ba71",
+      "unresolved": false
+    },
+    {
+      "key": {
         "uuid": "dac4157f_9c799332",
         "filename": "src/com/android/deskclock/AlarmSongPicker.java",
         "patchSetId": 6
@@ -81,6 +153,24 @@
       "writtenOn": "2013-07-12T17:35:50Z",
       "side": 1,
       "message": "Java imports should be after the android imports according to the coding style guidelines.",
+      "revId": "52dace0bfbdc7fe2a00f9c86453a5894f7e11fa6",
+      "serverId": "1ec6b3db-b2c1-4fa4-84a2-4c7efe89ba71",
+      "unresolved": false
+    },
+    {
+      "key": {
+        "uuid": "dac4157f_3e8831e7",
+        "filename": "src/com/android/deskclock/AlarmSongPicker.java",
+        "patchSetId": 6
+      },
+      "lineNbr": 10,
+      "author": {
+        "id": 4930
+      },
+      "writtenOn": "2013-07-18T02:44:38Z",
+      "side": 1,
+      "message": "Done",
+      "parentUuid": "dac4157f_9c799332",
       "revId": "52dace0bfbdc7fe2a00f9c86453a5894f7e11fa6",
       "serverId": "1ec6b3db-b2c1-4fa4-84a2-4c7efe89ba71",
       "unresolved": false
@@ -121,6 +211,24 @@
     },
     {
       "key": {
+        "uuid": "dac4157f_5e83e5cc",
+        "filename": "src/com/android/deskclock/AlarmSongPicker.java",
+        "patchSetId": 6
+      },
+      "lineNbr": 57,
+      "author": {
+        "id": 4930
+      },
+      "writtenOn": "2013-07-18T02:44:38Z",
+      "side": 1,
+      "message": "Done",
+      "parentUuid": "dac4157f_3ad84253",
+      "revId": "52dace0bfbdc7fe2a00f9c86453a5894f7e11fa6",
+      "serverId": "1ec6b3db-b2c1-4fa4-84a2-4c7efe89ba71",
+      "unresolved": false
+    },
+    {
+      "key": {
         "uuid": "dac4157f_7c9fdf5f",
         "filename": "src/com/android/deskclock/AlarmSongPicker.java",
         "patchSetId": 6
@@ -155,6 +263,24 @@
     },
     {
       "key": {
+        "uuid": "dac4157f_7e7ea9e5",
+        "filename": "src/com/android/deskclock/AlarmSongPicker.java",
+        "patchSetId": 6
+      },
+      "lineNbr": 63,
+      "author": {
+        "id": 4930
+      },
+      "writtenOn": "2013-07-18T02:44:38Z",
+      "side": 1,
+      "message": "Done",
+      "parentUuid": "dac4157f_fae1aaff",
+      "revId": "52dace0bfbdc7fe2a00f9c86453a5894f7e11fa6",
+      "serverId": "1ec6b3db-b2c1-4fa4-84a2-4c7efe89ba71",
+      "unresolved": false
+    },
+    {
+      "key": {
         "uuid": "dac4157f_1add7e42",
         "filename": "src/com/android/deskclock/AlarmSongPicker.java",
         "patchSetId": 6
@@ -166,6 +292,24 @@
       "writtenOn": "2013-07-15T16:07:01Z",
       "side": 1,
       "message": "arg0 -\u003e parent, arg3 -\u003e id",
+      "revId": "52dace0bfbdc7fe2a00f9c86453a5894f7e11fa6",
+      "serverId": "1ec6b3db-b2c1-4fa4-84a2-4c7efe89ba71",
+      "unresolved": false
+    },
+    {
+      "key": {
+        "uuid": "dac4157f_9e797dff",
+        "filename": "src/com/android/deskclock/AlarmSongPicker.java",
+        "patchSetId": 6
+      },
+      "lineNbr": 67,
+      "author": {
+        "id": 4930
+      },
+      "writtenOn": "2013-07-18T02:44:38Z",
+      "side": 1,
+      "message": "Done",
+      "parentUuid": "dac4157f_1add7e42",
       "revId": "52dace0bfbdc7fe2a00f9c86453a5894f7e11fa6",
       "serverId": "1ec6b3db-b2c1-4fa4-84a2-4c7efe89ba71",
       "unresolved": false
@@ -189,6 +333,24 @@
     },
     {
       "key": {
+        "uuid": "dac4157f_fe6ab919",
+        "filename": "src/com/android/deskclock/AlarmSongPicker.java",
+        "patchSetId": 6
+      },
+      "lineNbr": 101,
+      "author": {
+        "id": 4930
+      },
+      "writtenOn": "2013-07-18T02:44:38Z",
+      "side": 1,
+      "message": "They are protected because I need to access them from the onItemClick method. Is there a better way that I\u0027m not aware of?\nThanks!",
+      "parentUuid": "dac4157f_5c9c1b69",
+      "revId": "52dace0bfbdc7fe2a00f9c86453a5894f7e11fa6",
+      "serverId": "1ec6b3db-b2c1-4fa4-84a2-4c7efe89ba71",
+      "unresolved": false
+    },
+    {
+      "key": {
         "uuid": "dac4157f_dae70611",
         "filename": "src/com/android/deskclock/AlarmSongPicker.java",
         "patchSetId": 6
@@ -200,6 +362,24 @@
       "writtenOn": "2013-07-15T16:07:01Z",
       "side": 1,
       "message": "Indention/line break is a bit weird here.",
+      "revId": "52dace0bfbdc7fe2a00f9c86453a5894f7e11fa6",
+      "serverId": "1ec6b3db-b2c1-4fa4-84a2-4c7efe89ba71",
+      "unresolved": false
+    },
+    {
+      "key": {
+        "uuid": "dac4157f_7ecc6935",
+        "filename": "src/com/android/deskclock/AlarmSongPicker.java",
+        "patchSetId": 6
+      },
+      "lineNbr": 151,
+      "author": {
+        "id": 4930
+      },
+      "writtenOn": "2013-07-18T02:44:38Z",
+      "side": 1,
+      "message": "Done",
+      "parentUuid": "dac4157f_dae70611",
       "revId": "52dace0bfbdc7fe2a00f9c86453a5894f7e11fa6",
       "serverId": "1ec6b3db-b2c1-4fa4-84a2-4c7efe89ba71",
       "unresolved": false
@@ -223,6 +403,24 @@
     },
     {
       "key": {
+        "uuid": "dac4157f_5ed1a5cc",
+        "filename": "src/com/android/deskclock/AlarmSongPicker.java",
+        "patchSetId": 6
+      },
+      "lineNbr": 156,
+      "author": {
+        "id": 4930
+      },
+      "writtenOn": "2013-07-18T02:44:38Z",
+      "side": 1,
+      "message": "Done",
+      "parentUuid": "dac4157f_9af18ed0",
+      "revId": "52dace0bfbdc7fe2a00f9c86453a5894f7e11fa6",
+      "serverId": "1ec6b3db-b2c1-4fa4-84a2-4c7efe89ba71",
+      "unresolved": false
+    },
+    {
+      "key": {
         "uuid": "dac4157f_7aeebaed",
         "filename": "src/com/android/deskclock/AlarmSongPicker.java",
         "patchSetId": 6
@@ -234,6 +432,24 @@
       "writtenOn": "2013-07-15T16:07:01Z",
       "side": 1,
       "message": "album_id -\u003e albumId ... and please fix up the line breaks. Also, albumId should be a long and fetched via .getLong(), that will avoid the casting later on.",
+      "revId": "52dace0bfbdc7fe2a00f9c86453a5894f7e11fa6",
+      "serverId": "1ec6b3db-b2c1-4fa4-84a2-4c7efe89ba71",
+      "unresolved": false
+    },
+    {
+      "key": {
+        "uuid": "dac4157f_3ed6f1c5",
+        "filename": "src/com/android/deskclock/AlarmSongPicker.java",
+        "patchSetId": 6
+      },
+      "lineNbr": 160,
+      "author": {
+        "id": 4930
+      },
+      "writtenOn": "2013-07-18T02:44:38Z",
+      "side": 1,
+      "message": "Done",
+      "parentUuid": "dac4157f_7aeebaed",
       "revId": "52dace0bfbdc7fe2a00f9c86453a5894f7e11fa6",
       "serverId": "1ec6b3db-b2c1-4fa4-84a2-4c7efe89ba71",
       "unresolved": false
@@ -257,6 +473,24 @@
     },
     {
       "key": {
+        "uuid": "dac4157f_1edc4de3",
+        "filename": "src/com/android/deskclock/AlarmSongPicker.java",
+        "patchSetId": 6
+      },
+      "lineNbr": 169,
+      "author": {
+        "id": 4930
+      },
+      "writtenOn": "2013-07-18T02:44:38Z",
+      "side": 1,
+      "message": "Done, that was silly",
+      "parentUuid": "dac4157f_5abad6e2",
+      "revId": "52dace0bfbdc7fe2a00f9c86453a5894f7e11fa6",
+      "serverId": "1ec6b3db-b2c1-4fa4-84a2-4c7efe89ba71",
+      "unresolved": false
+    },
+    {
+      "key": {
         "uuid": "dac4157f_1ab45ef0",
         "filename": "src/com/android/deskclock/AlarmSongPicker.java",
         "patchSetId": 6
@@ -268,6 +502,24 @@
       "writtenOn": "2013-07-15T16:07:01Z",
       "side": 1,
       "message": "Can\u0027t just use mSelectedSong?",
+      "revId": "52dace0bfbdc7fe2a00f9c86453a5894f7e11fa6",
+      "serverId": "1ec6b3db-b2c1-4fa4-84a2-4c7efe89ba71",
+      "unresolved": false
+    },
+    {
+      "key": {
+        "uuid": "dac4157f_7e9a2916",
+        "filename": "src/com/android/deskclock/AlarmSongPicker.java",
+        "patchSetId": 6
+      },
+      "lineNbr": 244,
+      "author": {
+        "id": 4930
+      },
+      "writtenOn": "2013-07-18T02:44:38Z",
+      "side": 1,
+      "message": "Done",
+      "parentUuid": "dac4157f_1ab45ef0",
       "revId": "52dace0bfbdc7fe2a00f9c86453a5894f7e11fa6",
       "serverId": "1ec6b3db-b2c1-4fa4-84a2-4c7efe89ba71",
       "unresolved": false
@@ -291,6 +543,24 @@
     },
     {
       "key": {
+        "uuid": "dac4157f_9eee1d8a",
+        "filename": "src/com/android/deskclock/AlarmSongPicker.java",
+        "patchSetId": 6
+      },
+      "lineNbr": 271,
+      "author": {
+        "id": 4930
+      },
+      "writtenOn": "2013-07-18T02:44:38Z",
+      "side": 1,
+      "message": "Done",
+      "parentUuid": "dac4157f_1c8d8331",
+      "revId": "52dace0bfbdc7fe2a00f9c86453a5894f7e11fa6",
+      "serverId": "1ec6b3db-b2c1-4fa4-84a2-4c7efe89ba71",
+      "unresolved": false
+    },
+    {
+      "key": {
         "uuid": "dac4157f_5a889622",
         "filename": "src/com/android/deskclock/AlarmSongPicker.java",
         "patchSetId": 6
@@ -302,6 +572,24 @@
       "writtenOn": "2013-07-15T16:07:01Z",
       "side": 1,
       "message": "mAlbumId",
+      "revId": "52dace0bfbdc7fe2a00f9c86453a5894f7e11fa6",
+      "serverId": "1ec6b3db-b2c1-4fa4-84a2-4c7efe89ba71",
+      "unresolved": false
+    },
+    {
+      "key": {
+        "uuid": "dac4157f_7ef34974",
+        "filename": "src/com/android/deskclock/AlarmSongPicker.java",
+        "patchSetId": 6
+      },
+      "lineNbr": 282,
+      "author": {
+        "id": 4930
+      },
+      "writtenOn": "2013-07-18T02:44:38Z",
+      "side": 1,
+      "message": "Done",
+      "parentUuid": "dac4157f_5a889622",
       "revId": "52dace0bfbdc7fe2a00f9c86453a5894f7e11fa6",
       "serverId": "1ec6b3db-b2c1-4fa4-84a2-4c7efe89ba71",
       "unresolved": false
@@ -325,6 +613,24 @@
     },
     {
       "key": {
+        "uuid": "dac4157f_3eedd18b",
+        "filename": "src/com/android/deskclock/AlarmSongPicker.java",
+        "patchSetId": 6
+      },
+      "lineNbr": 287,
+      "author": {
+        "id": 4930
+      },
+      "writtenOn": "2013-07-18T02:44:38Z",
+      "side": 1,
+      "message": "Done",
+      "parentUuid": "dac4157f_3a8de231",
+      "revId": "52dace0bfbdc7fe2a00f9c86453a5894f7e11fa6",
+      "serverId": "1ec6b3db-b2c1-4fa4-84a2-4c7efe89ba71",
+      "unresolved": false
+    },
+    {
+      "key": {
         "uuid": "dac4157f_1a821e01",
         "filename": "src/com/android/deskclock/AlarmSongPicker.java",
         "patchSetId": 6
@@ -342,6 +648,24 @@
     },
     {
       "key": {
+        "uuid": "dac4157f_1e032d44",
+        "filename": "src/com/android/deskclock/AlarmSongPicker.java",
+        "patchSetId": 6
+      },
+      "lineNbr": 290,
+      "author": {
+        "id": 4930
+      },
+      "writtenOn": "2013-07-18T02:44:38Z",
+      "side": 1,
+      "message": "Done",
+      "parentUuid": "dac4157f_1a821e01",
+      "revId": "52dace0bfbdc7fe2a00f9c86453a5894f7e11fa6",
+      "serverId": "1ec6b3db-b2c1-4fa4-84a2-4c7efe89ba71",
+      "unresolved": false
+    },
+    {
+      "key": {
         "uuid": "dac4157f_fc81affc",
         "filename": "src/com/android/deskclock/AlarmSongPicker.java",
         "patchSetId": 6
@@ -353,6 +677,24 @@
       "writtenOn": "2013-07-12T17:35:50Z",
       "side": 1,
       "message": "album_art -\u003e albumArt\nnow_playing -\u003e nowPlaying",
+      "revId": "52dace0bfbdc7fe2a00f9c86453a5894f7e11fa6",
+      "serverId": "1ec6b3db-b2c1-4fa4-84a2-4c7efe89ba71",
+      "unresolved": false
+    },
+    {
+      "key": {
+        "uuid": "dac4157f_feff5932",
+        "filename": "src/com/android/deskclock/AlarmSongPicker.java",
+        "patchSetId": 6
+      },
+      "lineNbr": 312,
+      "author": {
+        "id": 4930
+      },
+      "writtenOn": "2013-07-18T02:44:38Z",
+      "side": 1,
+      "message": "Done",
+      "parentUuid": "dac4157f_fc81affc",
       "revId": "52dace0bfbdc7fe2a00f9c86453a5894f7e11fa6",
       "serverId": "1ec6b3db-b2c1-4fa4-84a2-4c7efe89ba71",
       "unresolved": false
