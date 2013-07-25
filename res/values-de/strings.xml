@@ -147,13 +147,6 @@
     <string name="sw_share_main" msgid="7703563468204234405">"Meine Zeit: <xliff:g id="TIME">%s</xliff:g>"</string>
     <string name="sw_share_laps" msgid="614390674795945007">"Rundenzeiten:"</string>
     <string name="sw_notification_lap_number" msgid="3535420316052647126">"<xliff:g id="NUMBER">%d</xliff:g>. Runde"</string>
-  <string-array name="stopwatch_format_set">
-    <item msgid="7855304148648938406">"<xliff:g id="M">%2$d</xliff:g>m <xliff:g id="S">%3$02d</xliff:g>s <xliff:g id="D">%4$02d</xliff:g>"</item>
-    <item msgid="3964356050933061913">"<xliff:g id="M">%2$02d</xliff:g>m <xliff:g id="S">%3$02d</xliff:g>s <xliff:g id="D">%4$02d</xliff:g>"</item>
-    <item msgid="4906928997138522728">"<xliff:g id="H">%1$d</xliff:g>h <xliff:g id="M">%2$02d</xliff:g>m <xliff:g id="S">%3$02d</xliff:g>s <xliff:g id="D">%4$02d</xliff:g>"</item>
-    <item msgid="1167529664702951052">"<xliff:g id="H">%1$02d</xliff:g>h <xliff:g id="M">%2$02d</xliff:g>m <xliff:g id="S">%3$02d</xliff:g>s <xliff:g id="D">%4$02d</xliff:g>"</item>
-    <item msgid="4383974684898411623">"<xliff:g id="H">%1$03d</xliff:g>h <xliff:g id="M">%2$02d</xliff:g>m <xliff:g id="S">%3$02d</xliff:g>s <xliff:g id="D">%4$02d</xliff:g>"</item>
-  </string-array>
   <plurals name="Nhours_description">
     <item quantity="one" msgid="371227238759147245">"1 Stunde"</item>
     <item quantity="other" msgid="7018184076091344797">"<xliff:g id="NUMBER">%d</xliff:g> Stunden"</item>
@@ -191,10 +184,8 @@
     <item quantity="one" msgid="6764708652976799977">"1 Minute"</item>
     <item quantity="other" msgid="3799129667336330616">"<xliff:g id="NUMBER">%d</xliff:g> Timer"</item>
   </plurals>
-    <string name="home_label" msgid="4436139365695453870">"Heimatzeitzone"</string>
+    <string name="home_label" msgid="4436139365695453870">"Zuhause"</string>
     <string name="cities_activity_title" msgid="8552462751129256730">"Städte"</string>
-    <string name="alarm_on" msgid="4344630320756422804">"An"</string>
-    <string name="alarm_off" msgid="6478058633710013612">"Aus"</string>
     <string name="clock_settings" msgid="8887845806151785393">"Uhr"</string>
     <string name="clock_style" msgid="2265011060429742344">"Design"</string>
   <string-array name="clock_style_entries">
@@ -315,7 +306,7 @@
     <string name="night_mode_summary" msgid="1017350187324162631">"Stark gedimmtes Display (für dunkle Räume)"</string>
     <string name="expand_alarm" msgid="7392616528943305020">"Wecker maximieren"</string>
     <string name="collapse_alarm" msgid="3561772046433483980">"Wecker minimieren"</string>
-    <string name="alarm_undo" msgid="5710042601177655254">"Rückgängig machen"</string>
+    <string name="alarm_undo" msgid="5710042601177655254">"Rückgängig"</string>
     <string name="alarm_deleted" msgid="5017075127290219443">"Weckzeit gelöscht"</string>
     <string name="slash" msgid="2077577763821006919">"/"</string>
     <string name="world_day_of_week_label" msgid="5911196322328341288">"/<xliff:g id="LABEL">%s</xliff:g>"</string>

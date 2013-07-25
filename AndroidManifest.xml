@@ -19,10 +19,12 @@
     <uses-permission android:name="android.permission.ACCESS_NETWORK_STATE" />
     <uses-permission android:name="com.android.deskclock.worldclock.permissions.WRITE_DATABASE" />
 
-    <uses-sdk android:minSdkVersion="15"></uses-sdk>
+    <uses-sdk android:minSdkVersion="17" android:targetSdkVersion="17" ></uses-sdk>
 
     <application android:label="@string/app_label"
-                 android:icon="@mipmap/ic_launcher_alarmclock">
+                 android:icon="@mipmap/ic_launcher_alarmclock"
+                 android:requiredForAllUsers="true"
+                 android:supportsRtl="true">
 
         <provider android:name="AlarmProvider"
                 android:authorities="com.android.deskclock"

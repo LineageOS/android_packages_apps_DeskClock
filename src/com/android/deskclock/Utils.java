@@ -52,11 +52,13 @@ import com.android.deskclock.worldclock.db.DbCities;
 import com.android.deskclock.worldclock.db.DbCity;
 
 import java.text.Collator;
+import java.text.SimpleDateFormat;
 import java.util.ArrayList;
 import java.util.Arrays;
 import java.util.Calendar;
 import java.util.Collections;
 import java.util.Comparator;
+import java.util.Date;
 import java.util.List;
 import java.util.Locale;
 
@@ -416,16 +418,19 @@ public class Utils {
     /** Clock views can call this to refresh their date. **/
     public static void updateDate(
             String dateFormat, String dateFormatForAccessibility, View clock) {
-        Calendar cal = Calendar.getInstance();
-        cal.setTimeInMillis(System.currentTimeMillis());
 
-        CharSequence newDate = DateFormat.format(dateFormat, cal);
+        Date now = new Date();
         TextView dateDisplay;
         dateDisplay = (TextView) clock.findViewById(R.id.date);
         if (dateDisplay != null) {
+            final Locale l = Locale.getDefault();
+            String fmt = DateFormat.getBestDateTimePattern(l, dateFormat);
+            SimpleDateFormat sdf = new SimpleDateFormat(fmt, l);
+            dateDisplay.setText(sdf.format(now));
             dateDisplay.setVisibility(View.VISIBLE);
-            dateDisplay.setText(newDate);
-            dateDisplay.setContentDescription(DateFormat.format(dateFormatForAccessibility, cal));
+            fmt = DateFormat.getBestDateTimePattern(l, dateFormatForAccessibility);
+            sdf = new SimpleDateFormat(fmt, l);
+            dateDisplay.setContentDescription(sdf.format(now));
         }
     }
 
