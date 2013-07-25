@@ -30,12 +30,12 @@ import android.content.res.Resources;
 import android.database.Cursor;
 import android.graphics.Rect;
 import android.graphics.Typeface;
-import android.media.Ringtone;
 import android.media.RingtoneManager;
 import android.net.Uri;
 import android.os.AsyncTask;
 import android.os.Bundle;
 import android.os.Vibrator;
+import android.provider.MediaStore.Audio;
 import android.view.ActionMode;
 import android.view.ActionMode.Callback;
 import android.view.LayoutInflater;
@@ -360,7 +360,42 @@ public class AlarmClock extends Activity implements LoaderManager.LoaderCallback
         mAdapter.swapCursor(null);
     }
 
-    private void launchRingTonePicker(Alarm alarm) {
+    private void launchRingTonePicker(final Alarm alarm) {
+        mSelectedAlarm = alarm;
+        AlertDialog.Builder builder = new AlertDialog.Builder(this);
+        builder.setTitle("Choose ringtone type").setItems(
+                new String[] { "Ringtone", "Playlist", "Random" },
+                new DialogInterface.OnClickListener() {
+
+                    @Override
+                    public void onClick(DialogInterface arg0, int arg1) {
+                        switch (arg1) {
+                        case 0:
+                            launchSingleRingTonePicker(alarm);
+                            break;
+                        case 1:
+                            launchPlaylistPicker(alarm);
+                            break;
+                        case 2:
+                            mSelectedAlarm.alert = Uri.parse("random");
+                            asyncUpdateAlarm(mSelectedAlarm, false);
+                            break;
+                        }
+                    }
+                });
+        AlertDialog d = builder.create();
+        d.show();
+    }
+
+    private void launchPlaylistPicker(Alarm alarm) {
+        final Intent intent = new Intent("com.andrew.apollo.action.PLAYLIST_PICKER");
+        intent.putExtra(RingtoneManager.EXTRA_RINGTONE_EXISTING_URI, alarm.alert);
+        intent.putExtra(RingtoneManager.EXTRA_RINGTONE_TYPE, RingtoneManager.TYPE_ALARM);
+        intent.putExtra(RingtoneManager.EXTRA_RINGTONE_SHOW_DEFAULT, false);
+        startActivityForResult(intent, REQUEST_CODE_RINGTONE);
+    }
+
+    private void launchSingleRingTonePicker(Alarm alarm) {
         mSelectedAlarm = alarm;
         final Intent intent = new Intent(RingtoneManager.ACTION_RINGTONE_PICKER);
         intent.putExtra(RingtoneManager.EXTRA_RINGTONE_EXISTING_URI, alarm.alert);
@@ -376,7 +411,6 @@ public class AlarmClock extends Activity implements LoaderManager.LoaderCallback
         RingtoneManager.setActualDefaultRingtoneUri(this, RingtoneManager.TYPE_ALARM, uri);
         asyncUpdateAlarm(mSelectedAlarm, false);
     }
-
     @Override
     protected void onActivityResult(int requestCode, int resultCode, Intent data) {
         if (resultCode == RESULT_OK) {
@@ -1037,12 +1071,21 @@ public class AlarmClock extends Activity implements LoaderManager.LoaderCallback
             // Try the cache first
             String title = mRingtoneTitleCache.getString(uri.toString());
             if (title == null) {
-                // This is slow because a media player is created during Ringtone object creation.
-                Ringtone ringTone = RingtoneManager.getRingtone(mContext, uri);
-                if (ringTone == null) {
-                    return null;
+                if (uri.toString().equals("random")) {
+                    title = "Random";
+                } else {
+                    Cursor c = getContentResolver().query(uri, null, null, null, null);
+                    if (c.moveToFirst()) {
+                        int col_id = -1;
+                        String rawUri = uri.toString();
+                        if (rawUri.startsWith(Audio.Media.EXTERNAL_CONTENT_URI.toString()) || rawUri.startsWith(Audio.Media.INTERNAL_CONTENT_URI.toString())) {
+                            col_id = c.getColumnIndex(Audio.Media.TITLE);
+                        } else if (rawUri.startsWith(Audio.Playlists.EXTERNAL_CONTENT_URI.toString()) || rawUri.startsWith(Audio.Playlists.INTERNAL_CONTENT_URI.toString())) {
+                            col_id = c.getColumnIndex(Audio.Playlists.NAME);
+                        }
+                        title = c.getString(col_id);
+                    }
                 }
-                title = ringTone.getTitle(mContext);
                 if (title != null) {
                     mRingtoneTitleCache.putString(uri.toString(), title);
                 }
