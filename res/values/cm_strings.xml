@@ -48,4 +48,10 @@
 
     <!-- Empty list message -->
     <string name="no_alarms">No alarms set</string>
+
+    <!-- Alarm picker dialog title -->
+    <string name="alarm_picker_title">Random</string>
+
+    <!-- Random song message -->
+    <string name="random_song">Random</string>
 </resources>
