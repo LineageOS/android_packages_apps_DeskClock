@@ -21,4 +21,10 @@
         <item>snooze alarm</item>
         <item>dismiss alarm</item>
     </string-array>
+
+    <string-array name="ringtone_picker_entries">
+        <item>Ringtone</item>
+        <item>Playlist</item>
+        <item>Random</item>
+    </string-array>
 </resources>
