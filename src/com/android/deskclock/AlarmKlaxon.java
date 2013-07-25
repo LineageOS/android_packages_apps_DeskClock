@@ -51,7 +51,7 @@ public class AlarmKlaxon extends Service {
 
     private boolean mPlaying = false;
     private Vibrator mVibrator;
-    private MediaPlayer mMediaPlayer;
+    private MultiPlayer mMediaPlayer;
     private AudioManager mAudioManager;
     private Alarm mCurrentAlarm;
     private long mStartTime;
@@ -200,7 +200,7 @@ public class AlarmKlaxon extends Service {
 
             // TODO: Reuse mMediaPlayer instead of creating a new one and/or use
             // RingtoneManager.
-            mMediaPlayer = new MediaPlayer();
+            mMediaPlayer = new MultiPlayer(this);
             mMediaPlayer.setOnErrorListener(new OnErrorListener() {
                 @Override
                 public boolean onError(MediaPlayer mp, int what, int extra) {
@@ -222,7 +222,7 @@ public class AlarmKlaxon extends Service {
                     setDataSourceFromResource(getResources(), mMediaPlayer,
                             R.raw.in_call_alarm);
                 } else {
-                    mMediaPlayer.setDataSource(this, alert);
+                    mMediaPlayer.setDataSource(alert);
                 }
                 startAlarm(mMediaPlayer, alarm.increasingVolume);
             } catch (Exception ex) {
@@ -231,7 +231,7 @@ public class AlarmKlaxon extends Service {
                 // now. Use the fallback ringtone.
                 try {
                     // Must reset the media player to clear the error state.
-                    mMediaPlayer.reset();
+//                    mMediaPlayer.reset();
                     setDataSourceFromResource(getResources(), mMediaPlayer,
                             R.raw.fallbackring);
                     startAlarm(mMediaPlayer, alarm.increasingVolume);
@@ -255,7 +255,7 @@ public class AlarmKlaxon extends Service {
     }
 
     // Do the common stuff when starting the alarm.
-    private void startAlarm(MediaPlayer player, boolean useIncreasingVolume)
+    private void startAlarm(MultiPlayer player, boolean useIncreasingVolume)
             throws java.io.IOException, IllegalArgumentException,
                    IllegalStateException {
         // do not play alarms if stream volume is 0
@@ -275,7 +275,7 @@ public class AlarmKlaxon extends Service {
     }
 
     private void setDataSourceFromResource(Resources resources,
-            MediaPlayer player, int res) throws java.io.IOException {
+            MultiPlayer player, int res) throws java.io.IOException {
         AssetFileDescriptor afd = resources.openRawResourceFd(res);
         if (afd != null) {
             player.setDataSource(afd.getFileDescriptor(), afd.getStartOffset(),
