@@ -21,6 +21,7 @@ import android.animation.Animator.AnimatorListener;
 import android.animation.AnimatorInflater;
 import android.animation.ValueAnimator;
 import android.app.Activity;
+import android.app.AlertDialog;
 import android.app.Fragment;
 import android.app.FragmentTransaction;
 import android.app.LoaderManager;
@@ -28,6 +29,7 @@ import android.app.Profile;
 import android.app.ProfileManager;
 import android.content.ContentResolver;
 import android.content.Context;
+import android.content.DialogInterface;
 import android.content.Intent;
 import android.content.Loader;
 import android.content.res.Configuration;
@@ -673,7 +675,32 @@ public class AlarmClockFragment extends DeskClockFragment implements
         mAdapter.swapCursor(null);
     }
 
-    private void launchRingTonePicker(Alarm alarm) {
+    private void launchRingTonePicker(final Alarm alarm) {
+        mSelectedAlarm = alarm;
+        AlertDialog.Builder builder = new AlertDialog.Builder(getActivity());
+        builder.setTitle(R.string.alarm_picker_title).setItems(
+                R.array.ringtone_picker_entries,
+
+                new DialogInterface.OnClickListener() {
+
+                    @Override
+                    public void onClick(DialogInterface arg0, int arg1) {
+                        switch (arg1) {
+                            case 0:
+                                launchSingleRingTonePicker(alarm);
+                                break;
+                            case 1:
+                                mSelectedAlarm.alert = MultiPlayer.RANDOM_URI;
+                                asyncUpdateAlarm(mSelectedAlarm, false);
+                                break;
+                        }
+                    }
+                });
+        AlertDialog d = builder.create();
+        d.show();
+    }
+
+    private void launchSingleRingTonePicker(Alarm alarm) {
         mSelectedAlarm = alarm;
         Uri oldRingtone = Alarm.NO_RINGTONE_URI.equals(alarm.alert) ? null : alarm.alert;
         final Intent intent = new Intent(RingtoneManager.ACTION_RINGTONE_PICKER);
