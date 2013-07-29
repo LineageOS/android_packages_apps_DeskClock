@@ -191,10 +191,9 @@
             <TextView
                 android:id="@+id/choose_ringtone"
                 android:layout_height="match_parent"
-                android:layout_width="0dp"
-                android:layout_weight="1"
-                android:layout_marginRight="16dp"
-                android:layout_marginEnd="16dp"
+                android:layout_width="match_parent"
+                android:layout_marginEnd="10dp"
+                android:layout_marginBottom="10dp"
                 android:gravity="center_vertical"
                 style="@style/body"
                 android:background="@drawable/item_background"
@@ -233,6 +232,7 @@
                 android:layout_height="wrap_content"
                 android:layout_width="wrap_content"
                 android:layout_gravity="center_vertical|end"
+                android:layout_below="@id/choose_profile"
                 style="@style/body"/>
             <CheckBox
                 android:id="@+id/increasing_volume_onoff"
