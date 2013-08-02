@@ -984,7 +984,7 @@ public class AlarmClock extends Activity implements LoaderManager.LoaderCallback
 
 
             if (!mHasVibrator) {
-                itemHolder.vibrate.setVisibility(View.INVISIBLE);
+                itemHolder.vibrate.setVisibility(View.GONE);
             } else {
                 itemHolder.vibrate.setVisibility(View.VISIBLE);
                 if (!alarm.vibrate) {
