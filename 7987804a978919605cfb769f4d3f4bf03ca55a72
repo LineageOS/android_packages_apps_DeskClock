@@ -1,0 +1,55 @@
+{
+  "comments": [
+    {
+      "key": {
+        "uuid": "baee8101_89e25c9e",
+        "filename": "res/values/cm_arrays.xml",
+        "patchSetId": 1
+      },
+      "lineNbr": 25,
+      "author": {
+        "id": 1576
+      },
+      "writtenOn": "2013-08-27T00:34:25Z",
+      "side": 1,
+      "message": "ideally, these should be @string resources to make translation easier",
+      "revId": "7987804a978919605cfb769f4d3f4bf03ca55a72",
+      "serverId": "1ec6b3db-b2c1-4fa4-84a2-4c7efe89ba71",
+      "unresolved": false
+    },
+    {
+      "key": {
+        "uuid": "baee8101_c9d864f2",
+        "filename": "res/values/cm_strings.xml",
+        "patchSetId": 1
+      },
+      "lineNbr": 75,
+      "author": {
+        "id": 1576
+      },
+      "writtenOn": "2013-08-27T00:34:25Z",
+      "side": 1,
+      "message": "Dialog title of \"Random\"?  not sure this makes sense - and if it does, why use 2 resources when one will do (and use less memory)?",
+      "revId": "7987804a978919605cfb769f4d3f4bf03ca55a72",
+      "serverId": "1ec6b3db-b2c1-4fa4-84a2-4c7efe89ba71",
+      "unresolved": false
+    },
+    {
+      "key": {
+        "uuid": "baee8101_a9e520a9",
+        "filename": "src/com/android/deskclock/MultiPlayer.java",
+        "patchSetId": 1
+      },
+      "lineNbr": 17,
+      "author": {
+        "id": 1576
+      },
+      "writtenOn": "2013-08-27T00:34:25Z",
+      "side": 1,
+      "message": "whitespace",
+      "revId": "7987804a978919605cfb769f4d3f4bf03ca55a72",
+      "serverId": "1ec6b3db-b2c1-4fa4-84a2-4c7efe89ba71",
+      "unresolved": false
+    }
+  ]
+}
