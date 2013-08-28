@@ -167,5 +167,7 @@
     <!-- top margin for digital_appwidget_listview -->
     <dimen name="digital_widget_list_margin_top">12dp</dimen>
 
+    <dimen name="alarm_thumb_switch_padding">10dp</dimen>
+
     <integer name="timer_weight">4</integer>
 </resources>

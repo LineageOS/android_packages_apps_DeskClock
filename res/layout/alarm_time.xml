@@ -78,7 +78,7 @@
             android:layout_width="wrap_content"
             android:layout_height="match_parent"
             android:id="@+id/onoff"
-            android:thumbTextPadding="10dp"
+            android:thumbTextPadding="@dimen/alarm_thumb_switch_padding"
             android:layout_gravity="center_vertical|end"/>
     </LinearLayout>
     <View
@@ -89,7 +89,7 @@
         android:layout_marginStart="8dp"
         android:layout_marginRight="8dp"
         android:layout_marginEnd="8dp"
-        android:background="#28ffffff"/>
+        android:background="@color/hairline"/>
     <FrameLayout
         android:id="@+id/info_area"
         android:layout_width="match_parent"
@@ -256,7 +256,7 @@
             android:layout_marginRight="8dp"
             android:layout_marginEnd="8dp"
             android:layout_width="match_parent"
-            android:background="#28ffffff"/>
+            android:background="@color/hairline"/>
         <FrameLayout
             android:id="@+id/collapse"
             android:layout_width="match_parent"

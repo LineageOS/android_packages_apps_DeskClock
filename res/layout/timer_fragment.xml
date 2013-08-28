@@ -39,7 +39,7 @@
             <View
                 android:layout_width="match_parent"
                 android:layout_height="1dip"
-                android:background="#28ffffff" />
+                android:background="@color/footer_background" />
             <ImageButton
                   android:id="@+id/timer_add_timer"
                   android:contentDescription="@string/timer_add_timer"
@@ -89,7 +89,7 @@
                     android:layout_marginTop="8dip"
                     android:layout_marginBottom="8dip"
                     android:layout_width="1dip"
-                    android:background="#28ffffff" />
+                    android:background="@color/button_background" />
                <Button
                     android:id="@+id/timer_start"
                     android:text="@string/timer_start"

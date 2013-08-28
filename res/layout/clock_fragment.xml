@@ -44,7 +44,7 @@
               <View
                   android:layout_width="match_parent"
                   android:layout_height="1dip"
-                  android:background="#28ffffff" />
+                  android:background="@color/footer_background" />
                   <LinearLayout
                       android:id="@+id/clock_buttons"
                       android:gravity="bottom"

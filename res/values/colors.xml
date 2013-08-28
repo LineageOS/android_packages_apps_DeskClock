@@ -42,6 +42,11 @@
     <color name="notification_bg">#ff15444F</color>
     <color name="alarm_selected_color">#aa0099cc</color>
 
+    <color name="hairline">#28ffffff</color>
+    <color name="footer_background">#28ffffff</color>
+    <color name="button_background">#28ffffff</color>
+    <color name="swn_button_text">#CCCCCC</color>
+
     <drawable name="notification_template_icon_bg">#3333B5E5</drawable>
     <drawable name="notification_template_icon_low_bg">#0cffffff</drawable>
 </resources>
