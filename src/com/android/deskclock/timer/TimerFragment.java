@@ -665,8 +665,7 @@ public class TimerFragment extends DeskClockFragment
             mSeperator.setVisibility(View.VISIBLE);
             mCancel.setVisibility(View.VISIBLE);
         }
-        mTimerSetup.updateStartButton();
-        mTimerSetup.updateDeleteButton();
+        mTimerSetup.updateButtons();
         mLastVisibleView = mNewTimerPage;
     }
     private void gotoTimersView() {
@@ -723,7 +722,7 @@ public class TimerFragment extends DeskClockFragment
                         b.setInterpolator(new AccelerateInterpolator());
                         b.setDuration(200);
                         b.addListener(new AnimatorListenerAdapter() {
-                                @Override
+                            @Override
                             public void onAnimationEnd(Animator animation) {
                                 mAdapter.deleteTimer(t.mTimerId);
                                 if (mAdapter.getCount() == 0) {
@@ -761,12 +760,12 @@ public class TimerFragment extends DeskClockFragment
     private void onPlusOneButtonPressed(TimerObj t) {
         switch(t.mState) {
             case TimerObj.STATE_RUNNING:
-                 t.addTime(60000); //60 seconds in millis
-                 long timeLeft = t.updateTimeLeft(false);
-                 ((TimerListItem)(t.mView)).setTime(timeLeft, false);
-                 ((TimerListItem)(t.mView)).setLength(timeLeft);
-                 mAdapter.notifyDataSetChanged();
-                 updateTimersState(t, Timers.TIMER_UPDATE);
+                t.addTime(60000); //60 seconds in millis
+                long timeLeft = t.updateTimeLeft(false);
+                ((TimerListItem)(t.mView)).setTime(timeLeft, false);
+                ((TimerListItem)(t.mView)).setLength(timeLeft);
+                mAdapter.notifyDataSetChanged();
+                updateTimersState(t, Timers.TIMER_UPDATE);
                 break;
             case TimerObj.STATE_TIMESUP:
                 // +1 min when the time is up will restart the timer with 1 minute left.
