@@ -86,13 +86,16 @@ public class TimerSetupView extends LinearLayout implements Button.OnClickListen
         mLeft = (Button)v4.findViewById(R.id.key_left);
         mNumbers[0] = (Button)v4.findViewById(R.id.key_middle);
         mRight = (Button)v4.findViewById(R.id.key_right);
-        setLeftRightEnabled(false);
 
         for (int i = 0; i < 10; i++) {
             mNumbers[i].setOnClickListener(this);
             mNumbers [i].setText(String.format("%d",i));
             mNumbers [i].setTag(R.id.numbers_key,new Integer(i));
         }
+        mLeft.setOnClickListener(this);
+        mLeft.setText("00");
+        mRight.setOnClickListener(this);
+        mRight.setText("30");
         updateTime();
     }
 
@@ -114,11 +117,56 @@ public class TimerSetupView extends LinearLayout implements Button.OnClickListen
         }
     }
 
+    public void updateZeroButton() {
+        boolean enabled = (mInputPointer != -1 && mInputPointer != 4);
+        if (mNumbers[0] != null) {
+            mNumbers[0].setEnabled(enabled);
+        }
+    }
+
+    public void updateDoubleZeroButton() {
+        boolean enabled = (mInputPointer != -1 && mInputPointer < 3);
+        if (mLeft != null) {
+            mLeft.setEnabled(enabled);
+        }
+    }
+    public void updateThirtyButton() {
+        boolean enabled = mInputPointer < 3;
+        if (mRight != null) {
+            mRight.setEnabled(enabled);
+        }
+    }
+
+    public void updateNumberButtons() {
+        boolean enabled = mInputPointer != 4;
+        for (int i = 1; i < 10; i++) {
+            if (mNumbers[i] != null) {
+                mNumbers[i].setEnabled(enabled);
+            }
+        }
+    }
+
+    public void updateButtons() {
+        updateStartButton();
+        updateDeleteButton();
+        updateNumberButtons();
+        updateZeroButton();
+        updateDoubleZeroButton();
+        updateThirtyButton();
+    }
+
     @Override
     public void onClick(View v) {
         doOnClick(v);
-        updateStartButton();
-        updateDeleteButton();
+        updateButtons();
+    }
+
+    protected void addDigit(Integer digit) {
+        for (int i = mInputPointer; i >= 0; i--) {
+            mInput[i+1] = mInput[i];
+        }
+        mInputPointer++;
+        mInput [0] = digit;
     }
 
     protected void doOnClick(View v) {
@@ -131,11 +179,23 @@ public class TimerSetupView extends LinearLayout implements Button.OnClickListen
                 return;
             }
             if (mInputPointer < mInputSize - 1) {
-                for (int i = mInputPointer; i >= 0; i--) {
-                    mInput[i+1] = mInput[i];
+                addDigit(val);
+                updateTime();
+            }
+            return;
+        }
+        if (v == mLeft || v == mRight) {
+            //pressing "00" as the first does nothing
+            if (mInputPointer == -1 && v == mLeft) {
+                return;
+            }
+            if (mInputPointer < mInputSize -2) {
+                if (v == mLeft) {
+                    addDigit(0);
+                } else {
+                    addDigit(3);
                 }
-                mInputPointer++;
-                mInput [0] = val;
+                addDigit(0);
                 updateTime();
             }
             return;
@@ -158,8 +218,7 @@ public class TimerSetupView extends LinearLayout implements Button.OnClickListen
     public boolean onLongClick(View v) {
         if (v == mDelete) {
             reset();
-            updateStartButton();
-            updateDeleteButton();
+            updateButtons();
             return true;
         }
         return false;
@@ -196,15 +255,6 @@ public class TimerSetupView extends LinearLayout implements Button.OnClickListen
                 }
             }
             updateTime();
-        }
-    }
-
-    protected void setLeftRightEnabled(boolean enabled) {
-        mLeft.setEnabled(enabled);
-        mRight.setEnabled(enabled);
-        if (!enabled) {
-            mLeft.setContentDescription(null);
-            mRight.setContentDescription(null);
         }
     }
 }
