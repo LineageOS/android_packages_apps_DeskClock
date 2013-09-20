@@ -1,3 +1,5 @@
+-dontwarn android.support.**
+
 -keepclassmembers class com.android.deskclock.DeskClock {
   *** clockButtonsOnClick(...);
 }
