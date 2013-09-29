@@ -14,14 +14,16 @@
      limitations under the License.
 -->
 <resources xmlns:xliff="urn:oasis:names:tc:xliff:document:1.2">
-    <string name="show_status_bar_icon_title">Показывать иконку</string>
-    <string name="show_status_bar_icon_summary">Отображать иконку в строке состояния при установленном будильнике</string>
+    <string name="show_status_bar_icon_title">Показывать значок</string>
+    <string name="show_status_bar_icon_summary">Отображать значок в строке состояния при установленном будильнике</string>
     <string name="flip_action_title">Переворот</string>
-    <string name="flip_action_dialog_title">Выбор действия\u2026</string>
-    <string name="flip_action_summary">При переворачивании телефона <xliff:g id="action">%s</xliff:g></string>
+    <string name="flip_action_dialog_title">Выбор действия</string>
+    <string name="flip_action_summary" product="tablet">При переворачивании планшета <xliff:g id="action">%s</xliff:g></string>
+    <string name="flip_action_summary" product="default">При переворачивании телефона <xliff:g id="action">%s</xliff:g></string>
     <string name="shake_action_title">Встряхивание</string>
-    <string name="shake_action_dialog_title">Выбор действия\u2026</string>
-    <string name="shake_action_summary">При встряхивании телефона <xliff:g id="action">%s</xliff:g></string>
+    <string name="shake_action_dialog_title">Выбор действия</string>
+    <string name="shake_action_summary" product="tablet">При встряхивании планшета <xliff:g id="action">%s</xliff:g></string>
+    <string name="shake_action_summary" product="default">При встряхивании телефона <xliff:g id="action">%s</xliff:g></string>
     <string name="stopwatch_settings">СЕКУНДОМЕР</string>
     <string name="keep_display_on_stopwatch">Не выключать экран</string>
     <string name="keep_display_on_stopwatch_summary">Держать экран включённым, пока секундомер работает</string>
@@ -45,7 +47,7 @@
     <string name="cities_delete_city_failed">Не удаётся удалить город</string>
 
     <!-- Accessibility labels for alarm buttons -->
-    <string name="profile_description">Профиль \"<xliff:g id="profile">%s</xliff:g>\"</string>
+    <string name="profile_description">Профиль «<xliff:g id="profile">%s</xliff:g>»</string>
 
     <!-- No profile selected label -->
     <string name="profile_no_selected">Профиль не выбран</string>
