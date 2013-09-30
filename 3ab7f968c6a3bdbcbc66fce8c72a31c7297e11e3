@@ -1,0 +1,21 @@
+{
+  "comments": [
+    {
+      "key": {
+        "uuid": "da37b569_b6a49e08",
+        "filename": "res/values-ca/cm_arrays.xml",
+        "patchSetId": 1
+      },
+      "lineNbr": 18,
+      "author": {
+        "id": 2597
+      },
+      "writtenOn": "2013-09-30T23:48:16Z",
+      "side": 1,
+      "message": "Please remove this comment",
+      "revId": "3ab7f968c6a3bdbcbc66fce8c72a31c7297e11e3",
+      "serverId": "1ec6b3db-b2c1-4fa4-84a2-4c7efe89ba71",
+      "unresolved": false
+    }
+  ]
+}
