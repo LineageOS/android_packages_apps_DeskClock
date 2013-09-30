@@ -30,7 +30,8 @@
     <string name="flip_action_dialog_title">Flip device to\u2026</string>
 
     <!-- Setting summary for the flip action setting. -->
-    <string name="flip_action_summary">Flipping the device over will <xliff:g id="action">%s</xliff:g></string>
+    <string name="flip_action_summary" product="tablet">Flipping the tablet over will <xliff:g id="action">%s</xliff:g></string>
+    <string name="flip_action_summary" product="default">Flipping the phone over will <xliff:g id="action">%s</xliff:g></string>
 
     <!-- Setting title for the shake action setting. -->
     <string name="shake_action_title">Shake action</string>
@@ -39,7 +40,8 @@
     <string name="shake_action_dialog_title">Shake device to\u2026</string>
 
     <!-- Setting summary for the shake action setting. -->
-    <string name="shake_action_summary">Shaking the device will <xliff:g id="action">%s</xliff:g></string>
+    <string name="shake_action_summary" product="tablet">Shaking the tablet will <xliff:g id="action">%s</xliff:g></string>
+    <string name="shake_action_summary" product="default">Shaking the phone will <xliff:g id="action">%s</xliff:g></string>
 
     <!-- Stopwatch -->
     <string name="stopwatch_settings">STOPWATCH</string>
