@@ -19,10 +19,12 @@
     <string name="show_status_bar_icon_summary">Bei aktivem Wecker das Symbol in der Statusleiste anzeigen</string>
     <string name="flip_action_title">Aktion beim Umdrehen</string>
     <string name="flip_action_dialog_title">Beim Umdrehen\u2026</string>
-    <string name="flip_action_summary">Beim Umdrehen des Gerätes <xliff:g id="action">%s</xliff:g></string>
+    <string name="flip_action_summary" product="tablet">Beim Umdrehen des Tablets <xliff:g id="action">%s</xliff:g></string>
+    <string name="flip_action_summary" product="default">Beim Umdrehen des Telefons <xliff:g id="action">%s</xliff:g></string>
     <string name="shake_action_title">Aktion beim Schütteln</string>
     <string name="shake_action_dialog_title">Beim Schütteln\u2026</string>
-    <string name="shake_action_summary">Beim Schütteln des Gerätes <xliff:g id="action">%s</xliff:g></string>
+    <string name="shake_action_summary" product="tablet">Beim Schütteln des Gerätes <xliff:g id="action">%s</xliff:g></string>
+    <string name="shake_action_summary" product="default">Beim Schütteln des Telefons <xliff:g id="action">%s</xliff:g></string>
     <string name="stopwatch_settings">STOPPUHR</string>
     <string name="keep_display_on_stopwatch">Bildschirm aktiv lassen</string>
     <string name="keep_display_on_stopwatch_summary">Bei laufender Stoppuhr den Bildschirm nicht automatisch ausschalten</string>
