@@ -19,10 +19,12 @@
     <string name="show_status_bar_icon_summary">Ikon megjelenítése aktív ébresztés esetén az értesítési sávon</string>
     <string name="flip_action_title">Telefon megfordítása</string>
     <string name="flip_action_dialog_title">Telefon megfordítása\u2026</string>
-    <string name="flip_action_summary">A telefon megfordítására <xliff:g id="action">%s</xliff:g></string>
+    <string name="flip_action_summary" product="tablet">A táblagép megfordítására <xliff:g id="action">%s</xliff:g></string>
+    <string name="flip_action_summary" product="default">A telefon megfordítására <xliff:g id="action">%s</xliff:g></string>
     <string name="shake_action_title">Telefon rázása</string>
     <string name="shake_action_dialog_title">Telefon rázása\u2026</string>
-    <string name="shake_action_summary">A telefon rázására <xliff:g id="action">%s</xliff:g></string>
+    <string name="shake_action_summary" product="tablet">A táblagép rázására <xliff:g id="action">%s</xliff:g></string>
+    <string name="shake_action_summary" product="default">A telefon rázására <xliff:g id="action">%s</xliff:g></string>
     <string name="stopwatch_settings">STOPPERÓRA</string>
     <string name="keep_display_on_stopwatch">A képernyő bekapcsolva tartása</string>
     <string name="keep_display_on_stopwatch_summary">A képernyő bekapcsolva tartása, amíg a stopperóra működik</string>
