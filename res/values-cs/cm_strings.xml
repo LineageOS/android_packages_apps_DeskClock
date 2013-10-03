@@ -20,12 +20,14 @@
     <string name="show_status_bar_icon_summary">Zobrazovat ikonu ve stavovém řádku při nastaveném budíku.</string>
 
     <string name="flip_action_title">Akce při otočení</string>
-    <string name="flip_action_dialog_title">Po otočení přístroje\u2026</string>
-    <string name="flip_action_summary">Otočením přístroje dojde k <xliff:g id="action">%s</xliff:g></string>
+    <string name="flip_action_dialog_title">Po otočení zařízení\u2026</string>
+    <string name="flip_action_summary" product="tablet">Otočením tabletu dojde k <xliff:g id="action">%s</xliff:g></string>
+    <string name="flip_action_summary" product="default">Otočením telefonu dojde k <xliff:g id="action">%s</xliff:g></string>
 
     <string name="shake_action_title">Akce při zatřesení</string>
-    <string name="shake_action_dialog_title">Po zatřesení přístrojem\u2026</string>
-    <string name="shake_action_summary">Zatřesením přístroje dojde k <xliff:g id="action">%s</xliff:g></string>
+    <string name="shake_action_dialog_title">Po zatřesení zařízením\u2026</string>
+    <string name="shake_action_summary" product="tablet">Zatřesením tabletu dojde k <xliff:g id="action">%s</xliff:g></string>
+    <string name="shake_action_summary" product="default">Zatřesením telefonu dojde k <xliff:g id="action">%s</xliff:g></string>
 
     <string name="stopwatch_settings">STOPKY</string>
     <string name="keep_display_on_stopwatch">Ponechat obrazovku zapnutou</string>
