@@ -22,12 +22,12 @@
     <string name="show_status_bar_icon_summary">Wys \'n ikoon in die statusbalk wanneer \'n alarm ingestel is</string>
     <string name="flip_action_title">Omdraai aksie</string>
     <string name="flip_action_dialog_title">Omdraai sal\u2026</string>
-    <string name="flip_action_summary" product="default">Die omdraai van jou foon sal <xliff:g id="action">%s</xliff:g></string>
     <string name="flip_action_summary" product="tablet">Die omdraai van jou Tablet sal <xliff:g id="action">%s</xliff:g></string>
+    <string name="flip_action_summary" product="default">Die omdraai van jou foon sal <xliff:g id="action">%s</xliff:g></string>
     <string name="shake_action_title">Skud aksie</string>
     <string name="shake_action_dialog_title">Toestel skud sal\u2026</string>
-    <string name="shake_action_summary" product="default">Die skud van jou foon sal <xliff:g id="action">%s</xliff:g></string>
     <string name="shake_action_summary" product="tablet">Die skud van jou tablet sal <xliff:g id="action">%s</xliff:g></string>
+    <string name="shake_action_summary" product="default">Die skud van jou foon sal <xliff:g id="action">%s</xliff:g></string>
     <string name="stopwatch_settings">Stophorlosie</string>
     <string name="keep_display_on_stopwatch">Hou skerm aan</string>
     <string name="keep_display_on_stopwatch_summary">Hou die skerm aan wanneer die stophorlosie aan is</string>
