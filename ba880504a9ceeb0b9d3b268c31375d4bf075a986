@@ -52,6 +52,23 @@
       "revId": "ba880504a9ceeb0b9d3b268c31375d4bf075a986",
       "serverId": "1ec6b3db-b2c1-4fa4-84a2-4c7efe89ba71",
       "unresolved": false
+    },
+    {
+      "key": {
+        "uuid": "9a41bdd9_02318ca2",
+        "filename": "res/values-af/cm_strings.xml",
+        "patchSetId": 1
+      },
+      "lineNbr": 25,
+      "author": {
+        "id": 5259
+      },
+      "writtenOn": "2013-10-05T13:17:04Z",
+      "side": 1,
+      "message": "Might as well change it to a lowercase t for consistency\u0027s sake. The English strings file has tablet in lowercase as well.",
+      "revId": "ba880504a9ceeb0b9d3b268c31375d4bf075a986",
+      "serverId": "1ec6b3db-b2c1-4fa4-84a2-4c7efe89ba71",
+      "unresolved": false
     }
   ]
 }
