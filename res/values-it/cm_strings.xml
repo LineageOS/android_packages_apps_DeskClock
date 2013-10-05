@@ -20,10 +20,12 @@
     <string name="show_status_bar_icon_summary">Mostra un\'icona nella barra di stato quando è impostata la sveglia</string>
     <string name="flip_action_title">Azione capovolgimento</string>
     <string name="flip_action_dialog_title">Capovolgi dispositivo per\u2026</string>
-    <string name="flip_action_summary">Capovolgere il telefono verso il basso <xliff:g id="action">%s</xliff:g></string>
+    <string name="flip_action_summary" product="tablet">Capovolgere il tablet verso il basso <xliff:g id="action">%s</xliff:g></string>
+    <string name="flip_action_summary" product="default">Capovolgere il telefono verso il basso <xliff:g id="action">%s</xliff:g></string>
     <string name="shake_action_title">Azione scuotimento</string>
-    <string name="shake_action_dialog_title">Agitare il telefono per\u2026</string>
-    <string name="shake_action_summary">Agitare il telefono <xliff:g id="action">%s</xliff:g></string>
+    <string name="shake_action_dialog_title">Agitare il dispositivo per\u2026</string>
+    <string name="shake_action_summary" product="tablet">Agitare il tablet <xliff:g id="action">%s</xliff:g></string>
+    <string name="shake_action_summary" product="default">Agitare il telefono <xliff:g id="action">%s</xliff:g></string>
     <string name="stopwatch_settings">CRONOMETRO</string>
     <string name="keep_display_on_stopwatch">Tieni display attivo</string>
     <string name="keep_display_on_stopwatch_summary">Tieni il display attivo quando il cronometro è in funzione</string>
