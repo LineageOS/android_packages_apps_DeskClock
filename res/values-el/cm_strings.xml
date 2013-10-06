@@ -18,10 +18,12 @@
     <string name="show_status_bar_icon_summary">Εμφάνιση εικονιδίου στη μπάρα κατάστασης όταν είναι ενεργό ένα ξυπνητήρι</string>
     <string name="flip_action_title">Ενέργεια αναποδογυρίσματος</string>
     <string name="flip_action_dialog_title">Ενέργεια αναποδογυρίσματος συσκευής</string>
-    <string name="flip_action_summary">Το αναποδογύρισμα της συσκευής <xliff:g id="action">%s</xliff:g></string>
+    <string name="flip_action_summary" product="tablet">Το αναποδογύρισμα του tablet <xliff:g id="action">%s</xliff:g></string>
+    <string name="flip_action_summary" product="default">Το αναποδογύρισμα του τηλεφώνου <xliff:g id="action">%s</xliff:g></string>
     <string name="shake_action_title">Ενέργεια κουνήματος</string>
     <string name="shake_action_dialog_title">Ενέργεια κουνήματος συσκευής</string>
-    <string name="shake_action_summary">Το κούνημα της συσκευής <xliff:g id="action">%s</xliff:g></string>
+    <string name="shake_action_summary" product="tablet">Το κούνημα του tablet <xliff:g id="action">%s</xliff:g></string>
+    <string name="shake_action_summary" product="default">Το κούνημα του τηλεφώνου <xliff:g id="action">%s</xliff:g></string>
     <string name="stopwatch_settings">ΧΡΟΝΟΜΕΤΡΟ</string>
     <string name="keep_display_on_stopwatch">Διατήρηση ενεργής οθόνης</string>
     <string name="keep_display_on_stopwatch_summary">Κρατήστε την οθόνη σε λειτουργία ενώ το χρονόμετρο τρέχει</string>
