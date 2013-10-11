@@ -1,0 +1,55 @@
+{
+  "comments": [
+    {
+      "key": {
+        "uuid": "3a50d1a3_1f900795",
+        "filename": "res/values-zh-rTW/cm_arrays.xml",
+        "patchSetId": 1
+      },
+      "lineNbr": 2,
+      "author": {
+        "id": 7437
+      },
+      "writtenOn": "2013-10-11T01:19:44Z",
+      "side": 1,
+      "message": "?????????? 2013 ??? (http://review.cyanogenmod.org/#/c/50745/)",
+      "revId": "7cc989858f6e69c1609c770c72eb64173b072439",
+      "serverId": "1ec6b3db-b2c1-4fa4-84a2-4c7efe89ba71",
+      "unresolved": false
+    },
+    {
+      "key": {
+        "uuid": "3a50d1a3_3f8dc37b",
+        "filename": "res/values-zh-rTW/cm_strings.xml",
+        "patchSetId": 1
+      },
+      "lineNbr": 2,
+      "author": {
+        "id": 7437
+      },
+      "writtenOn": "2013-10-11T01:19:44Z",
+      "side": 1,
+      "message": "?????????? 2013 ??? (http://review.cyanogenmod.org/#/c/44394/)",
+      "revId": "7cc989858f6e69c1609c770c72eb64173b072439",
+      "serverId": "1ec6b3db-b2c1-4fa4-84a2-4c7efe89ba71",
+      "unresolved": false
+    },
+    {
+      "key": {
+        "uuid": "3a50d1a3_dfe85f19",
+        "filename": "res/values-zh-rTW/cm_strings.xml",
+        "patchSetId": 1
+      },
+      "lineNbr": 17,
+      "author": {
+        "id": 7437
+      },
+      "writtenOn": "2013-10-11T01:19:44Z",
+      "side": 1,
+      "message": "????increasing volume??????????????????",
+      "revId": "7cc989858f6e69c1609c770c72eb64173b072439",
+      "serverId": "1ec6b3db-b2c1-4fa4-84a2-4c7efe89ba71",
+      "unresolved": false
+    }
+  ]
+}
