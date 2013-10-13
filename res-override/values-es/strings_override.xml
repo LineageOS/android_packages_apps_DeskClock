@@ -1,0 +1,29 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!--
+     Copyright (C) 2013 The CyanogenMod Project
+
+     Licensed under the Apache License, Version 2.0 (the "License");
+     you may not use this file except in compliance with the License.
+     You may obtain a copy of the License at
+
+          http://www.apache.org/licenses/LICENSE-2.0
+
+     Unless required by applicable law or agreed to in writing, software
+     distributed under the License is distributed on an "AS IS" BASIS,
+     WITHOUT WARRANTIES OR CONDITIONS OF ANY KIND, either express or implied.
+     See the License for the specific language governing permissions and
+     limitations under the License.
+-->
+<resources xmlns:xliff="urn:oasis:names:tc:xliff:document:1.2">
+  <string-array name="timer_notifications">
+    <item msgid="7760558912503484257">"Queda menos de 1 minuto"</item>
+    <item msgid="83197792732433351">"Quedan <xliff:g id="HOURS">%1$s</xliff:g> restantes"</item>
+    <item msgid="8919698220200894252">"Quedan <xliff:g id="MINUTES">%2$s</xliff:g> restantes"</item>
+    <item msgid="8458069283817013813">"Quedan <xliff:g id="HOURS">%1$s</xliff:g> y <xliff:g id="MINUTES">%2$s</xliff:g> restantes"</item>
+  </string-array>
+  <string-array name="volume_button_setting_entries">
+    <item msgid="7972756698723318690">"Posponer la alarma"</item>
+    <item msgid="3450979320164769576">"Descartar la alarma"</item>
+    <item msgid="6302517608411378024">"No hacer nada"</item>
+  </string-array>
+</resources>

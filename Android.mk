@@ -14,6 +14,10 @@ LOCAL_OVERRIDES_PACKAGES := AlarmClock
 
 LOCAL_PROGUARD_FLAG_FILES := proguard.flags
 
+LOCAL_RESOURCE_DIR := $(addprefix $(LOCAL_PATH)/, res res-override)
+
+LOCAL_AAPT_FLAGS := --auto-add-overlay
+
 include $(BUILD_PACKAGE)
 
 # Use the following include to make our test apk.
