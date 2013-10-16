@@ -12,6 +12,10 @@ LOCAL_PACKAGE_NAME := DeskClock
 
 LOCAL_OVERRIDES_PACKAGES := AlarmClock
 
+LOCAL_RESOURCE_DIR := $(addprefix $(LOCAL_PATH)/, res-override res)
+
+LOCAL_AAPT_FLAGS := --auto-add-overlay
+
 LOCAL_PROGUARD_FLAG_FILES := proguard.flags
 
 include $(BUILD_PACKAGE)
