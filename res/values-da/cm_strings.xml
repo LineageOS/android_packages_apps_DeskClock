@@ -19,10 +19,12 @@
     <string name="show_status_bar_icon_summary">Vis et ikon i statuslinjen, når en alarm er sat</string>
     <string name="flip_action_title">Vendehandling</string>
     <string name="flip_action_dialog_title">Vend enheden for at\u2026</string>
-    <string name="flip_action_summary">At vende enheden nedad vil <xliff:g id="action">%s</xliff:g></string>
+    <string name="flip_action_summary" product="tablet">At vende tabletten nedad vil <xliff:g id="action">%s</xliff:g></string>
+    <string name="flip_action_summary" product="default">At vende telefonen nedad vil <xliff:g id="action">%s</xliff:g></string>
     <string name="shake_action_title">Rystehandling</string>
     <string name="shake_action_dialog_title">Ryst enheden for at\u2026</string>
-    <string name="shake_action_summary">At ryste telefonen vil <xliff:g id="action">%s</xliff:g></string>
+    <string name="shake_action_summary" product="tablet">At ryste tabletten vil <xliff:g id="action">%s</xliff:g></string>
+    <string name="shake_action_summary" product="default">At ryste telefonen vil <xliff:g id="action">%s</xliff:g></string>
     <string name="stopwatch_settings">STOPUR</string>
     <string name="keep_display_on_stopwatch">Hold skærmen tændt</string>
     <string name="keep_display_on_stopwatch_summary">Hold skærmen tændt, når stopuret kører</string>
