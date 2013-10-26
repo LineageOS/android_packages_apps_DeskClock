@@ -1,5 +1,6 @@
 <?xml version="1.0" encoding="utf-8"?>
-<!-- Copyright (C) 2012-2013 The CyanogenMod Project
+<!--
+     Copyright (C) 2012-2013 The CyanogenMod Project
 
      Licensed under the Apache License, Version 2.0 (the "License");
      you may not use this file except in compliance with the License.
@@ -14,6 +15,7 @@
      limitations under the License.
 -->
 <resources xmlns:xliff="urn:oasis:names:tc:xliff:document:1.2">
+
     <!-- Setting labels on Set alarm screen: Increasing volume on or off -->
     <string name="alarm_increasing_volume">Increasing volume</string>
 
@@ -27,7 +29,8 @@
     <string name="flip_action_title">Flip action</string>
 
     <!-- Dialog title of the flip action setting. -->
-    <string name="flip_action_dialog_title">Flip device to\u2026</string>
+    <string name="flip_action_dialog_title" product="tablet">Flip tablet to\u2026</string>
+    <string name="flip_action_dialog_title" product="default">Flip phone to\u2026</string>
 
     <!-- Setting summary for the flip action setting. -->
     <string name="flip_action_summary" product="tablet">Flipping the tablet over will <xliff:g id="action">%s</xliff:g></string>
@@ -37,7 +40,8 @@
     <string name="shake_action_title">Shake action</string>
 
     <!-- Dialog title for the shake action setting. -->
-    <string name="shake_action_dialog_title">Shake device to\u2026</string>
+    <string name="shake_action_dialog_title" product="tablet">Shake tablet to\u2026</string>
+    <string name="shake_action_dialog_title" product="default">Shake phone to\u2026</string>
 
     <!-- Setting summary for the shake action setting. -->
     <string name="shake_action_summary" product="tablet">Shaking the tablet will <xliff:g id="action">%s</xliff:g></string>
