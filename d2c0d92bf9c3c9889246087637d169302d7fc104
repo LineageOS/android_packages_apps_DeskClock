@@ -55,6 +55,24 @@
     },
     {
       "key": {
+        "uuid": "1a4dcd0f_a4e4630d",
+        "filename": "res/values-nl/cm_strings.xml",
+        "patchSetId": 1
+      },
+      "lineNbr": 20,
+      "author": {
+        "id": 2597
+      },
+      "writtenOn": "2013-10-28T10:30:03Z",
+      "side": 1,
+      "message": "Oh...\n\nDit is zeg maar voor als je slaapt en je telefoon ligt naast je, dat je alleen je telefoon hoeft om te draaien (dus met het scherm naar beneden) om het te snoozen. Dan hoef je je ogen niet meer open te doen om naar dat knopje te zoeken.",
+      "parentUuid": "1a4dcd0f_64009bab",
+      "revId": "d2c0d92bf9c3c9889246087637d169302d7fc104",
+      "serverId": "1ec6b3db-b2c1-4fa4-84a2-4c7efe89ba71",
+      "unresolved": false
+    },
+    {
+      "key": {
         "uuid": "1a4dcd0f_c4f2cf06",
         "filename": "res/values-nl/cm_strings.xml",
         "patchSetId": 1
