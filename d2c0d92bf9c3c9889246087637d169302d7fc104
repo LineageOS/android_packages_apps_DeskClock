@@ -73,6 +73,24 @@
     },
     {
       "key": {
+        "uuid": "1a4dcd0f_64ee5bee",
+        "filename": "res/values-nl/cm_strings.xml",
+        "patchSetId": 1
+      },
+      "lineNbr": 20,
+      "author": {
+        "id": 7630
+      },
+      "writtenOn": "2013-10-28T10:38:57Z",
+      "side": 1,
+      "message": "Ahh, super, moet ik toch echt ook telefoon met CM hebben :-), ik druk nu inderdaad op SNOOZE, maar goed da\u0027s wel het begin van wakker worden...\nThanx Marco.",
+      "parentUuid": "1a4dcd0f_a4e4630d",
+      "revId": "d2c0d92bf9c3c9889246087637d169302d7fc104",
+      "serverId": "1ec6b3db-b2c1-4fa4-84a2-4c7efe89ba71",
+      "unresolved": false
+    },
+    {
+      "key": {
         "uuid": "1a4dcd0f_c4f2cf06",
         "filename": "res/values-nl/cm_strings.xml",
         "patchSetId": 1
