@@ -1,0 +1,38 @@
+{
+  "comments": [
+    {
+      "key": {
+        "uuid": "1a4dcd0f_04e9971a",
+        "filename": "res/values-nl/cm_strings.xml",
+        "patchSetId": 1
+      },
+      "lineNbr": 20,
+      "author": {
+        "id": 7630
+      },
+      "writtenOn": "2013-10-28T09:22:41Z",
+      "side": 1,
+      "message": "Misschien muggeziften of spijkers op laag water. Tablet draaien is korter, en misschien bij omdraaien dat een leek naar de achterkant gaat kijken? Maar jullie hebben veel meer ervaring, als omdraaien altijd gebruikt wordt, prima :-)",
+      "revId": "d2c0d92bf9c3c9889246087637d169302d7fc104",
+      "serverId": "1ec6b3db-b2c1-4fa4-84a2-4c7efe89ba71",
+      "unresolved": false
+    },
+    {
+      "key": {
+        "uuid": "1a4dcd0f_c4f2cf06",
+        "filename": "res/values-nl/cm_strings.xml",
+        "patchSetId": 1
+      },
+      "lineNbr": 21,
+      "author": {
+        "id": 7630
+      },
+      "writtenOn": "2013-10-28T09:22:41Z",
+      "side": 1,
+      "message": "Idem",
+      "revId": "d2c0d92bf9c3c9889246087637d169302d7fc104",
+      "serverId": "1ec6b3db-b2c1-4fa4-84a2-4c7efe89ba71",
+      "unresolved": false
+    }
+  ]
+}
