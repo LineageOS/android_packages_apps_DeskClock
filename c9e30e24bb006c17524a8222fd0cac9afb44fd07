@@ -16,6 +16,24 @@
       "revId": "c9e30e24bb006c17524a8222fd0cac9afb44fd07",
       "serverId": "1ec6b3db-b2c1-4fa4-84a2-4c7efe89ba71",
       "unresolved": false
+    },
+    {
+      "key": {
+        "uuid": "1a4dcd0f_2404d313",
+        "filename": "res/values-hu/cm_strings.xml",
+        "patchSetId": 1
+      },
+      "lineNbr": 20,
+      "author": {
+        "id": 3214
+      },
+      "writtenOn": "2013-10-28T09:02:22Z",
+      "side": 1,
+      "message": "Nekem ablakcímnek a Megfordítás/Rázás kicsit kevésnek t?nik...",
+      "parentUuid": "1a4dcd0f_70029640",
+      "revId": "c9e30e24bb006c17524a8222fd0cac9afb44fd07",
+      "serverId": "1ec6b3db-b2c1-4fa4-84a2-4c7efe89ba71",
+      "unresolved": false
     }
   ]
 }
