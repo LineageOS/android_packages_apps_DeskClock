@@ -1,0 +1,21 @@
+{
+  "comments": [
+    {
+      "key": {
+        "uuid": "fa1b9901_5d776fd4",
+        "filename": "res/values-fr/cm_strings.xml",
+        "patchSetId": 1
+      },
+      "lineNbr": 20,
+      "author": {
+        "id": 6563
+      },
+      "writtenOn": "2013-11-04T21:39:42Z",
+      "side": 1,
+      "message": "Est-ce qu\u0027une version au féminin pour une tablette serait nécessaire ?",
+      "revId": "116239d1804e386ee2c1092b5ffc566169d6258e",
+      "serverId": "1ec6b3db-b2c1-4fa4-84a2-4c7efe89ba71",
+      "unresolved": false
+    }
+  ]
+}
