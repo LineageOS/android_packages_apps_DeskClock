@@ -43,17 +43,22 @@ class ClockDatabaseHelper extends SQLiteOpenHelper {
     private static final int VERSION_5 = 5;
 
     /**
+     * CM 10.2 Clock database
+     */
+    private static final int VERSION_CM102 = 7;
+
+    /**
      * Introduce:
      * Added alarm_instances table
      * Added selected_cities table
      * Added DELETE_AFTER_USE column to alarms table
      */
-    private static final int VERSION_6 = 6;
+    private static final int VERSION_6 = 8;
 
     /**
      * Added alarm settings to instance table.
      */
-    private static final int VERSION_7 = 7;
+    private static final int VERSION_7 = 9;
 
     // This creates a default alarm at 8:30 for every Mon,Tue,Wed,Thu,Fri
     private static final String DEFAULT_ALARM_1 = "(8, 30, 31, 0, 0, '', NULL, 0);";
