@@ -1,0 +1,21 @@
+{
+  "comments": [
+    {
+      "key": {
+        "uuid": "fa1b9901_84c4c792",
+        "filename": "res/values-lt/cm_strings.xml",
+        "patchSetId": 1
+      },
+      "lineNbr": 28,
+      "author": {
+        "id": 2681
+      },
+      "writtenOn": "2013-11-08T18:04:36Z",
+      "side": 1,
+      "message": "Missing closing tag on this line",
+      "revId": "0bec99caa5aa62b84e31ae0257325851fed59677",
+      "serverId": "1ec6b3db-b2c1-4fa4-84a2-4c7efe89ba71",
+      "unresolved": false
+    }
+  ]
+}
