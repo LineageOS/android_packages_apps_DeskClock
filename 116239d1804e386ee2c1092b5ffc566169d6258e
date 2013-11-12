@@ -34,6 +34,24 @@
       "revId": "116239d1804e386ee2c1092b5ffc566169d6258e",
       "serverId": "1ec6b3db-b2c1-4fa4-84a2-4c7efe89ba71",
       "unresolved": false
+    },
+    {
+      "key": {
+        "uuid": "fa1b9901_86ce0782",
+        "filename": "res/values-fr/cm_strings.xml",
+        "patchSetId": 1
+      },
+      "lineNbr": 20,
+      "author": {
+        "id": 6261
+      },
+      "writtenOn": "2013-11-12T14:31:55Z",
+      "side": 1,
+      "message": "Action au retournement ?\nÇa pourrait être plus simple :)",
+      "parentUuid": "fa1b9901_e6e10300",
+      "revId": "116239d1804e386ee2c1092b5ffc566169d6258e",
+      "serverId": "1ec6b3db-b2c1-4fa4-84a2-4c7efe89ba71",
+      "unresolved": false
     }
   ]
 }
