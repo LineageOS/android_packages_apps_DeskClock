@@ -1,0 +1,21 @@
+{
+  "comments": [
+    {
+      "key": {
+        "uuid": "fa1b9901_e6cee3b3",
+        "filename": "res/values-lt/cm_strings.xml",
+        "patchSetId": 5
+      },
+      "lineNbr": 17,
+      "author": {
+        "id": 308
+      },
+      "writtenOn": "2013-11-12T12:37:09Z",
+      "side": 1,
+      "message": "Did?jantis garsas",
+      "revId": "9de9fdc3aad2f58b2621341a34f007a031ebca5b",
+      "serverId": "1ec6b3db-b2c1-4fa4-84a2-4c7efe89ba71",
+      "unresolved": false
+    }
+  ]
+}
