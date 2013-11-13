@@ -16,6 +16,24 @@
       "revId": "ba053285a9b1f52b918084cd62b914004b05c1a3",
       "serverId": "1ec6b3db-b2c1-4fa4-84a2-4c7efe89ba71",
       "unresolved": false
+    },
+    {
+      "key": {
+        "uuid": "fa1b9901_2bd3433a",
+        "filename": "res/values-fr/cm_strings.xml",
+        "patchSetId": 2
+      },
+      "lineNbr": 28,
+      "author": {
+        "id": 4808
+      },
+      "writtenOn": "2013-11-13T10:19:38Z",
+      "side": 1,
+      "message": "Desole le terme officiel c\u0027est \u0027téléphone\u0027 :https://android.googlesource.com/platform/packages/apps/Settings/+/android-4.4_r1/res/values-fr/strings.xml",
+      "parentUuid": "fa1b9901_6b905b96",
+      "revId": "ba053285a9b1f52b918084cd62b914004b05c1a3",
+      "serverId": "1ec6b3db-b2c1-4fa4-84a2-4c7efe89ba71",
+      "unresolved": false
     }
   ]
 }
