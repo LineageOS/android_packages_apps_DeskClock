@@ -1,0 +1,21 @@
+{
+  "comments": [
+    {
+      "key": {
+        "uuid": "fa1b9901_6b905b96",
+        "filename": "res/values-fr/cm_strings.xml",
+        "patchSetId": 2
+      },
+      "lineNbr": 28,
+      "author": {
+        "id": 6563
+      },
+      "writtenOn": "2013-11-13T09:48:10Z",
+      "side": 1,
+      "message": "Téléphone ou smartphone ? C\u0027est incohérent avec la ligne 26",
+      "revId": "ba053285a9b1f52b918084cd62b914004b05c1a3",
+      "serverId": "1ec6b3db-b2c1-4fa4-84a2-4c7efe89ba71",
+      "unresolved": false
+    }
+  ]
+}
