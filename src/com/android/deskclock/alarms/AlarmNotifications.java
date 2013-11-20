@@ -20,14 +20,18 @@ import android.app.NotificationManager;
 import android.app.PendingIntent;
 import android.content.Context;
 import android.content.Intent;
+import android.content.SharedPreferences;
 import android.content.res.Resources;
+import android.preference.PreferenceManager;
 import android.provider.Settings;
+import android.text.TextUtils;
 
 import com.android.deskclock.AlarmClockFragment;
 import com.android.deskclock.AlarmUtils;
 import com.android.deskclock.DeskClock;
 import com.android.deskclock.Log;
 import com.android.deskclock.R;
+import com.android.deskclock.SettingsActivity;
 import com.android.deskclock.provider.Alarm;
 import com.android.deskclock.provider.AlarmInstance;
 
@@ -39,10 +43,12 @@ public final class AlarmNotifications {
 
     public static void broadcastNextAlarm(Context context, AlarmInstance instance)  {
         String timeString = "";
+        // Read the icon state preference before showing the icon, default to visible
+        final SharedPreferences prefs = PreferenceManager.getDefaultSharedPreferences(context);
         boolean showStatusIcon = false;
         if (instance != null) {
             timeString = AlarmUtils.getFormattedTime(context, instance.getAlarmTime());
-            showStatusIcon = true;
+            showStatusIcon = prefs.getBoolean(SettingsActivity.KEY_SHOW_STATUS_BAR_ICON, true);
         }
 
         // Set and notify next alarm text to system
@@ -50,9 +56,7 @@ public final class AlarmNotifications {
         Settings.System.putString(context.getContentResolver(),
                 Settings.System.NEXT_ALARM_FORMATTED,
                 timeString);
-        Intent alarmChanged = new Intent(SYSTEM_ALARM_CHANGE_ACTION);
-        alarmChanged.putExtra("alarmSet", showStatusIcon);
-        context.sendBroadcast(alarmChanged);
+        setStatusBarIcon(context, showStatusIcon);
     }
 
     public static void showLowPriorityNotification(Context context, AlarmInstance instance) {
@@ -260,5 +264,24 @@ public final class AlarmNotifications {
         NotificationManager nm = (NotificationManager)
                 context.getSystemService(Context.NOTIFICATION_SERVICE);
         nm.cancel(instance.hashCode());
+    }
+
+    public static void updateStatusBarIcon(Context context, boolean showStatusIcon) {
+        String nextAlarm = getNextAlarm(context);
+        if (!TextUtils.isEmpty(nextAlarm)) {
+            setStatusBarIcon(context, showStatusIcon);
+        }
+    }
+
+    private static String getNextAlarm(Context context) {
+        String nextAlarm = Settings.System.getString(context.getContentResolver(),
+                                  Settings.System.NEXT_ALARM_FORMATTED);
+        return nextAlarm;
+    }
+
+    private static void setStatusBarIcon(Context context, boolean showStatusIcon) {
+        Intent alarmChanged = new Intent(SYSTEM_ALARM_CHANGE_ACTION);
+        alarmChanged.putExtra("alarmSet", showStatusIcon);
+        context.sendBroadcast(alarmChanged);
     }
 }
