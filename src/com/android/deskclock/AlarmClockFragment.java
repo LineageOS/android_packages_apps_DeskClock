@@ -721,6 +721,7 @@ public class AlarmClockFragment extends DeskClockFragment implements
             ViewGroup[] dayButtonParents = new ViewGroup[7];
             ToggleButton[] dayButtons = new ToggleButton[7];
             CheckBox vibrate;
+            CheckBox increasingVolume;
             TextView ringtone;
             View hairLine;
             View arrow;
@@ -1014,6 +1015,7 @@ public class AlarmClockFragment extends DeskClockFragment implements
                 holder.dayButtonParents[i] = viewgroup;
             }
             holder.vibrate = (CheckBox) view.findViewById(R.id.vibrate_onoff);
+            holder.increasingVolume = (CheckBox) view.findViewById(R.id.increasing_volume_onoff);
             holder.ringtone = (TextView) view.findViewById(R.id.choose_ringtone);
 
             view.setTag(holder);
@@ -1284,6 +1286,22 @@ public class AlarmClockFragment extends DeskClockFragment implements
                 @Override
                 public void onClick(View view) {
                     launchRingTonePicker(alarm);
+                }
+            });
+
+
+            itemHolder.increasingVolume.setVisibility(View.VISIBLE);
+            itemHolder.increasingVolume.setChecked(alarm.increasingVolume);
+            itemHolder.increasingVolume.setTextColor(
+                    alarm.increasingVolume ? mColorLit : mColorDim);
+            itemHolder.increasingVolume.setOnClickListener(new View.OnClickListener() {
+                @Override
+                public void onClick(View v) {
+                    final boolean checked = ((CheckBox) v).isChecked();
+                    //When action mode is on - simulate long click
+                    itemHolder.increasingVolume.setTextColor(checked ? mColorLit : mColorDim);
+                    alarm.increasingVolume = checked;
+                    asyncUpdateAlarm(alarm, false);
                 }
             });
         }
