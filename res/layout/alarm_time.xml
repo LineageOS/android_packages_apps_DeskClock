@@ -127,18 +127,21 @@
             </LinearLayout>
             <RelativeLayout
                 android:layout_width="match_parent"
-                android:layout_height="64dp"
+                android:layout_height="wrap_content"
                 android:layout_marginLeft="10dp"
                 android:layout_marginStart="10dp"
                 android:layout_marginRight="16dp"
                 android:layout_marginEnd="16dp"
+                android:layout_marginTop="10dp"
+                android:layout_marginBottom="10dp"
                 android:gravity="center_vertical">
                 <TextView
                     android:id="@+id/choose_ringtone"
                     android:layout_height="match_parent"
-                    android:layout_width="wrap_content"
+                    android:layout_width="match_parent"
                     android:layout_marginRight="16dp"
                     android:layout_marginEnd="16dp"
+                    android:layout_marginBottom="6dp"
                     android:gravity="center_vertical"
                     android:textAlignment="viewStart"
                     style="@style/body"
@@ -153,10 +156,22 @@
                     android:drawableStart="@drawable/ic_ringtone"
                     android:drawablePadding="2dp"
                     android:layout_alignParentLeft="true"
+                    android:layout_alignParentRight="true"
                     android:layout_alignParentStart="true"
-                    android:layout_toLeftOf="@+id/vibrate_onoff"
-                    android:layout_toStartOf="@+id/vibrate_onoff"
+                    android:layout_alignParentEnd="true"
                     />
+                <CheckBox
+                    android:id="@+id/increasing_volume_onoff"
+                    android:text="@string/alarm_increasing_volume"
+                    android:includeFontPadding="false"
+                    android:textColor="@color/clock_gray"
+                    android:layout_height="wrap_content"
+                    android:layout_width="wrap_content"
+                    android:layout_alignParentLeft="true"
+                    android:layout_alignParentStart="true"
+                    android:layout_centerVertical="true"
+                    android:layout_below="@id/choose_ringtone"
+                    style="@style/body"/>
                 <CheckBox
                     android:id="@+id/vibrate_onoff"
                     android:text="@string/alarm_vibrate"
@@ -167,6 +182,8 @@
                     android:layout_alignParentRight="true"
                     android:layout_alignParentEnd="true"
                     android:layout_centerVertical="true"
+                    android:layout_below="@id/choose_ringtone"
+                    android:layout_toRightOf="@id/increasing_volume_onoff"
                     style="@style/body"/>
             </RelativeLayout>
         </LinearLayout>
