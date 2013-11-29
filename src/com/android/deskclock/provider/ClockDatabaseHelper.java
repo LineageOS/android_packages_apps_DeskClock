@@ -60,11 +60,16 @@ class ClockDatabaseHelper extends SQLiteOpenHelper {
      */
     private static final int VERSION_7 = 9;
 
+    /**
+     * Added increasing alarm volume mode
+     */
+    private static final int VERSION_8 = 10;
+
     // This creates a default alarm at 8:30 for every Mon,Tue,Wed,Thu,Fri
-    private static final String DEFAULT_ALARM_1 = "(8, 30, 31, 0, 0, '', NULL, 0);";
+    private static final String DEFAULT_ALARM_1 = "(8, 30, 31, 0, 0, '', NULL, 0, 0);";
 
     // This creates a default alarm at 9:30 for every Sat,Sun
-    private static final String DEFAULT_ALARM_2 = "(9, 00, 96, 0, 0, '', NULL, 0);";
+    private static final String DEFAULT_ALARM_2 = "(9, 00, 96, 0, 0, '', NULL, 0, 0);";
 
     // Database and table names
     static final String DATABASE_NAME = "alarms.db";
@@ -83,7 +88,8 @@ class ClockDatabaseHelper extends SQLiteOpenHelper {
                 ClockContract.AlarmsColumns.VIBRATE + " INTEGER NOT NULL, " +
                 ClockContract.AlarmsColumns.LABEL + " TEXT NOT NULL, " +
                 ClockContract.AlarmsColumns.RINGTONE + " TEXT, " +
-                ClockContract.AlarmsColumns.DELETE_AFTER_USE + " INTEGER NOT NULL DEFAULT 0);");
+                ClockContract.AlarmsColumns.DELETE_AFTER_USE + " INTEGER NOT NULL DEFAULT 0, " +
+                ClockContract.AlarmsColumns.INCVOL + " INTEGER NOT NULL DEFAULT 0);");
         Log.i("Alarms Table created");
     }
 
@@ -139,7 +145,8 @@ class ClockDatabaseHelper extends SQLiteOpenHelper {
                 ClockContract.AlarmsColumns.VIBRATE + cs +
                 ClockContract.AlarmsColumns.LABEL + cs +
                 ClockContract.AlarmsColumns.RINGTONE + cs +
-                ClockContract.AlarmsColumns.DELETE_AFTER_USE + ") VALUES ";
+                ClockContract.AlarmsColumns.DELETE_AFTER_USE + cs +
+                ClockContract.AlarmsColumns.INCVOL + ") VALUES ";
         db.execSQL(insertMe + DEFAULT_ALARM_1);
         db.execSQL(insertMe + DEFAULT_ALARM_2);
     }

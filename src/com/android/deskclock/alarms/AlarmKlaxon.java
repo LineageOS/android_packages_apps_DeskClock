@@ -23,6 +23,8 @@ import android.media.MediaPlayer;
 import android.media.MediaPlayer.OnErrorListener;
 import android.media.RingtoneManager;
 import android.net.Uri;
+import android.os.Handler;
+import android.os.Message;
 import android.os.Vibrator;
 
 import com.android.deskclock.Log;
@@ -40,14 +42,49 @@ public class AlarmKlaxon {
     // Volume suggested by media team for in-call alarms.
     private static final float IN_CALL_VOLUME = 0.125f;
 
+    private static final long INCVOL_DELAY = 5000; // 5sec * 7 volume levels = 30sec till max volume
+    private static final int INCVOL_START = 1; // default was 0.1f
+    private static final int INCVOL_DELTA = 1; // default was 0.01f
+
     private static boolean sStarted = false;
+    private static AudioManager sAudioManager = null;
     private static MediaPlayer sMediaPlayer = null;
+
+    private static int sCurrentVolume = 1;
+    private static int sAlarmVolumeSetting;
+
+    // Internal messages
+    private static final int INCVOL = 1001;
+
+    private static Handler sHandler = new Handler() {
+        @Override
+        public void handleMessage(Message msg) {
+            switch (msg.what) {
+                case INCVOL:
+                    if (sStarted && sMediaPlayer != null && sMediaPlayer.isPlaying()) {
+                        sCurrentVolume += INCVOL_DELTA;
+                        if (Log.LOGV) {
+                            Log.v("Increasing alarm volume to " + sCurrentVolume);
+                        }
+                        sAudioManager.setStreamVolume(AudioManager.STREAM_ALARM, sCurrentVolume, 0);
+                        if (sCurrentVolume < sAlarmVolumeSetting) {
+                            sHandler.sendEmptyMessageDelayed(INCVOL, INCVOL_DELAY);
+                        }
+                    }
+                    break;
+            }
+        }
+    };
+
 
     public static void stop(Context context) {
         Log.v("AlarmKlaxon.stop()");
 
         if (sStarted) {
             sStarted = false;
+
+            sHandler.removeMessages(INCVOL);
+
             // Stop audio playing
             if (sMediaPlayer != null) {
                 sMediaPlayer.stop();
@@ -56,6 +93,9 @@ public class AlarmKlaxon {
                 audioManager.abandonAudioFocus(null);
                 sMediaPlayer.release();
                 sMediaPlayer = null;
+
+                // reset to default from before
+                sAudioManager.setStreamVolume(AudioManager.STREAM_ALARM, sAlarmVolumeSetting, 0);
             }
 
             ((Vibrator)context.getSystemService(Context.VIBRATOR_SERVICE)).cancel();
@@ -78,6 +118,10 @@ public class AlarmKlaxon {
                     Log.v("Using default alarm: " + alarmNoise.toString());
                 }
             }
+
+            sAudioManager = (AudioManager)context.getSystemService(Context.AUDIO_SERVICE);
+            // save current value
+            sAlarmVolumeSetting = sAudioManager.getStreamVolume(AudioManager.STREAM_ALARM);
 
             // TODO: Reuse mMediaPlayer instead of creating a new one and/or use RingtoneManager.
             sMediaPlayer = new MediaPlayer();
@@ -123,6 +167,10 @@ public class AlarmKlaxon {
         }
 
         sStarted = true;
+
+        if (instance.mIncVol) {
+            sHandler.sendEmptyMessageDelayed(INCVOL, INCVOL_DELAY);
+        }
     }
 
     // Do the common stuff when starting the alarm.
