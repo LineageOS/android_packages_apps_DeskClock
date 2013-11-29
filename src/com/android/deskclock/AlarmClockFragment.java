@@ -721,6 +721,7 @@ public class AlarmClockFragment extends DeskClockFragment implements
             ViewGroup[] dayButtonParents = new ViewGroup[7];
             ToggleButton[] dayButtons = new ToggleButton[7];
             CheckBox vibrate;
+            CheckBox incvol;
             TextView ringtone;
             View hairLine;
             View arrow;
@@ -1014,6 +1015,7 @@ public class AlarmClockFragment extends DeskClockFragment implements
                 holder.dayButtonParents[i] = viewgroup;
             }
             holder.vibrate = (CheckBox) view.findViewById(R.id.vibrate_onoff);
+            holder.incvol = (CheckBox) view.findViewById(R.id.incvol_onoff);
             holder.ringtone = (TextView) view.findViewById(R.id.choose_ringtone);
 
             view.setTag(holder);
@@ -1255,6 +1257,29 @@ public class AlarmClockFragment extends DeskClockFragment implements
                     itemHolder.vibrate.setTextColor(mColorLit);
                 }
             }
+
+            itemHolder.incvol.setVisibility(View.VISIBLE);
+            if (!alarm.incvol) {
+                itemHolder.incvol.setChecked(false);
+                itemHolder.incvol.setTextColor(mColorDim);
+            } else {
+                itemHolder.incvol.setChecked(true);
+                itemHolder.incvol.setTextColor(mColorLit);
+            }
+            itemHolder.incvol.setOnClickListener(new View.OnClickListener() {
+                @Override
+                public void onClick(View v) {
+                    final boolean checked = ((CheckBox) v).isChecked();
+                    //When action mode is on - simulate long click
+                    if (checked) {
+                        itemHolder.incvol.setTextColor(mColorLit);
+                    } else {
+                        itemHolder.incvol.setTextColor(mColorDim);
+                    }
+                    alarm.incvol = checked;
+                    asyncUpdateAlarm(alarm, false);
+                }
+            });
 
             itemHolder.vibrate.setOnClickListener(new View.OnClickListener() {
                 @Override
