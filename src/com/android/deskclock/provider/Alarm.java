@@ -16,6 +16,7 @@
 
 package com.android.deskclock.provider;
 
+import android.app.ProfileManager;
 import android.content.ContentResolver;
 import android.content.ContentUris;
 import android.content.ContentValues;
@@ -26,6 +27,7 @@ import android.database.Cursor;
 import android.media.RingtoneManager;
 import android.net.Uri;
 import android.os.Parcel;
+import android.os.ParcelUuid;
 import android.os.Parcelable;
 
 import com.android.deskclock.R;
@@ -33,6 +35,7 @@ import com.android.deskclock.R;
 import java.util.Calendar;
 import java.util.LinkedList;
 import java.util.List;
+import java.util.UUID;
 
 public final class Alarm implements Parcelable, ClockContract.AlarmsColumns {
     /**
@@ -58,7 +61,8 @@ public final class Alarm implements Parcelable, ClockContract.AlarmsColumns {
             LABEL,
             RINGTONE,
             DELETE_AFTER_USE,
-            INCREASING_VOLUME
+            INCREASING_VOLUME,
+            PROFILE
     };
 
     /**
@@ -75,8 +79,9 @@ public final class Alarm implements Parcelable, ClockContract.AlarmsColumns {
     private static final int RINGTONE_INDEX = 7;
     private static final int DELETE_AFTER_USE_INDEX = 8;
     private static final int INCREASING_VOLUME_INDEX = 9;
+    private static final int PROFILE_INDEX = 10;
 
-    private static final int COLUMN_COUNT = INCREASING_VOLUME_INDEX + 1;
+    private static final int COLUMN_COUNT = PROFILE_INDEX + 1;
 
     public static ContentValues createContentValues(Alarm alarm) {
         ContentValues values = new ContentValues(COLUMN_COUNT);
@@ -98,6 +103,7 @@ public final class Alarm implements Parcelable, ClockContract.AlarmsColumns {
         } else {
             values.put(RINGTONE, alarm.alert.toString());
         }
+        values.put(PROFILE, alarm.profile.toString());
 
         return values;
     }
@@ -230,6 +236,7 @@ public final class Alarm implements Parcelable, ClockContract.AlarmsColumns {
     public Uri alert;
     public boolean deleteAfterUse;
     public boolean increasingVolume;
+    public UUID profile;
 
     // Creates a default alarm at the current time.
     public Alarm() {
@@ -246,6 +253,7 @@ public final class Alarm implements Parcelable, ClockContract.AlarmsColumns {
         this.alert = RingtoneManager.getDefaultUri(RingtoneManager.TYPE_ALARM);
         this.deleteAfterUse = false;
         this.increasingVolume = false;
+        this.profile = ProfileManager.NO_PROFILE;
     }
 
     public Alarm(Cursor c) {
@@ -266,6 +274,16 @@ public final class Alarm implements Parcelable, ClockContract.AlarmsColumns {
         } else {
             alert = Uri.parse(c.getString(RINGTONE_INDEX));
         }
+
+        if (c.isNull(PROFILE_INDEX)) {
+            profile = ProfileManager.NO_PROFILE;
+        } else {
+            try {
+                profile = UUID.fromString(c.getString(PROFILE_INDEX));
+            } catch (IllegalArgumentException ex) {
+                profile = ProfileManager.NO_PROFILE;
+            }
+        }
     }
 
     Alarm(Parcel p) {
@@ -279,6 +297,7 @@ public final class Alarm implements Parcelable, ClockContract.AlarmsColumns {
         alert = (Uri) p.readParcelable(null);
         deleteAfterUse = p.readInt() == 1;
         increasingVolume = p.readInt() == 1;
+        profile = ParcelUuid.CREATOR.createFromParcel(p).getUuid();
     }
 
     public String getLabelOrDefault(Context context) {
@@ -299,6 +318,7 @@ public final class Alarm implements Parcelable, ClockContract.AlarmsColumns {
         p.writeParcelable(alert, flags);
         p.writeInt(deleteAfterUse ? 1 : 0);
         p.writeInt(increasingVolume ? 1 : 0);
+        p.writeParcelable(new ParcelUuid(profile), 0);
     }
 
     public int describeContents() {
@@ -331,6 +351,7 @@ public final class Alarm implements Parcelable, ClockContract.AlarmsColumns {
         result.mLabel = label;
         result.mRingtone = alert;
         result.mIncreasingVolume = increasingVolume;
+        result.mProfile = profile;
         return result;
     }
 
@@ -359,6 +380,7 @@ public final class Alarm implements Parcelable, ClockContract.AlarmsColumns {
                 ", label='" + label + '\'' +
                 ", deleteAfterUse=" + deleteAfterUse +
                 ", increasingVolume=" + increasingVolume +
+                ", profile=" + profile +
                 '}';
     }
 }
