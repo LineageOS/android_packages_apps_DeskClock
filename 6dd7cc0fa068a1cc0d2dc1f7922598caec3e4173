@@ -19,6 +19,23 @@
     },
     {
       "key": {
+        "uuid": "fa80f949_ac6d1fce",
+        "filename": "res/values/strings.xml",
+        "patchSetId": 1
+      },
+      "lineNbr": 70,
+      "author": {
+        "id": 1053
+      },
+      "writtenOn": "2013-11-30T05:42:36Z",
+      "side": 1,
+      "message": "Should be in cm_strings.xml",
+      "revId": "6dd7cc0fa068a1cc0d2dc1f7922598caec3e4173",
+      "serverId": "1ec6b3db-b2c1-4fa4-84a2-4c7efe89ba71",
+      "unresolved": false
+    },
+    {
+      "key": {
         "uuid": "fa80f949_4c48335c",
         "filename": "src/com/android/deskclock/provider/ClockContract.java",
         "patchSetId": 1
