@@ -16,6 +16,7 @@
 
 package com.android.deskclock.provider;
 
+import android.app.ProfileManager;
 import android.content.ContentResolver;
 import android.content.ContentUris;
 import android.content.ContentValues;
@@ -33,6 +34,7 @@ import com.android.deskclock.SettingsActivity;
 import java.util.Calendar;
 import java.util.LinkedList;
 import java.util.List;
+import java.util.UUID;
 
 public final class AlarmInstance implements ClockContract.InstancesColumns {
     /**
@@ -73,6 +75,7 @@ public final class AlarmInstance implements ClockContract.InstancesColumns {
             ALARM_ID,
             ALARM_STATE,
             INCREASING_VOLUME,
+            PROFILE
     };
 
     /**
@@ -91,8 +94,9 @@ public final class AlarmInstance implements ClockContract.InstancesColumns {
     private static final int ALARM_ID_INDEX = 9;
     private static final int ALARM_STATE_INDEX = 10;
     private static final int INCREASING_VOLUME_INDEX = 11;
+    private static final int PROFILE_INDEX = 12;
 
-    private static final int COLUMN_COUNT = INCREASING_VOLUME_INDEX + 1;
+    private static final int COLUMN_COUNT = PROFILE_INDEX + 1;
     private Calendar mTimeout;
 
     public static ContentValues createContentValues(AlarmInstance instance) {
@@ -109,6 +113,7 @@ public final class AlarmInstance implements ClockContract.InstancesColumns {
         values.put(LABEL, instance.mLabel);
         values.put(VIBRATE, instance.mVibrate ? 1 : 0);
         values.put(INCREASING_VOLUME, instance.mIncreasingVolume ? 1 : 0);
+        values.put(PROFILE, instance.mProfile.toString());
 
         if (instance.mRingtone == null) {
             // We want to put null in the database, so we'll be able
@@ -258,6 +263,7 @@ public final class AlarmInstance implements ClockContract.InstancesColumns {
     public Long mAlarmId;
     public int mAlarmState;
     public boolean mIncreasingVolume;
+    public UUID mProfile;
 
     public AlarmInstance(Calendar calendar, Long alarmId) {
         this(calendar);
@@ -272,6 +278,7 @@ public final class AlarmInstance implements ClockContract.InstancesColumns {
         mIncreasingVolume = false;
         mRingtone = null;
         mAlarmState = SILENT_STATE;
+        mProfile = ProfileManager.NO_PROFILE;
     }
 
     public AlarmInstance(Cursor c) {
@@ -290,6 +297,16 @@ public final class AlarmInstance implements ClockContract.InstancesColumns {
             mRingtone = RingtoneManager.getDefaultUri(RingtoneManager.TYPE_ALARM);
         } else {
             mRingtone = Uri.parse(c.getString(RINGTONE_INDEX));
+        }
+
+        if (c.isNull(PROFILE_INDEX)) {
+            mProfile = ProfileManager.NO_PROFILE;
+        } else {
+            try {
+                mProfile = UUID.fromString(c.getString(PROFILE_INDEX));
+            } catch (IllegalArgumentException ex) {
+                mProfile = ProfileManager.NO_PROFILE;
+            }
         }
 
         if (!c.isNull(ALARM_ID_INDEX)) {
@@ -408,6 +425,7 @@ public final class AlarmInstance implements ClockContract.InstancesColumns {
                 ", mAlarmId=" + mAlarmId +
                 ", mAlarmState=" + mAlarmState +
                 ", mIncreasingVolume=" + mIncreasingVolume +
+                ", mProfile=" + mProfile +
                 '}';
     }
 }
