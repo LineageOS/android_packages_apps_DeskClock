@@ -1,0 +1,38 @@
+{
+  "comments": [
+    {
+      "key": {
+        "uuid": "fa80f949_2c4b6f5b",
+        "filename": "res/layout/alarm_time.xml",
+        "patchSetId": 1
+      },
+      "lineNbr": 171,
+      "author": {
+        "id": 4884
+      },
+      "writtenOn": "2013-11-30T05:22:59Z",
+      "side": 1,
+      "message": "Use spaces instead of tabs",
+      "revId": "6dd7cc0fa068a1cc0d2dc1f7922598caec3e4173",
+      "serverId": "1ec6b3db-b2c1-4fa4-84a2-4c7efe89ba71",
+      "unresolved": false
+    },
+    {
+      "key": {
+        "uuid": "fa80f949_4c48335c",
+        "filename": "src/com/android/deskclock/provider/ClockContract.java",
+        "patchSetId": 1
+      },
+      "lineNbr": 86,
+      "author": {
+        "id": 4884
+      },
+      "writtenOn": "2013-11-30T05:22:59Z",
+      "side": 1,
+      "message": "One empty line is enough",
+      "revId": "6dd7cc0fa068a1cc0d2dc1f7922598caec3e4173",
+      "serverId": "1ec6b3db-b2c1-4fa4-84a2-4c7efe89ba71",
+      "unresolved": false
+    }
+  ]
+}
