@@ -18,10 +18,13 @@ package com.android.deskclock.worldclock;
 
 import android.app.ActionBar;
 import android.app.Activity;
+import android.app.AlertDialog;
 import android.content.ActivityNotFoundException;
 import android.content.Context;
+import android.content.DialogInterface;
 import android.content.Intent;
 import android.content.SharedPreferences;
+import android.content.res.Resources;
 import android.os.Bundle;
 import android.preference.PreferenceManager;
 import android.text.TextUtils;
@@ -29,6 +32,7 @@ import android.text.format.DateFormat;
 import android.view.LayoutInflater;
 import android.view.Menu;
 import android.view.MenuItem;
+import android.view.MenuItem.OnActionExpandListener;
 import android.view.View;
 import android.view.View.OnClickListener;
 import android.view.ViewGroup;
@@ -38,6 +42,7 @@ import android.widget.CheckBox;
 import android.widget.CompoundButton;
 import android.widget.CompoundButton.OnCheckedChangeListener;
 import android.widget.Filter;
+import android.widget.Filter.FilterListener;
 import android.widget.Filterable;
 import android.widget.ImageView;
 import android.widget.ListView;
@@ -45,11 +50,14 @@ import android.widget.SearchView;
 import android.widget.SearchView.OnQueryTextListener;
 import android.widget.SectionIndexer;
 import android.widget.TextView;
+import android.widget.Toast;
 
 import com.android.deskclock.DeskClock;
 import com.android.deskclock.R;
 import com.android.deskclock.SettingsActivity;
 import com.android.deskclock.Utils;
+import com.android.deskclock.worldclock.db.DbCities;
+import com.android.deskclock.worldclock.db.DbCity;
 
 import java.util.ArrayList;
 import java.util.Arrays;
@@ -64,11 +72,13 @@ import java.util.TimeZone;
  * Cities chooser for the world clock
  */
 public class CitiesActivity extends Activity implements OnCheckedChangeListener,
-        View.OnClickListener, OnQueryTextListener {
+        View.OnClickListener, View.OnLongClickListener, OnQueryTextListener,
+        AddCityDialog.OnCitySelected, FilterListener {
 
     private static final String KEY_SEARCH_QUERY = "search_query";
     private static final String KEY_SEARCH_MODE = "search_mode";
     private static final String KEY_LIST_POSITION = "list_position";
+    private static final String KEY_CITY_DIALOG = "city_dialog";
 
     private static final String PREF_SORT = "sort_preference";
 
@@ -87,6 +97,7 @@ public class CitiesActivity extends Activity implements OnCheckedChangeListener,
     private CityAdapter mAdapter;
     private HashMap<String, CityObj> mUserSelectedCities;
     private Calendar mCalendar;
+    private AddCityDialog mAddCityDialog;
 
     private SearchView mSearchView;
     private StringBuffer mQueryTextBuffer = new StringBuffer();
@@ -97,6 +108,33 @@ public class CitiesActivity extends Activity implements OnCheckedChangeListener,
     private int mSortType;
 
     private String mSelectedCitiesHeaderString;
+
+    private class SearchActionExpandListener implements OnActionExpandListener {
+        private Menu mMenu;
+
+        public SearchActionExpandListener(Menu menu) {
+            super();
+            mMenu = menu;
+        }
+
+        @Override
+        public boolean onMenuItemActionExpand(MenuItem item) {
+            MenuItem menuItem = mMenu.findItem(R.id.menu_item_add);
+            if (menuItem != null) {
+                menuItem.setVisible(false);
+            }
+            return true;
+        }
+
+        @Override
+        public boolean onMenuItemActionCollapse(MenuItem item) {
+            MenuItem menuItem = mMenu.findItem(R.id.menu_item_add);
+            if (menuItem != null) {
+                menuItem.setVisible(true);
+            }
+            return true;
+        }
+    }
 
     /***
      * Adapter for a list of cities with the respected time zone. The Adapter
@@ -133,7 +171,11 @@ public class CitiesActivity extends Activity implements OnCheckedChangeListener,
         private final String mPattern12;
         private final String mPattern24;
 
+        private final int mNormalCityFgColor;
+        private final int mUserDefinedCityFgColor;
+
         private int mSelectedEndPosition = 0;
+        private CityObj mSelected;
 
         private Filter mFilter = new Filter() {
 
@@ -236,6 +278,25 @@ public class CitiesActivity extends Activity implements OnCheckedChangeListener,
             mLayoutDirection = TextUtils.getLayoutDirectionFromLocale(Locale.getDefault());
             mInflater = factory;
 
+            Resources res = context.getResources();
+            mNormalCityFgColor = res.getColor(R.color.clock_white);
+            mUserDefinedCityFgColor = res.getColor(R.color.clock_red);
+
+            mPattern24 = DateFormat.getBestDateTimePattern(Locale.getDefault(), "Hm");
+
+            // There's an RTL layout bug that causes jank when fast-scrolling through
+            // the list in 12-hour mode in an RTL locale. We can work around this by
+            // ensuring the strings are the same length by using "hh" instead of "h".
+            String pattern12 = DateFormat.getBestDateTimePattern(Locale.getDefault(), "hma");
+            if (mLayoutDirection == View.LAYOUT_DIRECTION_RTL) {
+                pattern12 = pattern12.replaceAll("h", "hh");
+            }
+            mPattern12 = pattern12;
+
+            loadCitiesDatabase(context, null);
+        }
+
+        protected void loadCitiesDatabase(Context context, final CityObj selected) {
             // Load the cities from xml.
             mCities = Utils.loadCitiesFromXml(context);
 
@@ -260,36 +321,25 @@ public class CitiesActivity extends Activity implements OnCheckedChangeListener,
                 }
             }
 
-            mPattern24 = DateFormat.getBestDateTimePattern(Locale.getDefault(), "Hm");
-
-            // There's an RTL layout bug that causes jank when fast-scrolling through
-            // the list in 12-hour mode in an RTL locale. We can work around this by
-            // ensuring the strings are the same length by using "hh" instead of "h".
-            String pattern12 = DateFormat.getBestDateTimePattern(Locale.getDefault(), "hma");
-            if (mLayoutDirection == View.LAYOUT_DIRECTION_RTL) {
-                pattern12 = pattern12.replaceAll("h", "hh");
-            }
-            mPattern12 = pattern12;
-
-            sortCities(mSortType);
+            refreshSelectedCities(selected);
             set24HoursMode(context);
         }
 
-        public void refreshSelectedCities() {
+        public void refreshSelectedCities(final CityObj selected) {
             Collection<CityObj> selectedCities = mUserSelectedCities.values();
             mSelectedCities = selectedCities.toArray(new CityObj[selectedCities.size()]);
-            sortCities(mSortType);
+            sortCities(mSortType, selected);
         }
 
         public void toggleSort() {
             if (mSortType == SORT_BY_NAME) {
-                sortCities(SORT_BY_GMT_OFFSET);
+                sortCities(SORT_BY_GMT_OFFSET, null);
             } else {
-                sortCities(SORT_BY_NAME);
+                sortCities(SORT_BY_NAME, null);
             }
         }
 
-        private void sortCities(final int sortType) {
+        private void sortCities(final int sortType, final CityObj selected) {
             mSortType = sortType;
             Arrays.sort(mCities, sortType == SORT_BY_NAME ? mSortByNameComparator
                     : mSortByTimeComparator);
@@ -298,7 +348,8 @@ public class CitiesActivity extends Activity implements OnCheckedChangeListener,
                         : mSortByTimeComparator);
             }
             mPrefs.edit().putInt(PREF_SORT, sortType).commit();
-            mFilter.filter(mQueryTextBuffer.toString());
+            mSelected = selected;
+            mFilter.filter(mQueryTextBuffer.toString(), CitiesActivity.this);
         }
 
         @Override
@@ -317,6 +368,32 @@ public class CitiesActivity extends Activity implements OnCheckedChangeListener,
         @Override
         public long getItemId(int p) {
             return p;
+        }
+
+        protected int getPosition(CityObj o) {
+            int count = mDisplayedCitiesList.size();
+            for (int i = 0; i < count; i++) {
+                CityObj c = (CityObj) mDisplayedCitiesList.get(i);
+                if (c.mCityId != null && o.mCityId.compareTo(c.mCityId) == 0) {
+                    return i;
+                }
+            }
+            return -1;
+        }
+
+        protected CityObj getItem(String name, String tz) {
+            int count = mCities.length;
+            for (int i = 0; i < count; i++) {
+                CityObj c = (CityObj) mCities[i];
+                if (c.mCityId != null) {
+                    CharSequence tz1 = getTimeCharSequence(tz);
+                    CharSequence tz2 = getTimeCharSequence(c.mTimeZone);
+                    if (name.compareToIgnoreCase(c.mCityName) == 0 && tz1.equals(tz2)) {
+                        return c;
+                    }
+                }
+            }
+            return null;
         }
 
         @Override
@@ -356,12 +433,13 @@ public class CitiesActivity extends Activity implements OnCheckedChangeListener,
                             CompoundButton b = holder.selected;
                             onCheckedChanged(b, false);
                             b.setChecked(false);
-                            mAdapter.refreshSelectedCities();
+                            mAdapter.refreshSelectedCities(null);
                         }
                     });
                     view.setTag(holder);
                 }
                 view.setOnClickListener(CitiesActivity.this);
+                view.setOnLongClickListener(CitiesActivity.this);
                 CityViewHolder holder = (CityViewHolder) view.getTag();
 
                 if (position < mSelectedEndPosition) {
@@ -381,6 +459,8 @@ public class CitiesActivity extends Activity implements OnCheckedChangeListener,
                 holder.selected.setChecked(mUserSelectedCities.containsKey(c.mCityId));
                 holder.selected.setOnCheckedChangeListener(CitiesActivity.this);
                 holder.name.setText(c.mCityName, TextView.BufferType.SPANNABLE);
+                holder.name.setTextColor(
+                        c.mUserDefined ? mUserDefinedCityFgColor : mNormalCityFgColor);
                 holder.time.setText(getTimeCharSequence(c.mTimeZone));
             }
             return view;
@@ -474,6 +554,26 @@ public class CitiesActivity extends Activity implements OnCheckedChangeListener,
         bundle.putString(KEY_SEARCH_QUERY, mQueryTextBuffer.toString());
         bundle.putBoolean(KEY_SEARCH_MODE, mSearchMode);
         bundle.putInt(KEY_LIST_POSITION, mCitiesList.getFirstVisiblePosition());
+        if (mAddCityDialog != null) {
+            bundle.putBoolean(KEY_CITY_DIALOG, true);
+            mAddCityDialog.onSaveInstanceState(bundle);
+        }
+    }
+
+    @Override
+    protected void onRestoreInstanceState(Bundle savedInstanceState) {
+        super.onRestoreInstanceState(savedInstanceState);
+        if (savedInstanceState.getBoolean(KEY_CITY_DIALOG, false)) {
+            showAddCityDialog(savedInstanceState);
+        }
+    }
+
+    @Override
+    protected void onDestroy() {
+    super.onDestroy();
+        if (mAddCityDialog != null) {
+            mAddCityDialog.dismiss();
+        }
     }
 
     private void updateLayout() {
@@ -519,6 +619,9 @@ public class CitiesActivity extends Activity implements OnCheckedChangeListener,
     @Override
     public boolean onOptionsItemSelected(MenuItem item) {
         switch (item.getItemId()) {
+            case R.id.menu_item_add:
+                showAddCityDialog(null);
+                return true;
             case R.id.menu_item_settings:
                 startActivity(new Intent(this, SettingsActivity.class));
                 return true;
@@ -550,8 +653,14 @@ public class CitiesActivity extends Activity implements OnCheckedChangeListener,
     }
 
     @Override
-    public boolean onCreateOptionsMenu(Menu menu) {
+    public boolean onCreateOptionsMenu(final Menu menu) {
         getMenuInflater().inflate(R.menu.cities_menu, menu);
+
+        MenuItem search = menu.findItem(R.id.menu_item_search);
+        if (search != null) {
+            search.setOnActionExpandListener(new SearchActionExpandListener(menu));
+        }
+
         MenuItem help = menu.findItem(R.id.menu_item_help);
         if (help != null) {
             Utils.prepareHelpMenuItem(this, help);
@@ -613,7 +722,18 @@ public class CitiesActivity extends Activity implements OnCheckedChangeListener,
         boolean checked = b.isChecked();
         onCheckedChanged(b, checked);
         b.setChecked(!checked);
-        mAdapter.refreshSelectedCities();
+        mAdapter.refreshSelectedCities(null);
+    }
+
+    @Override
+    public boolean onLongClick(View v) {
+        CompoundButton b = (CompoundButton) v.findViewById(R.id.city_onoff);
+        final CityObj c = (CityObj) b.getTag();
+        if (c != null && c.mUserDefined) {
+            deleteCity(c);
+            return true;
+        }
+        return false;
     }
 
     @Override
@@ -621,12 +741,88 @@ public class CitiesActivity extends Activity implements OnCheckedChangeListener,
         mQueryTextBuffer.setLength(0);
         mQueryTextBuffer.append(queryText);
         mCitiesList.setFastScrollEnabled(TextUtils.isEmpty(mQueryTextBuffer.toString().trim()));
-        mAdapter.getFilter().filter(queryText);
+        mAdapter.getFilter().filter(queryText, this);
         return true;
     }
 
     @Override
     public boolean onQueryTextSubmit(String arg0) {
         return false;
+    }
+
+    @Override
+    public void onFilterComplete(int count) {
+        if (mAdapter.mSelected != null) {
+            mCitiesList.setSelection(mAdapter.getPosition(mAdapter.mSelected));
+            mAdapter.mSelected = null;
+        }
+    }
+
+    private void showAddCityDialog(Bundle savedInstance) {
+        mAddCityDialog = new AddCityDialog(this, mFactory, this);
+        if (savedInstance != null) {
+            mAddCityDialog.onRestoreInstanceState(savedInstance);
+        }
+        mAddCityDialog.show();
+    }
+
+    @Override
+    public void onCitySelected(String name, String tz) {
+        // If city name and timezone exists, then don't add it
+        CityObj city = mAdapter.getItem(name, tz);
+        if (city != null) {
+            // The city already exists
+            Toast.makeText(this, R.string.cities_add_already_exists,
+                    Toast.LENGTH_SHORT).show();
+            mCitiesList.setSelection(mAdapter.getPosition(city));
+            return;
+        }
+
+        DbCity dbCity = new DbCity();
+        dbCity.name = name;
+        dbCity.tz = tz;
+        long id = DbCities.addCity(this, dbCity);
+        if (id < 0) {
+          // Something went wrong
+          Toast.makeText(this, R.string.cities_add_city_failed,
+                  Toast.LENGTH_SHORT).show();
+        } else {
+            CityObj o = new CityObj(name, tz, "UD" + id);
+            mAdapter.loadCitiesDatabase(this, o);
+            mCitiesList.invalidate();
+        }
+
+        mAddCityDialog = null;
+    }
+
+    @Override
+    public void onCancelCitySelection() {
+        mAddCityDialog = null;
+    }
+
+    private void deleteCity(final CityObj c) {
+        AlertDialog.Builder builder = new AlertDialog.Builder(this);
+        builder.setTitle(R.string.cities_delete_city_title);
+        builder.setMessage(getString(R.string.cities_delete_city_msg, c.mCityName));
+        builder.setPositiveButton(getString(android.R.string.ok),
+                new DialogInterface.OnClickListener() {
+            @Override
+            public void onClick(DialogInterface dialog, int which) {
+                int id = Integer.parseInt(c.mCityId.substring(2));
+                if (DbCities.deleteCity(CitiesActivity.this, id) > 0) {
+                    // Remove from the list and from the selection
+                    mUserSelectedCities.remove(c.mCityId);
+                    mAdapter.loadCitiesDatabase(CitiesActivity.this, null);
+                    mCitiesList.invalidate();
+                } else {
+                    // Something went wrong
+                    Toast.makeText(CitiesActivity.this, R.string.cities_delete_city_failed,
+                            Toast.LENGTH_SHORT).show();
+                }
+            }
+        });
+        builder.setNegativeButton(getString(android.R.string.cancel), null);
+        AlertDialog dialog = builder.create();
+        dialog.show();
     }
 }
