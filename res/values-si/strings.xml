@@ -36,7 +36,6 @@
     <string name="ringtone" msgid="9110746249688559579">"රිංග්ටෝනය"</string>
     <string name="time" msgid="8067216534232296518">"කාලය"</string>
     <string name="alarm_alert_dismiss_text" msgid="4942914605480888820">"ඉවතලන්න"</string>
-    <string name="alarm_alert_alert_silenced" msgid="2704775170733835993">"මිනිත්තු <xliff:g id="MINUTES">%d</xliff:g> ට පසු ඇඟවීම නිහඬ කරන්න."</string>
     <string name="alarm_alert_snooze_text" msgid="1774416052207651584">"යළි සිහි කැඳවන්න"</string>
     <string name="alarm_alert_snooze_set" msgid="656470966696912087">"මිනිත්තු <xliff:g id="MINUTES">%d</xliff:g> කින් යළි සිහි කැඳවන්න."</string>
     <string name="alarm_alert_snooze_until" msgid="6958013659168344550">"<xliff:g id="TIME">%s</xliff:g> තෙක් යළි සිහි කැඳවන්න"</string>
