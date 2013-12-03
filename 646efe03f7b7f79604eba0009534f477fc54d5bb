@@ -16,6 +16,24 @@
       "revId": "646efe03f7b7f79604eba0009534f477fc54d5bb",
       "serverId": "1ec6b3db-b2c1-4fa4-84a2-4c7efe89ba71",
       "unresolved": false
+    },
+    {
+      "key": {
+        "uuid": "fa80f949_1c31faa2",
+        "filename": "src/com/android/deskclock/provider/ClockDatabaseHelper.java",
+        "patchSetId": 8
+      },
+      "lineNbr": 215,
+      "author": {
+        "id": 1063
+      },
+      "writtenOn": "2013-12-03T00:06:00Z",
+      "side": 1,
+      "message": "Yeah, already fixed in the profile patch :)\n\nSorry for not noticing it earlier, I was walking through them one-by-one.",
+      "parentUuid": "fa80f949_bc0eaee3",
+      "revId": "646efe03f7b7f79604eba0009534f477fc54d5bb",
+      "serverId": "1ec6b3db-b2c1-4fa4-84a2-4c7efe89ba71",
+      "unresolved": false
     }
   ]
 }
