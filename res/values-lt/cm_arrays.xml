@@ -15,8 +15,8 @@
 -->
 <resources xmlns:xliff="urn:oasis:names:tc:xliff:document:1.2">
     <string-array name="action_summary_entries">
-        <item>Nieko nedaryti</item>
-        <item>Užmigdyti žadintuvą</item>
-        <item>Nutraukti žadintuvą</item>
+        <item>nieko nedaryti</item>
+        <item>užmigdyti žadintuvą</item>
+        <item>nutraukti žadintuvą</item>
     </string-array>
 </resources>
