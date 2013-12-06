@@ -359,12 +359,16 @@ public class Utils {
         Calendar nextQuarter = Calendar.getInstance();
         //  Set 1 second to ensure quarter-hour threshold passed.
         nextQuarter.set(Calendar.SECOND, 1);
+        nextQuarter.set(Calendar.MILLISECOND, 0);
         int minute = nextQuarter.get(Calendar.MINUTE);
         nextQuarter.add(Calendar.MINUTE, 15 - (minute % 15));
         long alarmOnQuarterHour = nextQuarter.getTimeInMillis();
-        if (0 >= (alarmOnQuarterHour - System.currentTimeMillis())
-                || (alarmOnQuarterHour - System.currentTimeMillis()) > 901000) {
-            Log.wtf("quarterly alarm calculation error");
+        long now = System.currentTimeMillis();
+        long delta = alarmOnQuarterHour - now;
+        if (0 >= delta || delta > 901000) {
+            // Something went wrong in the calculation, schedule something that is
+            // about 15 minutes. Next time , it will align with the 15 minutes border.
+            alarmOnQuarterHour = now + 901000;
         }
         return alarmOnQuarterHour;
     }
