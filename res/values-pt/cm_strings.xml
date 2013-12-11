@@ -44,7 +44,7 @@
     <string name="shake_action_dialog_title" product="default">Agite o telefone para \u2026</string>
     <string name="shake_action_summary" product="tablet">Agitar o tablet irá <xliff:g id="action">%s</xliff:g></string>
     <string name="shake_action_summary" product="default">Agitar o telefone irá <xliff:g id="action">%s</xliff:g></string>
-    <string name="action_summary_do_nothing">fazer nada</string>
-    <string name="action_summary_snooze">soneca</string>
-    <string name="action_summary_dismiss">descartar</string>
+    <string name="action_summary_do_nothing">Fazer nada</string>
+    <string name="action_summary_snooze">Ativar soneca</string>
+    <string name="action_summary_dismiss">Dispensar</string>
 </resources>
