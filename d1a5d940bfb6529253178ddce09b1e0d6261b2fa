@@ -1,0 +1,123 @@
+{
+  "comments": [
+    {
+      "key": {
+        "uuid": "7a740942_6e4ba42c",
+        "filename": "res/values-it/cm_strings.xml",
+        "patchSetId": 1
+      },
+      "lineNbr": 40,
+      "author": {
+        "id": 3184
+      },
+      "writtenOn": "2013-12-17T09:16:01Z",
+      "side": 1,
+      "message": "Capovolgere il tablet verso il basso farà \u003cxliff:g id\u003d\"action\"\u003e%s\u003c/xliff:g\u003e",
+      "revId": "d1a5d940bfb6529253178ddce09b1e0d6261b2fa",
+      "serverId": "1ec6b3db-b2c1-4fa4-84a2-4c7efe89ba71",
+      "unresolved": false
+    },
+    {
+      "key": {
+        "uuid": "7a740942_ae40ac08",
+        "filename": "res/values-it/cm_strings.xml",
+        "patchSetId": 1
+      },
+      "lineNbr": 41,
+      "author": {
+        "id": 3184
+      },
+      "writtenOn": "2013-12-17T09:16:01Z",
+      "side": 1,
+      "message": "Capovolgere il telefono verso il basso farà \u003cxliff:g id\u003d\"action\"\u003e%s\u003c/xliff:g\u003e",
+      "revId": "d1a5d940bfb6529253178ddce09b1e0d6261b2fa",
+      "serverId": "1ec6b3db-b2c1-4fa4-84a2-4c7efe89ba71",
+      "unresolved": false
+    },
+    {
+      "key": {
+        "uuid": "7a740942_8e48502f",
+        "filename": "res/values-it/cm_strings.xml",
+        "patchSetId": 1
+      },
+      "lineNbr": 45,
+      "author": {
+        "id": 3184
+      },
+      "writtenOn": "2013-12-17T09:16:01Z",
+      "side": 1,
+      "message": "Agitare il tablet farà \u003cxliff:g id\u003d\"action\"\u003e%s\u003c/\nxliff:g\u003e",
+      "revId": "d1a5d940bfb6529253178ddce09b1e0d6261b2fa",
+      "serverId": "1ec6b3db-b2c1-4fa4-84a2-4c7efe89ba71",
+      "unresolved": false
+    },
+    {
+      "key": {
+        "uuid": "7a740942_4e5268df",
+        "filename": "res/values-it/cm_strings.xml",
+        "patchSetId": 1
+      },
+      "lineNbr": 46,
+      "author": {
+        "id": 3184
+      },
+      "writtenOn": "2013-12-17T09:16:01Z",
+      "side": 1,
+      "message": "Agitare il telefono farà \u003cxliff:g id\u003d\"action\"\u003e%\ns\u003c/xliff:g\u003e",
+      "revId": "d1a5d940bfb6529253178ddce09b1e0d6261b2fa",
+      "serverId": "1ec6b3db-b2c1-4fa4-84a2-4c7efe89ba71",
+      "unresolved": false
+    },
+    {
+      "key": {
+        "uuid": "7a740942_ee36b4b3",
+        "filename": "res/values-it/cm_strings.xml",
+        "patchSetId": 1
+      },
+      "lineNbr": 47,
+      "author": {
+        "id": 3184
+      },
+      "writtenOn": "2013-12-17T09:16:01Z",
+      "side": 1,
+      "message": "non far nulla",
+      "revId": "d1a5d940bfb6529253178ddce09b1e0d6261b2fa",
+      "serverId": "1ec6b3db-b2c1-4fa4-84a2-4c7efe89ba71",
+      "unresolved": false
+    },
+    {
+      "key": {
+        "uuid": "7a740942_2ebefcff",
+        "filename": "res/values-it/cm_strings.xml",
+        "patchSetId": 1
+      },
+      "lineNbr": 48,
+      "author": {
+        "id": 3184
+      },
+      "writtenOn": "2013-12-17T09:16:01Z",
+      "side": 1,
+      "message": "ripetere l\\\u0027allarme",
+      "revId": "d1a5d940bfb6529253178ddce09b1e0d6261b2fa",
+      "serverId": "1ec6b3db-b2c1-4fa4-84a2-4c7efe89ba71",
+      "unresolved": false
+    },
+    {
+      "key": {
+        "uuid": "7a740942_4ebb480f",
+        "filename": "res/values-it/cm_strings.xml",
+        "patchSetId": 1
+      },
+      "lineNbr": 49,
+      "author": {
+        "id": 3184
+      },
+      "writtenOn": "2013-12-17T09:16:01Z",
+      "side": 1,
+      "message": "interrompere l\\\u0027allarme",
+      "revId": "d1a5d940bfb6529253178ddce09b1e0d6261b2fa",
+      "serverId": "1ec6b3db-b2c1-4fa4-84a2-4c7efe89ba71",
+      "unresolved": false
+    }
+  ]
+}
