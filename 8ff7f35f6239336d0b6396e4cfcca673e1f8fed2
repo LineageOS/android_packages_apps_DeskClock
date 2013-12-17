@@ -1,0 +1,38 @@
+{
+  "comments": [
+    {
+      "key": {
+        "uuid": "7a740942_aeb50c7f",
+        "filename": "res/values-nl/cm_strings.xml",
+        "patchSetId": 2
+      },
+      "lineNbr": 49,
+      "author": {
+        "id": 7221
+      },
+      "writtenOn": "2013-12-17T13:03:09Z",
+      "side": 1,
+      "message": "\"alarm snoozen\" (zonder het, zoals in het Engels)",
+      "revId": "8ff7f35f6239336d0b6396e4cfcca673e1f8fed2",
+      "serverId": "1ec6b3db-b2c1-4fa4-84a2-4c7efe89ba71",
+      "unresolved": false
+    },
+    {
+      "key": {
+        "uuid": "7a740942_cebad86e",
+        "filename": "res/values-nl/cm_strings.xml",
+        "patchSetId": 2
+      },
+      "lineNbr": 50,
+      "author": {
+        "id": 7221
+      },
+      "writtenOn": "2013-12-17T13:03:09Z",
+      "side": 1,
+      "message": "idem, zonder \u0027het\u0027",
+      "revId": "8ff7f35f6239336d0b6396e4cfcca673e1f8fed2",
+      "serverId": "1ec6b3db-b2c1-4fa4-84a2-4c7efe89ba71",
+      "unresolved": false
+    }
+  ]
+}
