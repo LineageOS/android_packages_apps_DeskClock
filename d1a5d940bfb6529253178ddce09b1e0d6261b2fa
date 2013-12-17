@@ -19,6 +19,24 @@
     },
     {
       "key": {
+        "uuid": "7a740942_2ef27c9b",
+        "filename": "res/values-it/cm_strings.xml",
+        "patchSetId": 1
+      },
+      "lineNbr": 40,
+      "author": {
+        "id": 3916
+      },
+      "writtenOn": "2013-12-17T11:57:06Z",
+      "side": 1,
+      "message": "(Lunga spiegazione:) Secondo me invece abbiamo il caso scomodo di \"non farà nulla\" per cui verrebbe \"Capovolgere il telefono verso il basso farà non far nulla\", che non mi va giù. La mia proposta è eliminare il verbo (farà) sostituendolo con un \":\":\n\"Capovolgere il tablet verso il basso: \u003cazione\u003e\"\nPortando le azioni all\u0027infinito, si avrebbe una traduzione non perfetta ma secondo me più scorrevole:\n\"Capovolgere il tablet verso il basso: nessuna azione\" \n\"Capovolgere il tablet verso il basso: ripetere l\\\u0027allarme\"\n\"Capovolgi il tablet verso il basso per... nessuna azione\"\n\"Capovolgi il tablet verso il basso per... ripetere l\\\u0027allarme\"\n\n(tltr) Qui quindi metterei \nCapovolgere il tablet verso il basso: \u003cxliff:...",
+      "parentUuid": "7a740942_6e4ba42c",
+      "revId": "d1a5d940bfb6529253178ddce09b1e0d6261b2fa",
+      "serverId": "1ec6b3db-b2c1-4fa4-84a2-4c7efe89ba71",
+      "unresolved": false
+    },
+    {
+      "key": {
         "uuid": "7a740942_ae40ac08",
         "filename": "res/values-it/cm_strings.xml",
         "patchSetId": 1
@@ -30,6 +48,24 @@
       "writtenOn": "2013-12-17T09:16:01Z",
       "side": 1,
       "message": "Capovolgere il telefono verso il basso farà \u003cxliff:g id\u003d\"action\"\u003e%s\u003c/xliff:g\u003e",
+      "revId": "d1a5d940bfb6529253178ddce09b1e0d6261b2fa",
+      "serverId": "1ec6b3db-b2c1-4fa4-84a2-4c7efe89ba71",
+      "unresolved": false
+    },
+    {
+      "key": {
+        "uuid": "7a740942_0e30e055",
+        "filename": "res/values-it/cm_strings.xml",
+        "patchSetId": 1
+      },
+      "lineNbr": 41,
+      "author": {
+        "id": 3916
+      },
+      "writtenOn": "2013-12-17T11:57:06Z",
+      "side": 1,
+      "message": "Capovolgere il telefono verso il basso: \u003cxliff...",
+      "parentUuid": "7a740942_ae40ac08",
       "revId": "d1a5d940bfb6529253178ddce09b1e0d6261b2fa",
       "serverId": "1ec6b3db-b2c1-4fa4-84a2-4c7efe89ba71",
       "unresolved": false
@@ -53,6 +89,24 @@
     },
     {
       "key": {
+        "uuid": "7a740942_ae342c4a",
+        "filename": "res/values-it/cm_strings.xml",
+        "patchSetId": 1
+      },
+      "lineNbr": 45,
+      "author": {
+        "id": 3916
+      },
+      "writtenOn": "2013-12-17T11:57:06Z",
+      "side": 1,
+      "message": "Agitare il tablet: \u003cxliff...",
+      "parentUuid": "7a740942_8e48502f",
+      "revId": "d1a5d940bfb6529253178ddce09b1e0d6261b2fa",
+      "serverId": "1ec6b3db-b2c1-4fa4-84a2-4c7efe89ba71",
+      "unresolved": false
+    },
+    {
+      "key": {
         "uuid": "7a740942_4e5268df",
         "filename": "res/values-it/cm_strings.xml",
         "patchSetId": 1
@@ -64,6 +118,24 @@
       "writtenOn": "2013-12-17T09:16:01Z",
       "side": 1,
       "message": "Agitare il telefono farà \u003cxliff:g id\u003d\"action\"\u003e%\ns\u003c/xliff:g\u003e",
+      "revId": "d1a5d940bfb6529253178ddce09b1e0d6261b2fa",
+      "serverId": "1ec6b3db-b2c1-4fa4-84a2-4c7efe89ba71",
+      "unresolved": false
+    },
+    {
+      "key": {
+        "uuid": "7a740942_ce397843",
+        "filename": "res/values-it/cm_strings.xml",
+        "patchSetId": 1
+      },
+      "lineNbr": 46,
+      "author": {
+        "id": 3916
+      },
+      "writtenOn": "2013-12-17T11:57:06Z",
+      "side": 1,
+      "message": "Agitare il telefono: \u003cxliff:",
+      "parentUuid": "7a740942_4e5268df",
       "revId": "d1a5d940bfb6529253178ddce09b1e0d6261b2fa",
       "serverId": "1ec6b3db-b2c1-4fa4-84a2-4c7efe89ba71",
       "unresolved": false
@@ -87,6 +159,24 @@
     },
     {
       "key": {
+        "uuid": "7a740942_8e3cd030",
+        "filename": "res/values-it/cm_strings.xml",
+        "patchSetId": 1
+      },
+      "lineNbr": 47,
+      "author": {
+        "id": 3916
+      },
+      "writtenOn": "2013-12-17T11:57:06Z",
+      "side": 1,
+      "message": "\"nessuna azione\" (minuscolo, è la continuazione della frase!)",
+      "parentUuid": "7a740942_ee36b4b3",
+      "revId": "d1a5d940bfb6529253178ddce09b1e0d6261b2fa",
+      "serverId": "1ec6b3db-b2c1-4fa4-84a2-4c7efe89ba71",
+      "unresolved": false
+    },
+    {
+      "key": {
         "uuid": "7a740942_2ebefcff",
         "filename": "res/values-it/cm_strings.xml",
         "patchSetId": 1
@@ -104,6 +194,24 @@
     },
     {
       "key": {
+        "uuid": "7a740942_2e491cd1",
+        "filename": "res/values-it/cm_strings.xml",
+        "patchSetId": 1
+      },
+      "lineNbr": 48,
+      "author": {
+        "id": 3916
+      },
+      "writtenOn": "2013-12-17T11:57:06Z",
+      "side": 1,
+      "message": "\"ripetere l\\\u0027allarme\" (sempre minuscolo)",
+      "parentUuid": "7a740942_2ebefcff",
+      "revId": "d1a5d940bfb6529253178ddce09b1e0d6261b2fa",
+      "serverId": "1ec6b3db-b2c1-4fa4-84a2-4c7efe89ba71",
+      "unresolved": false
+    },
+    {
+      "key": {
         "uuid": "7a740942_4ebb480f",
         "filename": "res/values-it/cm_strings.xml",
         "patchSetId": 1
@@ -115,6 +223,24 @@
       "writtenOn": "2013-12-17T09:16:01Z",
       "side": 1,
       "message": "interrompere l\\\u0027allarme",
+      "revId": "d1a5d940bfb6529253178ddce09b1e0d6261b2fa",
+      "serverId": "1ec6b3db-b2c1-4fa4-84a2-4c7efe89ba71",
+      "unresolved": false
+    },
+    {
+      "key": {
+        "uuid": "7a740942_4e46e8c0",
+        "filename": "res/values-it/cm_strings.xml",
+        "patchSetId": 1
+      },
+      "lineNbr": 49,
+      "author": {
+        "id": 3916
+      },
+      "writtenOn": "2013-12-17T11:57:06Z",
+      "side": 1,
+      "message": "\"interrompere l\\\u0027allarme\" (sempre minuscolo)",
+      "parentUuid": "7a740942_4ebb480f",
       "revId": "d1a5d940bfb6529253178ddce09b1e0d6261b2fa",
       "serverId": "1ec6b3db-b2c1-4fa4-84a2-4c7efe89ba71",
       "unresolved": false
