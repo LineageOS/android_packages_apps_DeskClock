@@ -772,6 +772,16 @@
     <string name="alarm_undo">undo</string>
     <!-- Toast content when an alarm was deleted  -->
     <string name="alarm_deleted">Alarm deleted.</string>
+    <!-- Select the source of the alarm -->
+    <string name="alarm_select">Select Alarm</string>
+    <!-- Select the ringtone as alarm -->
+    <string name="alarm_select_ringtone">Ringtone</string>
+    <!-- Select the alarm from external device -->
+    <string name="alarm_select_external">Music</string>
+    <!-- Ok for selection -->
+    <string name="alarm_select_ok">OK</string>
+    <!-- Cancel for selection -->
+    <string name="alarm_select_cancel">Cancel</string>
     <!-- slash between date and next alarm in the clock -->
     <string name="slash"> / </string>
     <!-- slash between date and next alarm in the clock -->
