@@ -37,6 +37,24 @@
     },
     {
       "key": {
+        "uuid": "3a7e1126_60965a96",
+        "filename": "res/values-nl/cm_strings.xml",
+        "patchSetId": 2
+      },
+      "lineNbr": 49,
+      "author": {
+        "id": 2881
+      },
+      "writtenOn": "2013-12-21T13:27:47Z",
+      "side": 1,
+      "message": "Nee, dit is een samengestelde zin!\n\"Schudden van uw telefoon zal het alarm snoozen\"\n\nDus het woordje \"het\" moet er wel tussen",
+      "parentUuid": "3a7e1126_75513a62",
+      "revId": "8ff7f35f6239336d0b6396e4cfcca673e1f8fed2",
+      "serverId": "1ec6b3db-b2c1-4fa4-84a2-4c7efe89ba71",
+      "unresolved": false
+    },
+    {
+      "key": {
         "uuid": "7a740942_cebad86e",
         "filename": "res/values-nl/cm_strings.xml",
         "patchSetId": 2
@@ -66,6 +84,24 @@
       "side": 1,
       "message": "Done",
       "parentUuid": "7a740942_cebad86e",
+      "revId": "8ff7f35f6239336d0b6396e4cfcca673e1f8fed2",
+      "serverId": "1ec6b3db-b2c1-4fa4-84a2-4c7efe89ba71",
+      "unresolved": false
+    },
+    {
+      "key": {
+        "uuid": "3a7e1126_809346a3",
+        "filename": "res/values-nl/cm_strings.xml",
+        "patchSetId": 2
+      },
+      "lineNbr": 50,
+      "author": {
+        "id": 2881
+      },
+      "writtenOn": "2013-12-21T13:27:47Z",
+      "side": 1,
+      "message": "zie hierboven",
+      "parentUuid": "3a7e1126_154eb6c1",
       "revId": "8ff7f35f6239336d0b6396e4cfcca673e1f8fed2",
       "serverId": "1ec6b3db-b2c1-4fa4-84a2-4c7efe89ba71",
       "unresolved": false
