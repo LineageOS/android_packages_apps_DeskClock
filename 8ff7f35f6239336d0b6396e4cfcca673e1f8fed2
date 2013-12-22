@@ -73,6 +73,24 @@
     },
     {
       "key": {
+        "uuid": "3a7e1126_5b254fc0",
+        "filename": "res/values-nl/cm_strings.xml",
+        "patchSetId": 2
+      },
+      "lineNbr": 49,
+      "author": {
+        "id": 2881
+      },
+      "writtenOn": "2013-12-22T12:00:42Z",
+      "side": 1,
+      "message": "+1 voor sluimeren\n\nSamsung: http://www.samsunggalaxys4.nl/wp-content/uploads/2013/08/samsung-galaxy-s4-snooze-sluimeren-instellen.jpg",
+      "parentUuid": "3a7e1126_9b25f75d",
+      "revId": "8ff7f35f6239336d0b6396e4cfcca673e1f8fed2",
+      "serverId": "1ec6b3db-b2c1-4fa4-84a2-4c7efe89ba71",
+      "unresolved": false
+    },
+    {
+      "key": {
         "uuid": "7a740942_cebad86e",
         "filename": "res/values-nl/cm_strings.xml",
         "patchSetId": 2
