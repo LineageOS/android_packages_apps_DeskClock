@@ -91,6 +91,42 @@
     },
     {
       "key": {
+        "uuid": "9a68dd71_27487a5b",
+        "filename": "res/values-nl/cm_strings.xml",
+        "patchSetId": 2
+      },
+      "lineNbr": 49,
+      "author": {
+        "id": 2597
+      },
+      "writtenOn": "2013-12-23T12:32:06Z",
+      "side": 1,
+      "message": "Hoezo \u0027omdat het een samengestelde zin is\u0027?\n\nVoluit is het: \u0027Het schudden van uw telefoon zal het alarm snoozen.\u0027\n\nEn \u0027Schudden van uw telefoon zal alarm snoozen\u0027 kan prima, lijkt mij.",
+      "parentUuid": "3a7e1126_60965a96",
+      "revId": "8ff7f35f6239336d0b6396e4cfcca673e1f8fed2",
+      "serverId": "1ec6b3db-b2c1-4fa4-84a2-4c7efe89ba71",
+      "unresolved": false
+    },
+    {
+      "key": {
+        "uuid": "9a68dd71_a75b0a2e",
+        "filename": "res/values-nl/cm_strings.xml",
+        "patchSetId": 2
+      },
+      "lineNbr": 49,
+      "author": {
+        "id": 2597
+      },
+      "writtenOn": "2013-12-23T12:32:06Z",
+      "side": 1,
+      "message": "AOSP: https://github.com/CyanogenMod/android_packages_apps_DeskClock/blob/cm-11.0/res/values-nl/strings.xml#L43\n\n\u0027Snooze\u0027 is denk ik wel een ingeburgerd woord geworden.",
+      "parentUuid": "3a7e1126_5b254fc0",
+      "revId": "8ff7f35f6239336d0b6396e4cfcca673e1f8fed2",
+      "serverId": "1ec6b3db-b2c1-4fa4-84a2-4c7efe89ba71",
+      "unresolved": false
+    },
+    {
+      "key": {
         "uuid": "7a740942_cebad86e",
         "filename": "res/values-nl/cm_strings.xml",
         "patchSetId": 2
