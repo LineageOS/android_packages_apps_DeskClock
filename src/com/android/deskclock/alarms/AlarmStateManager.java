@@ -226,10 +226,19 @@ public final class AlarmStateManager extends BroadcastReceiver {
                 stateChangeIntent, PendingIntent.FLAG_UPDATE_CURRENT);
 
         AlarmManager am = (AlarmManager) context.getSystemService(Context.ALARM_SERVICE);
+        Intent stateChangePowerOffIntent = createStateChangeIntent(context, ALARM_MANAGER_TAG,
+                instance, AlarmInstance.POWER_OFF_ALARM_STATE);
+        PendingIntent pendingPowerOffIntent = PendingIntent.getBroadcast(context,
+                instance.hashCode(), stateChangePowerOffIntent, PendingIntent.FLAG_ONE_SHOT);
         if (Utils.isKitKatOrLater()) {
             am.setExact(AlarmManager.RTC_WAKEUP, timeInMillis, pendingIntent);
+
+            am.setExact(AlarmManager.RTC_POWEROFF_WAKEUP, instance.getAlarmTime().getTimeInMillis(),
+                    pendingPowerOffIntent);
         } else {
             am.set(AlarmManager.RTC_WAKEUP, timeInMillis, pendingIntent);
+            am.set(AlarmManager.RTC_POWEROFF_WAKEUP, instance.getAlarmTime().getTimeInMillis(),
+                    pendingPowerOffIntent);
         }
     }
 
@@ -247,7 +256,14 @@ public final class AlarmStateManager extends BroadcastReceiver {
                 createStateChangeIntent(context, ALARM_MANAGER_TAG, instance, null),
                 PendingIntent.FLAG_UPDATE_CURRENT);
 
+        PendingIntent pendingPowerOffIntent = PendingIntent.getBroadcast(context,
+                instance.hashCode(),
+                createStateChangeIntent(context, ALARM_MANAGER_TAG, instance, null),
+                PendingIntent.FLAG_ONE_SHOT);
+
         AlarmManager am = (AlarmManager) context.getSystemService(Context.ALARM_SERVICE);
+
+        am.cancel(pendingPowerOffIntent);
         am.cancel(pendingIntent);
     }
 
@@ -715,6 +731,13 @@ public final class AlarmStateManager extends BroadcastReceiver {
             if (alarmState >= 0) {
                 setAlarmState(context, instance, alarmState);
             } else {
+                // No need to register instance again when alarmState
+                // equals POWER_OFF_ALARM_STATE. POWER_OFF_ALARM_STATE
+                // is an invalid state for rtc power off alarm.
+                if (alarmState == AlarmInstance.POWER_OFF_ALARM_STATE)
+                {
+                    return;
+                }
                 registerInstance(context, instance, true);
             }
         } else if (SHOW_AND_DISMISS_ALARM_ACTION.equals(action)) {
