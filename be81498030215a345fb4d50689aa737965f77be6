@@ -1,0 +1,72 @@
+{
+  "comments": [
+    {
+      "key": {
+        "uuid": "9a68dd71_0d76b53e",
+        "filename": "res/values-th/cm_strings.xml",
+        "patchSetId": 2
+      },
+      "lineNbr": 38,
+      "author": {
+        "id": 2881
+      },
+      "writtenOn": "2013-12-24T11:02:00Z",
+      "side": 1,
+      "message": "\"flip_action_dialog_title_fixit_fixit\" is not an existing string name! I think this came from TransiFlex, but you cannot use these.\n\n\nshould be \"shake_action_dialog_title\"\n\n\nalso\n\nno space before  \\u2026",
+      "revId": "be81498030215a345fb4d50689aa737965f77be6",
+      "serverId": "1ec6b3db-b2c1-4fa4-84a2-4c7efe89ba71",
+      "unresolved": false
+    },
+    {
+      "key": {
+        "uuid": "9a68dd71_2d73794f",
+        "filename": "res/values-th/cm_strings.xml",
+        "patchSetId": 2
+      },
+      "lineNbr": 39,
+      "author": {
+        "id": 2881
+      },
+      "writtenOn": "2013-12-24T11:02:00Z",
+      "side": 1,
+      "message": "no space before \\u2026",
+      "revId": "be81498030215a345fb4d50689aa737965f77be6",
+      "serverId": "1ec6b3db-b2c1-4fa4-84a2-4c7efe89ba71",
+      "unresolved": false
+    },
+    {
+      "key": {
+        "uuid": "9a68dd71_cd8e5d27",
+        "filename": "res/values-th/cm_strings.xml",
+        "patchSetId": 2
+      },
+      "lineNbr": 40,
+      "author": {
+        "id": 2881
+      },
+      "writtenOn": "2013-12-24T11:02:00Z",
+      "side": 1,
+      "message": "remove _fixit_fixit",
+      "revId": "be81498030215a345fb4d50689aa737965f77be6",
+      "serverId": "1ec6b3db-b2c1-4fa4-84a2-4c7efe89ba71",
+      "unresolved": false
+    },
+    {
+      "key": {
+        "uuid": "9a68dd71_ed93214e",
+        "filename": "res/values-th/cm_strings.xml",
+        "patchSetId": 2
+      },
+      "lineNbr": 45,
+      "author": {
+        "id": 2881
+      },
+      "writtenOn": "2013-12-24T11:02:00Z",
+      "side": 1,
+      "message": "_fixit_fixit",
+      "revId": "be81498030215a345fb4d50689aa737965f77be6",
+      "serverId": "1ec6b3db-b2c1-4fa4-84a2-4c7efe89ba71",
+      "unresolved": false
+    }
+  ]
+}
