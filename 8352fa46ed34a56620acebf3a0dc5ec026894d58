@@ -1,0 +1,38 @@
+{
+  "comments": [
+    {
+      "key": {
+        "uuid": "9a68dd71_70c70646",
+        "filename": "res/values-ru/strings.xml",
+        "patchSetId": 1
+      },
+      "lineNbr": 171,
+      "author": {
+        "id": 5574
+      },
+      "writtenOn": "2013-12-24T21:42:50Z",
+      "side": 0,
+      "message": "Oh look, wrong plurals!\nI never saw these strings used in the UI, but corrected them anyway.",
+      "revId": "8352fa46ed34a56620acebf3a0dc5ec026894d58",
+      "serverId": "1ec6b3db-b2c1-4fa4-84a2-4c7efe89ba71",
+      "unresolved": false
+    },
+    {
+      "key": {
+        "uuid": "9a68dd71_10c48a3e",
+        "filename": "res/values-ru/strings.xml",
+        "patchSetId": 1
+      },
+      "lineNbr": 339,
+      "author": {
+        "id": 5574
+      },
+      "writtenOn": "2013-12-24T21:42:50Z",
+      "side": 0,
+      "message": "This string should say \"No alarms\", not \"Turn off alarm\". Oh Google...",
+      "revId": "8352fa46ed34a56620acebf3a0dc5ec026894d58",
+      "serverId": "1ec6b3db-b2c1-4fa4-84a2-4c7efe89ba71",
+      "unresolved": false
+    }
+  ]
+}
