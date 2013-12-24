@@ -160,15 +160,12 @@
     <string name="sw_share_laps" msgid="614390674795945007">"Время круга"</string>
     <string name="sw_notification_lap_number" msgid="3535420316052647126">"Круг <xliff:g id="NUMBER">%d</xliff:g>"</string>
   <plurals name="Nhours_description">
-    <item quantity="one" msgid="371227238759147245">"1 ч."</item>
     <item quantity="other" msgid="7018184076091344797">"<xliff:g id="NUMBER">%d</xliff:g> ч."</item>
   </plurals>
   <plurals name="Nminutes_description">
-    <item quantity="one" msgid="1001391305885322059">"1 мин."</item>
     <item quantity="other" msgid="6948360065351547776">"<xliff:g id="NUMBER">%d</xliff:g> мин."</item>
   </plurals>
   <plurals name="Nseconds_description">
-    <item quantity="one" msgid="6589853086641485725">"1 сек."</item>
     <item quantity="other" msgid="7583230315175387547">"<xliff:g id="NUMBER">%d</xliff:g> сек."</item>
   </plurals>
     <string name="timer_add_timer" msgid="862733633862574752">"Добавить таймер"</string>
@@ -336,6 +333,6 @@
     <string name="timer_delete_confirmation" msgid="2815524107015816453">"Удалить этот таймер?"</string>
     <string name="city_delete_confirmation" msgid="1783441538785676299">"Удалить этот город?"</string>
     <string name="digital_gadget" msgid="2326954556720571358">"Часы"</string>
-    <string name="no_alarms" msgid="6429431324842022917">"Отключить будильник"</string>
+    <string name="no_alarms" msgid="6429431324842022917">"Нет будильников"</string>
     <string name="no_upcoming_alarms" msgid="2889840988069436254">"СИГНАЛОВ НЕТ"</string>
 </resources>
