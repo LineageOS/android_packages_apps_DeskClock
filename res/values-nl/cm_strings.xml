@@ -28,7 +28,6 @@
     <string name="shake_action_summary" product="tablet">Schudden van uw tablet zal <xliff:g id="action">%s</xliff:g></string>
     <string name="shake_action_summary" product="default">Schudden van uw telefoon zal <xliff:g id="action">%s</xliff:g></string>
     <string name="alarm_increasing_volume">Toenemend volume</string>
-    <string name="no_alarms">Geen alarm ingesteld</string>
     <string name="menu_item_add">Toevoegen</string>
     <string name="cities_add_city_title">Stad toevoegen</string>
     <string name="cities_add_city_city">Stad:</string>
