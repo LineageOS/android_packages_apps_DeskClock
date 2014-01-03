@@ -216,7 +216,7 @@ public class SettingsActivity extends PreferenceActivity
     }
 
     private void updateActionSummary(ListPreference listPref, String action, int summaryResId) {
-        int i = Integer.parseInt(action);
+        int i = listPref.findIndexOfValue(action);
         listPref.setSummary(getString(summaryResId,
             getResources().getStringArray(R.array.action_summary_entries)[i]));
     }
