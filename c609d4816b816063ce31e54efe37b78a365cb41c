@@ -1,0 +1,21 @@
+{
+  "comments": [
+    {
+      "key": {
+        "uuid": "5a5ae5dd_4bafb9e3",
+        "filename": "res/values-pl/cm_strings.xml",
+        "patchSetId": 5
+      },
+      "lineNbr": 27,
+      "author": {
+        "id": 5637
+      },
+      "writtenOn": "2014-01-05T00:40:45Z",
+      "side": 1,
+      "message": "my proposition:\n\"Dotknij, aby ustali? aktualne miasto\"",
+      "revId": "c609d4816b816063ce31e54efe37b78a365cb41c",
+      "serverId": "1ec6b3db-b2c1-4fa4-84a2-4c7efe89ba71",
+      "unresolved": false
+    }
+  ]
+}
