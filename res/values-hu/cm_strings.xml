@@ -1,0 +1,50 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!--
+     Copyright (C) 2012-2013 The CyanogenMod Project
+
+     Licensed under the Apache License, Version 2.0 (the "License");
+     you may not use this file except in compliance with the License.
+     You may obtain a copy of the License at
+
+          http://www.apache.org/licenses/LICENSE-2.0
+
+     Unless required by applicable law or agreed to in writing, software
+     distributed under the License is distributed on an "AS IS" BASIS,
+     WITHOUT WARRANTIES OR CONDITIONS OF ANY KIND, either express or implied.
+     See the License for the specific language governing permissions and
+     limitations under the License.
+-->
+<resources xmlns:xliff="urn:oasis:names:tc:xliff:document:1.2">
+    <string name="show_status_bar_icon_title">Ikon megjelenítése</string>
+    <string name="show_status_bar_icon_summary">Ikon megjelenítése aktív ébresztés esetén az értesítési sávon</string>
+    <string name="alarm_increasing_volume">Emelkedő csengőhang</string>
+    <string name="profile_description"><xliff:g id="profile">%s</xliff:g> profil</string>
+    <string name="profile_no_selected">Nincs kiválasztva profil</string>
+    <string name="menu_item_add">Hozzáadás</string>
+    <string name="cities_add_city_title">Város hozzáadása</string>
+    <string name="cities_add_city_city">Város:</string>
+    <string name="cities_add_city_timezone">Időzóna:</string>
+    <string name="cities_add_city_gps_cd">Érintse meg a jelenlegi város meghatározásához</string>
+    <string name="cities_add_loading">Betöltés\u2026</string>
+    <string name="cities_add_searching">Keresés\u2026</string>
+    <string name="cities_add_gps_no_results">A GPS lekérdezés nem járt eredménnyel</string>
+    <string name="cities_add_gps_not_available">A GPS nem elérhető</string>
+    <string name="cities_add_already_exists">A város már szerepel az adatbázisban</string>
+    <string name="cities_add_city_failed">Nem lehet a várost létrehozni</string>
+    <string name="cities_delete_city_title">Város törlése</string>
+    <string name="cities_delete_city_msg">Biztosan törli a következőt: <xliff:g id="city">%s</xliff:g>?</string>
+    <string name="cities_delete_city_failed">Nem lehet törölni a várost</string>
+    <string name="flip_action_title">Megfordítás művelete</string>
+    <string name="flip_action_dialog_title" product="tablet">Táblagép megfordítása\u2026</string>
+    <string name="flip_action_dialog_title" product="default">Telefon megfordítása\u2026</string>
+    <string name="flip_action_summary" product="tablet">A táblagép megfordítására <xliff:g id="action">%s</xliff:g></string>
+    <string name="flip_action_summary" product="default">A telefon megfordítására <xliff:g id="action">%s</xliff:g></string>
+    <string name="shake_action_title">Rázás művelete</string>
+    <string name="shake_action_dialog_title" product="tablet">Táblagép rázása\u2026</string>
+    <string name="shake_action_dialog_title" product="default">Telefon rázása\u2026</string>
+    <string name="shake_action_summary" product="tablet">A táblagép rázására <xliff:g id="action">%s</xliff:g></string>
+    <string name="shake_action_summary" product="default">A telefon rázására <xliff:g id="action">%s</xliff:g></string>
+    <string name="action_summary_snooze">elhalasztja az ébresztést</string>
+    <string name="action_summary_dismiss">elveti az ébresztést</string>
+    <string name="action_summary_do_nothing">nem történik semmi</string>
+</resources>
