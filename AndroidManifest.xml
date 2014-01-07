@@ -64,6 +64,14 @@
             </intent-filter>
         </activity-alias>
 
+        <activity-alias android:name="AlarmClock"
+                android:targetActivity="DeskClock"
+                android:exported="true" />
+
+        <activity-alias android:name="com.android.alarmclock.AlarmClock"
+                android:targetActivity="com.android.deskclock.AlarmClock"
+                android:exported="true" />
+
         <activity android:name="SettingsActivity"
                 android:label="@string/settings"
                 android:theme="@style/SettingsTheme"
