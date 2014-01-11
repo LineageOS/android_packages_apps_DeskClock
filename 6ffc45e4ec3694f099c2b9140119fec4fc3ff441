@@ -1,0 +1,21 @@
+{
+  "comments": [
+    {
+      "key": {
+        "uuid": "5a5ae5dd_1df33e75",
+        "filename": "res/values-fr/cm_strings.xml",
+        "patchSetId": 2
+      },
+      "lineNbr": 31,
+      "author": {
+        "id": 2602
+      },
+      "writtenOn": "2014-01-11T10:41:12Z",
+      "side": 1,
+      "message": "Je pense qu\u0027écran serait mieux qu\u0027affichage (pour unifier avec la ligne suivante)",
+      "revId": "6ffc45e4ec3694f099c2b9140119fec4fc3ff441",
+      "serverId": "1ec6b3db-b2c1-4fa4-84a2-4c7efe89ba71",
+      "unresolved": false
+    }
+  ]
+}
