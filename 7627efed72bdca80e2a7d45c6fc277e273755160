@@ -1,0 +1,21 @@
+{
+  "comments": [
+    {
+      "key": {
+        "uuid": "5a5ae5dd_ddb846e8",
+        "filename": "res/values-af/donottranslate.xml",
+        "patchSetId": 2
+      },
+      "lineNbr": 0,
+      "author": {
+        "id": 2597
+      },
+      "writtenOn": "2014-01-11T10:03:03Z",
+      "side": 1,
+      "message": "https://github.com/CyanogenMod/android_packages_apps_LockClock/blob/cm-10.2/res/values-af/donottranslate.xml ?",
+      "revId": "7627efed72bdca80e2a7d45c6fc277e273755160",
+      "serverId": "1ec6b3db-b2c1-4fa4-84a2-4c7efe89ba71",
+      "unresolved": false
+    }
+  ]
+}
