@@ -2,6 +2,23 @@
   "comments": [
     {
       "key": {
+        "uuid": "5a5ae5dd_5d90d6ec",
+        "filename": "res/values-fr/cm_strings.xml",
+        "patchSetId": 2
+      },
+      "lineNbr": 27,
+      "author": {
+        "id": 2597
+      },
+      "writtenOn": "2014-01-11T11:07:44Z",
+      "side": 1,
+      "message": "téléphone",
+      "revId": "6ffc45e4ec3694f099c2b9140119fec4fc3ff441",
+      "serverId": "1ec6b3db-b2c1-4fa4-84a2-4c7efe89ba71",
+      "unresolved": false
+    },
+    {
+      "key": {
         "uuid": "5a5ae5dd_1df33e75",
         "filename": "res/values-fr/cm_strings.xml",
         "patchSetId": 2
