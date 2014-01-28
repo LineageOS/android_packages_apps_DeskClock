@@ -432,23 +432,18 @@ public final class AlarmStateManager extends BroadcastReceiver {
      */
     public static void setMissedState(Context context, AlarmInstance instance) {
         Log.v("Setting missed state to instance " + instance.mId);
-        // Stop alarm if this instance is firing it
-        AlarmService.stopAlarm(context, instance);
+        // Remove all other timers and notifications associated to it
+        unregisterInstance(context, instance);
 
         // Check parent if it needs to reschedule, disable or delete itself
         if (instance.mAlarmId != null) {
             updateParentAlarm(context, instance);
         }
-
-        // Update alarm state
-        ContentResolver contentResolver = context.getContentResolver();
-        instance.mAlarmState = AlarmInstance.MISSED_STATE;
-        AlarmInstance.updateInstance(contentResolver, instance);
-
-        // Setup instance notification and scheduling timers
+        // Notify of missed alarm
         AlarmNotifications.showMissedNotification(context, instance);
-        scheduleInstanceStateChange(context, instance.getMissedTimeToLive(),
-                instance, AlarmInstance.DISMISSED_STATE);
+
+        // Delete instance as it is not needed anymore
+        AlarmInstance.deleteInstance(context.getContentResolver(), instance.mId);
 
         // Instance is not valid anymore, so find next alarm that will fire and notify system
         updateNextAlarm(context);
