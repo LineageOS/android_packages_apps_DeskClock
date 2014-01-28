@@ -63,7 +63,7 @@
     <View
         android:layout_width="match_parent"
         android:layout_height="1dip"
-        android:background="#28ffffff"/>
+        android:background="@color/hairline"/>
 
     <LinearLayout
             android:layout_width="match_parent"
@@ -86,7 +86,7 @@
                 android:layout_marginTop="8dip"
                 android:layout_marginBottom="8dip"
                 android:layout_width="1dip"
-                android:background="#28ffffff"/>
+                android:background="@color/hairline"/>
 
         <Button
                 android:id="@+id/timer_start"

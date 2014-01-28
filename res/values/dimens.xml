@@ -215,4 +215,7 @@
 
     <!-- Bottom margin for the expand area -->
     <dimen name="collapse_expand_height">48dp</dimen>
+
+    <!-- padding for the alarm on/off switch thumb-->
+    <dimen name="alarm_thumb_switch_padding">10dp</dimen>
 </resources>

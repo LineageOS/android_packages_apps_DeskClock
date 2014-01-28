@@ -40,7 +40,7 @@
         android:contentDescription="@string/no_alarms"
         android:drawableTop="@drawable/ic_noalarms"
         android:text="@string/no_alarms"
-        android:textColor="#4cffffff"
+        android:textColor="@color/no_alarm_text_color"
         android:paddingBottom="88dp" />
 
     <FrameLayout android:id="@+id/undo_frame"

@@ -36,7 +36,7 @@
         android:paddingStart="16dip"
         android:singleLine="true"
         android:text="@string/alarm_deleted"
-        android:textColor="@android:color/white"
+        android:textColor="@color/white"
         android:textSize="16sp" />
 
     <LinearLayout
@@ -54,7 +54,7 @@
             android:layout_marginRight="12dip"
             android:layout_marginEnd="12dip"
             android:layout_marginTop="10dip"
-            android:background="#aaaaaa" />
+            android:background="@color/action_button_separator" />
 
         <ImageView
             android:id="@+id/action_icon"

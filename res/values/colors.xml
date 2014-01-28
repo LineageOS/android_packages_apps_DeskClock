@@ -53,4 +53,11 @@
     <drawable name="notification_template_icon_low_bg">#0cffffff</drawable>
 
     <color name="alarm_timeline_color">#4D4D4D</color>
+
+    <color name="action_button_separator">#ffaaaaaa</color>
+    <color name="glow_pad_background">#ffcccccc</color>
+    <color name="hairline">#28ffffff</color>
+    <color name="no_alarm_text_color">#4cffffff</color>
+    <color name="screen_saver_background">#ff000000</color>
+    <color name="swn_button_text">#ffcccccc</color>
 </resources>

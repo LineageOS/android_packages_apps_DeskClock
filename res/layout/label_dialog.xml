@@ -40,7 +40,7 @@
         android:layout_marginTop="16dp"
         android:layout_width="match_parent"
         android:layout_below="@id/labelBox"
-        android:background="#28ffffff"/>
+        android:background="@color/hairline"/>
 
     <LinearLayout
         android:layout_height="wrap_content"
@@ -60,7 +60,7 @@
             android:layout_marginTop="8dip"
             android:layout_marginBottom="8dip"
             android:layout_width="1dip"
-            android:background="#28ffffff"/>
+            android:background="@color/hairline"/>
         <Button
             android:id="@+id/setButton"
             android:layout_height="wrap_content"
