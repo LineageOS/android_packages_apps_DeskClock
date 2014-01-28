@@ -450,8 +450,8 @@ public final class AlarmStateManager extends BroadcastReceiver {
         scheduleInstanceStateChange(context, instance.getMissedTimeToLive(),
                 instance, AlarmInstance.DISMISSED_STATE);
 
-        // Instance is not valid anymore, so find next alarm that will fire and notify system
-        updateNextAlarm(context);
+        // Alarm state has been changed to DISMISSED_STATE. Deal with it directly.
+        setDismissState(context, instance);
 
     }
 
