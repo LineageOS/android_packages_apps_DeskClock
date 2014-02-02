@@ -223,19 +223,10 @@ public final class AlarmStateManager extends BroadcastReceiver {
                 stateChangeIntent, PendingIntent.FLAG_UPDATE_CURRENT);
 
         AlarmManager am = (AlarmManager) context.getSystemService(Context.ALARM_SERVICE);
-        Intent stateChangePowerOffIntent = createStateChangeIntent(context, ALARM_MANAGER_TAG,
-                instance, -1);
-        PendingIntent pendingPowerOffIntent = PendingIntent.getBroadcast(context,
-                instance.hashCode(), stateChangePowerOffIntent, PendingIntent.FLAG_ONE_SHOT);
         if (Utils.isKitKatOrLater()) {
             am.setExact(AlarmManager.RTC_WAKEUP, timeInMillis, pendingIntent);
-
-            am.setExact(AlarmManager.RTC_POWEROFF_WAKEUP, instance.getAlarmTime().getTimeInMillis(),
-                    pendingPowerOffIntent);
         } else {
             am.set(AlarmManager.RTC_WAKEUP, timeInMillis, pendingIntent);
-            am.set(AlarmManager.RTC_POWEROFF_WAKEUP, instance.getAlarmTime().getTimeInMillis(),
-                    pendingPowerOffIntent);
         }
     }
 
