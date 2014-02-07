@@ -186,31 +186,10 @@
                     android:layout_alignParentEnd="true"
                     android:layout_below="@id/choose_ringtone"
                     />
-                <CheckBox
-                    android:id="@+id/increasing_volume_onoff"
-                    android:text="@string/alarm_increasing_volume"
-                    android:includeFontPadding="false"
-                    android:textColor="@color/clock_gray"
-                    android:layout_height="wrap_content"
-                    android:layout_width="wrap_content"
-                    android:layout_alignParentLeft="true"
-                    android:layout_alignParentStart="true"
-                    android:layout_centerVertical="true"
+                <include layout="@layout/alarm_settings"
                     android:layout_below="@id/choose_profile"
-                    style="@style/body"/>
-                <CheckBox
-                    android:id="@+id/vibrate_onoff"
-                    android:text="@string/alarm_vibrate"
-                    android:includeFontPadding="false"
-                    android:textColor="@color/clock_gray"
                     android:layout_height="wrap_content"
-                    android:layout_width="wrap_content"
-                    android:layout_alignParentRight="true"
-                    android:layout_alignParentEnd="true"
-                    android:layout_centerVertical="true"
-                    android:layout_below="@id/choose_profile"
-                    android:layout_toRightOf="@id/increasing_volume_onoff"
-                    style="@style/body"/>
+                    android:layout_width="match_parent" />
             </RelativeLayout>
         </LinearLayout>
         <FrameLayout
