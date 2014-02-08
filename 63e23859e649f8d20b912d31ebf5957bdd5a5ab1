@@ -1,0 +1,38 @@
+{
+  "comments": [
+    {
+      "key": {
+        "uuid": "fade3982_d3beabd3",
+        "filename": "res/values-lt/cm_strings.xml",
+        "patchSetId": 3
+      },
+      "lineNbr": 46,
+      "author": {
+        "id": 7905
+      },
+      "writtenOn": "2014-02-08T09:58:38Z",
+      "side": 1,
+      "message": "kaip pagalv??",
+      "revId": "63e23859e649f8d20b912d31ebf5957bdd5a5ab1",
+      "serverId": "1ec6b3db-b2c1-4fa4-84a2-4c7efe89ba71",
+      "unresolved": false
+    },
+    {
+      "key": {
+        "uuid": "fade3982_f3b92fee",
+        "filename": "res/values-lt/cm_strings.xml",
+        "patchSetId": 3
+      },
+      "lineNbr": 48,
+      "author": {
+        "id": 7905
+      },
+      "writtenOn": "2014-02-08T09:58:38Z",
+      "side": 1,
+      "message": "kokia ?ia nes?mon??",
+      "revId": "63e23859e649f8d20b912d31ebf5957bdd5a5ab1",
+      "serverId": "1ec6b3db-b2c1-4fa4-84a2-4c7efe89ba71",
+      "unresolved": false
+    }
+  ]
+}
