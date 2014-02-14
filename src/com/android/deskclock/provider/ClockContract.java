@@ -148,6 +148,12 @@ public final class ClockContract {
          */
         public static final Uri CONTENT_URI = Uri.parse("content://" + AUTHORITY + "/instances");
 
+
+        /**
+         * Alarm state for rtc power off alarm
+         */
+        public static final int POWER_OFF_ALARM_STATE = -1;
+
         /**
          * Alarm state when to show no notification.
          *
