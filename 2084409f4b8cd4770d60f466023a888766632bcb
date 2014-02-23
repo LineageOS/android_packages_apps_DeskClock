@@ -1,0 +1,21 @@
+{
+  "comments": [
+    {
+      "key": {
+        "uuid": "bae84128_00dd6642",
+        "filename": "src/com/android/deskclock/alarms/AlarmStateManager.java",
+        "patchSetId": 1
+      },
+      "lineNbr": 721,
+      "author": {
+        "id": 1579
+      },
+      "writtenOn": "2014-02-23T02:56:23Z",
+      "side": 1,
+      "message": "I know this patch from CAF but brace shouldn\u0027t be wrapped in if statement for consistency, IMHO.",
+      "revId": "2084409f4b8cd4770d60f466023a888766632bcb",
+      "serverId": "1ec6b3db-b2c1-4fa4-84a2-4c7efe89ba71",
+      "unresolved": false
+    }
+  ]
+}
