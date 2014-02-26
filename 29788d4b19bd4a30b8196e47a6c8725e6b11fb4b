@@ -1,0 +1,21 @@
+{
+  "comments": [
+    {
+      "key": {
+        "uuid": "bae84128_f5875ad5",
+        "filename": "res/values/cm_strings.xml",
+        "patchSetId": 5
+      },
+      "lineNbr": 77,
+      "author": {
+        "id": 2597
+      },
+      "writtenOn": "2014-02-26T07:31:28Z",
+      "side": 1,
+      "message": "Choose alarm type",
+      "revId": "29788d4b19bd4a30b8196e47a6c8725e6b11fb4b",
+      "serverId": "1ec6b3db-b2c1-4fa4-84a2-4c7efe89ba71",
+      "unresolved": false
+    }
+  ]
+}
