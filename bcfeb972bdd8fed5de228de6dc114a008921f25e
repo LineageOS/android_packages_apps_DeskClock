@@ -1,0 +1,21 @@
+{
+  "comments": [
+    {
+      "key": {
+        "uuid": "bae84128_56e4490c",
+        "filename": "res/values/cm_strings.xml",
+        "patchSetId": 7
+      },
+      "lineNbr": 80,
+      "author": {
+        "id": 2134
+      },
+      "writtenOn": "2014-03-01T14:49:01Z",
+      "side": 1,
+      "message": "This string is not in use and doesn\u0027t show translated as name of random song option. A hard link somewhere of MultiPlayer.java?",
+      "revId": "bcfeb972bdd8fed5de228de6dc114a008921f25e",
+      "serverId": "1ec6b3db-b2c1-4fa4-84a2-4c7efe89ba71",
+      "unresolved": false
+    }
+  ]
+}
