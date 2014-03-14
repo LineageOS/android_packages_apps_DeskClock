@@ -95,6 +95,7 @@ public class AlarmService extends Service {
             if (state != TelephonyManager.CALL_STATE_IDLE && state != mInitialCallState) {
                 sendBroadcast(AlarmStateManager.createStateChangeIntent(AlarmService.this,
                         "AlarmService", mCurrentAlarm, AlarmInstance.MISSED_STATE));
+                stopCurrentAlarm();
             }
         }
     };
