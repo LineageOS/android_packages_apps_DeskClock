@@ -30,12 +30,13 @@ import com.android.deskclock.R;
 public class TimerView extends LinearLayout {
 
     private TextView mHoursOnes, mMinutesOnes;
-    private TextView mMinutesTens;
+    private TextView mHoursTens, mMinutesTens;
     private TextView mSeconds;
     private final Typeface mAndroidClockMonoThin;
     private Typeface mOriginalHoursTypeface;
     private Typeface mOriginalMinutesTypeface;
     private final int mWhiteColor, mGrayColor;
+    private float mGapPadding;
 
     @SuppressWarnings("unused")
     public TimerView(Context context) {
@@ -57,6 +58,9 @@ public class TimerView extends LinearLayout {
     protected void onFinishInflate() {
         super.onFinishInflate();
 
+        mGapPadding = 0.55f;
+
+        mHoursTens = (TextView) findViewById(R.id.hours_tens);
         mHoursOnes = (TextView) findViewById(R.id.hours_ones);
         if (mHoursOnes != null) {
             mOriginalHoursTypeface = mHoursOnes.getTypeface();
@@ -77,10 +81,9 @@ public class TimerView extends LinearLayout {
 
     /**
      * Measure the text and add a start padding to the view
-     * @param textView view to measure and onb to which add start padding
+     * @param textView view to measure and on to which add start padding
      */
     private void addStartPadding(TextView textView) {
-        final float gapPadding = 0.45f;
         // allDigits will contain ten digits: "0123456789" in the default locale
         String allDigits = String.format("%010d", 123456789);
         Paint paint = new Paint(Paint.ANTI_ALIAS_FLAG);
@@ -95,13 +98,33 @@ public class TimerView extends LinearLayout {
                 largest = ii;
             }
         }
+
         // Add left padding to the view - Note: layout inherits LTR
-        textView.setPadding((int) (gapPadding * widths[largest]), 0, 0, 0);
+        textView.setPadding((int) (mGapPadding * widths[largest]), 0, 0, 0);
     }
 
 
-    public void setTime(int hoursOnesDigit, int minutesTensDigit,
+    public void setTime(int hoursTensDigit, int hoursOnesDigit, int minutesTensDigit,
                         int minutesOnesDigit, int seconds) {
+        // if mHoursTens is non-empty, decrease total padding by width of one digit
+        if (hoursTensDigit != 0) {
+            mGapPadding = 0.05f;
+        } else {
+            mGapPadding = 0.55f;
+        }
+
+        if (mHoursTens != null) {
+            if (hoursTensDigit == -1) {
+                mHoursTens.setText("-");
+                mHoursTens.setTypeface(mAndroidClockMonoThin);
+                mHoursTens.setTextColor(mGrayColor);
+            } else {
+                mHoursTens.setText(hoursTensDigit == 0 ? "" : String.format("%d", hoursTensDigit));
+                mHoursTens.setTypeface(mOriginalHoursTypeface);
+                mHoursTens.setTextColor(mWhiteColor);
+            }
+        }
+
         if (mHoursOnes != null) {
             if (hoursOnesDigit == -1) {
                 mHoursOnes.setText("-");
@@ -124,6 +147,7 @@ public class TimerView extends LinearLayout {
                 mMinutesTens.setTypeface(mOriginalMinutesTypeface);
                 mMinutesTens.setTextColor(mWhiteColor);
             }
+            addStartPadding(mMinutesTens);
         }
         if (mMinutesOnes != null) {
             if (minutesOnesDigit == -1) {
@@ -139,6 +163,7 @@ public class TimerView extends LinearLayout {
 
         if (mSeconds != null) {
             mSeconds.setText(String.format("%02d", seconds));
+            addStartPadding(mSeconds);
         }
     }
 }

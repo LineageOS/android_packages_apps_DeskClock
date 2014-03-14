@@ -113,8 +113,8 @@
     <dimen name="dialpad_digit_padding">22dip</dimen>
     <dimen name="timer_setup_font_size">56sp</dimen>
     <dimen name="timer_setup_button_size">24sp</dimen>
-    <!--margin should be ~ half timer_setup_font_size -->
-    <dimen name="timer_setup_delete_start_margin">28sp</dimen>
+    <!--margin should be ~ third timer_setup_font_size -->
+    <dimen name="timer_setup_delete_start_margin">19sp</dimen>
     <dimen name="timer_setup_delete_padding">12dip</dimen>
     <dimen name="timer_setup_label_size">18sp</dimen>
 
