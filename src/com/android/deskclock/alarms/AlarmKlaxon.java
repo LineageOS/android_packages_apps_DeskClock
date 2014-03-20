@@ -169,7 +169,7 @@ public class AlarmKlaxon {
             }
         }
 
-        if (instance.mVibrate) {
+        if (instance.mVibrate && !inTelephoneCall) {
             Vibrator vibrator = (Vibrator) context.getSystemService(Context.VIBRATOR_SERVICE);
             vibrator.vibrate(sVibratePattern, 0);
         }
