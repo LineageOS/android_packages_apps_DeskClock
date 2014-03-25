@@ -16,6 +16,24 @@
       "revId": "7cddaf0a967d7dc260c7db9dafcd5568f27d7bf7",
       "serverId": "1ec6b3db-b2c1-4fa4-84a2-4c7efe89ba71",
       "unresolved": false
+    },
+    {
+      "key": {
+        "uuid": "bae84128_839f9902",
+        "filename": "res/values-de/cm_strings.xml",
+        "patchSetId": 1
+      },
+      "lineNbr": 50,
+      "author": {
+        "id": 4884
+      },
+      "writtenOn": "2014-03-25T22:35:46Z",
+      "side": 1,
+      "message": "Eventuell auch \"Alarmtyp auswählen\".",
+      "parentUuid": "bae84128_635ff572",
+      "revId": "7cddaf0a967d7dc260c7db9dafcd5568f27d7bf7",
+      "serverId": "1ec6b3db-b2c1-4fa4-84a2-4c7efe89ba71",
+      "unresolved": false
     }
   ]
 }
