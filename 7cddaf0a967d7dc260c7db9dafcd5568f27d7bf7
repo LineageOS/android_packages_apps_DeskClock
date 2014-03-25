@@ -1,0 +1,21 @@
+{
+  "comments": [
+    {
+      "key": {
+        "uuid": "bae84128_635ff572",
+        "filename": "res/values-de/cm_strings.xml",
+        "patchSetId": 1
+      },
+      "lineNbr": 50,
+      "author": {
+        "id": 4977
+      },
+      "writtenOn": "2014-03-25T20:30:23Z",
+      "side": 1,
+      "message": "Alarmart ?",
+      "revId": "7cddaf0a967d7dc260c7db9dafcd5568f27d7bf7",
+      "serverId": "1ec6b3db-b2c1-4fa4-84a2-4c7efe89ba71",
+      "unresolved": false
+    }
+  ]
+}
