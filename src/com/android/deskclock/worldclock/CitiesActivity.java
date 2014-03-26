@@ -246,7 +246,7 @@ public class CitiesActivity extends Activity implements OnCheckedChangeListener,
                     // If the city name begins with the query, add the city into the list.
                     // If the query is empty, the city will automatically be added to the list.
                     String cityName = city.mCityName.trim().toUpperCase();
-                    if (city.mCityId != null && cityName.startsWith(modifiedQuery)) {
+                    if (city.mCityId != null && cityName.contains(modifiedQuery)) {
                         filteredList.add(city);
                     }
                 }
