@@ -47,4 +47,7 @@
     <string name="action_summary_do_nothing">nessuna azione</string>
     <string name="action_summary_snooze">ripetere l\'allarme</string>
     <string name="action_summary_dismiss">interrompere l\'allarme</string>
+    <string name="alarm_picker_title">Tipo sveglia</string>
+    <string name="alarm_type_ringtone">Suoneria</string>
+    <string name="alarm_type_random">Casuale</string>
 </resources>
