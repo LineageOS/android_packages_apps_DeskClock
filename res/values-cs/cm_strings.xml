@@ -51,4 +51,9 @@
     <string name="action_summary_snooze">odložení buzení</string>
     <string name="action_summary_dismiss">ukončení buzení</string>
     <string name="action_summary_do_nothing">ničemu</string>
+
+    <string name="alarm_picker_title">Zvolte styl budíku</string>
+
+    <string name="alarm_type_ringtone">Vyzváněcí melodie</string>
+    <string name="alarm_type_random">Náhodně</string>
 </resources>

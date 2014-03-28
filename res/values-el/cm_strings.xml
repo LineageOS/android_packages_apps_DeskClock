@@ -48,4 +48,7 @@
   <string name="action_summary_snooze">θα αναβάλλει το ξυπνητήρι</string>
   <string name="action_summary_dismiss">θα παραβλέπει το ξυπνητήρι</string>
   <string name="action_summary_do_nothing">δεν θα εκτελεί καμία ενέργεια</string>
+  <string name="alarm_picker_title">Επιλογή τύπου ξυπνητηριού</string>
+  <string name="alarm_type_ringtone">Ήχος</string>
+  <string name="alarm_type_random">Τυχαίο</string>
 </resources>

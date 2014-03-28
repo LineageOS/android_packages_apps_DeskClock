@@ -1,0 +1,47 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!--
+     Copyright (C) 2012-2014 The CyanogenMod Project
+     Licensed under the Apache License, Version 2.0 (the "License");
+     you may not use this file except in compliance with the License.
+     You may obtain a copy of the License at
+          http://www.apache.org/licenses/LICENSE-2.0
+     Unless required by applicable law or agreed to in writing, software
+     distributed under the License is distributed on an "AS IS" BASIS,
+     WITHOUT WARRANTIES OR CONDITIONS OF ANY KIND, either express or implied.
+     See the License for the specific language governing permissions and
+     limitations under the License.
+-->
+<resources xmlns:xliff="urn:oasis:names:tc:xliff:document:1.2">
+    <string name="show_status_bar_icon_title">سىنبەلگىنى كۆرسەت</string>
+    <string name="show_status_bar_icon_summary">قوڭغۇراق سائەتنى تەڭشىگەندە ھالەت بالداقتا سىنبەلگىدىن بىرنى كۆرسەت</string>
+    <string name="alarm_increasing_volume">ئاۋازنى يۇقىرىلات</string>
+    <string name="profile_description">سەپلىمە ھۆججەت <xliff:g id="profile">%s</xliff:g></string>
+    <string name="profile_no_selected">ھېچقانداق سەپلىمە ھۆججەت تاللانمىدى</string>
+    <string name="menu_item_add">قوش</string>
+    <string name="cities_add_city_title">شەھەر قوش</string>
+    <string name="cities_add_city_city">شەھەر:</string>
+    <string name="cities_add_city_timezone">ۋاقىت رايونى:</string>
+    <string name="cities_add_city_gps_cd">چېكىپ سىز تۇرۇشلۇق شەھەرنى يەرلىكلەشتۈرۈڭ</string>
+    <string name="cities_add_loading">يۈكلەۋاتىدۇ\u2026</string>
+    <string name="cities_add_searching">ئىزدەۋاتىدۇ\u2026</string>
+    <string name="cities_add_gps_no_results">GPS سۈرۈشتۈرۈش ھېچقانداق ئورۇن نەتىجىسىنى قايتۇرمىدى</string>
+    <string name="cities_add_gps_not_available">GPS نى ئىشلەتكىلى بولمايدۇ</string>
+    <string name="cities_add_already_exists">بۇ شەھەر سانداندا مەۋجۇت</string>
+    <string name="cities_add_city_failed">بۇ شەھەرنى قۇرالمايدۇ</string>
+    <string name="cities_delete_city_title">شەھەرنى ئۆچۈر</string>
+    <string name="cities_delete_city_msg">راستلا %s نى ئۆچۈرەمسىز؟<xliff:g id="city"></xliff:g></string>
+    <string name="cities_delete_city_failed">بۇ شەھەرنى ئۆچۈرەلمەيدۇ</string>
+    <string name="flip_action_title">ئايلاندۇرۇش مەشغۇلاتى</string>
+    <string name="flip_action_dialog_title" product="tablet">ئۈسكۈنە ئايلاندۇرۇلسا\u2026</string>
+    <string name="flip_action_dialog_title" product="default">تېلېفون ئايلاندۇرۇلسا\u2026</string>
+    <string name="flip_action_summary" product="tablet">تاختا كومپيۇتېر تۆۋەنگە ئايلاندۇرۇلسا <xliff:g id="action">%s</xliff:g></string>
+    <string name="flip_action_summary" product="default">تېلېفون تۆۋەنگە ئايلاندۇرۇلسا <xliff:g id="action">%s</xliff:g></string>
+    <string name="shake_action_title">پۇلاڭلىتىش مەشغۇلاتى</string>
+    <string name="shake_action_dialog_title" product="tablet">تاختا كومپيۇتېر پۇلاڭلىتىلسا\u2026</string>
+    <string name="shake_action_dialog_title" product="default">تېلېفون پۇلاڭلىتىلسا\u2026</string>
+    <string name="shake_action_summary" product="tablet">تاختا كومپيۇتېر پۇلاڭلىتىلسا <xliff:g id="action">%s</xliff:g></string>
+    <string name="shake_action_summary" product="default">تېلېفون پۇلاڭلىتىلسا <xliff:g id="action">%s</xliff:g></string>
+    <string name="action_summary_snooze">قوڭغۇراقنى كېچىكتۈر</string>
+    <string name="action_summary_dismiss">قوڭغۇراقنى تاقا</string>
+    <string name="action_summary_do_nothing">ھېچقانداق قىلما</string>
+</resources>

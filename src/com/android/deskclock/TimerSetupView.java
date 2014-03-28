@@ -32,7 +32,7 @@ import com.android.deskclock.timer.TimerView;
 public class TimerSetupView extends LinearLayout implements Button.OnClickListener,
         Button.OnLongClickListener{
 
-    protected int mInputSize = 5;
+    protected int mInputSize = 6;
 
     protected final Button mNumbers [] = new Button [10];
     protected int mInput [] = new int [mInputSize];
@@ -185,7 +185,7 @@ public class TimerSetupView extends LinearLayout implements Button.OnClickListen
     }
 
     protected void updateTime() {
-        mEnteredTime.setTime(mInput[4], mInput[3], mInput[2],
+        mEnteredTime.setTime(mInput[5], mInput[4], mInput[3], mInput[2],
                 mInput[1] * 10 + mInput[0]);
     }
 
@@ -198,7 +198,7 @@ public class TimerSetupView extends LinearLayout implements Button.OnClickListen
     }
 
     public int getTime() {
-        return mInput[4] * 3600 + mInput[3] * 600 + mInput[2] * 60 + mInput[1] * 10 + mInput[0];
+        return mInput[5] * 36000 + mInput[4] * 3600 + mInput[3] * 600 + mInput[2] * 60 + mInput[1] * 10 + mInput[0];
     }
 
     public void saveEntryState(Bundle outState, String key) {

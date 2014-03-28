@@ -47,4 +47,7 @@
     <string name="action_summary_snooze">slumre alarm</string>
     <string name="action_summary_dismiss">afbryde alarm</string>
     <string name="action_summary_do_nothing">gøre ingenting</string>
+    <string name="alarm_picker_title">Vælg alarmtype</string>
+    <string name="alarm_type_ringtone">Ringetone</string>
+    <string name="alarm_type_random">Tilfældig</string>
 </resources>
