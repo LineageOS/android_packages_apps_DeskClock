@@ -16,5 +16,7 @@
      limitations under the License.
 -->
 <resources xmlns:xliff="urn:oasis:names:tc:xliff:document:1.2">
-  <string name="alarm_type_ringtone">Sonneries</string>
+  <string name="menu_item_add">Adicionar</string>
+  <string name="cities_add_loading">A carregar\u2026</string>
+  <string name="alarm_type_ringtone">Toque</string>
 </resources>
