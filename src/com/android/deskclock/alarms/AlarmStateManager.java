@@ -196,6 +196,7 @@ public final class AlarmStateManager extends BroadcastReceiver {
             AlarmInstance instance, Integer state) {
         Intent intent = AlarmInstance.createIntent(context, AlarmStateManager.class, instance.mId);
         intent.setAction(CHANGE_STATE_ACTION);
+        intent.addFlags(Intent.FLAG_RECEIVER_FOREGROUND);
         intent.addCategory(tag);
         intent.putExtra(ALARM_GLOBAL_ID_EXTRA, getGlobalIntentId(context));
         if (state != null) {
