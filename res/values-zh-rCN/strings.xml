@@ -343,4 +343,5 @@
     <string name="digital_gadget" msgid="2326954556720571358">"数字时钟"</string>
     <string name="no_alarms" msgid="6429431324842022917">"没有闹钟"</string>
     <string name="no_upcoming_alarms" msgid="2889840988069436254">"没有预定的闹钟"</string>
+    <string name="ringtone_default">"默认铃声"</string>
 </resources>

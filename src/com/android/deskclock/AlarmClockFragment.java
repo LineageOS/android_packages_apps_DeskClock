@@ -48,6 +48,7 @@ import android.os.Bundle;
 import android.os.Handler;
 import android.os.Message;
 import android.os.Vibrator;
+import android.provider.MediaStore;
 import android.provider.Settings;
 import android.text.format.DateFormat;
 import android.view.Gravity;
@@ -82,6 +83,7 @@ import com.android.deskclock.provider.DaysOfWeek;
 import com.android.deskclock.widget.ActionableToastBar;
 import com.android.deskclock.widget.TextTime;
 
+import java.io.File;
 import java.text.DateFormatSymbols;
 import java.util.Calendar;
 import java.util.HashSet;
@@ -1627,10 +1629,12 @@ public class AlarmClockFragment extends DeskClockFragment implements
                 if (uri.equals(MultiPlayer.RANDOM_URI)) {
                     title = mContext.getResources().getString(R.string.alarm_type_random);
                 } else {
-                    // This is slow because a media player is created during Ringtone object creation.
-                    Ringtone ringTone = RingtoneManager.getRingtone(mContext, uri);
-                    if (ringTone != null) {
-                        title = ringTone.getTitle(mContext);
+                    if (isRingToneUriValid(uri)) {
+                        // This is slow because a media player is created during Ringtone object creation.
+                        Ringtone ringTone = RingtoneManager.getRingtone(mContext, uri);
+                        if (ringTone != null) {
+                            title = ringTone.getTitle(mContext);
+                        }
                     }
                 }
                 if (title != null) {
@@ -1638,6 +1642,32 @@ public class AlarmClockFragment extends DeskClockFragment implements
                 }
             }
             return title;
+        }
+
+        private boolean isRingToneUriValid(Uri uri) {
+            if (uri.getScheme().contentEquals("file")) {
+                File f = new File(uri.getPath());
+                if (f.exists()) {
+                    return true;
+                }
+            } else if (uri.getScheme().contentEquals("content")) {
+                Cursor cursor = null;
+                try {
+                    cursor = mContext.getContentResolver().query(uri,
+                            new String[] {MediaStore.Audio.Media.TITLE}, null, null, null);
+                    if (cursor != null && cursor.getCount() > 0) {
+                        return true;
+                    }
+                } catch (Exception e) {
+                    Log.e("Get ringtone uri Exception: e.toString=" + e.toString());
+                } finally {
+                    if (cursor != null) {
+                        cursor.close();
+                    }
+                }
+            }
+
+            return false;
         }
 
         public void setNewAlarm(long alarmId) {
