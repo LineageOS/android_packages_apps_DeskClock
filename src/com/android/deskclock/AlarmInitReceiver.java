@@ -22,6 +22,7 @@ import android.content.Context;
 import android.content.Intent;
 import android.content.SharedPreferences;
 import android.os.PowerManager.WakeLock;
+import android.os.SystemProperties;
 import android.preference.PreferenceManager;
 
 import com.android.deskclock.alarms.AlarmStateManager;
@@ -34,6 +35,7 @@ public class AlarmInitReceiver extends BroadcastReceiver {
 
     // A flag that indicates that switching the volume button default was done
     private static final String PREF_VOLUME_DEF_DONE = "vol_def_done";
+    private static final String PROP_BOOT_MODE = "ro.alarm_boot";
 
     /**
      * Sets alarm on ACTION_BOOT_COMPLETED.  Resets alarm on
@@ -66,6 +68,13 @@ public class AlarmInitReceiver extends BroadcastReceiver {
                         // Fix the default
                         Log.v("AlarmInitReceiver - resetting volume button default");
                         switchVolumeButtonDefault(prefs);
+                    }
+                    boolean poweronAlert = context.getResources()
+                            .getBoolean(R.bool.config_poweron_alert);
+                    if (poweronAlert) {
+                        if(SystemProperties.getBoolean(PROP_BOOT_MODE, false)) {
+                            AlarmStateManager.setRtcPowerUp(context, true);
+                        }
                     }
                 }
 
