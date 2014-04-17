@@ -49,6 +49,6 @@
   <string name="action_summary_dismiss">alarmı kapat</string>
   <string name="action_summary_do_nothing">hiçbir şey yapma</string>
   <string name="alarm_picker_title">Alarm türünü seçin</string>
-  <string name="alarm_type_ringtone">Zil sesi</string>
+  <string name="alarm_type_ringtone">Zil Sesi</string>
   <string name="alarm_type_random">Rastgele</string>
 </resources>
