@@ -45,8 +45,8 @@
   <string name="shake_action_dialog_title" product="default">Agitant el telèfon\u2026</string>
   <string name="shake_action_summary" product="tablet">Agitant la tauleta <xliff:g id="action">%s</xliff:g></string>
   <string name="shake_action_summary" product="default">Agitant el telèfon <xliff:g id="action">%s</xliff:g></string>
-  <string name="action_summary_snooze">es repeteix alarma</string>
-  <string name="action_summary_dismiss">es descarta alarma</string>
+  <string name="action_summary_snooze">es repeteix l\'alarma</string>
+  <string name="action_summary_dismiss">es descarta l\'alarma</string>
   <string name="action_summary_do_nothing">no es fa res</string>
   <string name="alarm_picker_title">Tria el tipus d\'alarma</string>
   <string name="alarm_type_ringtone">To de trucada</string>
