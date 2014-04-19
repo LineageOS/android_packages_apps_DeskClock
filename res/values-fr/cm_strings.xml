@@ -49,5 +49,6 @@
   <string name="action_summary_dismiss">ignore l\'alarme</string>
   <string name="action_summary_do_nothing">ne rien faire</string>
   <string name="alarm_picker_title">Définir le type d\'alarme</string>
+  <string name="alarm_type_ringtone">Sonnerie</string>
   <string name="alarm_type_random">Aléatoire</string>
 </resources>
