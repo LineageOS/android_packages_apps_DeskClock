@@ -48,5 +48,7 @@
   <string name="action_summary_snooze">העבר שעון מעורר</string>
   <string name="action_summary_dismiss">בטל שעון מעורר</string>
   <string name="action_summary_do_nothing">עשה כלום</string>
+  <string name="alarm_picker_title">בחר סוג שעון מעורר</string>
   <string name="alarm_type_ringtone">צלצול</string>
+  <string name="alarm_type_random">אקראי</string>
 </resources>

@@ -49,6 +49,5 @@
   <string name="action_summary_dismiss">wyłącza alarm</string>
   <string name="action_summary_do_nothing">nic nie robi</string>
   <string name="alarm_picker_title">Wybierz rodzaj alarmu</string>
-  <string name="alarm_type_ringtone">Dzwonek</string>
   <string name="alarm_type_random">Losowo</string>
 </resources>

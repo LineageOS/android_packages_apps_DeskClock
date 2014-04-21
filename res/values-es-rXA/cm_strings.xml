@@ -49,6 +49,5 @@
   <string name="action_summary_dismiss">descartar l\'alarma</string>
   <string name="action_summary_do_nothing">nun facer un res</string>
   <string name="alarm_picker_title">Escueyi\'l tipu d\'alarma</string>
-  <string name="alarm_type_ringtone">Tonos del teléfonu</string>
   <string name="alarm_type_random">Al debalu</string>
 </resources>
