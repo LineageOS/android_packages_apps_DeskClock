@@ -49,5 +49,6 @@
   <string name="action_summary_dismiss">elveti az ébresztést</string>
   <string name="action_summary_do_nothing">nem történik semmi</string>
   <string name="alarm_picker_title">Válassza ki az ébresztés típusát</string>
+  <string name="alarm_type_ringtone">Csengőhang</string>
   <string name="alarm_type_random">Véletlenszerűen</string>
 </resources>

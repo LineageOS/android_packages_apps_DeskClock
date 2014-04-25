@@ -49,5 +49,6 @@
   <string name="action_summary_dismiss">关闭闹钟</string>
   <string name="action_summary_do_nothing">不产生任何作用</string>
   <string name="alarm_picker_title">选择提醒类型</string>
+  <string name="alarm_type_ringtone">铃声</string>
   <string name="alarm_type_random">随机</string>
 </resources>

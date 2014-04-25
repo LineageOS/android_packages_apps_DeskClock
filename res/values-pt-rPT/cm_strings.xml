@@ -36,18 +36,18 @@
   <string name="cities_delete_city_msg">Quer mesmo apagar <xliff:g id="city">%s</xliff:g>?</string>
   <string name="cities_delete_city_failed">Não é possível apagar a cidade</string>
   <string name="flip_action_title">Ação de rodar</string>
-  <string name="flip_action_dialog_title" product="tablet">Rodar o tablet para\u2026</string>
-  <string name="flip_action_dialog_title" product="default">Rodar o telefone para\u2026</string>
-  <string name="flip_action_summary" product="tablet">Rodar o tablet ao contrario vai <xliff:g id="action">%s</xliff:g></string>
-  <string name="flip_action_summary" product="default">Rodar o telefone ao contrario vai <xliff:g id="action">%s</xliff:g></string>
+  <string name="flip_action_dialog_title" product="tablet">Rodar o tablet \u2026</string>
+  <string name="flip_action_dialog_title" product="default">Rodar o telefone \u2026</string>
+  <string name="flip_action_summary" product="tablet">Rodar o tablet ao contrario <xliff:g id="action">%s</xliff:g></string>
+  <string name="flip_action_summary" product="default">Rodar o telefone ao contrario <xliff:g id="action">%s</xliff:g></string>
   <string name="shake_action_title">Ação de agitar</string>
-  <string name="shake_action_dialog_title" product="tablet">Agitar o tablet para\u2026</string>
-  <string name="shake_action_dialog_title" product="default">Agitar o telefone para\u2026</string>
-  <string name="shake_action_summary" product="tablet">Agitar o tablet vai <xliff:g id="action">%s</xliff:g></string>
-  <string name="shake_action_summary" product="default">Agitar o telefone vai <xliff:g id="action">%s</xliff:g></string>
-  <string name="action_summary_snooze">Repetir o alarme</string>
-  <string name="action_summary_dismiss">ignorar o alarme</string>
-  <string name="action_summary_do_nothing">Ficar sem nenhuma ação</string>
+  <string name="shake_action_dialog_title" product="tablet">Agitar o tablet \u2026</string>
+  <string name="shake_action_dialog_title" product="default">Agitar o telefone u\2026</string>
+  <string name="shake_action_summary" product="tablet">Agitar o tablet  <xliff:g id="action">%s</xliff:g></string>
+  <string name="shake_action_summary" product="default">Agitar o telefone  <xliff:g id="action">%s</xliff:g></string>
+  <string name="action_summary_snooze">repete o alarme</string>
+  <string name="action_summary_dismiss">ignora o alarme</string>
+  <string name="action_summary_do_nothing">não faz nada</string>
   <string name="alarm_picker_title">Escolher o tipo de alarme</string>
   <string name="alarm_type_ringtone">Toque</string>
   <string name="alarm_type_random">Aleatoriamente</string>
