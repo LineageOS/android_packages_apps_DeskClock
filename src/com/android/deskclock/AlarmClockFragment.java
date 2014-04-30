@@ -1414,10 +1414,16 @@ public class AlarmClockFragment extends DeskClockFragment implements
             });
 
             final String ringtone;
+            final String ringtitle;
             if (Alarm.NO_RINGTONE_URI.equals(alarm.alert)) {
                 ringtone = mContext.getResources().getString(R.string.silent_alarm_summary);
             } else {
-                ringtone = getRingToneTitle(alarm.alert);
+                ringtitle = getRingToneTitle(alarm.alert);
+                if (ringtitle != null) {
+                    ringtone = ringtitle;
+                } else {
+                    ringtone = mContext.getResources().getString(R.string.silent_alarm_summary);
+                }
             }
             itemHolder.ringtone.setText(ringtone);
             itemHolder.ringtone.setContentDescription(
@@ -1533,7 +1539,9 @@ public class AlarmClockFragment extends DeskClockFragment implements
                 } else {
                     // This is slow because a media player is created during Ringtone object creation.
                     Ringtone ringTone = RingtoneManager.getRingtone(mContext, uri);
-                    title = ringTone.getTitle(mContext);
+                    if (ringTone != null) {
+                        title = ringTone.getTitle(mContext);
+                    }
                 }
                 if (title != null) {
                     mRingtoneTitleCache.putString(uri.toString(), title);
