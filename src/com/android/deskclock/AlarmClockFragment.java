@@ -39,6 +39,7 @@ import android.database.Cursor;
 import android.database.DataSetObserver;
 import android.graphics.Rect;
 import android.graphics.Typeface;
+import android.media.AudioManager;
 import android.media.Ringtone;
 import android.media.RingtoneManager;
 import android.net.Uri;
@@ -122,6 +123,7 @@ public class AlarmClockFragment extends DeskClockFragment implements
 
     private ProfileManager mProfileManager;
     private ProfilesObserver mProfileObserver;
+    private AudioManager mAudioManager;
 
     private final Uri PROFILES_SETTINGS_URI =
         Settings.System.getUriFor(Settings.System.SYSTEM_PROFILES_ENABLED);
@@ -467,6 +469,8 @@ public class AlarmClockFragment extends DeskClockFragment implements
         mAlarmsList.setVerticalScrollBarEnabled(true);
         mAlarmsList.setOnCreateContextMenuListener(this);
 
+        mAudioManager = (AudioManager)getActivity().getSystemService(Context.AUDIO_SERVICE);
+
         if (mUndoShowing) {
             showUndoBar();
         }
@@ -507,6 +511,12 @@ public class AlarmClockFragment extends DeskClockFragment implements
 
             // Remove the SCROLL_TO_ALARM extra now that we've processed it.
             intent.removeExtra(SCROLL_TO_ALARM_INTENT_EXTRA);
+        } else {
+            // If alarm stream volume is 0, show a warning
+            if (mAudioManager.getStreamVolume(AudioManager.STREAM_ALARM) == 0) {
+                showSilentWarningBar();
+            }
+
         }
 
         // Make sure to use the child FragmentManager. We have to use that one for the
@@ -548,7 +558,20 @@ public class AlarmClockFragment extends DeskClockFragment implements
                 mDeletedAlarm = null;
                 mUndoShowing = false;
             }
-        }, 0, getResources().getString(R.string.alarm_deleted), true, R.string.alarm_undo, true);
+        }, 0, getResources().getString(R.string.alarm_deleted), true, 0, R.string.alarm_undo, true);
+    }
+
+    private void showSilentWarningBar() {
+        mUndoFrame.setVisibility(View.VISIBLE);
+        mUndoBar.show(new ActionableToastBar.ActionClickedListener() {
+            @Override
+            public void onActionClicked() {
+                mAudioManager.adjustStreamVolume(AudioManager.STREAM_ALARM,
+                        AudioManager.ADJUST_SAME, AudioManager.FLAG_SHOW_UI);
+                mUndoShowing = false;
+            }
+        }, 0, getResources().getString(R.string.warn_silent_alarm_title), true,
+                R.drawable.ic_alarm, 0, true);
     }
 
     @Override
