@@ -47,7 +47,7 @@ public class ActionableToastBar extends LinearLayout {
     /** The clickable view */
     private View mActionButton;
     /** Icon for the action button. */
-    private View mActionIcon;
+    private ImageView mActionIcon;
     /** The view that contains the description. */
     private TextView mActionDescriptionView;
     /** The view that contains the text for the action button. */
@@ -76,7 +76,7 @@ public class ActionableToastBar extends LinearLayout {
         mActionDescriptionIcon = (ImageView) findViewById(R.id.description_icon);
         mActionDescriptionView = (TextView) findViewById(R.id.description_text);
         mActionButton = findViewById(R.id.action_button);
-        mActionIcon = findViewById(R.id.action_icon);
+        mActionIcon = (ImageView)findViewById(R.id.action_icon);
         mActionText = (TextView) findViewById(R.id.action_text);
     }
 
@@ -104,8 +104,8 @@ public class ActionableToastBar extends LinearLayout {
      * Otherwise, skip showing this toast.
      */
     public void show(final ActionClickedListener listener, int descriptionIconResourceId,
-            CharSequence descriptionText, boolean showActionIcon, int actionTextResource,
-            boolean replaceVisibleToast) {
+            CharSequence descriptionText, boolean showActionIcon, int actionIconResourceId,
+            int actionTextResource, boolean replaceVisibleToast) {
 
         if (!mHidden && !replaceVisibleToast) {
             return;
@@ -129,9 +129,22 @@ public class ActionableToastBar extends LinearLayout {
             mActionDescriptionIcon.setImageResource(descriptionIconResourceId);
         }
 
+        // Set action icon
+        if (showActionIcon) {
+            mActionIcon.setVisibility(VISIBLE);
+            mActionIcon.setImageResource(actionIconResourceId == 0 ?
+                    R.drawable.ic_menu_revert_holo_dark : actionIconResourceId);
+        } else {
+            mActionIcon.setVisibility(GONE);
+        }
+
         mActionDescriptionView.setText(descriptionText);
-        mActionIcon.setVisibility(showActionIcon ? VISIBLE : GONE);
-        mActionText.setText(actionTextResource);
+        if (actionTextResource == 0) {
+            mActionText.setVisibility(GONE);
+        } else {
+            mActionText.setVisibility(VISIBLE);
+            mActionText.setText(actionTextResource);
+        }
 
         mHidden = false;
         getShowAnimation().start();
