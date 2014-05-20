@@ -32,9 +32,9 @@
   <string name="cities_add_gps_not_available">O GPS não está disponível</string>
   <string name="cities_add_already_exists">A cidade já existe na base de dados</string>
   <string name="cities_add_city_failed">Não é possível criar a cidade</string>
-  <string name="cities_delete_city_title">Apagar a cidade</string>
-  <string name="cities_delete_city_msg">Quer mesmo apagar <xliff:g id="city">%s</xliff:g>?</string>
-  <string name="cities_delete_city_failed">Não é possível apagar a cidade</string>
+  <string name="cities_delete_city_title">Eliminar a cidade</string>
+  <string name="cities_delete_city_msg">Quer mesmo eliminar <xliff:g id="city">%s</xliff:g>?</string>
+  <string name="cities_delete_city_failed">Não é possível eliminar a cidade</string>
   <string name="flip_action_title">Ação de rodar</string>
   <string name="flip_action_dialog_title" product="tablet">Rodar o tablet \u2026</string>
   <string name="flip_action_dialog_title" product="default">Rodar o telefone \u2026</string>
