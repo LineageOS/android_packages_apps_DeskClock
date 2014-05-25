@@ -1,0 +1,21 @@
+{
+  "comments": [
+    {
+      "key": {
+        "uuid": "da0c15f0_dc518b10",
+        "filename": "src/com/android/deskclock/AlarmClockFragment.java",
+        "patchSetId": 2
+      },
+      "lineNbr": 574,
+      "author": {
+        "id": 4550
+      },
+      "writtenOn": "2014-05-25T07:24:04Z",
+      "side": 1,
+      "message": "ic_menu_alarms is horrible, we need to use a holo icon like ic_alarm",
+      "revId": "41638e8279cff26fe2de4ad109e9fa1cb0eb5c43",
+      "serverId": "1ec6b3db-b2c1-4fa4-84a2-4c7efe89ba71",
+      "unresolved": false
+    }
+  ]
+}
