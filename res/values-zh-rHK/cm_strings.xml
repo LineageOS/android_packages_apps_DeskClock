@@ -47,7 +47,7 @@
   <string name="shake_action_summary" product="default">搖動電話將<xliff:g id="action">%s</xliff:g></string>
   <string name="action_summary_snooze">間歇鬧鈴</string>
   <string name="action_summary_dismiss">關閉鬧鐘</string>
-  <string name="action_summary_do_nothing">什麼也不做</string>
+  <string name="action_summary_do_nothing">什麼都不做</string>
   <string name="alarm_picker_title">選擇鈴響類型</string>
   <string name="alarm_type_ringtone">鈴聲</string>
   <string name="alarm_type_random">隨機</string>
