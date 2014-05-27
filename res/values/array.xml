@@ -191,7 +191,6 @@
         <item>Helsinki</item>
         <item>Isle of Man</item>
         <item>Istanbul</item>
-        <item>Kiev</item>
         <item>Lisbon</item>
         <item>London</item>
         <item>Luxembourg</item>
@@ -346,6 +345,7 @@
         <item>Wellington</item>
         <item>Chatham</item>
         <item>Vladivostok</item>
+        <item>Kamchatka</item>
     </string-array>
 
     <string-array name="cities_tz" translatable="false">
@@ -524,7 +524,6 @@
         <item>Europe/Helsinki</item>
         <item>Europe/Isle_of_Man</item>
         <item>Europe/Istanbul</item>
-        <item>Europe/Kiev</item>
         <item>Europe/Lisbon</item>
         <item>Europe/London</item>
         <item>Europe/Luxembourg</item>
@@ -679,6 +678,7 @@
         <item>Pacific/Auckland</item>
         <item>Pacific/Chatham</item>
         <item>Asia/Vladivostok</item>
+        <item>Asia/Kamchatka</item>
     </string-array>
 
     <string-array name="cities_id" translatable="false">
