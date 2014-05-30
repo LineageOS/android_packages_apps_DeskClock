@@ -51,4 +51,5 @@
   <string name="alarm_picker_title">Vyberte typ budíka</string>
   <string name="alarm_type_ringtone">Tón zvonenia</string>
   <string name="alarm_type_random">Náhodne</string>
+  <string name="warn_silent_alarm_title">Hlasitosť budíka je tichá</string>
 </resources>

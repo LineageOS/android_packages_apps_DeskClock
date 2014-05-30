@@ -51,4 +51,5 @@
   <string name="alarm_picker_title">Alarmtyp</string>
   <string name="alarm_type_ringtone">Klingelton</string>
   <string name="alarm_type_random">Zufällig</string>
+  <string name="warn_silent_alarm_title">Weckerlautstärke ist lautlos</string>
 </resources>

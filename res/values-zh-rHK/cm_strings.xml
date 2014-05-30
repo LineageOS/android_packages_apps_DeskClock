@@ -21,8 +21,8 @@
   <string name="alarm_increasing_volume">漸增音量</string>
   <string name="profile_description">設定檔<xliff:g id="profile">%s</xliff:g></string>
   <string name="profile_no_selected">未選取設定檔</string>
-  <string name="menu_item_add">添加</string>
-  <string name="cities_add_city_title">添加城市</string>
+  <string name="menu_item_add">新增</string>
+  <string name="cities_add_city_title">新增城市</string>
   <string name="cities_add_city_city">城市：</string>
   <string name="cities_add_city_timezone">時區：</string>
   <string name="cities_add_city_gps_cd">輕按以本地化您目前的城市</string>
@@ -51,4 +51,5 @@
   <string name="alarm_picker_title">選擇鈴響類型</string>
   <string name="alarm_type_ringtone">鈴聲</string>
   <string name="alarm_type_random">隨機</string>
+  <string name="warn_silent_alarm_title">鬧鐘音量是無聲的</string>
 </resources>

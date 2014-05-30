@@ -51,4 +51,5 @@
   <string name="alarm_picker_title">Valitse hälytyksen tyyppi</string>
   <string name="alarm_type_ringtone">Soittoääni</string>
   <string name="alarm_type_random">Satunnainen</string>
+  <string name="warn_silent_alarm_title">Hälytyksen äänenvoimakkuus on äänettömällä</string>
 </resources>

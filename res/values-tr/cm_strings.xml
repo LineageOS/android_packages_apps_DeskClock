@@ -51,4 +51,5 @@
   <string name="alarm_picker_title">Alarm türünü seçin</string>
   <string name="alarm_type_ringtone">Zil Sesi</string>
   <string name="alarm_type_random">Rastgele</string>
+  <string name="warn_silent_alarm_title">Alarm sessizde</string>
 </resources>

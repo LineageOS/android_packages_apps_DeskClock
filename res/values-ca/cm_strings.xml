@@ -51,4 +51,5 @@
   <string name="alarm_picker_title">Tria el tipus d\'alarma</string>
   <string name="alarm_type_ringtone">To de trucada</string>
   <string name="alarm_type_random">A l\'atzar</string>
+  <string name="warn_silent_alarm_title">El volum de l\'alarma està en silenci</string>
 </resources>

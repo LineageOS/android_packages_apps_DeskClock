@@ -51,4 +51,5 @@
   <string name="alarm_picker_title">Válassza ki az ébresztés típusát</string>
   <string name="alarm_type_ringtone">Csengőhang</string>
   <string name="alarm_type_random">Véletlenszerűen</string>
+  <string name="warn_silent_alarm_title">A riasztás némítva lett</string>
 </resources>
