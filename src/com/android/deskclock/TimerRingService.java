@@ -24,7 +24,6 @@ import android.content.res.Resources;
 import android.media.AudioManager;
 import android.media.MediaPlayer;
 import android.media.MediaPlayer.OnErrorListener;
-import android.media.RingtoneManager;
 import android.net.Uri;
 import android.os.IBinder;
 import android.telephony.PhoneStateListener;
@@ -39,6 +38,8 @@ public class TimerRingService extends Service implements AudioManager.OnAudioFoc
     private MediaPlayer mMediaPlayer;
     private TelephonyManager mTelephonyManager;
     private int mInitialCallState;
+
+    public final static String RINGTONE = "RINGTONE";
 
 
     private final PhoneStateListener mPhoneStateListener = new PhoneStateListener() {
@@ -86,7 +87,7 @@ public class TimerRingService extends Service implements AudioManager.OnAudioFoc
             return START_NOT_STICKY;
         }
 
-        play();
+        play(Uri.parse(intent.getStringExtra(RINGTONE)));
         // Record the initial call state here so that the new alarm has the
         // newest state.
         mInitialCallState = mTelephonyManager.getCallState();
@@ -97,7 +98,7 @@ public class TimerRingService extends Service implements AudioManager.OnAudioFoc
     // Volume suggested by media team for in-call alarms.
     private static final float IN_CALL_VOLUME = 0.125f;
 
-    private void play() {
+    private void play(Uri ringtone) {
 
         if (mPlaying) {
             return;
@@ -130,10 +131,13 @@ public class TimerRingService extends Service implements AudioManager.OnAudioFoc
                 mMediaPlayer.setVolume(IN_CALL_VOLUME, IN_CALL_VOLUME);
                 setDataSourceFromResource(getResources(), mMediaPlayer,
                         R.raw.in_call_alarm);
-            } else {
+            } else if (ringtone.equals(Uri.EMPTY)) {
+                // Default sound
                 AssetFileDescriptor afd = getAssets().openFd("sounds/Timer_Expire.ogg");
                 mMediaPlayer.setDataSource(
                         afd.getFileDescriptor(), afd.getStartOffset(), afd.getLength());
+            } else {
+                mMediaPlayer.setDataSource(getApplication(), ringtone);
             }
             startAlarm(mMediaPlayer);
         } catch (Exception ex) {
