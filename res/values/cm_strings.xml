@@ -79,6 +79,7 @@
     <!-- Alarm types -->
     <string name="alarm_type_ringtone">Ringtone</string>
     <string name="alarm_type_random">Randomly</string>
+    <string name="alarm_type_default">Default</string>
 
     <!-- Warn Silent Alarm title -->
     <string name="warn_silent_alarm_title">Alarm volume is silent</string>

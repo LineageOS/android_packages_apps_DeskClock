@@ -19,15 +19,21 @@ package com.android.deskclock.timer;
 import android.animation.Animator;
 import android.animation.AnimatorListenerAdapter;
 import android.animation.ObjectAnimator;
+import android.app.Activity;
+import android.app.AlertDialog;
 import android.app.Fragment;
 import android.app.FragmentTransaction;
 import android.app.NotificationManager;
 import android.content.Context;
+import android.content.DialogInterface;
 import android.content.Intent;
 import android.content.SharedPreferences;
 import android.content.SharedPreferences.OnSharedPreferenceChangeListener;
 import android.content.res.Configuration;
 import android.content.res.Resources;
+import android.media.Ringtone;
+import android.media.RingtoneManager;
+import android.net.Uri;
 import android.os.Bundle;
 import android.preference.PreferenceManager;
 import android.util.Log;
@@ -52,16 +58,15 @@ import com.android.deskclock.LabelDialogFragment;
 import com.android.deskclock.R;
 import com.android.deskclock.TimerSetupView;
 import com.android.deskclock.Utils;
+import com.android.deskclock.widget.sgv.GridAdapter;
+import com.android.deskclock.widget.sgv.SgvAnimationHelper.AnimationIn;
+import com.android.deskclock.widget.sgv.SgvAnimationHelper.AnimationOut;
+import com.android.deskclock.widget.sgv.StaggeredGridView;
 
 import java.util.ArrayList;
 import java.util.Collections;
 import java.util.Comparator;
 import java.util.LinkedList;
-
-import com.android.deskclock.widget.sgv.SgvAnimationHelper.AnimationIn;
-import com.android.deskclock.widget.sgv.SgvAnimationHelper.AnimationOut;
-import com.android.deskclock.widget.sgv.StaggeredGridView;
-import com.android.deskclock.widget.sgv.GridAdapter;
 
 public class TimerFragment extends DeskClockFragment
         implements OnClickListener, OnSharedPreferenceChangeListener {
@@ -69,7 +74,10 @@ public class TimerFragment extends DeskClockFragment
     private static final String TAG = "TimerFragment";
     private static final String KEY_SETUP_SELECTED = "_setup_selected";
     private static final String KEY_ENTRY_STATE = "entry_state";
+    public static final String KEY_TIMER_SOUND = "timer_sound";
     public static final String GOTO_SETUP_VIEW = "deskclock.timers.gotosetup";
+
+    private static final int REQUEST_CODE_RINGTONE = 1;
 
     private Bundle mViewState = null;
     private StaggeredGridView mTimersList;
@@ -86,6 +94,10 @@ public class TimerFragment extends DeskClockFragment
     private NotificationManager mNotificationManager;
     private OnEmptyListListener mOnEmptyListListener;
     private View mLastVisibleView = null;  // used to decide if to set the view or animate to it.
+    private TextView mRingtone;
+
+    private Uri mRingtoneUri = null;
+    private Bundle mRingtoneTitleCache = new Bundle();
 
     public TimerFragment() {
     }
@@ -487,6 +499,7 @@ public class TimerFragment extends DeskClockFragment
                 }
                 TimerObj t = new TimerObj(timerLength * 1000);
                 t.mState = TimerObj.STATE_RUNNING;
+                t.setRingtone(mRingtoneUri);
                 mAdapter.addTimer(t);
                 updateTimersState(t, Timers.START_TIMER);
                 gotoTimersView();
@@ -524,7 +537,126 @@ public class TimerFragment extends DeskClockFragment
         mNotificationManager = (NotificationManager)
                 getActivity().getSystemService(Context.NOTIFICATION_SERVICE);
 
+        mRingtone = (TextView) v.findViewById(R.id.choose_ringtone);
+        mRingtone.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View view) {
+                launchRingTonePicker();
+            }
+        });
+        String ringtone = mPrefs.getString(KEY_TIMER_SOUND, "");
+        if (ringtone == null || ringtone.isEmpty())
+            mRingtoneUri = null;
+        else
+            mRingtoneUri = Uri.parse(ringtone);
+        updateRingtoneText();
+
         return v;
+    }
+
+    private void updateRingtoneText() {
+        String ringtone;
+        if (mRingtoneUri == null) {
+            ringtone = getResources().getString(R.string.alarm_type_default);
+        } else {
+            ringtone = getRingToneTitle(mRingtoneUri);
+            if (ringtone == null) {
+                ringtone = getResources().getString(R.string.alarm_type_default);
+            }
+        }
+        mRingtone.setText(ringtone);
+        mRingtone.setContentDescription(
+                getResources().getString(R.string.ringtone_description) + " " + ringtone);
+    }
+
+    /**
+     * Does a read-through cache for ringtone titles.
+     *
+     * @param uri The uri of the ringtone.
+     * @return The ringtone title. {@literal null} if no matching ringtone
+     *         found.
+     */
+    private String getRingToneTitle(Uri uri) {
+        // Try the cache first
+        String title = mRingtoneTitleCache.getString(uri.toString());
+        if (title == null) {
+            // This is slow because a media player is created during Ringtone
+            // object creation.
+            Ringtone ringTone = RingtoneManager.getRingtone(getActivity(), uri);
+            if (ringTone != null) {
+                title = ringTone.getTitle(getActivity());
+            }
+            if (title != null) {
+                mRingtoneTitleCache.putString(uri.toString(), title);
+            }
+        }
+        return title;
+    }
+
+    private void launchRingTonePicker() {
+        AlertDialog.Builder builder = new AlertDialog.Builder(getActivity());
+        builder.setTitle(R.string.alarm_picker_title).setItems(
+                R.array.timer_ringtone_picker_entries,
+
+                new DialogInterface.OnClickListener() {
+
+                    @Override
+                    public void onClick(DialogInterface dialog, int which) {
+                        switch (which) {
+                            case 0:
+                                launchSingleRingTonePicker();
+                                break;
+                            case 1:
+                                mRingtoneUri = null;
+                                SharedPreferences.Editor editor = mPrefs.edit();
+                                editor.putString(KEY_TIMER_SOUND, "");
+                                editor.apply();
+                                updateRingtoneText();
+                                break;
+                        }
+                    }
+                });
+        AlertDialog d = builder.create();
+        d.show();
+    }
+
+    private void launchSingleRingTonePicker() {
+        // Save current view state
+        mViewState = new Bundle();
+        saveViewState(mViewState);
+
+        final Intent intent = new Intent(RingtoneManager.ACTION_RINGTONE_PICKER);
+        intent.putExtra(RingtoneManager.EXTRA_RINGTONE_EXISTING_URI, mRingtoneUri);
+        intent.putExtra(RingtoneManager.EXTRA_RINGTONE_TYPE, RingtoneManager.TYPE_ALARM);
+        intent.putExtra(RingtoneManager.EXTRA_RINGTONE_SHOW_DEFAULT, false);
+        startActivityForResult(intent, REQUEST_CODE_RINGTONE);
+    }
+
+    private void saveRingtoneUri(Intent intent) {
+        mRingtoneUri = intent.getParcelableExtra(RingtoneManager.EXTRA_RINGTONE_PICKED_URI);
+
+        // Save the last selected ringtone as the default for new alarms
+        if (mRingtoneUri != null) {
+            RingtoneManager.setActualDefaultRingtoneUri(
+                    getActivity(), RingtoneManager.TYPE_ALARM, mRingtoneUri);
+        }
+        SharedPreferences.Editor editor = mPrefs.edit();
+        editor.putString(KEY_TIMER_SOUND, mRingtoneUri == null ? "" : mRingtoneUri.toString());
+        editor.apply();
+        updateRingtoneText();
+    }
+
+    @Override
+    public void onActivityResult(int requestCode, int resultCode, Intent data) {
+        if (resultCode == Activity.RESULT_OK) {
+            switch (requestCode) {
+                case REQUEST_CODE_RINGTONE:
+                    saveRingtoneUri(data);
+                    break;
+                default:
+                    Log.w(TAG, "Unhandled request code in onActivityResult: " + requestCode);
+            }
+        }
     }
 
     @Override
@@ -606,7 +738,7 @@ public class TimerFragment extends DeskClockFragment
         super.onPause();
         stopClockTicks();
         if (mAdapter != null) {
-            mAdapter.saveGlobalState ();
+            mAdapter.saveGlobalState();
         }
         mPrefs.unregisterOnSharedPreferenceChangeListener(this);
         // This is called because the lock screen was activated, the window stay
@@ -721,6 +853,7 @@ public class TimerFragment extends DeskClockFragment
         mTimerSetup.updateDeleteButton();
         mLastVisibleView = mTimerSetup;
     }
+
     private void gotoTimersView() {
         if (mLastVisibleView == null || mLastVisibleView.getId() == R.id.timers_list_page) {
             mTimerSetup.setVisibility(View.GONE);
