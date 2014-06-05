@@ -18,6 +18,7 @@ package com.android.deskclock.timer;
 
 import android.content.Context;
 import android.content.SharedPreferences;
+import android.net.Uri;
 import android.os.Parcel;
 import android.os.Parcelable;
 import android.util.Log;
@@ -49,6 +50,7 @@ public class TimerObj implements Parcelable {
     public int mState;
     public String mLabel;
     public boolean mDeleteAfterUse;
+    private Uri mRingtone;
 
     public static final int STATE_RUNNING = 1;
     public static final int STATE_STOPPED = 2;
@@ -65,6 +67,7 @@ public class TimerObj implements Parcelable {
     private static final String PREF_STATE = "timer_state_";
     private static final String PREF_LABEL = "timer_label_";
     private static final String PREF_DELETE_AFTER_USE = "delete_after_use_";
+    private static final String PREF_RINGTONE = "ringtone_";
 
     private static final String PREF_TIMERS_LIST = "timers_list";
 
@@ -102,6 +105,8 @@ public class TimerObj implements Parcelable {
         editor.putString(key, mLabel);
         key = PREF_DELETE_AFTER_USE + id;
         editor.putBoolean(key, mDeleteAfterUse);
+        key = PREF_RINGTONE + id;
+        editor.putString(key, mRingtone.toString());
         editor.apply();
     }
 
@@ -122,6 +127,8 @@ public class TimerObj implements Parcelable {
         mLabel = prefs.getString(key, "");
         key = PREF_DELETE_AFTER_USE + id;
         mDeleteAfterUse = prefs.getBoolean(key, false);
+        key = PREF_RINGTONE + id;
+        mRingtone = Uri.parse(prefs.getString(key, ""));
     }
 
     public void deleteFromSharedPref(SharedPreferences prefs) {
@@ -146,6 +153,8 @@ public class TimerObj implements Parcelable {
         editor.remove(key);
         key = PREF_DELETE_AFTER_USE + id;
         editor.remove(key);
+        key = PREF_RINGTONE + id;
+        editor.remove(key);
         editor.commit();
         //dumpTimersFromSharedPrefs(prefs);
     }
@@ -165,6 +174,7 @@ public class TimerObj implements Parcelable {
         dest.writeLong(mSetupLength);
         dest.writeInt(mState);
         dest.writeString(mLabel);
+        dest.writeString(mRingtone.toString());
     }
 
     public TimerObj(Parcel p) {
@@ -175,6 +185,7 @@ public class TimerObj implements Parcelable {
         mSetupLength = p.readLong();
         mState = p.readInt();
         mLabel = p.readString();
+        mRingtone = Uri.parse(p.readString());
     }
 
     public TimerObj() {
@@ -198,6 +209,7 @@ public class TimerObj implements Parcelable {
         mStartTime = Utils.getTimeNow();
         mTimeLeft = mOriginalLength = mSetupLength = length;
         mLabel = "";
+        mRingtone = Uri.EMPTY;
     }
 
     public long updateTimeLeft(boolean forceUpdate) {
@@ -237,6 +249,13 @@ public class TimerObj implements Parcelable {
         return mStartTime + mOriginalLength;
     }
 
+    public Uri getRingtone() {
+        return mRingtone;
+    }
+
+    public void setRingtone(Uri ringTone) {
+        mRingtone = ringTone == null ? Uri.EMPTY : ringTone;
+    }
 
     public static void getTimersFromSharedPrefs(
             SharedPreferences prefs, ArrayList<TimerObj> timers) {
@@ -278,7 +297,6 @@ public class TimerObj implements Parcelable {
             SharedPreferences prefs, ArrayList<TimerObj> timers) {
         if (timers.size() > 0) {
             for (int i = 0; i < timers.size(); i++) {
-                TimerObj t = timers.get(i);
                 timers.get(i).writeToSharedPref(prefs);
             }
         }
