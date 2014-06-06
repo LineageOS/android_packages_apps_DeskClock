@@ -94,7 +94,10 @@ public class DigitalAppWidgetProvider extends AppWidgetProvider {
                     RemoteViews widget = new RemoteViews(context.getPackageName(),
                             R.layout.digital_appwidget);
                     float ratio = WidgetUtils.getScaleRatio(context, null, appWidgetId);
-                    WidgetUtils.setTimeFormat(widget, 0/*no am/pm*/, R.id.the_clock);
+                    WidgetUtils.setTimeFormat(
+                            widget,
+                            (int) context.getResources().getDimension(
+                                    R.dimen.widget_label_font_size), R.id.the_clock);
                     WidgetUtils.setClockSize(context, widget, ratio);
                     refreshAlarm(context, widget);
                     appWidgetManager.partiallyUpdateAppWidget(appWidgetId, widget);
@@ -168,7 +171,9 @@ public class DigitalAppWidgetProvider extends AppWidgetProvider {
 
         // Setup alarm text clock's format and font sizes
         refreshAlarm(context, widget);
-        WidgetUtils.setTimeFormat(widget, 0/*no am/pm*/, R.id.the_clock);
+        WidgetUtils.setTimeFormat(widget,
+                (int) context.getResources().getDimension(R.dimen.widget_label_font_size),
+                R.id.the_clock);
         WidgetUtils.setClockSize(context, widget, ratio);
 
         // Set today's date format
