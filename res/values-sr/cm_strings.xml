@@ -21,34 +21,34 @@
   <string name="alarm_increasing_volume">Повећање јачине</string>
   <string name="profile_description">Профил <xliff:g id="profile">%s</xliff:g></string>
   <string name="profile_no_selected">Профил није изабран</string>
-  <string name="menu_item_add">Додајте</string>
-  <string name="cities_add_city_title">Додајте град</string>
+  <string name="menu_item_add">Додај</string>
+  <string name="cities_add_city_title">Додај град</string>
   <string name="cities_add_city_city">Град:</string>
-  <string name="cities_add_city_timezone">Веменска зона:</string>
-  <string name="cities_add_city_gps_cd">Додирните да локализује свој тренутни град</string>
+  <string name="cities_add_city_timezone">Временска зона:</string>
+  <string name="cities_add_city_gps_cd">Додирни да се локализује твој тренутни град</string>
   <string name="cities_add_loading">Учитавање\u2026</string>
   <string name="cities_add_searching">Претраживање\u2026</string>
-  <string name="cities_add_gps_no_results">GPS не проналази никакве резултате локација</string>
+  <string name="cities_add_gps_no_results">GPS не проналази никакве резултате локације</string>
   <string name="cities_add_gps_not_available">GPS није доступан</string>
   <string name="cities_add_already_exists">Град већ постоји у бази података</string>
   <string name="cities_add_city_failed">Не може да се направи град</string>
-  <string name="cities_delete_city_title">Обришите град</string>
-  <string name="cities_delete_city_msg">Желите ли да избришете <xliff:g id="city">%s</xliff:g>?</string>
-  <string name="cities_delete_city_failed">Не можете избрисати град</string>
-  <string name="flip_action_title">Флип акција</string>
-  <string name="flip_action_dialog_title" product="tablet">Флипуј таблет на\u2026</string>
-  <string name="flip_action_dialog_title" product="default">Флипуј телефон на\u2026</string>
-  <string name="flip_action_summary" product="tablet">Флиповање таблета надоле ће <xliff:g id="action">%s</xliff:g></string>
-  <string name="flip_action_summary" product="default">Флиповање телефона надоле ће <xliff:g id="action">%s</xliff:g></string>
+  <string name="cities_delete_city_title">Избриши град</string>
+  <string name="cities_delete_city_msg">Желиш ли да избришеш <xliff:g id="city">%s</xliff:g>?</string>
+  <string name="cities_delete_city_failed">Не може се избрисати град</string>
+  <string name="flip_action_title">Акција окретања</string>
+  <string name="flip_action_dialog_title" product="tablet">Окрени таблет за\u2026</string>
+  <string name="flip_action_dialog_title" product="default">Окрени телефон за\u2026</string>
+  <string name="flip_action_summary" product="tablet">Окретање таблета надоле ће <xliff:g id="action">%s</xliff:g></string>
+  <string name="flip_action_summary" product="default">Окретање телефона надоле ће <xliff:g id="action">%s</xliff:g></string>
   <string name="shake_action_title">Акција дрмања</string>
-  <string name="shake_action_dialog_title" product="tablet">Дрмај таблет на\u2026</string>
-  <string name="shake_action_dialog_title" product="default">Дрмај телефон на\u2026</string>
+  <string name="shake_action_dialog_title" product="tablet">Дрмај таблет за\u2026</string>
+  <string name="shake_action_dialog_title" product="default">Дрмај телефон за\u2026</string>
   <string name="shake_action_summary" product="tablet">Дрмање таблета ће <xliff:g id="action">%s</xliff:g></string>
   <string name="shake_action_summary" product="default">Дрмање телефона ће <xliff:g id="action">%s</xliff:g></string>
-  <string name="action_summary_snooze">Дремање аларма</string>
-  <string name="action_summary_dismiss">Одбацивање аларма</string>
+  <string name="action_summary_snooze">Одложи аларм</string>
+  <string name="action_summary_dismiss">Одбаци аларм</string>
   <string name="action_summary_do_nothing">Не ради ништа</string>
-  <string name="alarm_picker_title">Изаберите тип аларма</string>
+  <string name="alarm_picker_title">Изабери тип аларма</string>
   <string name="alarm_type_ringtone">Звоно</string>
   <string name="alarm_type_random">Насумично</string>
   <string name="warn_silent_alarm_title">Јачина аларма je утишана</string>

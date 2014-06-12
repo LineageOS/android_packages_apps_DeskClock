@@ -51,4 +51,5 @@
   <string name="alarm_picker_title">Välj alarmtyp</string>
   <string name="alarm_type_ringtone">Ringsignal</string>
   <string name="alarm_type_random">Slumpmässigt</string>
+  <string name="warn_silent_alarm_title">Alarmvolym är tyst</string>
 </resources>

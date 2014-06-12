@@ -51,4 +51,5 @@
   <string name="alarm_picker_title">เลือกชนิดการปลุก</string>
   <string name="alarm_type_ringtone">เสียง​เรียก​เข้า</string>
   <string name="alarm_type_random">สุ่ม</string>
+  <string name="warn_silent_alarm_title">เสียงปลุกจะไม่ดัง</string>
 </resources>
