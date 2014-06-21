@@ -15,13 +15,26 @@
      limitations under the License.
 -->
 <resources xmlns:xliff="urn:oasis:names:tc:xliff:document:1.2">
+  <string name="app_label">Auer</string>
+  <string name="default_label">Wecker</string>
+  <string name="set_alarm">Wecker setzen</string>
   <string name="alarm_vibrate">Vibréieren</string>
   <string name="alarm_repeat">Widderhuelen</string>
+  <string name="alert">Weckerschelltoun</string>
+  <string name="ringtone">Schelltoun</string>
+  <string name="time">Zäit</string>
+  <string name="alarm_alert_dismiss_text">Verwerfen</string>
+  <string name="every_day">All Dag</string>
+  <string name="never">Ni</string>
+  <string name="clock_instructions">Eng Auer auswielen</string>
+  <string name="analog_gadget">Analogauer</string>
+  <string name="help">Hëllef</string>
   <string name="settings">Astellungen</string>
   <plurals name="snooze_duration">
     <item quantity="one">1 Minutt</item>
     <item quantity="other"><xliff:g id="count">%d</xliff:g> Minutten</item>
   </plurals>
+  <string name="auto_silence_never">Ni</string>
   <string-array name="auto_silence_entries">
     <item>5 Minutten</item>
     <item>10 Minutten</item>
@@ -31,8 +44,22 @@
     <item>30 Minutten</item>
     <item>Never</item>
   </string-array>
+  <string name="delete">Läschen</string>
+  <string name="alarm_volume_title">Weckerlautstäerkt</string>
+  <string-array name="volume_button_setting_entries">
+    <item>Snooze</item>
+    <item>Verwerfen</item>
+    <item>Do nothing</item>
+  </string-array>
+  <string name="ringtone_description">Schelltoun</string>
+  <string name="battery_charging_level"><xliff:g id="number">%d</xliff:g><xliff:g id="percent">%%</xliff:g></string>
+  <string name="control_set_alarm">Wecker setzen</string>
+  <string name="menu_alarm">Wecker</string>
+  <string name="menu_clock">Auer</string>
   <string name="menu_item_settings">Astellungen</string>
   <string name="menu_item_help">Hëllef</string>
+  <string name="sw_stop_button">Stopp</string>
+  <string name="hours_label_description">Stonnen</string>
   <plurals name="Nhours_description">
     <item quantity="one">1 Stonn</item>
     <item quantity="other"><xliff:g id="count">%d</xliff:g> Stonnen</item>
@@ -49,4 +76,6 @@
     <item quantity="one">1 Minutt</item>
     <item quantity="other"><xliff:g id="count">%d</xliff:g> Minutten</item>
   </plurals>
+  <string name="home_label">Doheem</string>
+  <string name="deleted_message">Geläscht</string>
 </resources>

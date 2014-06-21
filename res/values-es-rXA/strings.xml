@@ -153,6 +153,7 @@
   <string name="hours_label_description">hores</string>
   <string name="minutes_label_description">minutos</string>
   <string name="seconds_label_description">segundos</string>
+  <string name="zero">0</string>
   <string name="sw_share_main">Hora: <xliff:g id="TIME">%s</xliff:g></string>
   <string name="sw_share_laps">Duración de les vueltes:</string>
   <string name="sw_notification_lap_number">Fase <xliff:g id="NUMBER">%d</xliff:g></string>
