@@ -45,9 +45,9 @@
   <string name="shake_action_dialog_title" product="default">Дрмај телефон за\u2026</string>
   <string name="shake_action_summary" product="tablet">Дрмање таблета ће <xliff:g id="action">%s</xliff:g></string>
   <string name="shake_action_summary" product="default">Дрмање телефона ће <xliff:g id="action">%s</xliff:g></string>
-  <string name="action_summary_snooze">Одложи аларм</string>
-  <string name="action_summary_dismiss">Одбаци аларм</string>
-  <string name="action_summary_do_nothing">Не ради ништа</string>
+  <string name="action_summary_snooze">одложити аларм</string>
+  <string name="action_summary_dismiss">одбацити аларм</string>
+  <string name="action_summary_do_nothing">не ради ништа</string>
   <string name="alarm_picker_title">Изабери тип аларма</string>
   <string name="alarm_type_ringtone">Звоно</string>
   <string name="alarm_type_random">Насумично</string>
