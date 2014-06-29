@@ -15,5 +15,322 @@
      limitations under the License.
 -->
 <resources xmlns:xliff="urn:oasis:names:tc:xliff:document:1.2">
+  <string name="app_label">کاتژێر</string>
+  <string name="alarm_list_title">وریاکەرەوەکان</string>
+  <string name="add_alarm">زیادکردنی ئاگادارکردنه‌وه‌</string>
+  <string name="alarm_timeline_title_text">ئاگادارکه‌ره‌وه‌ی داهاتوو</string>
+  <string name="menu_desk_clock">کاتژمێری شاشه‌</string>
+  <string name="menu_edit_alarm">ده‌ستکاریکردنی ئاگادارکه‌ره‌وه‌</string>
+  <string name="delete_alarm">سڕینه‌وه‌ی ئاگادارکه‌ره‌وه‌</string>
+  <string name="enable_alarm">کارپێکردنی ئاگادارکه‌ره‌وه‌</string>
+  <string name="disable_alarm">له‌کارخستنی ئاگادارکه‌ره‌وه‌</string>
+  <string name="delete_alarm_confirm">ئه‌م ئاگادارکه‌ره‌وه‌ ده‌سڕیته‌وه‌؟</string>
+  <string name="show_clock">نیشاندانی کاتژمێر</string>
+  <string name="hide_clock">شاردنه‌وه‌ی کاتژمێر</string>
+  <string name="label">نیشان</string>
+  <string name="default_label">بیرخه‌ره‌وه‌</string>
+  <string name="set_alarm">دیاریکردنی ئاگادارکه‌ره‌وه‌</string>
+  <string name="alarm_vibrate">لەرزین</string>
+  <string name="alarm_repeat">دوبارەکردنەوە</string>
+  <string name="alert">زه‌نگی ئاگادارکه‌ره‌وه‌</string>
+  <string name="ringtone">زه‌نگ</string>
   <string name="time">کات</string>
+  <string name="alarm_alert_dismiss_text">لابردن</string>
+  <string name="alarm_alert_dismiss_now_text">لابردن هه‌ر ئێستا</string>
+  <string name="alarm_missed_title">ئاگادارکه‌ره‌وه‌ی ونبوو</string>
+  <string name="alarm_missed_text"><xliff:g id="alarm_time">%s</xliff:g> - <xliff:g id="alarm_label">%s</xliff:g></string>
+  <string name="alarm_alert_snooze_text">سووکه‌ نوستن</string>
+  <plurals name="alarm_alert_snooze_set">
+    <item quantity="one">سوکه‌نوستن بۆ یه‌ک خوله‌ک.</item>
+    <item quantity="other">سوکه‌ نوستن بۆ <xliff:g id="minutes">%d</xliff:g> خوله‌ک.</item>
+  </plurals>
+  <string name="alarm_alert_snooze_until">سووکه‌ نوستن تا <xliff:g id="time">%s</xliff:g></string>
+  <string name="alarm_alert_predismiss_title">ئاگادارکه‌ره‌وه‌ی به‌ڕێگا</string>
+  <string name="missed_alarm_has_been_deleted">ئاگادارکه‌ره‌وه‌ی ونبوو سڕدرایه‌وه‌</string>
+  <string-array name="timer_notifications">
+    <item>که‌متر له‌ یه‌ک خوله‌کی ماوه‌</item>
+    <item><xliff:g id="HOURS" example="2 hours">%1$s</xliff:g> remaining ماوه‌</item>
+    <item><xliff:g id="MINUTES" example="2 minutes">%2$s</xliff:g> remaining ماوه‌</item>
+    <item><xliff:g id="HOURS" example="2 hours">%1$s</xliff:g> <xliff:g id="MINUTES" example="2 minutes">%2$s</xliff:g> remaining ماوه‌</item>
+  </string-array>
+  <string-array name="alarm_set">
+    <item>ئاگادارکه‌ره‌وه‌ دانرا بۆ که‌متر له‌ یه‌ک خوله‌ک له‌ ئێستاوه‌.</item>
+    <item>ئاگادارکه‌ره‌وه‌ دانرا بۆ <xliff:g id="DAYS" example="2 days">%1$s</xliff:g> له‌ ئێستاوه‌.</item>
+    <item>ئاگادارکه‌ره‌وه‌ دانرا بۆ <xliff:g id="DAYS" example="2 days">%2$s</xliff:g> له‌ ئێستاوه‌.</item>
+    <item>ئاگادارکه‌ره‌وه‌ دانرا بۆ  <xliff:g id="DAYS" example="2 days">%1$s</xliff:g>  وه‌ <xliff:g id="HOURS" example="2 hours">%2$s</xliff:g> له‌ ئێستاوه‌.</item>
+    <item>ئاگادارکه‌ره‌وه‌ دانرا بۆ  <xliff:g id="MINUTES" example="2 minutes">%3$s</xliff:g> له‌ ئێستاوه‌.</item>
+    <item>ئاگادارکه‌ره‌وه‌ دانرا بۆ  <xliff:g id="DAYS" example="2 days">%1$s</xliff:g>  وه‌ <xliff:g id="HOURS" example="2 hours">%3$s</xliff:g> له‌ ئێستاوه‌.</item>
+    <item>ئاگادارکه‌ره‌وه‌ دانرا بۆ  <xliff:g id="DAYS" example="2 days">%2$s</xliff:g>  وه‌ <xliff:g id="HOURS" example="2 hours">%3$s</xliff:g> له‌ ئێستاوه‌.</item>
+    <item>ئاگادارکه‌ره‌وه‌ دانرا بۆ  <xliff:g id="DAYS" example="2 days">%1$s</xliff:g>, <xliff:g id="HOURS" example="2 hours">%2$s</xliff:g>,  وه‌  <xliff:g id="MINUTES" example="2 minutes">%3$s</xliff:g> له‌ ئێستاوه‌.</item>
+  </string-array>
+  <string name="day">"١ ڕۆژ"</string>
+  <string name="days">"<xliff:g id="days">%s</xliff:g>  ڕۆژ"</string>
+  <string name="hour">1 كاتژمێر</string>
+  <string name="hours"><xliff:g id="hours">%s</xliff:g> کاتژمێر</string>
+  <string name="minute">"1 خوله‌ک"</string>
+  <string name="minutes">"<xliff:g id="minutes">%s</xliff:g> خوله‌ک"</string>
+  <string name="every_day">هه‌موو ڕۆژێک</string>
+  <string name="never">هەرگیز</string>
+  <string name="day_concat">", "</string>
+  <string name="clock_instructions">دیاریکردنی کاتژمێر</string>
+  <string name="analog_gadget">کاتژمێری پێوه‌ری</string>
+  <string name="help">یارمه‌تیدان</string>
+  <string name="settings">ڕێکخستنه‌کان</string>
+  <string name="snooze_duration_title">ماوه‌ی سووکه‌نوستن</string>
+  <plurals name="snooze_duration">
+    <item quantity="one">1 خوله‌ک</item>
+    <item quantity="other"><xliff:g id="number" example="7">%d</xliff:g> خوله‌ک</item>
+  </plurals>
+  <plurals name="snooze_picker_label">
+    <item quantity="one">خوله‌ک</item>
+    <item quantity="other">خولەک</item>
+  </plurals>
+  <string name="auto_silence_title">بێده‌نگ کردن دوای</string>
+  <string name="auto_silence_summary"><xliff:g id="minutes">%d</xliff:g> خوله‌ک</string>
+  <string name="auto_silence_never">هەرگیز</string>
+  <string-array name="auto_silence_entries">
+    <item>5 خوله‌ک</item>
+    <item>10 خولەک</item>
+    <item>١٥خولەک</item>
+    <item>٢٠ خولەک</item>
+    <item>٢٥ خولەک</item>
+    <item>۳۰ خوله‌ک</item>
+    <item>هەرگیز</item>
+  </string-array>
+  <string name="done">ئه‌نجامدرا</string>
+  <string name="revert">گه‌ڕانه‌وه‌ی باری سه‌ره‌تایی</string>
+  <string name="delete">سڕینه‌وه‌</string>
+  <string name="alarm_volume_title">ئاستی دەنگی ئاگادارکەرەوە</string>
+  <string name="silent_alarm_summary">بێدەنگ</string>
+  <string name="alarm_notify_text">سووکه‌نوستن یان لابردنی ئاگادارکه‌ره‌وه‌.</string>
+  <string name="alarm_notify_snooze_label"><xliff:g id="label">%s</xliff:g> (سووکه‌نوستن کرا)</string>
+  <string name="alarm_notify_snooze_text">ئاگادارکه‌ره‌وه‌ دانرا بۆ  <xliff:g id="time">%s</xliff:g>.په‌نچه‌ی پێدابنێ بۆ لابردن.</string>
+  <string name="volume_button_setting_title">دوگمەی دەنگ</string>
+  <string name="volume_button_dialog_title">کاریگه‌ری دوگمه‌</string>
+  <string-array name="volume_button_setting_entries">
+    <item>سووکه‌ نوستن</item>
+    <item>لابردن</item>
+    <item>هیچ نه‌کرێت</item>
+  </string-array>
+  <string name="default_ringtone_setting_title">دیاریکردنی زه‌نگی بنه‌ڕه‌ت</string>
+  <string name="alarm_button_description">ئاگادارکردنه‌وه‌</string>
+  <string name="gallery_button_description">گەلەری</string>
+  <string name="music_button_description">مۆسیقا</string>
+  <string name="nightmode_button_description">ڵێڵ</string>
+  <string name="home_button_description">به‌کارخه‌ر</string>
+  <string name="desk_clock_button_description">ته‌ختی کاتژمێر</string>
+  <string name="label_description">نیشان</string>
+  <string name="ringtone_description">زه‌نگ</string>
+  <string name="battery_charging_level"><xliff:g id="number">%d</xliff:g><xliff:g id="percent">%%</xliff:g></string>
+  <string name="weather_fetch_failure">زانیاری له‌باره‌ی که‌ش و هه‌وا ئێستا ئاماده‌ نییه‌.</string>
+  <string name="loading_ringtone">ئاماده‌کردنی زه‌نگ\u2026</string>
+  <string name="control_set_alarm">دیاریکردنی ئاگادارکه‌ره‌وه‌</string>
+  <string name="control_set_alarm_with_existing"><xliff:g id="time">%s</xliff:g></string>
+  <string name="menu_alarm">بیرخه‌ره‌وه‌</string>
+  <string name="menu_timer">کاتپێو</string>
+  <string name="menu_clock">کاتژێر</string>
+  <string name="menu_stopwatch">کات وه‌ستێن</string>
+  <string name="button_alarms">وریاکەرەوەکان</string>
+  <string name="button_cities">شاره‌کان</string>
+  <string name="button_menu">بەربژاردەی زیاتر</string>
+  <string name="menu_item_settings">ڕێکخستنه‌کان</string>
+  <string name="menu_item_help">یارمەتی</string>
+  <string name="menu_item_night_mode">جۆری شه‌و</string>
+  <string name="menu_item_sort_by_gmt_offset">ڕیزکردن به‌پێی کات</string>
+  <string name="menu_item_sort_by_name">ڕیزکردن به‌ ناو</string>
+  <string name="selected_cities_label">شاره‌ دیاریکراوه‌کان</string>
+  <string name="sw_resume_button">دەستپێکردنەوە</string>
+  <string name="sw_start_button">دەستپێکردن</string>
+  <string name="sw_stop_button">وه‌ستاندن</string>
+  <string name="sw_lap_button">سوڕ</string>
+  <string name="sw_reset_button">ڕێکخستنەوە</string>
+  <string name="sw_share_button">به‌شداریپێکردن</string>
+  <string name="hours_label">ک</string>
+  <string name="minutes_label">خ</string>
+  <string name="seconds_label">چ</string>
+  <string name="hours_label_description">کاتژمێرەکان</string>
+  <string name="minutes_label_description">خولەک</string>
+  <string name="seconds_label_description">چرکە</string>
+  <string name="zero">٠</string>
+  <string name="sw_share_main">کاتی من بریتییه‌ له‌ <xliff:g id="time">%s</xliff:g></string>
+  <string name="sw_share_laps">ماوه‌ی سوڕ:</string>
+  <string name="sw_notification_lap_number">سوڕی <xliff:g id="number">%d</xliff:g></string>
+  <plurals name="Nhours_description">
+    <item quantity="one">1 كاتژمێر</item>
+    <item quantity="other"><xliff:g id="number" example="7">%d</xliff:g> کاتژژمێر</item>
+  </plurals>
+  <plurals name="Nminutes_description">
+    <item quantity="one">1 خوله‌ک</item>
+    <item quantity="other"><xliff:g id="number" example="7">%d</xliff:g>خوله‌ک</item>
+  </plurals>
+  <plurals name="Nseconds_description">
+    <item quantity="one">1 چرکە</item>
+    <item quantity="other"><xliff:g id="number" example="7">%d</xliff:g> چرکه‌</item>
+  </plurals>
+  <string name="timer_add_timer">دیاریکردنی کاتپێو</string>
+  <string name="timer_start">دەستپێکردن</string>
+  <string name="timer_delete">سڕینه‌وه‌</string>
+  <string name="timer_plus_one">زیادکردنی یه‌ک خوله‌ک</string>
+  <string name="timer_plus_1_min">زیاد کردنی ۱ خوله‌ک</string>
+  <string name="timer_stop">وه‌ستاندن</string>
+  <string name="timer_done">ئه‌نجامدرا</string>
+  <string name="timer_reset">ڕێکخستنەوە</string>
+  <string name="timer_cancel">هەڵوەشاندنەوە</string>
+  <string name="timer_times_up">کات ته‌واو بوو</string>
+  <string name="timer_notification_label">کاتپێو</string>
+  <string-array name="sw_share_strings" translatable="true">
+    <item>تۆ خێرایی زۆر به‌رزت بێده‌نگ کرد.</item>
+    <item>دڵخۆشبه‌ به به‌ری کاره‌که‌ت.</item>
+    <item>ئه‌ندرۆید به‌وه‌ ناسراوه‌ خێرایه‌ ، به‌س وه‌ک تۆ نا !</item>
+    <item>فیو.!</item>
+    <item>کاته‌کانی لێت.</item>
+    <item>وه‌ک ته‌قینه‌وه‌ی زۆر گه‌وره‌.</item>
+    <item>با دووباره‌ چه‌مانه‌وه‌ی کات بکه‌ینه‌وه‌.</item>
+    <item>ته‌نیا بازبده‌ بۆ به‌جێهێشتن.</item>
+    <item>تۆ پالێتت هه‌یه‌ بۆ خێرایی.</item>
+    <item>ته‌قاندنه‌وه‌ی فۆتۆن.</item>
+  </string-array>
+  <plurals name="timers_num">
+    <item quantity="one">1 خوله‌ک</item>
+    <item quantity="other"><xliff:g id="number" example="7">%d</xliff:g> کاتپێو</item>
+  </plurals>
+  <string name="home_label">ماڵ</string>
+  <string name="cities_activity_title">شاره‌کان</string>
+  <string name="clock_settings">کاتژمێر</string>
+  <string name="clock_style">ستایل</string>
+  <string-array name="clock_style_entries">
+    <item>پێوه‌ری</item>
+    <item>ژماره‌یی</item>
+  </string-array>
+  <string name="automatic_home_clock">کاتژمێری ماڵه‌وه‌ی خۆکارانه‌</string>
+  <string name="automatic_home_clock_summary">کاتێک گه‌شت ده‌که‌یت و شوێن ده‌گۆڕیت که‌ کات جیاوازبێت،کاتژمێر زیاد بکه‌ بۆ ماڵ</string>
+  <string name="home_time_zone">کاتی ماڵ</string>
+  <string name="home_time_zone_title">کاتی ماڵ</string>
+  <string name="time_picker_cancel">هەڵوەشاندنەوە</string>
+  <string name="time_picker_set">باشه‌</string>
+  <string name="time_picker_time_seperator">:</string>
+  <string name="time_picker_ampm_label">--</string>
+  <string name="time_picker_00_label">:۰۰</string>
+  <string name="time_picker_30_label">:۳۰</string>
+  <string-array name="timezone_labels">
+    <item>"دوورگه‌کانی مارشاڵ"</item>
+    <item>"دورگه‌کانی میدوه‌ی"</item>
+    <item>"هاوایی"</item>
+    <item>"ئالاسکا"</item>
+    <item>"کاتی زه‌ریای هێمن"</item>
+    <item>"تیوانا"</item>
+    <item>"ئاریزۆنا"</item>
+    <item>"چیهوایا"</item>
+    <item>"کاتی شاخه‌کان"</item>
+    <item>"ناوه‌ندی ئه‌مه‌ریکا"</item>
+    <item>"کاتی ناوه‌ندی"</item>
+    <item>"Mexico City"</item>
+    <item>"Saskatchewan"</item>
+    <item>"Bogota"</item>
+    <item>"Eastern Time"</item>
+    <item>"Venezuela"</item>
+    <item>"Atlantic Time (Barbados)"</item>
+    <item>"Atlantic Time (Canada)"</item>
+    <item>"Manaus"</item>
+    <item>"Santiago"</item>
+    <item>"Newfoundland"</item>
+    <item>"Brasilia"</item>
+    <item>"Buenos Aires"</item>
+    <item>"Greenland"</item>
+    <item>"Montevideo"</item>
+    <item>"Mid-Atlantic"</item>
+    <item>"Azores"</item>
+    <item>"Cape Verde Islands"</item>
+    <item>"Casablanca"</item>
+    <item>"London, Dublin"</item>
+    <item>"Amsterdam, Berlin"</item>
+    <item>"Belgrade"</item>
+    <item>"Brussels"</item>
+    <item>"ساراجیڤۆ"</item>
+    <item>"ویندهۆک"</item>
+    <item>"کاتی ئه‌فریقا"</item>
+    <item>"عه‌مان و ئه‌رده‌ن"</item>
+    <item>"ئه‌سینا و ئه‌سته‌نبوڵ"</item>
+    <item>"به‌یروت و لوبنان"</item>
+    <item>"قاهیره‌"</item>
+    <item>"هێلسینکی"</item>
+    <item>"جێرالوس"</item>
+    <item>"مینسک"</item>
+    <item>"حه‌ریری"</item>
+    <item>"به‌غداد"</item>
+    <item>"مۆسکۆ"</item>
+    <item>"کوه‌یت"</item>
+    <item>"نایرۆبی"</item>
+    <item>"فشقشىتاران"</item>
+    <item>"باکو"</item>
+    <item>"تبلیس"</item>
+    <item>"یه‌ریڤان"</item>
+    <item>"دوبه‌ی"</item>
+    <item>"کابول"</item>
+    <item>"ئیسلام ئاباد"</item>
+    <item>"ئوراسک"</item>
+    <item>"یه‌کیتارینبوگ"</item>
+    <item>"کۆلکاتا"</item>
+    <item>"سریلانکا"</item>
+    <item>"کاتاماندوو"</item>
+    <item>"ئاستانا"</item>
+    <item>"یانگۆن"</item>
+    <item>"کراسنۆیارک"</item>
+    <item>"بانکۆک"</item>
+    <item>"بێژینگ"</item>
+    <item>"هۆنگ کۆنگ"</item>
+    <item>"ئیرکوتسک"</item>
+    <item>"کوالا لامپور"</item>
+    <item>"پێرس"</item>
+    <item>"تایپای"</item>
+    <item>"سێول"</item>
+    <item>"تۆکیۆ.ئۆساکا"</item>
+    <item>"یاکوتسک"</item>
+    <item>"ئه‌دێلایدی"</item>
+    <item>"داروین"</item>
+    <item>"بریسبان"</item>
+    <item>"هۆبارت"</item>
+    <item>"سیدنی ،جانبێرا"</item>
+    <item>"سیدنی ،جانبێرا"</item>
+    <item>"گوام"</item>
+    <item>"ماگادان"</item>
+    <item>"ماگادان"</item>
+    <item>"فیجی"</item>
+    <item>"تۆنگا"</item>
+    <item>"جاکارتا"</item>
+  </string-array>
+  <string name="alarm_settings">ئاگادارکه‌ره‌وه‌کان</string>
+  <string name="see_all">بینینی هه‌موو&#8230;</string>
+  <string name="stopwatch_service_desc">خزمه‌تگوزاری کات وه‌ستێنه‌ر بۆ ئاگاداری کارده‌کات.</string>
+  <string name="swn_stopped">وه‌ستا</string>
+  <string name="description_direction_right">بۆ ڕاستی بجوڵێنه‌ بۆ لابردن</string>
+  <string name="description_direction_left">بۆ چه‌پی بجوڵێنه‌ بۆ لابردن</string>
+  <string name="description_direction_up">بۆ سه‌ره‌وه‌ی بجوڵێنه‌ بۆ لابردن</string>
+  <string name="description_direction_down">بۆ خواره‌وه‌ی بجوڵێنه‌ بۆ لابردن</string>
+  <string name="timer_stopped">کاتپێو وه‌ستا</string>
+  <string name="timers_stopped"><xliff:g id="number" example="7">%d</xliff:g> کاتپێو وه‌ستا</string>
+  <string name="all_timers_stopped_notif">په‌نجه‌ بنێ بێره‌دا بۆ بینینی کاتپێوه‌کان</string>
+  <string name="timers_in_use"><xliff:g id="number" example="7">%d</xliff:g> کاتپێو</string>
+  <string name="next_timer_notif">کاتپێوی دواتر: <xliff:g id="time_remaining" example="2 minutes remaining">%s</xliff:g></string>
+  <string name="screensaver_settings">ڕێکخستنه‌کانی تیمی خه‌یاڵ</string>
+  <string name="night_mode_title">جۆری شه‌و</string>
+  <string name="night_mode_summary">شاشه‌ی زۆر تاریک (بۆ ژووری تاریک به‌کاردێت)</string>
+  <string name="expand_alarm">به‌ربڵاوی ئاگادارکه‌ره‌وه‌</string>
+  <string name="collapse_alarm">له‌ناوچونی ئاگادارکه‌ره‌وه‌</string>
+  <string name="alarm_undo">گه‌ڕانه‌وه‌</string>
+  <string name="alarm_deleted">ئاگادارکه‌ره‌وه‌ وه‌ستا.</string>
+  <string name="slash"> / </string>
+  <string name="world_day_of_week_label"> / <xliff:g id="label">%s</xliff:g></string>
+  <string name="next_alarm_description">ئاگادارکه‌ره‌وه‌ی داهاتوو:<xliff:g id="alarm_time" example="Wed 8:00am">%s</xliff:g></string>
+  <string name="alarms_selected"><xliff:g id="alarms">%d</xliff:g> selected دیاریکراوه‌</string>
+  <string name="deleted_message">سڕایەوە</string>
+  <plurals name="alarm_delete_confirmation">
+    <item quantity="one">سڕینه‌وه‌ی ئاگادارکه‌ره‌وه‌ی دیاریکراو؟</item>
+    <item quantity="other">سڕینه‌وه‌ی ئاگادارکه‌ره‌وه‌ی دیاریکراو؟</item>
+  </plurals>
+  <string name="timer_delete_confirmation">ئه‌م کاتپێوه‌ ده‌سڕیته‌وه‌؟</string>
+  <string name="city_delete_confirmation">ئه‌م شاره‌ ده‌سڕیته‌وه‌؟</string>
+  <string name="digital_gadget">کاتژمێری ژماره‌یی</string>
+  <string name="no_alarms">ئاگادارکردنه‌وه‌ نییه‌</string>
+  <string name="no_upcoming_alarms">هیچ ئاگادارکردنه‌وه‌یه‌کی ئاماده‌کراو نییه‌</string>
 </resources>

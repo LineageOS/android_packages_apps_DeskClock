@@ -34,13 +34,14 @@
     <item quantity="one">1 Minutt</item>
     <item quantity="other"><xliff:g id="count">%d</xliff:g> Minutten</item>
   </plurals>
+  <string name="auto_silence_summary"><xliff:g id="minutes">%d</xliff:g> Minutten</string>
   <string name="auto_silence_never">Ni</string>
   <string-array name="auto_silence_entries">
     <item>5 Minutten</item>
     <item>10 Minutten</item>
-    <item>15 minutes</item>
-    <item>20 minutes</item>
-    <item>25 minutes</item>
+    <item>15 Minutten</item>
+    <item>20 Minutten</item>
+    <item>25 Minutten</item>
     <item>30 Minutten</item>
     <item>Never</item>
   </string-array>
@@ -60,6 +61,8 @@
   <string name="menu_item_help">Hëllef</string>
   <string name="sw_stop_button">Stopp</string>
   <string name="hours_label_description">Stonnen</string>
+  <string name="minutes_label_description">Minutten</string>
+  <string name="seconds_label_description">Sekonnen</string>
   <plurals name="Nhours_description">
     <item quantity="one">1 Stonn</item>
     <item quantity="other"><xliff:g id="count">%d</xliff:g> Stonnen</item>
