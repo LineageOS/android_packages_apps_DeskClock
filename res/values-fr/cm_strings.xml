@@ -51,4 +51,5 @@
   <string name="alarm_picker_title">Définir le type d\'alarme</string>
   <string name="alarm_type_ringtone">Sonnerie</string>
   <string name="alarm_type_random">Aléatoire</string>
+  <string name="warn_silent_alarm_title">Le volume de l\'alarme est silencieux</string>
 </resources>

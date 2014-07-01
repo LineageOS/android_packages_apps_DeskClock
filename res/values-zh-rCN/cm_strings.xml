@@ -51,4 +51,5 @@
   <string name="alarm_picker_title">选择提醒类型</string>
   <string name="alarm_type_ringtone">铃声</string>
   <string name="alarm_type_random">随机</string>
+  <string name="warn_silent_alarm_title">闹钟音量为静音</string>
 </resources>

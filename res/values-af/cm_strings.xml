@@ -51,4 +51,5 @@
   <string name="alarm_picker_title">Kies alarm tipe</string>
   <string name="alarm_type_ringtone">Luitoon</string>
   <string name="alarm_type_random">Willekeurig</string>
+  <string name="warn_silent_alarm_title">Alarm volume is af</string>
 </resources>

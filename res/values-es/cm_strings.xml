@@ -51,4 +51,5 @@
   <string name="alarm_picker_title">Tono de alarma</string>
   <string name="alarm_type_ringtone">Personalizado</string>
   <string name="alarm_type_random">Aleatorio</string>
+  <string name="warn_silent_alarm_title">Volumen de la alarma en silencio</string>
 </resources>

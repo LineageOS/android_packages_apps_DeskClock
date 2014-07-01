@@ -51,4 +51,5 @@
   <string name="alarm_picker_title">Escueyi\'l tipu d\'alarma</string>
   <string name="alarm_type_ringtone">Tonu de llamada</string>
   <string name="alarm_type_random">Al debalu</string>
+  <string name="warn_silent_alarm_title">El volume l\'alarma ta en silenciu</string>
 </resources>

@@ -51,4 +51,5 @@
   <string name="alarm_picker_title">בחר סוג שעון מעורר</string>
   <string name="alarm_type_ringtone">צלצול</string>
   <string name="alarm_type_random">אקראי</string>
+  <string name="warn_silent_alarm_title">שעון מעורר מושתק בעוצמה</string>
 </resources>
