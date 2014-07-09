@@ -37,11 +37,21 @@
   <string name="cities_delete_city_msg">ئایا دڵنیایت لە سڕینەوەی <xliff:g id="city">%s</xliff:g>?</string>
   <string name="cities_delete_city_failed">نەتوانرا ئەو شارە بسڕێتەوە</string>
   <string name="flip_action_title">بە دەمەوە دانان</string>
+  <string name="flip_action_dialog_title" product="tablet">ته‌قله‌ لێدان به‌ تابلێت بۆ \u2026</string>
+  <string name="flip_action_dialog_title" product="default">ته‌قله‌ لێدان به‌ مۆبایل بۆ \u2026</string>
+  <string name="flip_action_summary" product="tablet">ته‌قله‌ لێدان به‌ تابلێت بۆ خواره‌وه‌ بۆ <xliff:g id="action">%s</xliff:g></string>
+  <string name="flip_action_summary" product="default">ته‌قله‌ لێدان به‌ ئامێر بۆ خواره‌وه‌ بۆ <xliff:g id="action">%s</xliff:g></string>
   <string name="shake_action_title">کرداری جوڵاندن</string>
+  <string name="shake_action_dialog_title" product="tablet">له‌رینه‌وه‌ی تابلێت بۆ \u2026</string>
+  <string name="shake_action_dialog_title" product="default">له‌رینه‌وه‌ی مۆبایله‌که‌ بۆ \u2026</string>
+  <string name="shake_action_summary" product="tablet">له‌رینه‌وه‌ی تابلێت <xliff:g id="action">%s</xliff:g></string>
+  <string name="shake_action_summary" product="default">له‌رینه‌وه‌ی ئامێر <xliff:g id="action">%s</xliff:g></string>
   <string name="action_summary_snooze">دوبارەکردنەوەی زەنگ</string>
   <string name="action_summary_dismiss">لابردنی جەڕەس</string>
   <string name="action_summary_do_nothing">هیچ کارێك مەکە</string>
   <string name="alarm_picker_title">هەڵبژاردنی جۆری زەنگ</string>
   <string name="alarm_type_ringtone">زەنگەکان</string>
   <string name="alarm_type_random">خوازراوانە</string>
+  <string name="warn_silent_alarm_title">ده‌نگی ئاگادارکه‌ره‌وه‌ بێده‌نگه‌
+30</string>
 </resources>
