@@ -73,6 +73,7 @@
             style="@style/bold_button"
             android:contentDescription="@string/timer_stop"
             android:layout_height="wrap_content"
+            android:textColor="@color/clock_white"
             android:focusable="true" />
 
         <ImageButton
