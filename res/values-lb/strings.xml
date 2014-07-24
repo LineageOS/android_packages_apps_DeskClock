@@ -16,6 +16,11 @@
 -->
 <resources xmlns:xliff="urn:oasis:names:tc:xliff:document:1.2">
   <string name="app_label">Auer</string>
+  <string name="add_alarm">Wecker dobäisetzen</string>
+  <string name="menu_edit_alarm">Wecker änneren</string>
+  <string name="delete_alarm">Wecker läschen</string>
+  <string name="enable_alarm">Wecker uschalten</string>
+  <string name="show_clock">Auer uweisen</string>
   <string name="default_label">Wecker</string>
   <string name="set_alarm">Wecker setzen</string>
   <string name="alarm_vibrate">Vibréieren</string>
@@ -47,6 +52,7 @@
   </string-array>
   <string name="delete">Läschen</string>
   <string name="alarm_volume_title">Weckerlautstäerkt</string>
+  <string name="silent_alarm_summary">Roueg</string>
   <string-array name="volume_button_setting_entries">
     <item>Snooze</item>
     <item>Verwerfen</item>
@@ -75,6 +81,7 @@
     <item quantity="one">1 Sekonn</item>
     <item quantity="other"><xliff:g id="count">%d</xliff:g> Sekonnen</item>
   </plurals>
+  <string name="timer_delete">Läschen</string>
   <plurals name="timers_num">
     <item quantity="one">1 Minutt</item>
     <item quantity="other"><xliff:g id="count">%d</xliff:g> Minutten</item>
