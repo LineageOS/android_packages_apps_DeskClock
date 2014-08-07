@@ -112,7 +112,7 @@
     <item>لابردن</item>
     <item>هیچ نه‌کرێت</item>
   </string-array>
-  <string name="default_ringtone_setting_title">دیاریکردنی زه‌نگی بنه‌ڕه‌ت</string>
+  <string name="default_ringtone_setting_title">دیاریکردنی زه‌نگی بنێڕه‌ت</string>
   <string name="alarm_button_description">ئاگادارکردنه‌وه‌</string>
   <string name="gallery_button_description">پێشەنگا</string>
   <string name="music_button_description">مۆسیقا</string>
