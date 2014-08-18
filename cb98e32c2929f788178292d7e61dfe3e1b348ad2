@@ -1,0 +1,21 @@
+{
+  "comments": [
+    {
+      "key": {
+        "uuid": "7a1b2928_303718e5",
+        "filename": "src/com/android/deskclock/alarms/AlarmStateManager.java",
+        "patchSetId": 1
+      },
+      "lineNbr": 795,
+      "author": {
+        "id": 1063
+      },
+      "writtenOn": "2014-08-18T19:48:02Z",
+      "side": 1,
+      "message": "Won\u0027t this cause an ANR? AFAICT DeskClock is essentially busy waiting with this, because the scheduleInstanceChange() line below will cause the alarm to be scheduled right again, causing the next 1 second sleep.",
+      "revId": "cb98e32c2929f788178292d7e61dfe3e1b348ad2",
+      "serverId": "1ec6b3db-b2c1-4fa4-84a2-4c7efe89ba71",
+      "unresolved": false
+    }
+  ]
+}
