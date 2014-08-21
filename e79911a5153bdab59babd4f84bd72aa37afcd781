@@ -1,0 +1,38 @@
+{
+  "comments": [
+    {
+      "key": {
+        "uuid": "7a1b2928_b3996f22",
+        "filename": "res/values/array.xml",
+        "patchSetId": 2
+      },
+      "lineNbr": 528,
+      "author": {
+        "id": 5681
+      },
+      "writtenOn": "2014-08-21T23:21:09Z",
+      "side": 1,
+      "message": "Kiev again?",
+      "revId": "e79911a5153bdab59babd4f84bd72aa37afcd781",
+      "serverId": "1ec6b3db-b2c1-4fa4-84a2-4c7efe89ba71",
+      "unresolved": false
+    },
+    {
+      "key": {
+        "uuid": "7a1b2928_139f8304",
+        "filename": "res/values/array.xml",
+        "patchSetId": 2
+      },
+      "lineNbr": 673,
+      "author": {
+        "id": 5681
+      },
+      "writtenOn": "2014-08-21T23:21:09Z",
+      "side": 1,
+      "message": "Kiev again?",
+      "revId": "e79911a5153bdab59babd4f84bd72aa37afcd781",
+      "serverId": "1ec6b3db-b2c1-4fa4-84a2-4c7efe89ba71",
+      "unresolved": false
+    }
+  ]
+}
