@@ -2,6 +2,23 @@
   "comments": [
     {
       "key": {
+        "uuid": "7a1b2928_3309df32",
+        "filename": "res/values-zh-rCN/array.xml",
+        "patchSetId": 2
+      },
+      "lineNbr": 308,
+      "author": {
+        "id": 9813
+      },
+      "writtenOn": "2014-08-22T05:37:38Z",
+      "side": 1,
+      "message": "This is also Kiev. We have two msgid\u0027s that map to Kiev in every translated cities_names array. 4477669700025211678 and 3262376108426000449.",
+      "revId": "e79911a5153bdab59babd4f84bd72aa37afcd781",
+      "serverId": "1ec6b3db-b2c1-4fa4-84a2-4c7efe89ba71",
+      "unresolved": false
+    },
+    {
+      "key": {
         "uuid": "7a1b2928_b3996f22",
         "filename": "res/values/array.xml",
         "patchSetId": 2
