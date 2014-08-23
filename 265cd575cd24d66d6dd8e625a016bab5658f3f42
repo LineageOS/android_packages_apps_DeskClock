@@ -1,0 +1,21 @@
+{
+  "comments": [
+    {
+      "key": {
+        "uuid": "7a1b2928_31355746",
+        "filename": "AndroidManifest.xml",
+        "patchSetId": 3
+      },
+      "lineNbr": 145,
+      "author": {
+        "id": 9813
+      },
+      "writtenOn": "2014-08-23T06:55:19Z",
+      "side": 1,
+      "message": "oh lovely, more arbitrary numbers in system components, but at least they\u0027re consistent with the rest of the tree.",
+      "revId": "265cd575cd24d66d6dd8e625a016bab5658f3f42",
+      "serverId": "1ec6b3db-b2c1-4fa4-84a2-4c7efe89ba71",
+      "unresolved": false
+    }
+  ]
+}
