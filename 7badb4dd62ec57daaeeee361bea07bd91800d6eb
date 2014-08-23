@@ -1,0 +1,21 @@
+{
+  "comments": [
+    {
+      "key": {
+        "uuid": "7a1b2928_513c532f",
+        "filename": "src/com/android/deskclock/worldclock/CitiesActivity.java",
+        "patchSetId": 4
+      },
+      "lineNbr": 673,
+      "author": {
+        "id": 9813
+      },
+      "writtenOn": "2014-08-23T06:59:09Z",
+      "side": 1,
+      "message": "DONE seems a bit weird from a user perspective, but the IME action itself doesn\u0027t do anything so SEARCH isn\u0027t really a better alternative.",
+      "revId": "7badb4dd62ec57daaeeee361bea07bd91800d6eb",
+      "serverId": "1ec6b3db-b2c1-4fa4-84a2-4c7efe89ba71",
+      "unresolved": false
+    }
+  ]
+}
