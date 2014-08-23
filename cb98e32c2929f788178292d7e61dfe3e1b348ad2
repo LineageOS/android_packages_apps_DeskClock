@@ -16,6 +16,24 @@
       "revId": "cb98e32c2929f788178292d7e61dfe3e1b348ad2",
       "serverId": "1ec6b3db-b2c1-4fa4-84a2-4c7efe89ba71",
       "unresolved": false
+    },
+    {
+      "key": {
+        "uuid": "7a1b2928_b19327fa",
+        "filename": "src/com/android/deskclock/alarms/AlarmStateManager.java",
+        "patchSetId": 1
+      },
+      "lineNbr": 795,
+      "author": {
+        "id": 9813
+      },
+      "writtenOn": "2014-08-23T09:14:33Z",
+      "side": 1,
+      "message": "Ugly code, and yeah it probably would cause an ANR, also who sleeps on the main thread? Even a postDelayed runnable for this would be better, but it\u0027s not the best way to go.",
+      "parentUuid": "7a1b2928_303718e5",
+      "revId": "cb98e32c2929f788178292d7e61dfe3e1b348ad2",
+      "serverId": "1ec6b3db-b2c1-4fa4-84a2-4c7efe89ba71",
+      "unresolved": false
     }
   ]
 }
