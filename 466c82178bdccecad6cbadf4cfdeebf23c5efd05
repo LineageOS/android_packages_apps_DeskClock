@@ -1,0 +1,21 @@
+{
+  "comments": [
+    {
+      "key": {
+        "uuid": "7a1b2928_71898fca",
+        "filename": "src/com/android/deskclock/alarms/AlarmStateManager.java",
+        "patchSetId": 3
+      },
+      "lineNbr": 794,
+      "author": {
+        "id": 9813
+      },
+      "writtenOn": "2014-08-23T07:38:33Z",
+      "side": 1,
+      "message": "This should be handled in AlarmStateManager#setDismissState IMO",
+      "revId": "466c82178bdccecad6cbadf4cfdeebf23c5efd05",
+      "serverId": "1ec6b3db-b2c1-4fa4-84a2-4c7efe89ba71",
+      "unresolved": false
+    }
+  ]
+}
