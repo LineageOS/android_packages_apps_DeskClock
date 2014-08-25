@@ -435,31 +435,6 @@ public final class AlarmStateManager extends BroadcastReceiver {
     }
 
     /**
-     * This will set the alarm instance to the one minute late and update
-     * the application notifications and schedule any state changes that need
-     * to occur in the future.
-     *
-     * @param context application context
-     * @param instance to set state to
-     */
-    public static void setOneminutelate(Context context, AlarmInstance instance) {
-        AlarmService.stopAlarm(context, instance);
-        int snoozeMinutes = 1;
-
-        // Set alarm time to next minute.Update alarm state and new alarm time in db.
-        Calendar newAlarmTime = Calendar.getInstance();
-        newAlarmTime.add(Calendar.MINUTE, snoozeMinutes);
-        instance.setAlarmTime(newAlarmTime);
-        instance.mAlarmState = AlarmInstance.SNOOZE_STATE;
-        AlarmInstance.updateInstance(context.getContentResolver(), instance);
-        scheduleInstanceStateChange(context, instance.getAlarmTime(),
-                instance, AlarmInstance.FIRED_STATE);
-
-        // Instance time changed, so find next alarm that will fire and notify system
-        updateNextAlarm(context);
-    }
-
-    /**
      * This will set the alarm instance to the MISSED_STATE and update
      * the application notifications and schedule any state changes that need
      * to occur in the future.
@@ -804,49 +779,36 @@ public final class AlarmStateManager extends BroadcastReceiver {
     }
 
     /**
-     * Make the alarm snooze for one second.If the phone is still busy in call,
-     * this method will be called again to snooze for another one second.
+     * Make the alarm snooze based on the snooze interval in settings.
      * If the phone is not busy in call anymore, this method will not be
-     * called, and the alarm will wake up within one second.
+     * called, and the alarm will wake up based on snooze interval.
      */
     private void snooze(Context context, Intent intent, AlarmInstance instance) {
-        Calendar currentTime = Calendar.getInstance();
-        if ((currentTime.get(Calendar.SECOND) < 57)
-                && (currentTime.get(Calendar.MINUTE) == instance.mMinute)) {
-            try {
-                Thread.sleep(1000);
-            } catch (InterruptedException ex) {}
-            Uri uri = intent.getData();
-            AlarmInstance newInstance = AlarmInstance.getInstance(context.getContentResolver(),
-                    AlarmInstance.getId(uri));
-            if (newInstance == null) {
-                // If AlarmInstance is turn to null,return.
-                return;
-            }
-
-            // Notify the user that the alarm has been snoozed.
-            Intent cancelSnooze = createStateChangeIntent(context, ALARM_MANAGER_TAG, newInstance,
-                    AlarmInstance.DISMISSED_STATE);
-            PendingIntent broadcast = PendingIntent.getBroadcast(context, instance.hashCode(),
-                    cancelSnooze, 0);
-            String label = newInstance.getLabelOrDefault(context);
-            label = context.getString(R.string.alarm_notify_snooze_label, label);
-            NotificationManager nm = (NotificationManager) context
-                    .getSystemService(Context.NOTIFICATION_SERVICE);
-            Notification n = new Notification(R.drawable.stat_notify_alarm, label, 0);
-            n.setLatestEventInfo(context, label,
-                    context.getString(R.string.alarm_notify_snooze_text,
-                            AlarmUtils.getFormattedTime(context, instance.getAlarmTime())),
-                    broadcast);
-            n.flags |= Notification.FLAG_AUTO_CANCEL | Notification.FLAG_ONGOING_EVENT;
-            nm.notify(instance.hashCode(), n);
-
-            scheduleInstanceStateChange(context, newInstance.getAlarmTime(), newInstance,
-                    AlarmInstance.FIRED_STATE);
-        } else {
-            // when alarm is about to overtime,let it snooze to next minute
-            setOneminutelate(context, instance);
+        Uri uri = intent.getData();
+        AlarmInstance newInstance = AlarmInstance.getInstance(context.getContentResolver(),
+                AlarmInstance.getId(uri));
+        if (newInstance == null) {
+            // If AlarmInstance is turn to null,return.
+            return;
         }
+
+        // Notify the user that the alarm has been snoozed.
+        Intent cancelSnooze = createStateChangeIntent(context, ALARM_MANAGER_TAG, newInstance,
+                AlarmInstance.DISMISSED_STATE);
+        PendingIntent broadcast = PendingIntent.getBroadcast(context, instance.hashCode(),
+                cancelSnooze, 0);
+        String label = newInstance.getLabelOrDefault(context);
+        label = context.getString(R.string.alarm_notify_snooze_label, label);
+        NotificationManager nm = (NotificationManager) context
+                .getSystemService(Context.NOTIFICATION_SERVICE);
+        Notification n = new Notification(R.drawable.stat_notify_alarm, label, 0);
+        n.setLatestEventInfo(context, label,
+                context.getString(R.string.alarm_notify_snooze_text,
+                        AlarmUtils.getFormattedTime(context, instance.getAlarmTime())),
+                broadcast);
+        n.flags |= Notification.FLAG_AUTO_CANCEL | Notification.FLAG_ONGOING_EVENT;
+        nm.notify(instance.hashCode(), n);
+        setAlarmState(context, instance, AlarmInstance.SNOOZE_STATE);
     }
 
     public static void setRtcPowerUp(Context context, boolean isRtcPowerUp) {
