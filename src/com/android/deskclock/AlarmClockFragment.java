@@ -790,12 +790,11 @@ public class AlarmClockFragment extends DeskClockFragment implements
                 .setTitle(getResources().getString(R.string.alarm_select))
                 .setSingleChoiceItems(
                         new String[] {
-                                getResources().getString(R.string.alarm_select_ringtone),
-                                getResources().getString(R.string.alarm_select_external) },
+                                getString(R.string.alarm_select_ringtone),
+                                getString(R.string.alarm_select_external) },
                         mSelectSource, listener)
-                .setPositiveButton(getResources().getString(R.string.alarm_select_ok),listener)
-                .setNegativeButton(getResources().getString(
-                        R.string.alarm_select_cancel),listener)
+                .setPositiveButton(getString(android.R.string.ok), listener)
+                .setNegativeButton(getString(android.R.string.cancel), listener)
                 .show();
     }
 
