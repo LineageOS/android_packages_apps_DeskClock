@@ -52,4 +52,8 @@
   <string name="alarm_type_ringtone">벨소리</string>
   <string name="alarm_type_random">무작위</string>
   <string name="warn_silent_alarm_title">알람 볼륨이 무음입니다</string>
+  <string name="alarm_select">알람 선택</string>
+  <string name="alarm_select_ringtone">벨소리</string>
+  <string name="alarm_select_external">음악</string>
+  <string name="ringtone_default">"기본 벨소리"</string>
 </resources>

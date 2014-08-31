@@ -54,4 +54,8 @@
   <string name="alarm_type_random">خوازراوانە</string>
   <string name="warn_silent_alarm_title">ده‌نگی ئاگادارکه‌ره‌وه‌ بێده‌نگه‌
 30</string>
+  <string name="alarm_select">دیاریکردنی ئاگادارکه‌ره‌وه‌</string>
+  <string name="alarm_select_ringtone">زەنگی تەلەفون</string>
+  <string name="alarm_select_external">گۆرانی</string>
+  <string name="ringtone_default">"زه‌نگی بنه‌ڕه‌تی"</string>
 </resources>

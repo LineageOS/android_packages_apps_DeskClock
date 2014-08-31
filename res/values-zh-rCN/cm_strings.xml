@@ -52,10 +52,8 @@
   <string name="alarm_type_ringtone">铃声</string>
   <string name="alarm_type_random">随机</string>
   <string name="warn_silent_alarm_title">闹钟音量为静音</string>
-  <string name="alarm_select">选择铃声</string>
+  <string name="alarm_select">选择闹钟</string>
   <string name="alarm_select_ringtone">铃声</string>
   <string name="alarm_select_external">音乐</string>
-  <string name="alarm_select_ok">确定</string>
-  <string name="alarm_select_cancel">取消</string>
   <string name="ringtone_default">"默认铃声"</string>
 </resources>

@@ -52,4 +52,8 @@
   <string name="alarm_type_ringtone">Ringetone</string>
   <string name="alarm_type_random">Tilfældig</string>
   <string name="warn_silent_alarm_title">Alarmen er sat på lydløs</string>
+  <string name="alarm_select">Vælg alarm</string>
+  <string name="alarm_select_ringtone">Ringetone</string>
+  <string name="alarm_select_external">Musik</string>
+  <string name="ringtone_default">"Standardringetone"</string>
 </resources>
