@@ -712,7 +712,7 @@ public class AlarmClockFragment extends DeskClockFragment implements
                                 launchSingleRingTonePicker(alarm);
                                 break;
                             case 1:
-                                alarm.alert = MultiPlayer.RANDOM_URI;
+                                alarm.alert = AlarmMediaPlayer.RANDOM_URI;
                                 asyncUpdateAlarm(alarm, false);
                                 break;
                         }
@@ -1557,7 +1557,7 @@ public class AlarmClockFragment extends DeskClockFragment implements
             // Try the cache first
             String title = mRingtoneTitleCache.getString(uri.toString());
             if (title == null) {
-                if (uri.equals(MultiPlayer.RANDOM_URI)) {
+                if (uri.equals(AlarmMediaPlayer.RANDOM_URI)) {
                     title = mContext.getResources().getString(R.string.alarm_type_random);
                 } else {
                     // This is slow because a media player is created during Ringtone object creation.
