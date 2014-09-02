@@ -16,6 +16,24 @@
       "revId": "a1038803af9270496fd6caa66b48c59478d0607a",
       "serverId": "1ec6b3db-b2c1-4fa4-84a2-4c7efe89ba71",
       "unresolved": false
+    },
+    {
+      "key": {
+        "uuid": "7a1b2928_30f89fe5",
+        "filename": "src/com/android/deskclock/AlarmClockFragment.java",
+        "patchSetId": 1
+      },
+      "lineNbr": 869,
+      "author": {
+        "id": 3134
+      },
+      "writtenOn": "2014-09-02T21:05:19Z",
+      "side": 1,
+      "message": "Yeah, and maybe a toast advising about the problem that leads to no ringtone. I\u0027ll add later today.",
+      "parentUuid": "7a1b2928_9013735c",
+      "revId": "a1038803af9270496fd6caa66b48c59478d0607a",
+      "serverId": "1ec6b3db-b2c1-4fa4-84a2-4c7efe89ba71",
+      "unresolved": false
     }
   ]
 }
