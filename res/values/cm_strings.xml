@@ -92,4 +92,7 @@
 
     <!-- Ringtone selection default" -->
     <string name="ringtone_default">"Default ringtone"</string>
+
+    <!-- Message that describe an error trying to take a persistent grant permission for an uri ringtone -->
+    <string name="take_persistent_grant_uri_permission_failed_msg">Failed to take persistent grant permission for ringtone</string>
 </resources>
