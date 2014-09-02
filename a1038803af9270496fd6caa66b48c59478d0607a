@@ -1,0 +1,21 @@
+{
+  "comments": [
+    {
+      "key": {
+        "uuid": "7a1b2928_9013735c",
+        "filename": "src/com/android/deskclock/AlarmClockFragment.java",
+        "patchSetId": 1
+      },
+      "lineNbr": 869,
+      "author": {
+        "id": 1063
+      },
+      "writtenOn": "2014-09-02T19:56:17Z",
+      "side": 1,
+      "message": "Maybe set uri to null here?",
+      "revId": "a1038803af9270496fd6caa66b48c59478d0607a",
+      "serverId": "1ec6b3db-b2c1-4fa4-84a2-4c7efe89ba71",
+      "unresolved": false
+    }
+  ]
+}
