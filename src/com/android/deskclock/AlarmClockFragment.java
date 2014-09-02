@@ -33,6 +33,7 @@ import android.content.Context;
 import android.content.DialogInterface;
 import android.content.Intent;
 import android.content.Loader;
+import android.content.UriPermission;
 import android.content.res.Configuration;
 import android.content.res.Resources;
 import android.database.ContentObserver;
@@ -89,6 +90,7 @@ import java.io.File;
 import java.text.DateFormatSymbols;
 import java.util.Calendar;
 import java.util.HashSet;
+import java.util.List;
 import java.util.Locale;
 import java.util.UUID;
 import java.util.concurrent.ConcurrentHashMap;
@@ -728,7 +730,7 @@ public class AlarmClockFragment extends DeskClockFragment implements
                 false);
             AlarmClockFragment.this.startActivityForResult(intent, REQUEST_CODE_RINGTONE);
         } else {
-            final Intent intent = new Intent(Intent.ACTION_GET_CONTENT);
+            final Intent intent = new Intent(Intent.ACTION_OPEN_DOCUMENT);
             intent.putExtra(RingtoneManager.EXTRA_RINGTONE_EXISTING_URI,
                 AlarmClockFragment.this.mSelectedAlarm.alert);
             intent.setType(SEL_AUDIO_SRC);
@@ -807,12 +809,69 @@ public class AlarmClockFragment extends DeskClockFragment implements
         startActivityForResult(intent, REQUEST_CODE_PROFILE);
     }
 
+    private void releaseRingtoneUri(Uri uri) {
+        final ContentResolver cr = getActivity().getContentResolver();
+        if (uri == null || mAdapter == null) {
+            return;
+        }
+
+        // Check that the uri is currently persisted
+        boolean containsUri = false;
+        for (UriPermission uriPermission : cr.getPersistedUriPermissions()) {
+            if (uriPermission.getUri().compareTo(uri) == 0) {
+                containsUri = true;
+                break;
+            }
+        }
+        if (!containsUri) {
+            return;
+        }
+
+        // Check that only one uri is in use
+        int found = 0;
+        int count = mAdapter.getCount();
+        for (int i = 0; i < count; i++) {
+            Alarm alarm = new Alarm((Cursor) mAdapter.getItem(i));
+            if (alarm.alert != null && uri.compareTo(alarm.alert) == 0) {
+                found++;
+                if (found > 1) {
+                    break;
+                }
+            }
+        }
+        if (found == 1) {
+            // Release current granted uri
+            try {
+                if (uri != null) {
+                    getActivity().getContentResolver().releasePersistableUriPermission(
+                            uri, Intent.FLAG_GRANT_READ_URI_PERMISSION);
+                }
+            } catch (SecurityException e) {
+                // Ignore
+            }
+        }
+    }
+
     private Uri getRingtoneUri(Intent intent) {
+        // Release the current ringtone uri
+        releaseRingtoneUri(mSelectedAlarm.alert);
+
         Uri uri;
         if (mSelectSource == SEL_SRC_RINGTONE) {
             uri = intent.getParcelableExtra(RingtoneManager.EXTRA_RINGTONE_PICKED_URI);
         } else {
             uri = intent.getData();
+            if (uri != null) {
+                try {
+                    getActivity().getContentResolver().takePersistableUriPermission(
+                            uri, Intent.FLAG_GRANT_READ_URI_PERMISSION);
+                } catch (SecurityException ex) {
+                    Log.e("Unable to take persistent grant permission for uri " + uri, ex);
+                    uri = null;
+                    final int msgId = R.string.take_persistent_grant_uri_permission_failed_msg;
+                    Toast.makeText(getActivity(), msgId, Toast.LENGTH_SHORT).show();
+                }
+            }
         }
         if (uri == null) {
             uri = Alarm.NO_RINGTONE_URI;
@@ -2060,6 +2119,9 @@ public class AlarmClockFragment extends DeskClockFragment implements
             protected Void doInBackground(Void... parameters) {
                 // Activity may be closed at this point , make sure data is still valid
                 if (context != null && alarm != null) {
+                    // Release the alarm ringtone uri
+                    releaseRingtoneUri(alarm.alert);
+
                     ContentResolver cr = context.getContentResolver();
                     AlarmStateManager.deleteAllInstances(context, alarm.id);
                     Alarm.deleteAlarm(cr, alarm.id);
@@ -2098,6 +2160,16 @@ public class AlarmClockFragment extends DeskClockFragment implements
                 if (context != null && alarm != null) {
                     ContentResolver cr = context.getContentResolver();
 
+                    // Register/Update the ringtone uri
+                    if (alarm.alert != null) {
+                        try {
+                            getActivity().getContentResolver().takePersistableUriPermission(
+                                    alarm.alert, Intent.FLAG_GRANT_READ_URI_PERMISSION);
+                        } catch (SecurityException ex) {
+                            // Ignore
+                        }
+                    }
+
                     // Add alarm to db
                     Alarm newAlarm = Alarm.addAlarm(cr, alarm);
                     mScrollToAlarmId = newAlarm.id;
@@ -2127,6 +2199,16 @@ public class AlarmClockFragment extends DeskClockFragment implements
             @Override
             protected AlarmInstance doInBackground(Void ... parameters) {
                 ContentResolver cr = context.getContentResolver();
+
+                // Register/Update the ringtone uri
+                if (alarm.alert != null) {
+                    try {
+                        getActivity().getContentResolver().takePersistableUriPermission(
+                                alarm.alert, Intent.FLAG_GRANT_READ_URI_PERMISSION);
+                    } catch (SecurityException ex) {
+                        // Ignore
+                    }
+                }
 
                 // Dismiss all old instances
                 AlarmStateManager.deleteAllInstances(context, alarm.id);
