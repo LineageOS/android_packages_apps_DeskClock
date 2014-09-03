@@ -38,7 +38,7 @@ import java.io.IOException;
  * Manages playing ringtone and vibrating the device.
  */
 public class AlarmKlaxon {
-    private static final long[] sVibratePattern = new long[] { 500, 500 };
+    /* package */ static final long[] sVibratePattern = new long[] { 500, 500 };
 
     // Volume suggested by media team for in-call alarms.
     private static final float IN_CALL_VOLUME = 0.125f;
