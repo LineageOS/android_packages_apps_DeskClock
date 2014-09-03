@@ -1,4 +1,7 @@
 /*
+ * Copyright (c) 2014, The Linux Foundation. All rights reserved.
+ * Not a Contribution.
+ *
  * Copyright (C) 2013 The Android Open Source Project
  *
  * Licensed under the Apache License, Version 2.0 (the "License");
@@ -425,8 +428,13 @@ public final class AlarmInstance implements ClockContract.InstancesColumns {
      * @return the time when alarm should be silence, or null if never
      */
     public Calendar getTimeout(Context context) {
-        String timeoutSetting = Utils.getDefaultSharedPreferences(context)
-                .getString(SettingsActivity.KEY_AUTO_SILENCE, DEFAULT_ALARM_TIMEOUT_SETTING);
+        String timeoutSetting = PreferenceManager.getDefaultSharedPreferences(context)
+                .getString(SettingsActivity.KEY_AUTO_SILENCE, null);
+        if (timeoutSetting == null) {
+            timeoutSetting = context.getResources()
+                    .getString(R.string.default_auto_silence_value);
+        }
+
         int timeoutMinutes = Integer.parseInt(timeoutSetting);
 
         // Alarm silence has been set to "None"

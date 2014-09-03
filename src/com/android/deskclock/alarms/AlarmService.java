@@ -1,4 +1,7 @@
 /*
+ * Copyright (c) 2014, The Linux Foundation. All rights reserved.
+ * Not a Contribution.
+ *
  * Copyright (C) 2013 The Android Open Source Project
  *
  * Licensed under the Apache License, Version 2.0 (the "License");
@@ -109,7 +112,11 @@ public class AlarmService extends Service {
             // we register onCallStateChanged, we get the initial in-call state
             // which kills the alarm. Check against the initial call state so
             // we don't kill the alarm during a call.
-            if (state != TelephonyManager.CALL_STATE_IDLE && state != mInitialCallState) {
+            if (AlarmService.this.getResources().getBoolean(R.bool.config_silent_during_call)
+                    && state != TelephonyManager.CALL_STATE_IDLE) {
+                sendBroadcast(AlarmStateManager.createStateChangeIntent(AlarmService.this,
+                        "AlarmService", mCurrentAlarm, AlarmInstance.MISSED_STATE));
+            } else if (state != TelephonyManager.CALL_STATE_IDLE && state != mInitialCallState) {
                 startService(AlarmStateManager.createStateChangeIntent(AlarmService.this,
                         "AlarmService", mCurrentAlarm, AlarmInstance.MISSED_STATE));
             }

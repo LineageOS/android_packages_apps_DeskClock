@@ -1,5 +1,8 @@
 <?xml version="1.0" encoding="utf-8"?>
-<!-- Copyright (C) 2011 The Android Open Source Project
+<!-- Copyright (c) 2014, The Linux Foundation. All rights reserved.
+     Not a Contribution.
+
+     Copyright (C) 2011 The Android Open Source Project
 
      Licensed under the Apache License, Version 2.0 (the "License");
      you may not use this file except in compliance with the License.
@@ -25,4 +28,6 @@
     <item type="integer" name="world_clocks_per_row">1</item>
     <!-- Number of world clocks in a row, for the digital appwidget. -->
     <item type="integer" name="appwidget_world_clocks_per_row">2</item>
+    <bool name="config_ring_alarm_force">false</bool>
+    <bool name="config_silent_during_call">false</bool>
 </resources>
