@@ -1,4 +1,7 @@
 /*
+ * Copyright (c) 2014, The Linux Foundation. All rights reserved.
+ * Not a Contribution.
+ *
  * Copyright (C) 2013 The Android Open Source Project
  *
  * Licensed under the Apache License, Version 2.0 (the "License");
@@ -140,7 +143,16 @@ public class AlarmKlaxon {
             audioManager.requestAudioFocus(null,
                     AudioManager.STREAM_ALARM, AudioManager.AUDIOFOCUS_GAIN_TRANSIENT);
             player.start();
-        }
+        } else if (context.getResources().getBoolean(R.bool.config_ring_alarm_force)) {
+            audioManager.setStreamVolume(AudioManager.STREAM_ALARM,
+                    audioManager.getStreamMaxVolume(AudioManager.STREAM_ALARM), 0);
+            player.setAudioStreamType(AudioManager.STREAM_ALARM);
+            player.setLooping(true);
+            player.prepare();
+            audioManager.requestAudioFocus(null,
+                    AudioManager.STREAM_ALARM, AudioManager.AUDIOFOCUS_GAIN_TRANSIENT);
+            player.start();
+         }
     }
 
     private static void setDataSourceFromResource(Context context, MediaPlayer player, int res)

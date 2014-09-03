@@ -1,4 +1,7 @@
 /*
+ * Copyright (c) 2014, The Linux Foundation. All rights reserved.
+ * Not a Contribution.
+ *
  * Copyright (C) 2013 The Android Open Source Project
  *
  * Licensed under the Apache License, Version 2.0 (the "License");
@@ -26,6 +29,7 @@ import android.telephony.TelephonyManager;
 import com.android.deskclock.AlarmAlertWakeLock;
 import com.android.deskclock.LogUtils;
 import com.android.deskclock.provider.AlarmInstance;
+import com.android.deskclock.R;
 
 /**
  * This service is in charge of starting/stoping the alarm. It will bring up and manage the
@@ -86,7 +90,11 @@ public class AlarmService extends Service {
             // we register onCallStateChanged, we get the initial in-call state
             // which kills the alarm. Check against the initial call state so
             // we don't kill the alarm during a call.
-            if (state != TelephonyManager.CALL_STATE_IDLE && state != mInitialCallState) {
+            if (AlarmService.this.getResources().getBoolean(R.bool.config_silent_during_call)
+                    && state != TelephonyManager.CALL_STATE_IDLE) {
+                sendBroadcast(AlarmStateManager.createStateChangeIntent(AlarmService.this,
+                        "AlarmService", mCurrentAlarm, AlarmInstance.MISSED_STATE));
+            } else if (state != TelephonyManager.CALL_STATE_IDLE && state != mInitialCallState) {
                 sendBroadcast(AlarmStateManager.createStateChangeIntent(AlarmService.this,
                         "AlarmService", mCurrentAlarm, AlarmInstance.MISSED_STATE));
                 stopCurrentAlarm();
