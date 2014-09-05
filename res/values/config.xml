@@ -23,6 +23,7 @@
     <bool name="config_requiresScreenSaver">true</bool>
     <bool name="config_dockAppEnabled">true</bool>
     <bool name="config_rotateAlarmAlert">false</bool>
+    <bool name="config_delayalarm">false</bool>
     <item type="integer" name="timer_column_count">1</item>
     <!-- Number of world clocks in a row, for the clock tab. -->
     <item type="integer" name="world_clocks_per_row">1</item>
