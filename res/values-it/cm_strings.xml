@@ -52,8 +52,4 @@
   <string name="alarm_type_ringtone">Suoneria</string>
   <string name="alarm_type_random">Casuale</string>
   <string name="warn_silent_alarm_title">Volume sveglia silenzioso</string>
-  <string name="alarm_select">Selezionare allarme</string>
-  <string name="alarm_select_ringtone">Suoneria</string>
-  <string name="alarm_select_external">Musica</string>
-  <string name="ringtone_default">"Suoneria predefinita"</string>
 </resources>

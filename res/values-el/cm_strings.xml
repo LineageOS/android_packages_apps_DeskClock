@@ -52,8 +52,4 @@
   <string name="alarm_type_ringtone">Ήχος</string>
   <string name="alarm_type_random">Τυχαίο</string>
   <string name="warn_silent_alarm_title">Το ξυπνητήρι είναι αθόρυβο</string>
-  <string name="alarm_select">Επιλογή ξυπνητηριού</string>
-  <string name="alarm_select_ringtone">Ήχος</string>
-  <string name="alarm_select_external">Μουσική</string>
-  <string name="ringtone_default">"Προεπιλεγμένος ήχος"</string>
 </resources>

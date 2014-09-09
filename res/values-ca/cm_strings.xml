@@ -52,8 +52,4 @@
   <string name="alarm_type_ringtone">To de trucada</string>
   <string name="alarm_type_random">A l\'atzar</string>
   <string name="warn_silent_alarm_title">El volum de l\'alarma està en silenci</string>
-  <string name="alarm_select">Selecciona alarma</string>
-  <string name="alarm_select_ringtone">To de trucada</string>
-  <string name="alarm_select_external">Música</string>
-  <string name="ringtone_default">"To de trucada per defecte"</string>
 </resources>

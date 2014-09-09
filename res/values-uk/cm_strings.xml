@@ -52,8 +52,4 @@
   <string name="alarm_type_ringtone">Мелодія</string>
   <string name="alarm_type_random">Випадкова мелодія</string>
   <string name="warn_silent_alarm_title">Звук будильника вимкнено</string>
-  <string name="alarm_select">Обрати сигнал</string>
-  <string name="alarm_select_ringtone">Рінгтон</string>
-  <string name="alarm_select_external">Музика</string>
-  <string name="ringtone_default">"Типовий рінгтон"</string>
 </resources>

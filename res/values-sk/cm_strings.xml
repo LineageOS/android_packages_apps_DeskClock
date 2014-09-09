@@ -52,8 +52,4 @@
   <string name="alarm_type_ringtone">Tón zvonenia</string>
   <string name="alarm_type_random">Náhodne</string>
   <string name="warn_silent_alarm_title">Hlasitosť budíka je tichá</string>
-  <string name="alarm_select">Vyberte budík</string>
-  <string name="alarm_select_ringtone">Zvonenie</string>
-  <string name="alarm_select_external">Hudba</string>
-  <string name="ringtone_default">"Predvolené zvonenie"</string>
 </resources>

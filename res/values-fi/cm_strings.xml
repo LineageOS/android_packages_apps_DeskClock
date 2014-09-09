@@ -52,8 +52,4 @@
   <string name="alarm_type_ringtone">Soittoääni</string>
   <string name="alarm_type_random">Satunnainen</string>
   <string name="warn_silent_alarm_title">Hälytyksen äänenvoimakkuus on äänettömällä</string>
-  <string name="alarm_select">Valitse hälytys</string>
-  <string name="alarm_select_ringtone">Soittoääni</string>
-  <string name="alarm_select_external">Musiikki</string>
-  <string name="ringtone_default">"Oletussoittoääni"</string>
 </resources>

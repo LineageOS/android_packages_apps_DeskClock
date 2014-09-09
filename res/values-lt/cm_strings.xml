@@ -52,8 +52,4 @@
   <string name="alarm_type_ringtone">Skambėjimo tonas</string>
   <string name="alarm_type_random">Atsitiktinis</string>
   <string name="warn_silent_alarm_title">Žadintuvo garsumas yra tylus</string>
-  <string name="alarm_select">Pasirinkti signalą</string>
-  <string name="alarm_select_ringtone">Skambučio melodija</string>
-  <string name="alarm_select_external">Muzika</string>
-  <string name="ringtone_default">"Numatytoji skambučio melodija"</string>
 </resources>

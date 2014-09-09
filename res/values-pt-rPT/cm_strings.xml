@@ -52,8 +52,4 @@
   <string name="alarm_type_ringtone">Toque</string>
   <string name="alarm_type_random">Aleatoriamente</string>
   <string name="warn_silent_alarm_title">Alarme sem som</string>
-  <string name="alarm_select">Selecione alarme</string>
-  <string name="alarm_select_ringtone">Toque</string>
-  <string name="alarm_select_external">Música</string>
-  <string name="ringtone_default">"Toque predefinido"</string>
 </resources>

@@ -52,8 +52,4 @@
   <string name="alarm_type_ringtone">Beltoon</string>
   <string name="alarm_type_random">Willekeurig</string>
   <string name="warn_silent_alarm_title">Alarmvolume is stil</string>
-  <string name="alarm_select">Alarm selecteren</string>
-  <string name="alarm_select_ringtone">Beltoon</string>
-  <string name="alarm_select_external">Muziek</string>
-  <string name="ringtone_default">"Standaardbeltoon"</string>
 </resources>

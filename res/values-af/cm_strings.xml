@@ -52,8 +52,4 @@
   <string name="alarm_type_ringtone">Luitoon</string>
   <string name="alarm_type_random">Willekeurig</string>
   <string name="warn_silent_alarm_title">Alarm volume is af</string>
-  <string name="alarm_select">Kies alarm</string>
-  <string name="alarm_select_ringtone">Luitoon</string>
-  <string name="alarm_select_external">Musiek</string>
-  <string name="ringtone_default">"Standaard luitoon"</string>
 </resources>
