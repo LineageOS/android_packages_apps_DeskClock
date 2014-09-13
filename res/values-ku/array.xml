@@ -31,7 +31,7 @@
     <item>دیژبۆتی</item>
     <item>فریتاون</item>
     <item>گارۆبۆن</item>
-    <item>حه‌ریری</item>
+    <item>Harare</item>
     <item>جۆناسیبورگ</item>
     <item>کامپالا</item>
     <item>خه‌رتووم</item>
@@ -40,7 +40,7 @@
     <item>لاگۆس</item>
     <item>ماسیرو</item>
     <item>مۆغه‌دیشو</item>
-    <item>نایرۆبی</item>
+    <item>Nairobi</item>
     <item>São Tomé</item>
     <item>Timbuktu</item>
     <item>Tripoli</item>
@@ -52,7 +52,7 @@
     <item>Barbados</item>
     <item>Belize</item>
     <item>Bogotá</item>
-    <item>بۆنس ئایرس</item>
+    <item>Buenos Aires</item>
     <item>Cancun</item>
     <item>Caracas</item>
     <item>Cayman</item>
@@ -89,9 +89,9 @@
     <item>Martinique</item>
     <item>Mendoza</item>
     <item>Metlakatla</item>
-    <item>شاری مه‌کسیک</item>
+    <item>Mexico City</item>
     <item>Monterrey</item>
-    <item>مۆنتیڤیدیۆ</item>
+    <item>Montevideo</item>
     <item>Montreal</item>
     <item>Nassau</item>
     <item>New York</item>
@@ -109,7 +109,7 @@
     <item>St. Kitts</item>
     <item>St. Lucia</item>
     <item>St. Thomas</item>
-    <item>تیوانا</item>
+    <item>Tijuana</item>
     <item>Toronto</item>
     <item>Vancouver</item>
     <item>Winnipeg</item>
@@ -119,27 +119,27 @@
     <item>Amman</item>
     <item>Anadyr</item>
     <item>Aqtau</item>
-    <item>به‌غداد</item>
+    <item>Baghdad</item>
     <item>Bahrain</item>
-    <item>باکو</item>
-    <item>بانکۆک</item>
+    <item>Baku</item>
+    <item>Bangkok</item>
     <item>Beirut</item>
     <item>Calcutta</item>
     <item>Damascus</item>
     <item>Dhaka</item>
-    <item>دوبه‌ی</item>
+    <item>Dubai</item>
     <item>Gaza</item>
     <item>Hebron</item>
     <item>Ho Chi Minh</item>
-    <item>هۆنگ کۆنگ</item>
+    <item>Hong Kong</item>
     <item>Istanbul</item>
-    <item>جاکارتا</item>
-    <item>جێرالوس</item>
-    <item>کابول</item>
+    <item>Jakarta</item>
+    <item>Jerusalem</item>
+    <item>Kabul</item>
     <item>Karachi</item>
-    <item>کاتاماندوو</item>
-    <item>کوالا لامپور</item>
-    <item>کوه‌یت</item>
+    <item>Kathmandu</item>
+    <item>Kuala Lumpur</item>
+    <item>Kuwait</item>
     <item>Macau</item>
     <item>Manila</item>
     <item>Muscat</item>
@@ -149,11 +149,11 @@
     <item>Rangoon</item>
     <item>Riyadh</item>
     <item>Saigon</item>
-    <item>سێول</item>
+    <item>Seoul</item>
     <item>Shanghai</item>
     <item>Singapore</item>
-    <item>تایپای</item>
-    <item>فشقشىتاران</item>
+    <item>Taipei</item>
+    <item>Tehran</item>
     <item>Tel Aviv</item>
     <item>Tokyo</item>
     <item>Ulaanbaatar</item>
@@ -162,34 +162,34 @@
     <item>Cape Verde</item>
     <item>Reykjavik</item>
     <item>Stanley</item>
-    <item>ئه‌دێلایدی</item>
-    <item>بریسبان</item>
+    <item>Adelaide</item>
+    <item>Brisbane</item>
     <item>Canberra</item>
-    <item>داروین</item>
+    <item>Darwin</item>
     <item>Melbourne</item>
     <item>New South Wales</item>
-    <item>پێرس</item>
+    <item>Perth</item>
     <item>Queensland</item>
     <item>Sydney</item>
     <item>Victoria</item>
-    <item>فاوندلاندی تازه‌</item>
-    <item>ساکاتخوان</item>
+    <item>Newfoundland</item>
+    <item>Saskatchewan</item>
     <item>Easter Island</item>
     <item>Amsterdam</item>
     <item>Andorra</item>
     <item>Athens</item>
     <item>Belfast</item>
-    <item>بولگاریا</item>
+    <item>Belgrade</item>
     <item>Berlin</item>
     <item>Bratislava</item>
-    <item>بروکسل</item>
+    <item>Brussels</item>
     <item>Bucharest</item>
     <item>Budapest</item>
     <item>Chisinau</item>
     <item>Copenhagen</item>
     <item>Dublin</item>
     <item>Gibraltar</item>
-    <item>هێلسینکی</item>
+    <item>Helsinki</item>
     <item>Isle of Man</item>
     <item>Istanbul</item>
     <item>Kiev</item>
@@ -198,16 +198,16 @@
     <item>Luxembourg</item>
     <item>Madrid</item>
     <item>Malta</item>
-    <item>مینسک</item>
+    <item>Minsk</item>
     <item>Monaco</item>
-    <item>مۆسکۆ</item>
+    <item>Moscow</item>
     <item>Oslo</item>
     <item>Paris</item>
     <item>Prague</item>
     <item>Riga</item>
     <item>Rome</item>
     <item>San Marino</item>
-    <item>ساراجیڤۆ</item>
+    <item>Sarajevo</item>
     <item>Simferopol</item>
     <item>Skopje</item>
     <item>Sofia</item>
@@ -222,9 +222,9 @@
     <item>Antananarivo</item>
     <item>Maldives</item>
     <item>Mauritius</item>
-    <item>ماگادان</item>
-    <item>فیجی</item>
-    <item>گوام</item>
+    <item>Auckland</item>
+    <item>Fiji</item>
+    <item>Guam</item>
     <item>Honolulu</item>
     <item>Kiritimati</item>
     <item>Noumea</item>
@@ -272,7 +272,7 @@
     <item>Reno</item>
     <item>Black Rock City</item>
     <item>Doha</item>
-    <item>بێژینگ</item>
+    <item>Beijing</item>
     <item>Mumbai</item>
     <item>Delhi</item>
     <item>Osaka</item>
@@ -298,10 +298,10 @@
     <item>Hyderabad</item>
     <item>Reston</item>
     <item>Belo Horizonte</item>
-    <item>سانتیاگۆ</item>
+    <item>Santiago</item>
     <item>Monrovia</item>
     <item>Colombo</item>
-    <item>چیهوایا</item>
+    <item>Chihuahua</item>
     <item>Salvador</item>
     <item>Gurgaon</item>
     <item>Manchester</item>
@@ -316,24 +316,24 @@
     <item>Tegucigalpa</item>
     <item>Paramaribo</item>
     <item>Quito</item>
-    <item>دوورگه‌کانی مارشاڵ</item>
-    <item>دورگه‌کانی میدوه‌ی</item>
+    <item>Marshall Islands</item>
+    <item>Midway Island</item>
     <item>Regina</item>
-    <item>ماناوس</item>
+    <item>Manaus</item>
     <item>Araguaina</item>
     <item>Godthab</item>
     <item>South Georgia</item>
-    <item>ئازۆریس</item>
-    <item>ویندهۆک</item>
-    <item>تبلیس</item>
-    <item>یه‌ریڤان</item>
+    <item>Azores</item>
+    <item>Windhoek</item>
+    <item>Tbilisi</item>
+    <item>Yerevan</item>
     <item>Oral</item>
-    <item>یه‌کیتارینبوگ</item>
-    <item>کراسنۆیارک</item>
-    <item>ئیرکوتسک</item>
-    <item>یاکوتسک</item>
-    <item>هۆبارت</item>
-    <item>ماگادان</item>
+    <item>Yekaterinburg</item>
+    <item>Krasnoyarsk</item>
+    <item>Irkutsk</item>
+    <item>Yakutsk</item>
+    <item>Hobart</item>
+    <item>Magadan</item>
     <item>Tongatapu</item>
     <item>Aklavik</item>
     <item>Montgomery</item>
@@ -346,7 +346,7 @@
     <item>Suva</item>
     <item>Wellington</item>
     <item>Chatham</item>
-    <item>سیدنی ،جانبێرا</item>
+    <item>Vladivostok</item>
     <item>Kamchatka</item>
   </string-array>
   <array name="snooze_dismiss_drawables">
