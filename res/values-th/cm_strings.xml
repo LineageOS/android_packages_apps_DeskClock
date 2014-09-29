@@ -52,4 +52,9 @@
   <string name="alarm_type_ringtone">เสียง​เรียก​เข้า</string>
   <string name="alarm_type_random">สุ่ม</string>
   <string name="warn_silent_alarm_title">เสียงปลุกจะไม่ดัง</string>
+  <string name="alarm_select">เลือกปลุก</string>
+  <string name="alarm_select_ringtone">เสียง​เรียก​เข้า</string>
+  <string name="alarm_select_external">เพลง</string>
+  <string name="ringtone_default">"เสียงเรียกเข้าเริ่มต้น"</string>
+  <string name="take_persistent_grant_uri_permission_failed_msg">ไม่สามารถใช้เสียงเรียกเข้าได้เนื่องจากไม่ได้รับอนุญาต</string>
 </resources>

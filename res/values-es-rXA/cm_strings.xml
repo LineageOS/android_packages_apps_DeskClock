@@ -52,4 +52,9 @@
   <string name="alarm_type_ringtone">Tonu de llamada</string>
   <string name="alarm_type_random">Al debalu</string>
   <string name="warn_silent_alarm_title">El volume l\'alarma ta en silenciu</string>
+  <string name="alarm_select">Seleicionar alarma</string>
+  <string name="alarm_select_ringtone">Tonu</string>
+  <string name="alarm_select_external">Música</string>
+  <string name="ringtone_default">"Tonu predetermináu"</string>
+  <string name="take_persistent_grant_uri_permission_failed_msg">Fallu al obtener permisu persistente pal tonu de llamada</string>
 </resources>

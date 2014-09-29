@@ -52,4 +52,9 @@
   <string name="alarm_type_ringtone">Тон звона</string>
   <string name="alarm_type_random">Насумично</string>
   <string name="warn_silent_alarm_title">Јачина аларма je утишана</string>
+  <string name="alarm_select">Изабери аларм</string>
+  <string name="alarm_select_ringtone">Тон звона</string>
+  <string name="alarm_select_external">Музика</string>
+  <string name="ringtone_default">"Подразумевани тон звона"</string>
+  <string name="take_persistent_grant_uri_permission_failed_msg">Постављање упорне дозволе за тон звона није успело</string>
 </resources>
