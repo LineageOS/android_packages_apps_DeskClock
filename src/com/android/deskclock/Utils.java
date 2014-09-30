@@ -28,6 +28,7 @@ import android.content.SharedPreferences;
 import android.content.pm.PackageInfo;
 import android.content.pm.PackageManager.NameNotFoundException;
 import android.content.res.Resources;
+import android.database.Cursor;
 import android.graphics.Color;
 import android.graphics.Paint;
 import android.graphics.PorterDuff;
@@ -37,6 +38,7 @@ import android.os.Build;
 import android.os.Handler;
 import android.os.SystemClock;
 import android.preference.PreferenceManager;
+import android.provider.MediaStore;
 import android.provider.Settings;
 import android.text.Spannable;
 import android.text.SpannableString;
@@ -60,6 +62,7 @@ import com.android.deskclock.worldclock.CityObj;
 import com.android.deskclock.worldclock.db.DbCities;
 import com.android.deskclock.worldclock.db.DbCity;
 
+import java.io.File;
 import java.text.Collator;
 import java.text.SimpleDateFormat;
 import java.util.ArrayList;
@@ -607,5 +610,31 @@ public class Utils {
 
     public static String getCityName(CityObj city, CityObj dbCity) {
         return (city.mCityId == null || dbCity == null) ? city.mCityName : dbCity.mCityName;
+    }
+
+    public static boolean isRingToneUriValid(Context context, Uri uri) {
+        if (uri.getScheme().contentEquals("file")) {
+            File f = new File(uri.getPath());
+            if (f.exists()) {
+                return true;
+            }
+        } else if (uri.getScheme().contentEquals("content")) {
+            Cursor cursor = null;
+            try {
+                cursor = context.getContentResolver().query(uri,
+                        new String[] {MediaStore.Audio.Media.TITLE}, null, null, null);
+                if (cursor != null && cursor.getCount() > 0) {
+                    return true;
+                }
+            } catch (Exception e) {
+                Log.e("Get ringtone uri Exception: e.toString=" + e.toString());
+            } finally {
+                if (cursor != null) {
+                    cursor.close();
+                }
+            }
+        }
+
+        return false;
     }
 }
