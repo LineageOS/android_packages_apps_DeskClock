@@ -1578,7 +1578,7 @@ public class AlarmClockFragment extends DeskClockFragment implements
             if (Alarm.NO_RINGTONE_URI.equals(alarm.alert)) {
                 ringtone = mContext.getResources().getString(R.string.silent_alarm_summary);
             } else {
-                ringtitle = getRingToneTitle(alarm.alert);
+                ringtitle = getRingToneTitle(alarm);
                 if (ringtitle != null) {
                     ringtone = ringtitle;
                 } else {
@@ -1687,10 +1687,11 @@ public class AlarmClockFragment extends DeskClockFragment implements
         /**
          * Does a read-through cache for ringtone titles.
          *
-         * @param uri The uri of the ringtone.
+         * @param Alarm The alarm to get the ringtone title from.
          * @return The ringtone title. {@literal null} if no matching ringtone found.
          */
-        private String getRingToneTitle(Uri uri) {
+        private String getRingToneTitle(Alarm alarm) {
+            Uri uri = alarm.alert;
             // Try the cache first
             String title = mRingtoneTitleCache.getString(uri.toString());
             if (title == null) {
@@ -1706,6 +1707,18 @@ public class AlarmClockFragment extends DeskClockFragment implements
                             if (ringTone != null) {
                                 title = ringTone.getTitle(mContext);
                             }
+                        }
+                    } else {
+                        // The uri was not valid so we should fallback to the current default
+                        uri = RingtoneManager.getActualDefaultRingtoneUri(mContext,
+                                RingtoneManager.TYPE_ALARM);
+                        if (isRingToneUriValid(uri)) {
+                            Ringtone ringTone = RingtoneManager.getRingtone(mContext, uri);
+                            if (ringTone != null) {
+                                title = ringTone.getTitle(mContext);
+                            }
+                            alarm.alert = uri;
+                            asyncUpdateAlarm(alarm, false);
                         }
                     }
                 }
@@ -1723,7 +1736,20 @@ public class AlarmClockFragment extends DeskClockFragment implements
                     return true;
                 }
             } else if (uri.getScheme().contentEquals("content")) {
-                return true;
+                Cursor cursor = null;
+                try {
+                    cursor = mContext.getContentResolver().query(uri,
+                            new String[] {MediaStore.Audio.Media.TITLE}, null, null, null);
+                    if (cursor != null && cursor.getCount() > 0) {
+                        return true;
+                    }
+                } catch (Exception e) {
+                    Log.e("Get ringtone uri Exception: e.toString=" + e.toString());
+                } finally {
+                    if (cursor != null) {
+                        cursor.close();
+                    }
+                }
             }
 
             return false;
