@@ -193,7 +193,6 @@
     <item msgid="4616641627708493425">"赫尔辛基"</item>
     <item msgid="212359461403262711">"马恩岛"</item>
     <item msgid="4245799496293578703">"伊斯坦布尔"</item>
-    <item msgid="4477669700025211678">"基辅"</item>
     <item msgid="7233802930588725294">"里斯本"</item>
     <item msgid="7186725202454661926">"伦敦"</item>
     <item msgid="5298853578615697920">"卢森堡"</item>
@@ -317,5 +316,37 @@
     <item msgid="8613864994547669100">"特古西加尔巴"</item>
     <item msgid="7087691675228926801">"帕拉马里博"</item>
     <item msgid="478384295484578701">"基多"</item>
+    <item>"马朱罗"</item>
+    <item>"中途岛"</item>
+    <item>"里贾纳"</item>
+    <item>"马瑙斯"</item>
+    <item>"阿拉瓜伊纳"</item>
+    <item>"戈特霍布"</item>
+    <item>"南乔治亚"</item>
+    <item>"亚述尔群岛"</item>
+    <item>"温得和克"</item>
+    <item>"第比利斯"</item>
+    <item>"埃里温"</item>
+    <item>"乌拉尔"</item>
+    <item>"叶卡捷琳堡"</item>
+    <item>"克拉斯诺亚尔斯克"</item>
+    <item>"伊尔库兹克"</item>
+    <item>"雅库兹克"</item>
+    <item>"霍巴特"</item>
+    <item>"马加丹"</item>
+    <item>"东加塔布"</item>
+    <item>"阿克拉维克"</item>
+    <item>"蒙哥马利"</item>
+    <item>"日内瓦"</item>
+    <item>"敖德萨"</item>
+    <item>"亚丁"</item>
+    <item>"阿布扎比"</item>
+    <item>"塔什干"</item>
+    <item>"新德里"</item>
+    <item>"苏瓦"</item>
+    <item>"惠灵顿"</item>
+    <item>"查塔姆群岛"</item>
+    <item>"符拉迪沃斯托克"</item>
+    <item>"堪察加"</item>
   </string-array>
 </resources>

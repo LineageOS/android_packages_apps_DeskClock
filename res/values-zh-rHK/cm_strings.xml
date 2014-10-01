@@ -52,4 +52,8 @@
   <string name="alarm_type_ringtone">鈴聲</string>
   <string name="alarm_type_random">隨機</string>
   <string name="warn_silent_alarm_title">鬧鐘音量是無聲的</string>
+  <string name="alarm_select">選擇鬧鐘</string>
+  <string name="alarm_select_ringtone">鈴聲</string>
+  <string name="alarm_select_external">音樂</string>
+  <string name="ringtone_default">"預設鈴聲"</string>
 </resources>

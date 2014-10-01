@@ -52,4 +52,9 @@
   <string name="alarm_type_ringtone">Ήχος</string>
   <string name="alarm_type_random">Τυχαίο</string>
   <string name="warn_silent_alarm_title">Το ξυπνητήρι είναι αθόρυβο</string>
+  <string name="alarm_select">Επιλογή ξυπνητηριού</string>
+  <string name="alarm_select_ringtone">Ήχοι κλήσης</string>
+  <string name="alarm_select_external">Μουσική</string>
+  <string name="ringtone_default">"Προεπιλεγμένος ήχος"</string>
+  <string name="take_persistent_grant_uri_permission_failed_msg">Αποτυχία λήψης μόνιμης παροχής άδειας για τον ήχο κλήσης</string>
 </resources>

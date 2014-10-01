@@ -52,4 +52,9 @@
   <string name="alarm_type_ringtone">Ringetone</string>
   <string name="alarm_type_random">Tilfeldig</string>
   <string name="warn_silent_alarm_title">Alarmvolum er satt til lydløst</string>
+  <string name="alarm_select">Velg alarm</string>
+  <string name="alarm_select_ringtone">Ringetone</string>
+  <string name="alarm_select_external">Musikk</string>
+  <string name="ringtone_default">"Standard ringetone"</string>
+  <string name="take_persistent_grant_uri_permission_failed_msg">Klarte ikke å ta over riktige tillatelser for ringetone</string>
 </resources>

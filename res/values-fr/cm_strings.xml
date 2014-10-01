@@ -52,4 +52,9 @@
   <string name="alarm_type_ringtone">Sonnerie</string>
   <string name="alarm_type_random">Aléatoire</string>
   <string name="warn_silent_alarm_title">Le volume de l\'alarme est silencieux</string>
+  <string name="alarm_select">Sélectionner une alarme</string>
+  <string name="alarm_select_ringtone">Sonnerie</string>
+  <string name="alarm_select_external">Musique</string>
+  <string name="ringtone_default">"Sonnerie par défaut"</string>
+  <string name="take_persistent_grant_uri_permission_failed_msg">Impossible d\'obtenir une autorisation permanente pour la sonnerie</string>
 </resources>

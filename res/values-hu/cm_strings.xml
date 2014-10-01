@@ -52,4 +52,9 @@
   <string name="alarm_type_ringtone">Csengőhang</string>
   <string name="alarm_type_random">Véletlenszerűen</string>
   <string name="warn_silent_alarm_title">A riasztás némítva lett</string>
+  <string name="alarm_select">Ébresztés kiválasztása</string>
+  <string name="alarm_select_ringtone">Csengőhang</string>
+  <string name="alarm_select_external">Zene</string>
+  <string name="ringtone_default">"Alapértelmezett csengőhang"</string>
+  <string name="take_persistent_grant_uri_permission_failed_msg">Nem sikerült állandó engedélyt szerezni a csengőhanghoz</string>
 </resources>

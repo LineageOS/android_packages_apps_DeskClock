@@ -52,4 +52,9 @@
   <string name="alarm_type_ringtone">Zil Sesi</string>
   <string name="alarm_type_random">Rastgele</string>
   <string name="warn_silent_alarm_title">Alarm sessizde</string>
+  <string name="alarm_select">Alarmı seç</string>
+  <string name="alarm_select_ringtone">Zil sesi</string>
+  <string name="alarm_select_external">Müzik</string>
+  <string name="ringtone_default">"Varsayılan zil sesi"</string>
+  <string name="take_persistent_grant_uri_permission_failed_msg">Zil sesi için kalıcı izin alınamadı</string>
 </resources>

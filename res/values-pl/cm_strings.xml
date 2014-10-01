@@ -52,4 +52,9 @@
   <string name="alarm_type_ringtone">Dzwonek</string>
   <string name="alarm_type_random">Losowo</string>
   <string name="warn_silent_alarm_title">Głośność alarmu jest ustawiona na minimum</string>
+  <string name="alarm_select">Wybierz alarm</string>
+  <string name="alarm_select_ringtone">Dzwonek</string>
+  <string name="alarm_select_external">Muzyka</string>
+  <string name="ringtone_default">"Domyślny dzwonek"</string>
+  <string name="take_persistent_grant_uri_permission_failed_msg">Nie udało się nadać trwałych uprawnień dla dzwonka</string>
 </resources>

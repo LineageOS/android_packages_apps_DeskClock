@@ -15,6 +15,7 @@
      limitations under the License.
 -->
 <resources xmlns:xliff="urn:oasis:names:tc:xliff:document:1.2">
+  <string name="app_label">کاتژمێر</string>
   <string name="alarm_list_title">وریاکەرەوەکان</string>
   <string name="add_alarm">زیادکردنی ئاگادارکردنه‌وه‌</string>
   <string name="alarm_timeline_title_text">ئاگادارکه‌ره‌وه‌ی داهاتوو</string>
@@ -96,7 +97,7 @@
     <item>۳۰ خوله‌ک</item>
     <item>هەرگیز</item>
   </string-array>
-  <string name="done">ئه‌نجامدرا</string>
+  <string name="done">ئه‌نجام درا</string>
   <string name="revert">گه‌ڕانه‌وه‌ی باری سه‌ره‌تایی</string>
   <string name="delete">سڕینه‌وه‌</string>
   <string name="alarm_volume_title">ئاستی دەنگی ئاگادارکەرەوە</string>
@@ -174,7 +175,7 @@
   <string name="timer_plus_one">زیادکردنی یه‌ک خوله‌ک</string>
   <string name="timer_plus_1_min">زیاد کردنی ۱ خوله‌ک</string>
   <string name="timer_stop">وه‌ستاندن</string>
-  <string name="timer_done">ئه‌نجامدرا</string>
+  <string name="timer_done">ئه‌نجام درا</string>
   <string name="timer_reset">ڕێکخستنەوە</string>
   <string name="timer_cancel">هەڵوەشاندنەوە</string>
   <string name="timer_times_up">کات ته‌واو بوو</string>

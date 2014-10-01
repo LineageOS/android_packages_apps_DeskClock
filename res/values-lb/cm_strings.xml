@@ -45,5 +45,6 @@
   <string name="action_summary_dismiss">de Wecker verwerfen</string>
   <string name="action_summary_do_nothing">näischt maachen</string>
   <string name="alarm_picker_title">Alarmtyp auswielen</string>
+  <string name="alarm_type_ringtone">Schelltoun</string>
   <string name="alarm_type_random">Zoufälleg</string>
 </resources>

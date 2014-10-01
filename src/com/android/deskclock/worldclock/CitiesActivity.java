@@ -37,6 +37,8 @@ import android.view.View;
 import android.view.View.OnClickListener;
 import android.view.ViewGroup;
 import android.view.inputmethod.EditorInfo;
+
+import android.view.inputmethod.InputMethodManager;
 import android.widget.BaseAdapter;
 import android.widget.CheckBox;
 import android.widget.CompoundButton;
@@ -246,7 +248,7 @@ public class CitiesActivity extends Activity implements OnCheckedChangeListener,
                     // If the city name begins with the query, add the city into the list.
                     // If the query is empty, the city will automatically be added to the list.
                     String cityName = city.mCityName.trim().toUpperCase();
-                    if (city.mCityId != null && cityName.startsWith(modifiedQuery)) {
+                    if (city.mCityId != null && cityName.contains(modifiedQuery)) {
                         filteredList.add(city);
                     }
                 }
@@ -668,7 +670,7 @@ public class CitiesActivity extends Activity implements OnCheckedChangeListener,
 
         MenuItem searchMenu = menu.findItem(R.id.menu_item_search);
         mSearchView = (SearchView) searchMenu.getActionView();
-        mSearchView.setImeOptions(EditorInfo.IME_FLAG_NO_EXTRACT_UI);
+        mSearchView.setImeOptions(EditorInfo.IME_FLAG_NO_EXTRACT_UI | EditorInfo.IME_ACTION_DONE);
         mSearchView.setOnSearchClickListener(new OnClickListener() {
 
             @Override
@@ -747,6 +749,12 @@ public class CitiesActivity extends Activity implements OnCheckedChangeListener,
 
     @Override
     public boolean onQueryTextSubmit(String arg0) {
+        InputMethodManager inputMethodManager = (InputMethodManager) getSystemService(
+                Context.INPUT_METHOD_SERVICE);
+        if (inputMethodManager.isActive()) {
+            inputMethodManager.hideSoftInputFromWindow(CitiesActivity.this.getCurrentFocus()
+                    .getWindowToken(), 0);
+        }
         return false;
     }
 

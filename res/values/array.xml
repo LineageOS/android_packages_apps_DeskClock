@@ -315,6 +315,38 @@
         <item>Tegucigalpa</item>
         <item>Paramaribo</item>
         <item>Quito</item>
+        <item>Marshall Islands</item>
+        <item>Midway Island</item>
+        <item>Regina</item>
+        <item>Manaus</item>
+        <item>Araguaina</item>
+        <item>Godthab</item>
+        <item>South Georgia</item>
+        <item>Azores</item>
+        <item>Windhoek</item>
+        <item>Tbilisi</item>
+        <item>Yerevan</item>
+        <item>Oral</item>
+        <item>Yekaterinburg</item>
+        <item>Krasnoyarsk</item>
+        <item>Irkutsk</item>
+        <item>Yakutsk</item>
+        <item>Hobart</item>
+        <item>Magadan</item>
+        <item>Tongatapu</item>
+        <item>Aklavik</item>
+        <item>Montgomery</item>
+        <item>Geneva</item>
+        <item>Odesa</item>
+        <item>Aden</item>
+        <item>Abu Dhabi</item>
+        <item>Tashkent</item>
+        <item>New Delhi</item>
+        <item>Suva</item>
+        <item>Wellington</item>
+        <item>Chatham</item>
+        <item>Vladivostok</item>
+        <item>Kamchatka</item>
     </string-array>
 
     <string-array name="cities_tz" translatable="false">
@@ -617,6 +649,38 @@
         <item>America/Tegucigalpa</item>
         <item>America/Paramaribo</item>
         <item>America/Panama</item>
+        <item>Pacific/Majuro</item>
+        <item>Pacific/Midway</item>
+        <item>America/Regina</item>
+        <item>America/Manaus</item>
+        <item>America/Araguaina</item>
+        <item>America/Godthab</item>
+        <item>Atlantic/South_Georgia</item>
+        <item>Atlantic/Azores</item>
+        <item>Africa/Windhoek</item>
+        <item>Asia/Tbilisi</item>
+        <item>Asia/Yerevan</item>
+        <item>Asia/Oral</item>
+        <item>Asia/Yekaterinburg</item>
+        <item>Asia/Krasnoyarsk</item>
+        <item>Asia/Irkutsk</item>
+        <item>Asia/Yakutsk</item>
+        <item>Australia/Hobart</item>
+        <item>Asia/Magadan</item>
+        <item>Pacific/Tongatapu</item>
+        <item>America/Yellowknife</item>
+        <item>America/Chicago</item>
+        <item>Europe/Zurich</item>
+        <item>Europe/Kiev</item>
+        <item>Asia/Aden</item>
+        <item>Asia/Dubai</item>
+        <item>Asia/Tashkent</item>
+        <item>Asia/Calcutta</item>
+        <item>Pacific/Fiji</item>
+        <item>Pacific/Auckland</item>
+        <item>Pacific/Chatham</item>
+        <item>Asia/Vladivostok</item>
+        <item>Asia/Kamchatka</item>
     </string-array>
 
     <string-array name="cities_id" translatable="false">
@@ -919,6 +983,38 @@
         <item>C297</item>
         <item>C298</item>
         <item>C299</item>
+        <item>C300</item>
+        <item>C301</item>
+        <item>C302</item>
+        <item>C303</item>
+        <item>C304</item>
+        <item>C305</item>
+        <item>C306</item>
+        <item>C307</item>
+        <item>C308</item>
+        <item>C309</item>
+        <item>C310</item>
+        <item>C311</item>
+        <item>C312</item>
+        <item>C313</item>
+        <item>C314</item>
+        <item>C315</item>
+        <item>C316</item>
+        <item>C317</item>
+        <item>C318</item>
+        <item>C319</item>
+        <item>C320</item>
+        <item>C321</item>
+        <item>C322</item>
+        <item>C323</item>
+        <item>C324</item>
+        <item>C325</item>
+        <item>C326</item>
+        <item>C327</item>
+        <item>C328</item>
+        <item>C329</item>
+        <item>C330</item>
+        <item>C331</item>
     </string-array>
 
     <array name="snooze_dismiss_drawables">

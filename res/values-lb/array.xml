@@ -316,6 +316,38 @@
     <item>Tegucigalpa</item>
     <item>Paramaribo</item>
     <item>Quito</item>
+    <item>Marshall Islands</item>
+    <item>Midway Island</item>
+    <item>Regina</item>
+    <item>Manaus</item>
+    <item>Araguaina</item>
+    <item>Godthab</item>
+    <item>South Georgia</item>
+    <item>Azores</item>
+    <item>Windhoek</item>
+    <item>Tbilisi</item>
+    <item>Yerevan</item>
+    <item>Oral</item>
+    <item>Yekaterinburg</item>
+    <item>Krasnoyarsk</item>
+    <item>Irkutsk</item>
+    <item>Yakutsk</item>
+    <item>Hobart</item>
+    <item>Magadan</item>
+    <item>Tongatapu</item>
+    <item>Aklavik</item>
+    <item>Montgomery</item>
+    <item>Geneva</item>
+    <item>Odesa</item>
+    <item>Aden</item>
+    <item>Abu Dhabi</item>
+    <item>Tashkent</item>
+    <item>New Delhi</item>
+    <item>Suva</item>
+    <item>Wellington</item>
+    <item>Chatham</item>
+    <item>Vladivostok</item>
+    <item>Kamchatka</item>
   </string-array>
   <array name="snooze_dismiss_drawables">
     <item>@drawable/ic_alarm_alert_dismiss</item>

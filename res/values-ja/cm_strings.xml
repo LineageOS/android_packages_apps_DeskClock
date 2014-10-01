@@ -52,4 +52,9 @@
   <string name="alarm_type_ringtone">着信音</string>
   <string name="alarm_type_random">ランダム</string>
   <string name="warn_silent_alarm_title">アラームの音量はサイレントです</string>
+  <string name="alarm_select">アラームを選択</string>
+  <string name="alarm_select_ringtone">着信音</string>
+  <string name="alarm_select_external">音楽</string>
+  <string name="ringtone_default">"デフォルトの着信音"</string>
+  <string name="take_persistent_grant_uri_permission_failed_msg">着信音の権限の持続的な許可を取得できませんでした</string>
 </resources>
