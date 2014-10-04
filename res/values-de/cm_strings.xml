@@ -56,4 +56,5 @@
   <string name="alarm_select_ringtone">Klingelton</string>
   <string name="alarm_select_external">Musik</string>
   <string name="ringtone_default">"Standard-Klingelton"</string>
+  <string name="take_persistent_grant_uri_permission_failed_msg">Dauerhafte Berechtigung zum Ändern des Klingeltons konnte nicht eingeholt werden</string>
 </resources>
