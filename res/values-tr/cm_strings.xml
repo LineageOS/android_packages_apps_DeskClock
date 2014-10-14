@@ -36,15 +36,15 @@
   <string name="cities_delete_city_msg"><xliff:g id="city">%s</xliff:g> şehrini silmek istiyor musunuz?</string>
   <string name="cities_delete_city_failed">Şehir silinemiyor</string>
   <string name="flip_action_title">Çevirme işlevi</string>
-  <string name="flip_action_dialog_title" product="tablet">Tableti çevirmek\u2026</string>
-  <string name="flip_action_dialog_title" product="default">Telefonu çevirmek\u2026</string>
-  <string name="flip_action_summary" product="tablet">Tableti ters çevirme <xliff:g id="action">%s</xliff:g></string>
-  <string name="flip_action_summary" product="default">Telefonu ters çevirmek <xliff:g id="action">%s</xliff:g></string>
+  <string name="flip_action_dialog_title" product="tablet">Tableti çevirince\u2026</string>
+  <string name="flip_action_dialog_title" product="default">Telefonu çevirince\u2026</string>
+  <string name="flip_action_summary" product="tablet">Tableti ters çevirince <xliff:g id="action">%s</xliff:g></string>
+  <string name="flip_action_summary" product="default">Telefonu ters çevirince <xliff:g id="action">%s</xliff:g></string>
   <string name="shake_action_title">Sallama işlevi</string>
-  <string name="shake_action_dialog_title" product="tablet">Tableti sallamak\u2026</string>
-  <string name="shake_action_dialog_title" product="default">Telefonu sallamak\u2026</string>
-  <string name="shake_action_summary" product="tablet">Tableti sallamak <xliff:g id="action">%s</xliff:g></string>
-  <string name="shake_action_summary" product="default">Telefonu sallamak <xliff:g id="action">%s</xliff:g></string>
+  <string name="shake_action_dialog_title" product="tablet">Tableti sallayınca\u2026</string>
+  <string name="shake_action_dialog_title" product="default">Telefonu sallayınca\u2026</string>
+  <string name="shake_action_summary" product="tablet">Tableti sallayınca <xliff:g id="action">%s</xliff:g></string>
+  <string name="shake_action_summary" product="default">Telefonu sallayınca <xliff:g id="action">%s</xliff:g></string>
   <string name="action_summary_snooze">alarmı ertele</string>
   <string name="action_summary_dismiss">alarmı kapat</string>
   <string name="action_summary_do_nothing">hiçbir şey yapma</string>

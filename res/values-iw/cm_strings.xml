@@ -52,4 +52,9 @@
   <string name="alarm_type_ringtone">צלצול</string>
   <string name="alarm_type_random">אקראי</string>
   <string name="warn_silent_alarm_title">שעון מעורר מושתק בעוצמה</string>
+  <string name="alarm_select">בחר צלצול</string>
+  <string name="alarm_select_ringtone">צליל חיוג</string>
+  <string name="alarm_select_external">מוזיקה</string>
+  <string name="ringtone_default">"רינגטון ברירת מחדל"</string>
+  <string name="take_persistent_grant_uri_permission_failed_msg">אין אפשרות לקבל הרשאות תמידיות לרינגטון</string>
 </resources>
