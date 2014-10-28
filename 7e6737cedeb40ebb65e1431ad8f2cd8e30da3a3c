@@ -1,0 +1,55 @@
+{
+  "comments": [
+    {
+      "key": {
+        "uuid": "5a18252c_d7edf78f",
+        "filename": "res/layout/time_setup_view.xml",
+        "patchSetId": 5
+      },
+      "lineNbr": 92,
+      "author": {
+        "id": 1579
+      },
+      "writtenOn": "2014-10-28T01:37:57Z",
+      "side": 1,
+      "message": "Please remove that",
+      "revId": "7e6737cedeb40ebb65e1431ad8f2cd8e30da3a3c",
+      "serverId": "1ec6b3db-b2c1-4fa4-84a2-4c7efe89ba71",
+      "unresolved": false
+    },
+    {
+      "key": {
+        "uuid": "5a18252c_b7f2fb6d",
+        "filename": "res/values/cm_arrays.xml",
+        "patchSetId": 5
+      },
+      "lineNbr": 37,
+      "author": {
+        "id": 1579
+      },
+      "writtenOn": "2014-10-28T01:37:57Z",
+      "side": 1,
+      "message": "Please remove that",
+      "revId": "7e6737cedeb40ebb65e1431ad8f2cd8e30da3a3c",
+      "serverId": "1ec6b3db-b2c1-4fa4-84a2-4c7efe89ba71",
+      "unresolved": false
+    },
+    {
+      "key": {
+        "uuid": "5a18252c_17e80f7c",
+        "filename": "src/com/android/deskclock/timer/TimerFragment.java",
+        "patchSetId": 5
+      },
+      "lineNbr": 574,
+      "author": {
+        "id": 1579
+      },
+      "writtenOn": "2014-10-28T01:37:57Z",
+      "side": 1,
+      "message": "Please remove that",
+      "revId": "7e6737cedeb40ebb65e1431ad8f2cd8e30da3a3c",
+      "serverId": "1ec6b3db-b2c1-4fa4-84a2-4c7efe89ba71",
+      "unresolved": false
+    }
+  ]
+}
