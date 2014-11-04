@@ -1328,6 +1328,11 @@ public class AlarmClockFragment extends DeskClockFragment implements
                 // The view was converted but somehow lost its tag.
                 setNewHolder(view);
             }
+            if (!Utils.isRingToneUriValid(mContext, alarm.alert)) {
+                alarm.alert = RingtoneManager.getActualDefaultRingtoneUri(context,
+                        RingtoneManager.TYPE_ALARM);
+                asyncUpdateAlarm(alarm, false);
+            }
             final ItemHolder itemHolder = (ItemHolder) tag;
             itemHolder.alarm = alarm;
 
@@ -1578,7 +1583,7 @@ public class AlarmClockFragment extends DeskClockFragment implements
             if (Alarm.NO_RINGTONE_URI.equals(alarm.alert)) {
                 ringtone = mContext.getResources().getString(R.string.silent_alarm_summary);
             } else {
-                ringtitle = getRingToneTitle(alarm.alert);
+                ringtitle = getRingToneTitle(alarm);
                 if (ringtitle != null) {
                     ringtone = ringtitle;
                 } else {
@@ -1687,17 +1692,18 @@ public class AlarmClockFragment extends DeskClockFragment implements
         /**
          * Does a read-through cache for ringtone titles.
          *
-         * @param uri The uri of the ringtone.
+         * @param Alarm The alarm to get the ringtone title from.
          * @return The ringtone title. {@literal null} if no matching ringtone found.
          */
-        private String getRingToneTitle(Uri uri) {
+        private String getRingToneTitle(Alarm alarm) {
+            Uri uri = alarm.alert;
             // Try the cache first
             String title = mRingtoneTitleCache.getString(uri.toString());
             if (title == null) {
                 if (uri.equals(AlarmMediaPlayer.RANDOM_URI)) {
                     title = mContext.getResources().getString(R.string.alarm_type_random);
                 } else {
-                    if (isRingToneUriValid(uri)) {
+                    if (Utils.isRingToneUriValid(mContext, uri)) {
                         if (uri.getAuthority().equals(DOC_AUTHORITY)
                                 || uri.getAuthority().equals(DOC_DOWNLOAD)) {
                             title = getDisplayNameFromDatabase(mContext,uri);
@@ -1714,19 +1720,6 @@ public class AlarmClockFragment extends DeskClockFragment implements
                 }
             }
             return title;
-        }
-
-        private boolean isRingToneUriValid(Uri uri) {
-            if (uri.getScheme().contentEquals("file")) {
-                File f = new File(uri.getPath());
-                if (f.exists()) {
-                    return true;
-                }
-            } else if (uri.getScheme().contentEquals("content")) {
-                return true;
-            }
-
-            return false;
         }
 
         private String getDisplayNameFromDatabase(Context context,Uri uri) {

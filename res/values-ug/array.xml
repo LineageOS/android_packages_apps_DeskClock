@@ -16,6 +16,339 @@
     limitations under the License
   -->
 <resources>
+  <string-array name="cities_names">
+    <item>ئابىجان</item>
+    <item>ئاككرا</item>
+    <item>ئەددىس-ئەبېبە</item>
+    <item>ئالجىر</item>
+    <item>بىلانتايىر</item>
+    <item>بىراززاۋىل</item>
+    <item>قاھىرە</item>
+    <item>كازابلانكا</item>
+    <item>كوناكرى</item>
+    <item>داكار</item>
+    <item>دارېسسالام</item>
+    <item>جىبۇتى</item>
+    <item>فىرېتوۋن</item>
+    <item>گابورون</item>
+    <item>خارارې</item>
+    <item>يوھاننېسبۇرگ</item>
+    <item>كامپالا</item>
+    <item>خارتۇم</item>
+    <item>كىگالى</item>
+    <item>كىنشاسا</item>
+    <item>لاگوس</item>
+    <item>ماسېرۇ</item>
+    <item>مۇقدىشو</item>
+    <item>نايروبى</item>
+    <item>سان تومې</item>
+    <item>تىمبۇكتۇ</item>
+    <item>تىرىپولى</item>
+    <item>تۇنىس</item>
+    <item>ئانكورېج</item>
+    <item>مېندوزا</item>
+    <item>ئارۇبا</item>
+    <item>ئاسۇنسىيون</item>
+    <item>باربادوس</item>
+    <item>بېلىز</item>
+    <item>سانتافې-بوگۇتا</item>
+    <item>بۇئېنۇس-ئايرېس</item>
+    <item>كانكۇن</item>
+    <item>كاراكاس</item>
+    <item>كايمان</item>
+    <item>چىكاگو</item>
+    <item>كوستارىكا</item>
+    <item>كۇراسو</item>
+    <item>داۋسون-كىرىك</item>
+    <item>دېنۋېر</item>
+    <item>دېترويت</item>
+    <item>دومىنىكا</item>
+    <item>ئېدمونتون</item>
+    <item>سالۋادور</item>
+    <item>فورتالېزا</item>
+    <item>گىراند-تۇرك</item>
+    <item>گىرېنادا</item>
+    <item>گىۋاتېمالا</item>
+    <item>گىۋىيانا</item>
+    <item>خالىفاكس</item>
+    <item>ھاۋانا</item>
+    <item>ئىندىئاناپولىس</item>
+    <item>نوكس</item>
+    <item>مارېنگو</item>
+    <item>پېتىربۇرگ</item>
+    <item>تېل شەھىرى</item>
+    <item>ۋېۋېي</item>
+    <item>ۋىسېننېس</item>
+    <item>ۋىناماك</item>
+    <item>كىڭستون</item>
+    <item>لاپاز</item>
+    <item>لىما</item>
+    <item>لوس-ئانجېلېس</item>
+    <item>لۇئىسۋىل</item>
+    <item>ماناگۇئا</item>
+    <item>مارتىنىكا</item>
+    <item>مېندوزا</item>
+    <item>مېتلاكاتلا</item>
+    <item>مېكسىكا شەھىرى</item>
+    <item>مونتېررېي</item>
+    <item>مونتېۋىدېئو</item>
+    <item>مونترېئال</item>
+    <item>ناسسائۇ</item>
+    <item>نيۇ-يورك</item>
+    <item>بېيۇلا</item>
+    <item>سېنتېر</item>
+    <item>يېڭى سالېم</item>
+    <item>پاناما</item>
+    <item>فېنىكس</item>
+    <item>ئىسپانىيە پورتى</item>
+    <item>شاھزادە پورتى</item>
+    <item>پۇئېرتو-رىكو</item>
+    <item>سانتو-دومىنگو</item>
+    <item>سان-پاۋلو</item>
+    <item>ساينىت-جون</item>
+    <item>ساينىت-كىتىس</item>
+    <item>ساينىت-لۇسىيە</item>
+    <item>ساينىت-توماس</item>
+    <item>تىۋانا</item>
+    <item>تورونتو</item>
+    <item>ۋانكۇۋېر</item>
+    <item>ۋىننىپېگ</item>
+    <item>جەنۇبىي قۇتۇپ</item>
+    <item>لوڭيىئېربىن</item>
+    <item>ئالمۇتا</item>
+    <item>\"\"ئاممان</item>
+    <item>ئانادىر</item>
+    <item>ئاقتاي</item>
+    <item>باغداد</item>
+    <item>بەھرەين</item>
+    <item>باكۇ</item>
+    <item>باڭكوك</item>
+    <item>بېيرۇت</item>
+    <item>كالكۇتتا</item>
+    <item>دەمەشق</item>
+    <item>داككا</item>
+    <item>دۇبەي</item>
+    <item>غەززە</item>
+    <item>خەبرون</item>
+    <item>خو چى مىنخ</item>
+    <item>شياڭگاڭ</item>
+    <item>ئىستانبۇل</item>
+    <item>جاكارتا</item>
+    <item>قۇددۇس</item>
+    <item>كابۇل</item>
+    <item>كاراچى</item>
+    <item>كاتماندۇ</item>
+    <item>كۇئالالۇمپۇر</item>
+    <item>كۈۋەيت</item>
+    <item>ئاۋمېن</item>
+    <item>مانىلا</item>
+    <item>مەسقات</item>
+    <item>فىنوم-پېن</item>
+    <item>پىيوڭياڭ</item>
+    <item>قاتار</item>
+    <item>رانگون</item>
+    <item>رىياد</item>
+    <item>سايگون</item>
+    <item>سېئۇل</item>
+    <item>شاڭخەي</item>
+    <item>\"سىنگاپور\"</item>
+    <item>تەيبېي</item>
+    <item>تېھران</item>
+    <item>تېل-ئاۋېۋ</item>
+    <item>توكيو</item>
+    <item>ئۇلانباتور</item>
+    <item>بېرمۇدا</item>
+    <item>كانارى</item>
+    <item>يېشىل تۇمشۇق</item>
+    <item>رېيكياۋىك</item>
+    <item>ستانلېي</item>
+    <item>ئادېلايدې</item>
+    <item>بىرىسبان</item>
+    <item>كانبېررا</item>
+    <item>دارۋىن</item>
+    <item>مېلبورن</item>
+    <item>يېڭى جەنۇبىي ۋېيلىس</item>
+    <item>پېرت</item>
+    <item>كىۋىنسلاند</item>
+    <item>سىدنېي</item>
+    <item>ۋىكتورىيە</item>
+    <item>نېۋفۇندلاند</item>
+    <item>ساسكاچېۋان</item>
+    <item>پاسكاليا ئارىلى</item>
+    <item>ئامستېردام</item>
+    <item>ئاندوررا</item>
+    <item>ئافېنا</item>
+    <item>بېلفاست</item>
+    <item>بېلگراد</item>
+    <item>بېرلىن</item>
+    <item>بىراتىسلاۋا</item>
+    <item>بىريۇسسېل</item>
+    <item>بۇخارېست</item>
+    <item>بۇداپېشت</item>
+    <item>كىشىنېۋ</item>
+    <item>كوپېنھاگېن</item>
+    <item>دۇبلىن</item>
+    <item>جەبىلتارىق</item>
+    <item>خېلسىنكى</item>
+    <item>مېن ئارىلى</item>
+    <item>ئىستانبۇل</item>
+    <item>كىيېۋ</item>
+    <item>لىسبون</item>
+    <item>لوندون</item>
+    <item>لىيۇكسېمبۇرگ</item>
+    <item>مادرىد</item>
+    <item>مالتا</item>
+    <item>مىنسك</item>
+    <item>موناكو</item>
+    <item>موسكۋا</item>
+    <item>ئوسلو</item>
+    <item>\"پارىژ\"</item>
+    <item>پىراگا</item>
+    <item>رىگا</item>
+    <item>رىم</item>
+    <item>سان-مارىنو</item>
+    <item>سارايېۋو</item>
+    <item>سىمفېروپول</item>
+    <item>سىكوپژې</item>
+    <item>سوفىيە</item>
+    <item>سىتوكھولم</item>
+    <item>تاللىن</item>
+    <item>ۋاتىكان</item>
+    <item>ۋىيېننا</item>
+    <item>ۋىلنيۇس</item>
+    <item>ۋارشاۋا</item>
+    <item>زاگرېب</item>
+    <item>سىيۇرىخ</item>
+    <item>تانانارىۋ</item>
+    <item>مالدىۋې</item>
+    <item>ماۋرىتىئۇس</item>
+    <item>ئاۋكلاند</item>
+    <item>فىجى</item>
+    <item>گۇئام</item>
+    <item>ھونولۇلۇ</item>
+    <item>كىرىتىماتى</item>
+    <item>نۇمېئا</item>
+    <item>ساموئا</item>
+    <item>تايتى</item>
+    <item>ئانتىگۋا</item>
+    <item>ئائۇستىن</item>
+    <item>بوستون</item>
+    <item>كالگارى</item>
+    <item>كولۇمبۇس</item>
+    <item>داللاس</item>
+    <item>كنوكسۋىللې</item>
+    <item>مېمفىس</item>
+    <item>مىئامى</item>
+    <item>مىننېئاپولىس</item>
+    <item>ئوتتاۋا</item>
+    <item>فىلادېلفىيە</item>
+    <item>پورتلاند</item>
+    <item>سان ديېگو</item>
+    <item>سان-فىرانسىسكو</item>
+    <item>سولت لېيك شەھىرى</item>
+    <item>سان-خوسې</item>
+    <item>سان-سالۋادور</item>
+    <item>سېئاتىل</item>
+    <item>ساينىت-لۇيىس</item>
+    <item>ۋاشىنگتون ئالاھىدە رايونى</item>
+    <item>خىيۇستون</item>
+    <item>سان ئانتونىئو</item>
+    <item>جاكسونۋىل</item>
+    <item>بالتىمور</item>
+    <item>ناشۋىل</item>
+    <item>مىلۋائۇكې</item>
+    <item>ئوكلاخوما شەھىرى</item>
+    <item>لاس-ۋېگاس</item>
+    <item>ئالبۇكۋېركۋې</item>
+    <item>تۇكسون</item>
+    <item>ساكرامېنتو</item>
+    <item>ئاتلانتا</item>
+    <item>كىلېۋېلاند</item>
+    <item>يېڭى ئورلېئان</item>
+    <item>تامپا</item>
+    <item>پىتتسبۇرگ</item>
+    <item>كىنكىنناتى</item>
+    <item>مۇنتائىن ۋيېۋ</item>
+    <item>رېنو</item>
+    <item>قارا تاش شەھىرى</item>
+    <item>دوھا</item>
+    <item>بېيجىڭ</item>
+    <item>بومباي</item>
+    <item>دېھلى</item>
+    <item>ئوساكا</item>
+    <item>لاخور</item>
+    <item>سانائا</item>
+    <item>بارسېلونا</item>
+    <item>ميۇنخېن</item>
+    <item>مىلان</item>
+    <item>فىرانكفۇرت</item>
+    <item>خانوي</item>
+    <item>ئەنقەرە</item>
+    <item>بانگالور</item>
+    <item>بىرازىلىيە</item>
+    <item>كېيپ-تائۇن</item>
+    <item>ئىسلامئاباد</item>
+    <item>رىئو-دې-جانېيرو</item>
+    <item>ئان-ئاربور</item>
+    <item>بولدېر</item>
+    <item>كامبرىج</item>
+    <item>كىركلاند</item>
+    <item>مادىسون</item>
+    <item>گۇاڭجۇ</item>
+    <item>خىدېراباد</item>
+    <item>رېستون</item>
+    <item>بېلو خورىزونتې</item>
+    <item>سانتىياگو</item>
+    <item>مونزوۋىيە</item>
+    <item>كولومبو</item>
+    <item>چىۋاۋا</item>
+    <item>سالۋادور</item>
+    <item>گۇرگائون</item>
+    <item>مانچېستېر</item>
+    <item>كىيېۋ</item>
+    <item>ساينىت-پېتىربۇرگ</item>
+    <item>كراكوۋ</item>
+    <item>ۋروكلاۋ</item>
+    <item>ھامبۇرگ</item>
+    <item>ئوئۇلۇ</item>
+    <item>خايفا</item>
+    <item>سان خۇئان</item>
+    <item>تېگۇسىگالپا</item>
+    <item>پارامارىبو</item>
+    <item>كىتو</item>
+    <item>مارشال ئاراللىرى</item>
+    <item>مىدۋېي ئارىلى</item>
+    <item>Regina</item>
+    <item>مانائۇس</item>
+    <item>Araguaina</item>
+    <item>Godthab</item>
+    <item>جەبۇبىي جورجىيە</item>
+    <item>ئازور</item>
+    <item>ۋىندخوك</item>
+    <item>تىبىلىس</item>
+    <item>يېرېۋان</item>
+    <item>Oral</item>
+    <item>يېكاتېرىنبۇرگ</item>
+    <item>كىراسنويارسك</item>
+    <item>ئىركۇتسك</item>
+    <item>ياكۇتسك</item>
+    <item>خوبارت</item>
+    <item>ماگادان</item>
+    <item>Tongatapu</item>
+    <item>ئاكلاۋىك</item>
+    <item>مونتگومېرى</item>
+    <item>جەنۋە</item>
+    <item>ئودېسا</item>
+    <item>ئادېن</item>
+    <item>ئەبۇ زەبىي</item>
+    <item>تاشكەنت</item>
+    <item>يېڭى دېھلى</item>
+    <item>سۇۋا</item>
+    <item>ۋىللىڭتون</item>
+    <item>چاتام</item>
+    <item>ۋىلادىۋوستوك</item>
+    <item>كامچاتكا</item>
+  </string-array>
   <array name="snooze_dismiss_drawables">
     <item>@drawable/ic_alarm_alert_dismiss</item>
     <item>@null</item>
