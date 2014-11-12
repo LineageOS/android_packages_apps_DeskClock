@@ -19,6 +19,7 @@ import android.app.AlarmManager;
 import android.app.Notification;
 import android.app.NotificationManager;
 import android.app.PendingIntent;
+import android.content.ActivityNotFoundException;
 import android.content.BroadcastReceiver;
 import android.content.ContentResolver;
 import android.content.Context;
@@ -119,6 +120,13 @@ public final class AlarmStateManager extends BroadcastReceiver {
 
     // Buffer time in seconds to fire alarm instead of marking it missed.
     public static final int ALARM_FIRE_BUFFER = 15;
+
+    private static boolean sRtcPowerUp = false;
+    private static final String ACTION_POWER_ON_ALERT =
+            "org.codeaurora.poweronalert.action.POWER_ON_ALERT";
+    private static final String ALARM_POWER_OFF_ACTION =
+            "org.codeaurora.poweronalert.action.ALARM_POWER_OFF";
+    private static final String FIRST_ALARM_FLAG = "first_alarm";
 
     public static int getGlobalIntentId(Context context) {
         SharedPreferences prefs = PreferenceManager.getDefaultSharedPreferences(context);
@@ -521,6 +529,13 @@ public final class AlarmStateManager extends BroadcastReceiver {
 
         // Instance is not valid anymore, so find next alarm that will fire and notify system
         updateNextAlarm(context);
+        if (isPowerOffAlarm(context)) {
+            try {
+                context.startActivity(new Intent(ACTION_POWER_ON_ALERT));
+            } catch (ActivityNotFoundException ex) {
+                // do nothing, the powerOnAlert app couldn't be found.
+            }
+        }
     }
 
     /**
@@ -707,6 +722,9 @@ public final class AlarmStateManager extends BroadcastReceiver {
                 break;
             case AlarmInstance.MISSED_STATE:
                 setMissedState(context, instance);
+                if (isPowerOffAlarm(context)) {
+                    context.sendBroadcast(new Intent(ALARM_POWER_OFF_ACTION));
+                }
                 break;
             case AlarmInstance.DISMISSED_STATE:
                 setDismissState(context, instance);
@@ -849,5 +867,23 @@ public final class AlarmStateManager extends BroadcastReceiver {
      */
     public static Intent createIndicatorIntent(Context context) {
         return new Intent(context, AlarmStateManager.class).setAction(INDICATOR_ACTION);
+    }
+
+    public static void setRtcPowerUp(Context context, boolean isRtcPowerUp) {
+        SharedPreferences prefs = PreferenceManager.getDefaultSharedPreferences(context);
+        prefs.edit().putBoolean(FIRST_ALARM_FLAG, isRtcPowerUp).commit();
+    }
+
+    /**
+     * @return true if the alarm is a power off alarm
+     */
+    public static boolean isPowerOffAlarm(Context context) {
+        boolean isPoAlarm = false;
+        SharedPreferences prefs = PreferenceManager.getDefaultSharedPreferences(context);
+        if (prefs.getBoolean(FIRST_ALARM_FLAG, false)) {
+            isPoAlarm = true;
+            setRtcPowerUp(context,false);
+        }
+        return isPoAlarm;
     }
 }
