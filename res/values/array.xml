@@ -317,17 +317,13 @@
         <item>Quito</item>
         <item>Marshall Islands</item>
         <item>Midway Island</item>
-        <item>Tijuana</item>
-        <item>Phoenix</item>
         <item>Regina</item>
         <item>Manaus</item>
         <item>Araguaina</item>
         <item>Godthab</item>
-        <item>South_Georgia</item>
+        <item>South Georgia</item>
         <item>Azores</item>
         <item>Windhoek</item>
-        <item>Brazzaville</item>
-        <item>Nairobi</item>
         <item>Tbilisi</item>
         <item>Yerevan</item>
         <item>Oral</item>
@@ -340,17 +336,12 @@
         <item>Tongatapu</item>
         <item>Aklavik</item>
         <item>Montgomery</item>
-        <item>Washington_DC</item>
-        <item>La_Paz</item>
-        <item>St_Johns</item>
         <item>Geneva</item>
         <item>Odesa</item>
-        <item>Khartoum</item>
         <item>Aden</item>
-        <item>Abu_Dhabi</item>
+        <item>Abu Dhabi</item>
         <item>Tashkent</item>
-        <item>New_Delhi</item>
-        <item>Calcutta</item>
+        <item>New Delhi</item>
         <item>Suva</item>
         <item>Wellington</item>
         <item>Chatham</item>
@@ -659,8 +650,6 @@
         <item>America/Panama</item>
         <item>Pacific/Majuro</item>
         <item>Pacific/Midway</item>
-        <item>America/Tijuana</item>
-        <item>America/Phoenix</item>
         <item>America/Regina</item>
         <item>America/Manaus</item>
         <item>America/Araguaina</item>
@@ -668,8 +657,6 @@
         <item>Atlantic/South_Georgia</item>
         <item>Atlantic/Azores</item>
         <item>Africa/Windhoek</item>
-        <item>Africa/Brazzaville</item>
-        <item>Africa/Nairobi</item>
         <item>Asia/Tbilisi</item>
         <item>Asia/Yerevan</item>
         <item>Asia/Oral</item>
@@ -680,21 +667,16 @@
         <item>Australia/Hobart</item>
         <item>Asia/Magadan</item>
         <item>Pacific/Tongatapu</item>
-        <item>America/Aklavik</item>
-        <item>America/Montgomery</item>
-        <item>America/Washington_DC</item>
-        <item>America/La_Paz</item>
-        <item>America/St_Johns</item>
-        <item>Europe/Geneva</item>
-        <item>Europe/Odesa</item>
-        <item>Africa/Khartoum</item>
+        <item>America/Yellowknife</item>
+        <item>America/Chicago</item>
+        <item>Europe/Zurich</item>
+        <item>Europe/Kiev</item>
         <item>Asia/Aden</item>
-        <item>Asia/Abu_Dhabi</item>
+        <item>Asia/Dubai</item>
         <item>Asia/Tashkent</item>
-        <item>Asia/New_Delhi</item>
         <item>Asia/Calcutta</item>
-        <item>Pacific/Suva</item>
-        <item>Pacific/Wellington</item>
+        <item>Pacific/Fiji</item>
+        <item>Pacific/Auckland</item>
         <item>Pacific/Chatham</item>
         <item>Asia/Vladivostok</item>
     </string-array>
@@ -1030,14 +1012,5 @@
         <item>C328</item>
         <item>C329</item>
         <item>C330</item>
-        <item>C331</item>
-        <item>C332</item>
-        <item>C333</item>
-        <item>C334</item>
-        <item>C335</item>
-        <item>C336</item>
-        <item>C337</item>
-        <item>C338</item>
-        <item>C339</item>
     </string-array>
 </resources>
