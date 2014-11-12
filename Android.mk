@@ -24,6 +24,7 @@ LOCAL_STATIC_JAVA_LIBRARIES := android-opt-datetimepicker
 LOCAL_STATIC_JAVA_LIBRARIES += android-support-v13
 LOCAL_STATIC_JAVA_LIBRARIES += android-support-v7-appcompat
 LOCAL_STATIC_JAVA_LIBRARIES += android-support-v7-gridlayout
+LOCAL_STATIC_JAVA_LIBRARIES += org.cyanogenmod.platform.sdk
 
 LOCAL_AAPT_FLAGS := --auto-add-overlay
 LOCAL_AAPT_FLAGS += --extra-packages android.support.v7.appcompat
