@@ -11,6 +11,8 @@ LOCAL_OVERRIDES_PACKAGES := AlarmClock
 
 LOCAL_SRC_FILES := $(call all-java-files-under, src gen)
 
+LOCAL_STATIC_JAVA_LIBRARIES += org.lineageos.platform.sdk
+
 LOCAL_STATIC_ANDROID_LIBRARIES := \
         $(ANDROID_SUPPORT_DESIGN_TARGETS) \
         android-support-percent \
