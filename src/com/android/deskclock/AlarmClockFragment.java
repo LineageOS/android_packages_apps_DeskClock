@@ -123,6 +123,7 @@ public class AlarmClockFragment extends DeskClockFragment implements
     private static final String KEY_SELECTED_ALARM = "selectedAlarm";
     private static final DeskClockExtensions sDeskClockExtensions = ExtensionsFactory
             .getDeskClockExtensions();
+    private static final String KEY_DELETE_CONFIRMATION = "deleteConfirmation";
     private static final String KEY_SELECT_SOURCE = "selectedSource";
 
     private static final int REQUEST_CODE_RINGTONE = 1;
