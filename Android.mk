@@ -11,6 +11,8 @@ LOCAL_OVERRIDES_PACKAGES := AlarmClock
 
 LOCAL_SRC_FILES := $(call all-java-files-under, src gen)
 
+LOCAL_STATIC_JAVA_LIBRARIES += org.lineageos.platform.sdk
+
 LOCAL_PROGUARD_FLAG_FILES := ../../../frameworks/support/design/proguard-rules.pro
 LOCAL_PROGUARD_FLAG_FILES += ../../../frameworks/support/v7/preference/proguard-rules.pro
 LOCAL_PROGUARD_FLAG_FILES += ../../../frameworks/support/v7/recyclerview/proguard-rules.pro
