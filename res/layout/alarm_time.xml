@@ -94,14 +94,13 @@
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
                 android:gravity="center_vertical"
-                android:orientation="horizontal" >
+                android:orientation="vertical" >
 
                 <TextView
                     android:id="@+id/choose_ringtone"
-                    android:layout_width="0dip"
+                    android:layout_width="wrap_content"
                     android:layout_height="48dip"
                     android:layout_weight="1"
-                    android:layout_alignParentStart="true"
                     android:background="?android:attr/selectableItemBackground"
                     android:clickable="true"
                     android:paddingStart="4dip"
@@ -118,11 +117,19 @@
                     />
 
                 <CheckBox
+                    android:id="@+id/increasing_volume_onoff"
+                    android:text="@string/alarm_increasing_volume"
+                    android:includeFontPadding="false"
+                    android:textColor="@color/white"
+                    android:layout_height="wrap_content"
+                    android:layout_width="wrap_content"
+                    android:gravity="center_vertical"
+                    android:paddingStart="16dip"
+                    style="@style/body"/>
+                <CheckBox
                     android:id="@+id/vibrate_onoff"
                     android:layout_width="wrap_content"
                     android:layout_height="48dip"
-                    android:layout_alignParentEnd="true"
-                    android:layout_centerVertical="true"
                     android:includeFontPadding="false"
                     android:text="@string/alarm_vibrate"
                     android:paddingStart="16dip"
