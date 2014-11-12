@@ -83,6 +83,18 @@ public final class ClockContract {
          * <p>Type: STRING</p>
          */
         public static final String RINGTONE = "ringtone";
+
+        /**
+         * True if alarm should start off quiet and slowly increase volume
+         * <P>Type: BOOLEAN</P>
+         */
+        public static final String INCREASING_VOLUME = "incvol";
+
+        /**
+         * Profile to change to when alarm triggers
+         * <P>Type: STRING</P>
+         */
+        public static final String PROFILE = "profile";
     }
 
     /**
