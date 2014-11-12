@@ -18,6 +18,7 @@ package com.android.deskclock;
 
 import android.app.ActionBar;
 import android.content.Intent;
+import android.content.res.Configuration;
 import android.content.res.Resources;
 import android.media.AudioManager;
 import android.os.Bundle;
@@ -37,6 +38,7 @@ import com.android.deskclock.worldclock.Cities;
 import java.util.ArrayList;
 import java.util.Collections;
 import java.util.List;
+import java.util.Locale;
 import java.util.TimeZone;
 
 /**
@@ -73,6 +75,7 @@ public class SettingsActivity extends PreferenceActivity
 
 
     private static CharSequence[][] mTimezones;
+    private static Locale mLocale;
     private long mTime;
 
 
@@ -90,7 +93,7 @@ public class SettingsActivity extends PreferenceActivity
         // onResume() is called so we do it once in onCreate
         ListPreference listPref;
         listPref = (ListPreference) findPreference(KEY_HOME_TZ);
-        if (mTimezones == null) {
+        if (mTimezones == null || isLocaleChanged()) {
             mTime = System.currentTimeMillis();
             mTimezones = getAllTimezones();
         }
@@ -225,7 +228,13 @@ public class SettingsActivity extends PreferenceActivity
         pref.setOnPreferenceChangeListener(this);
 
         listPref = (ListPreference)findPreference(KEY_HOME_TZ);
+        if (mTimezones == null || isLocaleChanged()) {
+            mTime = System.currentTimeMillis();
+            mTimezones = getAllTimezones();
+        }
         listPref.setEnabled(state);
+        listPref.setEntryValues(mTimezones[0]);
+        listPref.setEntries(mTimezones[1]);
         listPref.setSummary(listPref.getEntry());
 
         listPref = (ListPreference) findPreference(KEY_VOLUME_BUTTONS);
@@ -316,4 +325,17 @@ public class SettingsActivity extends PreferenceActivity
         return timeZones;
     }
 
+    private boolean isLocaleChanged() {
+        Resources resource = getResources();
+        if ( resource != null ) {
+            Configuration config = resource.getConfiguration();
+            if ( config != null ) {
+                if ( mLocale == config.locale ) {
+                    return false;
+                }
+                mLocale = config.locale;
+            }
+        }
+        return true;
+    }
 }
