@@ -18,4 +18,9 @@
     <!-- Setting title for accessing the cLock widget settings -->
     <string name="menu_item_widget_settings">Widget settings</string>
 
+    <!-- Setting title for showing/hiding the alarm status bar icon -->
+    <string name="show_status_bar_icon_title">Show icon</string>
+
+    <!-- Setting summary for showing/hiding the alarm statusbar icon -->
+    <string name="show_status_bar_icon_summary">Show an icon in the status bar when an alarm is set</string>
 </resources>

@@ -1,5 +1,6 @@
 /*
  * Copyright (C) 2009 The Android Open Source Project
+ * Copyright (C) 2012-2015 The CyanogenMod Project
  *
  * Licensed under the Apache License, Version 2.0 (the "License");
  * you may not use this file except in compliance with the License.
@@ -52,6 +53,8 @@ import com.android.deskclock.actionbarmenu.MenuItemControllerFactory;
 import com.android.deskclock.actionbarmenu.NavUpMenuItemController;
 import com.android.deskclock.data.DataModel;
 
+import cyanogenmod.providers.CMSettings;
+
 import java.util.ArrayList;
 import java.util.Collections;
 import java.util.List;
@@ -75,6 +78,7 @@ public final class SettingsActivity extends BaseActivity {
     public static final String KEY_DATE_TIME = "date_time";
     public static final String KEY_VOLUME_BUTTONS = "volume_button_setting";
     public static final String KEY_WEEK_START = "week_start";
+    public static final String KEY_SHOW_ALARM_ICON = "show_status_bar_icon";
 
     public static final String TIMEZONE_LOCALE = "tz_locale";
 
@@ -135,6 +139,11 @@ public final class SettingsActivity extends BaseActivity {
 
             addPreferencesFromResource(R.xml.settings);
             loadTimeZoneList();
+
+            final SwitchPreference showAlarmIconPref =
+                    (SwitchPreference) findPreference(KEY_SHOW_ALARM_ICON);
+            showAlarmIconPref.setChecked(CMSettings.System.getInt(
+                    getActivity().getContentResolver(), CMSettings.System.SHOW_ALARM_ICON, 1) == 1);
         }
 
         @Override
@@ -210,6 +219,10 @@ public final class SettingsActivity extends BaseActivity {
                             R.string.shake_action_summary,
                             getResources().getStringArray(
                                     R.array.action_summary_entries)[ii]));
+                    break;
+                case KEY_SHOW_ALARM_ICON:
+                    CMSettings.System.putInt(getActivity().getContentResolver(),
+                            CMSettings.System.SHOW_ALARM_ICON, (Boolean) newValue ? 1 : 0);
                     break;
             }
             // Set result so DeskClock knows to refresh itself
@@ -348,6 +361,10 @@ public final class SettingsActivity extends BaseActivity {
             weekStartPref.setValueIndex(idx);
             weekStartPref.setSummary(weekStartPref.getEntries()[idx]);
             weekStartPref.setOnPreferenceChangeListener(this);
+
+            final SwitchPreference showAlarmIconPref =
+                    (SwitchPreference) findPreference(KEY_SHOW_ALARM_ICON);
+            showAlarmIconPref.setOnPreferenceChangeListener(this);
 
             final RingtonePreference timerRingtonePref =
                     (RingtonePreference) findPreference(KEY_TIMER_RINGTONE);
