@@ -36,6 +36,8 @@
     <!-- It is also required to display user-friendly names for custom ringtones in the UI. -->
     <uses-permission android:name="android.permission.READ_EXTERNAL_STORAGE" />
     <uses-permission android:name="android.permission.SHUTDOWN" />
+    <uses-permission android:name="cyanogenmod.permission.WRITE_SETTINGS" />
+
     <application android:label="@string/app_label"
                  android:name=".DeskClockApplication"
                  android:allowBackup="true"
