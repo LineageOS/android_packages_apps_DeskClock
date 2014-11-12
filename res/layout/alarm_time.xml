@@ -115,7 +115,25 @@
                     android:textSize="16sp"
                     android:textColor="@color/clock_white"
                     />
-
+                <TextView
+                    android:id="@+id/choose_profile"
+                    android:layout_height="match_parent"
+                    android:layout_width="match_parent"
+                    android:layout_marginRight="16dp"
+                    android:layout_marginEnd="16dp"
+                    android:layout_marginBottom="6dp"
+                    android:gravity="center_vertical"
+                    android:textAlignment="viewStart"
+                    style="@style/body"
+                    android:clickable="true"
+                    android:textColor="@color/clock_white"
+                    android:ellipsize="marquee"
+                    android:scrollHorizontally="true"
+                    android:singleLine="true"
+                    android:marqueeRepeatLimit="marquee_forever"
+                    android:drawableStart="@drawable/ic_profile"
+                    android:drawablePadding="16dp"
+                    />
                 <CheckBox
                     android:id="@+id/increasing_volume_onoff"
                     android:text="@string/alarm_increasing_volume"
