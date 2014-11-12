@@ -404,7 +404,7 @@ public class AlarmClockFragment extends DeskClockFragment implements
                 mUndoShowing = false;
             }
         }, 0, getResources().getString(R.string.warn_silent_alarm_title), true,
-                R.drawable.ic_alarm, 0, true);
+                R.drawable.ic_alarm_off, 0, true);
     }
 
     @Override
@@ -603,12 +603,18 @@ public class AlarmClockFragment extends DeskClockFragment implements
 
     private void launchSingleRingTonePicker(Alarm alarm) {
         mSelectedAlarm = alarm;
-        Uri oldRingtone = Alarm.NO_RINGTONE_URI.equals(alarm.alert) ? null : alarm.alert;
-        final Intent intent = new Intent(RingtoneManager.ACTION_RINGTONE_PICKER);
-        intent.putExtra(RingtoneManager.EXTRA_RINGTONE_EXISTING_URI, oldRingtone);
-        intent.putExtra(RingtoneManager.EXTRA_RINGTONE_TYPE, RingtoneManager.TYPE_ALARM);
-        intent.putExtra(RingtoneManager.EXTRA_RINGTONE_SHOW_DEFAULT, false);
-        startActivityForResult(intent, REQUEST_CODE_RINGTONE);
+        RingTonePickerDialogListener listener = new RingTonePickerDialogListener(this);
+        new AlertDialog.Builder(getActivity())
+                .setTitle(getResources().getString(R.string.alarm_select))
+                .setSingleChoiceItems(
+                        new String[] {
+                                getResources().getString(R.string.alarm_select_ringtone),
+                                getResources().getString(R.string.alarm_select_external) },
+                        mSelectSource, listener)
+                .setPositiveButton(getResources().getString(R.string.alarm_select_ok),listener)
+                .setNegativeButton(getResources().getString(
+                        R.string.alarm_select_cancel),listener)
+                .show();
     }
 
     private void launchProfilePicker(Alarm alarm) {
@@ -620,11 +626,22 @@ public class AlarmClockFragment extends DeskClockFragment implements
         startActivityForResult(intent, REQUEST_CODE_PROFILE);
     }
 
-    private void saveRingtoneUri(Intent intent) {
-        Uri uri = intent.getParcelableExtra(RingtoneManager.EXTRA_RINGTONE_PICKED_URI);
+    private Uri getRingtoneUri(Intent intent) {
+        Uri uri;
+        if (mSelectSource == SEL_SRC_RINGTONE) {
+            uri = intent.getParcelableExtra(RingtoneManager.EXTRA_RINGTONE_PICKED_URI);
+        } else {
+            uri = intent.getData();
+        }
         if (uri == null) {
             uri = Alarm.NO_RINGTONE_URI;
         }
+        return uri;
+    }
+
+    private void saveRingtoneUri(Intent intent) {
+
+        Uri uri =  getRingtoneUri(intent);
         mSelectedAlarm.alert = uri;
 
         // Save the last selected ringtone as the default for new alarms

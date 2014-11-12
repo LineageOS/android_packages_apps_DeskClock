@@ -83,4 +83,15 @@
 
     <!-- Warn Silent Alarm title -->
     <string name="warn_silent_alarm_title">Alarm volume is silent</string>
+
+    <!-- Select the source of the alarm -->
+    <string name="alarm_select">Select Alarm</string>
+    <!-- Select the ringtone as alarm -->
+    <string name="alarm_select_ringtone">Ringtone</string>
+    <!-- Select the alarm from external device -->
+    <string name="alarm_select_external">Music</string>
+    <!-- Ok for selection -->
+    <string name="alarm_select_ok">OK</string>
+    <!-- Cancel for selection -->
+    <string name="alarm_select_cancel">Cancel</string>
 </resources>
