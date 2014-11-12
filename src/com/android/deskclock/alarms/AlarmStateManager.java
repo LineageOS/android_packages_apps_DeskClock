@@ -806,7 +806,7 @@ public final class AlarmStateManager extends BroadcastReceiver {
                     AlarmInstance.getId(uri));
             if (instance == null) {
                 // Not a big deal, but it shouldn't happen
-                Log.e("Can not show and dismiss alarm for unknown instance: " + uri);
+                LogUtils.e("Can not show and dismiss alarm for unknown instance: " + uri);
                 return;
             }
             long alarmId = instance.mAlarmId == null ? Alarm.INVALID_ID : instance.mAlarmId;
