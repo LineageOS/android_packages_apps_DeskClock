@@ -31,6 +31,7 @@ import android.text.format.DateUtils;
 import android.view.Menu;
 import android.view.MenuItem;
 
+import com.android.deskclock.alarms.AlarmNotifications;
 import com.android.deskclock.worldclock.Cities;
 
 import java.util.ArrayList;
@@ -49,6 +50,8 @@ public class SettingsActivity extends PreferenceActivity
 
     public static final String KEY_ALARM_IN_SILENT_MODE =
             "alarm_in_silent_mode";
+    public static final String KEY_SHOW_STATUS_BAR_ICON =
+            "show_status_bar_icon";
     public static final String KEY_ALARM_SNOOZE =
             "snooze_duration";
     public static final String KEY_VOLUME_BEHAVIOR =
@@ -177,6 +180,10 @@ public class SettingsActivity extends PreferenceActivity
             final ListPreference listPref = (ListPreference) pref;
             final int idx = listPref.findIndexOfValue((String) newValue);
             listPref.setSummary(listPref.getEntries()[idx]);
+        } else if (KEY_SHOW_STATUS_BAR_ICON.equals(pref.getKey())) {
+            // Check if any alarms are active. If yes and
+            // we allow showing the alarm icon, the icon will be shown.
+            AlarmNotifications.updateStatusBarIcon(getApplicationContext(), (Boolean) newValue);
         }
         return true;
     }
@@ -224,6 +231,9 @@ public class SettingsActivity extends PreferenceActivity
         listPref = (ListPreference) findPreference(KEY_VOLUME_BUTTONS);
         listPref.setSummary(listPref.getEntry());
         listPref.setOnPreferenceChangeListener(this);
+
+        CheckBoxPreference hideStatusbarIcon = (CheckBoxPreference) findPreference(KEY_SHOW_STATUS_BAR_ICON);
+        hideStatusbarIcon.setOnPreferenceChangeListener(this);
 
         SnoozeLengthDialog snoozePref = (SnoozeLengthDialog) findPreference(KEY_ALARM_SNOOZE);
         snoozePref.setSummary();
