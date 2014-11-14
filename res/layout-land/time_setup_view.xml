@@ -77,6 +77,33 @@
         <View
                 android:layout_width="match_parent"
                 android:layout_height="1dip"
+                android:background="@color/hairline"/>
+
+        <TextView
+                android:id="@+id/choose_ringtone"
+                android:layout_height="wrap_content"
+                android:layout_width="match_parent"
+                android:layout_marginEnd="16dp"
+                android:layout_marginBottom="6dp"
+                android:gravity="center_vertical"
+                android:textAlignment="viewStart"
+                style="@style/body"
+                android:background="@drawable/item_background"
+                android:clickable="true"
+                android:textColor="@color/clock_white"
+                android:ellipsize="marquee"
+                android:scrollHorizontally="true"
+                android:singleLine="true"
+                android:marqueeRepeatLimit="marquee_forever"
+                android:drawableStart="@drawable/ic_ringtone"
+                android:drawablePadding="2dp"
+                android:layout_alignParentStart="true"
+                android:layout_alignParentEnd="true"
+                />
+
+        <View
+                android:layout_width="match_parent"
+                android:layout_height="1dip"
                 android:background="#28ffffff"/>
 
         <LinearLayout
