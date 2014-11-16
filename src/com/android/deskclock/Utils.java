@@ -39,7 +39,6 @@ import android.os.Handler;
 import android.os.SystemClock;
 import android.preference.PreferenceManager;
 import android.provider.MediaStore;
-import android.provider.Settings;
 import android.text.Spannable;
 import android.text.SpannableString;
 import android.text.TextUtils;
@@ -668,8 +667,15 @@ public class Utils {
         return sShortWeekdays;
     }
 
+    public static String getTitleColumnNameForUri(Uri uri) {
+        if (uri.isPathPrefixMatch(MediaStore.Audio.Playlists.EXTERNAL_CONTENT_URI)) {
+            return MediaStore.Audio.Playlists.NAME;
+        }
+        return MediaStore.Audio.Media.TITLE;
+    }
+
     public static boolean isRingToneUriValid(Context context, Uri uri) {
-        if (uri.equals(AlarmMediaPlayer.RANDOM_URI) || uri.equals(Alarm.NO_RINGTONE_URI)) {
+        if (uri.equals(AlarmMultiPlayer.RANDOM_URI) || uri.equals(Alarm.NO_RINGTONE_URI)) {
             return true;
         } else if (uri.getScheme().contentEquals("file")) {
             File f = new File(uri.getPath());
@@ -680,7 +686,7 @@ public class Utils {
             Cursor cursor = null;
             try {
                 cursor = context.getContentResolver().query(uri,
-                        new String[] {MediaStore.Audio.Media.TITLE}, null, null, null);
+                        new String[] {getTitleColumnNameForUri(uri)}, null, null, null);
                 if (cursor != null && cursor.getCount() > 0) {
                     return true;
                 }

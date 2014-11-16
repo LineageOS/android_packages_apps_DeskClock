@@ -80,6 +80,7 @@ import android.widget.FrameLayout;
 import android.widget.ImageButton;
 import android.widget.LinearLayout;
 import android.widget.ListView;
+import android.widget.SimpleCursorAdapter;
 import android.widget.Switch;
 import android.widget.TextView;
 import android.widget.TimePicker;
@@ -603,7 +604,10 @@ public class AlarmClockFragment extends DeskClockFragment implements
                                 launchSingleRingTonePicker(alarm);
                                 break;
                             case 1:
-                                alarm.alert = AlarmMediaPlayer.RANDOM_URI;
+                                launchSinglePlaylistPicker(alarm);
+                                break;
+                            case 2:
+                                alarm.alert = AlarmMultiPlayer.RANDOM_URI;
                                 asyncUpdateAlarm(alarm, false);
                                 break;
                         }
@@ -611,6 +615,39 @@ public class AlarmClockFragment extends DeskClockFragment implements
                 });
         AlertDialog d = builder.create();
         d.show();
+    }
+
+    private void launchSinglePlaylistPicker(final Alarm alarm) {
+        final Context context = getActivity();
+
+        final String[] projection
+                = new String[]{MediaStore.Audio.Playlists._ID, MediaStore.Audio.Playlists.NAME};
+        Cursor c = context.getContentResolver().query(
+                MediaStore.Audio.Playlists.EXTERNAL_CONTENT_URI,
+                projection, null, null, null);
+
+        final CursorAdapter cursorAdapter
+                = new SimpleCursorAdapter(context, android.R.layout.simple_list_item_1, c,
+                new String[] {MediaStore.Audio.Playlists.NAME}, new int[]{android.R.id.text1}, 0);
+
+        new AlertDialog.Builder(context).setSingleChoiceItems(cursorAdapter, 0,
+
+                new DialogInterface.OnClickListener() {
+                    @Override
+                    public void onClick(DialogInterface dialog, int which) {
+                        Cursor c = (Cursor) cursorAdapter.getItem(which);
+                        if (c != null) {
+                            alarm.alert = Uri.withAppendedPath(
+                                    MediaStore.Audio.Playlists.EXTERNAL_CONTENT_URI,
+                                    String.valueOf(c.getLong(0)));
+                            asyncUpdateAlarm(alarm, false);
+                        }
+                        dialog.dismiss();
+                        cursorAdapter.changeCursor(null);
+                    }
+                })
+                .setNegativeButton(R.string.alarm_select_cancel, null)
+                .show();
     }
 
     private void launchSingleRingTonePicker(Alarm alarm) {
@@ -1390,13 +1427,18 @@ public class AlarmClockFragment extends DeskClockFragment implements
             // Try the cache first
             String title = mRingtoneTitleCache.getString(uri.toString());
             if (title == null) {
-                if (uri.equals(AlarmMediaPlayer.RANDOM_URI)) {
+                if (uri.equals(AlarmMultiPlayer.RANDOM_URI)) {
                     title = mContext.getResources().getString(R.string.alarm_type_random);
                 } else {
                     if (Utils.isRingToneUriValid(mContext, uri)) {
                         if (uri.getAuthority().equals(DOC_AUTHORITY)
                                 || uri.getAuthority().equals(DOC_DOWNLOAD)) {
                             title = getDisplayNameFromDatabase(mContext,uri);
+                        } else if (uri.isPathPrefixMatch(MediaStore.Audio.Playlists.EXTERNAL_CONTENT_URI)) {
+                            Cursor c = getActivity().getContentResolver().query(uri, new String[] {MediaStore.Audio.Playlists.NAME}, null, null, null);
+                            if (c.moveToFirst()) {
+                                title = c.getString(0);
+                            }
                         } else {
                             Ringtone ringTone = RingtoneManager.getRingtone(mContext, uri);
                             if (ringTone != null) {
@@ -1436,7 +1478,7 @@ public class AlarmClockFragment extends DeskClockFragment implements
             try {
                 cursor = context.getContentResolver().query(uri,
                         new String[] {
-                                MediaStore.Audio.Media.TITLE,
+                                Utils.getTitleColumnNameForUri(uri),
                         }, selection, selectionArgs, null);
                 if (cursor != null && cursor.getCount() > 0) {
                         cursor.moveToFirst();

@@ -32,6 +32,7 @@
 
     <string-array name="ringtone_picker_entries" translatable="false">
         <item>@string/alarm_type_ringtone</item>
+        <item>@string/alarm_type_playlist</item>
         <item>@string/alarm_type_random</item>
     </string-array>
 </resources>

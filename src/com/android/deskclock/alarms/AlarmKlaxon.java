@@ -31,8 +31,8 @@ import android.os.Handler;
 import android.os.Message;
 import android.os.Vibrator;
 
+import com.android.deskclock.AlarmMultiPlayer;
 import com.android.deskclock.LogUtils;
-import com.android.deskclock.AlarmMediaPlayer;
 import com.android.deskclock.R;
 import com.android.deskclock.Utils;
 import com.android.deskclock.provider.AlarmInstance;
@@ -60,7 +60,7 @@ public class AlarmKlaxon {
 
     private static boolean sStarted = false;
     private static AudioManager sAudioManager = null;
-    private static AlarmMediaPlayer sMediaPlayer = null;
+    private static AlarmMultiPlayer sMediaPlayer = null;
 
     private static int sCurrentVolume = INCREASING_VOLUME_START;
     private static int sAlarmVolumeSetting;
@@ -150,7 +150,7 @@ public class AlarmKlaxon {
                     sMediaPlayer.stop();
                 }
             } else {
-                sMediaPlayer = new AlarmMediaPlayer(context);
+                sMediaPlayer = new AlarmMultiPlayer(context);
                 sMediaPlayer.setOnErrorListener(new OnErrorListener() {
                     @Override
                     public boolean onError(MediaPlayer mp, int what, int extra) {
@@ -197,7 +197,7 @@ public class AlarmKlaxon {
     }
 
     // Do the common stuff when starting the alarm.
-    private static void startAlarm(Context context, AlarmMediaPlayer player,
+    private static void startAlarm(Context context, AlarmMultiPlayer player,
             AlarmInstance instance) throws IOException {
         // do not play alarms if stream volume is 0 (typically because ringer mode is silent).
         if (sAudioManager.getStreamVolume(AudioManager.STREAM_ALARM) != 0) {
@@ -223,7 +223,7 @@ public class AlarmKlaxon {
         }
     }
 
-    private static void setDataSourceFromResource(Context context, AlarmMediaPlayer player, int res)
+    private static void setDataSourceFromResource(Context context, AlarmMultiPlayer player, int res)
             throws IOException {
         AssetFileDescriptor afd = context.getResources().openRawResourceFd(res);
         if (afd != null) {
