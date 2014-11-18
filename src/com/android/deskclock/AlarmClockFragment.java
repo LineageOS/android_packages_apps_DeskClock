@@ -633,8 +633,8 @@ public class AlarmClockFragment extends DeskClockFragment implements
             Alarm a = new Alarm();
             a.alert = RingtoneManager.getActualDefaultRingtoneUri(getActivity(),
                     RingtoneManager.TYPE_ALARM);
-            if (a.alert == null) {
-                a.alert = Uri.parse("content://settings/system/alarm_alert");
+            if (!Utils.isRingToneUriValid(getActivity(), a.alert)) {
+                a.alert = AlarmMediaPlayer.RANDOM_URI;
             }
             a.hour = hourOfDay;
             a.minutes = minute;
@@ -1331,6 +1331,8 @@ public class AlarmClockFragment extends DeskClockFragment implements
             if (!Utils.isRingToneUriValid(mContext, alarm.alert)) {
                 alarm.alert = RingtoneManager.getActualDefaultRingtoneUri(context,
                         RingtoneManager.TYPE_ALARM);
+                if (!Utils.isRingToneUriValid(mContext, alarm.alert))
+                    alarm.alert = AlarmMediaPlayer.RANDOM_URI;
                 asyncUpdateAlarm(alarm, false);
             }
             final ItemHolder itemHolder = (ItemHolder) tag;
