@@ -51,6 +51,7 @@
   <string name="alarm_picker_title">Velg alarmtype</string>
   <string name="alarm_type_ringtone">Ringetone</string>
   <string name="alarm_type_random">Tilfeldig</string>
+  <string name="alarm_type_default">Standard</string>
   <string name="warn_silent_alarm_title">Alarmvolum er satt til lydløst</string>
   <string name="alarm_select">Velg alarm</string>
   <string name="alarm_select_ringtone">Ringetone</string>

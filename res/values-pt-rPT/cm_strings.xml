@@ -42,7 +42,7 @@
   <string name="flip_action_summary" product="default">Rodar o telefone ao contrario <xliff:g id="action">%s</xliff:g></string>
   <string name="shake_action_title">Ação de agitar</string>
   <string name="shake_action_dialog_title" product="tablet">Agitar o tablet \u2026</string>
-  <string name="shake_action_dialog_title" product="default">Agitar o telefone u\2026</string>
+  <string name="shake_action_dialog_title" product="default">Agitar o telefone \u2026</string>
   <string name="shake_action_summary" product="tablet">Agitar o tablet  <xliff:g id="action">%s</xliff:g></string>
   <string name="shake_action_summary" product="default">Agitar o telefone  <xliff:g id="action">%s</xliff:g></string>
   <string name="action_summary_snooze">repete o alarme</string>
@@ -51,6 +51,7 @@
   <string name="alarm_picker_title">Escolher o tipo de alarme</string>
   <string name="alarm_type_ringtone">Toque</string>
   <string name="alarm_type_random">Aleatoriamente</string>
+  <string name="alarm_type_default">Padrão</string>
   <string name="warn_silent_alarm_title">Alarme sem som</string>
   <string name="alarm_select">Selecionar alarme</string>
   <string name="alarm_select_ringtone">Toque</string>

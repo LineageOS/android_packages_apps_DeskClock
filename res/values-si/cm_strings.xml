@@ -51,6 +51,7 @@
   <string name="alarm_picker_title">ඇඟවීම් විලාසය තෝරන්න</string>
   <string name="alarm_type_ringtone">රින්ග්ටෝනය</string>
   <string name="alarm_type_random">අහඹු ලෙස</string>
+  <string name="alarm_type_default">පෙරනිමි</string>
   <string name="warn_silent_alarm_title">ඇඟවීමේ නාදය නිශ්ශබ්දය</string>
   <string name="alarm_select">ඇඟවීම තෝරන්න</string>
   <string name="alarm_select_ringtone">රින්ග්ටෝනය</string>
