@@ -1011,7 +1011,7 @@ public class AlarmClockFragment extends DeskClockFragment implements
             for (int i = 0; i < 7; i++) {
                 final Button dayButton = (Button) mFactory.inflate(
                         R.layout.day_button, holder.repeatDays, false /* attachToRoot */);
-                dayButton.setText(mShortWeekDayStrings[i]);
+                dayButton.setText(mShortWeekDayStrings[DAY_ORDER[i]]);
                 dayButton.setContentDescription(mLongWeekDayStrings[DAY_ORDER[i]]);
                 holder.repeatDays.addView(dayButton);
                 holder.dayButtons[i] = dayButton;
