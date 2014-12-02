@@ -108,7 +108,7 @@
     <item msgid="3956700126827381905">"São Paulo"</item>
     <item msgid="3851056559336304908">"St. Johns"</item>
     <item msgid="7620601490016157459">"St. Kitts"</item>
-    <item msgid="256494147725561888">"St Lucia"</item>
+    <item msgid="256494147725561888">"St. Lucia"</item>
     <item msgid="9065982618380084594">"St. Thomas"</item>
     <item msgid="7424657189317481507">"Tijuana"</item>
     <item msgid="7378768724772963031">"Toronto"</item>
@@ -316,5 +316,37 @@
     <item msgid="8613864994547669100">"Tegucigalpa"</item>
     <item msgid="7087691675228926801">"Paramaribo"</item>
     <item msgid="478384295484578701">"Quito"</item>
+    <item>Marshall Islands</item>
+    <item>Midway Island</item>
+    <item>Regina</item>
+    <item>Manaus</item>
+    <item>Araguaina</item>
+    <item>Godthab</item>
+    <item>South Georgia</item>
+    <item>Azores</item>
+    <item>Windhoek</item>
+    <item>Tbilisi</item>
+    <item>Yerevan</item>
+    <item>Oral</item>
+    <item>Yekaterinburg</item>
+    <item>Krasnoyarsk</item>
+    <item>Irkutsk</item>
+    <item>Yakutsk</item>
+    <item>Hobart</item>
+    <item>Magadan</item>
+    <item>Tongatapu</item>
+    <item>Aklavik</item>
+    <item>Montgomery</item>
+    <item>Geneva</item>
+    <item>Odesa</item>
+    <item>Aden</item>
+    <item>Abu Dhabi</item>
+    <item>Tashkent</item>
+    <item>New Delhi</item>
+    <item>Suva</item>
+    <item>Wellington</item>
+    <item>Chatham</item>
+    <item>Vladivostok</item>
+    <item>Kamchatka</item>
   </string-array>
 </resources>
