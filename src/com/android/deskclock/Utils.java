@@ -650,17 +650,19 @@ public class Utils {
     }
 
     /**
-     * To get an array of single-character day of week symbols {'S', 'M', 'T', 'W', 'T', 'F', 'S'}
+     * To get an array of single-character day of week symbols {'S', 'M', 'T', 'W', 'T', 'F', 'S'},
+     * indexed like DateFormatSymbols.getShortWeekdays()
      * @return the array of symbols
      */
     public static String[] getShortWeekdays() {
         if (sShortWeekdays == null) {
-            final String[] shortWeekdays = new String[7];
+            final String[] shortWeekdays = new String[Calendar.SATURDAY + 1];
             final SimpleDateFormat format = new SimpleDateFormat("EEEEE");
             // Create a date (2014/07/20) that is a Sunday
             long aSunday = new GregorianCalendar(2014, Calendar.JULY, 20).getTimeInMillis();
-            for (int day = 0; day < 7; day++) {
-                shortWeekdays[day] = format.format(new Date(aSunday + day * DateUtils.DAY_IN_MILLIS));
+            for (int day = Calendar.SUNDAY; day <= Calendar.SATURDAY; day++) {
+                long offset = (day - Calendar.SUNDAY) * DateUtils.DAY_IN_MILLIS;
+                shortWeekdays[day] = format.format(new Date(aSunday + offset));
             }
             sShortWeekdays = shortWeekdays;
         }
