@@ -125,7 +125,7 @@
     <item msgid="2201480850069597815">"Baku"</item>
     <item msgid="424770109352500733">"Bangkok"</item>
     <item msgid="5329081174177673828">"Beirut"</item>
-    <item msgid="7187135889522860058">"Calcutta"</item>
+    <item msgid="7187135889522860058">"Kolkata"</item>
     <item msgid="8261312970920594511">"Damascus"</item>
     <item msgid="6050005781178769107">"Dhaka"</item>
     <item msgid="846831973484498790">"Dubai"</item>
@@ -193,6 +193,7 @@
     <item msgid="4616641627708493425">"Helsinki"</item>
     <item msgid="212359461403262711">"Isle of Man"</item>
     <item msgid="4245799496293578703">"Istanbul"</item>
+    <item msgid="3262376108426000449">"Kiev"</item>
     <item msgid="7233802930588725294">"Lisbon"</item>
     <item msgid="7186725202454661926">"London"</item>
     <item msgid="5298853578615697920">"Luxembourg"</item>
@@ -284,7 +285,7 @@
     <item msgid="1658609023659261743">"Frankfurt"</item>
     <item msgid="4214691757607136548">"Hanoi"</item>
     <item msgid="484506613000693635">"Ankara"</item>
-    <item msgid="1958807113380596945">"Bangalore"</item>
+    <item msgid="1958807113380596945">"Bengaluru"</item>
     <item msgid="2258411542499008700">"Brasília"</item>
     <item msgid="770086263560182220">"Cape Town"</item>
     <item msgid="5936333722350504953">"Islamabad"</item>
@@ -348,5 +349,6 @@
     <item>Chatham</item>
     <item>Vladivostok</item>
     <item>Kamchatka</item>
+    <item>Chennai</item>
   </string-array>
 </resources>
