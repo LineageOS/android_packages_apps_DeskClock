@@ -1,0 +1,38 @@
+{
+  "comments": [
+    {
+      "key": {
+        "uuid": "bab6814e_4fee6d8c",
+        "filename": "src/com/android/deskclock/alarms/AlarmService.java",
+        "patchSetId": 2
+      },
+      "lineNbr": 63,
+      "author": {
+        "id": 9621
+      },
+      "writtenOn": "2014-12-06T14:41:02Z",
+      "side": 1,
+      "message": "Move below and make this say DEFAULT_ACTION \u003d ALARM_NO_ACTION for clarity?",
+      "revId": "8d54acdeaf29d17a7ce808ba2dbe8166773b9ff7",
+      "serverId": "1ec6b3db-b2c1-4fa4-84a2-4c7efe89ba71",
+      "unresolved": false
+    },
+    {
+      "key": {
+        "uuid": "bab6814e_2ff32975",
+        "filename": "src/com/android/deskclock/alarms/AlarmService.java",
+        "patchSetId": 2
+      },
+      "lineNbr": 382,
+      "author": {
+        "id": 9621
+      },
+      "writtenOn": "2014-12-06T14:41:02Z",
+      "side": 1,
+      "message": "Is this constant declared anywhere else? What about DISMISS_TAG?",
+      "revId": "8d54acdeaf29d17a7ce808ba2dbe8166773b9ff7",
+      "serverId": "1ec6b3db-b2c1-4fa4-84a2-4c7efe89ba71",
+      "unresolved": false
+    }
+  ]
+}
