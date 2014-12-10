@@ -23,13 +23,6 @@
       <item>@string/action_summary_do_nothing</item>
     </string-array>
 
-    <!-- Values for for shake and flip actions -->
-    <string-array name="action_summary_values" translatable="false">
-      <item>1</item>
-      <item>2</item>
-      <item>0</item>
-    </string-array>
-
     <string-array name="ringtone_picker_entries" translatable="false">
         <item>@string/alarm_type_ringtone</item>
         <item>@string/alarm_type_playlist</item>

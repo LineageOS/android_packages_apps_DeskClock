@@ -47,12 +47,11 @@
     <string name="cities_delete_city_msg">Do you want to delete <xliff:g id="city">%s</xliff:g>?</string>
     <string name="cities_delete_city_failed">Can\'t delete the city</string>
 
+    <!-- Setting summary for volume buttons setting. -->
+    <string name="volume_buttons_summary">Pressing the volume buttons will <xliff:g id="action">%s</xliff:g></string>
+
     <!-- Setting title for the flip action setting. -->
     <string name="flip_action_title">Flip action</string>
-
-    <!-- Dialog title of the flip action setting. -->
-    <string name="flip_action_dialog_title" product="tablet">Flip the tablet to\u2026</string>
-    <string name="flip_action_dialog_title" product="default">Flip the phone to\u2026</string>
 
     <!-- Setting summary for the flip action setting. -->
     <string name="flip_action_summary" product="tablet">Flipping the tablet down will <xliff:g id="action">%s</xliff:g></string>
@@ -61,17 +60,13 @@
     <!-- Setting title for the shake action setting. -->
     <string name="shake_action_title">Shake action</string>
 
-    <!-- Dialog title for the shake action setting. -->
-    <string name="shake_action_dialog_title" product="tablet">Shake the tablet to\u2026</string>
-    <string name="shake_action_dialog_title" product="default">Shake the phone to\u2026</string>
-
     <!-- Setting summary for the shake action setting. -->
     <string name="shake_action_summary" product="tablet">Shaking the tablet will <xliff:g id="action">%s</xliff:g></string>
     <string name="shake_action_summary" product="default">Shaking the phone will <xliff:g id="action">%s</xliff:g></string>
 
     <!-- Summary texts for shake and flip actions -->
-    <string name="action_summary_snooze">snooze alarm</string>
-    <string name="action_summary_dismiss">dismiss alarm</string>
+    <string name="action_summary_snooze">snooze the alarm</string>
+    <string name="action_summary_dismiss">dismiss the alarm</string>
     <string name="action_summary_do_nothing">do nothing</string>
 
     <!-- Alarm picker dialog title -->

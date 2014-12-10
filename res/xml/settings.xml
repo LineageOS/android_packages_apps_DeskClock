@@ -70,27 +70,27 @@
             android:entryValues="@array/volume_button_setting_values"
             android:defaultValue="0" />
 
-        <CheckBoxPreference
-            android:key="show_status_bar_icon"
-            android:title="@string/show_status_bar_icon_title"
-            android:summary="@string/show_status_bar_icon_summary"
-            android:persistent="false"
-            android:defaultValue="true"  />
-
        <ListPreference
             android:key="flip_action"
             android:title="@string/flip_action_title"
-            android:dialogTitle="@string/flip_action_dialog_title"
-            android:entries="@array/action_summary_entries"
-            android:entryValues="@array/action_summary_values"
+            android:dialogTitle="@string/flip_action_title"
+            android:entries="@array/volume_button_setting_entries"
+            android:entryValues="@array/volume_button_setting_values"
             android:defaultValue="0" />
 
         <ListPreference
             android:key="shake_action"
             android:title="@string/shake_action_title"
-            android:dialogTitle="@string/shake_action_dialog_title"
-            android:entries="@array/action_summary_entries"
-            android:entryValues="@array/action_summary_values"
-            android:defaultValue="0"/>
+            android:dialogTitle="@string/shake_action_title"
+            android:entries="@array/volume_button_setting_entries"
+            android:entryValues="@array/volume_button_setting_values"
+            android:defaultValue="0" />
+
+        <CheckBoxPreference
+            android:key="show_status_bar_icon"
+            android:title="@string/show_status_bar_icon_title"
+            android:summary="@string/show_status_bar_icon_summary"
+            android:persistent="false"
+            android:defaultValue="true" />
     </PreferenceCategory>
 </PreferenceScreen>
