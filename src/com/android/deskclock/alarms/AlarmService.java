@@ -66,6 +66,7 @@ public class AlarmService extends Service {
     private static final int ALARM_NO_ACTION = 0;
     private static final int ALARM_SNOOZE = 1;
     private static final int ALARM_DISMISS = 2;
+    private String mVolumeBehavior;
 
     /**
      * Utility method to help start alarm properly. If alarm is already firing, it
@@ -170,7 +171,23 @@ public class AlarmService extends Service {
 
         AlarmAlertWakeLock.acquireCpuWakeLock(this);
         mCurrentAlarm = instance;
-        AlarmNotifications.showAlarmNotification(this, mCurrentAlarm);
+
+        switch (mVolumeBehavior) {
+            case SettingsActivity.VOLUME_BEHAVIOR_SNOOZE:
+            case SettingsActivity.VOLUME_BEHAVIOR_DISMISS:
+                Intent fullScreenIntent = AlarmInstance.createIntent(this, AlarmActivity.class,
+                        instance.mId);
+                // set action, so we can be different then content pending intent
+                fullScreenIntent.setAction("fullscreen_activity");
+                fullScreenIntent.setFlags(Intent.FLAG_ACTIVITY_NEW_TASK |
+                        Intent.FLAG_ACTIVITY_NO_USER_ACTION);
+                startActivity(fullScreenIntent);
+                break;
+            default:
+                AlarmNotifications.showAlarmNotification(this, mCurrentAlarm);
+                break;
+        }
+
         mInitialCallState = mTelephonyManager.getCallState();
         mTelephonyManager.listen(mPhoneStateListener, PhoneStateListener.LISTEN_CALL_STATE);
         boolean inCall = mInitialCallState != TelephonyManager.CALL_STATE_IDLE;
@@ -205,6 +222,8 @@ public class AlarmService extends Service {
                 SettingsActivity.KEY_FLIP_ACTION, DEFAULT_ACTION));
         mShakeAction = Integer.parseInt(prefs.getString(
                 SettingsActivity.KEY_SHAKE_ACTION, DEFAULT_ACTION));
+        mVolumeBehavior = prefs.getString(SettingsActivity.KEY_VOLUME_BEHAVIOR,
+                SettingsActivity.DEFAULT_VOLUME_BEHAVIOR);
     }
 
     @Override
