@@ -854,5 +854,9 @@
 
     <!-- String for no enabled alarms in timeline view [CHAR LIMIT=30] -->
     <string name="no_upcoming_alarms">NO UPCOMING ALARMS</string>
+    <string name="ringtone_default">"Default ringtone"</string>
+    <string name="power_on_text">Power on</string>
+    <string name="power_on_yes_text">Yes</string>
+    <string name="power_on_no_text">No</string>
 </resources>
 
