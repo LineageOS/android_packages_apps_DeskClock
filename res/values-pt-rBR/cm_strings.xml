@@ -51,6 +51,7 @@
   <string name="alarm_picker_title">Escolher tipo de alarme</string>
   <string name="alarm_type_ringtone">Toque</string>
   <string name="alarm_type_random">Aleatório</string>
+  <string name="alarm_type_default">Padrão</string>
   <string name="warn_silent_alarm_title">Volume do alarme está silenciado</string>
   <string name="alarm_select">Selecione o alarme</string>
   <string name="alarm_select_ringtone">Toque de telefone</string>

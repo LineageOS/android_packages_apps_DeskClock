@@ -51,6 +51,11 @@
   <string name="alarm_picker_title">Välj alarmtyp</string>
   <string name="alarm_type_ringtone">Ringsignal</string>
   <string name="alarm_type_random">Slumpmässigt</string>
+  <string name="alarm_type_default">Standard</string>
   <string name="warn_silent_alarm_title">Alarmvolym är tyst</string>
+  <string name="alarm_select">Välj alarm</string>
+  <string name="alarm_select_ringtone">Ringsignal</string>
   <string name="alarm_select_external">Musik</string>
+  <string name="ringtone_default">"Standardringsignal"</string>
+  <string name="take_persistent_grant_uri_permission_failed_msg">Det gick inte att ge behörighet för ringsignal</string>
 </resources>

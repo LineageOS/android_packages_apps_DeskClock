@@ -51,6 +51,7 @@
   <string name="alarm_picker_title">Wybierz rodzaj alarmu</string>
   <string name="alarm_type_ringtone">Dzwonek</string>
   <string name="alarm_type_random">Losowo</string>
+  <string name="alarm_type_default">Domyślny</string>
   <string name="warn_silent_alarm_title">Głośność alarmu jest ustawiona na minimum</string>
   <string name="alarm_select">Wybierz alarm</string>
   <string name="alarm_select_ringtone">Dzwonek</string>

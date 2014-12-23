@@ -51,6 +51,7 @@
   <string name="alarm_picker_title">アラームの種類を選択</string>
   <string name="alarm_type_ringtone">着信音</string>
   <string name="alarm_type_random">ランダム</string>
+  <string name="alarm_type_default">デフォルト</string>
   <string name="warn_silent_alarm_title">アラームの音量はサイレントです</string>
   <string name="alarm_select">アラームを選択</string>
   <string name="alarm_select_ringtone">着信音</string>

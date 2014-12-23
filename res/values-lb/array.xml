@@ -124,7 +124,7 @@
     <item>Baku</item>
     <item>Bangkok</item>
     <item>Beirut</item>
-    <item>Kalkutta</item>
+    <item>Kolkata</item>
     <item>Damaskus</item>
     <item>Dhaka</item>
     <item>Dubai</item>
@@ -348,6 +348,7 @@
     <item>Chatham</item>
     <item>Wladiwostok</item>
     <item>Kamtschatka</item>
+    <item>Chennai</item>
   </string-array>
   <array name="snooze_dismiss_drawables">
     <item>@drawable/ic_alarm_alert_dismiss</item>

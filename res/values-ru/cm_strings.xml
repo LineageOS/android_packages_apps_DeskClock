@@ -51,6 +51,7 @@
   <string name="alarm_picker_title">Звук будильника</string>
   <string name="alarm_type_ringtone">Рингтон</string>
   <string name="alarm_type_random">Случайная мелодия</string>
+  <string name="alarm_type_default">Стандартный</string>
   <string name="warn_silent_alarm_title">Звук будильника отключён</string>
   <string name="alarm_select">Выбор сигнала</string>
   <string name="alarm_select_ringtone">Рингтон</string>
