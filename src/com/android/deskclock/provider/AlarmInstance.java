@@ -253,6 +253,27 @@ public final class AlarmInstance implements ClockContract.InstancesColumns {
         return deletedRows == 1;
     }
 
+    public static AlarmInstance getFirstAlarmInstance(ContentResolver contentResolver) {
+        List<AlarmInstance> alertAlarms = getInstances(contentResolver, null);
+        long currentTime = System.currentTimeMillis();
+
+        AlarmInstance firstAlarm = null;
+        long closestMissAlarmElapse = currentTime;
+
+        for (AlarmInstance ai : alertAlarms) {
+            long time = currentTime - ai.getAlarmTime().getTimeInMillis();
+            LogUtils.v("getFirstAlarmInstance = " + ai);
+
+            if (closestMissAlarmElapse > time) {
+                firstAlarm = ai;
+                closestMissAlarmElapse = time;
+                LogUtils.v("getFirstAlarmInstance closest = " + ai);
+            }
+        }
+
+        return firstAlarm;
+    }
+
     // Public fields
     public long mId;
     public int mYear;
