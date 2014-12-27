@@ -1334,14 +1334,11 @@ public class AlarmClockFragment extends DeskClockFragment implements
 
             itemHolder.increasingVolume.setVisibility(View.VISIBLE);
             itemHolder.increasingVolume.setChecked(alarm.increasingVolume);
-            itemHolder.increasingVolume.setTextColor(
-                    alarm.increasingVolume ? mColorLit : mColorDim);
             itemHolder.increasingVolume.setOnClickListener(new View.OnClickListener() {
                 @Override
                 public void onClick(View v) {
                     final boolean checked = ((CheckBox) v).isChecked();
                     //When action mode is on - simulate long click
-                    itemHolder.increasingVolume.setTextColor(checked ? mColorLit : mColorDim);
                     alarm.increasingVolume = checked;
                     asyncUpdateAlarm(alarm, false);
                 }
