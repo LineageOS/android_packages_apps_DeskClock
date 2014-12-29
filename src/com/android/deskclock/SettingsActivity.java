@@ -24,11 +24,11 @@ import android.content.res.Configuration;
 import android.content.res.Resources;
 import android.media.AudioManager;
 import android.os.Bundle;
-import android.preference.CheckBoxPreference;
 import android.preference.ListPreference;
 import android.preference.Preference;
 import android.preference.PreferenceActivity;
 import android.preference.PreferenceScreen;
+import android.preference.SwitchPreference;
 import android.provider.Settings;
 import android.text.format.DateUtils;
 import android.view.Menu;
@@ -83,7 +83,7 @@ public class SettingsActivity extends PreferenceActivity
     private static CharSequence[][] mTimezones;
     private static Locale mLocale;
     private long mTime;
-    private CheckBoxPreference mAlarmIcon;
+    private SwitchPreference mAlarmIcon;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -109,7 +109,7 @@ public class SettingsActivity extends PreferenceActivity
         listPref.setSummary(listPref.getEntry());
         listPref.setOnPreferenceChangeListener(this);
 
-        mAlarmIcon = (CheckBoxPreference) findPreference(KEY_SHOW_STATUS_BAR_ICON);
+        mAlarmIcon = (SwitchPreference) findPreference(KEY_SHOW_STATUS_BAR_ICON);
         mAlarmIcon.setChecked(Settings.System.getInt(getContentResolver(),
                 Settings.System.SHOW_ALARM_ICON, 1) == 1);
     }
@@ -148,7 +148,7 @@ public class SettingsActivity extends PreferenceActivity
     public boolean onPreferenceTreeClick(PreferenceScreen preferenceScreen,
             Preference preference) {
         if (KEY_ALARM_IN_SILENT_MODE.equals(preference.getKey())) {
-            CheckBoxPreference pref = (CheckBoxPreference) preference;
+            SwitchPreference pref = (SwitchPreference) preference;
             int ringerModeStreamTypes = Settings.System.getInt(
                     getContentResolver(),
                     Settings.System.MODE_RINGER_STREAMS_AFFECTED, 0);
@@ -185,7 +185,7 @@ public class SettingsActivity extends PreferenceActivity
             listPref.setSummary(listPref.getEntries()[idx]);
             notifyHomeTimeZoneChanged();
         } else if (KEY_AUTO_HOME_CLOCK.equals(pref.getKey())) {
-            boolean state =((CheckBoxPreference) pref).isChecked();
+            boolean state =((SwitchPreference) pref).isChecked();
             Preference homeTimeZone = findPreference(KEY_HOME_TZ);
             homeTimeZone.setEnabled(!state);
             notifyHomeTimeZoneChanged();
@@ -245,7 +245,7 @@ public class SettingsActivity extends PreferenceActivity
         listPref.setOnPreferenceChangeListener(this);
 
         Preference pref = findPreference(KEY_AUTO_HOME_CLOCK);
-        boolean state =((CheckBoxPreference) pref).isChecked();
+        boolean state =((SwitchPreference) pref).isChecked();
         pref.setOnPreferenceChangeListener(this);
 
         listPref = (ListPreference)findPreference(KEY_HOME_TZ);
@@ -270,7 +270,7 @@ public class SettingsActivity extends PreferenceActivity
         updateActionSummary(listPref, listPref.getValue(), R.string.shake_action_summary);
         listPref.setOnPreferenceChangeListener(this);
 
-        CheckBoxPreference hideStatusbarIcon = (CheckBoxPreference) findPreference(KEY_SHOW_STATUS_BAR_ICON);
+        SwitchPreference hideStatusbarIcon = (SwitchPreference) findPreference(KEY_SHOW_STATUS_BAR_ICON);
         hideStatusbarIcon.setOnPreferenceChangeListener(this);
 
         SnoozeLengthDialog snoozePref = (SnoozeLengthDialog) findPreference(KEY_ALARM_SNOOZE);

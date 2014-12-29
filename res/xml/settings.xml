@@ -27,7 +27,7 @@
             android:entryValues="@array/clock_style_values"
             android:defaultValue="@string/default_clock_style"
             android:dialogTitle="@string/clock_style" />
-        <CheckBoxPreference
+        <SwitchPreference
             android:key="automatic_home_clock"
             android:title="@string/automatic_home_clock"
             android:summary="@string/automatic_home_clock_summary"
@@ -86,7 +86,7 @@
             android:entryValues="@array/volume_button_setting_values"
             android:defaultValue="0" />
 
-        <CheckBoxPreference
+        <SwitchPreference
             android:key="show_status_bar_icon"
             android:title="@string/show_status_bar_icon_title"
             android:summary="@string/show_status_bar_icon_summary"
