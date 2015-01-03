@@ -51,6 +51,7 @@
   <string name="alarm_picker_title">Izvēlēties modinātāja veidu</string>
   <string name="alarm_type_ringtone">Zvana melodija</string>
   <string name="alarm_type_random">Nejauši</string>
+  <string name="alarm_type_default">Noklusētais</string>
   <string name="warn_silent_alarm_title">Modinātājs ir kluss</string>
   <string name="alarm_select">Izvēlieties modinātāju</string>
   <string name="alarm_select_ringtone">Zvana melodija</string>

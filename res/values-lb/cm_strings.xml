@@ -57,5 +57,5 @@
   <string name="alarm_select_ringtone">Schelltoun</string>
   <string name="alarm_select_external">Musek</string>
   <string name="ringtone_default">"Standard-Schelltoun"</string>
-  <string name="take_persistent_grant_uri_permission_failed_msg">Konnt keng dauerhaf Erlabnis kréie fir de Schelltoun ze änneren</string>
+  <string name="take_persistent_grant_uri_permission_failed_msg">Konnt keng dauerhaf Erlabnis kréie fir de Schelltoun z\'änneren</string>
 </resources>
