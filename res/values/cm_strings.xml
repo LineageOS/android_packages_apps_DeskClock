@@ -96,4 +96,17 @@
 
     <!-- Message that describe an error trying to take a persistent grant permission for an uri ringtone -->
     <string name="take_persistent_grant_uri_permission_failed_msg">Failed to take persistent grant permission for ringtone</string>
+
+    <string name="default_auto_silence_value">10</string>
+    <!-- Select the source of the alarm -->
+    <string name="alarm_select">Select Alarm</string>
+    <!-- Select the ringtone as alarm -->
+    <string name="alarm_select_ringtone">Ringtone</string>
+    <!-- Select the alarm from external device -->
+    <string name="alarm_select_external">Music</string>
+    <!-- Ok for selection -->
+    <string name="alarm_select_ok">OK</string>
+    <!-- Cancel for selection -->
+    <string name="alarm_select_cancel">Cancel</string>
+
 </resources>
