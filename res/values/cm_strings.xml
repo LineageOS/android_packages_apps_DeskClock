@@ -96,4 +96,39 @@
 
     <!-- Message that describe an error trying to take a persistent grant permission for an uri ringtone -->
     <string name="take_persistent_grant_uri_permission_failed_msg">Failed to take persistent grant permission for ringtone</string>
+
+    <!-- Extra timezones -->
+    <string name="city_marshall_islands">Marshall Islands</string>
+    <string name="city_midway_island">Midway Island</string>
+    <string name="city_regina">Regina</string>
+    <string name="city_manaus">Manaus</string>
+    <string name="city_araguaina">Araguaina</string>
+    <string name="city_godthab">Godthab</string>
+    <string name="city_south_georgia">South Georgia</string>
+    <string name="city_azores">Azores</string>
+    <string name="city_windhoek">Windhoek</string>
+    <string name="city_tbilisi">Tbilisi</string>
+    <string name="city_yerevan">Yerevan</string>
+    <string name="city_oral">Oral</string>
+    <string name="city_yekaterinburg">Yekaterinburg</string>
+    <string name="city_krasnoyarsk">Krasnoyarsk</string>
+    <string name="city_irkutsk">Irkutsk</string>
+    <string name="city_yakutsk">Yakutsk</string>
+    <string name="city_hobart">Hobart</string>
+    <string name="city_magadan">Magadan</string>
+    <string name="city_tongatapu">Tongatapu</string>
+    <string name="city_aklavik">Aklavik</string>
+    <string name="city_montgomery">Montgomery</string>
+    <string name="city_geneva">Geneva</string>
+    <string name="city_odesa">Odesa</string>
+    <string name="city_aden">Aden</string>
+    <string name="city_abu_dhabi">Abu Dhabi</string>
+    <string name="city_tashkent">Tashkent</string>
+    <string name="city_new_delhi">New Delhi</string>
+    <string name="city_suva">Suva</string>
+    <string name="city_wellington">Wellington</string>
+    <string name="city_chatham">Chatham</string>
+    <string name="city_vladivostok">Vladivostok</string>
+    <string name="city_kamchatka">Kamchatka</string>
+    <string name="city_chennai">Chennai</string>
 </resources>
