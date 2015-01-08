@@ -36,6 +36,24 @@
     },
     {
       "key": {
+        "uuid": "7aa08908_3a0a2122",
+        "filename": "res/values-zh-rCN/array.xml",
+        "patchSetId": 5
+      },
+      "lineNbr": 0,
+      "author": {
+        "id": 4550
+      },
+      "writtenOn": "2015-01-08T15:40:39Z",
+      "side": 1,
+      "message": "For consistency, yes. The translators on crowdin have already translated this again.",
+      "parentUuid": "7aa08908_af309102",
+      "revId": "b8763bb847725fffa8e9bb21e61b7ce5c5ccb776",
+      "serverId": "1ec6b3db-b2c1-4fa4-84a2-4c7efe89ba71",
+      "unresolved": false
+    },
+    {
+      "key": {
         "uuid": "7aa08908_292141a0",
         "filename": "res/values-zu/array.xml",
         "patchSetId": 5
