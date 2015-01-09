@@ -1,6 +1,6 @@
 <?xml version="1.0" encoding="utf-8"?>
 <!--
-     Copyright (C) 2012-2013 The CyanogenMod Project
+     Copyright (C) 2012-2015 The CyanogenMod Project
 
      Licensed under the Apache License, Version 2.0 (the "License");
      you may not use this file except in compliance with the License.
@@ -87,22 +87,12 @@
     <!-- Select the alarm from external device -->
     <string name="alarm_select_external">Music</string>
 
-    <!-- Ringtone selection default" -->
-    <string name="ringtone_default">"Default ringtone"</string>
+    <!-- Ringtone selection default -->
+    <string name="ringtone_default">Default ringtone</string>
 
     <!-- Message that describe an error trying to take a persistent grant permission for an uri ringtone -->
     <string name="take_persistent_grant_uri_permission_failed_msg">Failed to take persistent grant permission for ringtone</string>
 
-    <string name="default_auto_silence_value">10</string>
-    <!-- Select the source of the alarm -->
-    <string name="alarm_select">Select Alarm</string>
-    <!-- Select the ringtone as alarm -->
-    <string name="alarm_select_ringtone">Ringtone</string>
-    <!-- Select the alarm from external device -->
-    <string name="alarm_select_external">Music</string>
-    <!-- Ok for selection -->
-    <string name="alarm_select_ok">OK</string>
-    <!-- Cancel for selection -->
-    <string name="alarm_select_cancel">Cancel</string>
+    <string name="default_auto_silence_value" translatable="false">10</string>
 
 </resources>

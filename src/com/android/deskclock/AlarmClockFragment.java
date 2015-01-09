@@ -646,7 +646,7 @@ public class AlarmClockFragment extends DeskClockFragment implements
                         cursorAdapter.changeCursor(null);
                     }
                 })
-                .setNegativeButton(R.string.alarm_select_cancel, null)
+                .setNegativeButton(android.R.string.cancel, null)
                 .show();
     }
 
