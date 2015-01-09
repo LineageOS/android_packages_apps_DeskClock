@@ -1822,15 +1822,6 @@ public class AlarmClockFragment extends DeskClockFragment implements
         final AsyncTask<Void, Void, AlarmInstance> updateTask =
                 new AsyncTask<Void, Void, AlarmInstance>() {
                     @Override
-                    public synchronized void onPreExecute() {
-                        final ListView list = mAlarmsList;
-                        // The alarm list needs to be disabled until the animation finishes to prevent
-                        // possible concurrency issues.  It becomes re-enabled after the animations have
-                        // completed.
-                        mAlarmsList.setEnabled(false);
-                    }
-
-                    @Override
                     protected AlarmInstance doInBackground(Void... parameters) {
                         if (context != null && alarm != null) {
                             ContentResolver cr = context.getContentResolver();
