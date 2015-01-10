@@ -17,14 +17,14 @@
 <menu xmlns:android="http://schemas.android.com/apk/res/android">
     <item android:id="@+id/menu_item_search"
         android:title="@android:string/search_go"
-        android:icon="@android:drawable/ic_menu_search"
+        android:icon="@drawable/ic_actionbar_search"
         android:showAsAction="ifRoom|collapseActionView"
         android:actionViewClass="android.widget.SearchView"
         android:imeOptions="actionSearch"
         android:orderInCategory="0" />
     <item android:id="@+id/menu_item_add"
         android:title="@string/menu_item_add"
-        android:icon="@drawable/ic_menu_add"
+        android:icon="@drawable/ic_actionbar_add"
         android:showAsAction="ifRoom|withText"
         android:orderInCategory="1"/>
     <item android:id="@+id/menu_item_sort"
