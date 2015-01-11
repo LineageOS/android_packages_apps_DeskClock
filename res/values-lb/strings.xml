@@ -63,8 +63,11 @@
     <item>Wecker gesat fir <xliff:g id="HOURS" example="2 hours">%2$s</xliff:g> a(n) <xliff:g id="MINUTES" example="2 minutes">%3$s</xliff:g> vun elo un.</item>
     <item>Wecker gesat fir <xliff:g id="DAYS" example="2 days">%1$s</xliff:g>, <xliff:g id="HOURS" example="2 hours">%2$s</xliff:g> a(n) <xliff:g id="MINUTES" example="2 minutes">%3$s</xliff:g> vun elo un.</item>
   </string-array>
+  <string name="day">"1 Dag"</string>
   <string name="days">"<xliff:g id="days">%s</xliff:g> Deeg"</string>
+  <string name="hour">1 Stonn</string>
   <string name="hours"><xliff:g id="hours">%s</xliff:g> Stonnen</string>
+  <string name="minute">"1 Minutt"</string>
   <string name="minutes">"<xliff:g id="minutes">%s</xliff:g> Minutten"</string>
   <string name="every_day">All Dag</string>
   <string name="never">Ni</string>
@@ -76,13 +79,13 @@
   <string name="snooze_duration_title">Näipdauer</string>
   <plurals name="snooze_duration">
     <item quantity="one">1 Minutt</item>
-    <item quantity="other"><xliff:g id="count">%d</xliff:g> Minutten</item>
+    <item quantity="other"><xliff:g id="number" example="7">%d</xliff:g> Minutten</item>
   </plurals>
   <plurals name="snooze_picker_label">
     <item quantity="one">Minutt</item>
     <item quantity="other">Minutten</item>
   </plurals>
-  <string name="auto_silence_title">Stomm no</string>
+  <string name="auto_silence_title">Roueg no</string>
   <string name="auto_silence_summary"><xliff:g id="minutes">%d</xliff:g> Minutten</string>
   <string name="auto_silence_never">Ni</string>
   <string-array name="auto_silence_entries">
@@ -156,15 +159,15 @@
   <string name="sw_notification_lap_number">Ronn <xliff:g id="number">%d</xliff:g></string>
   <plurals name="Nhours_description">
     <item quantity="one">1 Stonn</item>
-    <item quantity="other"><xliff:g id="count">%d</xliff:g> Stonnen</item>
+    <item quantity="other"><xliff:g id="number" example="7">%d</xliff:g> Stonnen</item>
   </plurals>
   <plurals name="Nminutes_description">
     <item quantity="one">1 Minutt</item>
-    <item quantity="other"><xliff:g id="count">%d</xliff:g> Minutten</item>
+    <item quantity="other"><xliff:g id="number" example="7">%d</xliff:g> Minutten</item>
   </plurals>
   <plurals name="Nseconds_description">
     <item quantity="one">1 Sekonn</item>
-    <item quantity="other"><xliff:g id="count">%d</xliff:g> Sekonnen</item>
+    <item quantity="other"><xliff:g id="number" example="7">%d</xliff:g> Sekonnen</item>
   </plurals>
   <string name="timer_add_timer">Sandauer dobäisetzen</string>
   <string name="timer_start">Start</string>
@@ -191,7 +194,7 @@
   </string-array>
   <plurals name="timers_num">
     <item quantity="one">1 Minutt</item>
-    <item quantity="other"><xliff:g id="count">%d</xliff:g> Minutten</item>
+    <item quantity="other"><xliff:g id="number" example="7">%d</xliff:g> Sandaueren</item>
   </plurals>
   <string name="home_label">Doheem</string>
   <string name="cities_activity_title">Stied</string>
@@ -299,7 +302,7 @@
     <item>"Jakarta"</item>
   </string-array>
   <string name="alarm_settings">WECKEREN</string>
-  <string name="see_all">All kucken&#8230;</string>
+  <string name="see_all">All ukucken&#8230;</string>
   <string name="stopwatch_service_desc">Notifikatioun iwwer de Stoppauer-Service.</string>
   <string name="swn_stopped">Gestoppt</string>
   <string name="description_direction_right">No riets wësche fir ze verwerfen</string>

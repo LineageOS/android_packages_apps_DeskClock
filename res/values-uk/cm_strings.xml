@@ -16,7 +16,7 @@
      limitations under the License.
 -->
 <resources xmlns:xliff="urn:oasis:names:tc:xliff:document:1.2">
-  <string name="show_status_bar_icon_title">Показувати значок</string>
+  <string name="show_status_bar_icon_title">Показати іконку</string>
   <string name="show_status_bar_icon_summary">Показувати значок в рядку стану коли будильник увімкнено</string>
   <string name="alarm_increasing_volume">Наростаюча гучність</string>
   <string name="profile_description">Профіль <xliff:g id="profile">%s</xliff:g></string>
@@ -58,4 +58,37 @@
   <string name="alarm_select_external">Музика</string>
   <string name="ringtone_default">"Типова мелодія"</string>
   <string name="take_persistent_grant_uri_permission_failed_msg">Не вдалося задати мелодію як сигнал</string>
+  <string name="city_marshall_islands">Маршаллові Острови</string>
+  <string name="city_midway_island">Острів Мідвей</string>
+  <string name="city_regina">Регіна</string>
+  <string name="city_manaus">Манаус</string>
+  <string name="city_araguaina">Арагуайна</string>
+  <string name="city_godthab">Нук</string>
+  <string name="city_south_georgia">Південна Джорджія</string>
+  <string name="city_azores">Азорські острови</string>
+  <string name="city_windhoek">Віндгук</string>
+  <string name="city_tbilisi">Тбілісі</string>
+  <string name="city_yerevan">Єреван</string>
+  <string name="city_oral">Уральск</string>
+  <string name="city_yekaterinburg">Єкатеринбург</string>
+  <string name="city_krasnoyarsk">Красноярськ</string>
+  <string name="city_irkutsk">Іркутськ</string>
+  <string name="city_yakutsk">Якутськ</string>
+  <string name="city_hobart">Хобарт</string>
+  <string name="city_magadan">Магадан</string>
+  <string name="city_tongatapu">Тонгатапу</string>
+  <string name="city_aklavik">Аклавік</string>
+  <string name="city_montgomery">Монтгомері</string>
+  <string name="city_geneva">Женева</string>
+  <string name="city_odesa">Одеса</string>
+  <string name="city_aden">Аден</string>
+  <string name="city_abu_dhabi">Абу-Дабі</string>
+  <string name="city_tashkent">Ташкент</string>
+  <string name="city_new_delhi">Нью-Делі</string>
+  <string name="city_suva">Сува</string>
+  <string name="city_wellington">Веллінгтон</string>
+  <string name="city_chatham">Чатем</string>
+  <string name="city_vladivostok">Владивосток</string>
+  <string name="city_kamchatka">Камчатка</string>
+  <string name="city_chennai">Ченнаї</string>
 </resources>

@@ -71,7 +71,6 @@
   <string name="minutes">"<xliff:g id="MINUTES">%s</xliff:g> minutos"</string>
   <string name="every_day">Tolos díes</string>
   <string name="never">Enxamás</string>
-  <string name="day_concat">", "</string>
   <string name="clock_instructions">Esbillar un reló</string>
   <string name="analog_gadget">Reló analóxicu</string>
   <string name="help">ayuda</string>
