@@ -94,6 +94,10 @@ public class Utils {
      */
     private static String[] sShortWeekdays = null;
 
+    /** Content provider paths that could be passed back from documents ui **/
+    public static final String DOC_AUTHORITY = "com.android.providers.media.documents";
+    public static final String DOC_DOWNLOAD = "com.android.providers.downloads.documents";
+
     /** Types that may be used for clock displays. **/
     public static final String CLOCK_TYPE_DIGITAL = "digital";
     public static final String CLOCK_TYPE_ANALOG = "analog";
