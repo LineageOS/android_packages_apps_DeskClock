@@ -32,6 +32,8 @@ public class AlarmMultiPlayer implements MediaPlayer.OnCompletionListener {
     private boolean mLooping;
     private boolean mIsExternal;
     private boolean mRandom;
+    // used for audio tracks that could potentially be outside the media store
+    private Uri mUriTrack;
 
     private Cursor mCursor;
 
@@ -239,6 +241,8 @@ public class AlarmMultiPlayer implements MediaPlayer.OnCompletionListener {
                 c.close();
             }
             return null;
+        } else if (mUriTrack != null) {
+            return mUriTrack;
         }
 
         if (mCursor == null) {
@@ -251,6 +255,7 @@ public class AlarmMultiPlayer implements MediaPlayer.OnCompletionListener {
             // Cycle through the playlist
             mCursor.moveToFirst();
         }
+
         if(mIsExternal) {
             return ContentUris.withAppendedId(Audio.Media.EXTERNAL_CONTENT_URI, id);
         } else {
@@ -259,9 +264,15 @@ public class AlarmMultiPlayer implements MediaPlayer.OnCompletionListener {
     }
 
     private void handleSetDataSourceUri(Uri uri) {
+        mUriTrack = null;
         mSingle = false;
         if (uri.equals(RANDOM_URI)) {
             mRandom = true;
+            return;
+        } else if (uri.getAuthority().equals(Utils.DOC_DOWNLOAD)
+                || uri.getAuthority().equals(Utils.DOC_AUTHORITY)) {
+            mUriTrack = uri;
+            mSingle = true;
             return;
         }
 
