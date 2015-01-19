@@ -270,7 +270,8 @@ public class AlarmMultiPlayer implements MediaPlayer.OnCompletionListener {
             mRandom = true;
             return;
         } else if (uri.getAuthority().equals(Utils.DOC_DOWNLOAD)
-                || uri.getAuthority().equals(Utils.DOC_AUTHORITY)) {
+                || uri.getAuthority().equals(Utils.DOC_AUTHORITY)
+                || uri.getAuthority().equals(Utils.DOC_EXTERNAL)) {
             mUriTrack = uri;
             mSingle = true;
             return;

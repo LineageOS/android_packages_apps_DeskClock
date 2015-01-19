@@ -1433,7 +1433,8 @@ public class AlarmClockFragment extends DeskClockFragment implements
                 } else {
                     if (Utils.isRingToneUriValid(mContext, uri)) {
                         if (uri.getAuthority().equals(Utils.DOC_AUTHORITY)
-                                || uri.getAuthority().equals(Utils.DOC_DOWNLOAD)) {
+                                || uri.getAuthority().equals(Utils.DOC_DOWNLOAD)
+                                || uri.getAuthority().equals(Utils.DOC_EXTERNAL)) {
                             title = getDisplayNameFromDatabase(mContext,uri);
                         } else if (uri.isPathPrefixMatch(MediaStore.Audio.Playlists.EXTERNAL_CONTENT_URI)) {
                             Cursor c = getActivity().getContentResolver().query(uri, new String[] {MediaStore.Audio.Playlists.NAME}, null, null, null);

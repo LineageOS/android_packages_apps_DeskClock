@@ -38,6 +38,7 @@ import android.os.Build;
 import android.os.Handler;
 import android.os.SystemClock;
 import android.preference.PreferenceManager;
+import android.provider.DocumentsContract.Document;
 import android.provider.MediaStore;
 import android.text.Spannable;
 import android.text.SpannableString;
@@ -97,6 +98,7 @@ public class Utils {
     /** Content provider paths that could be passed back from documents ui **/
     public static final String DOC_AUTHORITY = "com.android.providers.media.documents";
     public static final String DOC_DOWNLOAD = "com.android.providers.downloads.documents";
+    public static final String DOC_EXTERNAL = "com.android.externalstorage.documents";
 
     /** Types that may be used for clock displays. **/
     public static final String CLOCK_TYPE_DIGITAL = "digital";
@@ -669,6 +671,9 @@ public class Utils {
     public static String getTitleColumnNameForUri(Uri uri) {
         if (uri.isPathPrefixMatch(MediaStore.Audio.Playlists.EXTERNAL_CONTENT_URI)) {
             return MediaStore.Audio.Playlists.NAME;
+        }
+        if (DOC_EXTERNAL.equals(uri.getAuthority())) {
+            return Document.COLUMN_DISPLAY_NAME;
         }
         return MediaStore.Audio.Media.TITLE;
     }
