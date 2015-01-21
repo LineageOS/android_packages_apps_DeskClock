@@ -61,6 +61,7 @@ import android.provider.DocumentsContract;
 import android.provider.MediaStore;
 import android.provider.Settings;
 import android.text.format.DateFormat;
+import android.util.Log;
 import android.view.Gravity;
 import android.view.LayoutInflater;
 import android.view.MotionEvent;
@@ -1039,6 +1040,15 @@ public class AlarmClockFragment extends DeskClockFragment implements
             if (!Utils.isRingToneUriValid(mContext, alarm.alert)) {
                 alarm.alert = RingtoneManager.getActualDefaultRingtoneUri(context,
                         RingtoneManager.TYPE_ALARM);
+
+                if (!Utils.isRingToneUriValid(mContext, alarm.alert)) {
+                    Uri uri = Utils.getSystemDefaultAlarm(mContext);
+                    alarm.alert = uri;
+
+                    RingtoneManager.setActualDefaultRingtoneUri(
+                            getActivity(), RingtoneManager.TYPE_ALARM, uri);
+                }
+
                 asyncUpdateAlarm(alarm, false);
             }
             final ItemHolder itemHolder = (ItemHolder) tag;
