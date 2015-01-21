@@ -1039,6 +1039,15 @@ public class AlarmClockFragment extends DeskClockFragment implements
             if (!Utils.isRingToneUriValid(mContext, alarm.alert)) {
                 alarm.alert = RingtoneManager.getActualDefaultRingtoneUri(context,
                         RingtoneManager.TYPE_ALARM);
+
+                if (!Utils.isRingToneUriValid(mContext, alarm.alert)) {
+                    Uri uri = Utils.getSystemDefaultAlarm(mContext);
+                    alarm.alert = uri;
+
+                    RingtoneManager.setActualDefaultRingtoneUri(
+                            getActivity(), RingtoneManager.TYPE_ALARM, uri);
+                }
+
                 asyncUpdateAlarm(alarm, false);
             }
             final ItemHolder itemHolder = (ItemHolder) tag;
