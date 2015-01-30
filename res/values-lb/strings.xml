@@ -319,7 +319,7 @@
   <string name="night_mode_summary">Ganz ofgedonkelte Schierm (fir däischter Raim)</string>
   <string name="expand_alarm">Wecker opklappen</string>
   <string name="collapse_alarm">Wecker zesummeklappen</string>
-  <string name="alarm_undo">réckgängeg machen</string>
+  <string name="alarm_undo">réckgängeg maachen</string>
   <string name="alarm_deleted">Wecker geläscht.</string>
   <string name="slash"> / </string>
   <string name="world_day_of_week_label"> / <xliff:g id="label">%s</xliff:g></string>
