@@ -36,6 +36,7 @@
 
     <!-- Alarm types -->
     <string name="alarm_type_ringtone">铃声</string>
+    <string name="alarm_type_playlist">播放列表</string>
 
     <!-- Select the ringtone as alarm -->
     <string name="alarm_select_ringtone">铃声</string>
