@@ -682,6 +682,10 @@ public class Utils {
     }
 
     public static boolean isRingToneUriValid(Context context, Uri uri) {
+        if (uri == null) {
+            return false;
+        }
+
         if (uri.equals(AlarmMultiPlayer.RANDOM_URI) || uri.equals(Alarm.NO_RINGTONE_URI)) {
             return true;
         } else if (uri.getScheme().contentEquals("file")) {
