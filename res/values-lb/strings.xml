@@ -165,7 +165,7 @@
   <string name="zero">0</string>
   <string name="sw_share_main">Meng Zäit ass <xliff:g id="time">%s</xliff:g></string>
   <string name="sw_share_laps">Ronnenzäiten:</string>
-  <string name="sw_notification_lap_number">Ronn <xliff:g id="number">%d</xliff:g></string>
+  <string name="sw_notification_lap_number"><xliff:g id="number">%d</xliff:g>. Ronn</string>
   <plurals name="Nhours_description">
     <item quantity="one">1 Stonn</item>
     <item quantity="other"><xliff:g id="number" example="7">%d</xliff:g> Stonnen</item>
