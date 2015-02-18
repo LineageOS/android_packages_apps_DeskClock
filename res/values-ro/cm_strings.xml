@@ -44,6 +44,7 @@
   <string name="action_summary_do_nothing">nu fă nimic</string>
   <string name="alarm_picker_title">Selectați tipul de alarmă</string>
   <string name="alarm_type_ringtone">Ton de apel</string>
+  <string name="alarm_type_playlist">Listă de redare</string>
   <string name="alarm_type_random">Aleator</string>
   <string name="warn_silent_alarm_title">Volumul alarmei este silențios</string>
   <string name="alarm_select">Selectați alarma</string>
