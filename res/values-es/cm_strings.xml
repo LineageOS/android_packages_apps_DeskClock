@@ -44,7 +44,7 @@
   <string name="shake_action_summary" product="default"><xliff:g id="action">%s</xliff:g></string>
   <string name="action_summary_snooze">repetir la alarma</string>
   <string name="action_summary_dismiss">descartar la alarma</string>
-  <string name="action_summary_do_nothing">No hacer nada</string>
+  <string name="action_summary_do_nothing">no hacer nada</string>
   <string name="alarm_picker_title">Tono de alarma</string>
   <string name="alarm_type_ringtone">Personalizado</string>
   <string name="alarm_type_playlist">Lista de reproducción</string>

@@ -35,15 +35,19 @@
   <string name="cities_delete_city_title">Slet by</string>
   <string name="cities_delete_city_msg">Vil du slette <xliff:g id="city">%s</xliff:g>?</string>
   <string name="cities_delete_city_failed">Kan ikke slette byen</string>
+  <string name="volume_buttons_summary">Tryk på volumeknapperne vil <xliff:g id="action">%s</xliff:g></string>
   <string name="flip_action_title">Vendehandling</string>
   <string name="flip_action_summary" product="tablet">At vende tabletten nedad vil <xliff:g id="action">%s</xliff:g></string>
   <string name="flip_action_summary" product="default">At vende telefonen nedad vil <xliff:g id="action">%s</xliff:g></string>
   <string name="shake_action_title">Rystehandling</string>
   <string name="shake_action_summary" product="tablet">At ryste tabletten vil <xliff:g id="action">%s</xliff:g></string>
   <string name="shake_action_summary" product="default">At ryste telefonen vil <xliff:g id="action">%s</xliff:g></string>
+  <string name="action_summary_snooze">udsætte alarmen</string>
+  <string name="action_summary_dismiss">afvise alarmen</string>
   <string name="action_summary_do_nothing">gøre ingenting</string>
   <string name="alarm_picker_title">Vælg alarmtype</string>
   <string name="alarm_type_ringtone">Ringetone</string>
+  <string name="alarm_type_playlist">Afspilningsliste</string>
   <string name="alarm_type_random">Tilfældig</string>
   <string name="warn_silent_alarm_title">Alarmen er sat på lydløs</string>
   <string name="alarm_select">Vælg alarm</string>
