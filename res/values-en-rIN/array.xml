@@ -108,7 +108,7 @@
     <item msgid="3956700126827381905">"São Paulo"</item>
     <item msgid="3851056559336304908">"St. Johns"</item>
     <item msgid="7620601490016157459">"St. Kitts"</item>
-    <item msgid="256494147725561888">"St Lucia"</item>
+    <item msgid="256494147725561888">"St. Lucia"</item>
     <item msgid="9065982618380084594">"St. Thomas"</item>
     <item msgid="7424657189317481507">"Tijuana"</item>
     <item msgid="7378768724772963031">"Toronto"</item>
@@ -125,7 +125,7 @@
     <item msgid="2201480850069597815">"Baku"</item>
     <item msgid="424770109352500733">"Bangkok"</item>
     <item msgid="5329081174177673828">"Beirut"</item>
-    <item msgid="7187135889522860058">"Calcutta"</item>
+    <item msgid="7187135889522860058">"Kolkata"</item>
     <item msgid="8261312970920594511">"Damascus"</item>
     <item msgid="6050005781178769107">"Dhaka"</item>
     <item msgid="846831973484498790">"Dubai"</item>
@@ -285,7 +285,7 @@
     <item msgid="1658609023659261743">"Frankfurt"</item>
     <item msgid="4214691757607136548">"Hanoi"</item>
     <item msgid="484506613000693635">"Ankara"</item>
-    <item msgid="1958807113380596945">"Bangalore"</item>
+    <item msgid="1958807113380596945">"Bengaluru"</item>
     <item msgid="2258411542499008700">"Brasília"</item>
     <item msgid="770086263560182220">"Cape Town"</item>
     <item msgid="5936333722350504953">"Islamabad"</item>
@@ -317,5 +317,38 @@
     <item msgid="8613864994547669100">"Tegucigalpa"</item>
     <item msgid="7087691675228926801">"Paramaribo"</item>
     <item msgid="478384295484578701">"Quito"</item>
+    <item>Marshall Islands</item>
+    <item>Midway Island</item>
+    <item>Regina</item>
+    <item>Manaus</item>
+    <item>Araguaina</item>
+    <item>Godthab</item>
+    <item>South Georgia</item>
+    <item>Azores</item>
+    <item>Windhoek</item>
+    <item>Tbilisi</item>
+    <item>Yerevan</item>
+    <item>Oral</item>
+    <item>Yekaterinburg</item>
+    <item>Krasnoyarsk</item>
+    <item>Irkutsk</item>
+    <item>Yakutsk</item>
+    <item>Hobart</item>
+    <item>Magadan</item>
+    <item>Tongatapu</item>
+    <item>Aklavik</item>
+    <item>Montgomery</item>
+    <item>Geneva</item>
+    <item>Odesa</item>
+    <item>Aden</item>
+    <item>Abu Dhabi</item>
+    <item>Tashkent</item>
+    <item>New Delhi</item>
+    <item>Suva</item>
+    <item>Wellington</item>
+    <item>Chatham</item>
+    <item>Vladivostok</item>
+    <item>Kamchatka</item>
+    <item>Chennai</item>
   </string-array>
 </resources>
