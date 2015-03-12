@@ -27,9 +27,7 @@ import android.os.Bundle;
 import android.preference.ListPreference;
 import android.preference.Preference;
 import android.preference.PreferenceActivity;
-import android.preference.PreferenceScreen;
 import android.preference.SwitchPreference;
-import android.provider.Settings;
 import android.text.format.DateUtils;
 import android.view.Menu;
 import android.view.MenuItem;
@@ -49,11 +47,6 @@ import java.util.TimeZone;
 public class SettingsActivity extends PreferenceActivity
         implements Preference.OnPreferenceChangeListener {
 
-    private static final int ALARM_STREAM_TYPE_BIT =
-            1 << AudioManager.STREAM_ALARM;
-
-    public static final String KEY_ALARM_IN_SILENT_MODE =
-            "alarm_in_silent_mode";
     public static final String KEY_SHOW_STATUS_BAR_ICON =
             "show_status_bar_icon";
     public static final String KEY_ALARM_SNOOZE =
@@ -88,6 +81,8 @@ public class SettingsActivity extends PreferenceActivity
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
+        setVolumeControlStream(AudioManager.STREAM_ALARM);
+
         addPreferencesFromResource(R.xml.settings);
 
         ActionBar actionBar = getActionBar();
@@ -133,7 +128,6 @@ public class SettingsActivity extends PreferenceActivity
         return super.onOptionsItemSelected(item);
     }
 
-
     @Override
     public boolean onCreateOptionsMenu (Menu menu) {
         getMenuInflater().inflate(R.menu.settings_menu, menu);
@@ -142,31 +136,6 @@ public class SettingsActivity extends PreferenceActivity
             Utils.prepareHelpMenuItem(this, help);
         }
         return super.onCreateOptionsMenu(menu);
-    }
-
-    @Override
-    public boolean onPreferenceTreeClick(PreferenceScreen preferenceScreen,
-            Preference preference) {
-        if (KEY_ALARM_IN_SILENT_MODE.equals(preference.getKey())) {
-            SwitchPreference pref = (SwitchPreference) preference;
-            int ringerModeStreamTypes = Settings.System.getInt(
-                    getContentResolver(),
-                    Settings.System.MODE_RINGER_STREAMS_AFFECTED, 0);
-
-            if (pref.isChecked()) {
-                ringerModeStreamTypes &= ~ALARM_STREAM_TYPE_BIT;
-            } else {
-                ringerModeStreamTypes |= ALARM_STREAM_TYPE_BIT;
-            }
-
-            Settings.System.putInt(getContentResolver(),
-                    Settings.System.MODE_RINGER_STREAMS_AFFECTED,
-                    ringerModeStreamTypes);
-
-            return true;
-        }
-
-        return super.onPreferenceTreeClick(preferenceScreen, preference);
     }
 
     @Override

@@ -41,7 +41,7 @@ import android.view.ViewGroupOverlay;
 import android.view.WindowManager;
 import android.view.animation.Interpolator;
 import android.view.animation.PathInterpolator;
-import android.widget.ImageButton;
+import android.widget.ImageView;
 import android.widget.TextClock;
 import android.widget.TextView;
 
@@ -114,6 +114,7 @@ public class AlarmActivity extends Activity implements View.OnClickListener, Vie
     private boolean mAlarmHandled;
     private String mVolumeBehavior;
     private int mCurrentHourColor;
+    private boolean mReceiverRegistered;
 
     private ViewGroup mContainerView;
 
@@ -122,9 +123,9 @@ public class AlarmActivity extends Activity implements View.OnClickListener, Vie
     private TextView mAlertInfoView;
 
     private ViewGroup mContentView;
-    private ImageButton mAlarmButton;
-    private ImageButton mSnoozeButton;
-    private ImageButton mDismissButton;
+    private ImageView mAlarmButton;
+    private ImageView mSnoozeButton;
+    private ImageView mDismissButton;
     private TextView mHintView;
 
     private ValueAnimator mAlarmAnimator;
@@ -138,14 +139,18 @@ public class AlarmActivity extends Activity implements View.OnClickListener, Vie
 
         final long instanceId = AlarmInstance.getId(getIntent().getData());
         mAlarmInstance = AlarmInstance.getInstance(getContentResolver(), instanceId);
-        if (mAlarmInstance != null) {
-            LogUtils.i(LOGTAG, "Displaying alarm for instance: %s", mAlarmInstance);
-        } else {
+        if (mAlarmInstance == null) {
             // The alarm got deleted before the activity got created, so just finish()
             LogUtils.e(LOGTAG, "Error displaying alarm for intent: %s", getIntent());
             finish();
             return;
+        } else if (mAlarmInstance.mAlarmState != AlarmInstance.FIRED_STATE) {
+            LogUtils.i(LOGTAG, "Skip displaying alarm for instance: %s", mAlarmInstance);
+            finish();
+            return;
         }
+
+        LogUtils.i(LOGTAG, "Displaying alarm for instance: %s", mAlarmInstance);
 
         // Get the volume/camera button behavior setting
         mVolumeBehavior = PreferenceManager.getDefaultSharedPreferences(this)
@@ -177,9 +182,9 @@ public class AlarmActivity extends Activity implements View.OnClickListener, Vie
         mAlertInfoView = (TextView) mAlertView.findViewById(R.id.alert_info);
 
         mContentView = (ViewGroup) mContainerView.findViewById(R.id.content);
-        mAlarmButton = (ImageButton) mContentView.findViewById(R.id.alarm);
-        mSnoozeButton = (ImageButton) mContentView.findViewById(R.id.snooze);
-        mDismissButton = (ImageButton) mContentView.findViewById(R.id.dismiss);
+        mAlarmButton = (ImageView) mContentView.findViewById(R.id.alarm);
+        mSnoozeButton = (ImageView) mContentView.findViewById(R.id.snooze);
+        mDismissButton = (ImageView) mContentView.findViewById(R.id.dismiss);
         mHintView = (TextView) mContentView.findViewById(R.id.hint);
 
         final TextView titleView = (TextView) mContentView.findViewById(R.id.title);
@@ -217,15 +222,15 @@ public class AlarmActivity extends Activity implements View.OnClickListener, Vie
         filter.addAction(ALARM_SNOOZE_ACTION);
         filter.addAction(ALARM_DISMISS_ACTION);
         registerReceiver(mReceiver, filter);
+        mReceiverRegistered = true;
     }
 
     @Override
     public void onDestroy() {
         super.onDestroy();
 
-        // If the alarm instance is null the receiver was never registered and calling
-        // unregisterReceiver will throw an exception.
-        if (mAlarmInstance != null) {
+        // Skip if register didn't happen to avoid IllegalArgumentException
+        if (mReceiverRegistered) {
             unregisterReceiver(mReceiver);
         }
     }
@@ -351,8 +356,15 @@ public class AlarmActivity extends Activity implements View.OnClickListener, Vie
 
         final int alertColor = getResources().getColor(R.color.hot_pink);
         setAnimatedFractions(1.0f /* snoozeFraction */, 0.0f /* dismissFraction */);
-        getAlertAnimator(mSnoozeButton, R.string.alarm_alert_snoozed_text,
-                AlarmStateManager.getSnoozedMinutes(this), alertColor, alertColor).start();
+
+        final int snoozeMinutes = AlarmStateManager.getSnoozedMinutes(this);
+        final String infoText = getResources().getQuantityString(
+                R.plurals.alarm_alert_snooze_duration, snoozeMinutes, snoozeMinutes);
+        final String accessibilityText = getResources().getQuantityString(
+                R.plurals.alarm_alert_snooze_set, snoozeMinutes, snoozeMinutes);
+
+        getAlertAnimator(mSnoozeButton, R.string.alarm_alert_snoozed_text, infoText,
+                accessibilityText, alertColor, alertColor).start();
         AlarmStateManager.setSnoozeState(this, mAlarmInstance, false /* showToast */);
     }
 
@@ -362,22 +374,23 @@ public class AlarmActivity extends Activity implements View.OnClickListener, Vie
 
         setAnimatedFractions(0.0f /* snoozeFraction */, 1.0f /* dismissFraction */);
         getAlertAnimator(mDismissButton, R.string.alarm_alert_off_text, null /* infoText */,
+                getString(R.string.alarm_alert_off_text) /* accessibilityText */,
                 Color.WHITE, mCurrentHourColor).start();
         AlarmStateManager.setDismissState(this, mAlarmInstance);
     }
 
     private void setAnimatedFractions(float snoozeFraction, float dismissFraction) {
         final float alarmFraction = Math.max(snoozeFraction, dismissFraction);
-        AnimatorUtils.setAnimatedFraction(mAlarmAnimator, alarmFraction);
-        AnimatorUtils.setAnimatedFraction(mSnoozeAnimator, snoozeFraction);
-        AnimatorUtils.setAnimatedFraction(mDismissAnimator, dismissFraction);
+        mAlarmAnimator.setCurrentFraction(alarmFraction);
+        mSnoozeAnimator.setCurrentFraction(snoozeFraction);
+        mDismissAnimator.setCurrentFraction(dismissFraction);
     }
 
     private float getFraction(float x0, float x1, float x) {
         return Math.max(Math.min((x - x0) / (x1 - x0), 1.0f), 0.0f);
     }
 
-    private ValueAnimator getButtonAnimator(ImageButton button, int tintColor) {
+    private ValueAnimator getButtonAnimator(ImageView button, int tintColor) {
         return ObjectAnimator.ofPropertyValuesHolder(button,
                 PropertyValuesHolder.ofFloat(View.SCALE_X, BUTTON_SCALE_DEFAULT, 1.0f),
                 PropertyValuesHolder.ofFloat(View.SCALE_Y, BUTTON_SCALE_DEFAULT, 1.0f),
@@ -407,7 +420,8 @@ public class AlarmActivity extends Activity implements View.OnClickListener, Vie
     }
 
     private Animator getAlertAnimator(final View source, final int titleResId,
-            final String infoText, final int revealColor, final int backgroundColor) {
+            final String infoText, final String accessibilityText, final int revealColor,
+            final int backgroundColor) {
         final ViewGroupOverlay overlay = mContainerView.getOverlay();
 
         // Create a transient view for performing the reveal animation.
@@ -448,10 +462,12 @@ public class AlarmActivity extends Activity implements View.OnClickListener, Vie
             public void onAnimationEnd(Animator animator) {
                 mAlertView.setVisibility(View.VISIBLE);
                 mAlertTitleView.setText(titleResId);
+
                 if (infoText != null) {
                     mAlertInfoView.setText(infoText);
                     mAlertInfoView.setVisibility(View.VISIBLE);
                 }
+                mAlertView.announceForAccessibility(accessibilityText);
                 mContentView.setVisibility(View.GONE);
                 mContainerView.setBackgroundColor(backgroundColor);
             }

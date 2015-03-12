@@ -99,12 +99,12 @@
     <string name="auto_silence_summary" msgid="7028508740659733028">"<xliff:g id="MINUTES">%d</xliff:g> ನಿಮಿಷಗಳು"</string>
     <string name="auto_silence_never" msgid="4821982647348750809">"ಎಂದಿಗೂ ಬೇಡ"</string>
   <string-array name="auto_silence_entries">
-    <item msgid="3693401222993867634">"5 ನಿಮಿಷಗಳು"</item>
-    <item msgid="3663730603519549990">"10 ನಿಮಿಷಗಳು"</item>
-    <item msgid="1385481095199681200">"15 ನಿಮಿಷಗಳು"</item>
-    <item msgid="420479821767342125">"20 ನಿಮಿಷಗಳು"</item>
-    <item msgid="2107936130151066746">"25 ನಿಮಿಷಗಳು"</item>
-    <item msgid="7219791437023378544">"30 ನಿಮಿಷಗಳು"</item>
+    <item msgid="3024545954917711306">"1 ನಿಮಿಷ"</item>
+    <item msgid="5431906692406316549">"5 ನಿಮಿಷಗಳು"</item>
+    <item msgid="7742728812068919959">"10 ನಿಮಿಷಗಳು"</item>
+    <item msgid="2855948657259647629">"15 ನಿಮಿಷಗಳು"</item>
+    <item msgid="6330196381284475079">"20 ನಿಮಿಷಗಳು"</item>
+    <item msgid="7809240121716151904">"25 ನಿಮಿಷಗಳು"</item>
     <item msgid="4278641338024561333">"ಎಂದಿಗೂ ಬೇಡ"</item>
   </string-array>
     <string name="done" msgid="6509722361933858451">"ಮುಗಿದಿದೆ"</string>
@@ -131,7 +131,6 @@
     <string name="desk_clock_button_description" msgid="4207371097361657274">"ಗಡಿಯಾರ ಪ್ರದರ್ಶಕ"</string>
     <string name="label_description" msgid="8736179296142915727">"ಲೇಬಲ್"</string>
     <string name="ringtone_description" msgid="7580922112921069925">"ರಿಂಗ್‌ಟೋನ್‌"</string>
-    <string name="battery_charging_level" msgid="5251483622085889693">"<xliff:g id="NUMBER">%d</xliff:g><xliff:g id="PERCENT">%%</xliff:g>"</string>
     <string name="weather_fetch_failure" msgid="3425804832021006835">"ಹವಾಮಾನ ಮಾಹಿತಿ ಇದೀಗ ಲಭ್ಯವಿಲ್ಲ."</string>
     <string name="alarm_klaxon_service_desc" msgid="2147506334302260256">"ಗಡಿಯಾರದ ಒಳಗೆ ಅಲಾರಾಂ‌ಗಳ ಹೊಂದಿಕೆಗಾಗಿ ಧ್ವನಿ ಪ್ಲೇಬ್ಯಾಕ್ ಸೇವೆ."</string>
     <string name="loading_ringtone" msgid="6523322777415268044">"ರಿಂಗ್‌ಟೋನ್ ಲೋಡ್ ಮಾಡಲಾಗುತ್ತಿದೆ…"</string>
