@@ -41,9 +41,9 @@
 
     <dimen name="alarm_side_padding">12dip</dimen>
     <dimen name="clock_side_padding">12dip</dimen>
-    <!-- clock_side_padding_reduced = clock_side_padding - world_clock_end_padding -->
+    <!-- clock_side_padding_reduced = clock_side_padding - clock_fragment_end_padding -->
     <dimen name="clock_side_padding_reduced">0dip</dimen>
-    <dimen name="world_clock_end_padding">12dip</dimen>
+    <dimen name="clock_fragment_end_padding">12dip</dimen>
     <dimen name="alarm_clock_vertical_margin">12dip</dimen>
 
     <!-- Analog clock size in the the screen saver -->
@@ -76,8 +76,10 @@
     <dimen name="main_ampm_font_size">32sp</dimen>
     <dimen name="header_font_size">24sp</dimen>
     <dimen name="body_font_size">18sp</dimen>
+    <dimen name="day_button_font_size">18sp</dimen>
     <dimen name="alarm_time_font_size">64sp</dimen>
     <dimen name="alarm_info_font_size">36sp</dimen>
+    <dimen name="no_alarm_font_size">16sp</dimen>
 
     <dimen name="body_font_padding">4dp</dimen>
     <dimen name="button_font_size">24sp</dimen>
@@ -116,7 +118,8 @@
     <dimen name="timer_circle_margin">32dp</dimen>
 
     <dimen name="circle_size">280dp</dimen>
-    <dimen name="stopwatch_list_margin_start">64dip</dimen>
+    <!-- stopwatch_list_bottom_spacing = footer_button_size + footer_button_layout_margin -->
+    <dimen name="stopwatch_list_bottom_spacing">72dip</dimen>
 
     <dimen name="sw_padding_end">32dp</dimen>
 
@@ -147,7 +150,7 @@
 
     <!-- Digital Widget settings (keyguard|home_screen) -->
     <!-- Clock and world clock sizes -->
-    <dimen name="widget_big_font_size">80sp</dimen>
+    <dimen name="widget_big_font_size">75sp</dimen>
     <dimen name="widget_medium_font_size">32sp</dimen>
     <dimen name="widget_24_medium_font_size">40sp</dimen>
 
@@ -156,12 +159,9 @@
     <dimen name="widget_medium_time_margin_right">5dip</dimen>
 
     <!-- width/height of layout/digital_widget_time -->
-    <!-- height is sum of widget_big_font_size + label_font_size + margins -->
-    <dimen name="min_digital_widget_width">206dp</dimen>
-    <dimen name="min_digital_widget_height">129dp</dimen>
-    <!-- same as min_digital_widget_{width,height} -->
-    <dimen name="min_digital_widget_resize_width">206dp</dimen>
-    <dimen name="min_digital_widget_resize_height">129dp</dimen>
+    <dimen name="min_digital_widget_width">206dip</dimen>
+    <dimen name="min_digital_widget_height">129dip</dimen>
+
     <!-- sum of scaled heights -->
     <dimen name="digital_widget_list_min_scaled_height">162dp</dimen>
     <!-- sum of fixed heights -->
@@ -175,5 +175,8 @@
 
     <!-- Divider height -->
     <dimen name="hairline_height">1dip</dimen>
+
+    <!-- The minimum height/width of any touch target -->
+    <dimen name="touch_target_min_size">48dip</dimen>
 
 </resources>

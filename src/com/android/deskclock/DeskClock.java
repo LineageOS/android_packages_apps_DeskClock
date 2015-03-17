@@ -30,6 +30,7 @@ import android.content.Intent;
 import android.content.SharedPreferences;
 import android.content.res.Configuration;
 import android.graphics.Outline;
+import android.media.AudioManager;
 import android.os.Bundle;
 import android.os.Handler;
 import android.preference.PreferenceManager;
@@ -75,8 +76,6 @@ public class DeskClock extends Activity implements LabelDialogFragment.TimerLabe
     // Check whether to change background every minute
     private static final long BACKGROUND_COLOR_CHECK_DELAY_MILLIS = DateUtils.MINUTE_IN_MILLIS;
     private static final int BACKGROUND_COLOR_INITIAL_ANIMATION_DURATION_MILLIS = 3000;
-    // The depth of fab, use it to create shadow
-    private static final float FAB_DEPTH = 20f;
     private static final int UNKNOWN_COLOR_ID = 0;
 
     private boolean mIsFirstLaunch = true;
@@ -161,7 +160,6 @@ public class DeskClock extends Activity implements LabelDialogFragment.TimerLabe
         setContentView(R.layout.desk_clock);
         mFab = (ImageButton) findViewById(R.id.fab);
         mFab.setOutlineProvider(OVAL_OUTLINE_PROVIDER);
-        mFab.setTranslationZ(FAB_DEPTH);
         mLeftButton = (ImageButton) findViewById(R.id.left_button);
         mRightButton = (ImageButton) findViewById(R.id.right_button);
         if (mTabsAdapter == null) {
@@ -206,22 +204,22 @@ public class DeskClock extends Activity implements LabelDialogFragment.TimerLabe
             mActionBar.setNavigationMode(ActionBar.NAVIGATION_MODE_TABS);
 
             mAlarmTab = mActionBar.newTab();
-            mAlarmTab.setIcon(R.drawable.alarm_tab);
+            mAlarmTab.setIcon(R.drawable.ic_alarm_animation);
             mAlarmTab.setContentDescription(R.string.menu_alarm);
             mTabsAdapter.addTab(mAlarmTab, AlarmClockFragment.class, ALARM_TAB_INDEX);
 
             mClockTab = mActionBar.newTab();
-            mClockTab.setIcon(R.drawable.clock_tab);
+            mClockTab.setIcon(R.drawable.ic_clock_animation);
             mClockTab.setContentDescription(R.string.menu_clock);
             mTabsAdapter.addTab(mClockTab, ClockFragment.class, CLOCK_TAB_INDEX);
 
             mTimerTab = mActionBar.newTab();
-            mTimerTab.setIcon(R.drawable.timer_tab);
+            mTimerTab.setIcon(R.drawable.ic_timer_animation);
             mTimerTab.setContentDescription(R.string.menu_timer);
             mTabsAdapter.addTab(mTimerTab, TimerFragment.class, TIMER_TAB_INDEX);
 
             mStopwatchTab = mActionBar.newTab();
-            mStopwatchTab.setIcon(R.drawable.stopwatch_tab);
+            mStopwatchTab.setIcon(R.drawable.ic_stopwatch_animation);
             mStopwatchTab.setContentDescription(R.string.menu_stopwatch);
             mTabsAdapter.addTab(mStopwatchTab, StopwatchFragment.class, STOPWATCH_TAB_INDEX);
 
@@ -233,6 +231,7 @@ public class DeskClock extends Activity implements LabelDialogFragment.TimerLabe
     @Override
     protected void onCreate(Bundle icicle) {
         super.onCreate(icicle);
+        setVolumeControlStream(AudioManager.STREAM_ALARM);
 
         mIsFirstLaunch = (icicle == null);
         getWindow().setBackgroundDrawable(null);
@@ -536,7 +535,7 @@ public class DeskClock extends Activity implements LabelDialogFragment.TimerLabe
         }
 
         @Override
-        public void onTabReselected(Tab arg0, FragmentTransaction arg1) {
+        public void onTabReselected(Tab tab, FragmentTransaction arg1) {
             // Do nothing
         }
 

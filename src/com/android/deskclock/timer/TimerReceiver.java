@@ -217,6 +217,8 @@ public class TimerReceiver extends BroadcastReceiver {
         Intent intent = new Intent();
         intent.setAction(Timers.TIMES_UP);
         intent.setClass(context, TimerReceiver.class);
+        // Time-critical, should be foreground
+        intent.addFlags(Intent.FLAG_RECEIVER_FOREGROUND);
         if (!mTimers.isEmpty()) {
             intent.putExtra(Timers.TIMER_INTENT_EXTRA, timerId);
         }
@@ -336,7 +338,9 @@ public class TimerReceiver extends BroadcastReceiver {
                 .setPriority(priority)
                 .setShowWhen(false)
                 .setSmallIcon(R.drawable.stat_notify_timer)
-                .setCategory(Notification.CATEGORY_ALARM);
+                .setCategory(Notification.CATEGORY_ALARM)
+                .setVisibility(Notification.VISIBILITY_PUBLIC)
+                .setLocalOnly(true);
         if (showTicker) {
             builder.setTicker(text);
         }
@@ -458,6 +462,8 @@ public class TimerReceiver extends BroadcastReceiver {
                 .setDefaults(Notification.DEFAULT_LIGHTS)
                 .setWhen(0)
                 .setCategory(Notification.CATEGORY_ALARM)
+                .setVisibility(Notification.VISIBILITY_PUBLIC)
+                .setLocalOnly(true)
                 .build();
 
         // Send the notification using the timer's id to identify the

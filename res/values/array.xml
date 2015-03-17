@@ -315,6 +315,7 @@
         <item>Tegucigalpa</item>
         <item>Paramaribo</item>
         <item>Quito</item>
+        <item>Ljubljana</item>
         <item>Marshall Islands</item>
         <item>Midway Island</item>
         <item>Regina</item>
@@ -650,6 +651,7 @@
         <item>America/Tegucigalpa</item>
         <item>America/Paramaribo</item>
         <item>America/Panama</item>
+        <item>Europe/Ljubljana</item>
         <item>Pacific/Majuro</item>
         <item>Pacific/Midway</item>
         <item>America/Regina</item>

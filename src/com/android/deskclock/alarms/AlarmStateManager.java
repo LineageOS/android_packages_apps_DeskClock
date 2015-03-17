@@ -115,8 +115,13 @@ public final class AlarmStateManager extends BroadcastReceiver {
     // Extra key to set the global broadcast id.
     private static final String ALARM_GLOBAL_ID_EXTRA = "intent.extra.alarm.global.id";
 
+    // Intent category tags used to dismiss, snooze or delete an alarm
+    public static final String ALARM_DISMISS_TAG = "DISMISS_TAG";
+    public static final String ALARM_SNOOZE_TAG = "SNOOZE_TAG";
+    public static final String ALARM_DELETE_TAG = "DELETE_TAG";
+
     // Intent category tag used when schedule state change intents in alarm manager.
-    public static final String ALARM_MANAGER_TAG = "ALARM_MANAGER";
+    private static final String ALARM_MANAGER_TAG = "ALARM_MANAGER";
 
     // Buffer time in seconds to fire alarm instead of marking it missed.
     public static final int ALARM_FIRE_BUFFER = 15;
@@ -133,7 +138,7 @@ public final class AlarmStateManager extends BroadcastReceiver {
         return prefs.getInt(ALARM_GLOBAL_ID_EXTRA, -1);
     }
 
-    public static void updateGloablIntentId(Context context) {
+    public static void updateGlobalIntentId(Context context) {
         SharedPreferences prefs = PreferenceManager.getDefaultSharedPreferences(context);
         int globalId = prefs.getInt(ALARM_GLOBAL_ID_EXTRA, -1) + 1;
         prefs.edit().putInt(ALARM_GLOBAL_ID_EXTRA, globalId).commit();
@@ -439,12 +444,10 @@ public final class AlarmStateManager extends BroadcastReceiver {
 
     }
 
-    public static String getSnoozedMinutes(Context context) {
+    public static int getSnoozedMinutes(Context context) {
         final String snoozeMinutesStr = PreferenceManager.getDefaultSharedPreferences(context)
                 .getString(SettingsActivity.KEY_ALARM_SNOOZE, DEFAULT_SNOOZE_MINUTES);
-        final int snoozeMinutes = Integer.parseInt(snoozeMinutesStr);
-        return context.getResources().getQuantityString(R.plurals.alarm_alert_snooze_duration,
-                snoozeMinutes, snoozeMinutes);
+        return Integer.parseInt(snoozeMinutesStr);
     }
 
     /**
@@ -746,9 +749,14 @@ public final class AlarmStateManager extends BroadcastReceiver {
             int intentId = intent.getIntExtra(ALARM_GLOBAL_ID_EXTRA, -1);
             int alarmState = intent.getIntExtra(ALARM_STATE_EXTRA, -1);
             if (intentId != globalId) {
-                LogUtils.i("Ignoring old Intent. IntentId: " + intentId + " GlobalId: " + globalId +
-                        " AlarmState: " + alarmState);
-                return;
+                LogUtils.i("IntentId: " + intentId + " GlobalId: " + globalId + " AlarmState: " +
+                        alarmState);
+                // Allows dismiss/snooze requests to go through
+                if (!intent.hasCategory(ALARM_DISMISS_TAG) &&
+                        !intent.hasCategory(ALARM_SNOOZE_TAG)) {
+                    LogUtils.i("Ignoring old Intent");
+                    return;
+                }
             }
 
             // If the phone is busy, keep the alarm snoozing.When the call is ended,

@@ -17,11 +17,11 @@
 
 <Button
     xmlns:android="http://schemas.android.com/apk/res/android"
-    style="@style/body"
     android:layout_width="0dp"
     android:layout_height="48dp"
     android:layout_weight="1"
     android:background="@drawable/toggle_circle"
     android:gravity="center"
     android:minWidth="0dp"
-    android:minHeight="0dp" />
+    android:minHeight="0dp"
+    android:textSize="@dimen/day_button_font_size" />
