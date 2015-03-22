@@ -46,11 +46,17 @@
   <string name="shake_action_summary" product="tablet">Planşeti silkələyəndə<xliff:g id="action">%s</xliff:g></string>
   <string name="shake_action_summary" product="default">Telefonu silkələyəndə <xliff:g id="action">%s</xliff:g></string>
   <string name="action_summary_snooze">zəngli saatda mürgüləmə</string>
+  <string name="action_summary_dismiss">zəngli saatı bağla</string>
   <string name="action_summary_do_nothing">heçnə etmə</string>
+  <string name="alarm_picker_title">Zəngli saat növünü seçin</string>
   <string name="alarm_type_ringtone">Melodiya</string>
   <string name="alarm_type_random">Təsadüfi</string>
   <string name="alarm_type_default">İlkin</string>
+  <string name="warn_silent_alarm_title">Zəngli saat səssizdədir</string>
+  <string name="alarm_select">Zəngli saatı seç</string>
+  <string name="alarm_select_ringtone">Melodiya</string>
   <string name="alarm_select_external">Musiqi</string>
+  <string name="ringtone_default">"İlkin melodiya"</string>
   <string name="city_marshall_islands">Marşal Adaları</string>
   <string name="city_midway_island">Midway Adası</string>
   <string name="city_regina">Regina</string>
