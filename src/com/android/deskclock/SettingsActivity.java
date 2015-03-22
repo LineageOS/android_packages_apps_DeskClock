@@ -28,6 +28,7 @@ import android.preference.ListPreference;
 import android.preference.Preference;
 import android.preference.PreferenceActivity;
 import android.preference.SwitchPreference;
+import android.provider.Settings;
 import android.text.format.DateUtils;
 import android.view.Menu;
 import android.view.MenuItem;
