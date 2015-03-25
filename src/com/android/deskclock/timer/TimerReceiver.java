@@ -361,9 +361,6 @@ public class TimerReceiver extends BroadcastReceiver {
         seconds = seconds - minutes * 60;
         hours = minutes / 60;
         minutes = minutes - hours * 60;
-        if (hours > 99) {
-            hours = 0;
-        }
 
         String hourSeq = (hours == 0) ? "" :
             ( (hours == 1) ? context.getString(R.string.hour) :
