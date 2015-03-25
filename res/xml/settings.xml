@@ -41,6 +41,7 @@
     </PreferenceCategory>
 
     <PreferenceCategory
+        android:key="key_alarm_settings"
         android:title="@string/alarm_settings">
 
         <ListPreference
