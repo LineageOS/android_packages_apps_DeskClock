@@ -356,7 +356,7 @@ public class TimerReceiver extends BroadcastReceiver {
         seconds = seconds - minutes * 60;
         hours = minutes / 60;
         minutes = minutes - hours * 60;
-        if (hours > 99) {
+        if (hours > 100) {
             hours = 0;
         }
 
