@@ -1,0 +1,21 @@
+{
+  "comments": [
+    {
+      "key": {
+        "uuid": "5ac665da_fc943fe9",
+        "filename": "src/com/android/deskclock/timer/TimerReceiver.java",
+        "patchSetId": 1
+      },
+      "lineNbr": 364,
+      "author": {
+        "id": 3134
+      },
+      "writtenOn": "2015-03-26T05:10:58Z",
+      "side": 1,
+      "message": "If the hours value could be greater than 100 and 100 is a valid value, what we are checking this? I prefer to remove this check, make not sense to me.",
+      "revId": "de42d79a27bcd1878d5fd7d0fbde1de4325832db",
+      "serverId": "1ec6b3db-b2c1-4fa4-84a2-4c7efe89ba71",
+      "unresolved": false
+    }
+  ]
+}
