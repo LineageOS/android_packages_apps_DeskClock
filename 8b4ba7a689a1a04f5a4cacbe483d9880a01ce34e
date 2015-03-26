@@ -1,0 +1,21 @@
+{
+  "comments": [
+    {
+      "key": {
+        "uuid": "5ac665da_67db98ee",
+        "filename": "src/com/android/deskclock/SettingsActivity.java",
+        "patchSetId": 2
+      },
+      "lineNbr": 287,
+      "author": {
+        "id": 10631
+      },
+      "writtenOn": "2015-03-26T13:36:26Z",
+      "side": 1,
+      "message": "copypasta comment",
+      "revId": "8b4ba7a689a1a04f5a4cacbe483d9880a01ce34e",
+      "serverId": "1ec6b3db-b2c1-4fa4-84a2-4c7efe89ba71",
+      "unresolved": false
+    }
+  ]
+}
