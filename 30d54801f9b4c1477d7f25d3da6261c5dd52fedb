@@ -1,0 +1,72 @@
+{
+  "comments": [
+    {
+      "key": {
+        "uuid": "5ac665da_c7936c4e",
+        "filename": "src/com/android/deskclock/SettingsActivity.java",
+        "patchSetId": 1
+      },
+      "lineNbr": 37,
+      "author": {
+        "id": 3134
+      },
+      "writtenOn": "2015-03-26T11:55:08Z",
+      "side": 1,
+      "message": "This import isn\u0027t used",
+      "revId": "30d54801f9b4c1477d7f25d3da6261c5dd52fedb",
+      "serverId": "1ec6b3db-b2c1-4fa4-84a2-4c7efe89ba71",
+      "unresolved": false
+    },
+    {
+      "key": {
+        "uuid": "5ac665da_c78c0c38",
+        "filename": "src/com/android/deskclock/SettingsActivity.java",
+        "patchSetId": 1
+      },
+      "lineNbr": 270,
+      "author": {
+        "id": 3134
+      },
+      "writtenOn": "2015-03-26T11:55:08Z",
+      "side": 1,
+      "message": "check listPref !\u003d null before try to remove the preference",
+      "revId": "30d54801f9b4c1477d7f25d3da6261c5dd52fedb",
+      "serverId": "1ec6b3db-b2c1-4fa4-84a2-4c7efe89ba71",
+      "unresolved": false
+    },
+    {
+      "key": {
+        "uuid": "5ac665da_a79f505e",
+        "filename": "src/com/android/deskclock/SettingsActivity.java",
+        "patchSetId": 1
+      },
+      "lineNbr": 272,
+      "author": {
+        "id": 3134
+      },
+      "writtenOn": "2015-03-26T11:55:08Z",
+      "side": 1,
+      "message": "SensorManager.getDefault(Sensor.TYPE_ORIENTATION) \u003d\u003d null",
+      "revId": "30d54801f9b4c1477d7f25d3da6261c5dd52fedb",
+      "serverId": "1ec6b3db-b2c1-4fa4-84a2-4c7efe89ba71",
+      "unresolved": false
+    },
+    {
+      "key": {
+        "uuid": "5ac665da_27824001",
+        "filename": "src/com/android/deskclock/SettingsActivity.java",
+        "patchSetId": 1
+      },
+      "lineNbr": 281,
+      "author": {
+        "id": 3134
+      },
+      "writtenOn": "2015-03-26T11:55:08Z",
+      "side": 1,
+      "message": "Shoudn\u0027t we check also Sensor.TYPE_ACCELEROMETER for shake action?",
+      "revId": "30d54801f9b4c1477d7f25d3da6261c5dd52fedb",
+      "serverId": "1ec6b3db-b2c1-4fa4-84a2-4c7efe89ba71",
+      "unresolved": false
+    }
+  ]
+}
