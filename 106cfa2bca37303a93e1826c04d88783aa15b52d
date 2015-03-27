@@ -16,6 +16,23 @@
       "revId": "106cfa2bca37303a93e1826c04d88783aa15b52d",
       "serverId": "1ec6b3db-b2c1-4fa4-84a2-4c7efe89ba71",
       "unresolved": false
+    },
+    {
+      "key": {
+        "uuid": "5ac665da_027292e5",
+        "filename": "src/com/android/deskclock/SettingsActivity.java",
+        "patchSetId": 4
+      },
+      "lineNbr": 273,
+      "author": {
+        "id": 3134
+      },
+      "writtenOn": "2015-03-27T11:28:45Z",
+      "side": 1,
+      "message": "But this doesn\u0027t persist the setting, so AlarmService could still get a value different of ALARM_NO_ACTION and register the sensor listeners.",
+      "revId": "106cfa2bca37303a93e1826c04d88783aa15b52d",
+      "serverId": "1ec6b3db-b2c1-4fa4-84a2-4c7efe89ba71",
+      "unresolved": false
     }
   ]
 }
