@@ -1,0 +1,21 @@
+{
+  "comments": [
+    {
+      "key": {
+        "uuid": "5ac665da_a293bef9",
+        "filename": "/COMMIT_MSG",
+        "patchSetId": 4
+      },
+      "lineNbr": 9,
+      "author": {
+        "id": 9621
+      },
+      "writtenOn": "2015-03-27T11:18:15Z",
+      "side": 1,
+      "message": "?(°?° )? careful with those clocks!",
+      "revId": "106cfa2bca37303a93e1826c04d88783aa15b52d",
+      "serverId": "1ec6b3db-b2c1-4fa4-84a2-4c7efe89ba71",
+      "unresolved": false
+    }
+  ]
+}
