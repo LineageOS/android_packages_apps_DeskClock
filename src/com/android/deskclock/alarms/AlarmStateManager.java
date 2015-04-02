@@ -456,6 +456,12 @@ public final class AlarmStateManager extends BroadcastReceiver {
      * @param instance to set state to
      */
     public static void setMissedState(Context context, AlarmInstance instance) {
+        if (isPowerOffAlarm(context)) {
+            context.sendBroadcast(new Intent(ALARM_POWER_OFF_ACTION));
+            AlarmService.startAlarm(context, instance);
+            return;
+        }
+
         LogUtils.v("Setting missed state to instance " + instance.mId);
         // Stop alarm if this instance is firing it
         AlarmService.stopAlarm(context, instance);
@@ -698,9 +704,6 @@ public final class AlarmStateManager extends BroadcastReceiver {
                 break;
             case AlarmInstance.MISSED_STATE:
                 setMissedState(context, instance);
-                if (isPowerOffAlarm(context)) {
-                    context.sendBroadcast(new Intent(ALARM_POWER_OFF_ACTION));
-                }
                 break;
             case AlarmInstance.DISMISSED_STATE:
                 setDismissState(context, instance);
