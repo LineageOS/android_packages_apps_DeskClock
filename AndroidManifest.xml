@@ -104,6 +104,12 @@
                   android:exported="false">
         </receiver>
 
+        <receiver android:name=".alarms.PhoneStateReceiver">
+            <intent-filter>
+                <action android:name="android.intent.action.PHONE_STATE"/>
+            </intent-filter>
+        </receiver>
+
         <service android:name=".alarms.AlarmService"
                  android:exported="false">
         </service>
