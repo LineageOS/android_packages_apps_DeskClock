@@ -44,7 +44,9 @@ import com.android.deskclock.provider.Alarm;
 import com.android.deskclock.provider.AlarmInstance;
 
 import java.util.Calendar;
+import java.util.HashSet;
 import java.util.List;
+import java.util.Set;
 
 /**
  * This class handles all the state changes for alarm instances. You need to
@@ -120,6 +122,9 @@ public final class AlarmStateManager extends BroadcastReceiver {
     public static final String ALARM_SNOOZE_TAG = "SNOOZE_TAG";
     public static final String ALARM_DELETE_TAG = "DELETE_TAG";
 
+    // key to to retrieve pending alarm set
+    public static final String ALARM_PENDING_ALARM_KEY = "pending.alarm.key";
+
     // Intent category tag used when schedule state change intents in alarm manager.
     private static final String ALARM_MANAGER_TAG = "ALARM_MANAGER";
 
@@ -140,6 +145,15 @@ public final class AlarmStateManager extends BroadcastReceiver {
 
     public static void updateGlobalIntentId(Context context) {
         SharedPreferences prefs = PreferenceManager.getDefaultSharedPreferences(context);
+
+        // If there are any pending alarms, do not update the global id - pending alarms
+        // will be ignored by the receivers when the user tries to dismiss or snooze
+        Set<String> alarms = prefs.getStringSet(AlarmStateManager.ALARM_PENDING_ALARM_KEY,
+                new HashSet<String>());
+        if (alarms.size() > 0) {
+            return;
+        }
+
         int globalId = prefs.getInt(ALARM_GLOBAL_ID_EXTRA, -1) + 1;
         prefs.edit().putInt(ALARM_GLOBAL_ID_EXTRA, globalId).commit();
     }
@@ -679,7 +693,7 @@ public final class AlarmStateManager extends BroadcastReceiver {
      * @param instance to change state on
      * @param state to change to
      */
-    public void setAlarmState(Context context, AlarmInstance instance, int state) {
+    public static void setAlarmState(Context context, AlarmInstance instance, int state) {
         switch(state) {
             case AlarmInstance.SILENT_STATE:
                 setSilentState(context, instance);
@@ -736,54 +750,7 @@ public final class AlarmStateManager extends BroadcastReceiver {
         final String action = intent.getAction();
         LogUtils.v("AlarmStateManager received intent " + intent);
         if (CHANGE_STATE_ACTION.equals(action)) {
-            Uri uri = intent.getData();
-            AlarmInstance instance = AlarmInstance.getInstance(context.getContentResolver(),
-                    AlarmInstance.getId(uri));
-            if (instance == null) {
-                // Not a big deal, but it shouldn't happen
-                LogUtils.e("Can not change state for unknown instance: " + uri);
-                return;
-            }
-
-            int globalId = getGlobalIntentId(context);
-            int intentId = intent.getIntExtra(ALARM_GLOBAL_ID_EXTRA, -1);
-            int alarmState = intent.getIntExtra(ALARM_STATE_EXTRA, -1);
-            if (intentId != globalId) {
-                LogUtils.i("IntentId: " + intentId + " GlobalId: " + globalId + " AlarmState: " +
-                        alarmState);
-                // Allows dismiss/snooze requests to go through
-                if (!intent.hasCategory(ALARM_DISMISS_TAG) &&
-                        !intent.hasCategory(ALARM_SNOOZE_TAG)) {
-                    LogUtils.i("Ignoring old Intent");
-                    return;
-                }
-            }
-
-            // If the phone is busy, keep the alarm snoozing.When the call is ended,
-            // the new coming alarm or the alarm which wakes from sooze,will skip the codes here
-            // and continue show the alarm as normal.
-            if (context.getResources().getBoolean(R.bool.config_delayalarm)) {
-                TelephonyManager mTelephonyManager = (TelephonyManager) context
-                        .getSystemService(Context.TELEPHONY_SERVICE);
-                if ((mTelephonyManager.getCallState() != TelephonyManager.CALL_STATE_IDLE)
-                        && (alarmState == AlarmInstance.FIRED_STATE)) {
-                    snooze(context, intent, instance);
-                    return;
-                }
-            }
-
-            if (alarmState >= 0) {
-                setAlarmState(context, instance, alarmState);
-            } else {
-                // No need to register instance again when alarmState
-                // equals POWER_OFF_ALARM_STATE. POWER_OFF_ALARM_STATE
-                // is an invalid state for rtc power off alarm.
-                if (alarmState == AlarmInstance.POWER_OFF_ALARM_STATE)
-                {
-                    return;
-                }
-                registerInstance(context, instance, true);
-            }
+            handleChangeStateIntent(context, intent);
         } else if (SHOW_AND_DISMISS_ALARM_ACTION.equals(action)) {
             Uri uri = intent.getData();
             AlarmInstance instance = AlarmInstance.getInstance(context.getContentResolver(),
@@ -803,37 +770,73 @@ public final class AlarmStateManager extends BroadcastReceiver {
         }
     }
 
-    /**
-     * Make the alarm snooze based on the snooze interval in settings.
-     * If the phone is not busy in call anymore, this method will not be
-     * called, and the alarm will wake up based on snooze interval.
-     */
-    private void snooze(Context context, Intent intent, AlarmInstance instance) {
+    private static void handleChangeStateIntent(Context context, Intent intent) {
         Uri uri = intent.getData();
-        AlarmInstance newInstance = AlarmInstance.getInstance(context.getContentResolver(),
+        AlarmInstance instance = AlarmInstance.getInstance(context.getContentResolver(),
                 AlarmInstance.getId(uri));
-        if (newInstance == null) {
-            // If AlarmInstance is turn to null,return.
+        if (instance == null) {
+            // Not a big deal, but it shouldn't happen
+            LogUtils.e("Can not change state for unknown instance: " + uri);
             return;
         }
 
-        // Notify the user that the alarm has been snoozed.
-        Intent cancelSnooze = createStateChangeIntent(context, ALARM_MANAGER_TAG, newInstance,
-                AlarmInstance.DISMISSED_STATE);
-        PendingIntent broadcast = PendingIntent.getBroadcast(context, instance.hashCode(),
-                cancelSnooze, 0);
-        String label = newInstance.getLabelOrDefault(context);
-        label = context.getString(R.string.alarm_notify_snooze_label, label);
-        NotificationManager nm = (NotificationManager) context
-                .getSystemService(Context.NOTIFICATION_SERVICE);
-        Notification n = new Notification(R.drawable.stat_notify_alarm, label, 0);
-        n.setLatestEventInfo(context, label,
-                context.getString(R.string.alarm_notify_snooze_text,
-                        AlarmUtils.getFormattedTime(context, instance.getAlarmTime())),
-                broadcast);
-        n.flags |= Notification.FLAG_AUTO_CANCEL | Notification.FLAG_ONGOING_EVENT;
-        nm.notify(instance.hashCode(), n);
-        setAlarmState(context, instance, AlarmInstance.SNOOZE_STATE);
+        int globalId = getGlobalIntentId(context);
+        int intentId = intent.getIntExtra(ALARM_GLOBAL_ID_EXTRA, -1);
+        int alarmState = intent.getIntExtra(ALARM_STATE_EXTRA, -1);
+        if (intentId != globalId) {
+            LogUtils.i("Ignoring old Intent. IntentId: " + intentId + " GlobalId: " + globalId +
+                    " AlarmState: " + alarmState);
+            return;
+        }
+
+        // If the phone is busy, add the alarm to a string set in shared preferenecs that will be
+        // cleared when the call is ended.
+        if (context.getResources().getBoolean(R.bool.config_delayalarm)) {
+            TelephonyManager mTelephonyManager = (TelephonyManager) context
+                    .getSystemService(Context.TELEPHONY_SERVICE);
+            if ((mTelephonyManager.getCallState() != TelephonyManager.CALL_STATE_IDLE)
+                    && (alarmState == AlarmInstance.FIRED_STATE)) {
+                pendAlarm(context, uri, alarmState);
+                return;
+            }
+        }
+
+        setChangeAlarmState(context, instance, alarmState);
+    }
+
+    public static void setChangeAlarmState(Context context, AlarmInstance instance,
+        int alarmState) {
+
+        if (alarmState >= 0) {
+            setAlarmState(context, instance, alarmState);
+        } else {
+            // No need to register instance again when alarmState
+            // equals POWER_OFF_ALARM_STATE. POWER_OFF_ALARM_STATE
+            // is an invalid state for rtc power off alarm.
+            if (alarmState == AlarmInstance.POWER_OFF_ALARM_STATE) {
+                return;
+            }
+            registerInstance(context, instance, true);
+        }
+    }
+
+    /**
+     * Add the alarm to list of pending Alarms to be fired after the call is complete.
+     */
+    private static void pendAlarm(Context context, Uri uri, int alarmState) {
+        LogUtils.v("Pending alarm: " + uri);
+
+        SharedPreferences sp = PreferenceManager.getDefaultSharedPreferences(context);
+        Set<String> alarms = sp.getStringSet(ALARM_PENDING_ALARM_KEY, new HashSet<String>());
+
+        // Alarms are stored as "<uri>|<alarmState>"
+        String alarm = uri.toString() + "|" + alarmState;
+
+        HashSet<String> newSet = new HashSet<String>();
+        newSet.addAll(alarms);
+        newSet.add(alarm);
+
+        sp.edit().putStringSet(ALARM_PENDING_ALARM_KEY, newSet).commit();
     }
 
     /**
