@@ -40,6 +40,7 @@
         android:scrollHorizontally="true"
         android:selectAllOnFocus="true"
         android:paddingLeft="48dp"
+        android:maxLength="255"
         android:inputType="textNoSuggestions">
         <requestFocus />
       </EditText>

@@ -275,6 +275,7 @@
         <item name="android:textCursorDrawable">@null</item>
         <item name="android:inputType">textCapSentences</item>
         <item name="android:selectAllOnFocus">true</item>
+        <item name="android:maxLength">255</item>
     </style>
 
     <style name="bold_button" parent="button">
