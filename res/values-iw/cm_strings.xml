@@ -25,7 +25,7 @@
   <string name="cities_add_city_title">הוסף עיר</string>
   <string name="cities_add_city_city">עיר:</string>
   <string name="cities_add_city_timezone">אזור זמן:</string>
-  <string name="cities_add_city_gps_cd">הקש כדי להתאים לשפת העיר הנוכחית שלך</string>
+  <string name="cities_add_city_gps_cd">הקש כדי להתאים לעיר הנוכחית שלך</string>
   <string name="cities_add_loading">טוען\u2026</string>
   <string name="cities_add_searching">מחפש\u2026</string>
   <string name="cities_add_gps_no_results">בקשת GPS לא החזירה מיקומים</string>
@@ -44,15 +44,15 @@
   <string name="shake_action_summary" product="default">ניעור הסמארטפון יגרום ל<xliff:g id="action">%s</xliff:g></string>
   <string name="action_summary_snooze">נמנום השעון המעורר</string>
   <string name="action_summary_dismiss">בטל את הצלצול</string>
-  <string name="action_summary_do_nothing">שום פעולה</string>
+  <string name="action_summary_do_nothing">אל תעשה דבר</string>
   <string name="alarm_picker_title">בחר סוג שעון מעורר</string>
   <string name="alarm_type_ringtone">צלצול</string>
   <string name="alarm_type_playlist">רשימת השמעה</string>
   <string name="alarm_type_random">אקראי</string>
   <string name="warn_silent_alarm_title">עוצמת שעון מעורר מושתקת</string>
-  <string name="alarm_select">בחר צלצול</string>
-  <string name="alarm_select_ringtone">צליל חיוג</string>
+  <string name="alarm_select">בחר צליל התראה</string>
+  <string name="alarm_select_ringtone">צלצול</string>
   <string name="alarm_select_external">מוזיקה</string>
-  <string name="ringtone_default">רינגטון ברירת מחדל</string>
-  <string name="take_persistent_grant_uri_permission_failed_msg">אין אפשרות לקבל הרשאות תמידיות לרינגטון</string>
+  <string name="ringtone_default">צלצול ברירת מחדל</string>
+  <string name="take_persistent_grant_uri_permission_failed_msg">אין אפשרות לקבל הרשאות תמידיות לצלצול</string>
 </resources>
