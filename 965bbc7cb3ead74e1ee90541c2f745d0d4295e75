@@ -16,6 +16,24 @@
       "revId": "965bbc7cb3ead74e1ee90541c2f745d0d4295e75",
       "serverId": "1ec6b3db-b2c1-4fa4-84a2-4c7efe89ba71",
       "unresolved": false
+    },
+    {
+      "key": {
+        "uuid": "3ac371cc_78f189cd",
+        "filename": "src/com/android/deskclock/alarms/AlarmStateManager.java",
+        "patchSetId": 3
+      },
+      "lineNbr": 824,
+      "author": {
+        "id": 9528
+      },
+      "writtenOn": "2015-04-08T04:24:39Z",
+      "side": 1,
+      "message": "Huh, that\u0027s odd, thanks for pointing this out. I didn\u0027t realize this bug was happening. But I just tested again, and sure enough the new alarms aren\u0027t getting added to the string set properly!",
+      "parentUuid": "3ac371cc_f85739c8",
+      "revId": "965bbc7cb3ead74e1ee90541c2f745d0d4295e75",
+      "serverId": "1ec6b3db-b2c1-4fa4-84a2-4c7efe89ba71",
+      "unresolved": false
     }
   ]
 }
