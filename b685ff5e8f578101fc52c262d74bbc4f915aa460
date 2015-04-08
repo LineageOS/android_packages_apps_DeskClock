@@ -1,0 +1,21 @@
+{
+  "comments": [
+    {
+      "key": {
+        "uuid": "3ac371cc_93670625",
+        "filename": "src/com/android/deskclock/alarms/AlarmStateManager.java",
+        "patchSetId": 5
+      },
+      "lineNbr": 146,
+      "author": {
+        "id": 9621
+      },
+      "writtenOn": "2015-04-08T11:58:31Z",
+      "side": 1,
+      "message": "What if you get two alarms while you\u0027re on a call? The first will have the right global ID but the second will not increment it and the buttons for the notification will fail when the second alarm is triggered after the call?",
+      "revId": "b685ff5e8f578101fc52c262d74bbc4f915aa460",
+      "serverId": "1ec6b3db-b2c1-4fa4-84a2-4c7efe89ba71",
+      "unresolved": false
+    }
+  ]
+}
