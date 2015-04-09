@@ -52,6 +52,24 @@
       "revId": "935204c1f7d8fa8075cb6cbb985835fc9120cee6",
       "serverId": "1ec6b3db-b2c1-4fa4-84a2-4c7efe89ba71",
       "unresolved": false
+    },
+    {
+      "key": {
+        "uuid": "3ac371cc_b9178353",
+        "filename": "src/com/android/deskclock/alarms/AlarmStateManager.java",
+        "patchSetId": 1
+      },
+      "lineNbr": 462,
+      "author": {
+        "id": 12883
+      },
+      "writtenOn": "2015-04-09T08:53:07Z",
+      "side": 1,
+      "message": "I knew there were two alarms set, but two time value is the same, can you please redirect me to the \"few minutes\" code? Last time I check both alarm is set at same time, it just try to avoid setting the power off alarm if current time is near the alarm time",
+      "parentUuid": "3ac371cc_195b3756",
+      "revId": "935204c1f7d8fa8075cb6cbb985835fc9120cee6",
+      "serverId": "1ec6b3db-b2c1-4fa4-84a2-4c7efe89ba71",
+      "unresolved": false
     }
   ]
 }
