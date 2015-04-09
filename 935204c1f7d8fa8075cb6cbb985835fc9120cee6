@@ -70,6 +70,24 @@
       "revId": "935204c1f7d8fa8075cb6cbb985835fc9120cee6",
       "serverId": "1ec6b3db-b2c1-4fa4-84a2-4c7efe89ba71",
       "unresolved": false
+    },
+    {
+      "key": {
+        "uuid": "3ac371cc_cb2546af",
+        "filename": "src/com/android/deskclock/alarms/AlarmStateManager.java",
+        "patchSetId": 1
+      },
+      "lineNbr": 462,
+      "author": {
+        "id": 2936
+      },
+      "writtenOn": "2015-04-09T09:26:28Z",
+      "side": 1,
+      "message": "https://github.com/CyanogenMod/android_kernel_oneplus_msm8974/blob/cm-12.0/kernel/time/alarmtimer.c#L90\n\nAgain, I would highly suggest you move your offmode alarm handling to the kernel.",
+      "parentUuid": "3ac371cc_b9178353",
+      "revId": "935204c1f7d8fa8075cb6cbb985835fc9120cee6",
+      "serverId": "1ec6b3db-b2c1-4fa4-84a2-4c7efe89ba71",
+      "unresolved": false
     }
   ]
 }
