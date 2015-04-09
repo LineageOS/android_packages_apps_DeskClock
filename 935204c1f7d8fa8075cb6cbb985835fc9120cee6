@@ -34,6 +34,24 @@
       "revId": "935204c1f7d8fa8075cb6cbb985835fc9120cee6",
       "serverId": "1ec6b3db-b2c1-4fa4-84a2-4c7efe89ba71",
       "unresolved": false
+    },
+    {
+      "key": {
+        "uuid": "3ac371cc_195b3756",
+        "filename": "src/com/android/deskclock/alarms/AlarmStateManager.java",
+        "patchSetId": 1
+      },
+      "lineNbr": 462,
+      "author": {
+        "id": 2936
+      },
+      "writtenOn": "2015-04-09T08:27:41Z",
+      "side": 1,
+      "message": "For the QC implementation of the poweroff alarm, when you set a power off alarm, it actually sets two alarms, one to wake a few minutes before the actual time you\u0027ve set, and the second at the time you\u0027ve set. Is your implementation behaving differently?",
+      "parentUuid": "3ac371cc_d9d51fba",
+      "revId": "935204c1f7d8fa8075cb6cbb985835fc9120cee6",
+      "serverId": "1ec6b3db-b2c1-4fa4-84a2-4c7efe89ba71",
+      "unresolved": false
     }
   ]
 }
