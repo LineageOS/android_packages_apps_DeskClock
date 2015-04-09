@@ -573,7 +573,6 @@ public final class AlarmStateManager extends BroadcastReceiver {
         Calendar lowNotificationTime = instance.getLowNotificationTime();
         Calendar highNotificationTime = instance.getHighNotificationTime();
         Calendar missedTTL = instance.getMissedTimeToLive();
-
         // Handle special use cases here
         if (instance.mAlarmState == AlarmInstance.DISMISSED_STATE) {
             // This should never happen, but add a quick check here
@@ -678,6 +677,7 @@ public final class AlarmStateManager extends BroadcastReceiver {
         // TODO: Refactor this code to not use the overloaded registerInstance method.
         ContentResolver contentResolver = context.getContentResolver();
         for (AlarmInstance instance : AlarmInstance.getInstances(contentResolver, null)) {
+            instance = getFixedAlarmInstance(context, instance);
             AlarmStateManager.registerInstance(context, instance, false);
         }
         AlarmStateManager.updateNextAlarm(context);
@@ -860,5 +860,39 @@ public final class AlarmStateManager extends BroadcastReceiver {
             setRtcPowerUp(context,false);
         }
         return isPoAlarm;
+    }
+
+    /** M: Update the alarmInstances who can be set a nearly time @{ */
+    private static AlarmInstance getFixedAlarmInstance(Context context, AlarmInstance instance) {
+        ContentResolver resolver = context.getContentResolver();
+        Alarm alarm = Alarm.getAlarm(resolver, instance.mAlarmId);
+        Calendar currentTime = Calendar.getInstance();// the system's current time
+        // Generate the new instance use the alarm's rule
+        AlarmInstance newInstance = alarm.createInstanceAfter(currentTime);
+        Calendar newTime = newInstance.getAlarmTime();// the new instance's time
+        Calendar alarmTime = instance.getAlarmTime();// the original instance's time
+
+        // If the new instance's time is before the original instance's time
+        // then we can use the new instance's year,month and day with original instance's
+        // hour and minutes, so that we can keep all the state of the alarm
+        if (newTime.before(alarmTime)) {
+            // use the new instance time, update the year,month and day
+            int newYear = newTime.get(Calendar.YEAR);
+            int newMonth = newTime.get(Calendar.MONTH);
+            int newDay = newTime.get(Calendar.DAY_OF_MONTH);
+
+            alarmTime.set(Calendar.YEAR, newYear);
+            alarmTime.set(Calendar.MONTH, newMonth);
+            alarmTime.set(Calendar.DAY_OF_MONTH, newDay);
+            // if the alarmTime is still before currentTime, then add a day
+            while (alarmTime.before(currentTime)) {
+                alarmTime.add(Calendar.DAY_OF_MONTH, 1);
+            }
+            instance.setAlarmTime(alarmTime);
+
+            AlarmInstance.updateInstance(resolver, instance);
+        }
+
+        return instance;
     }
 }
