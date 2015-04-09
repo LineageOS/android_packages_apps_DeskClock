@@ -16,6 +16,24 @@
       "revId": "935204c1f7d8fa8075cb6cbb985835fc9120cee6",
       "serverId": "1ec6b3db-b2c1-4fa4-84a2-4c7efe89ba71",
       "unresolved": false
+    },
+    {
+      "key": {
+        "uuid": "3ac371cc_d9d51fba",
+        "filename": "src/com/android/deskclock/alarms/AlarmStateManager.java",
+        "patchSetId": 1
+      },
+      "lineNbr": 462,
+      "author": {
+        "id": 12883
+      },
+      "writtenOn": "2015-04-09T07:45:50Z",
+      "side": 1,
+      "message": "it took me some hours to track this down\nwhen device is wake from power off state by RTC alarm\nby the time DeskClock load alarm data, the alarm is already missed so it call setMissedState, which should be consider not missed\n\n1. when DeskClock load alarm, it won\u0027t reach code line 701, so i move it into setMissedState function\n2. it should really startAlarm, before the patch it does nothing but only ask the other app (which i can find nowhere) to do something\n3. \"which should be consider not missed\" means it should return, don\u0027t make it miss but just startAlarm()\n\nthe function isPowerOffAlarm will unset the oneshot mark so this only happen once after RTC alarm boot",
+      "parentUuid": "3ac371cc_9908c793",
+      "revId": "935204c1f7d8fa8075cb6cbb985835fc9120cee6",
+      "serverId": "1ec6b3db-b2c1-4fa4-84a2-4c7efe89ba71",
+      "unresolved": false
     }
   ]
 }
