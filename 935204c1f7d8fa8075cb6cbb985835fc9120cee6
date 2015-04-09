@@ -1,0 +1,21 @@
+{
+  "comments": [
+    {
+      "key": {
+        "uuid": "3ac371cc_9908c793",
+        "filename": "src/com/android/deskclock/alarms/AlarmStateManager.java",
+        "patchSetId": 1
+      },
+      "lineNbr": 462,
+      "author": {
+        "id": 2936
+      },
+      "writtenOn": "2015-04-09T06:49:20Z",
+      "side": 1,
+      "message": "It appears the only change in  behavior is that you bypass the rest of this function. Why is that?",
+      "revId": "935204c1f7d8fa8075cb6cbb985835fc9120cee6",
+      "serverId": "1ec6b3db-b2c1-4fa4-84a2-4c7efe89ba71",
+      "unresolved": false
+    }
+  ]
+}
