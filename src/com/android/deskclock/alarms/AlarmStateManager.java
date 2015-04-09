@@ -678,6 +678,7 @@ public final class AlarmStateManager extends BroadcastReceiver {
         // TODO: Refactor this code to not use the overloaded registerInstance method.
         ContentResolver contentResolver = context.getContentResolver();
         for (AlarmInstance instance : AlarmInstance.getInstances(contentResolver, null)) {
+            instance = updateNextFireTime(context, instance);
             AlarmStateManager.registerInstance(context, instance, false);
         }
         AlarmStateManager.updateNextAlarm(context);
@@ -860,5 +861,22 @@ public final class AlarmStateManager extends BroadcastReceiver {
             setRtcPowerUp(context,false);
         }
         return isPoAlarm;
+    }
+
+    /**
+     * Find the next fire time of instance.
+     */
+    private static AlarmInstance updateNextFireTime(Context context, AlarmInstance instance) {
+        final ContentResolver resolver = context.getContentResolver();
+        final Alarm alarm = Alarm.getAlarm(resolver, instance.mAlarmId);
+        Calendar currentTime = Calendar.getInstance();
+        AlarmInstance newInstance = alarm.createInstanceAfter(currentTime);
+        Calendar newTime = newInstance.getAlarmTime();
+        Calendar alarmTime = instance.getAlarmTime();
+        if (newTime.before(alarmTime)) {
+            instance.setAlarmTime(alarmTime);
+            AlarmInstance.updateInstance(resolver, instance);
+        }
+        return instance;
     }
 }
