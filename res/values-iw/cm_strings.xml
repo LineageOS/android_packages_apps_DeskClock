@@ -25,26 +25,26 @@
   <string name="cities_add_city_title">הוסף עיר</string>
   <string name="cities_add_city_city">עיר:</string>
   <string name="cities_add_city_timezone">אזור זמן:</string>
-  <string name="cities_add_city_gps_cd">הקש כדי להתאים לעיר הנוכחית שלך</string>
+  <string name="cities_add_city_gps_cd">הקש כדי להוסיף את העיר הנוכחית שלך</string>
   <string name="cities_add_loading">טוען\u2026</string>
   <string name="cities_add_searching">מחפש\u2026</string>
   <string name="cities_add_gps_no_results">בקשת GPS לא החזירה מיקומים</string>
-  <string name="cities_add_gps_not_available">GPS אינו זמין</string>
+  <string name="cities_add_gps_not_available">GPS לא זמין</string>
   <string name="cities_add_already_exists">העיר כבר קיימת במסד הנתונים</string>
-  <string name="cities_add_city_failed">אין אפשרות ליצור את העיר</string>
+  <string name="cities_add_city_failed">לא ניתן ליצור את העיר</string>
   <string name="cities_delete_city_title">מחק עיר</string>
   <string name="cities_delete_city_msg">האם ברצונך למחוק את <xliff:g id="city">%s</xliff:g>?</string>
-  <string name="cities_delete_city_failed">אין אפשרות למחוק את העיר</string>
+  <string name="cities_delete_city_failed">לא ניתן למחוק את העיר</string>
   <string name="volume_buttons_summary">הקשה על כפתורי עוצמת הקול תגרום ל<xliff:g id="action">%s</xliff:g></string>
-  <string name="flip_action_title">פעולה בהיפוך</string>
+  <string name="flip_action_title">פעולת היפוך</string>
   <string name="flip_action_summary" product="tablet">היפוך הטאבלט יגרום ל<xliff:g id="action">%s</xliff:g></string>
-  <string name="flip_action_summary" product="default">היפוך הטאבלט יגרום ל<xliff:g id="action">%s</xliff:g></string>
-  <string name="shake_action_title">פעולה בניעור</string>
-  <string name="shake_action_summary" product="tablet">ניעור הסמארטפון יגרום ל-<xliff:g id="action">%s</xliff:g></string>
-  <string name="shake_action_summary" product="default">ניעור הסמארטפון יגרום ל<xliff:g id="action">%s</xliff:g></string>
+  <string name="flip_action_summary" product="default">היפוך המכשיר יגרום ל<xliff:g id="action">%s</xliff:g></string>
+  <string name="shake_action_title">פעולת ניעור</string>
+  <string name="shake_action_summary" product="tablet">ניעור הטאבלט יגרום ל<xliff:g id="action">%s</xliff:g></string>
+  <string name="shake_action_summary" product="default">ניעור המכשיר יגרום ל<xliff:g id="action">%s</xliff:g></string>
   <string name="action_summary_snooze">נמנום השעון המעורר</string>
-  <string name="action_summary_dismiss">בטל את הצלצול</string>
-  <string name="action_summary_do_nothing">אל תעשה דבר</string>
+  <string name="action_summary_dismiss">ביטול השעון המעורר</string>
+  <string name="action_summary_do_nothing">שום פעולה</string>
   <string name="alarm_picker_title">בחר סוג שעון מעורר</string>
   <string name="alarm_type_ringtone">צלצול</string>
   <string name="alarm_type_playlist">רשימת השמעה</string>

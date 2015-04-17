@@ -32,9 +32,9 @@
   <string name="cities_add_gps_not_available">GPS non disponibile</string>
   <string name="cities_add_already_exists">La località è già presente nel database</string>
   <string name="cities_add_city_failed">Impossibile inserire la località</string>
-  <string name="cities_delete_city_title">Cancella località</string>
-  <string name="cities_delete_city_msg">Vuoi cancellare <xliff:g id="city">%s</xliff:g>?</string>
-  <string name="cities_delete_city_failed">Impossibile cancellare la località</string>
+  <string name="cities_delete_city_title">Elimina località</string>
+  <string name="cities_delete_city_msg">Vuoi eliminare <xliff:g id="city">%s</xliff:g>?</string>
+  <string name="cities_delete_city_failed">Impossibile eliminare la località</string>
   <string name="volume_buttons_summary">Premere i pulsanti volume farà <xliff:g id="action">%s</xliff:g></string>
   <string name="flip_action_title">Azione capovolgimento</string>
   <string name="flip_action_summary" product="tablet">Capovolgere il tablet verso il basso: <xliff:g id="action">%s</xliff:g></string>
