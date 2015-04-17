@@ -57,6 +57,7 @@
   <string name="alarm_select_ringtone">Melodiya</string>
   <string name="alarm_select_external">Musiqi</string>
   <string name="ringtone_default">"İlkin melodiya"</string>
+  <string name="take_persistent_grant_uri_permission_failed_msg">Melodiya üçün davamlı icazə alına bilmədi</string>
   <string name="city_marshall_islands">Marşal Adaları</string>
   <string name="city_midway_island">Midway Adası</string>
   <string name="city_regina">Regina</string>
