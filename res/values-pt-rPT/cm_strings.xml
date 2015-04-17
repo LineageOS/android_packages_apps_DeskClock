@@ -32,14 +32,14 @@
   <string name="cities_add_gps_not_available">O GPS não está disponível</string>
   <string name="cities_add_already_exists">A cidade já existe na base de dados</string>
   <string name="cities_add_city_failed">Não é possível criar a cidade</string>
-  <string name="cities_delete_city_title">Eliminar a cidade</string>
-  <string name="cities_delete_city_msg">Quer mesmo eliminar <xliff:g id="city">%s</xliff:g>?</string>
+  <string name="cities_delete_city_title">Eliminar cidade</string>
+  <string name="cities_delete_city_msg">Deseja eliminar <xliff:g id="city">%s</xliff:g>?</string>
   <string name="cities_delete_city_failed">Não é possível eliminar a cidade</string>
-  <string name="flip_action_title">Ação de rodar</string>
+  <string name="flip_action_title">Ação de virar</string>
   <string name="flip_action_dialog_title" product="tablet">Rodar o tablet \u2026</string>
   <string name="flip_action_dialog_title" product="default">Rodar o telefone \u2026</string>
-  <string name="flip_action_summary" product="tablet">Rodar o tablet ao contrario <xliff:g id="action">%s</xliff:g></string>
-  <string name="flip_action_summary" product="default">Rodar o telefone ao contrario <xliff:g id="action">%s</xliff:g></string>
+  <string name="flip_action_summary" product="tablet">Virar o tablet ao contrário <xliff:g id="action">%s</xliff:g></string>
+  <string name="flip_action_summary" product="default">Virar o telefone ao contrário <xliff:g id="action">%s</xliff:g></string>
   <string name="shake_action_title">Ação de agitar</string>
   <string name="shake_action_dialog_title" product="tablet">Agitar o tablet \u2026</string>
   <string name="shake_action_dialog_title" product="default">Agitar o telefone \u2026</string>
