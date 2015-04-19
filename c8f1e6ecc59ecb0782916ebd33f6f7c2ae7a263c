@@ -1,0 +1,72 @@
+{
+  "comments": [
+    {
+      "key": {
+        "uuid": "fa7ab95a_4272e77d",
+        "filename": "src/com/android/deskclock/alarms/AlarmStateManager.java",
+        "patchSetId": 1
+      },
+      "lineNbr": 576,
+      "author": {
+        "id": 3134
+      },
+      "writtenOn": "2015-04-19T22:25:26Z",
+      "side": 1,
+      "message": "Don\u0027t remove this blank line. Isn\u0027t necessary and could cause merge conflitcs",
+      "revId": "c8f1e6ecc59ecb0782916ebd33f6f7c2ae7a263c",
+      "serverId": "1ec6b3db-b2c1-4fa4-84a2-4c7efe89ba71",
+      "unresolved": false
+    },
+    {
+      "key": {
+        "uuid": "fa7ab95a_a252d3db",
+        "filename": "src/com/android/deskclock/alarms/AlarmStateManager.java",
+        "patchSetId": 1
+      },
+      "lineNbr": 865,
+      "author": {
+        "id": 3134
+      },
+      "writtenOn": "2015-04-19T22:25:26Z",
+      "side": 1,
+      "message": "This isn\u0027t a valid javadoc",
+      "revId": "c8f1e6ecc59ecb0782916ebd33f6f7c2ae7a263c",
+      "serverId": "1ec6b3db-b2c1-4fa4-84a2-4c7efe89ba71",
+      "unresolved": false
+    },
+    {
+      "key": {
+        "uuid": "fa7ab95a_c25d17ee",
+        "filename": "src/com/android/deskclock/alarms/AlarmStateManager.java",
+        "patchSetId": 1
+      },
+      "lineNbr": 866,
+      "author": {
+        "id": 3134
+      },
+      "writtenOn": "2015-04-19T22:25:26Z",
+      "side": 1,
+      "message": "This name isn\u0027t relevance to the what this method is fixing. Change to updateNextFireTime or something like that",
+      "revId": "c8f1e6ecc59ecb0782916ebd33f6f7c2ae7a263c",
+      "serverId": "1ec6b3db-b2c1-4fa4-84a2-4c7efe89ba71",
+      "unresolved": false
+    },
+    {
+      "key": {
+        "uuid": "fa7ab95a_0258dff9",
+        "filename": "src/com/android/deskclock/alarms/AlarmStateManager.java",
+        "patchSetId": 1
+      },
+      "lineNbr": 897,
+      "author": {
+        "id": 3134
+      },
+      "writtenOn": "2015-04-19T22:25:26Z",
+      "side": 1,
+      "message": "Since you are using the createInstanceAfter alarm\u0027s rule, then the next trigger time is the correct one for the current time. there isn\u0027t need to any extra check. The method could be simplified as:\n\n     private static void updateNextFireTime(Context ctx, AlarmInstance instance) {\n        final ContentResolver resolver \u003d ctx.getContentResolver();\n        final Alarm alarm \u003d Alarm.getAlarm(resolver, instance.mAlarmId);\n        AlarmInstance newInstance \u003d alarm.createInstanceAfter(Calendar.getInstance());\n        Calendar newTime \u003d newInstance.getAlarmTime();\n        Calendar alarmTime \u003d instance.getAlarmTime();\n        if (newTime.before(alarmTime)) {\n            instance.setAlarmTime(newTime);\n            AlarmInstance.updateInstance(resolver, instance);\n        }\n     }",
+      "revId": "c8f1e6ecc59ecb0782916ebd33f6f7c2ae7a263c",
+      "serverId": "1ec6b3db-b2c1-4fa4-84a2-4c7efe89ba71",
+      "unresolved": false
+    }
+  ]
+}
