@@ -30,4 +30,7 @@
         <item>Nothing</item>
     </string-array>
 
+    <!-- Setting title for accessing the cLock widget settings -->
+    <string name="menu_item_widget_settings">Widget settings</string>
+
 </resources>
