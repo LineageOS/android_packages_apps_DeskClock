@@ -45,6 +45,10 @@
             android:icon="@android:drawable/ic_menu_preferences"
             android:title="@string/menu_item_settings"/>
         <item
+            android:id="@+id/menu_item_widget_settings"
+            android:icon="@android:drawable/ic_menu_preferences"
+            android:title="@string/menu_item_widget_settings"/>
+        <item
             android:id="@+id/menu_item_help"
             android:icon="@android:drawable/ic_menu_preferences"
             android:title="@string/menu_item_help"/>

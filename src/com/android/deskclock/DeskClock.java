@@ -43,6 +43,7 @@ import com.android.deskclock.actionbarmenu.ActionBarMenuManager;
 import com.android.deskclock.actionbarmenu.MenuItemControllerFactory;
 import com.android.deskclock.actionbarmenu.NightModeMenuItemController;
 import com.android.deskclock.actionbarmenu.SettingMenuItemController;
+import com.android.deskclock.actionbarmenu.WidgetMenuItemController;
 import com.android.deskclock.alarms.AlarmStateManager;
 import com.android.deskclock.data.DataModel;
 import com.android.deskclock.events.Events;
@@ -199,7 +200,8 @@ public class DeskClock extends BaseActivity
                 .addMenuItemController(new SettingMenuItemController(this))
                 .addMenuItemController(new NightModeMenuItemController(this))
                 .addMenuItemController(MenuItemControllerFactory.getInstance()
-                        .buildMenuItemControllers(this));
+                        .buildMenuItemControllers(this))
+                .addMenuItemController(new WidgetMenuItemController(this));
 
         // Inflate the menu during creation to avoid a double layout pass. Otherwise, the menu
         // inflation occurs *after* the initial draw and a second layout pass adds in the menu.
