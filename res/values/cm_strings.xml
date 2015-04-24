@@ -95,4 +95,7 @@
 
     <string name="default_auto_silence_value" translatable="false">10</string>
 
+    <string name="menu_item_widget_settings">Widget settings</string>
+    <string name="activity_not_found">Activity not found!</string>
+
 </resources>
