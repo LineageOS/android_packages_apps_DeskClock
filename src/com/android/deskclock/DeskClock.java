@@ -25,6 +25,7 @@ import android.app.Fragment;
 import android.app.FragmentManager;
 import android.app.FragmentTransaction;
 import android.content.ActivityNotFoundException;
+import android.content.ComponentName;
 import android.content.Context;
 import android.content.Intent;
 import android.content.SharedPreferences;
@@ -361,6 +362,12 @@ public class DeskClock extends Activity implements LabelDialogFragment.TimerLabe
         switch (item.getItemId()) {
             case R.id.menu_item_settings:
                 startActivity(new Intent(DeskClock.this, SettingsActivity.class));
+                return true;
+            case R.id.menu_item_widget_settings:
+                Intent wsi = new Intent();
+                wsi.setComponent(new ComponentName("com.cyanogenmod.lockclock",
+                        "com.cyanogenmod.lockclock.preference.Preferences"));
+                startActivity(wsi);
                 return true;
             case R.id.menu_item_help:
                 Intent i = item.getIntent();
