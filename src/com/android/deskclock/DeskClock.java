@@ -19,6 +19,7 @@ package com.android.deskclock;
 import android.app.Fragment;
 import android.app.FragmentManager;
 import android.content.ActivityNotFoundException;
+import android.content.ComponentName;
 import android.content.Context;
 import android.content.Intent;
 import android.content.SharedPreferences;
@@ -41,6 +42,7 @@ import android.view.View;
 import android.view.View.OnClickListener;
 import android.widget.ImageButton;
 
+import android.widget.Toast;
 import com.android.deskclock.alarms.AlarmStateManager;
 import com.android.deskclock.events.Events;
 import com.android.deskclock.provider.Alarm;
@@ -69,6 +71,10 @@ public class DeskClock extends BaseActivity
     // Alarm action for midnight (so we can update the date display).
     private static final String KEY_SELECTED_TAB = "selected_tab";
     public static final String SELECT_TAB_INTENT_EXTRA = "deskclock.select.tab";
+    private static final String LC_PACKAGE = "com.cyanogenmod.lockclock";
+    private static final String LC_ACTIVITY = LC_PACKAGE + ".preference.Preferences";
+    private static final ComponentName sWidgetSettingComponentName = new ComponentName
+            (LC_PACKAGE, LC_ACTIVITY);
 
     // Request code used when SettingsActivity is launched.
     private static final int REQUEST_CHANGE_SETTINGS = 1;
@@ -332,6 +338,17 @@ public class DeskClock extends BaseActivity
             case R.id.menu_item_settings:
                 startActivityForResult(new Intent(DeskClock.this, SettingsActivity.class),
                         REQUEST_CHANGE_SETTINGS);
+                return true;
+            case R.id.menu_item_widget_settings:
+                Intent wsi = new Intent();
+                wsi.setComponent(sWidgetSettingComponentName);
+                try {
+                    startActivity(wsi);
+                } catch (ActivityNotFoundException e) {
+                    Toast.makeText(this, getResources().getString(R.string.activity_not_found),
+                            Toast.LENGTH_SHORT).show();
+                    Log.w(LOG_TAG, "Cannot find the activity!");
+                }
                 return true;
             case R.id.menu_item_help:
                 Intent i = item.getIntent();

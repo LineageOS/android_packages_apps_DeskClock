@@ -15,6 +15,10 @@
      limitations under the License.
 -->
 <resources xmlns:xliff="urn:oasis:names:tc:xliff:document:1.2">
+    <!-- Setting title for accessing the cLock widget settings -->
+    <string name="menu_item_widget_settings">Widget settings</string>
+    <string name="activity_not_found">Activity not found!</string>
+
     <!-- Setting title for showing/hiding the alarm status bar icon -->
     <string name="show_status_bar_icon_title">Show icon</string>
 
