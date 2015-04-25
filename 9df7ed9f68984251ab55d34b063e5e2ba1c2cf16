@@ -19,6 +19,24 @@
     },
     {
       "key": {
+        "uuid": "da7fb54a_0ab63a8a",
+        "filename": "src/com/android/deskclock/DeskClock.java",
+        "patchSetId": 1
+      },
+      "lineNbr": 369,
+      "author": {
+        "id": 10631
+      },
+      "writtenOn": "2015-04-25T10:01:05Z",
+      "side": 1,
+      "message": "Done",
+      "parentUuid": "da7fb54a_2ad69ec5",
+      "revId": "9df7ed9f68984251ab55d34b063e5e2ba1c2cf16",
+      "serverId": "1ec6b3db-b2c1-4fa4-84a2-4c7efe89ba71",
+      "unresolved": false
+    },
+    {
+      "key": {
         "uuid": "da7fb54a_4adbe2ed",
         "filename": "src/com/android/deskclock/DeskClock.java",
         "patchSetId": 1
@@ -30,6 +48,24 @@
       "writtenOn": "2015-04-25T09:39:05Z",
       "side": 1,
       "message": "Lets wrap this in a try/catch for ANF exceptions and show the user a toast that widget settings couldn\u0027t be found. Use case: LockClock may be disabled?",
+      "revId": "9df7ed9f68984251ab55d34b063e5e2ba1c2cf16",
+      "serverId": "1ec6b3db-b2c1-4fa4-84a2-4c7efe89ba71",
+      "unresolved": false
+    },
+    {
+      "key": {
+        "uuid": "da7fb54a_2abbfe73",
+        "filename": "src/com/android/deskclock/DeskClock.java",
+        "patchSetId": 1
+      },
+      "lineNbr": 370,
+      "author": {
+        "id": 10631
+      },
+      "writtenOn": "2015-04-25T10:01:05Z",
+      "side": 1,
+      "message": "Done",
+      "parentUuid": "da7fb54a_4adbe2ed",
       "revId": "9df7ed9f68984251ab55d34b063e5e2ba1c2cf16",
       "serverId": "1ec6b3db-b2c1-4fa4-84a2-4c7efe89ba71",
       "unresolved": false
