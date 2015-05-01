@@ -18,4 +18,77 @@
 <resources xmlns:xliff="urn:oasis:names:tc:xliff:document:1.2">
   <string name="show_status_bar_icon_title">Kuva ikoon</string>
   <string name="show_status_bar_icon_summary">Näita olekuribal ikooni kui alarm on sees</string>
+  <string name="alarm_increasing_volume">Valjenev helin</string>
+  <string name="profile_description">Profiil <xliff:g id="profile">%s</xliff:g></string>
+  <string name="profile_no_selected">Ühtegi profiili pole valitud</string>
+  <string name="menu_item_add">Lisa</string>
+  <string name="cities_add_city_title">Lisa linn</string>
+  <string name="cities_add_city_city">Linn:</string>
+  <string name="cities_add_city_timezone">Ajavöönd:</string>
+  <string name="cities_add_city_gps_cd">Puuduta oma praeguse linna määramiseks</string>
+  <string name="cities_add_loading">Laadin\u2026</string>
+  <string name="cities_add_searching">Otsin\u2026</string>
+  <string name="cities_add_gps_no_results">GPS päring ei tagastanud ühtegi asukoha tulemusi</string>
+  <string name="cities_add_gps_not_available">GPS ei ole saadaval</string>
+  <string name="cities_add_already_exists">Linn on juba olemas andmebaasis</string>
+  <string name="cities_add_city_failed">Ei saa luua linna</string>
+  <string name="cities_delete_city_title">Kustuta linn</string>
+  <string name="cities_delete_city_msg">Kas soovite kustutada linna <xliff:g id="city">%s</xliff:g>?</string>
+  <string name="cities_delete_city_failed">Ei saa kustutada linna</string>
+  <string name="flip_action_title">Tegevus pööramisel</string>
+  <string name="flip_action_dialog_title" product="tablet">pööra seadet\u2026</string>
+  <string name="flip_action_dialog_title" product="default">Pööra telefoni\u2026</string>
+  <string name="flip_action_summary" product="tablet">Tahvelarvuti ümberpööramine aktiveerib <xliff:g id="action">%s</xliff:g></string>
+  <string name="flip_action_summary" product="default">Telefoni ümberpööramine aktiveerib <xliff:g id="action">%s</xliff:g></string>
+  <string name="shake_action_title">Raputamise tegevus</string>
+  <string name="shake_action_dialog_title" product="tablet">Raputa seadet\u2026</string>
+  <string name="shake_action_dialog_title" product="default">Raputa telefoni\u2026</string>
+  <string name="shake_action_summary" product="tablet">Seadme raputamine aktiveerib <xliff:g id="action">%s</xliff:g></string>
+  <string name="shake_action_summary" product="default">Telefoni raputamine aktiveerib <xliff:g id="action">%s</xliff:g></string>
+  <string name="action_summary_snooze">Korda äratust</string>
+  <string name="action_summary_dismiss">Lõpeta alarm</string>
+  <string name="action_summary_do_nothing">Ära tee midagi</string>
+  <string name="alarm_picker_title">Valige äratuse tüüp</string>
+  <string name="alarm_type_ringtone">Helin</string>
+  <string name="alarm_type_random">Juhuslikult</string>
+  <string name="alarm_type_default">Vaikimisi</string>
+  <string name="warn_silent_alarm_title">Äratus on vaigistatud</string>
+  <string name="alarm_select">Valige äratus</string>
+  <string name="alarm_select_ringtone">Helin</string>
+  <string name="alarm_select_external">Muusika</string>
+  <string name="ringtone_default">"Vaikimisi helin"</string>
+  <string name="take_persistent_grant_uri_permission_failed_msg">Ei saanud püsivat luba helinale</string>
+  <string name="city_marshall_islands">Marshalli saared</string>
+  <string name="city_midway_island">Midway saared</string>
+  <string name="city_regina">Regina</string>
+  <string name="city_manaus">Manaus</string>
+  <string name="city_araguaina">Araguaina</string>
+  <string name="city_godthab">Godthab</string>
+  <string name="city_south_georgia">Lõuna-Georgia</string>
+  <string name="city_azores">Azores</string>
+  <string name="city_windhoek">Windhoek</string>
+  <string name="city_tbilisi">Tbilisi</string>
+  <string name="city_yerevan">Yerevan</string>
+  <string name="city_oral">Oral</string>
+  <string name="city_yekaterinburg">Jekaterinburg</string>
+  <string name="city_krasnoyarsk">Krasnoyarsk</string>
+  <string name="city_irkutsk">Irkutsk</string>
+  <string name="city_yakutsk">Yakutsk</string>
+  <string name="city_hobart">Hobart</string>
+  <string name="city_magadan">Magadani</string>
+  <string name="city_tongatapu">Tongatapu</string>
+  <string name="city_aklavik">Aklavik</string>
+  <string name="city_montgomery">Montgomery</string>
+  <string name="city_geneva">Genf</string>
+  <string name="city_odesa">Odesa</string>
+  <string name="city_aden">Aden</string>
+  <string name="city_abu_dhabi">Abu Dhabi</string>
+  <string name="city_tashkent">Tashkent</string>
+  <string name="city_new_delhi">New Delhi</string>
+  <string name="city_suva">Suva</string>
+  <string name="city_wellington">Wellington</string>
+  <string name="city_chatham">Chatham</string>
+  <string name="city_vladivostok">Vladivostok</string>
+  <string name="city_kamchatka">Kamtšatka</string>
+  <string name="city_chennai">Chennai</string>
 </resources>
