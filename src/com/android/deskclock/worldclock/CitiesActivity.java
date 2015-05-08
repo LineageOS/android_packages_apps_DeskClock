@@ -613,7 +613,7 @@ public class CitiesActivity extends Activity implements OnCheckedChangeListener,
             mAdapter.set24HoursMode(this);
         }
 
-        getWindow().getDecorView().setBackgroundColor(Utils.getCurrentHourColor());
+        getWindow().getDecorView().setBackgroundColor(Utils.getCurrentHourColor(this));
     }
 
     @Override

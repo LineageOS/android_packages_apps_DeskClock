@@ -28,6 +28,7 @@ import android.content.SharedPreferences;
 import android.content.pm.PackageInfo;
 import android.content.pm.PackageManager.NameNotFoundException;
 import android.content.res.Resources;
+import android.content.res.TypedArray;
 import android.database.Cursor;
 import android.graphics.Color;
 import android.graphics.Paint;
@@ -70,8 +71,6 @@ import java.text.Collator;
 import java.text.SimpleDateFormat;
 import java.util.ArrayList;
 import java.util.Calendar;
-import java.util.Collections;
-import java.util.Comparator;
 import java.util.Date;
 import java.util.GregorianCalendar;
 import java.util.List;
@@ -108,10 +107,8 @@ public class Utils {
     public static final String CLOCK_TYPE_ANALOG = "analog";
 
     /** The background colors of the app, it changes thru out the day to mimic the sky. **/
-    public static final String[] BACKGROUND_SPECTRUM = { "#212121", "#27232e", "#2d253a",
-            "#332847", "#382a53", "#3e2c5f", "#442e6c", "#393a7a", "#2e4687", "#235395", "#185fa2",
-            "#0d6baf", "#0277bd", "#0d6cb1", "#1861a6", "#23569b", "#2d4a8f", "#383f84", "#433478",
-            "#3d3169", "#382e5b", "#322b4d", "#2c273e", "#272430" };
+    public static TypedArray sBackgroundSpectrum;
+    private static int sDefaultBackgroundSpectrumColor;
 
     /**
      * Returns whether the SDK is KitKat or later
@@ -641,14 +638,27 @@ public class Utils {
         return (city.mCityId == null || dbCity == null) ? city.mCityName : dbCity.mCityName;
     }
 
-    public static int getCurrentHourColor() {
-        final int hourOfDay = Calendar.getInstance().get(Calendar.HOUR_OF_DAY);
-        return Color.parseColor(BACKGROUND_SPECTRUM[hourOfDay]);
+    private static void loadBackgroundSpectrum(Context context) {
+        Resources res = context.getResources();
+        sBackgroundSpectrum = res.obtainTypedArray(R.array.background_color_by_hour);
+        sDefaultBackgroundSpectrumColor = res.getColor(R.color.hour_12);
     }
 
-    public static int getNextHourColor() {
+    public static int getCurrentHourColor(Context context) {
+        if (sBackgroundSpectrum == null) {
+            loadBackgroundSpectrum(context);
+        }
+        final int hourOfDay = Calendar.getInstance().get(Calendar.HOUR_OF_DAY);
+        return sBackgroundSpectrum.getColor(hourOfDay, sDefaultBackgroundSpectrumColor);
+    }
+
+    public static int getNextHourColor(Context context) {
+        if (sBackgroundSpectrum == null) {
+            loadBackgroundSpectrum(context);
+        }
         final int currHour = Calendar.getInstance().get(Calendar.HOUR_OF_DAY);
-        return Color.parseColor(BACKGROUND_SPECTRUM[currHour < 24 ? currHour + 1 : 1]);
+        return sBackgroundSpectrum.getColor(currHour < 24 ? currHour + 1 : 1,
+                sDefaultBackgroundSpectrumColor);
     }
 
     /**
