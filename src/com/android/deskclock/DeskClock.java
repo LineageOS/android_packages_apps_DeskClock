@@ -433,7 +433,7 @@ public class DeskClock extends Activity implements LabelDialogFragment.TimerLabe
         } else {
             duration = getResources().getInteger(android.R.integer.config_longAnimTime);
         }
-        final int currHourColor = Utils.getCurrentHourColor();
+        final int currHourColor = Utils.getCurrentHourColor(this);
         if (mLastHourColor != currHourColor) {
             final ObjectAnimator animator = ObjectAnimator.ofInt(getWindow().getDecorView(),
                     "backgroundColor", mLastHourColor, currHourColor);

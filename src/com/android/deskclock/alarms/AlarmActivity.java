@@ -195,7 +195,7 @@ public class AlarmActivity extends Activity implements View.OnClickListener, Vie
         Utils.setTimeFormat(digitalClock,
                 getResources().getDimensionPixelSize(R.dimen.main_ampm_font_size));
 
-        mCurrentHourColor = Utils.getCurrentHourColor();
+        mCurrentHourColor = Utils.getCurrentHourColor(this);
         mContainerView.setBackgroundColor(mCurrentHourColor);
 
         mAlarmButton.setOnTouchListener(this);
