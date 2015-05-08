@@ -70,7 +70,42 @@ public class SettingsActivity extends BaseActivity {
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setVolumeControlStream(AudioManager.STREAM_ALARM);
+<<<<<<< HEAD
         setContentView(R.layout.settings);
+=======
+
+        addPreferencesFromResource(R.xml.settings);
+
+        ActionBar actionBar = getActionBar();
+        if (actionBar != null) {
+            actionBar.setDisplayOptions(ActionBar.DISPLAY_HOME_AS_UP, ActionBar.DISPLAY_HOME_AS_UP);
+        }
+
+        // We don't want to reconstruct the timezone list every single time
+        // onResume() is called so we do it once in onCreate
+        ListPreference listPref;
+        listPref = (ListPreference) findPreference(KEY_HOME_TZ);
+        if (mTimezones == null || isLocaleChanged()) {
+            mTime = System.currentTimeMillis();
+            mTimezones = getAllTimezones();
+        }
+
+        listPref.setEntryValues(mTimezones[0]);
+        listPref.setEntries(mTimezones[1]);
+        listPref.setSummary(listPref.getEntry());
+        listPref.setOnPreferenceChangeListener(this);
+
+        mAlarmIcon = (SwitchPreference) findPreference(KEY_SHOW_STATUS_BAR_ICON);
+        mAlarmIcon.setChecked(Settings.System.getInt(getContentResolver(),
+                Settings.System.SHOW_ALARM_ICON, 1) == 1);
+    }
+
+    @Override
+    protected void onResume() {
+        super.onResume();
+        getWindow().getDecorView().setBackgroundColor(Utils.getCurrentHourColor(this));
+        refresh();
+>>>>>>> 03a5537... Expose background colors for theming.
     }
 
     @Override

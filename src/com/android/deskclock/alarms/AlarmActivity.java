@@ -284,8 +284,13 @@ public class AlarmActivity extends AppCompatActivity
         Utils.setTimeFormat(this, digitalClock,
                 getResources().getDimensionPixelSize(R.dimen.main_ampm_font_size));
 
+<<<<<<< HEAD
         mCurrentHourColor = Utils.getCurrentHourColor();
         getWindow().setBackgroundDrawable(new ColorDrawable(mCurrentHourColor));
+=======
+        mCurrentHourColor = Utils.getCurrentHourColor(this);
+        mContainerView.setBackgroundColor(mCurrentHourColor);
+>>>>>>> 03a5537... Expose background colors for theming.
 
         mAlarmButton.setOnTouchListener(this);
         mSnoozeButton.setOnClickListener(this);

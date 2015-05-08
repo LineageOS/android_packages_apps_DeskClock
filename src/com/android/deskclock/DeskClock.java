@@ -396,6 +396,28 @@ public class DeskClock extends BaseActivity
         }
     }
 
+<<<<<<< HEAD
+=======
+    private void setBackgroundColor() {
+        final int duration;
+        if (mLastHourColor == UNKNOWN_COLOR_ID) {
+            mLastHourColor = getResources().getColor(R.color.default_background);
+            duration = BACKGROUND_COLOR_INITIAL_ANIMATION_DURATION_MILLIS;
+        } else {
+            duration = getResources().getInteger(android.R.integer.config_longAnimTime);
+        }
+        final int currHourColor = Utils.getCurrentHourColor(this);
+        if (mLastHourColor != currHourColor) {
+            final ObjectAnimator animator = ObjectAnimator.ofInt(getWindow().getDecorView(),
+                    "backgroundColor", mLastHourColor, currHourColor);
+            animator.setDuration(duration);
+            animator.setEvaluator(new ArgbEvaluator());
+            animator.start();
+            mLastHourColor = currHourColor;
+        }
+    }
+
+>>>>>>> 03a5537... Expose background colors for theming.
     /**
      * Adapter for wrapping together the ActionBar's tab with the ViewPager
      */

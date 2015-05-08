@@ -101,6 +101,7 @@ public class Utils {
     public static final String CLOCK_TYPE_DIGITAL = "digital";
     public static final String CLOCK_TYPE_ANALOG = "analog";
 
+<<<<<<< HEAD
     /**
      * Temporary array used by {@link #obtainStyledColor(Context, int, int)}.
      */
@@ -135,6 +136,11 @@ public class Utils {
             0xFF202233 /* 10 PM */,
             0xFF20222A /* 11 PM */
     };
+=======
+    /** The background colors of the app, it changes thru out the day to mimic the sky. **/
+    public static TypedArray sBackgroundSpectrum;
+    private static int sDefaultBackgroundSpectrumColor;
+>>>>>>> 03a5537... Expose background colors for theming.
 
     /**
      * Returns whether the SDK is KitKat or later
@@ -714,6 +720,7 @@ public class Utils {
         return (city.mCityId == null || dbCity == null) ? city.mCityName : dbCity.mCityName;
     }
 
+<<<<<<< HEAD
     /**
      * Convenience method for retrieving a themed color value.
      *
@@ -737,6 +744,29 @@ public class Utils {
      */
     public static int getCurrentHourColor() {
         return BACKGROUND_SPECTRUM[Calendar.getInstance().get(Calendar.HOUR_OF_DAY)];
+=======
+    private static void loadBackgroundSpectrum(Context context) {
+        Resources res = context.getResources();
+        sBackgroundSpectrum = res.obtainTypedArray(R.array.background_color_by_hour);
+        sDefaultBackgroundSpectrumColor = res.getColor(R.color.hour_12);
+    }
+
+    public static int getCurrentHourColor(Context context) {
+        if (sBackgroundSpectrum == null) {
+            loadBackgroundSpectrum(context);
+        }
+        final int hourOfDay = Calendar.getInstance().get(Calendar.HOUR_OF_DAY);
+        return sBackgroundSpectrum.getColor(hourOfDay, sDefaultBackgroundSpectrumColor);
+    }
+
+    public static int getNextHourColor(Context context) {
+        if (sBackgroundSpectrum == null) {
+            loadBackgroundSpectrum(context);
+        }
+        final int currHour = Calendar.getInstance().get(Calendar.HOUR_OF_DAY);
+        return sBackgroundSpectrum.getColor(currHour < 24 ? currHour + 1 : 1,
+                sDefaultBackgroundSpectrumColor);
+>>>>>>> 03a5537... Expose background colors for theming.
     }
 
     /**

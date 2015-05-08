@@ -55,7 +55,7 @@ public class BaseActivity extends AppCompatActivity {
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
 
-        final int currentColor = Utils.getCurrentHourColor();
+        final int currentColor = Utils.getCurrentHourColor(this);
         final int backgroundColor = savedInstanceState == null ? currentColor
                 : savedInstanceState.getInt(KEY_BACKGROUND_COLOR, currentColor);
         setBackgroundColor(backgroundColor, false /* animate */);
