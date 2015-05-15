@@ -88,12 +88,12 @@
   <string name="auto_silence_summary"><xliff:g id="minutes">%d</xliff:g> خوله‌ک</string>
   <string name="auto_silence_never">هەرگیز</string>
   <string-array name="auto_silence_entries">
-    <item>٥ خوله‌ک</item>
-    <item>١٠ خوله‌ک</item>
-    <item>١٥ خولەک</item>
-    <item>20 خولەک</item>
-    <item>25 خولەک</item>
-    <item>۳۰ خوله‌ک</item>
+    <item>1 minute</item>
+    <item>5 minutes</item>
+    <item>10 minutes</item>
+    <item>15 minutes</item>
+    <item>20 minutes</item>
+    <item>25 minutes</item>
     <item>هیچکات</item>
   </string-array>
   <string name="done">ئه‌نجام درا</string>
@@ -120,7 +120,6 @@
   <string name="desk_clock_button_description">ته‌ختی کاتژمێر</string>
   <string name="label_description">پێناس</string>
   <string name="ringtone_description">زه‌نگ</string>
-  <string name="battery_charging_level"><xliff:g id="number">%d</xliff:g><xliff:g id="percent">%%</xliff:g></string>
   <string name="weather_fetch_failure">زانیاری له‌باره‌ی که‌ش و هه‌وا ئێستا ئاماده‌ نییه‌.</string>
   <string name="alarm_klaxon_service_desc">خزمه‌تگوزاری گه‌ڕانه‌لێدانی ده‌نگ بۆ ئاگادارکردنه‌وه‌ دانرا له‌ کاژێردا.</string>
   <string name="loading_ringtone">ئاماده‌کردنی زه‌نگ\u2026</string>
@@ -151,7 +150,6 @@
   <string name="hours_label_description">کاژێر</string>
   <string name="minutes_label_description">خولەک</string>
   <string name="seconds_label_description">چرکە</string>
-  <string name="zero">0</string>
   <string name="sw_share_main">کاتی من بریتییه‌ له‌ <xliff:g id="time">%s</xliff:g></string>
   <string name="sw_share_laps">ماوه‌ی سوڕ:</string>
   <string name="sw_notification_lap_number">سوڕی <xliff:g id="number">%d</xliff:g></string>

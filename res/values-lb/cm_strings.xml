@@ -55,4 +55,6 @@
   <string name="alarm_select_external">Musek</string>
   <string name="ringtone_default">Standard-Schelltoun</string>
   <string name="take_persistent_grant_uri_permission_failed_msg">Konnt keng dauerhaf Erlabnis kréie fir de Schelltoun z\'änneren</string>
+  <string name="menu_item_widget_settings">Widget-Astellungen</string>
+  <string name="activity_not_found">Aktivitéit net fonnt!</string>
 </resources>

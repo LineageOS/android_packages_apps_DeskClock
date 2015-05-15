@@ -98,12 +98,12 @@
   <string name="auto_silence_summary"><xliff:g id="MINUTES">%d</xliff:g> minutos</string>
   <string name="auto_silence_never">Enxamás</string>
   <string-array name="auto_silence_entries">
-    <item>5 minutos</item>
-    <item>10 minutos</item>
-    <item>15 minutos</item>
-    <item>20 minutos</item>
-    <item>25 minutos</item>
-    <item>30 minutos</item>
+    <item>1 minute</item>
+    <item>5 minutes</item>
+    <item>10 minutes</item>
+    <item>15 minutes</item>
+    <item>20 minutes</item>
+    <item>25 minutes</item>
     <item>Nunca</item>
   </string-array>
   <string name="done">Fecho</string>
@@ -130,7 +130,6 @@
   <string name="desk_clock_button_description">Reló</string>
   <string name="label_description">Nome</string>
   <string name="ringtone_description">Tonu de llamada</string>
-  <string name="battery_charging_level"><xliff:g id="NUMBER">%d</xliff:g><xliff:g id="PERCENT">%%</xliff:g></string>
   <string name="weather_fetch_failure">La información meteorolóxica nun ta disponible nesti momentu.</string>
   <string name="alarm_klaxon_service_desc">Reproducción d\'alarmes definíes en Reló</string>
   <string name="loading_ringtone">Cargando tonu…</string>
@@ -162,7 +161,6 @@
   <string name="hours_label_description">hores</string>
   <string name="minutes_label_description">minutos</string>
   <string name="seconds_label_description">segundos</string>
-  <string name="zero">0</string>
   <string name="sw_share_main">Hora: <xliff:g id="TIME">%s</xliff:g></string>
   <string name="sw_share_laps">Duración de les vueltes:</string>
   <string name="sw_notification_lap_number">Fase <xliff:g id="NUMBER">%d</xliff:g></string>

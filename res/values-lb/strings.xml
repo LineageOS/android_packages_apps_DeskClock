@@ -98,12 +98,12 @@
   <string name="auto_silence_summary"><xliff:g id="minutes">%d</xliff:g> Minutten</string>
   <string name="auto_silence_never">Ni</string>
   <string-array name="auto_silence_entries">
-    <item>5 Minutten</item>
-    <item>10 Minutten</item>
-    <item>15 Minutten</item>
-    <item>20 Minutten</item>
-    <item>25 Minutten</item>
-    <item>30 Minutten</item>
+    <item>1 minute</item>
+    <item>5 minutes</item>
+    <item>10 minutes</item>
+    <item>15 minutes</item>
+    <item>20 minutes</item>
+    <item>25 minutes</item>
     <item>Ni</item>
   </string-array>
   <string name="done">Fäerdeg</string>
@@ -130,7 +130,6 @@
   <string name="desk_clock_button_description">Auerenusiicht</string>
   <string name="label_description">Beschreiwung</string>
   <string name="ringtone_description">Schelltoun</string>
-  <string name="battery_charging_level"><xliff:g id="number">%d</xliff:g><xliff:g id="percent">%%</xliff:g></string>
   <string name="weather_fetch_failure">Wiederinformatioun momentan net disponibel.</string>
   <string name="alarm_klaxon_service_desc">Tounservice fir d\'Weckeren.</string>
   <string name="loading_ringtone">Schelltoun gëtt gelueden\u2026</string>
@@ -162,7 +161,6 @@
   <string name="hours_label_description">Stonnen</string>
   <string name="minutes_label_description">Minutten</string>
   <string name="seconds_label_description">Sekonnen</string>
-  <string name="zero">0</string>
   <string name="sw_share_main">Meng Zäit ass <xliff:g id="time">%s</xliff:g></string>
   <string name="sw_share_laps">Ronnenzäiten:</string>
   <string name="sw_notification_lap_number"><xliff:g id="number">%d</xliff:g>. Ronn</string>

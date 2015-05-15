@@ -55,4 +55,6 @@
   <string name="alarm_select_external">Музыка</string>
   <string name="ringtone_default">Мелодия по умолчанию</string>
   <string name="take_persistent_grant_uri_permission_failed_msg">Не удалось задать мелодию в качестве сигнала</string>
+  <string name="menu_item_widget_settings">Настройки виджетов</string>
+  <string name="activity_not_found">Приложение не найдено!</string>
 </resources>

@@ -85,12 +85,12 @@
   <string name="auto_silence_summary"><xliff:g id="MINUTES">%d</xliff:g> مىنۇت</string>
   <string name="auto_silence_never">ھەرگىز</string>
   <string-array name="auto_silence_entries">
-    <item>5 مىنۇت</item>
-    <item>10 مىنۇت</item>
-    <item>15 مىنۇت</item>
-    <item>20 مىنۇت</item>
-    <item>25 مىنۇت</item>
-    <item>30 مىنۇت</item>
+    <item>1 minute</item>
+    <item>5 minutes</item>
+    <item>10 minutes</item>
+    <item>15 minutes</item>
+    <item>20 minutes</item>
+    <item>25 minutes</item>
     <item>ھەرگىز</item>
   </string-array>
   <string name="done">تامام</string>
@@ -117,7 +117,6 @@
   <string name="desk_clock_button_description">سائەتنى كۆرسەت</string>
   <string name="label_description">بەلگە</string>
   <string name="ringtone_description">زىل ئاۋازى</string>
-  <string name="battery_charging_level"><xliff:g id="NUMBER">%d</xliff:g><xliff:g id="PERCENT">%%</xliff:g></string>
   <string name="weather_fetch_failure">ھاۋارايى ئۇچۇرىنى ھازىر ئىشلەتكىلى بولمايدۇ.</string>
   <string name="alarm_klaxon_service_desc">سائەت قوڭغۇراق تەڭشىكىنىڭ ئاۋاز چېلىش مۇلازىمىتى</string>
   <string name="loading_ringtone">قوڭغۇراق ئاۋازىنى يۈكلەۋاتىدۇ…</string>
@@ -148,7 +147,6 @@
   <string name="hours_label_description">سائەت</string>
   <string name="minutes_label_description">مىنۇت</string>
   <string name="seconds_label_description">سېكۇنت</string>
-  <string name="zero">0</string>
   <string name="sw_share_main">ۋاقتىم <xliff:g id="TIME">%s</xliff:g></string>
   <string name="sw_share_laps">ئايلانما ۋاقتى:</string>
   <string name="sw_notification_lap_number"><xliff:g id="NUMBER">%d</xliff:g> ئايلانما</string>

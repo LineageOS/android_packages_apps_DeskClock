@@ -55,4 +55,6 @@
   <string name="alarm_select_external">Zene</string>
   <string name="ringtone_default">Alapértelmezett csengőhang</string>
   <string name="take_persistent_grant_uri_permission_failed_msg">Nem sikerült állandó engedélyt szerezni a csengőhanghoz</string>
+  <string name="menu_item_widget_settings">Modul beállítások</string>
+  <string name="activity_not_found">Tevékenység nem található!</string>
 </resources>

@@ -316,38 +316,39 @@
     <item>Tegucigalpa</item>
     <item>Paramaribo</item>
     <item>Quito</item>
-    <item>Marshallinselen</item>
-    <item>Midwayinselen</item>
+    <item>Ljubljana</item>
+    <item>Marshall Islands</item>
+    <item>Midway Island</item>
     <item>Regina</item>
     <item>Manaus</item>
-    <item>Araguaína</item>
-    <item>Nuuk</item>
-    <item>Südgeorgien</item>
-    <item>Azoren</item>
+    <item>Araguaina</item>
+    <item>Godthab</item>
+    <item>South Georgia</item>
+    <item>Azores</item>
     <item>Windhoek</item>
-    <item>Tiflis</item>
-    <item>Jerewan</item>
+    <item>Tbilisi</item>
+    <item>Yerevan</item>
     <item>Oral</item>
-    <item>Jekaterinburg</item>
-    <item>Krasnojarsk</item>
+    <item>Yekaterinburg</item>
+    <item>Krasnoyarsk</item>
     <item>Irkutsk</item>
-    <item>Jakutsk</item>
+    <item>Yakutsk</item>
     <item>Hobart</item>
     <item>Magadan</item>
     <item>Tongatapu</item>
     <item>Aklavik</item>
     <item>Montgomery</item>
-    <item>Genf</item>
-    <item>Odessa</item>
+    <item>Geneva</item>
+    <item>Odesa</item>
     <item>Aden</item>
     <item>Abu Dhabi</item>
-    <item>Taschhkent</item>
-    <item>Nei-Delhi</item>
+    <item>Tashkent</item>
+    <item>New Delhi</item>
     <item>Suva</item>
     <item>Wellington</item>
     <item>Chatham</item>
-    <item>Wladiwostok</item>
-    <item>Kamtschatka</item>
+    <item>Vladivostok</item>
+    <item>Kamchatka</item>
     <item>Chennai</item>
   </string-array>
 </resources>

@@ -55,4 +55,6 @@
   <string name="alarm_select_external">Muzika</string>
   <string name="ringtone_default">Numatytasis skambėjimo stonas</string>
   <string name="take_persistent_grant_uri_permission_failed_msg">Nepavyko nuolat suteikti leidimo skambėjimo tonui</string>
+  <string name="menu_item_widget_settings">Valdiklio nustatymai</string>
+  <string name="activity_not_found">Veikla nerasta!</string>
 </resources>
