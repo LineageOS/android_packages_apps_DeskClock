@@ -56,4 +56,5 @@
   <string name="ringtone_default">默认铃声</string>
   <string name="take_persistent_grant_uri_permission_failed_msg">获取此铃声的永久授权失败。</string>
   <string name="menu_item_widget_settings">小部件设置</string>
+  <string name="activity_not_found">没有找到活动！</string>
 </resources>

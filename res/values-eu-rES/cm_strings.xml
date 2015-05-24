@@ -28,23 +28,25 @@
   <string name="cities_add_city_gps_cd">Sakatu uneko hiria bilatzeko</string>
   <string name="cities_add_loading">Kargatzen\u2026</string>
   <string name="cities_add_searching">Bilatzen\u2026</string>
-  <string name="cities_add_gps_no_results">GPS kontsultak ez du kokapenik bueltatu</string>
+  <string name="cities_add_gps_no_results">GPS kontsultak ez du kokaleku emaitzarik bueltatu</string>
   <string name="cities_add_gps_not_available">GPS-a ez dago eskuragarri</string>
-  <string name="cities_add_already_exists">Hiria jada existitzen da datu basean</string>
+  <string name="cities_add_already_exists">Hiria badago datu-basean</string>
   <string name="cities_add_city_failed">Ezin da hiria sortu</string>
   <string name="cities_delete_city_title">Hiria ezabatu</string>
   <string name="cities_delete_city_msg"><xliff:g id="city">%s</xliff:g> ezabatu nahi duzu?</string>
-  <string name="cities_delete_city_failed">Ezinezkoa da hiria ezabatzea</string>
+  <string name="cities_delete_city_failed">Ezin da hiria ezabatu</string>
+  <string name="volume_buttons_summary">Bolumen botoiak sakatzean <xliff:g id="action">%s</xliff:g></string>
   <string name="flip_action_title">Iraultzerako ekintza</string>
   <string name="flip_action_summary" product="tablet"><xliff:g id="action">%s</xliff:g></string>
   <string name="flip_action_summary" product="default"><xliff:g id="action">%s</xliff:g></string>
   <string name="shake_action_title">Astintzerako ekintza</string>
   <string name="shake_action_summary" product="tablet"><xliff:g id="action">%s</xliff:g></string>
   <string name="shake_action_summary" product="default"><xliff:g id="action">%s</xliff:g></string>
+  <string name="action_summary_snooze">atzeratu alarma</string>
   <string name="action_summary_dismiss">baztertu alarma</string>
   <string name="action_summary_do_nothing">Ez egin ezer</string>
   <string name="alarm_picker_title">Alarma doinua</string>
-  <string name="alarm_type_ringtone">Pertsonalizatua</string>
+  <string name="alarm_type_ringtone">Dei doinua</string>
   <string name="alarm_type_playlist">Erreprodukzio-zerrenda</string>
   <string name="alarm_type_random">Ausazkoa</string>
   <string name="warn_silent_alarm_title">Alarmaren bolumena isilpean</string>
@@ -52,5 +54,7 @@
   <string name="alarm_select_ringtone">Dei doinua</string>
   <string name="alarm_select_external">Musika</string>
   <string name="ringtone_default">Dei doinu lehenetsia</string>
-  <string name="menu_item_widget_settings">Treteta-ezarpenak</string>
+  <string name="take_persistent_grant_uri_permission_failed_msg">Huts egin du dei doinuarentzat behin betiko baimen eskaerak</string>
+  <string name="menu_item_widget_settings">Trepetaren ezarpenak</string>
+  <string name="activity_not_found">Aktibitatea ez da aurkitu!</string>
 </resources>
