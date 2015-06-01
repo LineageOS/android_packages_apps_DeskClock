@@ -35,15 +35,19 @@
   <string name="cities_delete_city_title">ลบเมือง</string>
   <string name="cities_delete_city_msg">คุณต้องการลบ <xliff:g id="city">%s</xliff:g>?</string>
   <string name="cities_delete_city_failed">ไม่สามารถลบเมืองได้</string>
+  <string name="volume_buttons_summary">จะ<xliff:g id="action">%s</xliff:g>เมื่อกดปุ่มปรับระดับเสียง</string>
   <string name="flip_action_title">การพลิก</string>
   <string name="flip_action_summary" product="tablet">การคว่ำแท็บเล็ตของคุณจะ<xliff:g id="action">%s</xliff:g></string>
   <string name="flip_action_summary" product="default">การคว่ำโทรศัพท์มือถือของคุณจะ<xliff:g id="action">%s</xliff:g></string>
   <string name="shake_action_title">การเขย่า</string>
   <string name="shake_action_summary" product="tablet">เมื่อเขย่าจะ <xliff:g id="action">%s</xliff:g></string>
   <string name="shake_action_summary" product="default">เมื่อเขย่าจะ <xliff:g id="action">%s</xliff:g></string>
+  <string name="action_summary_snooze">งีบต่อ</string>
+  <string name="action_summary_dismiss">ปิดนาฬิกาปลุก</string>
   <string name="action_summary_do_nothing">ไม่ทำอะไร</string>
   <string name="alarm_picker_title">เลือกชนิดการปลุก</string>
   <string name="alarm_type_ringtone">เสียง​เรียก​เข้า</string>
+  <string name="alarm_type_playlist">รายการที่จะเล่น</string>
   <string name="alarm_type_random">สุ่ม</string>
   <string name="warn_silent_alarm_title">เสียงปลุกจะไม่ดัง</string>
   <string name="alarm_select">เลือกปลุก</string>

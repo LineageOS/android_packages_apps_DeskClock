@@ -126,7 +126,7 @@
   <string name="gallery_button_description">Galerie</string>
   <string name="music_button_description">Musek</string>
   <string name="nightmode_button_description">Dimmen</string>
-  <string name="home_button_description">Heemknäppchen</string>
+  <string name="home_button_description">Startsäit-Knäppchen</string>
   <string name="desk_clock_button_description">Auerenusiicht</string>
   <string name="label_description">Beschreiwung</string>
   <string name="ringtone_description">Schelltoun</string>
@@ -276,12 +276,12 @@
     <item>"Teheran"</item>
     <item>"Baku"</item>
     <item>"Tiflis"</item>
-    <item>"Jerewan"</item>
+    <item>"Eriwan"</item>
     <item>"Dubai"</item>
     <item>"Kabul"</item>
     <item>"Islamabad, Karachi"</item>
     <item>"Ural'sk"</item>
-    <item>"Jekaterinburg"</item>
+    <item>"Jekaterinbuerg"</item>
     <item>"Kolkata"</item>
     <item>"Sri Lanka"</item>
     <item>"Kathmandu"</item>

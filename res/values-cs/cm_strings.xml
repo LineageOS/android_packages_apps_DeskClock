@@ -55,4 +55,6 @@
   <string name="alarm_select_external">Hudba</string>
   <string name="ringtone_default">Výchozí vyzváněcí tón</string>
   <string name="take_persistent_grant_uri_permission_failed_msg">Selhalo trvalé získání práv pro vyzvánění</string>
+  <string name="menu_item_widget_settings">Nastavení widgetu</string>
+  <string name="activity_not_found">Aktivita nebyla nalezena!</string>
 </resources>
