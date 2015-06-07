@@ -326,17 +326,28 @@ public final class Alarm implements Parcelable, ClockContract.AlarmsColumns {
     }
 
     public AlarmInstance createInstanceAfter(Calendar time) {
+        Calendar nextInstanceTime = getNextAlarmTime(time);
+        AlarmInstance result = new AlarmInstance(nextInstanceTime, id);
+        result.mVibrate = vibrate;
+        result.mLabel = label;
+        result.mRingtone = alert;
+        result.mIncreasingVolume = increasingVolume;
+        result.mProfile = profile;
+        return result;
+    }
+
+    public Calendar getNextAlarmTime(Calendar currentTime) {
         Calendar nextInstanceTime = Calendar.getInstance();
-        nextInstanceTime.set(Calendar.YEAR, time.get(Calendar.YEAR));
-        nextInstanceTime.set(Calendar.MONTH, time.get(Calendar.MONTH));
-        nextInstanceTime.set(Calendar.DAY_OF_MONTH, time.get(Calendar.DAY_OF_MONTH));
+        nextInstanceTime.set(Calendar.YEAR, currentTime.get(Calendar.YEAR));
+        nextInstanceTime.set(Calendar.MONTH, currentTime.get(Calendar.MONTH));
+        nextInstanceTime.set(Calendar.DAY_OF_MONTH, currentTime.get(Calendar.DAY_OF_MONTH));
         nextInstanceTime.set(Calendar.HOUR_OF_DAY, hour);
         nextInstanceTime.set(Calendar.MINUTE, minutes);
         nextInstanceTime.set(Calendar.SECOND, 0);
         nextInstanceTime.set(Calendar.MILLISECOND, 0);
 
-        // If we are still behind the passed in time, then add a day
-        if (nextInstanceTime.getTimeInMillis() <= time.getTimeInMillis()) {
+        // If we are still behind the passed in currentTime, then add a day
+        if (nextInstanceTime.getTimeInMillis() <= currentTime.getTimeInMillis()) {
             nextInstanceTime.add(Calendar.DAY_OF_YEAR, 1);
         }
 
@@ -345,14 +356,7 @@ public final class Alarm implements Parcelable, ClockContract.AlarmsColumns {
         if (addDays > 0) {
             nextInstanceTime.add(Calendar.DAY_OF_WEEK, addDays);
         }
-
-        AlarmInstance result = new AlarmInstance(nextInstanceTime, id);
-        result.mVibrate = vibrate;
-        result.mLabel = label;
-        result.mRingtone = alert;
-        result.mIncreasingVolume = increasingVolume;
-        result.mProfile = profile;
-        return result;
+        return nextInstanceTime;
     }
 
     @Override
