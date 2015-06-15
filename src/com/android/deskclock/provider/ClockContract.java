@@ -95,6 +95,14 @@ public final class ClockContract {
          * <P>Type: STRING</P>
          */
         public static final String PROFILE = "profile";
+
+        /**
+         * 0 : Remind alarm disabled
+         * 1 : Remind alarm enabled
+         * 2 : Waiting to remind alarm
+         * <P>Type: INT</P>
+         */
+        public static final String REMIND_ALARM = "remindalarm";
     }
 
     /**

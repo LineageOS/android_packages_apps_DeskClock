@@ -428,9 +428,12 @@ public final class AlarmStateManager extends BroadcastReceiver {
         AlarmService.stopAlarm(context, instance);
 
         // Calculate the new snooze alarm time
-        String snoozeMinutesStr = PreferenceManager.getDefaultSharedPreferences(context)
-                .getString(SettingsActivity.KEY_ALARM_SNOOZE, DEFAULT_SNOOZE_MINUTES);
-        int snoozeMinutes = Integer.parseInt(snoozeMinutesStr);
+        int snoozeMinutes;
+        if (instance.mRemindAlarm == 2) {
+            snoozeMinutes = getRemindedMinutes(context);
+        } else {
+            snoozeMinutes = getSnoozedMinutes(context);
+        }
         Calendar newAlarmTime = Calendar.getInstance();
         newAlarmTime.add(Calendar.MINUTE, snoozeMinutes);
 
@@ -462,6 +465,12 @@ public final class AlarmStateManager extends BroadcastReceiver {
         final String snoozeMinutesStr = PreferenceManager.getDefaultSharedPreferences(context)
                 .getString(SettingsActivity.KEY_ALARM_SNOOZE, DEFAULT_SNOOZE_MINUTES);
         return Integer.parseInt(snoozeMinutesStr);
+    }
+
+    public static int getRemindedMinutes(Context context) {
+        final String remindMinutesStr = PreferenceManager.getDefaultSharedPreferences(context)
+                .getString(SettingsActivity.KEY_ALARM_REMIND, DEFAULT_SNOOZE_MINUTES);
+        return Integer.parseInt(remindMinutesStr);
     }
 
     /**
@@ -506,6 +515,14 @@ public final class AlarmStateManager extends BroadcastReceiver {
      * @param instance to set state to
      */
     public static void setDismissState(Context context, AlarmInstance instance) {
+        if (instance.mRemindAlarm == 1) {
+            instance.mRemindAlarm = 2;
+            setSnoozeState(context, instance, false);
+            return;
+        } else if (instance.mRemindAlarm == 2) {
+            instance.mRemindAlarm = 1;
+        }
+
         LogUtils.v("Setting dismissed state to instance " + instance.mId);
 
         // Remove all other timers and notifications associated to it
