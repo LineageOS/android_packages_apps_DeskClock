@@ -54,6 +54,8 @@ public class SettingsActivity extends PreferenceActivity
             "show_status_bar_icon";
     public static final String KEY_ALARM_SNOOZE =
             "snooze_duration";
+    public static final String KEY_ALARM_REMIND =
+            "remind_alarm_interval";
     public static final String KEY_VOLUME_BEHAVIOR =
             "volume_button_setting";
     public static final String KEY_FLIP_ACTION =
@@ -274,6 +276,9 @@ public class SettingsActivity extends PreferenceActivity
 
         SnoozeLengthDialog snoozePref = (SnoozeLengthDialog) findPreference(KEY_ALARM_SNOOZE);
         snoozePref.setSummary();
+
+        SnoozeLengthDialog remindPref = (SnoozeLengthDialog) findPreference(KEY_ALARM_REMIND);
+        remindPref.setSummary();
     }
 
     private class TimeZoneRow implements Comparable<TimeZoneRow> {

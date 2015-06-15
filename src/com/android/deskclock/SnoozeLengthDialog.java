@@ -26,7 +26,6 @@ public class SnoozeLengthDialog extends DialogPreference {
         super(context, attrs);
         mContext = context;
         setDialogLayoutResource(R.layout.snooze_length_picker);
-        setTitle(R.string.snooze_duration_title);
     }
 
     @Override

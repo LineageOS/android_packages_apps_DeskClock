@@ -78,7 +78,8 @@ public final class AlarmInstance implements ClockContract.InstancesColumns {
             ALARM_ID,
             ALARM_STATE,
             INCREASING_VOLUME,
-            PROFILE
+            PROFILE,
+            REMIND_ALARM
     };
 
     /**
@@ -98,8 +99,9 @@ public final class AlarmInstance implements ClockContract.InstancesColumns {
     private static final int ALARM_STATE_INDEX = 10;
     private static final int INCREASING_VOLUME_INDEX = 11;
     private static final int PROFILE_INDEX = 12;
+    private static final int REMIND_ALARM_INDEX = 13;
 
-    private static final int COLUMN_COUNT = PROFILE_INDEX + 1;
+    private static final int COLUMN_COUNT = REMIND_ALARM_INDEX + 1;
     private Calendar mTimeout;
 
     public static ContentValues createContentValues(AlarmInstance instance) {
@@ -127,6 +129,7 @@ public final class AlarmInstance implements ClockContract.InstancesColumns {
         }
         values.put(ALARM_ID, instance.mAlarmId);
         values.put(ALARM_STATE, instance.mAlarmState);
+        values.put(REMIND_ALARM, instance.mRemindAlarm);
         return values;
     }
 
@@ -267,6 +270,7 @@ public final class AlarmInstance implements ClockContract.InstancesColumns {
     public int mAlarmState;
     public boolean mIncreasingVolume;
     public UUID mProfile;
+    public int mRemindAlarm;
 
     public AlarmInstance(Calendar calendar, Long alarmId) {
         this(calendar);
@@ -282,6 +286,7 @@ public final class AlarmInstance implements ClockContract.InstancesColumns {
         mRingtone = null;
         mAlarmState = SILENT_STATE;
         mProfile = ProfileManager.NO_PROFILE;
+        mRemindAlarm = 0;
     }
 
     public AlarmInstance(Cursor c) {
@@ -316,6 +321,7 @@ public final class AlarmInstance implements ClockContract.InstancesColumns {
             mAlarmId = c.getLong(ALARM_ID_INDEX);
         }
         mAlarmState = c.getInt(ALARM_STATE_INDEX);
+        mRemindAlarm = c.getInt(REMIND_ALARM_INDEX);
     }
 
     public String getLabelOrDefault(Context context) {
@@ -434,6 +440,7 @@ public final class AlarmInstance implements ClockContract.InstancesColumns {
                 ", mAlarmState=" + mAlarmState +
                 ", mIncreasingVolume=" + mIncreasingVolume +
                 ", mProfile=" + mProfile +
+                ", mRemindAlarm=" + mRemindAlarm +
                 '}';
     }
 }

@@ -127,6 +127,16 @@
                 android:textColor="@color/clock_white" />
 
             <CheckBox
+                android:id="@+id/remind_alarm_onoff"
+                android:layout_width="wrap_content"
+                android:layout_height="48dip"
+                android:includeFontPadding="false"
+                android:text="@string/alarm_remind"
+                android:paddingStart="16dip"
+                android:textSize="16sp"
+                android:textColor="@color/white" />
+
+            <CheckBox
                 android:id="@+id/increasing_volume_onoff"
                 android:layout_width="wrap_content"
                 android:layout_height="48dip"

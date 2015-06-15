@@ -57,6 +57,11 @@
             android:title="@string/snooze_duration_title"
             android:defaultValue="10"/>
 
+        <com.android.deskclock.SnoozeLengthDialog
+            android:key="remind_alarm_interval"
+            android:title="@string/remind_alarm_interval_title"
+            android:defaultValue="10"/>
+
         <VolumePreference
             android:key="volume_setting"
             android:title="@string/alarm_volume_title"

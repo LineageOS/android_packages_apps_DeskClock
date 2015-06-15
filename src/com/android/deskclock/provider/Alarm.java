@@ -62,7 +62,8 @@ public final class Alarm implements Parcelable, ClockContract.AlarmsColumns {
             RINGTONE,
             DELETE_AFTER_USE,
             INCREASING_VOLUME,
-            PROFILE
+            PROFILE,
+            REMIND_ALARM
     };
 
     /**
@@ -80,8 +81,9 @@ public final class Alarm implements Parcelable, ClockContract.AlarmsColumns {
     private static final int DELETE_AFTER_USE_INDEX = 8;
     private static final int INCREASING_VOLUME_INDEX = 9;
     private static final int PROFILE_INDEX = 10;
+    private static final int REMIND_ALARM_INDEX = 11;
 
-    private static final int COLUMN_COUNT = PROFILE_INDEX + 1;
+    private static final int COLUMN_COUNT = REMIND_ALARM_INDEX + 1;
 
     public static ContentValues createContentValues(Alarm alarm) {
         ContentValues values = new ContentValues(COLUMN_COUNT);
@@ -104,6 +106,7 @@ public final class Alarm implements Parcelable, ClockContract.AlarmsColumns {
             values.put(RINGTONE, alarm.alert.toString());
         }
         values.put(PROFILE, alarm.profile.toString());
+        values.put(REMIND_ALARM, alarm.remindAlarm);
 
         return values;
     }
@@ -237,6 +240,7 @@ public final class Alarm implements Parcelable, ClockContract.AlarmsColumns {
     public boolean deleteAfterUse;
     public boolean increasingVolume;
     public UUID profile;
+    public int remindAlarm;
 
     // Creates a default alarm at the current time.
     public Alarm() {
@@ -254,6 +258,7 @@ public final class Alarm implements Parcelable, ClockContract.AlarmsColumns {
         this.deleteAfterUse = false;
         this.increasingVolume = false;
         this.profile = ProfileManager.NO_PROFILE;
+        this.remindAlarm = 0;
     }
 
     public Alarm(Cursor c) {
@@ -284,6 +289,8 @@ public final class Alarm implements Parcelable, ClockContract.AlarmsColumns {
                 profile = ProfileManager.NO_PROFILE;
             }
         }
+
+        remindAlarm = c.getInt(REMIND_ALARM_INDEX);
     }
 
     Alarm(Parcel p) {
@@ -298,6 +305,7 @@ public final class Alarm implements Parcelable, ClockContract.AlarmsColumns {
         deleteAfterUse = p.readInt() == 1;
         increasingVolume = p.readInt() == 1;
         profile = ParcelUuid.CREATOR.createFromParcel(p).getUuid();
+        remindAlarm = p.readInt();
     }
 
     public String getLabelOrDefault(Context context) {
@@ -319,6 +327,7 @@ public final class Alarm implements Parcelable, ClockContract.AlarmsColumns {
         p.writeInt(deleteAfterUse ? 1 : 0);
         p.writeInt(increasingVolume ? 1 : 0);
         p.writeParcelable(new ParcelUuid(profile), 0);
+        p.writeInt(remindAlarm);
     }
 
     public int describeContents() {
@@ -333,6 +342,7 @@ public final class Alarm implements Parcelable, ClockContract.AlarmsColumns {
         result.mRingtone = alert;
         result.mIncreasingVolume = increasingVolume;
         result.mProfile = profile;
+        result.mRemindAlarm = remindAlarm;
         return result;
     }
 
@@ -385,6 +395,7 @@ public final class Alarm implements Parcelable, ClockContract.AlarmsColumns {
                 ", deleteAfterUse=" + deleteAfterUse +
                 ", increasingVolume=" + increasingVolume +
                 ", profile=" + profile +
+                ", remindAlarm=" + remindAlarm +
                 '}';
     }
 }

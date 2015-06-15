@@ -373,9 +373,33 @@ public class AlarmActivity extends Activity implements View.OnClickListener, Vie
         LogUtils.v(LOGTAG, "Dismissed: %s", mAlarmInstance);
 
         setAnimatedFractions(0.0f /* snoozeFraction */, 1.0f /* dismissFraction */);
-        getAlertAnimator(mDismissButton, R.string.alarm_alert_off_text, null /* infoText */,
-                getString(R.string.alarm_alert_off_text) /* accessibilityText */,
-                Color.WHITE, mCurrentHourColor).start();
+
+        final int titleResId;
+        final String infoText;
+        final String accessibilityText;
+        final int revealColor;
+        final int backgroundColor;
+
+        if (mAlarmInstance.mRemindAlarm == 1) {
+            final int remindMinutes = AlarmStateManager.getRemindedMinutes(this);
+            titleResId = R.string.alarm_alert_snoozed_text;
+            infoText = getResources().getQuantityString(
+                    R.plurals.alarm_alert_snooze_duration, remindMinutes, remindMinutes);
+            accessibilityText = getResources().getQuantityString(
+                    R.plurals.alarm_alert_snooze_set, remindMinutes, remindMinutes);
+            revealColor = getResources().getColor(R.color.hot_pink);
+            backgroundColor = getResources().getColor(R.color.hot_pink);
+        } else {
+            titleResId = R.string.alarm_alert_off_text;
+            infoText = null;
+            accessibilityText = getString(R.string.alarm_alert_off_text);
+            revealColor = Color.WHITE;
+            backgroundColor = mCurrentHourColor;
+        }
+
+        getAlertAnimator(mDismissButton, titleResId, infoText, accessibilityText,
+                revealColor, backgroundColor).start();
+
         AlarmStateManager.setDismissState(this, mAlarmInstance);
     }
 
