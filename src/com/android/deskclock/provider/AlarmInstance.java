@@ -139,7 +139,11 @@ public final class AlarmInstance implements ClockContract.InstancesColumns {
     }
 
     public static long getId(Uri contentUri) {
-        return ContentUris.parseId(contentUri);
+        if (contentUri != null) {
+            return ContentUris.parseId(contentUri);
+        } else {
+            return INVALID_ID;
+        }
     }
 
     public static Uri getUri(long instanceId) {
@@ -154,6 +158,10 @@ public final class AlarmInstance implements ClockContract.InstancesColumns {
      * @return instance if found, null otherwise
      */
     public static AlarmInstance getInstance(ContentResolver contentResolver, long instanceId) {
+        if (instanceId == INVALID_ID) {
+            return null;
+        }
+
         Cursor cursor = contentResolver.query(getUri(instanceId), QUERY_COLUMNS, null, null, null);
         AlarmInstance result = null;
         if (cursor == null) {
@@ -252,6 +260,26 @@ public final class AlarmInstance implements ClockContract.InstancesColumns {
         int deletedRows = contentResolver.delete(getUri(instanceId), "", null);
         return deletedRows == 1;
     }
+
+    public static AlarmInstance getFirstAlarmInstance(ContentResolver contentResolver) {
+        List<AlarmInstance> alertAlarms = getInstances(contentResolver, null);
+        long currentTime = System.currentTimeMillis();
+
+        AlarmInstance firstAlarm = null;
+        long closestMissAlarmElapse = currentTime;
+
+        for (AlarmInstance ai : alertAlarms) {
+            long time = currentTime - ai.getAlarmTime().getTimeInMillis();
+
+            if (closestMissAlarmElapse > time) {
+                firstAlarm = ai;
+                closestMissAlarmElapse = time;
+            }
+        }
+
+        return firstAlarm;
+    }
+
 
     // Public fields
     public long mId;
