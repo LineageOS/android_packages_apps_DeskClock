@@ -25,6 +25,24 @@
     },
     {
       "key": {
+        "uuid": "da36d5c6_c9aa9185",
+        "filename": "src/com/android/deskclock/alarms/AlarmActivity.java",
+        "patchSetId": 2
+      },
+      "lineNbr": 152,
+      "author": {
+        "id": 9528
+      },
+      "writtenOn": "2015-06-17T11:23:27Z",
+      "side": 1,
+      "message": "I dug into the getFirstAlarmInstance method (i took it from the CAF commit wholesale). it seems to be trying to find the first alarm in the future. So I don\u0027t think there\u0027s a guarantee that it\u0027s the alarm that was supposed to fire at boot. I think the counter example would be if you have two alarms right after each other, this method would pick the latter alarm and if we took too long to boot, it\u0027d be the wrong alarm to pick.\n\nThe problem is that there\u0027s a call from ActivityManagerService that launches this activity, but it doesn\u0027t pass us any extras that can be used to determine which alarm to fire so this seems like the best way to try to find the right alarm. Prior to this patch, we were relying on just booting up 2 min before the alarm and allowing the standard alarm manager stuff to fire the alarm after the device has booted. I think we should rely on the same mechanic, because the method from the caf patch doesn\u0027t really add anything for us, it\u0027d pick an alarm instance and it\u0027s usually too early to show this instance so we\u0027d just skip displaying the alarm.",
+      "parentUuid": "da36d5c6_29e40d0c",
+      "revId": "c362bec85ab63c7d4cc8d5fe7704812ae48a8232",
+      "serverId": "1ec6b3db-b2c1-4fa4-84a2-4c7efe89ba71",
+      "unresolved": false
+    },
+    {
+      "key": {
         "uuid": "da36d5c6_09e74913",
         "filename": "src/com/android/deskclock/provider/AlarmInstance.java",
         "patchSetId": 2
@@ -36,6 +54,24 @@
       "writtenOn": "2015-06-17T11:01:09Z",
       "side": 1,
       "message": "Is it possible for alertAlarms to be null?",
+      "revId": "c362bec85ab63c7d4cc8d5fe7704812ae48a8232",
+      "serverId": "1ec6b3db-b2c1-4fa4-84a2-4c7efe89ba71",
+      "unresolved": false
+    },
+    {
+      "key": {
+        "uuid": "da36d5c6_e9b835e8",
+        "filename": "src/com/android/deskclock/provider/AlarmInstance.java",
+        "patchSetId": 2
+      },
+      "lineNbr": 271,
+      "author": {
+        "id": 9528
+      },
+      "writtenOn": "2015-06-17T11:23:27Z",
+      "side": 1,
+      "message": "No this will always at minimum be an empty list.",
+      "parentUuid": "da36d5c6_09e74913",
       "revId": "c362bec85ab63c7d4cc8d5fe7704812ae48a8232",
       "serverId": "1ec6b3db-b2c1-4fa4-84a2-4c7efe89ba71",
       "unresolved": false
