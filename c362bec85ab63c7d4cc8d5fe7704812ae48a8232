@@ -2,6 +2,29 @@
   "comments": [
     {
       "key": {
+        "uuid": "da36d5c6_29e40d0c",
+        "filename": "src/com/android/deskclock/alarms/AlarmActivity.java",
+        "patchSetId": 2
+      },
+      "lineNbr": 152,
+      "author": {
+        "id": 9045
+      },
+      "writtenOn": "2015-06-17T11:01:10Z",
+      "side": 1,
+      "message": "Is the first alarm instance always guaranteed to be the one to be fired at boot time?",
+      "range": {
+        "startLine": 152,
+        "startChar": 43,
+        "endLine": 152,
+        "endChar": 64
+      },
+      "revId": "c362bec85ab63c7d4cc8d5fe7704812ae48a8232",
+      "serverId": "1ec6b3db-b2c1-4fa4-84a2-4c7efe89ba71",
+      "unresolved": false
+    },
+    {
+      "key": {
         "uuid": "da36d5c6_09e74913",
         "filename": "src/com/android/deskclock/provider/AlarmInstance.java",
         "patchSetId": 2
