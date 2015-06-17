@@ -1,0 +1,21 @@
+{
+  "comments": [
+    {
+      "key": {
+        "uuid": "da36d5c6_09e74913",
+        "filename": "src/com/android/deskclock/provider/AlarmInstance.java",
+        "patchSetId": 2
+      },
+      "lineNbr": 271,
+      "author": {
+        "id": 10631
+      },
+      "writtenOn": "2015-06-17T11:01:09Z",
+      "side": 1,
+      "message": "Is it possible for alertAlarms to be null?",
+      "revId": "c362bec85ab63c7d4cc8d5fe7704812ae48a8232",
+      "serverId": "1ec6b3db-b2c1-4fa4-84a2-4c7efe89ba71",
+      "unresolved": false
+    }
+  ]
+}
