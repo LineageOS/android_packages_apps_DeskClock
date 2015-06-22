@@ -32,14 +32,14 @@
   <string name="cities_add_gps_not_available">GPS-a ez dago eskuragarri</string>
   <string name="cities_add_already_exists">Hiria badago datu-basean</string>
   <string name="cities_add_city_failed">Ezin da hiria sortu</string>
-  <string name="cities_delete_city_title">Hiria ezabatu</string>
+  <string name="cities_delete_city_title">Ezabatu hiria</string>
   <string name="cities_delete_city_msg"><xliff:g id="city">%s</xliff:g> ezabatu nahi duzu?</string>
   <string name="cities_delete_city_failed">Ezin da hiria ezabatu</string>
   <string name="flip_action_title">Iraultzerako ekintza</string>
   <string name="flip_action_dialog_title" product="tablet">Tableta iraultzean\u2026</string>
   <string name="flip_action_dialog_title" product="default">Telefonoa iraultzean\u2026</string>
-  <string name="flip_action_summary" product="tablet"><xliff:g id="action">%s</xliff:g></string>
-  <string name="flip_action_summary" product="default"><xliff:g id="action">%s</xliff:g></string>
+  <string name="flip_action_summary" product="tablet">Tableta behera iraultzean <xliff:g id="action">%s</xliff:g></string>
+  <string name="flip_action_summary" product="default">Telefonoa behera iraultzean <xliff:g id="action">%s</xliff:g></string>
   <string name="shake_action_title">Astintzerako ekintza</string>
   <string name="shake_action_dialog_title" product="tablet">Tableta astintzean\u2026</string>
   <string name="shake_action_dialog_title" product="default">Telefonoa astintzean\u2026</string>
