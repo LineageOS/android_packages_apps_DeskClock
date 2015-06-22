@@ -55,4 +55,6 @@
   <string name="alarm_select_external">음악</string>
   <string name="ringtone_default">기본 벨소리</string>
   <string name="take_persistent_grant_uri_permission_failed_msg">벨소리에 대한 영구적 권한을 얻을 수 없었습니다</string>
+  <string name="menu_item_widget_settings">위젯 설정</string>
+  <string name="activity_not_found">액티비티를 찾을 수 없습니다!</string>
 </resources>
