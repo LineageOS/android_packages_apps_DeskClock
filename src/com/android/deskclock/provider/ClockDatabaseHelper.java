@@ -16,8 +16,7 @@
 
 package com.android.deskclock.provider;
 
-import android.app.ProfileManager;
-import android.content.ContentResolver;
+import cyanogenmod.app.ProfileManager;
 import android.content.ContentValues;
 import android.content.Context;
 import android.database.Cursor;
