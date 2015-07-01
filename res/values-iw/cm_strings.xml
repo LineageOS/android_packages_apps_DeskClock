@@ -18,7 +18,7 @@
 <resources xmlns:xliff="urn:oasis:names:tc:xliff:document:1.2">
   <string name="show_status_bar_icon_title">הצג סמל</string>
   <string name="show_status_bar_icon_summary">הצג סמל בשורת המצב כאשר שעון מעורר מוגדר</string>
-  <string name="alarm_increasing_volume">עוצמה הולכת וגדלה</string>
+  <string name="alarm_increasing_volume">עוצמה מתגברת</string>
   <string name="profile_description">פרופיל <xliff:g id="profile">%s</xliff:g></string>
   <string name="profile_no_selected">לא נבחר פרופיל</string>
   <string name="menu_item_add">הוסף</string>
