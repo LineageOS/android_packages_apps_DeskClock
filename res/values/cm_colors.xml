@@ -42,4 +42,6 @@
     <color name="hour_22">#2c273e</color>
     <color name="hour_23">#272430</color>
 
+    <!---Alarm Expanded background color -->
+    <color name="expanded_background_color">#ff0382d3</color>
 </resources>
