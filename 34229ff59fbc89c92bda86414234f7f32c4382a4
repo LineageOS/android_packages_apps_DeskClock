@@ -1,0 +1,27 @@
+{
+  "comments": [
+    {
+      "key": {
+        "uuid": "5ff73747_fd20274c",
+        "filename": "res/values/cm_colors.xml",
+        "patchSetId": 2
+      },
+      "lineNbr": 46,
+      "author": {
+        "id": 12453
+      },
+      "writtenOn": "2015-07-07T04:54:20Z",
+      "side": 1,
+      "message": "This color will not work for all hours.",
+      "range": {
+        "startLine": 46,
+        "startChar": 44,
+        "endLine": 46,
+        "endChar": 53
+      },
+      "revId": "34229ff59fbc89c92bda86414234f7f32c4382a4",
+      "serverId": "1ec6b3db-b2c1-4fa4-84a2-4c7efe89ba71",
+      "unresolved": false
+    }
+  ]
+}
