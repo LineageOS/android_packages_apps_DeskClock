@@ -35,6 +35,7 @@
   <string name="cities_delete_city_title">Ta bort stad</string>
   <string name="cities_delete_city_msg">Vill du ta bort <xliff:g id="city">%s</xliff:g>?</string>
   <string name="cities_delete_city_failed">Kan inte ta bort staden</string>
+  <string name="volume_buttons_summary">Att trycka på volymknapparna kommer att <xliff:g id="action">%s</xliff:g></string>
   <string name="flip_action_title">Vändåtgärd</string>
   <string name="flip_action_summary" product="tablet">Att vända surfplattan kommer att <xliff:g id="action">%s</xliff:g></string>
   <string name="flip_action_summary" product="default">Att vända telefonen kommer att <xliff:g id="action">%s</xliff:g></string>
