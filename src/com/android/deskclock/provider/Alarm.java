@@ -337,6 +337,10 @@ public final class Alarm implements Parcelable, ClockContract.AlarmsColumns {
     }
 
     public Calendar getNextAlarmTime(Calendar currentTime) {
+        return getNextAlarmTime(currentTime, hour, minutes);
+    }
+
+    public Calendar getNextAlarmTime(Calendar currentTime, int hour, int minutes) {
         Calendar nextInstanceTime = Calendar.getInstance();
         nextInstanceTime.set(Calendar.YEAR, currentTime.get(Calendar.YEAR));
         nextInstanceTime.set(Calendar.MONTH, currentTime.get(Calendar.MONTH));
