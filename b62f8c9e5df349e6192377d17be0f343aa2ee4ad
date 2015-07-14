@@ -1,0 +1,50 @@
+{
+  "comments": [
+    {
+      "key": {
+        "uuid": "ff0f0b1f_2318b87f",
+        "filename": "src/com/android/deskclock/provider/Alarm.java",
+        "patchSetId": 1
+      },
+      "lineNbr": 343,
+      "author": {
+        "id": 3134
+      },
+      "writtenOn": "2015-07-14T03:42:55Z",
+      "side": 1,
+      "message": "Do we need to create a calendar reference to just pass two ints (hour and second)? Could we just passed as arguments?\n\n\n\nAnd to simplify a bit and doesn\u0027t have to fill year, month and day:\n\nCalendar alarmTime \u003d (Calendar)currentTime.clone();",
+      "range": {
+        "startLine": 343,
+        "startChar": 31,
+        "endLine": 343,
+        "endChar": 43
+      },
+      "revId": "b62f8c9e5df349e6192377d17be0f343aa2ee4ad",
+      "serverId": "1ec6b3db-b2c1-4fa4-84a2-4c7efe89ba71",
+      "unresolved": false
+    },
+    {
+      "key": {
+        "uuid": "ff0f0b1f_e35be051",
+        "filename": "src/com/android/deskclock/provider/Alarm.java",
+        "patchSetId": 1
+      },
+      "lineNbr": 356,
+      "author": {
+        "id": 3134
+      },
+      "writtenOn": "2015-07-14T03:42:55Z",
+      "side": 1,
+      "message": "Unnecessary double brackets",
+      "range": {
+        "startLine": 356,
+        "startChar": 64,
+        "endLine": 356,
+        "endChar": 66
+      },
+      "revId": "b62f8c9e5df349e6192377d17be0f343aa2ee4ad",
+      "serverId": "1ec6b3db-b2c1-4fa4-84a2-4c7efe89ba71",
+      "unresolved": false
+    }
+  ]
+}
