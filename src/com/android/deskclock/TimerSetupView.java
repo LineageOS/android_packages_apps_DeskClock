@@ -115,7 +115,7 @@ public class TimerSetupView extends LinearLayout implements Button.OnClickListen
         for (int i = 0; i < 10; i++) {
             mNumbers[i].setOnClickListener(this);
             mNumbers[i].setText(String.format("%d", i));
-            mNumbers[i].setTextColor(Color.WHITE);
+            mNumbers[i].setTextColor(getResources().getColor(R.color.numpad_color));
             mNumbers[i].setTag(R.id.numbers_key, new Integer(i));
         }
         updateTime();
