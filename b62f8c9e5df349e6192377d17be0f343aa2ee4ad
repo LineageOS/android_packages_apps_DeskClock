@@ -49,6 +49,30 @@
     },
     {
       "key": {
+        "uuid": "ff0f0b1f_8e27abb7",
+        "filename": "src/com/android/deskclock/provider/Alarm.java",
+        "patchSetId": 1
+      },
+      "lineNbr": 343,
+      "author": {
+        "id": 3134
+      },
+      "writtenOn": "2015-07-14T03:51:58Z",
+      "side": 1,
+      "message": "clone always return an Object, so is mandatory to cast to destination object.\n\nThis patch only uses the alarmTime passed to get the hour and second, so basically you can\u0027t pass them safely. The other fields came from the currentTime which is passed always.",
+      "parentUuid": "ff0f0b1f_a303a80f",
+      "range": {
+        "startLine": 343,
+        "startChar": 31,
+        "endLine": 343,
+        "endChar": 43
+      },
+      "revId": "b62f8c9e5df349e6192377d17be0f343aa2ee4ad",
+      "serverId": "1ec6b3db-b2c1-4fa4-84a2-4c7efe89ba71",
+      "unresolved": false
+    },
+    {
+      "key": {
         "uuid": "ff0f0b1f_e35be051",
         "filename": "src/com/android/deskclock/provider/Alarm.java",
         "patchSetId": 1
