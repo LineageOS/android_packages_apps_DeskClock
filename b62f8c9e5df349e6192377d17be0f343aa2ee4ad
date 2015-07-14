@@ -73,6 +73,30 @@
     },
     {
       "key": {
+        "uuid": "ff0f0b1f_4eb513ee",
+        "filename": "src/com/android/deskclock/provider/Alarm.java",
+        "patchSetId": 1
+      },
+      "lineNbr": 343,
+      "author": {
+        "id": 9199
+      },
+      "writtenOn": "2015-07-14T05:12:05Z",
+      "side": 1,
+      "message": "Done\nDecided to go with the KISS way of things.  This fixes the issue at hand without changing the existing behavior or adding extra overhead",
+      "parentUuid": "ff0f0b1f_2318b87f",
+      "range": {
+        "startLine": 343,
+        "startChar": 31,
+        "endLine": 343,
+        "endChar": 43
+      },
+      "revId": "b62f8c9e5df349e6192377d17be0f343aa2ee4ad",
+      "serverId": "1ec6b3db-b2c1-4fa4-84a2-4c7efe89ba71",
+      "unresolved": false
+    },
+    {
+      "key": {
         "uuid": "ff0f0b1f_e35be051",
         "filename": "src/com/android/deskclock/provider/Alarm.java",
         "patchSetId": 1
