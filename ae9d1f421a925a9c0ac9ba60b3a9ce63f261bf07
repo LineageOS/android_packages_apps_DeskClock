@@ -1,0 +1,50 @@
+{
+  "comments": [
+    {
+      "key": {
+        "uuid": "ff0f0b1f_216c2d35",
+        "filename": "res/values/cm_colors.xml",
+        "patchSetId": 1
+      },
+      "lineNbr": 44,
+      "author": {
+        "id": 9199
+      },
+      "writtenOn": "2015-07-15T22:08:34Z",
+      "side": 1,
+      "message": "Add a new line between this color and the hour colors.\n\nAdd a comment regarding where this color is used",
+      "range": {
+        "startLine": 44,
+        "startChar": 4,
+        "endLine": 44,
+        "endChar": 46
+      },
+      "revId": "ae9d1f421a925a9c0ac9ba60b3a9ce63f261bf07",
+      "serverId": "1ec6b3db-b2c1-4fa4-84a2-4c7efe89ba71",
+      "unresolved": false
+    },
+    {
+      "key": {
+        "uuid": "ff0f0b1f_418721d9",
+        "filename": "src/com/android/deskclock/TimerSetupView.java",
+        "patchSetId": 1
+      },
+      "lineNbr": 118,
+      "author": {
+        "id": 9199
+      },
+      "writtenOn": "2015-07-15T22:08:34Z",
+      "side": 1,
+      "message": "You should store this color value before the for loop so you are not looking it up for each iteration.",
+      "range": {
+        "startLine": 118,
+        "startChar": 37,
+        "endLine": 118,
+        "endChar": 82
+      },
+      "revId": "ae9d1f421a925a9c0ac9ba60b3a9ce63f261bf07",
+      "serverId": "1ec6b3db-b2c1-4fa4-84a2-4c7efe89ba71",
+      "unresolved": false
+    }
+  ]
+}
