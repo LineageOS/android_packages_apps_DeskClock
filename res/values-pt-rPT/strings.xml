@@ -73,21 +73,27 @@
     <item msgid="9115697840826129603">"Alarme definido para daqui a <xliff:g id="HOURS">%2$s</xliff:g> e <xliff:g id="MINUTES">%3$s</xliff:g>."</item>
     <item msgid="2332583385137381060">"Alarme definido para daqui a <xliff:g id="DAYS">%1$s</xliff:g>, <xliff:g id="HOURS">%2$s</xliff:g> e <xliff:g id="MINUTES">%3$s</xliff:g>."</item>
   </string-array>
-    <string name="day" msgid="7984755014526510295">"1 dia"</string>
-    <string name="days" msgid="2070509222727852210">"<xliff:g id="DAYS">%s</xliff:g> dias"</string>
-    <string name="hour" msgid="2546819039651509323">"1 hora"</string>
-    <string name="hours" msgid="2071487018566991613">"<xliff:g id="HOURS">%s</xliff:g> horas"</string>
-    <string name="minute" msgid="2486157997434653710">"1 minuto"</string>
-    <string name="minutes" msgid="6115838729146292526">"<xliff:g id="MINUTES">%s</xliff:g> minutos"</string>
+    <plurals name="days" formatted="false" msgid="3706846447285206235">
+      <item quantity="other"><xliff:g id="NUMBER">%s</xliff:g> dias</item>
+      <item quantity="one">1 dia</item>
+    </plurals>
+    <plurals name="hours" formatted="false" msgid="3871283109767171655">
+      <item quantity="other"><xliff:g id="NUMBER">%s</xliff:g> horas</item>
+      <item quantity="one">1 hora</item>
+    </plurals>
+    <plurals name="minutes" formatted="false" msgid="5484431721696058697">
+      <item quantity="other"><xliff:g id="NUMBER">%s</xliff:g> minutos</item>
+      <item quantity="one">1 minuto</item>
+    </plurals>
     <string name="every_day" msgid="4100909974923444602">"Todos os dias"</string>
     <string name="day_concat" msgid="971998564991636532">", "</string>
     <string name="clock_instructions" msgid="2656876819515011590">"Escolha um relógio"</string>
     <string name="analog_gadget" msgid="1670505720837152766">"Relógio analógico"</string>
     <string name="help" msgid="7786263119482654015">"ajuda"</string>
     <string name="settings" msgid="5849739030579520686">"Definições"</string>
-    <string name="snooze_duration_title" msgid="1097309861110780483">"Duração do alarme"</string>
+    <string name="snooze_duration_title" msgid="1097309861110780483">"Duração da suspensão"</string>
     <plurals name="snooze_duration" formatted="false" msgid="3112918131095248271">
-      <item quantity="other"><xliff:g id="NUMBER">%d</xliff:g> minutos</item>
+      <item quantity="other"><xliff:g id="NUMBER">%s</xliff:g> minutos</item>
       <item quantity="one">1 minuto</item>
     </plurals>
     <plurals name="snooze_picker_label" formatted="false" msgid="322739253661747732">
@@ -95,7 +101,10 @@
       <item quantity="one">minuto</item>
     </plurals>
     <string name="auto_silence_title" msgid="2012754009554434544">"Silenciar depois de"</string>
-    <string name="auto_silence_summary" msgid="7028508740659733028">"<xliff:g id="MINUTES">%d</xliff:g> minutos"</string>
+    <plurals name="auto_silence_summary" formatted="false" msgid="6579258788774360396">
+      <item quantity="other"><xliff:g id="FORMATTED_NUMBER">%s</xliff:g> minutos</item>
+      <item quantity="one">1 minuto</item>
+    </plurals>
     <string name="auto_silence_never" msgid="4821982647348750809">"Nunca"</string>
   <string-array name="auto_silence_entries">
     <item msgid="3024545954917711306">"1 minuto"</item>
@@ -172,6 +181,10 @@
     <string name="sw_share_main" msgid="7703563468204234405">"O meu tempo é <xliff:g id="TIME">%s</xliff:g>"</string>
     <string name="sw_share_laps" msgid="614390674795945007">"Tempos de volta:"</string>
     <string name="sw_notification_lap_number" msgid="3535420316052647126">"Volta <xliff:g id="NUMBER">%d</xliff:g>"</string>
+  <string-array name="sw_lap_number_set">
+    <item msgid="2816627565030953899">"N.º <xliff:g id="NUMBER">%d</xliff:g>"</item>
+    <item msgid="316923361931627987">"N.º <xliff:g id="NUMBER">%02d</xliff:g>"</item>
+  </string-array>
     <plurals name="Nhours_description" formatted="false" msgid="4539186407746763655">
       <item quantity="other"><xliff:g id="NUMBER">%d</xliff:g> horas</item>
       <item quantity="one">1 hora</item>

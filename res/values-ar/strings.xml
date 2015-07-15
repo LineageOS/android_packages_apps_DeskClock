@@ -81,12 +81,30 @@
     <item msgid="9115697840826129603">"تم ضبط المنبه على <xliff:g id="HOURS">%2$s</xliff:g> و<xliff:g id="MINUTES">%3$s</xliff:g> من الآن."</item>
     <item msgid="2332583385137381060">"تم ضبط المنبه على <xliff:g id="DAYS">%1$s</xliff:g> و<xliff:g id="HOURS">%2$s</xliff:g> و<xliff:g id="MINUTES">%3$s</xliff:g> من الآن."</item>
   </string-array>
-    <string name="day" msgid="7984755014526510295">"يوم واحد"</string>
-    <string name="days" msgid="2070509222727852210">"<xliff:g id="DAYS">%s</xliff:g> يوم"</string>
-    <string name="hour" msgid="2546819039651509323">"ساعة واحدة"</string>
-    <string name="hours" msgid="2071487018566991613">"<xliff:g id="HOURS">%s</xliff:g> ساعة"</string>
-    <string name="minute" msgid="2486157997434653710">"دقيقة واحدة"</string>
-    <string name="minutes" msgid="6115838729146292526">"<xliff:g id="MINUTES">%s</xliff:g> دقيقة"</string>
+    <plurals name="days" formatted="false" msgid="3706846447285206235">
+      <item quantity="zero"><xliff:g id="NUMBER">%s</xliff:g> من الأيام</item>
+      <item quantity="two">يومان (<xliff:g id="NUMBER">%s</xliff:g>)</item>
+      <item quantity="few"><xliff:g id="NUMBER">%s</xliff:g> أيام</item>
+      <item quantity="many"><xliff:g id="NUMBER">%s</xliff:g> يومًا</item>
+      <item quantity="other"><xliff:g id="NUMBER">%s</xliff:g> من الأيام</item>
+      <item quantity="one">يوم واحد</item>
+    </plurals>
+    <plurals name="hours" formatted="false" msgid="3871283109767171655">
+      <item quantity="zero"><xliff:g id="NUMBER">%s</xliff:g> من الساعات</item>
+      <item quantity="two">ساعتان (<xliff:g id="NUMBER">%s</xliff:g>)</item>
+      <item quantity="few"><xliff:g id="NUMBER">%s</xliff:g> ساعات</item>
+      <item quantity="many"><xliff:g id="NUMBER">%s</xliff:g> ساعة</item>
+      <item quantity="other"><xliff:g id="NUMBER">%s</xliff:g> من الساعات</item>
+      <item quantity="one">ساعة واحدة</item>
+    </plurals>
+    <plurals name="minutes" formatted="false" msgid="5484431721696058697">
+      <item quantity="zero"><xliff:g id="NUMBER">%s</xliff:g> من الدقائق</item>
+      <item quantity="two">دقيقتان (<xliff:g id="NUMBER">%s</xliff:g>)</item>
+      <item quantity="few"><xliff:g id="NUMBER">%s</xliff:g> دقائق</item>
+      <item quantity="many"><xliff:g id="NUMBER">%s</xliff:g> دقيقة</item>
+      <item quantity="other"><xliff:g id="NUMBER">%s</xliff:g> من الدقائق</item>
+      <item quantity="one">دقيقة واحدة</item>
+    </plurals>
     <string name="every_day" msgid="4100909974923444602">"كل يوم"</string>
     <string name="day_concat" msgid="971998564991636532">"، "</string>
     <string name="clock_instructions" msgid="2656876819515011590">"اختيار ساعة"</string>
@@ -95,11 +113,11 @@
     <string name="settings" msgid="5849739030579520686">"الإعدادات"</string>
     <string name="snooze_duration_title" msgid="1097309861110780483">"طول مدة الغفوة"</string>
     <plurals name="snooze_duration" formatted="false" msgid="3112918131095248271">
-      <item quantity="zero"><xliff:g id="NUMBER">%d</xliff:g> minutes</item>
-      <item quantity="two">دقيقتان (<xliff:g id="NUMBER">%d</xliff:g>)</item>
-      <item quantity="few"><xliff:g id="NUMBER">%d</xliff:g> دقائق</item>
-      <item quantity="many"><xliff:g id="NUMBER">%d</xliff:g> دقيقة</item>
-      <item quantity="other"><xliff:g id="NUMBER">%d</xliff:g> من الدقائق</item>
+      <item quantity="zero"><xliff:g id="NUMBER">%s</xliff:g> minutes</item>
+      <item quantity="two">دقيقتان (<xliff:g id="NUMBER">%s</xliff:g>)</item>
+      <item quantity="few"><xliff:g id="NUMBER">%s</xliff:g> دقائق</item>
+      <item quantity="many"><xliff:g id="NUMBER">%s</xliff:g> دقيقة</item>
+      <item quantity="other"><xliff:g id="NUMBER">%s</xliff:g> من الدقائق</item>
       <item quantity="one">دقيقة واحدة</item>
     </plurals>
     <plurals name="snooze_picker_label" formatted="false" msgid="322739253661747732">
@@ -111,7 +129,14 @@
       <item quantity="one">دقيقة واحدة</item>
     </plurals>
     <string name="auto_silence_title" msgid="2012754009554434544">"صامت بعد"</string>
-    <string name="auto_silence_summary" msgid="7028508740659733028">"<xliff:g id="MINUTES">%d</xliff:g> دقيقة"</string>
+    <plurals name="auto_silence_summary" formatted="false" msgid="6579258788774360396">
+      <item quantity="zero"><xliff:g id="FORMATTED_NUMBER">%s</xliff:g> من الدقائق</item>
+      <item quantity="two">دقيقتان (<xliff:g id="FORMATTED_NUMBER">%s</xliff:g>)</item>
+      <item quantity="few"><xliff:g id="FORMATTED_NUMBER">%s</xliff:g> دقائق</item>
+      <item quantity="many"><xliff:g id="FORMATTED_NUMBER">%s</xliff:g> دقيقة</item>
+      <item quantity="other"><xliff:g id="FORMATTED_NUMBER">%s</xliff:g> من الدقائق</item>
+      <item quantity="one">دقيقة واحدة</item>
+    </plurals>
     <string name="auto_silence_never" msgid="4821982647348750809">"أبدًا"</string>
   <string-array name="auto_silence_entries">
     <item msgid="3024545954917711306">"دقيقة واحدة"</item>
@@ -188,6 +213,10 @@
     <string name="sw_share_main" msgid="7703563468204234405">"وقتي هو <xliff:g id="TIME">%s</xliff:g>"</string>
     <string name="sw_share_laps" msgid="614390674795945007">"مرات الدوران:"</string>
     <string name="sw_notification_lap_number" msgid="3535420316052647126">"معمل <xliff:g id="NUMBER">%d</xliff:g>"</string>
+  <string-array name="sw_lap_number_set">
+    <item msgid="2816627565030953899">"العدد <xliff:g id="NUMBER">%d</xliff:g>"</item>
+    <item msgid="316923361931627987">"العدد <xliff:g id="NUMBER">%02d</xliff:g>"</item>
+  </string-array>
     <plurals name="Nhours_description" formatted="false" msgid="4539186407746763655">
       <item quantity="zero"><xliff:g id="NUMBER">%d</xliff:g> hours</item>
       <item quantity="two">ساعتان (<xliff:g id="NUMBER">%d</xliff:g>)</item>
