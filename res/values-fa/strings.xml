@@ -73,12 +73,18 @@
     <item msgid="9115697840826129603">"هشدار از هم‌اکنون برای <xliff:g id="HOURS">%2$s</xliff:g> و <xliff:g id="MINUTES">%3$s</xliff:g> تنظیم شد."</item>
     <item msgid="2332583385137381060">"هشدار برای <xliff:g id="DAYS">%1$s</xliff:g> و <xliff:g id="HOURS">%2$s</xliff:g> و <xliff:g id="MINUTES">%3$s</xliff:g> از حالا تنظیم شد."</item>
   </string-array>
-    <string name="day" msgid="7984755014526510295">"۱ روز"</string>
-    <string name="days" msgid="2070509222727852210">"<xliff:g id="DAYS">%s</xliff:g> روز"</string>
-    <string name="hour" msgid="2546819039651509323">"۱ ساعت"</string>
-    <string name="hours" msgid="2071487018566991613">"<xliff:g id="HOURS">%s</xliff:g> ساعت"</string>
-    <string name="minute" msgid="2486157997434653710">"۱ دقیقه"</string>
-    <string name="minutes" msgid="6115838729146292526">"<xliff:g id="MINUTES">%s</xliff:g> دقیقه"</string>
+    <plurals name="days" formatted="false" msgid="3706846447285206235">
+      <item quantity="one"><xliff:g id="NUMBER">%s</xliff:g> روز</item>
+      <item quantity="other"><xliff:g id="NUMBER">%s</xliff:g> روز</item>
+    </plurals>
+    <plurals name="hours" formatted="false" msgid="3871283109767171655">
+      <item quantity="one"><xliff:g id="NUMBER">%s</xliff:g> ساعت</item>
+      <item quantity="other"><xliff:g id="NUMBER">%s</xliff:g> ساعت</item>
+    </plurals>
+    <plurals name="minutes" formatted="false" msgid="5484431721696058697">
+      <item quantity="one"><xliff:g id="NUMBER">%s</xliff:g> دقیقه</item>
+      <item quantity="other"><xliff:g id="NUMBER">%s</xliff:g> دقیقه</item>
+    </plurals>
     <string name="every_day" msgid="4100909974923444602">"هر روز"</string>
     <string name="day_concat" msgid="971998564991636532">"، "</string>
     <string name="clock_instructions" msgid="2656876819515011590">"انتخاب یک ساعت"</string>
@@ -87,16 +93,19 @@
     <string name="settings" msgid="5849739030579520686">"تنظیمات"</string>
     <string name="snooze_duration_title" msgid="1097309861110780483">"طول تعویق"</string>
     <plurals name="snooze_duration" formatted="false" msgid="3112918131095248271">
-      <item quantity="one">‏<xliff:g id="NUMBER">%d</xliff:g> دقیقه</item>
-      <item quantity="other">‏<xliff:g id="NUMBER">%d</xliff:g> دقیقه</item>
+      <item quantity="one">‏<xliff:g id="NUMBER">%s</xliff:g> دقیقه</item>
+      <item quantity="other">‏<xliff:g id="NUMBER">%s</xliff:g> دقیقه</item>
     </plurals>
     <plurals name="snooze_picker_label" formatted="false" msgid="322739253661747732">
       <item quantity="one">دقیقه</item>
       <item quantity="other">دقیقه</item>
     </plurals>
     <string name="auto_silence_title" msgid="2012754009554434544">"سکوت پس از"</string>
-    <string name="auto_silence_summary" msgid="7028508740659733028">"<xliff:g id="MINUTES">%d</xliff:g> دقیقه"</string>
-    <string name="auto_silence_never" msgid="4821982647348750809">"هیچوقت"</string>
+    <plurals name="auto_silence_summary" formatted="false" msgid="6579258788774360396">
+      <item quantity="one"><xliff:g id="FORMATTED_NUMBER">%s</xliff:g> دقیقه</item>
+      <item quantity="other"><xliff:g id="FORMATTED_NUMBER">%s</xliff:g> دقیقه</item>
+    </plurals>
+    <string name="auto_silence_never" msgid="4821982647348750809">"هیچ‌وقت"</string>
   <string-array name="auto_silence_entries">
     <item msgid="3024545954917711306">"۱ دقیقه"</item>
     <item msgid="5431906692406316549">"۵ دقیقه"</item>
@@ -172,6 +181,10 @@
     <string name="sw_share_main" msgid="7703563468204234405">"زمان من <xliff:g id="TIME">%s</xliff:g> است"</string>
     <string name="sw_share_laps" msgid="614390674795945007">"زمان‌های دور:"</string>
     <string name="sw_notification_lap_number" msgid="3535420316052647126">"دور <xliff:g id="NUMBER">%d</xliff:g>"</string>
+  <string-array name="sw_lap_number_set">
+    <item msgid="2816627565030953899">"شماره <xliff:g id="NUMBER">%d</xliff:g>"</item>
+    <item msgid="316923361931627987">"شماره <xliff:g id="NUMBER">%02d</xliff:g>"</item>
+  </string-array>
     <plurals name="Nhours_description" formatted="false" msgid="4539186407746763655">
       <item quantity="one">‏<xliff:g id="NUMBER">%d</xliff:g> ساعت</item>
       <item quantity="other">‏<xliff:g id="NUMBER">%d</xliff:g> ساعت</item>

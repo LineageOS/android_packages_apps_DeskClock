@@ -49,7 +49,7 @@
       <item quantity="one">1 minut</item>
     </plurals>
     <string name="alarm_alert_off_text" msgid="4472073417593915002">"Alarm av"</string>
-    <string name="alarm_alert_snooze_text" msgid="1774416052207651584">"Snooze"</string>
+    <string name="alarm_alert_snooze_text" msgid="1774416052207651584">"Snooza"</string>
     <plurals name="alarm_alert_snooze_set" formatted="false" msgid="3212729193036041768">
       <item quantity="other">Alarmet återupptas om <xliff:g id="MINUTES">%d</xliff:g> minuter.</item>
       <item quantity="one">Alarmet återupptas om 1 minut.</item>
@@ -73,12 +73,18 @@
     <item msgid="9115697840826129603">"Alarmet ringer om <xliff:g id="HOURS">%2$s</xliff:g> och <xliff:g id="MINUTES">%3$s</xliff:g> från och med nu."</item>
     <item msgid="2332583385137381060">"Alarmet ringer om <xliff:g id="DAYS">%1$s</xliff:g>, <xliff:g id="HOURS">%2$s</xliff:g> och <xliff:g id="MINUTES">%3$s</xliff:g> från och med nu."</item>
   </string-array>
-    <string name="day" msgid="7984755014526510295">"1 dag"</string>
-    <string name="days" msgid="2070509222727852210">"<xliff:g id="DAYS">%s</xliff:g> dagar"</string>
-    <string name="hour" msgid="2546819039651509323">"1 timme"</string>
-    <string name="hours" msgid="2071487018566991613">"<xliff:g id="HOURS">%s</xliff:g> timmar"</string>
-    <string name="minute" msgid="2486157997434653710">"1 minut"</string>
-    <string name="minutes" msgid="6115838729146292526">"<xliff:g id="MINUTES">%s</xliff:g> minuter"</string>
+    <plurals name="days" formatted="false" msgid="3706846447285206235">
+      <item quantity="other"><xliff:g id="NUMBER">%s</xliff:g> dagar</item>
+      <item quantity="one">1 dag</item>
+    </plurals>
+    <plurals name="hours" formatted="false" msgid="3871283109767171655">
+      <item quantity="other"><xliff:g id="NUMBER">%s</xliff:g> timmar</item>
+      <item quantity="one">1 timme</item>
+    </plurals>
+    <plurals name="minutes" formatted="false" msgid="5484431721696058697">
+      <item quantity="other"><xliff:g id="NUMBER">%s</xliff:g> minuter</item>
+      <item quantity="one">1 minut</item>
+    </plurals>
     <string name="every_day" msgid="4100909974923444602">"Varje dag"</string>
     <string name="day_concat" msgid="971998564991636532">", "</string>
     <string name="clock_instructions" msgid="2656876819515011590">"Välj en klocka"</string>
@@ -87,7 +93,7 @@
     <string name="settings" msgid="5849739030579520686">"Inställningar"</string>
     <string name="snooze_duration_title" msgid="1097309861110780483">"Snooze-intervall"</string>
     <plurals name="snooze_duration" formatted="false" msgid="3112918131095248271">
-      <item quantity="other"><xliff:g id="NUMBER">%d</xliff:g> minuter</item>
+      <item quantity="other"><xliff:g id="NUMBER">%s</xliff:g> minuter</item>
       <item quantity="one">1 minut</item>
     </plurals>
     <plurals name="snooze_picker_label" formatted="false" msgid="322739253661747732">
@@ -95,7 +101,10 @@
       <item quantity="one">minut</item>
     </plurals>
     <string name="auto_silence_title" msgid="2012754009554434544">"Alarmet upphör efter"</string>
-    <string name="auto_silence_summary" msgid="7028508740659733028">"<xliff:g id="MINUTES">%d</xliff:g> minuter"</string>
+    <plurals name="auto_silence_summary" formatted="false" msgid="6579258788774360396">
+      <item quantity="other"><xliff:g id="FORMATTED_NUMBER">%s</xliff:g> minuter</item>
+      <item quantity="one">1 minut</item>
+    </plurals>
     <string name="auto_silence_never" msgid="4821982647348750809">"Aldrig"</string>
   <string-array name="auto_silence_entries">
     <item msgid="3024545954917711306">"1 minut"</item>
@@ -172,6 +181,10 @@
     <string name="sw_share_main" msgid="7703563468204234405">"Min tid är <xliff:g id="TIME">%s</xliff:g>"</string>
     <string name="sw_share_laps" msgid="614390674795945007">"Varvtider:"</string>
     <string name="sw_notification_lap_number" msgid="3535420316052647126">"Varv <xliff:g id="NUMBER">%d</xliff:g>"</string>
+  <string-array name="sw_lap_number_set">
+    <item msgid="2816627565030953899">"Antal: <xliff:g id="NUMBER">%d</xliff:g>"</item>
+    <item msgid="316923361931627987">"Antal: <xliff:g id="NUMBER">%02d</xliff:g>"</item>
+  </string-array>
     <plurals name="Nhours_description" formatted="false" msgid="4539186407746763655">
       <item quantity="other"><xliff:g id="NUMBER">%d</xliff:g> timmar</item>
       <item quantity="one">1 timme</item>
