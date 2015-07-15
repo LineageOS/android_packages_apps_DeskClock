@@ -73,29 +73,38 @@
     <item msgid="9115697840826129603">"अलार्म अब से <xliff:g id="HOURS">%2$s</xliff:g> और <xliff:g id="MINUTES">%3$s</xliff:g> के लिए सेट."</item>
     <item msgid="2332583385137381060">"अलार्म अब से <xliff:g id="DAYS">%1$s</xliff:g>, <xliff:g id="HOURS">%2$s</xliff:g>, और <xliff:g id="MINUTES">%3$s</xliff:g> के लिए सेट हो गया है."</item>
   </string-array>
-    <string name="day" msgid="7984755014526510295">"1 दिन"</string>
-    <string name="days" msgid="2070509222727852210">"<xliff:g id="DAYS">%s</xliff:g> दिन"</string>
-    <string name="hour" msgid="2546819039651509323">"1 घंटा"</string>
-    <string name="hours" msgid="2071487018566991613">"<xliff:g id="HOURS">%s</xliff:g> घंटे"</string>
-    <string name="minute" msgid="2486157997434653710">"1 मिनट"</string>
-    <string name="minutes" msgid="6115838729146292526">"<xliff:g id="MINUTES">%s</xliff:g> मिनट"</string>
+    <plurals name="days" formatted="false" msgid="3706846447285206235">
+      <item quantity="one"><xliff:g id="NUMBER">%s</xliff:g> दिन</item>
+      <item quantity="other"><xliff:g id="NUMBER">%s</xliff:g> दिन</item>
+    </plurals>
+    <plurals name="hours" formatted="false" msgid="3871283109767171655">
+      <item quantity="one"><xliff:g id="NUMBER">%s</xliff:g> घंटे</item>
+      <item quantity="other"><xliff:g id="NUMBER">%s</xliff:g> घंटे</item>
+    </plurals>
+    <plurals name="minutes" formatted="false" msgid="5484431721696058697">
+      <item quantity="one"><xliff:g id="NUMBER">%s</xliff:g> मिनट</item>
+      <item quantity="other"><xliff:g id="NUMBER">%s</xliff:g> मिनट</item>
+    </plurals>
     <string name="every_day" msgid="4100909974923444602">"प्रत्येक दिन"</string>
     <string name="day_concat" msgid="971998564991636532">", "</string>
     <string name="clock_instructions" msgid="2656876819515011590">"कोई घड़ी चुनें"</string>
     <string name="analog_gadget" msgid="1670505720837152766">"ऐनालॉग घड़ी"</string>
     <string name="help" msgid="7786263119482654015">"सहायता"</string>
     <string name="settings" msgid="5849739030579520686">"सेटिंग"</string>
-    <string name="snooze_duration_title" msgid="1097309861110780483">"इतनी देर के बाद याद दिलाएं:"</string>
+    <string name="snooze_duration_title" msgid="1097309861110780483">"इतनी देर के बाद याद दिलाएं"</string>
     <plurals name="snooze_duration" formatted="false" msgid="3112918131095248271">
-      <item quantity="one"><xliff:g id="NUMBER">%d</xliff:g> मिनट</item>
-      <item quantity="other"><xliff:g id="NUMBER">%d</xliff:g> मिनट</item>
+      <item quantity="one"><xliff:g id="NUMBER">%s</xliff:g> मिनट</item>
+      <item quantity="other"><xliff:g id="NUMBER">%s</xliff:g> मिनट</item>
     </plurals>
     <plurals name="snooze_picker_label" formatted="false" msgid="322739253661747732">
       <item quantity="one">मिनट</item>
       <item quantity="other">मिनट</item>
     </plurals>
-    <string name="auto_silence_title" msgid="2012754009554434544">"इतनी देर के बाद आवाज़ बंद करें:"</string>
-    <string name="auto_silence_summary" msgid="7028508740659733028">"<xliff:g id="MINUTES">%d</xliff:g> मिनट"</string>
+    <string name="auto_silence_title" msgid="2012754009554434544">"इतनी देर के बाद शांत करें"</string>
+    <plurals name="auto_silence_summary" formatted="false" msgid="6579258788774360396">
+      <item quantity="one"><xliff:g id="FORMATTED_NUMBER">%s</xliff:g> मिनट</item>
+      <item quantity="other"><xliff:g id="FORMATTED_NUMBER">%s</xliff:g> मिनट</item>
+    </plurals>
     <string name="auto_silence_never" msgid="4821982647348750809">"कभी नहीं"</string>
   <string-array name="auto_silence_entries">
     <item msgid="3024545954917711306">"1 मिनट"</item>
@@ -172,6 +181,10 @@
     <string name="sw_share_main" msgid="7703563468204234405">"मेरा समय <xliff:g id="TIME">%s</xliff:g> है"</string>
     <string name="sw_share_laps" msgid="614390674795945007">"लैप अवधियां:"</string>
     <string name="sw_notification_lap_number" msgid="3535420316052647126">"लैप <xliff:g id="NUMBER">%d</xliff:g>"</string>
+  <string-array name="sw_lap_number_set">
+    <item msgid="2816627565030953899">"# <xliff:g id="NUMBER">%d</xliff:g>"</item>
+    <item msgid="316923361931627987">"# <xliff:g id="NUMBER">%02d</xliff:g>"</item>
+  </string-array>
     <plurals name="Nhours_description" formatted="false" msgid="4539186407746763655">
       <item quantity="one"><xliff:g id="NUMBER">%d</xliff:g> घंटे</item>
       <item quantity="other"><xliff:g id="NUMBER">%d</xliff:g> घंटे</item>
