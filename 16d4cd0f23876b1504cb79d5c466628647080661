@@ -1,0 +1,27 @@
+{
+  "comments": [
+    {
+      "key": {
+        "uuid": "ff0f0b1f_285c094a",
+        "filename": "res/values/cm_colors.xml",
+        "patchSetId": 1
+      },
+      "lineNbr": 44,
+      "author": {
+        "id": 9199
+      },
+      "writtenOn": "2015-07-19T01:19:29Z",
+      "side": 1,
+      "message": "Add a newline between this comment and the colors above it.\n\nThere is also one extra space of indentation you\u0027ll want to get rid of.",
+      "range": {
+        "startLine": 44,
+        "startChar": 0,
+        "endLine": 44,
+        "endChar": 56
+      },
+      "revId": "16d4cd0f23876b1504cb79d5c466628647080661",
+      "serverId": "1ec6b3db-b2c1-4fa4-84a2-4c7efe89ba71",
+      "unresolved": false
+    }
+  ]
+}
