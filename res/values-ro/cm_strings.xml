@@ -52,4 +52,5 @@
   <string name="alarm_select_external">Muzică</string>
   <string name="ringtone_default">Ton de apel implicit</string>
   <string name="take_persistent_grant_uri_permission_failed_msg">Nu s-a reuşit preluarea permisiunii persistente pentru tonul de apel</string>
+  <string name="activity_not_found">Activitatea nu a fost găsită!</string>
 </resources>
