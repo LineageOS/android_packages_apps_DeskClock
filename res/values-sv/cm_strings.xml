@@ -42,6 +42,7 @@
   <string name="shake_action_title">Skakåtgärd</string>
   <string name="shake_action_summary" product="tablet">Att skaka på surfplattan kommer att <xliff:g id="action">%s</xliff:g></string>
   <string name="shake_action_summary" product="default">Att skaka på telefonen kommer att <xliff:g id="action">%s</xliff:g></string>
+  <string name="action_summary_snooze">snoozea alarmet</string>
   <string name="action_summary_dismiss">stäng av alarmet</string>
   <string name="action_summary_do_nothing">göra ingenting</string>
   <string name="alarm_picker_title">Välj alarmtyp</string>
