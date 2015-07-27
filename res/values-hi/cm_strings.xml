@@ -55,4 +55,6 @@
   <string name="alarm_select_external">संगीत</string>
   <string name="ringtone_default">डिफ़ॉल्ट रिंगटोन</string>
   <string name="take_persistent_grant_uri_permission_failed_msg">रिंगटोन के लिए बनी रहनेवाली अनुमति ले नहीं सके</string>
+  <string name="menu_item_widget_settings">विजेट सेटिंग</string>
+  <string name="activity_not_found">गतिविधि नहीं मिली!</string>
 </resources>
