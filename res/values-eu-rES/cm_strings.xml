@@ -57,4 +57,6 @@
   <string name="take_persistent_grant_uri_permission_failed_msg">Huts egin du dei doinuarentzat behin betiko baimen eskaerak</string>
   <string name="menu_item_widget_settings">Trepetaren ezarpenak</string>
   <string name="activity_not_found">Aktibitatea ez da aurkitu!</string>
+  <string name="permlab_write_alarms">zuzenean aldatu alarmak</string>
+  <string name="permlab_manage_alarms">txandakatu programatutako alarmak</string>
 </resources>
