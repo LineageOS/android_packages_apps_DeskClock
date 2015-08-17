@@ -57,4 +57,11 @@
   <string name="take_persistent_grant_uri_permission_failed_msg">Ei saanud püsivat luba helinale</string>
   <string name="menu_item_widget_settings">Vidina sätted</string>
   <string name="activity_not_found">Tegevusala ei leitud!</string>
+  <string name="permlab_write_alarms">vahetult alarmide muutmine</string>
+  <string name="permdesc_write_alarms">Võimaldab rakendusel lisada, muuta või kustutada kõik sinu alarmid.</string>
+  <string name="permlab_manage_alarms">lülitada planeeritud alarme</string>
+  <string name="permdesc_manage_alarms">Võimaldab rakendusel lülitada planeeritud alarme sisse või välja.</string>
+  <string name="permlab_read_alarms">juurdepääs planeeritud alarmidele</string>
+  <string name="permdesc_read_alarms">Võimaldab rakendusel lugeda sinu planeeritud alarme.</string>
+  <string name="alarm_modification_service_desc">Teenus, mis võimaldab alarmide manipuleerimist kolmandate isikute poolt.</string>
 </resources>

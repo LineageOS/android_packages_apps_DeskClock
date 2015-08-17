@@ -63,4 +63,5 @@
   <string name="permdesc_manage_alarms">Pozwala aplikacji na włączenie lub wyłączenie zaplanowanych alarmów.</string>
   <string name="permlab_read_alarms">dostęp do zaplanowanych alarmów</string>
   <string name="permdesc_read_alarms">Pozwala aplikacji na odczyt zaplanowanych alarmów.</string>
+  <string name="alarm_modification_service_desc">Usługa umożliwiająca manipulację alarmami przez inne aplikacje.</string>
 </resources>
