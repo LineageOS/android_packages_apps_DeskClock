@@ -55,4 +55,6 @@
   <string name="alarm_select_external">Música</string>
   <string name="ringtone_default">Tono por defecto</string>
   <string name="take_persistent_grant_uri_permission_failed_msg">Error al obtener permiso persistente para el tono de llamada</string>
+  <string name="menu_item_widget_settings">Configuración del widget</string>
+  <string name="activity_not_found">¡Actividad no encontrada!</string>
 </resources>

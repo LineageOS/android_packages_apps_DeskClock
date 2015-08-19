@@ -55,4 +55,6 @@
   <string name="alarm_select_external">Música</string>
   <string name="ringtone_default">Tonu predetermináu</string>
   <string name="take_persistent_grant_uri_permission_failed_msg">Fallu al obtener permisu persistente pal tonu de llamada</string>
+  <string name="menu_item_widget_settings">Axustes de Widgets</string>
+  <string name="activity_not_found">¡Nun s\'alcontró actividá!</string>
 </resources>

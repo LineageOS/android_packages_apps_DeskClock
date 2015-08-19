@@ -41,6 +41,8 @@
   <string name="shake_action_title">Acțiunea de agitare</string>
   <string name="shake_action_summary" product="tablet">Agitarea tabletei va <xliff:g id="action">%s</xliff:g></string>
   <string name="shake_action_summary" product="default">Agitarea telefonului va <xliff:g id="action">%s</xliff:g></string>
+  <string name="action_summary_snooze">amânare alarmă</string>
+  <string name="action_summary_dismiss">anulare alarmă</string>
   <string name="action_summary_do_nothing">nu fă nimic</string>
   <string name="alarm_picker_title">Selectați tipul de alarmă</string>
   <string name="alarm_type_ringtone">Ton de apel</string>
@@ -51,7 +53,7 @@
   <string name="alarm_select_ringtone">Ton de apel</string>
   <string name="alarm_select_external">Muzică</string>
   <string name="ringtone_default">Ton de apel implicit</string>
-  <string name="take_persistent_grant_uri_permission_failed_msg">Nu s-a reuşit preluarea permisiunii persistente pentru tonul de apel</string>
+  <string name="take_persistent_grant_uri_permission_failed_msg">Nu s-a reușit preluarea permisiunii persistente pentru tonul de apel</string>
   <string name="menu_item_widget_settings">Setări widget</string>
   <string name="activity_not_found">Activitatea nu a fost găsită!</string>
 </resources>
