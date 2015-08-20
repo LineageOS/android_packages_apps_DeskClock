@@ -42,7 +42,7 @@
   <string name="shake_action_title">عمل هنگام تکان دادن</string>
   <string name="shake_action_summary" product="tablet">تکان دادن تبلت باعث <xliff:g id="action">%s</xliff:g> می‌شود</string>
   <string name="shake_action_summary" product="default">تکان دادن تلفن باعث <xliff:g id="action">%s</xliff:g> می‌شود</string>
-  <string name="action_summary_snooze">تاخیر هشدار</string>
+  <string name="action_summary_snooze">تعویق هشدار</string>
   <string name="action_summary_dismiss">رد هشدار</string>
   <string name="action_summary_do_nothing">کاری نکن</string>
   <string name="alarm_picker_title">انتخاب نوع آلارم</string>
@@ -57,4 +57,11 @@
   <string name="take_persistent_grant_uri_permission_failed_msg">اجازه گیری پایا برای آهنگ زنگ ناموفق بود</string>
   <string name="menu_item_widget_settings">تنظیمات ویجت</string>
   <string name="activity_not_found">فعالیت پیدا نشد!</string>
+  <string name="permlab_write_alarms">به طور مستقیم درهشدارها تغییر ایجاد می‌کند</string>
+  <string name="permdesc_write_alarms">به برنامه اجازه افزودن، تغییر یا حذف تمام هشدارهای دستگاه را می‌دهد.</string>
+  <string name="permlab_manage_alarms">تغییر در وضعیت هشدارهای برنامه ریزی شده</string>
+  <string name="permdesc_manage_alarms">به برنامه اجازه خاموش یا روشن کردن هشدارهای برنامه ریزی شده شما را می‌دهد.</string>
+  <string name="permlab_read_alarms">دسترسی به هشدارهای برنامه ریزی شده</string>
+  <string name="permdesc_read_alarms">به برنامه اجازه بررسی هشدارهای زمانبندی شده را می‌دهد.</string>
+  <string name="alarm_modification_service_desc">سرویسی برای تغییر در هشدارها توسط برنامه‌های نصب شده.</string>
 </resources>

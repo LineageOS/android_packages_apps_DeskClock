@@ -57,4 +57,11 @@
   <string name="take_persistent_grant_uri_permission_failed_msg">Не удалось задать мелодию в качестве сигнала</string>
   <string name="menu_item_widget_settings">Настройки виджетов</string>
   <string name="activity_not_found">Приложение не найдено!</string>
+  <string name="permlab_write_alarms">изменение будильников</string>
+  <string name="permdesc_write_alarms">Разрешить приложению добавлять, изменять или удалять будильники.</string>
+  <string name="permlab_manage_alarms">отключение установленных будильников</string>
+  <string name="permdesc_manage_alarms">Разрешить приложению включать или отключать установленные будильники.</string>
+  <string name="permlab_read_alarms">доступ к установленным будильникам</string>
+  <string name="permdesc_read_alarms">Разрешить приложению доступ к установленным будильникам.</string>
+  <string name="alarm_modification_service_desc">Служба, позволяющая сторонним приложениям управлять будильниками.</string>
 </resources>

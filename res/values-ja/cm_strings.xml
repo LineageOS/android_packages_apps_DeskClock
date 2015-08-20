@@ -57,4 +57,11 @@
   <string name="take_persistent_grant_uri_permission_failed_msg">着信音の権限の持続的な許可を取得できませんでした</string>
   <string name="menu_item_widget_settings">ウィジェットの設定</string>
   <string name="activity_not_found">アクティビティが見つかりません。</string>
+  <string name="permlab_write_alarms">アラームの直接の変更</string>
+  <string name="permdesc_write_alarms">アラームの追加やすべてのアラームの変更および削除をアプリに許可します。</string>
+  <string name="permlab_manage_alarms">予定されているアラームの切り替え</string>
+  <string name="permdesc_manage_alarms">予定されているアラームをONまたはOFFにすることをアプリに許可します。</string>
+  <string name="permlab_read_alarms">予定されているアラームへのアクセス</string>
+  <string name="permdesc_read_alarms">予定されているアラームの読み取りをアプリに許可します。</string>
+  <string name="alarm_modification_service_desc">第三者によるアラームの操作を許可するためのサービスです。</string>
 </resources>
