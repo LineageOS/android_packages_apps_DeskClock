@@ -57,4 +57,11 @@
   <string name="take_persistent_grant_uri_permission_failed_msg">אין אפשרות לקבל הרשאות תמידיות לצלצול</string>
   <string name="menu_item_widget_settings">הגדרות ווידג\'ט</string>
   <string name="activity_not_found">פעולה לא נמצאה!</string>
+  <string name="permlab_write_alarms">שינוי שעונים מעוררים ישירות</string>
+  <string name="permdesc_write_alarms">מאפשר ליישום להוסיף, לשנות או למחוק את כל ההתראות שלך.</string>
+  <string name="permlab_manage_alarms">הפעלת/כיבוי שעון מעורר</string>
+  <string name="permdesc_manage_alarms">מאפשר ליישום להפעיל או לכבות התראות שנקבעו.</string>
+  <string name="permlab_read_alarms">גישה לשעונים מעוררים שנקבעו</string>
+  <string name="permdesc_read_alarms">מאפשר ליישום לקרוא את ההתראות שנקבעו.</string>
+  <string name="alarm_modification_service_desc">שירות המאפשר שינויי שעונים מעוררים בידי יישומי צד שלישי.</string>
 </resources>
