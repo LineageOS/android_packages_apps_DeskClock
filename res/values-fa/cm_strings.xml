@@ -17,51 +17,51 @@
 -->
 <resources xmlns:xliff="urn:oasis:names:tc:xliff:document:1.2">
   <string name="show_status_bar_icon_title">نمایش آیکون</string>
-  <string name="show_status_bar_icon_summary">نمایش آیکون در نوار اعلان هنگامی که یک هشدار تنظیم شده باشد</string>
+  <string name="show_status_bar_icon_summary">هنگامی که هشداری تنظیم می‌شود، آیکونی در نوار وضعیت نشان داده شود</string>
   <string name="alarm_increasing_volume">صدای صعودی</string>
   <string name="profile_description">پروفایل <xliff:g id="profile">%s</xliff:g></string>
-  <string name="profile_no_selected">هیچ پروفایلی انتخاب نشده است</string>
+  <string name="profile_no_selected">پروفایلی انتخاب نشده است</string>
   <string name="menu_item_add">افزودن</string>
   <string name="cities_add_city_title">افزودن شهر</string>
   <string name="cities_add_city_city">شهر:</string>
   <string name="cities_add_city_timezone">منطقه زماني:</string>
   <string name="cities_add_city_gps_cd">برای بومی‌سازی شهرخود ضربه بزنید</string>
-  <string name="cities_add_loading">بارگزاری\u2026</string>
+  <string name="cities_add_loading">بارگذاری\u2026</string>
   <string name="cities_add_searching">جستجو\u2026</string>
-  <string name="cities_add_gps_no_results">جستار جی‌پی‌اس نتیجه‌ی مکانی را برنمی‌گرداند</string>
+  <string name="cities_add_gps_no_results">جی‌پی‌اس هیچ نتیجه‌ای برای مکان برنمی‌گرداند</string>
   <string name="cities_add_gps_not_available">جی‌پی‌اس در دسترس نیست</string>
   <string name="cities_add_already_exists">این شهر از قبل در پایگاه داده وجود دارد</string>
-  <string name="cities_add_city_failed">قادر به ایجاد این شهر نیست</string>
+  <string name="cities_add_city_failed">نمی‌توان شهر را ایجاد کرد</string>
   <string name="cities_delete_city_title">حذف شهر</string>
   <string name="cities_delete_city_msg">آیا می‌خواهید <xliff:g id="city">%s</xliff:g> را حذف کنید؟</string>
-  <string name="cities_delete_city_failed">قادر به حذف شهر نیست</string>
-  <string name="volume_buttons_summary">زدن کلیدهای صدا باعث <xliff:g id="action">%s</xliff:g> می‌شود</string>
-  <string name="flip_action_title">عمل هنگام وارونگی</string>
-  <string name="flip_action_summary" product="tablet">وارونگی تبلت باعث <xliff:g id="action">%s</xliff:g> می‌شود</string>
-  <string name="flip_action_summary" product="default">وارونگی تلفن باعث <xliff:g id="action">%s</xliff:g> می‌شود</string>
-  <string name="shake_action_title">عمل هنگام تکان دادن</string>
-  <string name="shake_action_summary" product="tablet">تکان دادن تبلت باعث <xliff:g id="action">%s</xliff:g> می‌شود</string>
-  <string name="shake_action_summary" product="default">تکان دادن تلفن باعث <xliff:g id="action">%s</xliff:g> می‌شود</string>
-  <string name="action_summary_snooze">تعویق هشدار</string>
-  <string name="action_summary_dismiss">رد هشدار</string>
-  <string name="action_summary_do_nothing">کاری نکن</string>
-  <string name="alarm_picker_title">انتخاب نوع آلارم</string>
+  <string name="cities_delete_city_failed">نمی‌توان شهر را حذف کرد</string>
+  <string name="volume_buttons_summary">با زدن کلیدهای صدا هشدار <xliff:g id="action">%s</xliff:g></string>
+  <string name="flip_action_title">واکنش نسبت به وارونگی</string>
+  <string name="flip_action_summary" product="tablet">با وارونه کردن تبلت هشدار <xliff:g id="action">%s</xliff:g></string>
+  <string name="flip_action_summary" product="default">با وارونه کردن گوشی هشدار <xliff:g id="action">%s</xliff:g></string>
+  <string name="shake_action_title">واکنش نسبت به تکان دادن</string>
+  <string name="shake_action_summary" product="tablet">با تکان دادن تبلت هشدار <xliff:g id="action">%s</xliff:g></string>
+  <string name="shake_action_summary" product="default">با تکان دادن گوشی هشدار <xliff:g id="action">%s</xliff:g></string>
+  <string name="action_summary_snooze">به تعویق می‌افتد</string>
+  <string name="action_summary_dismiss">رد می‌شود</string>
+  <string name="action_summary_do_nothing">تغییری نمی‌کند</string>
+  <string name="alarm_picker_title">انتخاب نوع هشدار</string>
   <string name="alarm_type_ringtone">صدای زنگ</string>
   <string name="alarm_type_playlist">لیست پخش</string>
   <string name="alarm_type_random">به طور تصادفی</string>
-  <string name="warn_silent_alarm_title">آلارم در حالت بی صدا است</string>
-  <string name="alarm_select">انتخاب آلارم</string>
+  <string name="warn_silent_alarm_title">هشدار در حالت بی‌صدا است</string>
+  <string name="alarm_select">انتخاب هشدار</string>
   <string name="alarm_select_ringtone">صدای زنگ</string>
   <string name="alarm_select_external">موسیقی</string>
-  <string name="ringtone_default">آهنگ زنگ پیش‌فرض</string>
-  <string name="take_persistent_grant_uri_permission_failed_msg">اجازه گیری پایا برای آهنگ زنگ ناموفق بود</string>
-  <string name="menu_item_widget_settings">تنظیمات ویجت</string>
+  <string name="ringtone_default">صدای زنگ پیش‌فرض</string>
+  <string name="take_persistent_grant_uri_permission_failed_msg">گرفتن اجازه دائم برای صدای زنگ ناموفق بود</string>
+  <string name="menu_item_widget_settings">تنظیمات ابزارک</string>
   <string name="activity_not_found">فعالیت پیدا نشد!</string>
-  <string name="permlab_write_alarms">به طور مستقیم درهشدارها تغییر ایجاد می‌کند</string>
+  <string name="permlab_write_alarms">به طور مستقیم هشدارها را تغییر می‌دهد</string>
   <string name="permdesc_write_alarms">به برنامه اجازه افزودن، تغییر یا حذف تمام هشدارهای دستگاه را می‌دهد.</string>
-  <string name="permlab_manage_alarms">تغییر در وضعیت هشدارهای برنامه ریزی شده</string>
-  <string name="permdesc_manage_alarms">به برنامه اجازه خاموش یا روشن کردن هشدارهای برنامه ریزی شده شما را می‌دهد.</string>
-  <string name="permlab_read_alarms">دسترسی به هشدارهای برنامه ریزی شده</string>
-  <string name="permdesc_read_alarms">به برنامه اجازه بررسی هشدارهای زمانبندی شده را می‌دهد.</string>
+  <string name="permlab_manage_alarms">تغییر در وضعیت هشدارهای زمان‌بندی شده</string>
+  <string name="permdesc_manage_alarms">به برنامه اجازه می‌دهد هشدارهای زمان‌بندی شده را خاموش یا روشن کند.</string>
+  <string name="permlab_read_alarms">دسترسی به هشدارهای زمان‌بندی شده</string>
+  <string name="permdesc_read_alarms">به برنامه اجازه می‌دهد هشدارهای زمان‌بندی شده را بررسی کند.</string>
   <string name="alarm_modification_service_desc">سرویسی برای تغییر در هشدارها توسط برنامه‌های نصب شده.</string>
 </resources>

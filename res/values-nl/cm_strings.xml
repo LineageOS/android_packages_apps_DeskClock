@@ -57,4 +57,11 @@
   <string name="take_persistent_grant_uri_permission_failed_msg">Blijvend toestemming vragen voor toegang tot beltoon mislukt</string>
   <string name="menu_item_widget_settings">Instellingen widget</string>
   <string name="activity_not_found">Activiteit niet gevonden</string>
+  <string name="permlab_write_alarms">rechtstreeks alarmen wijzigen</string>
+  <string name="permdesc_write_alarms">Hiermee kan de app alarmen toevoegen, bewerken of verwijderen.</string>
+  <string name="permlab_manage_alarms">geplande alarmen in-/uitschakelen</string>
+  <string name="permdesc_manage_alarms">Hiermee kan de app uw geplande alarmen in-/uitschakelen.</string>
+  <string name="permlab_read_alarms">toegang tot geplande alarmen</string>
+  <string name="permdesc_read_alarms">Hiermee kan de app uw geplande alarmen lezen.</string>
+  <string name="alarm_modification_service_desc">Een service om derde partijen toegang te verlenen tot uw alarmen.</string>
 </resources>
