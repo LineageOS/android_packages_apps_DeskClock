@@ -57,4 +57,11 @@
   <string name="take_persistent_grant_uri_permission_failed_msg">Не вдалося задати мелодію як сигнал</string>
   <string name="menu_item_widget_settings">Параметри віджета</string>
   <string name="activity_not_found">Додаток не знайдено!</string>
+  <string name="permlab_write_alarms">безпосередньо змінювати установки будильника</string>
+  <string name="permdesc_write_alarms">Дозволяє програмі додавати, змінювати або видаляти налаштування сигналів будильника.</string>
+  <string name="permlab_manage_alarms">перемикання запланованих будильнників</string>
+  <string name="permdesc_manage_alarms">Дозволяє програмі вмикати або вимикати будильники.</string>
+  <string name="permlab_read_alarms">доступ до запланованих будильників</string>
+  <string name="permdesc_read_alarms">Дозволяє програмі читати заплановані сигнали будильника.</string>
+  <string name="alarm_modification_service_desc">Служба, що дозволяє маніпуляції з сигналами будильника.</string>
 </resources>
