@@ -35,26 +35,26 @@
   <string name="cities_delete_city_title">حذف شهر</string>
   <string name="cities_delete_city_msg">آیا می‌خواهید <xliff:g id="city">%s</xliff:g> را حذف کنید؟</string>
   <string name="cities_delete_city_failed">شهر حذف نمی‌شود</string>
-  <string name="volume_buttons_summary">زدن کلیدهای صدا باعث <xliff:g id="action">%s</xliff:g> می‌شود</string>
+  <string name="volume_buttons_summary">با زدن کلیدهای صدا هشدار <xliff:g id="action">%s</xliff:g></string>
   <string name="flip_action_title">عمل هنگام وارونه‌کردن</string>
   <string name="flip_action_summary" product="tablet">وارونه‌کردن تبلت باعث <xliff:g id="action">%s</xliff:g> می‌شود</string>
   <string name="flip_action_summary" product="default">وارونه‌کردن تلفن باعث <xliff:g id="action">%s</xliff:g> می‌شود</string>
   <string name="shake_action_title">عمل هنگام تکان‌دادن</string>
   <string name="shake_action_summary" product="tablet">تکان‌دادن تبلت باعث <xliff:g id="action">%s</xliff:g> می‌شود</string>
   <string name="shake_action_summary" product="default">تکان‌دادن تلفن باعث <xliff:g id="action">%s</xliff:g> می‌شود</string>
-  <string name="action_summary_snooze">تعویق هشدار</string>
-  <string name="action_summary_dismiss">رد هشدار</string>
-  <string name="action_summary_do_nothing">کاری نکن</string>
+  <string name="action_summary_snooze">به تعویق می‌افتد</string>
+  <string name="action_summary_dismiss">رد می‌شود</string>
+  <string name="action_summary_do_nothing">تغییری نمی‌کند</string>
   <string name="alarm_picker_title">انتخاب نوع آلارم</string>
   <string name="alarm_type_ringtone">صدای زنگ</string>
   <string name="alarm_type_playlist">لیست پخش</string>
   <string name="alarm_type_random">به طور تصادفی</string>
-  <string name="warn_silent_alarm_title">آلارم در حالت بی صدا است</string>
+  <string name="warn_silent_alarm_title">هشدار در حالت بی‌صدا است</string>
   <string name="alarm_select">انتخاب آلارم</string>
   <string name="alarm_select_ringtone">صدای زنگ</string>
   <string name="alarm_select_external">موسیقی</string>
-  <string name="ringtone_default">آهنگ زنگ پیش فرض</string>
-  <string name="take_persistent_grant_uri_permission_failed_msg">اجازه‌دادن دائم برای آهنگ زنگ ناموفق بود</string>
-  <string name="menu_item_widget_settings">تنظیمات ویجت</string>
+  <string name="ringtone_default">صدای زنگ پیش فرض</string>
+  <string name="take_persistent_grant_uri_permission_failed_msg">گرفتن اجازه دائم برای صدای زنگ ناموفق بود</string>
+  <string name="menu_item_widget_settings">تنظیمات ابزارک</string>
   <string name="activity_not_found">فعالیت پیدا نشد!</string>
 </resources>
