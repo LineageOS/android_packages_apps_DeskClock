@@ -57,4 +57,11 @@
   <string name="take_persistent_grant_uri_permission_failed_msg">Nem sikerült állandó engedélyt szerezni a csengőhanghoz</string>
   <string name="menu_item_widget_settings">Modul beállítások</string>
   <string name="activity_not_found">Tevékenység nem található!</string>
+  <string name="permlab_write_alarms">riasztás közvetlen megváltoztatása</string>
+  <string name="permdesc_write_alarms">Lehetővé teszi az alkalmazás számára, hogy hozzáadja, módosítsa, vagy törölje az összes riasztást.</string>
+  <string name="permlab_manage_alarms">ütemezett riasztások kapcsolása</string>
+  <string name="permdesc_manage_alarms">Lehetővé teszi az alkalmazás számára az ütemezett riasztások ki/bekapcsolását.</string>
+  <string name="permlab_read_alarms">hozzáférés ütemezett riasztásokhoz</string>
+  <string name="permdesc_read_alarms">Lehetővé teszi az alkalmazás számára az ütemezett riasztásai olvasását.</string>
+  <string name="alarm_modification_service_desc">Szolgáltatás a riasztások harmadik fél általi kezeléséhez.</string>
 </resources>

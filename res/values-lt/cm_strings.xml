@@ -57,4 +57,11 @@
   <string name="take_persistent_grant_uri_permission_failed_msg">Nepavyko nuolat suteikti leidimo skambėjimo tonui</string>
   <string name="menu_item_widget_settings">Valdiklio nustatymai</string>
   <string name="activity_not_found">Veikla nerasta!</string>
+  <string name="permlab_write_alarms">tiesiogiai pakeisti signalus</string>
+  <string name="permdesc_write_alarms">Leidžia programai pridėti, pakeisti arba ištrinti visus jūsų signalus.</string>
+  <string name="permlab_manage_alarms">perjungti suplanuotus signalus</string>
+  <string name="permdesc_manage_alarms">Ledžia programai įjungti arba išjungti jūsų suplanuotus signalus.</string>
+  <string name="permlab_read_alarms">pasiekti suplanuotus signalus</string>
+  <string name="permdesc_read_alarms">Leidžia programai skaityti jūsų suplanuotus signalus.</string>
+  <string name="alarm_modification_service_desc">Paslauga leidžianti manipuliuoti trečiųjų šalių signalus.</string>
 </resources>

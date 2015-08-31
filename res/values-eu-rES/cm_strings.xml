@@ -59,4 +59,5 @@
   <string name="activity_not_found">Aktibitatea ez da aurkitu!</string>
   <string name="permlab_write_alarms">zuzenean aldatu alarmak</string>
   <string name="permlab_manage_alarms">txandakatu programatutako alarmak</string>
+  <string name="permlab_read_alarms">atzitu programatutako alarmak</string>
 </resources>
