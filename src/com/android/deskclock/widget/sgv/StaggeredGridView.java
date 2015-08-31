@@ -426,7 +426,7 @@ public class StaggeredGridView extends ViewGroup {
      * @return boolean Boolean indicating whether the currently locale is RTL.
      */
     @SuppressLint("NewApi")
-    private boolean isLayoutRtl() {
+    public boolean isLayoutRtl() {
         if (android.os.Build.VERSION.SDK_INT >= android.os.Build.VERSION_CODES.JELLY_BEAN_MR1) {
             return View.LAYOUT_DIRECTION_RTL == getLayoutDirection();
         } else {
