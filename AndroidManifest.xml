@@ -18,6 +18,7 @@
     <uses-permission android:name="android.permission.INTERNET" />
     <uses-permission android:name="android.permission.ACCESS_NETWORK_STATE" />
     <uses-permission android:name="com.android.deskclock.worldclock.permissions.WRITE_DATABASE" />
+    <uses-permission android:name="cyanogenmod.permission.WRITE_SETTINGS" />
 
     <uses-sdk android:minSdkVersion="17" android:targetSdkVersion="21" ></uses-sdk>
 
