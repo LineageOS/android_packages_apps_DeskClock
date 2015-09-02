@@ -99,11 +99,5 @@
     <string name="activity_not_found">Activity not found!</string>
 
     <!-- Permissions for reading/writing DeskClock alarms provider -->
-    <string name="permlab_write_alarms">directly change alarms</string>
-    <string name="permdesc_write_alarms">Allows an app to add, modify or delete all of your alarms.</string>
-    <string name="permlab_manage_alarms">toggle scheduled alarms</string>
-    <string name="permdesc_manage_alarms">Allows an app to turn on or off your scheduled alarms.</string>
-    <string name="permlab_read_alarms">access scheduled alarms</string>
-    <string name="permdesc_read_alarms">Allows an app to read your scheduled alarms.</string>
     <string name="alarm_modification_service_desc">A service to allow manipulation of alarms by third parties.</string>
 </resources>
