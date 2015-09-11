@@ -57,11 +57,5 @@
   <string name="take_persistent_grant_uri_permission_failed_msg">Privzemanje vztrajnega dovoljenja za melodijo zvonjenja je spodletelo</string>
   <string name="menu_item_widget_settings">Nastavitve gradnika</string>
   <string name="activity_not_found">Dejavnost ni bila najdena!</string>
-  <string name="permlab_write_alarms">neposredno spreminjanje budilk</string>
-  <string name="permdesc_write_alarms">Omogoča programu dodajanje, spreminjanje in brisanje vseh vaših budilk.</string>
-  <string name="permlab_manage_alarms">preklop načrtovanih budilk</string>
-  <string name="permdesc_manage_alarms">Omogoča programu vklop in izklop vaših načrtovanih budilk.</string>
-  <string name="permlab_read_alarms">dostop do načrtovanih budilk</string>
-  <string name="permdesc_read_alarms">Omogoča programu branje vaših načrtovanih budilk.</string>
   <string name="alarm_modification_service_desc">Storitev, ki tretjim osebam omogoča upravljanje z budilkami.</string>
 </resources>

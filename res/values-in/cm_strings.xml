@@ -57,11 +57,5 @@
   <string name="take_persistent_grant_uri_permission_failed_msg">Gagal mengambil izin bantuan persisten untuk nada dering</string>
   <string name="menu_item_widget_settings">Pengaturan widget</string>
   <string name="activity_not_found">Aktivitas tidak ditemukan!</string>
-  <string name="permlab_write_alarms">langsung ubah alarm</string>
-  <string name="permdesc_write_alarms">Mengizinkan aplikasi untuk menambah, mengubah atau menghapus semua alarm.</string>
-  <string name="permlab_manage_alarms">hidup/matikan alarm terjadwal</string>
-  <string name="permdesc_manage_alarms">Mengizinkan aplikasi untuk menghidup/matikan alarm terjadwal.</string>
-  <string name="permlab_read_alarms">akses alarm terjadwal</string>
-  <string name="permdesc_read_alarms">Mengizinkan aplikasi untuk melihat alarm terjadwal.</string>
   <string name="alarm_modification_service_desc">Layanan yang mengizinkan manipulasi alarm oleh pihak ketiga.</string>
 </resources>

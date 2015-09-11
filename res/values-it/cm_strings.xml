@@ -57,11 +57,5 @@
   <string name="take_persistent_grant_uri_permission_failed_msg">Impossibile ricevere un\'autorizzazione permanente per la suoneria</string>
   <string name="menu_item_widget_settings">Impostazioni widget</string>
   <string name="activity_not_found">Activity non trovata!</string>
-  <string name="permlab_write_alarms">modifica gli allarmi</string>
-  <string name="permdesc_write_alarms">Consenti all\'app di aggiungere, modificare o eliminare tutti i tuoi allarmi.</string>
-  <string name="permlab_manage_alarms">cambia avvisi programmati</string>
-  <string name="permdesc_manage_alarms">Consenti all\'app di attivare o disattivare i tuoi avvisi programmati.</string>
-  <string name="permlab_read_alarms">accesso avvisi programmati</string>
-  <string name="permdesc_read_alarms">Consenti all\'app di leggere i tuoi avvisi programmati.</string>
   <string name="alarm_modification_service_desc">Un servizio per consentire la manipolazione di allarmi da parte di terzi.</string>
 </resources>

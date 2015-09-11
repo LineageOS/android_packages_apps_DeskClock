@@ -57,11 +57,5 @@
   <string name="take_persistent_grant_uri_permission_failed_msg">ರಿಂಗ್‍ಟೋನ್‍ಗಾಗಿ ನಿರಂತರ ಒಪ್ಪಿಗೆ ಅನುಮತಿಯನ್ನು ಪಡೆಯಲು ವಿಫಲವಾಗಿದೆ</string>
   <string name="menu_item_widget_settings">ವಿಜೆಟ್ ಸೆಟ್ಟಿಂಗ್ಸ್</string>
   <string name="activity_not_found">ಚಟುವಟಿಕೆ ಪತ್ತೆಯಾಗಲಿಲ್ಲ!</string>
-  <string name="permlab_write_alarms">ಅಲಾರಂಗಳನ್ನು ನೇರವಾಗಿ ಬದಲಿಸು</string>
-  <string name="permdesc_write_alarms">ಒಂದು ಆಪ್‍ಗೆ ನಿಮ್ಮ ಎಲ್ಲಾ ಅಲಾರಂಗಳನ್ನು ಅಳಿಸಲು, ಸೇರಿಸಲು, ಅಥವ ಮಾರ್ಪಡಿಸಲು ಅನುಮತಿಸುತ್ತದೆ.</string>
-  <string name="permlab_manage_alarms">ಯಾವುದೇ ಅಲಾರಂಗಳು ನಿಗದಿಯಾಗಿಲ್ಲ</string>
-  <string name="permdesc_manage_alarms">ಒಂದು ಆಪ್‍ಗೆ ನಿಮ್ಮ ನಿಗದಿಪಡಿಸಿದ ಅಲಾರಂಗಳನ್ನು ಆನ್ ಅಥವ ಆಫ್ ಮಾಡಲು ಅನುಮತಿಸುತ್ತದೆ.</string>
-  <string name="permlab_read_alarms">ನಿಗದಿಪಡಿಸಿದ ಅಲಾರಂಗಳನ್ನು ಪ್ರವೇಶಿಸು</string>
-  <string name="permdesc_read_alarms">ಒಂದು ಆಪ್‍ಗೆ ನಿಮ್ಮ ನಿಗದಿಪಡಿಸಿದ ಅಲಾರಂಗಳನ್ನು ಓದಲು ಅನುಮತಿಸುತ್ತದೆ.</string>
   <string name="alarm_modification_service_desc">ತೃತೀಯ ಪಕ್ಷೀಯಗಳಿಗೆ ಅಲಾರಂಗಳನ್ನು ಬದಲಿಸುವ ಸಾಮಾರ್ಥ್ಯವನ್ನು ಅನುಮತಿಸುವ ಒಂದು ಸೇವೆ.</string>
 </resources>

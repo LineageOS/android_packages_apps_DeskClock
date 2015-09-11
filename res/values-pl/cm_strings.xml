@@ -57,11 +57,5 @@
   <string name="take_persistent_grant_uri_permission_failed_msg">Nie udało się nadać trwałych uprawnień dla dzwonka</string>
   <string name="menu_item_widget_settings">Ustawienia widżetów</string>
   <string name="activity_not_found">Aktywność nie znaleziona!</string>
-  <string name="permlab_write_alarms">bezpośrednio zmienia alarmy</string>
-  <string name="permdesc_write_alarms">Pozwala aplikacji dodać, zmodyfikować lub usunąć wszystkie alarmy.</string>
-  <string name="permlab_manage_alarms">przełącza zaplanowane alarmy</string>
-  <string name="permdesc_manage_alarms">Pozwala aplikacji na włączenie lub wyłączenie zaplanowanych alarmów.</string>
-  <string name="permlab_read_alarms">dostęp do zaplanowanych alarmów</string>
-  <string name="permdesc_read_alarms">Pozwala aplikacji na odczyt zaplanowanych alarmów.</string>
   <string name="alarm_modification_service_desc">Usługa umożliwiająca manipulację alarmami przez inne aplikacje.</string>
 </resources>

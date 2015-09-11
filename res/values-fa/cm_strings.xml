@@ -57,11 +57,5 @@
   <string name="take_persistent_grant_uri_permission_failed_msg">گرفتن اجازه دائم برای صدای زنگ ناموفق بود</string>
   <string name="menu_item_widget_settings">تنظیمات ابزارک</string>
   <string name="activity_not_found">فعالیت پیدا نشد!</string>
-  <string name="permlab_write_alarms">به طور مستقیم هشدارها را تغییر می‌دهد</string>
-  <string name="permdesc_write_alarms">به برنامه اجازه افزودن، تغییر یا حذف تمام هشدارهای دستگاه را می‌دهد.</string>
-  <string name="permlab_manage_alarms">تغییر در وضعیت هشدارهای زمان‌بندی شده</string>
-  <string name="permdesc_manage_alarms">به برنامه اجازه می‌دهد هشدارهای زمان‌بندی شده را خاموش یا روشن کند.</string>
-  <string name="permlab_read_alarms">دسترسی به هشدارهای زمان‌بندی شده</string>
-  <string name="permdesc_read_alarms">به برنامه اجازه می‌دهد هشدارهای زمان‌بندی شده را بررسی کند.</string>
   <string name="alarm_modification_service_desc">سرویسی برای تغییر در هشدارها توسط برنامه‌های نصب شده.</string>
 </resources>

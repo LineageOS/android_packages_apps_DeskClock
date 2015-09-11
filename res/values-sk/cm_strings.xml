@@ -57,11 +57,5 @@
   <string name="take_persistent_grant_uri_permission_failed_msg">Nepodarilo sa získať trvalé udelenie povolenia pre zvonenie</string>
   <string name="menu_item_widget_settings">Nastavenia miniaplikácie</string>
   <string name="activity_not_found">Aktivita sa nenašla!</string>
-  <string name="permlab_write_alarms">priamo zmeniť budíky</string>
-  <string name="permdesc_write_alarms">Umožňuje aplikácii pridať, upraviť alebo odstrániť všetky vaše budíky.</string>
-  <string name="permlab_manage_alarms">prepnúť naplánované budíky</string>
-  <string name="permdesc_manage_alarms">Umožňuje aplikácii zapnúť alebo vypnúť všetky naplánované budíky.</string>
-  <string name="permlab_read_alarms">prístup k naplánovaným budíkom</string>
-  <string name="permdesc_read_alarms">Umožňuje aplikácii čítať vaše naplánované budíky.</string>
   <string name="alarm_modification_service_desc">Služba na povolenie manipulácie s budíkmi tretími stranami.</string>
 </resources>

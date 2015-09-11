@@ -41,13 +41,19 @@
   <string name="shake_action_title">搖動操作</string>
   <string name="shake_action_summary" product="tablet">搖動平板電腦將<xliff:g id="action">%s</xliff:g></string>
   <string name="shake_action_summary" product="default">搖動電話將<xliff:g id="action">%s</xliff:g></string>
+  <string name="action_summary_snooze">延遲鬧鐘</string>
   <string name="action_summary_do_nothing">什麼都不做</string>
   <string name="alarm_picker_title">選擇鈴響類型</string>
   <string name="alarm_type_ringtone">鈴聲</string>
+  <string name="alarm_type_playlist">播放清單</string>
   <string name="alarm_type_random">隨機</string>
   <string name="warn_silent_alarm_title">鬧鐘音量是無聲的</string>
   <string name="alarm_select">選擇鬧鐘</string>
   <string name="alarm_select_ringtone">鈴聲</string>
   <string name="alarm_select_external">音樂</string>
   <string name="ringtone_default">預設鈴聲</string>
+  <string name="take_persistent_grant_uri_permission_failed_msg">未能取得此鈴聲的永久授權</string>
+  <string name="menu_item_widget_settings">小工具設定</string>
+  <string name="activity_not_found">找不到活動！</string>
+  <string name="alarm_modification_service_desc">允許第三方操控鬧鐘的服務。</string>
 </resources>

@@ -57,11 +57,5 @@
   <string name="take_persistent_grant_uri_permission_failed_msg">Konnt keng dauerhaf Erlabnis kréie fir de Schelltoun z\'änneren</string>
   <string name="menu_item_widget_settings">Widget-Astellungen</string>
   <string name="activity_not_found">Aktivitéit net fonnt!</string>
-  <string name="permlab_write_alarms">Weckeren direkt änneren</string>
-  <string name="permdesc_write_alarms">Erlaabt der App, Weckeren dobäizesetzen, z\'änneren oder ze läschen.</string>
-  <string name="permlab_manage_alarms">geplangt Weckere wiesselen</string>
-  <string name="permdesc_manage_alarms">Erlaabt der App, geplangt Weckeren z\'aktivéieren oder ze desaktivéieren.</string>
-  <string name="permlab_read_alarms">op geplangt Weckeren zougräifen</string>
-  <string name="permdesc_read_alarms">Erlaabt der App, deng geplangt Weckeren auszeliesen.</string>
   <string name="alarm_modification_service_desc">E Service fir d\'Beaarbechtung vu Weckeren duerch Drëtter z\'erlaben.</string>
 </resources>

@@ -57,11 +57,5 @@
   <string name="take_persistent_grant_uri_permission_failed_msg">Kunne ikke give permanent tilladelse til ringetone</string>
   <string name="menu_item_widget_settings">Widget-indstillinger</string>
   <string name="activity_not_found">Aktivitet ikke fundet!</string>
-  <string name="permlab_write_alarms">ændrer alarmer direkte</string>
-  <string name="permdesc_write_alarms">Tillader en app at tilføje, ændre eller slette alle dine alarmer.</string>
-  <string name="permlab_manage_alarms">skifte planlagte alarmer</string>
-  <string name="permdesc_manage_alarms">Tillader en app at aktivere eller deaktivere dine planlagte alarmer.</string>
-  <string name="permlab_read_alarms">få adgang til planlagte alarmer</string>
-  <string name="permdesc_read_alarms">Tillader en app at læse dine planlagte alarmer.</string>
   <string name="alarm_modification_service_desc">En tjeneste der tillader at manipulere alarmer af tredjepart.</string>
 </resources>

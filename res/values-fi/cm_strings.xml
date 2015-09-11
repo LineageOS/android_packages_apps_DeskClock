@@ -57,11 +57,5 @@
   <string name="take_persistent_grant_uri_permission_failed_msg">Pysyvän käyttöoikeuden ottaminen soittoäänelle epäonnistui</string>
   <string name="menu_item_widget_settings">Widget-asetukset</string>
   <string name="activity_not_found">Aktiviteetteja ei löydy!</string>
-  <string name="permlab_write_alarms">muuta hälytyksiä suoraan</string>
-  <string name="permdesc_write_alarms">Sallii sovelluksen lisätä, muokata tai poistaa kaikki hälytyksesi.</string>
-  <string name="permlab_manage_alarms">ota hälytys käyttöön</string>
-  <string name="permdesc_manage_alarms">Sallii sovelluksen ottaa hälytyksen käyttöön tai poistaa sen käytöstä.</string>
-  <string name="permlab_read_alarms">käyttää ajoitettua hälytystä</string>
-  <string name="permdesc_read_alarms">Sallii sovelluksen lukea ajoitettuja hälytyksiä.</string>
   <string name="alarm_modification_service_desc">Palvelu sallii kolmannen osapuolen manipuloida hälytyksiä.</string>
 </resources>

@@ -57,11 +57,5 @@
   <string name="take_persistent_grant_uri_permission_failed_msg">Kon nie permanente toestemming verleen aan luitoon (uri)</string>
   <string name="menu_item_widget_settings">Legstuk instellings</string>
   <string name="activity_not_found">Aktiwiteit nie gevind!</string>
-  <string name="permlab_write_alarms">verander direk jou wekkers</string>
-  <string name="permdesc_write_alarms">Laat \'n toep toe om by te voeg, te verander of al jou alarms te verwyder.</string>
-  <string name="permlab_manage_alarms">verander geskeduleerde wekkers</string>
-  <string name="permdesc_manage_alarms">Laat \'n toep toe om geskeduleerde wekkers aan en af te skakel.</string>
-  <string name="permlab_read_alarms">toegang na geskeduleerde wekkers</string>
-  <string name="permdesc_read_alarms">Laat \'n toep toe om jou geskeduleerde wekkers te lees.</string>
   <string name="alarm_modification_service_desc">Laat \'n diens toe om wekkers te verander deur derde partye.</string>
 </resources>

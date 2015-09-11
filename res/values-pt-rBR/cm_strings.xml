@@ -57,11 +57,5 @@
   <string name="take_persistent_grant_uri_permission_failed_msg">Falha ao conceder permissão persistente para o toque</string>
   <string name="menu_item_widget_settings">Configurações do widget</string>
   <string name="activity_not_found">Atividade não encontrada!</string>
-  <string name="permlab_write_alarms">alterar os alarmes diretamente</string>
-  <string name="permdesc_write_alarms">Permite a um aplicativo adicionar, modificar ou excluir todos os seus alarmes.</string>
-  <string name="permlab_manage_alarms">alternar os alarmes agendados</string>
-  <string name="permdesc_manage_alarms">Permite a um aplicativo ativar ou desativar seus alarmes agendados.</string>
-  <string name="permlab_read_alarms">acessar os alarmes agendados</string>
-  <string name="permdesc_read_alarms">Permite a um aplicativo ler os alarmes agendados.</string>
   <string name="alarm_modification_service_desc">Um serviço para permitir a manipulação dos alarmes por terceiros.</string>
 </resources>

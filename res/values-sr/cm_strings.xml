@@ -57,11 +57,5 @@
   <string name="take_persistent_grant_uri_permission_failed_msg">Постављање упорне дозволе за тон звона није успело</string>
   <string name="menu_item_widget_settings">Подешавања виџета</string>
   <string name="activity_not_found">Није пронађена активност!</string>
-  <string name="permlab_write_alarms">директна промена аларма</string>
-  <string name="permdesc_write_alarms">Дозвола апликацији да дода, промени или обрише све твоје аларме.</string>
-  <string name="permlab_manage_alarms">Укључи/искључи заказане аларме</string>
-  <string name="permdesc_manage_alarms">Дозвола апликацији да укључи или искључи заказане аларме.</string>
-  <string name="permlab_read_alarms">приступ заказаним алармима</string>
-  <string name="permdesc_read_alarms">Дозвола апликацији да чита заказане аларме.</string>
   <string name="alarm_modification_service_desc">Услуга за дозволу рада са алармима од треће стране.</string>
 </resources>

@@ -57,9 +57,5 @@
   <string name="take_persistent_grant_uri_permission_failed_msg">Dauerhafte Berechtigung zum Ändern des Klingeltons konnte nicht eingeholt werden</string>
   <string name="menu_item_widget_settings">Widget-Einstellungen</string>
   <string name="activity_not_found">Aktivität nicht gefunden!</string>
-  <string name="permlab_write_alarms">Alarme direkt ändern</string>
-  <string name="permdesc_write_alarms">Ermöglicht der App, Alarme hinzuzufügen, zu ändern oder zu löschen.</string>
-  <string name="permdesc_manage_alarms">Ermöglicht der App, geplante Alarme zu aktivieren oder deaktivieren.</string>
-  <string name="permlab_read_alarms">auf geplante Alarme zugreifen</string>
-  <string name="permdesc_read_alarms">Ermöglicht der App, Ihre geplanten Alarme auszulesen.</string>
+  <string name="alarm_modification_service_desc">Ein Dienst, um die Bearbeitung von Alarmen durch Dritte zu ermöglichen.</string>
 </resources>

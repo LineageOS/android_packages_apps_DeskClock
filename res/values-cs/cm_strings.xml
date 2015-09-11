@@ -57,11 +57,5 @@
   <string name="take_persistent_grant_uri_permission_failed_msg">Selhalo trvalé získání práv pro vyzvánění</string>
   <string name="menu_item_widget_settings">Nastavení widgetu</string>
   <string name="activity_not_found">Aktivita nebyla nalezena!</string>
-  <string name="permlab_write_alarms">přímá změna budíků</string>
-  <string name="permdesc_write_alarms">Umožňuje přidat, změnit nebo odebrat budíky.</string>
-  <string name="permlab_manage_alarms">přepnutí naplánovaných budíků</string>
-  <string name="permdesc_manage_alarms">Umožňuje vypnout nebo zapnout naplánované budíky.</string>
-  <string name="permlab_read_alarms">přístup k naplánovaným budíkům</string>
-  <string name="permdesc_read_alarms">Umožní číst naplánované budíky.</string>
   <string name="alarm_modification_service_desc">Služba, umožnující aplikacím třetích stran manipulovat s budíky.</string>
 </resources>

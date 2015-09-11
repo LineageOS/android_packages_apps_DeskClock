@@ -57,7 +57,4 @@
   <string name="take_persistent_grant_uri_permission_failed_msg">Nu s-a reușit preluarea permisiunii persistente pentru tonul de apel</string>
   <string name="menu_item_widget_settings">Setări widget</string>
   <string name="activity_not_found">Activitatea nu a fost găsită!</string>
-  <string name="permlab_write_alarms">schimbă direct alarme</string>
-  <string name="permlab_manage_alarms">comută alarme programate</string>
-  <string name="permlab_read_alarms">accesează alarme programate</string>
 </resources>

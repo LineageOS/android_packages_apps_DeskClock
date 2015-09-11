@@ -57,11 +57,5 @@
   <string name="take_persistent_grant_uri_permission_failed_msg">Error al obtener permiso persistente para el tono de llamada</string>
   <string name="menu_item_widget_settings">Configuración del widget</string>
   <string name="activity_not_found">¡Actividad no encontrada!</string>
-  <string name="permlab_write_alarms">cambiar directamente alarmas</string>
-  <string name="permdesc_write_alarms">Permite a una aplicación añadir, modificar o eliminar todas tus alarmas.</string>
-  <string name="permlab_manage_alarms">activar o desactivar alarmas programadas</string>
-  <string name="permdesc_manage_alarms">Permite a una aplicación activar o desactivar tus alarmas programadas.</string>
-  <string name="permlab_read_alarms">acceder a alarmas programadas</string>
-  <string name="permdesc_read_alarms">Permite a una aplicación leer tus alarmas programadas.</string>
   <string name="alarm_modification_service_desc">Un servicio para permitir la manipulación de alarmas por parte de terceros.</string>
 </resources>

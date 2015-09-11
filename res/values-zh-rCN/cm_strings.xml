@@ -57,11 +57,5 @@
   <string name="take_persistent_grant_uri_permission_failed_msg">获取此铃声的永久授权失败。</string>
   <string name="menu_item_widget_settings">小部件设置</string>
   <string name="activity_not_found">没有找到活动！</string>
-  <string name="permlab_write_alarms">直接修改闹钟</string>
-  <string name="permdesc_write_alarms">允许应用添加、修改或删除您的闹钟。</string>
-  <string name="permlab_manage_alarms">开关已计划的闹钟</string>
-  <string name="permdesc_manage_alarms">允许应用开启或关闭您已计划的闹钟。</string>
-  <string name="permlab_read_alarms">访问已计划的闹钟</string>
-  <string name="permdesc_read_alarms">允许应用读取您已计划的闹钟。</string>
   <string name="alarm_modification_service_desc">允许第三方控制闹钟的服务。</string>
 </resources>

@@ -57,11 +57,5 @@
   <string name="take_persistent_grant_uri_permission_failed_msg">Zil sesi için kalıcı izin alınamadı</string>
   <string name="menu_item_widget_settings">Widget ayarları</string>
   <string name="activity_not_found">İşlem bulunamadı!</string>
-  <string name="permlab_write_alarms">doğrudan alarmları değiştir</string>
-  <string name="permdesc_write_alarms">Uygulamalara alarm ekleme, değiştirme ya da tümünü silme izni verir.</string>
-  <string name="permlab_manage_alarms">alarmları aç/kapa</string>
-  <string name="permdesc_manage_alarms">Uygulamalara planlanmış alarmlara açma kapama izni verir.</string>
-  <string name="permlab_read_alarms">alarmlara eriş</string>
-  <string name="permdesc_read_alarms">Uygulamalara planlanan alarmları okuma izni verir.</string>
   <string name="alarm_modification_service_desc">Bu hizmet alarmların üçüncü taraflarca değiştirilmesine izin verir.</string>
 </resources>

@@ -57,11 +57,5 @@
   <string name="take_persistent_grant_uri_permission_failed_msg">Αποτυχία λήψης μόνιμης παροχής άδειας για τον ήχο κλήσης</string>
   <string name="menu_item_widget_settings">Ρυθμίσεις widget</string>
   <string name="activity_not_found">Η δραστηριότητα δεν βρέθηκε!</string>
-  <string name="permlab_write_alarms">άμεση επεξεργασία αφυπνίσεων</string>
-  <string name="permdesc_write_alarms">Επιτρέπει σε μια εφαρμογή να προσθέσει, να τροποποιήσει ή να διαγράψει όλες τις αφυπνίσεις.</string>
-  <string name="permlab_manage_alarms">εναλλαγή προγραμματισμένων αφυπνίσεων</string>
-  <string name="permdesc_manage_alarms">Επιτρέπει σε μια εφαρμογή να ενεργοποιήσει ή να απενεργοποιήσει τις προγραμματισμένες αφυπνίσεις.</string>
-  <string name="permlab_read_alarms">ανάγνωση προγραμματισμένων αφυπνίσεων</string>
-  <string name="permdesc_read_alarms">Επιτρέπει σε μια εφαρμογή να διαβάσει τις προγραμματισμένες αφυπνίσεις.</string>
   <string name="alarm_modification_service_desc">Μια υπηρεσία που επιτρέπει την χειραγώγηση των αφυπνίσεων από τρίτους.</string>
 </resources>
