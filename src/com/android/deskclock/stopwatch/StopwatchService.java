@@ -244,7 +244,7 @@ public class StopwatchService extends Service {
                 .setContent(remoteViewsCollapsed)
                 .setOngoing(clockRunning)
                 .setDeleteIntent(PendingIntent.getService(context, 0, dismissIntent, 0))
-                .setSmallIcon(R.drawable.ic_tab_stopwatch_activated)
+                .setSmallIcon(R.drawable.stat_notify_stopwatch)
                 .setPriority(Notification.PRIORITY_MAX)
                 .setLocalOnly(true)
                 .build();
