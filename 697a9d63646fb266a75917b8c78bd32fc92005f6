@@ -1,0 +1,27 @@
+{
+  "comments": [
+    {
+      "key": {
+        "uuid": "1f1a1f67_fc5b7851",
+        "filename": "src/com/android/deskclock/stopwatch/StopwatchService.java",
+        "patchSetId": 2
+      },
+      "lineNbr": 247,
+      "author": {
+        "id": 3134
+      },
+      "writtenOn": "2015-09-14T21:36:46Z",
+      "side": 1,
+      "message": "afaik, ic_tab_stopwatch_activate icon is exactly the same than stat_notify_stopwatch icon. IMHO, instead of change the ref, we should remove one of them to save apk space.",
+      "range": {
+        "startLine": 247,
+        "startChar": 41,
+        "endLine": 247,
+        "endChar": 62
+      },
+      "revId": "697a9d63646fb266a75917b8c78bd32fc92005f6",
+      "serverId": "1ec6b3db-b2c1-4fa4-84a2-4c7efe89ba71",
+      "unresolved": false
+    }
+  ]
+}
