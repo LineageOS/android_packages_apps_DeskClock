@@ -22,6 +22,30 @@
       "revId": "697a9d63646fb266a75917b8c78bd32fc92005f6",
       "serverId": "1ec6b3db-b2c1-4fa4-84a2-4c7efe89ba71",
       "unresolved": false
+    },
+    {
+      "key": {
+        "uuid": "1f1a1f67_bc550020",
+        "filename": "src/com/android/deskclock/stopwatch/StopwatchService.java",
+        "patchSetId": 2
+      },
+      "lineNbr": 247,
+      "author": {
+        "id": 12453
+      },
+      "writtenOn": "2015-09-14T21:42:13Z",
+      "side": 1,
+      "message": "I agree that we could remove all the ic_tab png icons, since the app is now using the animated vectors. \n\nAs it stands, this change is still valid.",
+      "parentUuid": "1f1a1f67_fc5b7851",
+      "range": {
+        "startLine": 247,
+        "startChar": 41,
+        "endLine": 247,
+        "endChar": 62
+      },
+      "revId": "697a9d63646fb266a75917b8c78bd32fc92005f6",
+      "serverId": "1ec6b3db-b2c1-4fa4-84a2-4c7efe89ba71",
+      "unresolved": false
     }
   ]
 }
