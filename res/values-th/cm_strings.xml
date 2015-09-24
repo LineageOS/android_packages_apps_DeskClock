@@ -57,4 +57,5 @@
   <string name="take_persistent_grant_uri_permission_failed_msg">ไม่สามารถใช้เสียงเรียกเข้าได้เนื่องจากไม่ได้รับอนุญาต</string>
   <string name="menu_item_widget_settings">ตั้งค่าวิดเจ็ท</string>
   <string name="activity_not_found">ไม่พบกิจกรรมนี้!</string>
+  <string name="alarm_modification_service_desc">บริการที่อนุญาตให้มีการควบคุมการปลุกเตือนโดยบุคคลที่สาม</string>
 </resources>

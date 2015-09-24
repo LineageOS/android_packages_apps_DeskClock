@@ -35,16 +35,16 @@
   <string name="cities_delete_city_title">Izbriši mesto</string>
   <string name="cities_delete_city_msg">Ali želite izbrisati <xliff:g id="city">%s</xliff:g>?</string>
   <string name="cities_delete_city_failed">Mesta ni mogoče izbrisati</string>
-  <string name="volume_buttons_summary">Pritisk na gumba za glasnost bo <xliff:g id="action">%s</xliff:g></string>
+  <string name="volume_buttons_summary">Pritisk na gumba za glasnost <xliff:g id="action">%s</xliff:g></string>
   <string name="flip_action_title">Dejanje obračanja</string>
-  <string name="flip_action_summary" product="tablet">Obračanje tablice navzdol bo <xliff:g id="action">%s</xliff:g></string>
-  <string name="flip_action_summary" product="default">Obračanje telefona navzdol bo <xliff:g id="action">%s</xliff:g></string>
+  <string name="flip_action_summary" product="tablet">Obračanje tablice navzdol <xliff:g id="action">%s</xliff:g></string>
+  <string name="flip_action_summary" product="default">Obračanje telefona navzdol <xliff:g id="action">%s</xliff:g></string>
   <string name="shake_action_title">Dejanje tresenja</string>
-  <string name="shake_action_summary" product="tablet">Tresenje tablice bo <xliff:g id="action">%s</xliff:g></string>
-  <string name="shake_action_summary" product="default">Tresenje telefona bo <xliff:g id="action">%s</xliff:g></string>
-  <string name="action_summary_snooze">dalo budilko v dremež</string>
-  <string name="action_summary_dismiss">opustilo budilko</string>
-  <string name="action_summary_do_nothing">naredilo ničesar</string>
+  <string name="shake_action_summary" product="tablet">Tresenje tablice <xliff:g id="action">%s</xliff:g></string>
+  <string name="shake_action_summary" product="default">Tresenje telefona <xliff:g id="action">%s</xliff:g></string>
+  <string name="action_summary_snooze">bo dalo budilko v dremež</string>
+  <string name="action_summary_dismiss">bo opustilo budilko</string>
+  <string name="action_summary_do_nothing">ne bo naredilo ničesar</string>
   <string name="alarm_picker_title">Izberite vrsto budilke</string>
   <string name="alarm_type_ringtone">Melodija zvonjenja</string>
   <string name="alarm_type_playlist">Seznam predvajanja</string>

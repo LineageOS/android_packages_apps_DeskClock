@@ -161,6 +161,7 @@
   <string name="hours_label_description">Stonnen</string>
   <string name="minutes_label_description">Minutten</string>
   <string name="seconds_label_description">Sekonnen</string>
+  <string name="zero">0</string>
   <string name="sw_share_main">Meng Zäit ass <xliff:g id="time">%s</xliff:g></string>
   <string name="sw_share_laps">Ronnenzäiten:</string>
   <string name="sw_notification_lap_number"><xliff:g id="number">%d</xliff:g>. Ronn</string>
