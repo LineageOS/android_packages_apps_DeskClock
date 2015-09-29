@@ -1163,6 +1163,8 @@
     <!-- Ringtone selection default" -->
     <string name="ringtone_default">"Default ringtone"</string>
 
+    <string name="def_snooze_time" translatable="false">10</string>
+
     <!--used for prompt to user storage permission status-->
     <string name="have_denied_storage_permission">You have denied storage permission,and can manually add this permission again in setting application</string>
 </resources>
