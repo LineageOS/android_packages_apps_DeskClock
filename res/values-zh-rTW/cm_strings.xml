@@ -55,4 +55,6 @@
   <string name="alarm_select_external">音樂</string>
   <string name="ringtone_default">預設鈴聲</string>
   <string name="take_persistent_grant_uri_permission_failed_msg">無法取得此鈴聲的永久授權</string>
+  <string name="menu_item_widget_settings">小工具設定</string>
+  <string name="activity_not_found">找不到活動！</string>
 </resources>
