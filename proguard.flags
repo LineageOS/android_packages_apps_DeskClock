@@ -8,3 +8,7 @@
 -keep class com.android.deskclock.widget.multiwaveview.* {
   *;
 }
+
+-keep class * implements android.os.Parcelable {
+  public static final android.os.Parcelable$Creator *;
+}
