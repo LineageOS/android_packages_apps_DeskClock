@@ -302,6 +302,34 @@ public final class AlarmInstance implements ClockContract.InstancesColumns {
         }
     }
 
+    /**
+     * Get first alarm instance of power off alarm which is the closest missed alarm.
+     *
+     * @param contentResolver to access the content provider
+     */
+    public static AlarmInstance getFirstAlarmInstance(ContentResolver contentResolver) {
+        List<AlarmInstance> alertAlarms = getInstances(contentResolver, null);
+        long currentTime = System.currentTimeMillis();
+
+        AlarmInstance firstAlarm = null;
+        long closestMissAlarmElapse = currentTime;
+
+        for (AlarmInstance ai : alertAlarms) {
+            long time = currentTime - ai.getAlarmTime().getTimeInMillis();
+
+            if (time < 0) {
+                continue;
+            }
+
+            if (closestMissAlarmElapse > time) {
+                firstAlarm = ai;
+                closestMissAlarmElapse = time;
+            }
+        }
+
+        return firstAlarm;
+    }
+
     // Public fields
     public long mId;
     public int mYear;

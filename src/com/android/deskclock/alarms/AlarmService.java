@@ -147,7 +147,9 @@ public class AlarmService extends Service {
         Events.sendEvent(R.string.category_alarm, R.string.action_fire, 0);
 
         mCurrentAlarm = instance;
-        AlarmNotifications.showAlarmNotification(this, mCurrentAlarm);
+        if(!AlarmActivity.mIsPowerOffAlarm) {
+            AlarmNotifications.showAlarmNotification(this, mCurrentAlarm);
+        }
         mInitialCallState = mTelephonyManager.getCallState();
         mTelephonyManager.listen(mPhoneStateListener, PhoneStateListener.LISTEN_CALL_STATE);
         AlarmKlaxon.start(this, mCurrentAlarm);

@@ -35,7 +35,7 @@
     <!-- READ_EXTERNAL_STORAGE is required to play custom ringtones from the SD card prior to M -->
     <!-- It is also required to display user-friendly names for custom ringtones in the UI. -->
     <uses-permission android:name="android.permission.READ_EXTERNAL_STORAGE" />
-
+    <uses-permission android:name="android.permission.SHUTDOWN" />
     <application android:label="@string/app_label"
                  android:name=".DeskClockApplication"
                  android:allowBackup="true"
@@ -105,7 +105,13 @@
                 android:excludeFromRecents="true"
                 android:theme="@style/AlarmAlertFullScreenTheme"
                 android:windowSoftInputMode="stateAlwaysHidden"
-                android:showOnLockScreen="true" />
+                android:showOnLockScreen="true"
+                >
+            <intent-filter>
+                <action android:name="org.codeaurora.alarm.action.POWER_OFF_ALARM" />
+                <category android:name="android.intent.category.DEFAULT" />
+            </intent-filter>
+        </activity>
 
         <activity android:name="ScreensaverActivity"
                 android:excludeFromRecents="true"
