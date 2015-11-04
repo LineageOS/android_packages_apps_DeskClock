@@ -167,7 +167,7 @@ public class AlarmClockFragment extends DeskClockFragment implements
     private View mUndoFrame;
 
     private Alarm mSelectedAlarm;
-    private static final String SEL_AUDIO_SRC = "audio/*";
+    private static final String[] SEL_AUDIO_SRC = {/*"audio/*", */"application/ogg", "application/x-ogg"};
     private static final int SEL_SRC_RINGTONE = 0;
     private static final int SEL_SRC_EXTERNAL = 1;
     private int mSelectSource = SEL_SRC_RINGTONE;
@@ -559,9 +559,11 @@ public class AlarmClockFragment extends DeskClockFragment implements
             AlarmClockFragment.this.startActivityForResult(intent, REQUEST_CODE_RINGTONE);
         } else {
             final Intent intent = new Intent(Intent.ACTION_OPEN_DOCUMENT);
+            intent.addCategory(Intent.CATEGORY_OPENABLE);
+            intent.setType("*/*");
+            intent.putExtra(Intent.EXTRA_MIME_TYPES, SEL_AUDIO_SRC);
             intent.putExtra(RingtoneManager.EXTRA_RINGTONE_EXISTING_URI,
                     AlarmClockFragment.this.mSelectedAlarm.alert);
-            intent.setType(SEL_AUDIO_SRC);
             AlarmClockFragment.this.startActivityForResult(intent, REQUEST_CODE_EXTERN_AUDIO);
         }
     }
