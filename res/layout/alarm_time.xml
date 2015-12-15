@@ -74,7 +74,7 @@
             <CheckBox
                 android:id="@+id/repeat_onoff"
                 android:layout_width="wrap_content"
-                android:layout_height="48dip"
+                android:layout_height="@dimen/touch_target_min_size"
                 android:layout_gravity="center_vertical|start"
                 android:text="@string/alarm_repeat"
                 android:textSize="16sp"
@@ -84,7 +84,7 @@
             <LinearLayout
                 android:id="@+id/repeat_days"
                 android:layout_width="match_parent"
-                android:layout_height="48dip"
+                android:layout_height="@dimen/touch_target_min_size"
                 android:layout_gravity="top"
                 android:orientation="horizontal"
                 android:visibility="gone">
@@ -95,18 +95,16 @@
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
                 android:gravity="center_vertical"
-                android:orientation="horizontal" >
+                android:orientation="vertical" >
 
                 <TextView
                     android:id="@+id/choose_ringtone"
-                    android:layout_width="0dip"
-                    android:layout_height="48dip"
-                    android:layout_weight="1"
-                    android:layout_alignParentStart="true"
+                    android:layout_width="match_parent"
+                    android:layout_height="@dimen/touch_target_min_size"
                     android:background="?android:attr/selectableItemBackground"
                     android:clickable="true"
                     android:paddingStart="4dip"
-                    android:drawablePadding="16dp"
+                    android:drawablePadding="20dp"
                     android:drawableStart="@drawable/ic_ringtone"
                     android:ellipsize="marquee"
                     android:gravity="center_vertical"
@@ -119,11 +117,20 @@
                     />
 
                 <CheckBox
+                    android:id="@+id/increasing_volume_onoff"
+                    android:layout_width="wrap_content"
+                    android:layout_height="@dimen/touch_target_min_size"
+                    android:includeFontPadding="false"
+                    android:text="@string/alarm_increasing_volume"
+                    android:paddingStart="16dip"
+                    android:textSize="16sp"
+                    android:textColor="@color/white"
+                    style="@style/body" />
+
+                <CheckBox
                     android:id="@+id/vibrate_onoff"
                     android:layout_width="wrap_content"
-                    android:layout_height="48dip"
-                    android:layout_alignParentEnd="true"
-                    android:layout_centerVertical="true"
+                    android:layout_height="@dimen/touch_target_min_size"
                     android:includeFontPadding="false"
                     android:text="@string/alarm_vibrate"
                     android:paddingStart="16dip"

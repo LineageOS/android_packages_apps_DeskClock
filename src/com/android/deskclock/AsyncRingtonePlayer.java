@@ -46,9 +46,15 @@ public class AsyncRingtonePlayer {
     // Volume suggested by media team for in-call alarms.
     private static final float IN_CALL_VOLUME = 0.125f;
 
+    // Constants for increasing volume alarms
+    private static final long INCREASING_VOLUME_DELAY = 4000;
+    private static final float INCREASING_VOLUME_START = 0.05f;
+    private static final float INCREASING_VOLUME_DELTA = 0.05f;
+
     // Message codes used with the ringtone thread.
     private static final int EVENT_PLAY = 1;
     private static final int EVENT_STOP = 2;
+    private static final int EVENT_INCREASE_VOLUME = 3;
     private static final String RINGTONE_URI_KEY = "RINGTONE_URI_KEY";
 
     /** Handler running on the ringtone thread. */
@@ -65,15 +71,15 @@ public class AsyncRingtonePlayer {
     }
 
     /** Plays the ringtone. */
-    public void play(Uri ringtoneUri) {
+    public void play(Uri ringtoneUri, boolean increasingVolume) {
         LogUtils.d(TAG, "Posting play.");
-        postMessage(EVENT_PLAY, ringtoneUri);
+        postMessage(EVENT_PLAY, ringtoneUri, increasingVolume);
     }
 
     /** Stops playing the ringtone. */
     public void stop() {
         LogUtils.d(TAG, "Posting stop.");
-        postMessage(EVENT_STOP, null);
+        postMessage(EVENT_STOP, null, false);
     }
 
     /**
@@ -81,7 +87,7 @@ public class AsyncRingtonePlayer {
      *
      * @param messageCode The message to post.
      */
-    private void postMessage(int messageCode, Uri ringtoneUri) {
+    private void postMessage(int messageCode, Uri ringtoneUri, boolean increasingVolume) {
         synchronized (this) {
             if (mHandler == null) {
                 mHandler = getNewHandler();
@@ -93,7 +99,14 @@ public class AsyncRingtonePlayer {
                 bundle.putParcelable(RINGTONE_URI_KEY, ringtoneUri);
                 message.setData(bundle);
             }
+            message.arg1 = increasingVolume ? 1 : 0;
             message.sendToTarget();
+        }
+    }
+
+    private void delayedMessage(int messageCode, long delay) {
+        synchronized (this) {
+            mHandler.sendEmptyMessageDelayed(messageCode, delay);
         }
     }
 
@@ -110,10 +123,21 @@ public class AsyncRingtonePlayer {
                 switch (msg.what) {
                     case EVENT_PLAY:
                         final Uri ringtoneUri = msg.getData().getParcelable(RINGTONE_URI_KEY);
-                        getPlaybackDelegate().play(mContext, ringtoneUri);
+                        final boolean increasingVolume = msg.arg1 == 1;
+                        getPlaybackDelegate().play(mContext, ringtoneUri, increasingVolume);
+                        if (increasingVolume) {
+                            delayedMessage(EVENT_INCREASE_VOLUME, INCREASING_VOLUME_DELAY);
+                        }
                         break;
                     case EVENT_STOP:
+                        removeMessages(EVENT_INCREASE_VOLUME);
                         getPlaybackDelegate().stop(mContext);
+                        break;
+                    case EVENT_INCREASE_VOLUME:
+                        PlaybackDelegate pd = getPlaybackDelegate();
+                        if (pd.isPlaying() && pd.increaseVolume()) {
+                            delayedMessage(EVENT_INCREASE_VOLUME, INCREASING_VOLUME_DELAY);
+                        }
                         break;
                 }
             }
@@ -121,7 +145,7 @@ public class AsyncRingtonePlayer {
     }
 
     /**
-     * @return <code>true</code> iff the device is currently in a telephone call
+     * @return <code>true</code> if the device is currently in a telephone call
      */
     private static boolean isInTelephoneCall(Context context) {
         final TelephonyManager tm = (TelephonyManager)
@@ -169,8 +193,10 @@ public class AsyncRingtonePlayer {
      * vs {@link MediaPlayer}.
      */
     private interface PlaybackDelegate {
-        void play(Context context, Uri ringtoneUri);
+        void play(Context context, Uri ringtoneUri, boolean increasingVolume);
         void stop(Context context);
+        boolean isPlaying();
+        boolean increaseVolume();
     }
 
     /**
@@ -184,11 +210,14 @@ public class AsyncRingtonePlayer {
         /** Non-{@code null} while playing a ringtone; {@code null} otherwise. */
         private MediaPlayer mMediaPlayer;
 
+        private float mMaxVolume;
+        private float mCurrentVolume;
+
         /**
          * Starts the actual playback of the ringtone. Executes on ringtone-thread.
          */
         @Override
-        public void play(final Context context, Uri ringtoneUri) {
+        public void play(final Context context, Uri ringtoneUri, boolean increasingVolume) {
             if (Looper.getMainLooper() == Looper.myLooper()) {
                 LogUtils.e(TAG, "Must not be on the main thread!", new IllegalStateException());
             }
@@ -217,11 +246,12 @@ public class AsyncRingtonePlayer {
             });
 
             try {
+                mMaxVolume = 1f;
                 // Check if we are in a call. If we are, use the in-call alarm resource at a
                 // low volume to not disrupt the call.
                 if (isInTelephoneCall(context)) {
                     LogUtils.v("Using the in-call alarm");
-                    mMediaPlayer.setVolume(IN_CALL_VOLUME, IN_CALL_VOLUME);
+                    mMaxVolume = IN_CALL_VOLUME;
                     alarmNoise = getInCallRingtoneUri(context);
                 }
 
@@ -230,7 +260,7 @@ public class AsyncRingtonePlayer {
                 // installation time. M+, this permission can be revoked by the user any time.
                 mMediaPlayer.setDataSource(context, alarmNoise);
 
-                startAlarm(mMediaPlayer);
+                startAlarm(mMediaPlayer, increasingVolume);
             } catch (Throwable t) {
                 LogUtils.e("Use the fallback ringtone, original was " + alarmNoise, t);
                 // The alarmNoise may be on the sd card which could be busy right now.
@@ -239,7 +269,7 @@ public class AsyncRingtonePlayer {
                     // Must reset the media player to clear the error state.
                     mMediaPlayer.reset();
                     mMediaPlayer.setDataSource(context, getFallbackRingtoneUri(context));
-                    startAlarm(mMediaPlayer);
+                    startAlarm(mMediaPlayer, increasingVolume);
                 } catch (Throwable t2) {
                     // At this point we just don't play anything.
                     LogUtils.e("Failed to play fallback ringtone", t2);
@@ -250,7 +280,7 @@ public class AsyncRingtonePlayer {
         /**
          * Do the common stuff when starting the alarm.
          */
-        private void startAlarm(MediaPlayer player) throws IOException {
+        private void startAlarm(MediaPlayer player, boolean increasingVolume) throws IOException {
             // do not play alarms if stream volume is 0 (typically because ringer mode is silent).
             if (mAudioManager.getStreamVolume(AudioManager.STREAM_ALARM) != 0) {
                 if (Utils.isLOrLater()) {
@@ -260,6 +290,8 @@ public class AsyncRingtonePlayer {
                             .build());
                 }
 
+                mCurrentVolume = increasingVolume ? INCREASING_VOLUME_START : mMaxVolume;
+                player.setVolume(mCurrentVolume, mCurrentVolume);
                 player.setAudioStreamType(AudioManager.STREAM_ALARM);
                 player.setLooping(true);
                 player.prepare();
@@ -288,6 +320,27 @@ public class AsyncRingtonePlayer {
                 mMediaPlayer = null;
             }
         }
+
+        @Override
+        public boolean isPlaying() {
+            return mMediaPlayer != null && mMediaPlayer.isPlaying();
+        }
+
+        /**
+         * @return <code>true</code> if volume should continue to be increased
+         */
+        @Override
+        public boolean increaseVolume() {
+            if (mMediaPlayer != null) {
+                mCurrentVolume += INCREASING_VOLUME_DELTA;
+                if (mCurrentVolume > mMaxVolume) {
+                    mCurrentVolume = mMaxVolume;
+                }
+                mMediaPlayer.setVolume(mCurrentVolume, mCurrentVolume);
+                return mCurrentVolume < mMaxVolume;
+            }
+            return false;
+        }
     }
 
     /**
@@ -307,6 +360,9 @@ public class AsyncRingtonePlayer {
         /** The method to adjust playback looping; cannot be null. */
         private Method mSetLoopingMethod;
 
+        private float mMaxVolume;
+        private float mCurrentVolume;
+
         private RingtonePlaybackDelegate() {
             try {
                 mSetVolumeMethod = Ringtone.class.getDeclaredMethod("setVolume", float.class);
@@ -325,7 +381,7 @@ public class AsyncRingtonePlayer {
          * Starts the actual playback of the ringtone. Executes on ringtone-thread.
          */
         @Override
-        public void play(Context context, Uri ringtoneUri) {
+        public void play(Context context, Uri ringtoneUri, boolean increasingVolume) {
             if (Looper.getMainLooper() == Looper.myLooper()) {
                 LogUtils.e(TAG, "Must not be on the main thread!", new IllegalStateException());
             }
@@ -374,19 +430,27 @@ public class AsyncRingtonePlayer {
                         .build());
             }
 
+            mMaxVolume = 1f;
             // Attempt to adjust the ringtone volume if the user is in a telephone call.
             if (inTelephoneCall) {
                 LogUtils.v("Using the in-call alarm");
-                try {
-                    mSetVolumeMethod.invoke(mRingtone, IN_CALL_VOLUME);
-                } catch (Exception e) {
-                    LogUtils.e(TAG, "Unable to set in-call volume for android.media.Ringtone", e);
-                }
+                mMaxVolume = IN_CALL_VOLUME;
             }
+
+            mCurrentVolume = increasingVolume ? INCREASING_VOLUME_START : mMaxVolume;
 
             mAudioManager.requestAudioFocus(null, AudioManager.STREAM_ALARM,
                     AudioManager.AUDIOFOCUS_GAIN_TRANSIENT);
+            setVolume(mCurrentVolume);
             mRingtone.play();
+        }
+
+        private void setVolume(float volume) {
+            try {
+                mSetVolumeMethod.invoke(mRingtone, volume);
+            } catch (Exception e) {
+                LogUtils.e(TAG, "Unable to set in-call volume for android.media.Ringtone", e);
+            }
         }
 
         /**
@@ -403,11 +467,33 @@ public class AsyncRingtonePlayer {
             if (mRingtone != null && mRingtone.isPlaying()) {
                 LogUtils.d(TAG, "Ringtone.stop() invoked.");
                 mRingtone.stop();
+                mRingtone = null;
             }
 
             if (mAudioManager != null) {
                 mAudioManager.abandonAudioFocus(null);
             }
+        }
+
+        @Override
+        public boolean isPlaying() {
+            return mRingtone != null && mRingtone.isPlaying();
+        }
+
+        /**
+         * @return <code>true</code> if volume should continue to be increased
+         */
+        @Override
+        public boolean increaseVolume() {
+            if (mRingtone != null && mSetVolumeMethod != null) {
+                mCurrentVolume += INCREASING_VOLUME_DELTA;
+                if (mCurrentVolume > mMaxVolume) {
+                    mCurrentVolume = mMaxVolume;
+                }
+                setVolume(mCurrentVolume);
+                return mCurrentVolume < mMaxVolume;
+            }
+            return false;
         }
     }
 }
