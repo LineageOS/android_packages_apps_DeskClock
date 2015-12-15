@@ -573,6 +573,7 @@ public abstract class AlarmClockFragment extends DeskClockFragment implements
             LinearLayout repeatDays;
             CompoundButton[] dayButtons = new CompoundButton[7];
             CheckBox vibrate;
+            CheckBox increasingVolume;
             TextView ringtone;
             View hairLine;
             View arrow;
@@ -713,6 +714,7 @@ public abstract class AlarmClockFragment extends DeskClockFragment implements
                 holder.dayButtons[i] = dayButton;
             }
             holder.vibrate = (CheckBox) view.findViewById(R.id.vibrate_onoff);
+            holder.increasingVolume = (CheckBox) view.findViewById(R.id.increasing_volume_onoff);
             holder.ringtone = (TextView) view.findViewById(R.id.choose_ringtone);
 
             view.setTag(holder);
@@ -1050,6 +1052,17 @@ public abstract class AlarmClockFragment extends DeskClockFragment implements
                 @Override
                 public void onClick(View view) {
                     launchRingTonePicker(alarm);
+                }
+            });
+
+            itemHolder.increasingVolume.setVisibility(View.VISIBLE);
+            itemHolder.increasingVolume.setChecked(alarm.increasingVolume);
+            itemHolder.increasingVolume.setOnClickListener(new View.OnClickListener() {
+                @Override
+                public void onClick(View v) {
+                    final boolean checked = ((CheckBox) v).isChecked();
+                    alarm.increasingVolume = checked;
+                    asyncUpdateAlarm(alarm, false);
                 }
             });
         }
