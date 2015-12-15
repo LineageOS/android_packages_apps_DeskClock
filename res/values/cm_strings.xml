@@ -20,4 +20,7 @@
 
     <!-- Setting summary for showing/hiding the alarm statusbar icon -->
     <string name="show_status_bar_icon_summary">Show an icon in the status bar when an alarm is set</string>
+
+    <!-- Setting labels on Set alarm screen: Increasing volume on or off -->
+    <string name="alarm_increasing_volume">Increasing volume</string>
 </resources>
