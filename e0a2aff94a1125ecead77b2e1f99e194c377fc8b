@@ -34,6 +34,24 @@
       "revId": "e0a2aff94a1125ecead77b2e1f99e194c377fc8b",
       "serverId": "1ec6b3db-b2c1-4fa4-84a2-4c7efe89ba71",
       "unresolved": false
+    },
+    {
+      "key": {
+        "uuid": "9f6a8fd7_daf781d4",
+        "filename": "src/com/android/deskclock/AlarmClockFragment.java",
+        "patchSetId": 4
+      },
+      "lineNbr": 140,
+      "author": {
+        "id": 7841
+      },
+      "writtenOn": "2015-12-19T04:49:25Z",
+      "side": 1,
+      "message": "Aren\u0027t broadcasts delivered from the Binder thread pool?",
+      "parentUuid": "9f6a8fd7_1a7df96d",
+      "revId": "e0a2aff94a1125ecead77b2e1f99e194c377fc8b",
+      "serverId": "1ec6b3db-b2c1-4fa4-84a2-4c7efe89ba71",
+      "unresolved": false
     }
   ]
 }
