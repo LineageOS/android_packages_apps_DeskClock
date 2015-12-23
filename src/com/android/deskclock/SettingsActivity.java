@@ -21,10 +21,13 @@ import android.app.Activity;
 import android.content.Context;
 import android.content.Intent;
 import android.content.res.Resources;
+import android.hardware.Sensor;
+import android.hardware.SensorManager;
 import android.media.AudioManager;
 import android.os.Bundle;
 import android.preference.ListPreference;
 import android.preference.Preference;
+import android.preference.PreferenceCategory;
 import android.preference.PreferenceFragment;
 import android.preference.SwitchPreference;
 import android.text.format.DateUtils;
@@ -48,6 +51,8 @@ public class SettingsActivity extends BaseActivity {
     public static final String KEY_ALARM_SNOOZE = "snooze_duration";
     public static final String KEY_ALARM_VOLUME = "volume_setting";
     public static final String KEY_VOLUME_BEHAVIOR = "volume_button_setting";
+    public static final String KEY_FLIP_ACTION = "flip_action";
+    public static final String KEY_SHAKE_ACTION = "shake_action";
     public static final String KEY_AUTO_SILENCE = "auto_silence";
     public static final String KEY_CLOCK_STYLE = "clock_style";
     public static final String KEY_HOME_TZ = "home_time_zone";
@@ -55,6 +60,7 @@ public class SettingsActivity extends BaseActivity {
     public static final String KEY_VOLUME_BUTTONS = "volume_button_setting";
     public static final String KEY_WEEK_START = "week_start";
     public static final String KEY_SHOW_ALARM_ICON = "show_status_bar_icon";
+    public static final String KEY_ALARM_SETTINGS = "key_alarm_settings";
 
     public static final String DEFAULT_VOLUME_BEHAVIOR = "0";
     public static final String VOLUME_BEHAVIOR_SNOOZE = "1";
@@ -148,9 +154,14 @@ public class SettingsActivity extends BaseActivity {
                 homeTimeZonePref.setEnabled(!autoHomeClockEnabled);
                 notifyHomeTimeZoneChanged();
             } else if (KEY_VOLUME_BUTTONS.equals(pref.getKey())) {
-                final ListPreference volumeButtonsPref = (ListPreference) pref;
-                final int index = volumeButtonsPref.findIndexOfValue((String) newValue);
-                volumeButtonsPref.setSummary(volumeButtonsPref.getEntries()[index]);
+                final ListPreference listPref = (ListPreference) pref;
+                updateActionSummary(listPref, (String) newValue, R.string.volume_buttons_summary);
+            } else if (KEY_FLIP_ACTION.equals(pref.getKey())) {
+                final ListPreference listPref = (ListPreference) pref;
+                updateActionSummary(listPref, (String) newValue, R.string.flip_action_summary);
+            } else if (KEY_SHAKE_ACTION.equals(pref.getKey())) {
+                final ListPreference listPref = (ListPreference) pref;
+                updateActionSummary(listPref, (String) newValue, R.string.shake_action_summary);
             } else if (KEY_WEEK_START.equals(pref.getKey())) {
                 final ListPreference weekStartPref = (ListPreference) findPreference(KEY_WEEK_START);
                 final int idx = weekStartPref.findIndexOfValue((String) newValue);
@@ -234,10 +245,42 @@ public class SettingsActivity extends BaseActivity {
             homeTimezonePref.setSummary(homeTimezonePref.getEntry());
             homeTimezonePref.setOnPreferenceChangeListener(this);
 
-            final ListPreference volumeButtonsPref =
-                    (ListPreference) findPreference(KEY_VOLUME_BUTTONS);
-            volumeButtonsPref.setSummary(volumeButtonsPref.getEntry());
+            final ListPreference volumeButtonsPref = (ListPreference) findPreference(KEY_VOLUME_BUTTONS);
+            updateActionSummary(volumeButtonsPref, volumeButtonsPref.getValue(), R.string.volume_buttons_summary);
             volumeButtonsPref.setOnPreferenceChangeListener(this);
+
+            SensorManager sensorManager = (SensorManager)
+                    getActivity().getSystemService(Context.SENSOR_SERVICE);
+
+            final ListPreference flipActionPref = (ListPreference) findPreference(KEY_FLIP_ACTION);
+            if (flipActionPref != null) {
+                List<Sensor> sensorList = sensorManager.getSensorList(Sensor.TYPE_ORIENTATION);
+                if (sensorList.size() < 1) { // This will be true if no orientation sensor
+                    flipActionPref.setValue("0"); // Turn it off
+                    PreferenceCategory category = (PreferenceCategory) findPreference(KEY_ALARM_SETTINGS);
+                    if (category != null) {
+                        category.removePreference(flipActionPref);
+                    }
+                } else {
+                    updateActionSummary(flipActionPref, flipActionPref.getValue(), R.string.flip_action_summary);
+                    flipActionPref.setOnPreferenceChangeListener(this);
+                }
+            }
+
+            final ListPreference shakeActionPref = (ListPreference) findPreference(KEY_SHAKE_ACTION);
+            if (shakeActionPref != null) {
+                List<Sensor> sensorList = sensorManager.getSensorList(Sensor.TYPE_ACCELEROMETER);
+                if (sensorList.size() < 1) { // This will be true if no accelerometer sensor
+                    shakeActionPref.setValue("0"); // Turn it off
+                    PreferenceCategory category = (PreferenceCategory) findPreference(KEY_ALARM_SETTINGS);
+                    if (category != null) {
+                        category.removePreference(shakeActionPref);
+                    }
+                } else {
+                    updateActionSummary(shakeActionPref, shakeActionPref.getValue(), R.string.shake_action_summary);
+                    shakeActionPref.setOnPreferenceChangeListener(this);
+                }
+            }
 
             final Preference volumePref = findPreference(KEY_ALARM_VOLUME);
             volumePref.setOnPreferenceClickListener(this);
@@ -273,6 +316,12 @@ public class SettingsActivity extends BaseActivity {
         private void notifyHomeTimeZoneChanged() {
             Intent i = new Intent(Cities.WORLDCLOCK_UPDATE_INTENT);
             getActivity().sendBroadcast(i);
+        }
+
+        private void updateActionSummary(ListPreference listPref, String action, int summaryResId) {
+            int i = Integer.parseInt(action);
+            listPref.setSummary(getString(summaryResId,
+                    getResources().getStringArray(R.array.action_summary_entries)[i]));
         }
 
         private class TimeZoneRow implements Comparable<TimeZoneRow> {
