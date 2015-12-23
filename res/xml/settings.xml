@@ -92,6 +92,22 @@
             android:entryValues="@array/week_start_values"
             android:key="week_start"
             android:title="@string/week_start_title" />
+
+        <ListPreference
+            android:key="flip_action"
+            android:title="@string/flip_action_title"
+            android:dialogTitle="@string/flip_action_title"
+            android:entries="@array/action_setting_entries"
+            android:entryValues="@array/volume_button_setting_values"
+            android:defaultValue="0" />
+
+        <ListPreference
+            android:key="shake_action"
+            android:title="@string/shake_action_title"
+            android:dialogTitle="@string/shake_action_title"
+            android:entries="@array/action_setting_entries"
+            android:entryValues="@array/volume_button_setting_values"
+            android:defaultValue="0" />
     </PreferenceCategory>
 
     <PreferenceCategory
