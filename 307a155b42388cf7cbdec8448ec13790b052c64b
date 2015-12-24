@@ -16,6 +16,24 @@
       "revId": "307a155b42388cf7cbdec8448ec13790b052c64b",
       "serverId": "1ec6b3db-b2c1-4fa4-84a2-4c7efe89ba71",
       "unresolved": false
+    },
+    {
+      "key": {
+        "uuid": "7f7f9b97_93501335",
+        "filename": "src/com/android/deskclock/provider/Alarm.java",
+        "patchSetId": 4
+      },
+      "lineNbr": 463,
+      "author": {
+        "id": 7841
+      },
+      "writtenOn": "2015-12-24T07:14:06Z",
+      "side": 1,
+      "message": "It wasn\u0027t part of the code in CM13 desk clock, and the contents of this method were what was moved directly from AlarmClockFragment, so I felt it would be better to use the current version of the moved code.\n\nWas the takePersistableUriPermission something we added? One thing worth noting is that the AlarmKlaxon in CM13 is now played using a special Ringtone class rather than MediaPlayer, which apparently has special magic around Ringtones stored in places other than main storage, so that may be the reason for the change.",
+      "parentUuid": "7f7f9b97_93c253e9",
+      "revId": "307a155b42388cf7cbdec8448ec13790b052c64b",
+      "serverId": "1ec6b3db-b2c1-4fa4-84a2-4c7efe89ba71",
+      "unresolved": false
     }
   ]
 }
