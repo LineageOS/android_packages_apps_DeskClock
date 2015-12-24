@@ -34,6 +34,24 @@
       "revId": "307a155b42388cf7cbdec8448ec13790b052c64b",
       "serverId": "1ec6b3db-b2c1-4fa4-84a2-4c7efe89ba71",
       "unresolved": false
+    },
+    {
+      "key": {
+        "uuid": "7f7f9b97_3656cd08",
+        "filename": "src/com/android/deskclock/provider/Alarm.java",
+        "patchSetId": 4
+      },
+      "lineNbr": 463,
+      "author": {
+        "id": 10394
+      },
+      "writtenOn": "2015-12-24T09:06:04Z",
+      "side": 1,
+      "message": "looking deeper it doesn\u0027t look like it is needed here - only when you select a ringtone from an external source then it\u0027s needed so i think it should be ok to remove",
+      "parentUuid": "7f7f9b97_93501335",
+      "revId": "307a155b42388cf7cbdec8448ec13790b052c64b",
+      "serverId": "1ec6b3db-b2c1-4fa4-84a2-4c7efe89ba71",
+      "unresolved": false
     }
   ]
 }
