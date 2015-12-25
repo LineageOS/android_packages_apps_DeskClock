@@ -19,6 +19,43 @@
   <string name="show_status_bar_icon_title">Amosar a icona</string>
   <string name="show_status_bar_icon_summary">Amosar unha icona na barra de estado cando haxa unha alarma definida</string>
   <string name="alarm_increasing_volume">Aumentar o volume</string>
+  <string name="profile_description">Perfil <xliff:g id="profile">%s</xliff:g></string>
   <string name="profile_no_selected">Non hai ningún perfil seleccionado</string>
   <string name="menu_item_add">Engadir</string>
+  <string name="cities_add_city_title">Engadir unha cidade</string>
+  <string name="cities_add_city_city">Cidade:</string>
+  <string name="cities_add_city_timezone">Zona horaria:</string>
+  <string name="cities_add_city_gps_cd">Toque para localizar a súa cidade actual</string>
+  <string name="cities_add_loading">Cargando\u2026</string>
+  <string name="cities_add_searching">Buscando\u2026</string>
+  <string name="cities_add_gps_no_results">A consulta GPS non obtivo ningún resultado de localización</string>
+  <string name="cities_add_gps_not_available">O GPS non está dispoñíbel</string>
+  <string name="cities_add_already_exists">A cidade xa existe na base de datos</string>
+  <string name="cities_add_city_failed">Non é posíbel crear a cidade</string>
+  <string name="cities_delete_city_title">Eliminar a cidade</string>
+  <string name="cities_delete_city_msg">Confirma que quere eliminar <xliff:g id="city">%s</xliff:g>?</string>
+  <string name="cities_delete_city_failed">Non é posíbel eliminar a cidade</string>
+  <string name="volume_buttons_summary">Ao premer os botóns de volume vai <xliff:g id="action">%s</xliff:g></string>
+  <string name="flip_action_title">Acción de xiro</string>
+  <string name="flip_action_summary" product="tablet">Xirando a tableta cara abaixo vai <xliff:g id="action">%s</xliff:g></string>
+  <string name="flip_action_summary" product="default">Xirando o teléfono cara abaixo vai <xliff:g id="action">%s</xliff:g></string>
+  <string name="shake_action_title">Acción de mexer</string>
+  <string name="shake_action_summary" product="tablet">Mexendo a tableta vai <xliff:g id="action">%s</xliff:g></string>
+  <string name="shake_action_summary" product="default">Mexendo o teléfono vai <xliff:g id="action">%s</xliff:g></string>
+  <string name="action_summary_snooze">repetir a alarma</string>
+  <string name="action_summary_dismiss">desestimar a alarma</string>
+  <string name="action_summary_do_nothing">non facer nada</string>
+  <string name="alarm_picker_title">Escoller o tipo de alarma</string>
+  <string name="alarm_type_ringtone">Ton de chamada</string>
+  <string name="alarm_type_playlist">Lista de reprodución</string>
+  <string name="alarm_type_random">Ao chou</string>
+  <string name="warn_silent_alarm_title">O volume da alarma está silenciado</string>
+  <string name="alarm_select">Seleccionar a alarma</string>
+  <string name="alarm_select_ringtone">Ton de chamada</string>
+  <string name="alarm_select_external">Música</string>
+  <string name="ringtone_default">Ton predeterminado</string>
+  <string name="take_persistent_grant_uri_permission_failed_msg">Produciuse un fallo ao estabelecer os permisos persistentes para un ton de chamada</string>
+  <string name="menu_item_widget_settings">Configuración do trebello</string>
+  <string name="activity_not_found">Actividade non atopada!</string>
+  <string name="alarm_modification_service_desc">Este servizo permite que terceiras partes manipulen as alarmas.</string>
 </resources>
