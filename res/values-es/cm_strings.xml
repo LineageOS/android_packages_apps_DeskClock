@@ -18,7 +18,6 @@
 <resources xmlns:xliff="urn:oasis:names:tc:xliff:document:1.2">
   <string name="show_status_bar_icon_title">Mostrar icono</string>
   <string name="show_status_bar_icon_summary">Mostrar un icono en la barra de estado cuando haya alguna alarma establecida</string>
-  <string name="alarm_increasing_volume">Volumen ascendente</string>
   <string name="profile_description">Perfil <xliff:g id="profile">%s</xliff:g></string>
   <string name="profile_no_selected">Ningún perfil seleccionado</string>
   <string name="menu_item_add">Añadir</string>
@@ -31,31 +30,18 @@
   <string name="cities_add_gps_no_results">La consulta GPS no devolvió ninguna localización</string>
   <string name="cities_add_gps_not_available">GPS no disponible</string>
   <string name="cities_add_already_exists">La ciudad ya existe en la base de datos</string>
-  <string name="cities_add_city_failed">Imposible crear la ciudad</string>
+  <string name="cities_add_city_failed">No se puede crear la ciudad</string>
   <string name="cities_delete_city_title">Eliminar ciudad</string>
-  <string name="cities_delete_city_msg">¿Deseas eliminar <xliff:g id="city">%s</xliff:g>?</string>
-  <string name="cities_delete_city_failed">Imposible eliminar la ciudad</string>
-  <string name="volume_buttons_summary">Al presionar los botones de volumen <xliff:g id="action">%s</xliff:g></string>
-  <string name="flip_action_title">Acción al voltear</string>
-  <string name="flip_action_summary" product="tablet"><xliff:g id="action">%s</xliff:g></string>
-  <string name="flip_action_summary" product="default"><xliff:g id="action">%s</xliff:g></string>
-  <string name="shake_action_title">Acción al agitar</string>
-  <string name="shake_action_summary" product="tablet"><xliff:g id="action">%s</xliff:g></string>
-  <string name="shake_action_summary" product="default"><xliff:g id="action">%s</xliff:g></string>
-  <string name="action_summary_snooze">repetir la alarma</string>
+  <string name="cities_delete_city_msg">¿Deseas eliminar a <xliff:g id="city">%s</xliff:g>?</string>
+  <string name="cities_delete_city_failed">No se puede eliminar la ciudad</string>
+  <string name="shake_action_summary" product="tablet">Al agitar el tablet, <xliff:g id="action">%s</xliff:g></string>
+  <string name="shake_action_summary" product="default">Al agitar el teléfono, <xliff:g id="action">%s</xliff:g></string>
   <string name="action_summary_dismiss">descartar la alarma</string>
   <string name="action_summary_do_nothing">no hacer nada</string>
-  <string name="alarm_picker_title">Tono de alarma</string>
-  <string name="alarm_type_ringtone">Personalizado</string>
+  <string name="alarm_picker_title">Elige el tipo de alarma</string>
   <string name="alarm_type_playlist">Lista de reproducción</string>
   <string name="alarm_type_random">Aleatorio</string>
-  <string name="warn_silent_alarm_title">Volumen de la alarma en silencio</string>
-  <string name="alarm_select">Tipo de aviso</string>
-  <string name="alarm_select_ringtone">Tono de llamada</string>
-  <string name="alarm_select_external">Música</string>
-  <string name="ringtone_default">Tono por defecto</string>
-  <string name="take_persistent_grant_uri_permission_failed_msg">Error al obtener permiso persistente para el tono de llamada</string>
-  <string name="menu_item_widget_settings">Configuración del widget</string>
-  <string name="activity_not_found">¡Actividad no encontrada!</string>
+  <string name="warn_silent_alarm_title">El volumen de la alarma está en silencio</string>
+  <string name="alarm_select">Seleccionar aviso</string>
   <string name="alarm_modification_service_desc">Un servicio para permitir la manipulación de alarmas por parte de terceros.</string>
 </resources>
