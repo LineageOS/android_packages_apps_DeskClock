@@ -55,4 +55,7 @@
   <string name="alarm_select_external">Music</string>
   <string name="ringtone_default">Default ringtone</string>
   <string name="take_persistent_grant_uri_permission_failed_msg">Failed to take persistent grant permission for ringtone</string>
+  <string name="menu_item_widget_settings">Widget settings</string>
+  <string name="activity_not_found">Activity not found!</string>
+  <string name="alarm_modification_service_desc">A service to allow manipulation of alarms by third parties.</string>
 </resources>
