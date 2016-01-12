@@ -57,4 +57,5 @@
   <string name="take_persistent_grant_uri_permission_failed_msg">فشل أخذ إذن دائم للنغمة</string>
   <string name="menu_item_widget_settings">إعدادات التطبيق المصغر</string>
   <string name="activity_not_found">لم يتم العثور على النشاط!</string>
+  <string name="alarm_modification_service_desc">خدمة تتيح معالجة التنبيهات من خلال الأطراف الخارجية.</string>
 </resources>
