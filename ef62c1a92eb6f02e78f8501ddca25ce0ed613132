@@ -1,0 +1,21 @@
+{
+  "comments": [
+    {
+      "key": {
+        "uuid": "1fcbff3d_3c21c64e",
+        "filename": "res/values/cm_arrays.xml",
+        "patchSetId": 3
+      },
+      "lineNbr": 26,
+      "author": {
+        "id": 2881
+      },
+      "writtenOn": "2016-01-19T22:01:36Z",
+      "side": 1,
+      "message": "Should be translatable\u003dfalse",
+      "revId": "ef62c1a92eb6f02e78f8501ddca25ce0ed613132",
+      "serverId": "1ec6b3db-b2c1-4fa4-84a2-4c7efe89ba71",
+      "unresolved": false
+    }
+  ]
+}
