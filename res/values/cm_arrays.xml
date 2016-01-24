@@ -23,7 +23,7 @@
       <item>@string/action_summary_do_nothing</item>
     </string-array>
 
-    <array name="background_color_by_hour">
+    <array name="background_color_by_hour" translatable="false">
         <item>@color/hour_00</item>
         <item>@color/hour_01</item>
         <item>@color/hour_02</item>
