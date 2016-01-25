@@ -33,4 +33,5 @@
   <string name="alarm_increasing_volume">رفع مستوى الصوت</string>
   <string name="profile_description">ملف تعريف <xliff:g id="profile">%s</xliff:g></string>
   <string name="profile_no_selected">لا ملف تعريفي محدد</string>
+  <string name="alarm_modification_service_desc">خدمة تتيح معالجة التنبيهات من خلال الأطراف الخارجية.</string>
 </resources>
