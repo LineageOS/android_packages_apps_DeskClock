@@ -745,9 +745,7 @@ public class Utils {
     // Return the first day of the week value corresponding to Calendar.<WEEKDAY> value, which is
     // 1-indexed starting with Sunday.
     public static int getFirstDayOfWeek(Context context) {
-        return Integer.parseInt(PreferenceManager
-                .getDefaultSharedPreferences(context)
-                .getString(SettingsActivity.KEY_WEEK_START, String.valueOf(DEFAULT_WEEK_START)));
+        return Calendar.getInstance(Locale.getDefault()).getFirstDayOfWeek();
     }
 
     // Return the first day of the week value corresponding to a week with Sunday at 0 index.
