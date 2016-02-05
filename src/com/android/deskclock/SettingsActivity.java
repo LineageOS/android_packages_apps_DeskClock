@@ -298,6 +298,12 @@ public class SettingsActivity extends BaseActivity {
             weekStartPref.setSummary(weekStartPref.getEntries()[idx]);
             weekStartPref.setOnPreferenceChangeListener(this);
 
+            // Remove this. We're dynamically binding week start to the locale, but
+            // piggybacking on the backing code for this setting
+            PreferenceCategory alrmCategory = (PreferenceCategory)
+                    getPreferenceScreen().findPreference(KEY_ALARM_SETTINGS);
+            alrmCategory.removePreference(alrmCategory.findPreference(KEY_WEEK_START));
+
             final SwitchPreference showAlarmIconPref =
                     (SwitchPreference) findPreference(KEY_SHOW_ALARM_ICON);
             showAlarmIconPref.setOnPreferenceChangeListener(this);
