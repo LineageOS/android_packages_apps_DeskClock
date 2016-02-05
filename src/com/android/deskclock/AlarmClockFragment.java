@@ -84,7 +84,6 @@ import com.android.deskclock.widget.TextTime;
 
 import java.util.Calendar;
 import java.util.HashSet;
-import java.util.Locale;
 import java.util.UUID;
 
 import cyanogenmod.app.Profile;
@@ -626,8 +625,16 @@ public abstract class AlarmClockFragment extends DeskClockFragment implements
         // Determines the order that days of the week are shown in the UI
         private int[] mDayOrder;
 
-        // The array is filled when the adapter is created
-        private final int[] DAY_ORDER = new int[7];
+        // A reference used to create mDayOrder
+        private final int[] DAY_ORDER = new int[] {
+                Calendar.SUNDAY,
+                Calendar.MONDAY,
+                Calendar.TUESDAY,
+                Calendar.WEDNESDAY,
+                Calendar.THURSDAY,
+                Calendar.FRIDAY,
+                Calendar.SATURDAY,
+        };
 
         public class ItemHolder {
 
@@ -679,15 +686,6 @@ public abstract class AlarmClockFragment extends DeskClockFragment implements
             mContext = context;
             mFactory = LayoutInflater.from(context);
             mList = list;
-
-            int firstDayOfWeek = Calendar.getInstance(Locale.getDefault()).getFirstDayOfWeek();
-            int j = 0;
-            for (int i = firstDayOfWeek; i <= DAY_ORDER.length; i++, j++) {
-                DAY_ORDER[j] = i;
-            }
-            for (int i = Calendar.SUNDAY; i < firstDayOfWeek; i++, j++) {
-                DAY_ORDER[j] = i;
-            }
 
             Resources res = mContext.getResources();
 
