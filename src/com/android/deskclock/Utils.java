@@ -777,11 +777,15 @@ public class Utils {
         final SimpleDateFormat shortFormat = new SimpleDateFormat(DATE_FORMAT_SHORT);
         final SimpleDateFormat longFormat = new SimpleDateFormat(DATE_FORMAT_LONG);
 
+        final int firstDayOfWeek = Calendar.getInstance(Locale.getDefault()).getFirstDayOfWeek();
+        final int dayOfWeekOffset = firstDayOfWeek - Calendar.SUNDAY;
+
         // Create a date (2014/07/20) that is a Sunday
         final long aSunday = new GregorianCalendar(2014, Calendar.JULY, 20).getTimeInMillis();
 
+
         for (int i = 0; i < DaysOfWeek.DAYS_IN_A_WEEK; i++) {
-            final long dayMillis = aSunday + i * DateUtils.DAY_IN_MILLIS;
+            final long dayMillis = aSunday + ( i + dayOfWeekOffset ) * DateUtils.DAY_IN_MILLIS;
             sShortWeekdays[i] = shortFormat.format(new Date(dayMillis));
             sLongWeekdays[i] = longFormat.format(new Date(dayMillis));
         }
