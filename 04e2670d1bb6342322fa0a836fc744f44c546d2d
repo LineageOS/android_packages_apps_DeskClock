@@ -1,0 +1,21 @@
+{
+  "comments": [
+    {
+      "key": {
+        "uuid": "ffb9cba7_d07c3422",
+        "filename": "src/com/android/deskclock/SettingsActivity.java",
+        "patchSetId": 2
+      },
+      "lineNbr": 303,
+      "author": {
+        "id": 1063
+      },
+      "writtenOn": "2016-02-08T14:15:52Z",
+      "side": 1,
+      "message": "alrmCategory -\u003e alarmCategory?\n\nIn any case, why not remove this in XML?",
+      "revId": "04e2670d1bb6342322fa0a836fc744f44c546d2d",
+      "serverId": "1ec6b3db-b2c1-4fa4-84a2-4c7efe89ba71",
+      "unresolved": false
+    }
+  ]
+}
