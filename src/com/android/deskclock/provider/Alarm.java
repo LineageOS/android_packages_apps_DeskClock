@@ -323,7 +323,7 @@ public final class Alarm implements Parcelable, ClockContract.AlarmsColumns {
         alert = p.readParcelable(null);
         deleteAfterUse = p.readInt() == 1;
         increasingVolume = p.readInt() == 1;
-        profile = ParcelUuid.CREATOR.createFromParcel(p).getUuid();
+        profile = ((ParcelUuid) p.readParcelable(null)).getUuid();
     }
 
     public Alarm(Cursor c, Uri defaultRingtoneUri) {
