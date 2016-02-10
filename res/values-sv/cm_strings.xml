@@ -57,4 +57,5 @@
   <string name="take_persistent_grant_uri_permission_failed_msg">Det gick inte att ge behörighet för ringsignal</string>
   <string name="menu_item_widget_settings">Widget-inställningar</string>
   <string name="activity_not_found">Aktivitet hittades inte!</string>
+  <string name="alarm_modification_service_desc">En tjänst för att tillåta manipulation av alarm av tredje part.</string>
 </resources>
