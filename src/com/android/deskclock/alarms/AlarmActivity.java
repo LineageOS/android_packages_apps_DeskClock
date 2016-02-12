@@ -41,7 +41,6 @@ import android.os.Bundle;
 import android.os.Handler;
 import android.os.IBinder;
 import android.os.Message;
-import android.os.RemoteException;
 import android.preference.PreferenceManager;
 import android.provider.Settings;
 import android.support.annotation.NonNull;
@@ -203,10 +202,10 @@ public class AlarmActivity extends AppCompatActivity
         mContext = getApplicationContext();
 
         if (mIsPowerOffAlarm) {
-            mAlarmInstance = AlarmInstance.getFirstAlarmInstance(mContext.getContentResolver());
-
+            // if we are invoked by a power off alarm, we may have just missed the alarm
+            // time if the boot took unusually long (we normally wake up two minutes early)
+            mAlarmInstance = AlarmInstance.getFirstMissedInstance(mContext.getContentResolver());
             Settings.System.putInt(mContext.getContentResolver(), POWER_OFF_ALARM_MODE, 1);
-
         } else if (intentData != null) {
             long instanceId = AlarmInstance.getId(intentData);
             mAlarmInstance = AlarmInstance.getInstance(this.getContentResolver(), instanceId);
@@ -376,7 +375,7 @@ public class AlarmActivity extends AppCompatActivity
     @Override
     protected void onDestroy() {
         super.onDestroy();
-        if (mIsPowerOffAlarm) {
+        if (mIsPowerOffAlarm && mAlarmInstance != null) {
             // Boot alarm should not be destroyed before being handled.
             if (!mIsPowerOffing) {
                 if (!mAlarmHandled) {

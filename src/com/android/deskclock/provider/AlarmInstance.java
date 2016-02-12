@@ -308,7 +308,7 @@ public final class AlarmInstance implements ClockContract.InstancesColumns {
      *
      * @param contentResolver to access the content provider
      */
-    public static AlarmInstance getFirstAlarmInstance(ContentResolver contentResolver) {
+    public static AlarmInstance getFirstMissedInstance(ContentResolver contentResolver) {
         List<AlarmInstance> alertAlarms = getInstances(contentResolver, null);
         long currentTime = System.currentTimeMillis();
 
