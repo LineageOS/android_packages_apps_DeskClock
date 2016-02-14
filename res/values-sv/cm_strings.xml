@@ -33,4 +33,5 @@
   <string name="alarm_increasing_volume">Ökande volym</string>
   <string name="profile_description">Profil <xliff:g id="profile">%s</xliff:g></string>
   <string name="profile_no_selected">Ingen profil vald</string>
+  <string name="alarm_modification_service_desc">En tjänst för att tillåta manipulation av alarm av tredje part.</string>
 </resources>
