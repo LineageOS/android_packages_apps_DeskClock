@@ -17,7 +17,7 @@
 -->
 <resources xmlns:xliff="urn:oasis:names:tc:xliff:document:1.2">
   <string name="show_status_bar_icon_title">Показывать значок</string>
-  <string name="show_status_bar_icon_summary">Отображать значок в строке состояния при установленном будильнике</string>
+  <string name="show_status_bar_icon_summary">Показывать значок в строке состояния, когда будильник установлен</string>
   <string name="alarm_increasing_volume">Возрастающая громкость</string>
   <string name="profile_description">Профиль «<xliff:g id="profile">%s</xliff:g>»</string>
   <string name="profile_no_selected">Профиль не выбран</string>
@@ -53,8 +53,8 @@
   <string name="alarm_select">Выбор сигнала</string>
   <string name="alarm_select_ringtone">Рингтон</string>
   <string name="alarm_select_external">Музыка</string>
-  <string name="ringtone_default">Мелодия по умолчанию</string>
-  <string name="take_persistent_grant_uri_permission_failed_msg">Не удалось задать мелодию в качестве сигнала</string>
+  <string name="ringtone_default">Рингтон по умолчанию</string>
+  <string name="take_persistent_grant_uri_permission_failed_msg">Не удалось задать рингтон в качестве сигнала</string>
   <string name="menu_item_widget_settings">Настройки виджетов</string>
   <string name="activity_not_found">Приложение не найдено!</string>
   <string name="alarm_modification_service_desc">Служба, позволяющая сторонним приложениям управлять будильниками.</string>
