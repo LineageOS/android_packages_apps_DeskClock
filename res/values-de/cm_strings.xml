@@ -33,5 +33,5 @@
   <string name="alarm_increasing_volume">Ansteigende Lautstärke</string>
   <string name="profile_description">Profil <xliff:g id="profile">%s</xliff:g></string>
   <string name="profile_no_selected">Kein Profil ausgewählt</string>
-  <string name="alarm_modification_service_desc">Ein Dienst, um die Bearbeitung von Alarmen durch Dritte zu ermöglichen.</string>
+  <string name="alarm_modification_service_desc">Ein Dienst, der die Bearbeitung von Alarmen durch Dritte ermöglicht.</string>
 </resources>
