@@ -205,7 +205,6 @@ public class AlarmActivity extends AppCompatActivity
             // if we are invoked by a power off alarm, we may have just missed the alarm
             // time if the boot took unusually long (we normally wake up two minutes early)
             mAlarmInstance = AlarmInstance.getFirstMissedInstance(mContext.getContentResolver());
-            Settings.System.putInt(mContext.getContentResolver(), POWER_OFF_ALARM_MODE, 1);
         } else if (intentData != null) {
             long instanceId = AlarmInstance.getId(intentData);
             mAlarmInstance = AlarmInstance.getInstance(this.getContentResolver(), instanceId);
@@ -230,6 +229,7 @@ public class AlarmActivity extends AppCompatActivity
                         SettingsActivity.DEFAULT_VOLUME_BEHAVIOR);
 
         if (mIsPowerOffAlarm) {
+            Settings.System.putInt(mContext.getContentResolver(), POWER_OFF_ALARM_MODE, 1);
             getWindow().setType(WindowManager.LayoutParams.TYPE_SYSTEM_OVERLAY);
             getWindow().addFlags(WindowManager.LayoutParams.FLAG_SHOW_WHEN_LOCKED
                     | WindowManager.LayoutParams.FLAG_DISMISS_KEYGUARD
