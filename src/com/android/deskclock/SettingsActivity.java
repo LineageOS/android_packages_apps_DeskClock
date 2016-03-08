@@ -58,7 +58,6 @@ public class SettingsActivity extends BaseActivity {
     public static final String KEY_HOME_TZ = "home_time_zone";
     public static final String KEY_AUTO_HOME_CLOCK = "automatic_home_clock";
     public static final String KEY_VOLUME_BUTTONS = "volume_button_setting";
-    public static final String KEY_WEEK_START = "week_start";
     public static final String KEY_SHOW_ALARM_ICON = "show_status_bar_icon";
     public static final String KEY_ALARM_SETTINGS = "key_alarm_settings";
 
@@ -162,10 +161,6 @@ public class SettingsActivity extends BaseActivity {
             } else if (KEY_SHAKE_ACTION.equals(pref.getKey())) {
                 final ListPreference listPref = (ListPreference) pref;
                 updateActionSummary(listPref, (String) newValue, R.string.shake_action_summary);
-            } else if (KEY_WEEK_START.equals(pref.getKey())) {
-                final ListPreference weekStartPref = (ListPreference) findPreference(KEY_WEEK_START);
-                final int idx = weekStartPref.findIndexOfValue((String) newValue);
-                weekStartPref.setSummary(weekStartPref.getEntries()[idx]);
             } else if (KEY_SHOW_ALARM_ICON.equals(pref.getKey())) {
                 CMSettings.System.putInt(getActivity().getContentResolver(),
                         CMSettings.System.SHOW_ALARM_ICON, (Boolean) newValue ? 1 : 0);
@@ -288,21 +283,6 @@ public class SettingsActivity extends BaseActivity {
             final SnoozeLengthDialog snoozePref =
                     (SnoozeLengthDialog) findPreference(KEY_ALARM_SNOOZE);
             snoozePref.setSummary();
-
-            final ListPreference weekStartPref = (ListPreference) findPreference(KEY_WEEK_START);
-            // Set the default value programmatically
-            final String value = weekStartPref.getValue();
-            final int idx = weekStartPref.findIndexOfValue(
-                    value == null ? String.valueOf(Utils.DEFAULT_WEEK_START) : value);
-            weekStartPref.setValueIndex(idx);
-            weekStartPref.setSummary(weekStartPref.getEntries()[idx]);
-            weekStartPref.setOnPreferenceChangeListener(this);
-
-            // Remove this. We're dynamically binding week start to the locale, but
-            // piggybacking on the backing code for this setting
-            PreferenceCategory alrmCategory = (PreferenceCategory)
-                    getPreferenceScreen().findPreference(KEY_ALARM_SETTINGS);
-            alrmCategory.removePreference(alrmCategory.findPreference(KEY_WEEK_START));
 
             final SwitchPreference showAlarmIconPref =
                     (SwitchPreference) findPreference(KEY_SHOW_ALARM_ICON);
