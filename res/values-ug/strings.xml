@@ -87,6 +87,11 @@
   <string name="alarm_alert_snooze_text">قايتا جىرىڭلاتما</string>
   <!-- Toast that appears after Alarm is snoozed from the Alarm
          dialog. Says the alarm will snooze for xxx minutes.  -->
+  <plurals name="alarm_alert_snooze_set">
+    <!-- Duration for one minute -->
+    <!-- Duration for more than one minute -->
+    <item quantity="other">1 مىنۇتقىچە جىرىڭلاتما.</item>
+  </plurals>
   <!-- Text to appear inside a notification while an alarm is snoozing. -->
   <string name="alarm_alert_snooze_until"><xliff:g id="TIME">%s</xliff:g> غىچە كېچىكتۈر</string>
   <!-- Text to appear in the notification title while an alarm is about to go off. -->
@@ -144,6 +149,11 @@
   <string name="settings">تەڭشەكلەر</string>
   <!-- Setting title for changing the snooze duration. -->
   <string name="snooze_duration_title">مۈگدەش ئۇزۇنلۇقى</string>
+  <plurals name="snooze_picker_label">
+    <!-- Duration for one minute -->
+    <!-- Duration for more than one minute -->
+    <item quantity="other">مىنۇت</item>
+  </plurals>
   <!-- Auto silence preference title -->
   <string name="auto_silence_title">قوڭغۇراق ۋاقتى</string>
   <!-- Auto silence summary string set based on the preference value. -->
@@ -284,6 +294,21 @@
   <!-- Formatted stopwatch time for laps shared using the share button -->
   <!-- Label to enumerate the number of laps the user has counted -->
   <!-- Stopwatch accessibility strings -->
+  <plurals name="Nhours_description">
+    <!-- 1 hour -->
+    <!-- more -->
+    <item quantity="other">1 سائەت</item>
+  </plurals>
+  <plurals name="Nminutes_description">
+    <!-- 1 minute -->
+    <!-- more -->
+    <item quantity="other">1 مىنۇت</item>
+  </plurals>
+  <plurals name="Nseconds_description">
+    <!-- 1 second -->
+    <!-- more -->
+    <item quantity="other">1 سېكۇنت</item>
+  </plurals>
   <!-- timer strings -->
   <!-- Describes the purpose of the button to add a new timer -->
   <string name="timer_add_timer">ۋاقىت خاتىرىلىگۈچنى قوش</string>
@@ -495,6 +520,11 @@
   <!-- message used by the talkback accessebility app to say that something was deleted -->
   <string name="deleted_message">ئۆچۈرۈلدى</string>
   <!-- Alarm deletion confirmation message-->
+  <plurals name="alarm_delete_confirmation">
+    <!-- Confirmation for one alarm -->
+    <!-- Confirmation more than one alarm  -->
+    <item quantity="other">تاللانغان قوڭغۇراقنى ئۆچۈرەمدۇ؟\"</item>
+  </plurals>
   <!-- Timer deletion confirmation -->
   <string name="timer_delete_confirmation">بۇ ۋاقىت خاتىرىلىگۈچنى ئۆچۈرەمدۇ؟</string>
   <!-- world clock deletion confirmation -->

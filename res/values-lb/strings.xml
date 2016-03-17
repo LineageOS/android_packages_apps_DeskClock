@@ -87,12 +87,24 @@
              10 min
          [CHAR LIMIT=10]
     -->
+  <plurals name="alarm_alert_snooze_duration">
+    <!-- Duration for one minute -->
+    <item quantity="one">1 Min.</item>
+    <!-- Duration for more than one minute -->
+    <item quantity="other"><xliff:g id="number" example="7">%d</xliff:g> Min.</item>
+  </plurals>
   <!-- The text shown after user dismissed an alerting alarm [CHAR LIMIT=15] -->
   <string name="alarm_alert_off_text">Wecker aus</string>
   <!-- Button labels on the alarm dialog: Snooze -->
   <string name="alarm_alert_snooze_text">Näipen</string>
   <!-- Toast that appears after Alarm is snoozed from the Alarm
          dialog. Says the alarm will snooze for xxx minutes.  -->
+  <plurals name="alarm_alert_snooze_set">
+    <!-- Duration for one minute -->
+    <item quantity="one">Näipe fir 1 Minutt.</item>
+    <!-- Duration for more than one minute -->
+    <item quantity="other">Näipe fir <xliff:g id="minutes">%d</xliff:g> Minutten.</item>
+  </plurals>
   <!-- Text to appear inside a notification while an alarm is snoozing. -->
   <string name="alarm_alert_snooze_until">Näipe bis <xliff:g id="time">%s</xliff:g></string>
   <!-- Text to appear in the notification title while an alarm is about to go off. -->
@@ -150,6 +162,12 @@
   <string name="settings">Astellungen</string>
   <!-- Setting title for changing the snooze duration. -->
   <string name="snooze_duration_title">Näipdauer</string>
+  <plurals name="snooze_picker_label">
+    <!-- Duration for one minute -->
+    <item quantity="one">Minutt</item>
+    <!-- Duration for more than one minute -->
+    <item quantity="other">Minutten</item>
+  </plurals>
   <!-- Auto silence preference title -->
   <string name="auto_silence_title">Roueg no</string>
   <!-- Auto silence summary string set based on the preference value. -->
@@ -292,6 +310,24 @@
   <!-- Formatted stopwatch time for laps shared using the share button -->
   <!-- Label to enumerate the number of laps the user has counted -->
   <!-- Stopwatch accessibility strings -->
+  <plurals name="Nhours_description">
+    <!-- 1 hour -->
+    <item quantity="one">1 Stonn</item>
+    <!-- more -->
+    <item quantity="other"><xliff:g id="number" example="7">%d</xliff:g> Stonnen</item>
+  </plurals>
+  <plurals name="Nminutes_description">
+    <!-- 1 minute -->
+    <item quantity="one">1 Minutt</item>
+    <!-- more -->
+    <item quantity="other"><xliff:g id="number" example="7">%d</xliff:g> Minutten</item>
+  </plurals>
+  <plurals name="Nseconds_description">
+    <!-- 1 second -->
+    <item quantity="one">1 Sekonn</item>
+    <!-- more -->
+    <item quantity="other"><xliff:g id="number" example="7">%d</xliff:g> Sekonnen</item>
+  </plurals>
   <!-- timer strings -->
   <!-- Describes the purpose of the button to add a new timer -->
   <string name="timer_add_timer">Sandauer dobäisetzen</string>
@@ -508,6 +544,12 @@
   <!-- message used by the talkback accessebility app to say that something was deleted -->
   <string name="deleted_message">Geläscht</string>
   <!-- Alarm deletion confirmation message-->
+  <plurals name="alarm_delete_confirmation">
+    <!-- Confirmation for one alarm -->
+    <item quantity="one">Den ausgewielte Wecker läschen?</item>
+    <!-- Confirmation more than one alarm  -->
+    <item quantity="other">Déi ausgewielt Weckere läschen?</item>
+  </plurals>
   <!-- Timer deletion confirmation -->
   <string name="timer_delete_confirmation">Dës Sandauer läschen?</string>
   <!-- world clock deletion confirmation -->

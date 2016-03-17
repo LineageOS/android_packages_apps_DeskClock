@@ -87,6 +87,12 @@
   <string name="alarm_alert_snooze_text">سووکه‌ نوستن</string>
   <!-- Toast that appears after Alarm is snoozed from the Alarm
          dialog. Says the alarm will snooze for xxx minutes.  -->
+  <plurals name="alarm_alert_snooze_set">
+    <!-- Duration for one minute -->
+    <item quantity="one">سوکه‌نوستن بۆ یه‌ک خوله‌ک.</item>
+    <!-- Duration for more than one minute -->
+    <item quantity="other">سوکه‌ نوستن بۆ <xliff:g id="minutes">%d</xliff:g> خوله‌ک.</item>
+  </plurals>
   <!-- Text to appear inside a notification while an alarm is snoozing. -->
   <string name="alarm_alert_snooze_until">سووکه‌ نوستن تا <xliff:g id="time">%s</xliff:g></string>
   <!-- Text to appear in the notification title while an alarm is about to go off. -->
@@ -144,6 +150,12 @@
   <string name="settings">ڕێکخستنه‌کان</string>
   <!-- Setting title for changing the snooze duration. -->
   <string name="snooze_duration_title">ماوه‌ی سووکه‌نوستن</string>
+  <plurals name="snooze_picker_label">
+    <!-- Duration for one minute -->
+    <item quantity="one">خوله‌ک</item>
+    <!-- Duration for more than one minute -->
+    <item quantity="other">خولەک</item>
+  </plurals>
   <!-- Auto silence preference title -->
   <string name="auto_silence_title">بێده‌نگ کردن دوای</string>
   <!-- Auto silence summary string set based on the preference value. -->
@@ -284,6 +296,24 @@
   <!-- Formatted stopwatch time for laps shared using the share button -->
   <!-- Label to enumerate the number of laps the user has counted -->
   <!-- Stopwatch accessibility strings -->
+  <plurals name="Nhours_description">
+    <!-- 1 hour -->
+    <item quantity="one">1 کاژێر</item>
+    <!-- more -->
+    <item quantity="other"><xliff:g id="number" example="7">%d</xliff:g> کاتژژمێر</item>
+  </plurals>
+  <plurals name="Nminutes_description">
+    <!-- 1 minute -->
+    <item quantity="one">1 خوله‌ک</item>
+    <!-- more -->
+    <item quantity="other"><xliff:g id="number" example="7">%d</xliff:g>خوله‌ک</item>
+  </plurals>
+  <plurals name="Nseconds_description">
+    <!-- 1 second -->
+    <item quantity="one">1 چرکە</item>
+    <!-- more -->
+    <item quantity="other"><xliff:g id="number" example="7">%d</xliff:g> چرکه‌</item>
+  </plurals>
   <!-- timer strings -->
   <!-- Describes the purpose of the button to add a new timer -->
   <string name="timer_add_timer">دیاریکردنی کاتپێو</string>
@@ -495,6 +525,12 @@
   <!-- message used by the talkback accessebility app to say that something was deleted -->
   <string name="deleted_message">سڕدرایەوە</string>
   <!-- Alarm deletion confirmation message-->
+  <plurals name="alarm_delete_confirmation">
+    <!-- Confirmation for one alarm -->
+    <item quantity="one">سڕینه‌وه‌ی ئاگادارکه‌ره‌وه‌ی دیاریکراو؟</item>
+    <!-- Confirmation more than one alarm  -->
+    <item quantity="other">سڕینه‌وه‌ی ئاگادارکه‌ره‌وه‌ی دیاریکراو؟</item>
+  </plurals>
   <!-- Timer deletion confirmation -->
   <string name="timer_delete_confirmation">ئه‌م کاتپێوه‌ ده‌سڕیته‌وه‌؟</string>
   <!-- world clock deletion confirmation -->

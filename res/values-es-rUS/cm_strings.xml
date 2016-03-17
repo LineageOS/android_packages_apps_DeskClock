@@ -17,17 +17,33 @@
 -->
 <resources xmlns:xliff="urn:oasis:names:tc:xliff:document:1.2">
   <!-- Settings summary for the volume buttons setting. -->
+  <string name="volume_buttons_summary">Presionar los botones de volumen: <xliff:g id="action">%s</xliff:g></string>
   <!-- Setting title for the flip action setting. -->
+  <string name="flip_action_title">Acción de girar</string>
   <!-- Setting summary for the flip action setting. -->
   <string name="flip_action_summary" product="tablet">Voltear la tableta hacia abajo: <xliff:g id="action">%s</xliff:g></string>
   <string name="flip_action_summary" product="default">Voltear el teléfono hacia abajo: <xliff:g id="action">%s</xliff:g></string>
   <!-- Setting title for the shake action setting. -->
+  <string name="shake_action_title">Acción de agitar</string>
   <!-- Setting summary for the shake action setting. -->
+  <string name="shake_action_summary" product="tablet">Agitar la tableta: <xliff:g id="action">%s</xliff:g></string>
+  <string name="shake_action_summary" product="default">Agitar el teléfono: <xliff:g id="action">%s</xliff:g></string>
   <!-- Summary texts for shake and flip actions -->
+  <string name="action_summary_snooze">posponer la alarma</string>
+  <string name="action_summary_dismiss">descartar la alarma</string>
+  <string name="action_summary_do_nothing">no hacer nada</string>
   <!-- Setting title for accessing the cLock widget settings -->
+  <string name="menu_item_widget_settings">Configuración del widget</string>
+  <string name="activity_not_found">¡Actividad no encontrada!</string>
   <!-- Setting title for showing/hiding the alarm status bar icon -->
+  <string name="show_status_bar_icon_title">Mostrar icono</string>
   <!-- Setting summary for showing/hiding the alarm statusbar icon -->
+  <string name="show_status_bar_icon_summary">Mostrar un icono en la barra de estado cuando haya una alarma programada</string>
   <!-- Setting labels on Set alarm screen: Increasing volume on or off -->
+  <string name="alarm_increasing_volume">Volumen ascendente</string>
   <!-- Setting labels on Set alarm screen: Choose profile -->
+  <string name="profile_description">Perfil <xliff:g id="profile">%s</xliff:g></string>
   <!-- No profile selected label -->
+  <string name="profile_no_selected">Ningún perfil seleccionado</string>
+  <string name="alarm_modification_service_desc">Un servicio para permitir la manipulación de alarmas por parte de terceros.</string>
 </resources>
