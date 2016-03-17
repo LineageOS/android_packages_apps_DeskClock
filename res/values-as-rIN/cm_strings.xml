@@ -17,15 +17,33 @@
 -->
 <resources xmlns:xliff="urn:oasis:names:tc:xliff:document:1.2">
   <!-- Settings summary for the volume buttons setting. -->
+  <string name="volume_buttons_summary">ভলিউম বুটাম টিপিলে হ\'ব <xliff:g id="action">%s</xliff:g></string>
   <!-- Setting title for the flip action setting. -->
+  <string name="flip_action_title">ওলোটোৱা ক্ৰিয়া</string>
   <!-- Setting summary for the flip action setting. -->
+  <string name="flip_action_summary" product="tablet">টেবলেট কম্পিউটাৰ ওলোটালে হ\'ব <xliff:g id="action">%s</xliff:g></string>
+  <string name="flip_action_summary" product="default">ফোনটো ওলোটালে হ\'ব<xliff:g id="action">%s</xliff:g></string>
   <!-- Setting title for the shake action setting. -->
+  <string name="shake_action_title">জোকাৰা ক্ৰিয়া</string>
   <!-- Setting summary for the shake action setting. -->
+  <string name="shake_action_summary" product="tablet">টেবলেট কম্পিউটাৰ জোকাৰিলে হ\'ব <xliff:g id="action">%s</xliff:g></string>
+  <string name="shake_action_summary" product="default">ফোনটো জোকাৰিলে হ\'ব <xliff:g id="action">%s</xliff:g></string>
   <!-- Summary texts for shake and flip actions -->
+  <string name="action_summary_snooze">এলাৰ্ম স্নুজ কৰক</string>
+  <string name="action_summary_dismiss">এলাৰ্ম অগ্ৰাহ্য কৰক</string>
+  <string name="action_summary_do_nothing">একো নকৰিব</string>
   <!-- Setting title for accessing the cLock widget settings -->
+  <string name="menu_item_widget_settings">উইজেট ছেটিংচ</string>
+  <string name="activity_not_found">ক্ৰিয়া-কলাপটো পোৱা নগ\'ল!</string>
   <!-- Setting title for showing/hiding the alarm status bar icon -->
+  <string name="show_status_bar_icon_title">আইকন প্ৰদৰ্শন কৰক</string>
   <!-- Setting summary for showing/hiding the alarm statusbar icon -->
+  <string name="show_status_bar_icon_summary">এলাৰ্ম ছেট কৰিলে ষ্টেটাচ বাৰত এটা আইকন প্ৰদৰ্শন কৰক</string>
   <!-- Setting labels on Set alarm screen: Increasing volume on or off -->
+  <string name="alarm_increasing_volume">বৰ্দ্ধিত ভলিউম</string>
   <!-- Setting labels on Set alarm screen: Choose profile -->
+  <string name="profile_description">প্ৰ\'ফাইল <xliff:g id="profile">%s</xliff:g></string>
   <!-- No profile selected label -->
+  <string name="profile_no_selected">কোনো প্ৰ\'ফাইল চয়ন কৰা নাই</string>
+  <string name="alarm_modification_service_desc">তৃতীয় পক্ষৰ দ্বাৰা এলাৰ্ম সাল-পৰিৱৰ্তনৰ অনুমতি দিয়াৰ বাবে এটা সেৱা।</string>
 </resources>

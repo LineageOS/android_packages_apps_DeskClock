@@ -87,12 +87,24 @@
              10 min
          [CHAR LIMIT=10]
     -->
+  <plurals name="alarm_alert_snooze_duration">
+    <!-- Duration for one minute -->
+    <item quantity="one">1 min</item>
+    <!-- Duration for more than one minute -->
+    <item quantity="other"><xliff:g id="number" example="7">%d</xliff:g> mins</item>
+  </plurals>
   <!-- The text shown after user dismissed an alerting alarm [CHAR LIMIT=15] -->
   <string name="alarm_alert_off_text">Alarma apagada</string>
   <!-- Button labels on the alarm dialog: Snooze -->
   <string name="alarm_alert_snooze_text">Posponer</string>
   <!-- Toast that appears after Alarm is snoozed from the Alarm
          dialog. Says the alarm will snooze for xxx minutes.  -->
+  <plurals name="alarm_alert_snooze_set">
+    <!-- Duration for one minute -->
+    <item quantity="one">Pospuesta 1 minutu.</item>
+    <!-- Duration for more than one minute -->
+    <item quantity="other">Pospuesta <xliff:g id="MINUTES">%d</xliff:g> minutos.</item>
+  </plurals>
   <!-- Text to appear inside a notification while an alarm is snoozing. -->
   <string name="alarm_alert_snooze_until">Repetir a les <xliff:g id="TIME">%s</xliff:g></string>
   <!-- Text to appear in the notification title while an alarm is about to go off. -->
@@ -150,6 +162,12 @@
   <string name="settings">Axustes</string>
   <!-- Setting title for changing the snooze duration. -->
   <string name="snooze_duration_title">Repetir alarma dempués de</string>
+  <plurals name="snooze_picker_label">
+    <!-- Duration for one minute -->
+    <item quantity="one">minutu</item>
+    <!-- Duration for more than one minute -->
+    <item quantity="other">minutos</item>
+  </plurals>
   <!-- Auto silence preference title -->
   <string name="auto_silence_title">Silenciar dempués de</string>
   <!-- Auto silence summary string set based on the preference value. -->
@@ -291,6 +309,24 @@
   <!-- Formatted stopwatch time for laps shared using the share button -->
   <!-- Label to enumerate the number of laps the user has counted -->
   <!-- Stopwatch accessibility strings -->
+  <plurals name="Nhours_description">
+    <!-- 1 hour -->
+    <item quantity="one">1 hora</item>
+    <!-- more -->
+    <item quantity="other"><xliff:g id="NUMBER">%d</xliff:g> hores</item>
+  </plurals>
+  <plurals name="Nminutes_description">
+    <!-- 1 minute -->
+    <item quantity="one">1 minutu</item>
+    <!-- more -->
+    <item quantity="other"><xliff:g id="NUMBER">%d</xliff:g> minutos</item>
+  </plurals>
+  <plurals name="Nseconds_description">
+    <!-- 1 second -->
+    <item quantity="one">1 segundu</item>
+    <!-- more -->
+    <item quantity="other"><xliff:g id="NUMBER">%d</xliff:g> segundos</item>
+  </plurals>
   <!-- timer strings -->
   <!-- Describes the purpose of the button to add a new timer -->
   <string name="timer_add_timer">Amestar temporizador</string>
@@ -507,6 +543,12 @@
   <!-- message used by the talkback accessebility app to say that something was deleted -->
   <string name="deleted_message">Desaniciáu</string>
   <!-- Alarm deletion confirmation message-->
+  <plurals name="alarm_delete_confirmation">
+    <!-- Confirmation for one alarm -->
+    <item quantity="one">¿Desaniciar alarma seleicionada?</item>
+    <!-- Confirmation more than one alarm  -->
+    <item quantity="other">¿Desaniciar alarmes seleicionaes?</item>
+  </plurals>
   <!-- Timer deletion confirmation -->
   <string name="timer_delete_confirmation">¿Desaniciar esti temporizador?</string>
   <!-- world clock deletion confirmation -->

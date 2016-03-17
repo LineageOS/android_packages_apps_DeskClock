@@ -17,30 +17,30 @@
 -->
 <resources xmlns:xliff="urn:oasis:names:tc:xliff:document:1.2">
   <!-- Settings summary for the volume buttons setting. -->
-  <string name="volume_buttons_summary">הקשה על כפתורי עוצמת הקול תגרום ל<xliff:g id="action">%s</xliff:g></string>
+  <string name="volume_buttons_summary">הקשה על לחצני עוצמת הקול תגרום לפעולה: <xliff:g id="action">%s</xliff:g></string>
   <!-- Setting title for the flip action setting. -->
   <string name="flip_action_title">פעולת היפוך</string>
   <!-- Setting summary for the flip action setting. -->
-  <string name="flip_action_summary" product="tablet">היפוך הטאבלט יגרום ל<xliff:g id="action">%s</xliff:g></string>
-  <string name="flip_action_summary" product="default">היפוך המכשיר יגרום ל<xliff:g id="action">%s</xliff:g></string>
+  <string name="flip_action_summary" product="tablet">היפוך הטאבלט יגרום לפעולה <xliff:g id="action">%s</xliff:g></string>
+  <string name="flip_action_summary" product="default">היפוך המכשיר יגרום לפעולה <xliff:g id="action">%s</xliff:g></string>
   <!-- Setting title for the shake action setting. -->
   <string name="shake_action_title">פעולת ניעור</string>
   <!-- Setting summary for the shake action setting. -->
-  <string name="shake_action_summary" product="tablet">ניעור הטאבלט יגרום ל<xliff:g id="action">%s</xliff:g></string>
+  <string name="shake_action_summary" product="tablet">ניעור הטאבלט יגרום לפעולה <xliff:g id="action">%s</xliff:g></string>
   <string name="shake_action_summary" product="default">ניעור המכשיר יגרום ל<xliff:g id="action">%s</xliff:g></string>
   <!-- Summary texts for shake and flip actions -->
   <string name="action_summary_snooze">נמנום השעון המעורר</string>
   <string name="action_summary_dismiss">ביטול השעון המעורר</string>
-  <string name="action_summary_do_nothing">שום פעולה</string>
+  <string name="action_summary_do_nothing">אל תעשה דבר</string>
   <!-- Setting title for accessing the cLock widget settings -->
   <string name="menu_item_widget_settings">הגדרות ווידג\'ט</string>
-  <string name="activity_not_found">פעולה לא נמצאה!</string>
+  <string name="activity_not_found">הפעולה לא נמצאה!</string>
   <!-- Setting title for showing/hiding the alarm status bar icon -->
   <string name="show_status_bar_icon_title">הצג סמל</string>
   <!-- Setting summary for showing/hiding the alarm statusbar icon -->
   <string name="show_status_bar_icon_summary">הצג סמל בשורת המצב כאשר שעון מעורר מוגדר</string>
   <!-- Setting labels on Set alarm screen: Increasing volume on or off -->
-  <string name="alarm_increasing_volume">עוצמה מתגברת</string>
+  <string name="alarm_increasing_volume">עוצמת קול מתגברת</string>
   <!-- Setting labels on Set alarm screen: Choose profile -->
   <string name="profile_description">פרופיל <xliff:g id="profile">%s</xliff:g></string>
   <!-- No profile selected label -->
