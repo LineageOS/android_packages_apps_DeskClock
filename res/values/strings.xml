@@ -234,7 +234,7 @@
         <!-- Duration for one minute -->
         <item quantity="one">1 minute</item>
         <!-- Duration for more than one minute -->
-        <item quantity="other"><xliff:g id="number" example="7">%s</xliff:g> minutes</item>
+        <item quantity="other"><xliff:g id="number" example="7">%d</xliff:g> minutes</item>
     </plurals>
 
     <plurals name="snooze_picker_label">
@@ -252,7 +252,7 @@
         <!-- Duration for one minute -->
         <item quantity="one">1 minute</item>
         <!-- Duration for more than one minute -->
-        <item quantity="other"><xliff:g id="formatted_number" example="7">%s</xliff:g> minutes</item>
+        <item quantity="other"><xliff:g id="number" example="7">%d</xliff:g> minutes</item>
     </plurals>
 
 
