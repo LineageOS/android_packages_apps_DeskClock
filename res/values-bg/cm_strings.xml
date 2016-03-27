@@ -17,7 +17,7 @@
 -->
 <resources xmlns:xliff="urn:oasis:names:tc:xliff:document:1.2">
   <!-- Settings summary for the volume buttons setting. -->
-  <string name="volume_buttons_summary">Натискане на бутоните за сила на звука ще<xliff:g id="action">%s </xliff:g></string>
+  <string name="volume_buttons_summary">Натискане на бутоните за сила на звука <xliff:g id="action">%s </xliff:g></string>
   <!-- Setting title for the flip action setting. -->
   <string name="flip_action_title">Действие при обръщане</string>
   <!-- Setting summary for the flip action setting. -->
