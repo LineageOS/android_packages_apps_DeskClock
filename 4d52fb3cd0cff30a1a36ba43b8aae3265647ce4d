@@ -1,0 +1,55 @@
+{
+  "comments": [
+    {
+      "key": {
+        "uuid": "7faddb67_8adc2447",
+        "filename": "src/com/android/deskclock/alarms/AlarmService.java",
+        "patchSetId": 1
+      },
+      "lineNbr": 275,
+      "author": {
+        "id": 7841
+      },
+      "writtenOn": "2016-04-01T19:00:34Z",
+      "side": 1,
+      "message": "No reason to have variable declaration on separate line from assignment in Java. Also, I\u0027d prefer to see a slightly more meaningful name in this context, e.g. String action \u003d ...",
+      "revId": "4d52fb3cd0cff30a1a36ba43b8aae3265647ce4d",
+      "serverId": "1ec6b3db-b2c1-4fa4-84a2-4c7efe89ba71",
+      "unresolved": false
+    },
+    {
+      "key": {
+        "uuid": "7faddb67_cad21c35",
+        "filename": "src/com/android/deskclock/alarms/AlarmService.java",
+        "patchSetId": 1
+      },
+      "lineNbr": 278,
+      "author": {
+        "id": 7841
+      },
+      "writtenOn": "2016-04-01T19:00:34Z",
+      "side": 1,
+      "message": "You are using the resource _ID_ here, not the resource value! You need to do getResources().getInteger(R.integer.config_defaultActionFlip) !!!",
+      "revId": "4d52fb3cd0cff30a1a36ba43b8aae3265647ce4d",
+      "serverId": "1ec6b3db-b2c1-4fa4-84a2-4c7efe89ba71",
+      "unresolved": false
+    },
+    {
+      "key": {
+        "uuid": "7faddb67_ead7d822",
+        "filename": "src/com/android/deskclock/alarms/AlarmService.java",
+        "patchSetId": 1
+      },
+      "lineNbr": 281,
+      "author": {
+        "id": 7841
+      },
+      "writtenOn": "2016-04-01T19:00:34Z",
+      "side": 1,
+      "message": "as above, need to use config _value_ rather than config _id_",
+      "revId": "4d52fb3cd0cff30a1a36ba43b8aae3265647ce4d",
+      "serverId": "1ec6b3db-b2c1-4fa4-84a2-4c7efe89ba71",
+      "unresolved": false
+    }
+  ]
+}
