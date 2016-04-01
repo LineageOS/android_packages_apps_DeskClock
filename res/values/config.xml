@@ -23,6 +23,15 @@
     <bool name="config_requiresScreenSaver">true</bool>
     <bool name="config_dockAppEnabled">true</bool>
     <bool name="config_rotateAlarmAlert">false</bool>
+    <!-- Default action for flip (turn face down) during alarm
+         0 means no action, 1 means snooze
+         2 means dismiss. -->
+    <integer name="config_defaultActionFlip">2</integer>
+    <!-- Default action for shake during alarm
+         0 means no action, 1 means snooze
+         2 means dismiss. -->
+    <integer name="config_defaultActionShake">0</integer>
+
     <item type="integer" name="timer_column_count">1</item>
     <!-- Number of world clocks in a row, for the clock tab. -->
     <item type="integer" name="world_clocks_per_row">1</item>
