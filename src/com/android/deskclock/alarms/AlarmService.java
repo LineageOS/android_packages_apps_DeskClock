@@ -81,9 +81,6 @@ public class AlarmService extends Service {
     private static final int ALARM_SNOOZE = 1;
     private static final int ALARM_DISMISS = 2;
 
-    // default action for flip and shake
-    private static final String DEFAULT_ACTION = Integer.toString(ALARM_NO_ACTION);
-
     /** Binder given to AlarmActivity */
     private final IBinder mBinder = new Binder();
 
@@ -276,10 +273,12 @@ public class AlarmService extends Service {
         // set up for flip and shake actions
         mSensorManager = (SensorManager) getSystemService(Context.SENSOR_SERVICE);
         SharedPreferences prefs = PreferenceManager.getDefaultSharedPreferences(this);
-        mFlipAction = Integer.parseInt(prefs.getString(
-                SettingsActivity.KEY_FLIP_ACTION, DEFAULT_ACTION));
-        mShakeAction = Integer.parseInt(prefs.getString(
-                SettingsActivity.KEY_SHAKE_ACTION, DEFAULT_ACTION));
+        String action = prefs.getString(SettingsActivity.KEY_FLIP_ACTION, null);
+        mFlipAction = (action != null) ? Integer.parseInt(action) :
+            getResources().getInteger(R.integer.config_defaultActionFlip);
+        action  = prefs.getString(SettingsActivity.KEY_SHAKE_ACTION, null);
+        mShakeAction = (action != null) ? Integer.parseInt(action) :
+            getResources().getInteger(R.integer.config_defaultActionShake);
     }
 
     @Override
