@@ -16,12 +16,18 @@
      limitations under the License.
 -->
 <resources xmlns:xliff="urn:oasis:names:tc:xliff:document:1.2">
+  <!-- Setting title for showing/hiding the alarm status bar icon -->
   <string name="show_status_bar_icon_title">نیشاندانی وێنۆچکه‌</string>
+  <!-- Setting summary for showing/hiding the alarm statusbar icon -->
   <string name="show_status_bar_icon_summary">نیشانەی کاژێر دابنێ لە سەنتەری ئاگاداریەکان</string>
+  <!-- Setting labels on Set alarm screen: Increasing volume on or off -->
   <string name="alarm_increasing_volume">زیادکردنی دەنگ</string>
+  <!-- Setting labels on Set alarm screen: Choose profile -->
   <string name="profile_description">ڕێژەی <xliff:g id="profile">%s</xliff:g>
 </string>
+  <!-- No profile selected label -->
   <string name="profile_no_selected">هیچ ڕێژەیەك دیاری نەکراوە</string>
+  <!-- User-defined cities -->
   <string name="menu_item_add">زیادکردن</string>
   <string name="cities_add_city_title">زیادکردنی شار</string>
   <string name="cities_add_city_city">شار:</string>
@@ -36,27 +42,42 @@
   <string name="cities_delete_city_title">سڕینەوەی شار</string>
   <string name="cities_delete_city_msg">ئایا دڵنیایت لە سڕینەوەی <xliff:g id="city">%s</xliff:g>?</string>
   <string name="cities_delete_city_failed">نەتوانرا ئەو شارە بسڕێتەوە</string>
+  <!-- Setting summary for volume buttons setting. -->
   <string name="volume_buttons_summary">دەستنان بەسەر دوگمەی دەنگەکان  <xliff:g id="action">%s</xliff:g></string>
+  <!-- Setting title for the flip action setting. -->
   <string name="flip_action_title">بە دەمەوە دانان</string>
+  <!-- Setting summary for the flip action setting. -->
   <string name="flip_action_summary" product="tablet">ته‌قله‌ لێدان به‌ تابلێت بۆ خواره‌وه‌ بۆ <xliff:g id="action">%s</xliff:g></string>
   <string name="flip_action_summary" product="default">ته‌قله‌ لێدان به‌ ئامێر بۆ خواره‌وه‌ بۆ <xliff:g id="action">%s</xliff:g></string>
+  <!-- Setting title for the shake action setting. -->
   <string name="shake_action_title">کرداری جوڵاندن</string>
+  <!-- Setting summary for the shake action setting. -->
   <string name="shake_action_summary" product="tablet">له‌رینه‌وه‌ی تابلێت <xliff:g id="action">%s</xliff:g></string>
   <string name="shake_action_summary" product="default">له‌رینه‌وه‌ی ئامێر <xliff:g id="action">%s</xliff:g></string>
+  <!-- Summary texts for shake and flip actions -->
   <string name="action_summary_snooze">زەنگی سەرخەوشکاندن</string>
   <string name="action_summary_dismiss">لەبیرکردنی دەنگی بیرخەرەوە</string>
   <string name="action_summary_do_nothing">هیچ کارێك مەکە</string>
+  <!-- Alarm picker dialog title -->
   <string name="alarm_picker_title">هەڵبژاردنی جۆری زەنگ</string>
+  <!-- Alarm types -->
   <string name="alarm_type_ringtone">زەنگەکان</string>
   <string name="alarm_type_playlist">لیستی لێدان</string>
   <string name="alarm_type_random">خوازراوانە</string>
+  <!-- Warn Silent Alarm title -->
   <string name="warn_silent_alarm_title">ده‌نگی ئاگادارکه‌ره‌وه‌ بێده‌نگه‌
 30</string>
+  <!-- Select the source of the alarm -->
   <string name="alarm_select">دیاریکردنی ئاگادارکه‌ره‌وه‌</string>
+  <!-- Select the ringtone as alarm -->
   <string name="alarm_select_ringtone">زه‌نگ</string>
+  <!-- Select the alarm from external device -->
   <string name="alarm_select_external">مۆسیقا</string>
+  <!-- Ringtone selection default -->
   <string name="ringtone_default">زه‌نگی بنه‌ڕه‌تی</string>
+  <!-- Message that describe an error trying to take a persistent grant permission for an uri ringtone -->
   <string name="take_persistent_grant_uri_permission_failed_msg">سەرکەوتوو نەبوو لە گرتنی ڕێگەپێدانی بەردەوام  بۆ مۆسیقای زەنگ</string>
   <string name="menu_item_widget_settings">ڕێکخستنی ویجد</string>
   <string name="activity_not_found">چالاکی نەدۆزرایەوە!</string>
+  <!-- Permissions for reading/writing DeskClock alarms provider -->
 </resources>

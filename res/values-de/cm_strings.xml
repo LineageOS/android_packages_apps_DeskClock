@@ -16,15 +16,21 @@
      limitations under the License.
 -->
 <resources xmlns:xliff="urn:oasis:names:tc:xliff:document:1.2">
+  <!-- Setting title for showing/hiding the alarm status bar icon -->
   <string name="show_status_bar_icon_title">Weckersymbol anzeigen</string>
+  <!-- Setting summary for showing/hiding the alarm statusbar icon -->
   <string name="show_status_bar_icon_summary">Bei aktivem Wecker das Symbol in der Statusleiste anzeigen</string>
+  <!-- Setting labels on Set alarm screen: Increasing volume on or off -->
   <string name="alarm_increasing_volume">Ansteigende Lautstärke</string>
+  <!-- Setting labels on Set alarm screen: Choose profile -->
   <string name="profile_description">Profil <xliff:g id="profile">%s</xliff:g></string>
+  <!-- No profile selected label -->
   <string name="profile_no_selected">Kein Profil ausgewählt</string>
+  <!-- User-defined cities -->
   <string name="menu_item_add">Hinzufügen</string>
   <string name="cities_add_city_title">Stadt hinzufügen</string>
-  <string name="cities_add_city_city">Stadt</string>
-  <string name="cities_add_city_timezone">Zeitzone</string>
+  <string name="cities_add_city_city">Stadt:</string>
+  <string name="cities_add_city_timezone">Zeitzone:</string>
   <string name="cities_add_city_gps_cd">Tippen, um die Stadt mittels GPS zu ermitteln</string>
   <string name="cities_add_loading">Laden\u2026</string>
   <string name="cities_add_searching">Suchen\u2026</string>
@@ -35,27 +41,42 @@
   <string name="cities_delete_city_title">Stadt löschen</string>
   <string name="cities_delete_city_msg">Soll <xliff:g id="city">%s</xliff:g> gelöscht werden?</string>
   <string name="cities_delete_city_failed">Stadt konnte nicht gelöscht werden.</string>
+  <!-- Setting summary for volume buttons setting. -->
   <string name="volume_buttons_summary">Beim Drücken der Lautstärketasten <xliff:g id="action">%s</xliff:g></string>
+  <!-- Setting title for the flip action setting. -->
   <string name="flip_action_title">Aktion beim Umdrehen</string>
+  <!-- Setting summary for the flip action setting. -->
   <string name="flip_action_summary" product="tablet">Beim Umdrehen des Tablets <xliff:g id="action">%s</xliff:g></string>
   <string name="flip_action_summary" product="default">Beim Umdrehen des Telefons <xliff:g id="action">%s</xliff:g></string>
+  <!-- Setting title for the shake action setting. -->
   <string name="shake_action_title">Aktion beim Schütteln</string>
+  <!-- Setting summary for the shake action setting. -->
   <string name="shake_action_summary" product="tablet">Beim Schütteln des Tablets <xliff:g id="action">%s</xliff:g></string>
   <string name="shake_action_summary" product="default">Beim Schütteln des Telefons <xliff:g id="action">%s</xliff:g></string>
+  <!-- Summary texts for shake and flip actions -->
   <string name="action_summary_snooze">die Schlummerfunktion aktivieren</string>
   <string name="action_summary_dismiss">den Alarm beenden</string>
   <string name="action_summary_do_nothing">keine Aktion ausführen</string>
+  <!-- Alarm picker dialog title -->
   <string name="alarm_picker_title">Alarmtyp auswählen</string>
+  <!-- Alarm types -->
   <string name="alarm_type_ringtone">Klingelton</string>
   <string name="alarm_type_playlist">Wiedergabeliste</string>
   <string name="alarm_type_random">Zufällig</string>
+  <!-- Warn Silent Alarm title -->
   <string name="warn_silent_alarm_title">Weckerlautstärke ist lautlos</string>
+  <!-- Select the source of the alarm -->
   <string name="alarm_select">Weckton wählen</string>
+  <!-- Select the ringtone as alarm -->
   <string name="alarm_select_ringtone">Klingelton</string>
+  <!-- Select the alarm from external device -->
   <string name="alarm_select_external">Musik</string>
+  <!-- Ringtone selection default -->
   <string name="ringtone_default">Standard-Klingelton</string>
+  <!-- Message that describe an error trying to take a persistent grant permission for an uri ringtone -->
   <string name="take_persistent_grant_uri_permission_failed_msg">Dauerhafte Berechtigung zum Ändern des Klingeltons konnte nicht eingeholt werden</string>
   <string name="menu_item_widget_settings">Widget-Einstellungen</string>
   <string name="activity_not_found">Aktivität nicht gefunden!</string>
+  <!-- Permissions for reading/writing DeskClock alarms provider -->
   <string name="alarm_modification_service_desc">Ein Dienst, der die Bearbeitung von Alarmen durch Dritte ermöglicht.</string>
 </resources>

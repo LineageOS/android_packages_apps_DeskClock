@@ -16,11 +16,17 @@
      limitations under the License.
 -->
 <resources xmlns:xliff="urn:oasis:names:tc:xliff:document:1.2">
+  <!-- Setting title for showing/hiding the alarm status bar icon -->
   <string name="show_status_bar_icon_title">Statusbalkmelding</string>
-  <string name="show_status_bar_icon_summary">Pictogram tonen in de statusbalk als een alarm is ingesteld</string>
+  <!-- Setting summary for showing/hiding the alarm statusbar icon -->
+  <string name="show_status_bar_icon_summary">Pictogram weergeven in de statusbalk als een alarm is ingesteld</string>
+  <!-- Setting labels on Set alarm screen: Increasing volume on or off -->
   <string name="alarm_increasing_volume">Toenemend volume</string>
+  <!-- Setting labels on Set alarm screen: Choose profile -->
   <string name="profile_description">Profiel <xliff:g id="profile">%s</xliff:g></string>
+  <!-- No profile selected label -->
   <string name="profile_no_selected">Geen profiel geselecteerd</string>
+  <!-- User-defined cities -->
   <string name="menu_item_add">Toevoegen</string>
   <string name="cities_add_city_title">Stad toevoegen</string>
   <string name="cities_add_city_city">Stad:</string>
@@ -35,27 +41,42 @@
   <string name="cities_delete_city_title">Stad verwijderen</string>
   <string name="cities_delete_city_msg">Wilt u <xliff:g id="city">%s</xliff:g> verwijderen?</string>
   <string name="cities_delete_city_failed">Kan stad niet verwijderen</string>
+  <!-- Setting summary for volume buttons setting. -->
   <string name="volume_buttons_summary">Op de volumeknoppen drukken zal <xliff:g id="action">%s</xliff:g></string>
+  <!-- Setting title for the flip action setting. -->
   <string name="flip_action_title">Omdraai-actie</string>
+  <!-- Setting summary for the flip action setting. -->
   <string name="flip_action_summary" product="tablet">Omdraaien van uw tablet zal <xliff:g id="action">%s</xliff:g></string>
   <string name="flip_action_summary" product="default">Omdraaien van uw telefoon zal <xliff:g id="action">%s</xliff:g></string>
+  <!-- Setting title for the shake action setting. -->
   <string name="shake_action_title">Schudactie</string>
+  <!-- Setting summary for the shake action setting. -->
   <string name="shake_action_summary" product="tablet">Schudden van uw tablet zal <xliff:g id="action">%s</xliff:g></string>
   <string name="shake_action_summary" product="default">Schudden van uw telefoon zal <xliff:g id="action">%s</xliff:g></string>
+  <!-- Summary texts for shake and flip actions -->
   <string name="action_summary_snooze">het alarm snoozen</string>
   <string name="action_summary_dismiss">het alarm uitschakelen</string>
   <string name="action_summary_do_nothing">niets doen</string>
+  <!-- Alarm picker dialog title -->
   <string name="alarm_picker_title">Alarmtype</string>
+  <!-- Alarm types -->
   <string name="alarm_type_ringtone">Beltoon</string>
   <string name="alarm_type_playlist">Afspeellijst</string>
   <string name="alarm_type_random">Willekeurig</string>
+  <!-- Warn Silent Alarm title -->
   <string name="warn_silent_alarm_title">Alarmvolume is stil</string>
+  <!-- Select the source of the alarm -->
   <string name="alarm_select">Alarm selecteren</string>
+  <!-- Select the ringtone as alarm -->
   <string name="alarm_select_ringtone">Beltoon</string>
+  <!-- Select the alarm from external device -->
   <string name="alarm_select_external">Muziek</string>
+  <!-- Ringtone selection default -->
   <string name="ringtone_default">Standaardbeltoon</string>
+  <!-- Message that describe an error trying to take a persistent grant permission for an uri ringtone -->
   <string name="take_persistent_grant_uri_permission_failed_msg">Blijvend toestemming vragen voor toegang tot beltoon mislukt</string>
   <string name="menu_item_widget_settings">Instellingen widget</string>
   <string name="activity_not_found">Activiteit niet gevonden</string>
+  <!-- Permissions for reading/writing DeskClock alarms provider -->
   <string name="alarm_modification_service_desc">Een service om derde partijen toegang te verlenen tot uw alarmen.</string>
 </resources>

@@ -16,11 +16,17 @@
      limitations under the License.
 -->
 <resources xmlns:xliff="urn:oasis:names:tc:xliff:document:1.2">
+  <!-- Setting title for showing/hiding the alarm status bar icon -->
   <string name="show_status_bar_icon_title">הצג סמל</string>
+  <!-- Setting summary for showing/hiding the alarm statusbar icon -->
   <string name="show_status_bar_icon_summary">הצג סמל בשורת המצב כאשר שעון מעורר מוגדר</string>
-  <string name="alarm_increasing_volume">עוצמה מתגברת</string>
+  <!-- Setting labels on Set alarm screen: Increasing volume on or off -->
+  <string name="alarm_increasing_volume">עוצמת קול מתגברת</string>
+  <!-- Setting labels on Set alarm screen: Choose profile -->
   <string name="profile_description">פרופיל <xliff:g id="profile">%s</xliff:g></string>
+  <!-- No profile selected label -->
   <string name="profile_no_selected">לא נבחר פרופיל</string>
+  <!-- User-defined cities -->
   <string name="menu_item_add">הוסף</string>
   <string name="cities_add_city_title">הוסף עיר</string>
   <string name="cities_add_city_city">עיר:</string>
@@ -35,27 +41,42 @@
   <string name="cities_delete_city_title">מחק עיר</string>
   <string name="cities_delete_city_msg">האם ברצונך למחוק את <xliff:g id="city">%s</xliff:g>?</string>
   <string name="cities_delete_city_failed">לא ניתן למחוק את העיר</string>
-  <string name="volume_buttons_summary">הקשה על כפתורי עוצמת הקול תגרום ל<xliff:g id="action">%s</xliff:g></string>
+  <!-- Setting summary for volume buttons setting. -->
+  <string name="volume_buttons_summary">הקשה על לחצני עוצמת הקול תגרום לפעולה: <xliff:g id="action">%s</xliff:g></string>
+  <!-- Setting title for the flip action setting. -->
   <string name="flip_action_title">פעולת היפוך</string>
-  <string name="flip_action_summary" product="tablet">היפוך הטאבלט יגרום ל<xliff:g id="action">%s</xliff:g></string>
-  <string name="flip_action_summary" product="default">היפוך המכשיר יגרום ל<xliff:g id="action">%s</xliff:g></string>
+  <!-- Setting summary for the flip action setting. -->
+  <string name="flip_action_summary" product="tablet">היפוך הטאבלט יגרום לפעולה <xliff:g id="action">%s</xliff:g></string>
+  <string name="flip_action_summary" product="default">היפוך המכשיר יגרום לפעולה <xliff:g id="action">%s</xliff:g></string>
+  <!-- Setting title for the shake action setting. -->
   <string name="shake_action_title">פעולת ניעור</string>
-  <string name="shake_action_summary" product="tablet">ניעור הטאבלט יגרום ל<xliff:g id="action">%s</xliff:g></string>
+  <!-- Setting summary for the shake action setting. -->
+  <string name="shake_action_summary" product="tablet">ניעור הטאבלט יגרום לפעולה <xliff:g id="action">%s</xliff:g></string>
   <string name="shake_action_summary" product="default">ניעור המכשיר יגרום ל<xliff:g id="action">%s</xliff:g></string>
+  <!-- Summary texts for shake and flip actions -->
   <string name="action_summary_snooze">נמנום השעון המעורר</string>
   <string name="action_summary_dismiss">ביטול השעון המעורר</string>
-  <string name="action_summary_do_nothing">שום פעולה</string>
+  <string name="action_summary_do_nothing">אל תעשה דבר</string>
+  <!-- Alarm picker dialog title -->
   <string name="alarm_picker_title">בחר סוג שעון מעורר</string>
-  <string name="alarm_type_ringtone">צלצול</string>
+  <!-- Alarm types -->
+  <string name="alarm_type_ringtone">רינגטון</string>
   <string name="alarm_type_playlist">רשימת השמעה</string>
   <string name="alarm_type_random">אקראי</string>
+  <!-- Warn Silent Alarm title -->
   <string name="warn_silent_alarm_title">עוצמת שעון מעורר מושתקת</string>
+  <!-- Select the source of the alarm -->
   <string name="alarm_select">בחר צליל התראה</string>
-  <string name="alarm_select_ringtone">צלצול</string>
+  <!-- Select the ringtone as alarm -->
+  <string name="alarm_select_ringtone">רינגטון</string>
+  <!-- Select the alarm from external device -->
   <string name="alarm_select_external">מוזיקה</string>
-  <string name="ringtone_default">צלצול ברירת מחדל</string>
-  <string name="take_persistent_grant_uri_permission_failed_msg">אין אפשרות לקבל הרשאות תמידיות לצלצול</string>
+  <!-- Ringtone selection default -->
+  <string name="ringtone_default">רינגטון ברירת מחדל</string>
+  <!-- Message that describe an error trying to take a persistent grant permission for an uri ringtone -->
+  <string name="take_persistent_grant_uri_permission_failed_msg">קבלת הרשאות תמידיות לרינגטון נכשלה</string>
   <string name="menu_item_widget_settings">הגדרות ווידג\'ט</string>
-  <string name="activity_not_found">פעולה לא נמצאה!</string>
+  <string name="activity_not_found">הפעולה לא נמצאה!</string>
+  <!-- Permissions for reading/writing DeskClock alarms provider -->
   <string name="alarm_modification_service_desc">שירות המאפשר שינויי שעונים מעוררים בידי יישומי צד שלישי.</string>
 </resources>

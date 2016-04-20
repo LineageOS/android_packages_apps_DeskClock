@@ -16,15 +16,21 @@
      limitations under the License.
 -->
 <resources xmlns:xliff="urn:oasis:names:tc:xliff:document:1.2">
+  <!-- Setting title for showing/hiding the alarm status bar icon -->
   <string name="show_status_bar_icon_title">Показване на икона</string>
+  <!-- Setting summary for showing/hiding the alarm statusbar icon -->
   <string name="show_status_bar_icon_summary">Показва икона в лентата на състоянието, когато има включена аларма</string>
+  <!-- Setting labels on Set alarm screen: Increasing volume on or off -->
   <string name="alarm_increasing_volume">Увеличаващ звук</string>
+  <!-- Setting labels on Set alarm screen: Choose profile -->
   <string name="profile_description">Профил <xliff:g id="profile">%s </xliff:g></string>
+  <!-- No profile selected label -->
   <string name="profile_no_selected">Няма избран профил</string>
+  <!-- User-defined cities -->
   <string name="menu_item_add">Добавяне</string>
   <string name="cities_add_city_title">Добавяне на град</string>
   <string name="cities_add_city_city">Град:</string>
-  <string name="cities_add_city_timezone">Часови пояс:</string>
+  <string name="cities_add_city_timezone">Часова зона:</string>
   <string name="cities_add_city_gps_cd">Докоснете, за локализиране на текущия град</string>
   <string name="cities_add_loading">Зареждане\u2026</string>
   <string name="cities_add_searching">Търси се\u2026</string>
@@ -35,27 +41,42 @@
   <string name="cities_delete_city_title">Изтриване на града</string>
   <string name="cities_delete_city_msg">Желаете ли \"<xliff:g id="city">%s</xliff:g>?\" да бъде изтрит?</string>
   <string name="cities_delete_city_failed">Градът не може да бъде изтрит</string>
+  <!-- Setting summary for volume buttons setting. -->
   <string name="volume_buttons_summary">Натискане на бутоните за сила на звука <xliff:g id="action">%s </xliff:g></string>
+  <!-- Setting title for the flip action setting. -->
   <string name="flip_action_title">Действие при обръщане</string>
+  <!-- Setting summary for the flip action setting. -->
   <string name="flip_action_summary" product="tablet">Обръщането на таблета надолу <xliff:g id="action">%s</xliff:g></string>
   <string name="flip_action_summary" product="default">Обръщането на телефона надолу <xliff:g id="action">%s </xliff:g></string>
+  <!-- Setting title for the shake action setting. -->
   <string name="shake_action_title">Действие при разклащанне</string>
+  <!-- Setting summary for the shake action setting. -->
   <string name="shake_action_summary" product="tablet">Разклащането на таблета <xliff:g id="action">%s</xliff:g></string>
   <string name="shake_action_summary" product="default">Разклащане на телефона <xliff:g id="action">%s </xliff:g></string>
+  <!-- Summary texts for shake and flip actions -->
   <string name="action_summary_snooze">ще отложи алармата</string>
   <string name="action_summary_dismiss">ще отхвърли алармата</string>
   <string name="action_summary_do_nothing">не прави нищо</string>
+  <!-- Alarm picker dialog title -->
   <string name="alarm_picker_title">Изберете тип аларма</string>
+  <!-- Alarm types -->
   <string name="alarm_type_ringtone">Мелодия</string>
   <string name="alarm_type_playlist">Списък за изпълнение</string>
   <string name="alarm_type_random">Случайно</string>
+  <!-- Warn Silent Alarm title -->
   <string name="warn_silent_alarm_title">Звукът на алармата е безшумен</string>
+  <!-- Select the source of the alarm -->
   <string name="alarm_select">Изберете аларма</string>
+  <!-- Select the ringtone as alarm -->
   <string name="alarm_select_ringtone">Мелодия</string>
+  <!-- Select the alarm from external device -->
   <string name="alarm_select_external">Музика</string>
+  <!-- Ringtone selection default -->
   <string name="ringtone_default">Мелодия по подразбиране</string>
+  <!-- Message that describe an error trying to take a persistent grant permission for an uri ringtone -->
   <string name="take_persistent_grant_uri_permission_failed_msg">Не може да се вземе постоянно разрешение за мелодията</string>
   <string name="menu_item_widget_settings">Настройки на приспособленията</string>
   <string name="activity_not_found">Дейност не е намерена!</string>
+  <!-- Permissions for reading/writing DeskClock alarms provider -->
   <string name="alarm_modification_service_desc">Услугата позволява манипулиране на аларми от трети лица.</string>
 </resources>
