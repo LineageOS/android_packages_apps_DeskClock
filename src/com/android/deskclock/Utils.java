@@ -647,7 +647,7 @@ public class Utils {
                 // Default to using the first character as the index
                 index = parseString.substring(0, 1);
                 cityName = parseString;
-                LogUtils.e("Missing expected separator character =");
+                //LogUtils.e("Missing expected separator character =");
             } else {
                  index = parseString.substring(0, separatorIndex);
                  cityName = parseString.substring(separatorIndex + 1);
