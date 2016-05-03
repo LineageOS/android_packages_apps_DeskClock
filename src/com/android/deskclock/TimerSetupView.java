@@ -49,10 +49,21 @@ public class TimerSetupView extends LinearLayout implements Button.OnClickListen
     private final int mColorAccent;
     private final int mColorHairline;
 
+    // When quickly switching between a hide/show,
+    // the hide animation ends after show starts resulting in being in an invisible state.
+    // This boolean tracks the state that is expected.
+    private int mStartVisibility = View.INVISIBLE;
+
     private final AnimatorListenerAdapter mHideFabAnimatorListener = new AnimatorListenerAdapter() {
+
+        @Override
+        public void onAnimationStart(Animator animation) {
+            mStartVisibility = View.INVISIBLE;
+        }
+
         @Override
         public void onAnimationEnd(Animator animation) {
-            if (mStart != null) {
+            if (mStart != null && mStartVisibility == View.INVISIBLE) {
                 mStart.setScaleX(1.0f);
                 mStart.setScaleY(1.0f);
                 mStart.setVisibility(View.INVISIBLE);
@@ -63,6 +74,7 @@ public class TimerSetupView extends LinearLayout implements Button.OnClickListen
     private final AnimatorListenerAdapter mShowFabAnimatorListener = new AnimatorListenerAdapter() {
         @Override
         public void onAnimationStart(Animator animation) {
+            mStartVisibility = View.VISIBLE;
             if (mStart != null) {
                 mStart.setVisibility(View.VISIBLE);
             }
@@ -155,7 +167,7 @@ public class TimerSetupView extends LinearLayout implements Button.OnClickListen
 
     private void setFabButtonVisibility(boolean show) {
         final int finalVisibility = show ? View.VISIBLE : View.INVISIBLE;
-        if (mStart == null || mStart.getVisibility() == finalVisibility) {
+        if (mStart == null || mStartVisibility == finalVisibility) {
             // Fab is not initialized yet or already shown/hidden
             return;
         }
