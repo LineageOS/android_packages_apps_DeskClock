@@ -332,15 +332,18 @@ public class AlarmService extends Service {
         }
     }
 
-    private final SensorEventListener mFlipListener = new SensorEventListener() {
-        private static final int FACE_UP_LOWER_LIMIT = -45;
-        private static final int FACE_UP_UPPER_LIMIT = 45;
-        private static final int FACE_DOWN_UPPER_LIMIT = 135;
-        private static final int FACE_DOWN_LOWER_LIMIT = -135;
-        private static final int TILT_UPPER_LIMIT = 45;
-        private static final int TILT_LOWER_LIMIT = -45;
+    private interface ResettableSensorEventListener extends SensorEventListener {
+        public void reset();
+    }
+
+    private final ResettableSensorEventListener mFlipListener =
+        new ResettableSensorEventListener() {
+        // Accelerometers are not quite accurate.
+        private static final float GRAVITY_UPPER_THRESHOLD = 1.3f * SensorManager.STANDARD_GRAVITY;
+        private static final float GRAVITY_LOWER_THRESHOLD = 0.7f * SensorManager.STANDARD_GRAVITY;
         private static final int SENSOR_SAMPLES = 3;
 
+        private boolean mStopped;
         private boolean mWasFaceUp;
         private boolean[] mSamples = new boolean[SENSOR_SAMPLES];
         private int mSampleIndex;
@@ -350,44 +353,53 @@ public class AlarmService extends Service {
         }
 
         @Override
+        public void reset() {
+            mWasFaceUp = false;
+            mStopped = false;
+            for (int i = 0; i < SENSOR_SAMPLES; i++) {
+                mSamples[i] = false;
+            }
+        }
+
+        private boolean filterSamples() {
+            boolean allPass = true;
+            for (boolean sample : mSamples) {
+                allPass = allPass && sample;
+            }
+            return allPass;
+        }
+
+        @Override
         public void onSensorChanged(SensorEvent event) {
             // Add a sample overwriting the oldest one. Several samples
-            // are used
-            // to avoid the erroneous values the sensor sometimes
+            // are used to avoid the erroneous values the sensor sometimes
             // returns.
-            float y = event.values[1];
             float z = event.values[2];
+
+            if (mStopped) {
+                return;
+            }
 
             if (!mWasFaceUp) {
                 // Check if its face up enough.
-                mSamples[mSampleIndex] = y > FACE_UP_LOWER_LIMIT
-                        && y < FACE_UP_UPPER_LIMIT
-                        && z > TILT_LOWER_LIMIT && z < TILT_UPPER_LIMIT;
+                mSamples[mSampleIndex] = (z > GRAVITY_LOWER_THRESHOLD) &&
+                    (z < GRAVITY_UPPER_THRESHOLD);
 
-                // The device first needs to be face up.
-                boolean faceUp = true;
-                for (boolean sample : mSamples) {
-                    faceUp = faceUp && sample;
-                }
-                if (faceUp) {
+                // face up
+                if (filterSamples()) {
                     mWasFaceUp = true;
                     for (int i = 0; i < SENSOR_SAMPLES; i++) {
                         mSamples[i] = false;
                     }
                 }
             } else {
-                // Check if its face down enough. Note that wanted
-                // values go from FACE_DOWN_UPPER_LIMIT to 180
-                // and from -180 to FACE_DOWN_LOWER_LIMIT
-                mSamples[mSampleIndex] = (y > FACE_DOWN_UPPER_LIMIT || y < FACE_DOWN_LOWER_LIMIT)
-                        && z > TILT_LOWER_LIMIT
-                        && z < TILT_UPPER_LIMIT;
+                // Check if its face down enough.
+                mSamples[mSampleIndex] = (z < -GRAVITY_LOWER_THRESHOLD) &&
+                    (z > -GRAVITY_UPPER_THRESHOLD);
 
-                boolean faceDown = true;
-                for (boolean sample : mSamples) {
-                    faceDown = faceDown && sample;
-                }
-                if (faceDown) {
+                // face down
+                if (filterSamples()) {
+                    mStopped = true;
                     handleAction(mFlipAction);
                 }
             }
@@ -433,8 +445,9 @@ public class AlarmService extends Service {
 
     private void attachListeners() {
         if (mFlipAction != ALARM_NO_ACTION) {
+            mFlipListener.reset();
             mSensorManager.registerListener(mFlipListener,
-                    mSensorManager.getDefaultSensor(Sensor.TYPE_ORIENTATION),
+                    mSensorManager.getDefaultSensor(Sensor.TYPE_ACCELEROMETER),
                     SensorManager.SENSOR_DELAY_NORMAL,
                     300 * 1000); //batch every 300 milliseconds
         }
