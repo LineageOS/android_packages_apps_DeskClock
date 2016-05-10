@@ -15,6 +15,6 @@
 -->
 
 <animation-list xmlns:android="http://schemas.android.com/apk/res/android" android:oneshot="false">
-    <item android:drawable="@drawable/ic_gps_off" android:duration="500" />
+    <item android:drawable="@drawable/ic_gps_disabled" android:duration="500" />
     <item android:drawable="@drawable/ic_gps_on" android:duration="500" />
 </animation-list>

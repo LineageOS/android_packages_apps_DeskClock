@@ -24,10 +24,13 @@ import android.content.SharedPreferences;
 import android.content.SharedPreferences.OnSharedPreferenceChangeListener;
 import android.preference.PreferenceManager;
 
+import com.android.deskclock.LogUtils;
 import com.android.deskclock.R;
 import com.android.deskclock.Utils;
 import com.android.deskclock.data.DataModel.CitySort;
 import com.android.deskclock.settings.SettingsActivity;
+import com.android.deskclock.worldclock.db.DbCities;
+import com.android.deskclock.worldclock.db.DbCity;
 
 import java.util.ArrayList;
 import java.util.Collection;
@@ -100,6 +103,17 @@ final class CityModel {
             final List<City> allCities = new ArrayList<>(getCityMap().size());
             allCities.addAll(selected);
             allCities.addAll(getUnselectedCities());
+
+            //add the clock db data to all cities list
+            List<DbCity> dbCities = DbCities.getCities(mContext.getContentResolver());
+            for (int i = 0; i < dbCities.size(); i++) {
+                DbCity dbCity = dbCities.get(i);
+                String formatName = dbCity.name.charAt(0) + "=" + dbCity.name;
+                LogUtils.d(LogUtils.LOGTAG, "getCities: formatName = " + formatName);
+                allCities.add(CityDAO.createCity("UD" + dbCity.id,
+                        formatName, dbCity.tz));
+            }
+
             mAllCities = Collections.unmodifiableList(allCities);
         }
 
@@ -219,10 +233,7 @@ final class CityModel {
     }
 
     private Map<String, City> getCityMap() {
-        if (mCityMap == null) {
-            mCityMap = CityDAO.getCities(mContext);
-        }
-
+        mCityMap = CityDAO.getCities(mContext);
         return mCityMap;
     }
 

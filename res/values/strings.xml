@@ -364,6 +364,8 @@
     <!-- Title of the setting to change hardware button behavior. This string
          should be changed for each piece of hardware. [CHAR LIMIT=20] -->
     <string name="volume_button_setting_title">Volume buttons</string>
+    <!-- Title of the setting default alarm tone  -->
+    <string name="default_alarm_tone_title">Default alarm tone</string>
 
     <!-- Dialog title of the volume and power setting. -->
     <string name="volume_button_dialog_title">Button effect</string>
@@ -438,28 +440,30 @@
     <string name="menu_item_settings">Settings</string>
     <!-- Menu item on most screens to get to the help information -->
     <string name="menu_item_help">Help</string>
+    <!-- Menu item on clock screen to add world city. -->
+    <string name="menu_item_add">Add</string>
+    
     <!-- Menu item on clock screen to enter night mode. -->
     <string name="menu_item_night_mode">Night mode</string>
     <!-- Menu item on Cities screen to sort by GMT offset -->
     <string name="menu_item_sort_by_gmt_offset">Sort by time</string>
     <!-- Menu item on Cities screen to sort by alphabetical order -->
     <string name="menu_item_sort_by_name">Sort by name</string>
-
-    <!-- User-defined cities -->
-    <string name="menu_item_add">Add</string>
-    <string name="cities_add_city_title">Add city</string>
-    <string name="cities_add_city_city">City:</string>
-    <string name="cities_add_city_timezone">Timezone:</string>
-    <string name="cities_add_city_gps_cd">Tap to localize your current city</string>
-    <string name="cities_add_loading">Loading\u2026</string>
-    <string name="cities_add_searching">Searching\u2026</string>
     <string name="cities_add_gps_no_results">GPS query returns no location results</string>
     <string name="cities_add_gps_not_available">GPS not available</string>
+    <string name="cities_add_searching">Searching\u2026</string>
+    <string name="cities_add_city_title">Add city</string>
+    <string name="cities_add_city_gps_cd">Tap to localize your current city</string>
+    <string name="cities_add_loading">Loading\u2026</string>
+    <string name="cities_add_city_city">City:</string>
+    <string name="cities_add_city_timezone">Timezone:</string>
     <string name="cities_add_already_exists">The city already exists in the database</string>
     <string name="cities_add_city_failed">Can\'t create the city</string>
-    <string name="cities_delete_city_title">Delete city</string>
-    <string name="cities_delete_city_msg">Do you want to delete <xliff:g id="city">%s</xliff:g>?</string>
     <string name="cities_delete_city_failed">Can\'t delete the city</string>
+    <string name="cities_delete_city_msg">Do you want to delete
+        <xliff:g id="city">%s</xliff:g>?
+    </string>
+    <string name="cities_delete_city_title">Delete city</string>
 
     <!-- Label for selected cities in Cities list view -->
     <string name="selected_cities_label">Selected Cities</string>
@@ -877,6 +881,16 @@
     <string name="alarm_undo">undo</string>
     <!-- Toast content when an alarm was deleted  -->
     <string name="alarm_deleted">Alarm deleted</string>
+    <!-- Select the source of the alarm -->
+    <string name="alarm_select">Select Alarm</string>
+    <!-- Select the ringtone as alarm -->
+    <string name="alarm_select_ringtone">Ringtone</string>
+    <!-- Select the alarm from external device -->
+    <string name="alarm_select_external">Music</string>
+    <!-- Ok for selection -->
+    <string name="alarm_select_ok">OK</string>
+    <!-- Cancel for selection -->
+    <string name="alarm_select_cancel">Cancel</string>
     <!-- slash between date and next alarm in the clock -->
     <string name="slash"> / </string>
     <!-- slash between date and next alarm in the clock -->
@@ -1122,6 +1136,26 @@
     [CHAR LIMIT=NONE]
     -->
     <string name="alarm_is_snoozed"><xliff:g id="alarm_time" example="14:20">%s</xliff:g> alarm snoozed for 10 minutes</string>
+    <!-- Setting title for the flip action setting. -->
+    <string name="flip_action_title">Flip action</string>
+
+      <!-- Setting summary for the flip action setting. -->
+    <string name="flip_action_summary" product="default">Flipping the phone down will
+        <xliff:g id="action">%s</xliff:g>
+    </string>
+
+    <!-- Setting title for the shake action setting. -->
+    <string name="shake_action_title">Shake action</string>
+
+    <!-- Setting summary for the shake action setting. -->
+    <string name="shake_action_summary" product="default">Shaking the phone will
+        <xliff:g id="action">%s</xliff:g>
+    </string>
+
+    <!-- Summary texts for shake and flip actions -->
+    <string name="action_summary_snooze">snooze the alarm</string>
+    <string name="action_summary_dismiss">dismiss the alarm</string>
+    <string name="action_summary_do_nothing">do nothing</string>
 
 </resources>
 

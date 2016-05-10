@@ -68,13 +68,6 @@ import java.util.Calendar;
 import java.util.Collection;
 import java.util.Date;
 import java.util.GregorianCalendar;
-
-import com.android.deskclock.worldclock.db.DbCities;
-import com.android.deskclock.worldclock.db.DbCity;
-import java.util.ArrayList;
-import java.util.Collections;
-import java.util.List;
-
 import java.util.Locale;
 import java.util.TimeZone;
 
@@ -95,6 +88,9 @@ public class Utils {
      * Temporary array used by {@link #obtainStyledColor(Context, int, int)}.
      */
     private static final int[] TEMP_ARRAY = new int[1];
+
+    public static final String DESKCLOCK_DE_SHARED_PREFERENCES = "de_sharedPreferences";
+    public static final String DESKCLOCK_CE_SHARED_PREFERENCES = "ce_sharedPreferences";
 
     /**
      * The background colors of the app - it changes throughout out the day to mimic the sky.
@@ -707,43 +703,6 @@ public class Utils {
         final ArraySet<E> arraySet = new ArraySet<>(collection.size());
         arraySet.addAll(collection);
         return arraySet;
-
-    public static CityObj[] loadCitiesDataBase(Context c) {
-        final Collator collator = Collator.getInstance();
-        Resources r = c.getResources();
-
-        // Get list of cities defined by the app (App-defined has the prefix C)
-        // Read strings array of name,timezone, id
-        // make sure the list are the same length
-        String[] cities = r.getStringArray(R.array.cities_names);
-        String[] timezones = r.getStringArray(R.array.cities_tz);
-        String[] ids = r.getStringArray(R.array.cities_id);
-        if (cities.length != timezones.length || ids.length != cities.length) {
-            Log.wtf("City lists sizes are not the same, cannot use the data");
-            return null;
-        }
-        List<CityObj> tempList = new ArrayList<CityObj>(cities.length);
-        for (int i = 0; i < cities.length; i++) {
-            tempList.add(new CityObj(cities[i], timezones[i], ids[i]));
-        }
-
-        // Get the list of user-defined cities (User-defined has the prefix UD)
-        List<DbCity> dbcities = DbCities.getCities(c.getContentResolver());
-        for (int i = 0; i < dbcities.size(); i++) {
-            DbCity dbCity = dbcities.get(i);
-            CityObj city = new CityObj(dbCity.name, dbCity.tz, "UD" + dbCity.id);
-            city.mUserDefined = true;
-            tempList.add(city);
-        }
-
-        // Sort alphabetically
-        Collections.sort(tempList, new Comparator<CityObj> () {
-            @Override
-            public int compare(CityObj c1, CityObj c2) {
-                return collator.compare(c1.mCityName, c2.mCityName);
-            }
-        });
-        return tempList.toArray(new CityObj[tempList.size()]);
     }
 
     /**
@@ -766,5 +725,34 @@ public class Utils {
         }
 
         return PreferenceManager.getDefaultSharedPreferences(storageContext);
+    }
+
+    /**
+     * Return the desk clock_de shared preferences.
+     */
+    public static SharedPreferences getDESharedPreferences(Context context) {
+        final Context storageContext;
+        if (isNOrLater()) {
+            // All N devices have split storage areas, but we may need to
+            // migrate existing preferences into the new device protected
+            // storage area, which is where our data lives from now on.
+            final Context deviceContext = context.createDeviceProtectedStorageContext();
+            storageContext = deviceContext;
+        } else {
+            storageContext = context;
+        }
+
+        return storageContext.getSharedPreferences(DESKCLOCK_DE_SHARED_PREFERENCES,
+                Context.MODE_PRIVATE);
+    }
+
+
+    /**
+     * Return the desk clock_ce shared preferences.
+     */
+    public static SharedPreferences getCESharedPreferences(Context context) {
+        SharedPreferences sharedPreferences = context.getSharedPreferences(
+                DESKCLOCK_CE_SHARED_PREFERENCES, Context.MODE_PRIVATE);
+        return sharedPreferences;
     }
 }

@@ -13,8 +13,7 @@
      See the License for the specific language governing permissions and
      limitations under the License.
 -->
-
 <selector xmlns:android="http://schemas.android.com/apk/res/android">
-  <item android:drawable="@drawable/ic_gps_disabled" android:state_enabled="false"/>
-  <item android:drawable="@drawable/ic_gps_on"/>
+    <item android:drawable="@drawable/ic_gps_disabled" android:state_enabled="false"/>
+    <item android:drawable="@drawable/ic_gps_on"/>
 </selector>

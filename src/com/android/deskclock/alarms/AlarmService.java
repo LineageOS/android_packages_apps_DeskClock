@@ -18,32 +18,29 @@
  */
 package com.android.deskclock.alarms;
 
-import android.app.PendingIntent;
 import android.app.Service;
 import android.content.BroadcastReceiver;
 import android.content.ContentResolver;
 import android.content.Context;
 import android.content.Intent;
 import android.content.IntentFilter;
-import android.os.Binder;
-import android.os.IBinder;
 import android.content.SharedPreferences;
 import android.hardware.Sensor;
 import android.hardware.SensorEvent;
 import android.hardware.SensorEventListener;
 import android.hardware.SensorManager;
-import android.preference.PreferenceManager;
+import android.os.Binder;
+import android.os.IBinder;
 import android.telephony.PhoneStateListener;
 import android.telephony.TelephonyManager;
 
 import com.android.deskclock.AlarmAlertWakeLock;
 import com.android.deskclock.LogUtils;
-
-import com.android.deskclock.SettingsActivity;
-import com.android.deskclock.provider.AlarmInstance;
 import com.android.deskclock.R;
+import com.android.deskclock.Utils;
 import com.android.deskclock.events.Events;
 import com.android.deskclock.provider.AlarmInstance;
+import com.android.deskclock.settings.SettingsActivity;
 
 /**
  * This service is in charge of starting/stopping the alarm. It will bring up and manage the
@@ -75,35 +72,23 @@ public class AlarmService extends Service {
     /** Private action used to stop an alarm with this service. */
     public static final String STOP_ALARM_ACTION = "STOP_ALARM";
 
-
     /** Binder given to AlarmActivity */
     private final IBinder mBinder = new Binder();
-
-    // default action for flip and shake
-    private static final String DEFAULT_ACTION = "0";
-
-    // constants for no action/snooze/dismiss
-    private static final int ALARM_NO_ACTION = 0;
-    private static final int ALARM_SNOOZE = 1;
-    private static final int ALARM_DISMISS = 2;
-
-    /**
-     * Utility method to help start alarm properly. If alarm is already firing, it
-     * will mark it as missed and start the new one.
-     *
-     * @param context application context
-     * @param instance to trigger alarm
-     */
-    public static void startAlarm(Context context, AlarmInstance instance) {
-        Intent intent = AlarmInstance.createIntent(context, AlarmService.class, instance.mId);
-        intent.setAction(START_ALARM_ACTION);
-     }
 
     /** Whether the service is currently bound to AlarmActivity */
     private boolean mIsBound = false;
 
     /** Whether the receiver is currently registered */
     private boolean mIsRegistered = false;
+
+    private SensorManager mSensorManager;
+    private int mFlipAction;
+    private int mShakeAction;
+    private static final int ALARM_NO_ACTION = 0;
+    private static final int ALARM_SNOOZE = 1;
+    private static final int ALARM_DISMISS = 2;
+    // default action for flip and shake
+    private static final String DEFAULT_ACTION = "0";
 
     @Override
     public IBinder onBind(Intent intent) {
@@ -135,9 +120,6 @@ public class AlarmService extends Service {
     private TelephonyManager mTelephonyManager;
     private int mInitialCallState;
     private AlarmInstance mCurrentAlarm = null;
-    private SensorManager mSensorManager;
-    private int mFlipAction;
-    private int mShakeAction;
 
     private PhoneStateListener mPhoneStateListener = new PhoneStateListener() {
         @Override
@@ -146,11 +128,15 @@ public class AlarmService extends Service {
             // we register onCallStateChanged, we get the initial in-call state
             // which kills the alarm. Check against the initial call state so
             // we don't kill the alarm during a call.
+
             if (AlarmService.this.getResources().getBoolean(R.bool.config_silent_during_call)
                     && state != TelephonyManager.CALL_STATE_IDLE) {
-                sendBroadcast(AlarmStateManager.createStateChangeIntent(AlarmService.this,
+                startService(AlarmStateManager.createStateChangeIntent(AlarmService.this,
                         "AlarmService", mCurrentAlarm, AlarmInstance.MISSED_STATE));
-            } else if (state != TelephonyManager.CALL_STATE_IDLE && state != mInitialCallState) {
+                return;
+            }
+
+            if (state != TelephonyManager.CALL_STATE_IDLE && state != mInitialCallState) {
                 startService(AlarmStateManager.createStateChangeIntent(AlarmService.this,
                         "AlarmService", mCurrentAlarm, AlarmInstance.MISSED_STATE));
             }
@@ -172,6 +158,7 @@ public class AlarmService extends Service {
         mTelephonyManager.listen(mPhoneStateListener, PhoneStateListener.LISTEN_CALL_STATE);
         AlarmKlaxon.start(this, mCurrentAlarm);
         sendBroadcast(new Intent(ALARM_ALERT_ACTION));
+
         attachListeners();
     }
 
@@ -198,8 +185,9 @@ public class AlarmService extends Service {
             AlarmNotifications.updateNotification(this, mCurrentAlarm);
         }
 
-        mCurrentAlarm = null;
         detachListeners();
+
+        mCurrentAlarm = null;
         AlarmAlertWakeLock.releaseCpuLock();
     }
 
@@ -247,7 +235,7 @@ public class AlarmService extends Service {
         mIsRegistered = true;
 
         mSensorManager = (SensorManager) getSystemService(Context.SENSOR_SERVICE);
-        SharedPreferences prefs = PreferenceManager.getDefaultSharedPreferences(this);
+        SharedPreferences prefs = Utils.getDefaultSharedPreferences(this);
         mFlipAction = Integer.parseInt(prefs.getString(
                 SettingsActivity.KEY_FLIP_ACTION, DEFAULT_ACTION));
         mShakeAction = Integer.parseInt(prefs.getString(
@@ -445,8 +433,8 @@ public class AlarmService extends Service {
                 break;
             case ALARM_DISMISS:
                 // Setup Dismiss Action
-                Intent dismissIntent = AlarmStateManager.createStateChangeIntent(this, "DISMISS_TAG",
-                        mCurrentAlarm, AlarmInstance.DISMISSED_STATE);
+                Intent dismissIntent = AlarmStateManager.createStateChangeIntent(this,
+                        "DISMISS_TAG", mCurrentAlarm, AlarmInstance.DISMISSED_STATE);
                 sendBroadcast(dismissIntent);
                 break;
             case ALARM_NO_ACTION:
@@ -454,5 +442,4 @@ public class AlarmService extends Service {
                 break;
         }
     }
-
 }

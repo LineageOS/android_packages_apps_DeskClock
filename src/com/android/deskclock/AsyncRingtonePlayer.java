@@ -63,7 +63,7 @@ public final class AsyncRingtonePlayer {
     private PlaybackDelegate mPlaybackDelegate;
 
     /** The context. */
-    private static Context mContext;
+    private final Context mContext;
 
     /** The key of the preference that controls the crescendo behavior when playing a ringtone. */
     private final String mCrescendoPrefKey;
@@ -367,6 +367,7 @@ public final class AsyncRingtonePlayer {
                             .setContentType(AudioAttributes.CONTENT_TYPE_SONIFICATION)
                             .build());
                 }
+
                 player.setAudioStreamType(AudioManager.STREAM_ALARM);
                 player.setLooping(true);
                 player.prepare();
@@ -375,7 +376,7 @@ public final class AsyncRingtonePlayer {
                 player.start();
             } else if (mContext.getResources().getBoolean(R.bool.config_ring_alarm_force)) {
                 mAudioManager.setStreamVolume(AudioManager.STREAM_ALARM,
-                mAudioManager.getStreamMaxVolume(AudioManager.STREAM_ALARM), 0);
+                        mAudioManager.getStreamMaxVolume(AudioManager.STREAM_ALARM), 0);
                 player.setAudioStreamType(AudioManager.STREAM_ALARM);
                 player.setLooping(true);
                 player.prepare();

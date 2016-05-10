@@ -16,9 +16,11 @@
 
 package com.android.deskclock.settings;
 
+import android.Manifest;
 import android.app.Activity;
 import android.content.Context;
 import android.content.Intent;
+import android.content.SharedPreferences;
 import android.content.res.Resources;
 import android.hardware.Sensor;
 import android.hardware.SensorManager;
@@ -26,7 +28,10 @@ import android.media.AudioManager;
 import android.os.Bundle;
 import android.preference.ListPreference;
 import android.preference.Preference;
+import android.preference.PreferenceCategory;
 import android.preference.PreferenceFragment;
+import android.preference.PreferenceManager;
+import android.preference.PreferenceScreen;
 import android.preference.RingtonePreference;
 import android.preference.SwitchPreference;
 import android.provider.Settings;
@@ -34,6 +39,8 @@ import android.text.format.DateUtils;
 import android.view.Menu;
 import android.view.MenuItem;
 
+import com.android.deskclock.AlarmClockFragment;
+import com.android.deskclock.AlarmUtils;
 import com.android.deskclock.BaseActivity;
 import com.android.deskclock.LogUtils;
 import com.android.deskclock.R;
@@ -67,11 +74,14 @@ public final class SettingsActivity extends BaseActivity {
     public static final String KEY_VOLUME_BUTTONS = "volume_button_setting";
     public static final String KEY_WEEK_START = "week_start";
 
-    public static final String KEY_FLIP_ACTION = "flip_action";
-    public static final String KEY_SHAKE_ACTION = "shake_action";
-
     public static final String TIMEZONE_LOCALE = "tz_locale";
 
+    public static final String KEY_DEFAULT_ALARM_TONE = "default_alarm_tone";
+    private static DefaultAlarmToneDialog mdefaultAlarmTone;
+
+    public static final String KEY_ALARM_SETTINGS = "key_alarm_settings";
+    public static final String KEY_FLIP_ACTION = "flip_action";
+    public static final String KEY_SHAKE_ACTION = "shake_action";
 
     public static final String DEFAULT_VOLUME_BEHAVIOR = "0";
     public static final String VOLUME_BEHAVIOR_SNOOZE = "1";
@@ -114,6 +124,11 @@ public final class SettingsActivity extends BaseActivity {
         @Override
         public void onCreate(Bundle savedInstanceState) {
             super.onCreate(savedInstanceState);
+
+            //fix google native issue, cannot save and effect settingActivity's setting item
+            if(Utils.isNOrLater()) {
+                getPreferenceManager().setStorageDeviceProtected();
+            }
 
             addPreferencesFromResource(R.xml.settings);
             loadTimeZoneList();
@@ -176,23 +191,27 @@ public final class SettingsActivity extends BaseActivity {
                     timerRingtonePref.setSummary(DataModel.getDataModel().getTimerRingtoneTitle());
                     break;
                 case KEY_FLIP_ACTION:
-                    final ListPreference listPref = (ListPreference) pref;
-                    updateActionSummary(listPref, (String) newValue, R.string.flip_action_summary);
+                    LogUtils.d(LogUtils.LOGTAG, "onPreferenceChange: flip");
+                    final ListPreference flipPref = (ListPreference) pref;
+                    int i = flipPref.findIndexOfValue((String) newValue);
+                    flipPref.setSummary(getString(
+                            R.string.flip_action_summary,
+                            getResources().getStringArray(
+                                    R.array.action_summary_entries)[i]));
                     break;
                 case KEY_SHAKE_ACTION:
-                    final ListPreference listPref = (ListPreference) pref;
-                    updateActionSummary(listPref, (String) newValue, R.string.shake_action_summary);
+                    LogUtils.d(LogUtils.LOGTAG, "onPreferenceChange: shake");
+                    final ListPreference shakePref = (ListPreference) pref;
+                    int ii = shakePref.findIndexOfValue((String) newValue);
+                    shakePref.setSummary(getString(
+                            R.string.shake_action_summary,
+                            getResources().getStringArray(
+                                    R.array.action_summary_entries)[ii]));
                     break;
             }
             // Set result so DeskClock knows to refresh itself
             getActivity().setResult(RESULT_OK);
             return true;
-        }
-
-        private void updateActionSummary(ListPreference listPref, String action, int summaryResId) {
-            int i = Integer.parseInt(action);
-            listPref.setSummary(getString(summaryResId,
-            getResources().getStringArray(R.array.action_summary_entries)[i]));
         }
 
         @Override
@@ -294,6 +313,15 @@ public final class SettingsActivity extends BaseActivity {
             final Preference volumePref = findPreference(KEY_ALARM_VOLUME);
             volumePref.setOnPreferenceClickListener(this);
 
+            mdefaultAlarmTone =
+                    (DefaultAlarmToneDialog) findPreference(KEY_DEFAULT_ALARM_TONE);
+            SharedPreferences sharedPreferences = Utils.getCESharedPreferences(getContext());
+            LogUtils.d(LogUtils.LOGTAG, "refresh: summary = " + sharedPreferences.getString(
+                    DefaultAlarmToneDialog.DEFAULT_RING_TONE_NAME_KEY,null));
+            mdefaultAlarmTone.setSummary(sharedPreferences.getString(
+                    DefaultAlarmToneDialog.DEFAULT_RING_TONE_NAME_KEY,
+                    DefaultAlarmToneDialog.DEFAULT_RING_TONE_NAME));
+
             final SnoozeLengthDialog snoozePref =
                     (SnoozeLengthDialog) findPreference(KEY_ALARM_SNOOZE);
             snoozePref.setSummary();
@@ -323,13 +351,46 @@ public final class SettingsActivity extends BaseActivity {
             timerRingtonePref.setSummary(DataModel.getDataModel().getTimerRingtoneTitle());
             timerRingtonePref.setOnPreferenceChangeListener(this);
 
-            listPref = (ListPreference) findPreference(KEY_FLIP_ACTION);
-            updateActionSummary(listPref, listPref.getValue(), R.string.flip_action_summary);
-            listPref.setOnPreferenceChangeListener(this);
+            PreferenceCategory category = (PreferenceCategory) findPreference(
+                    KEY_ALARM_SETTINGS);
+            SensorManager sensorManager = (SensorManager) getActivity()
+                    .getSystemService(Context.SENSOR_SERVICE);
+            ListPreference flipPreference = (ListPreference) findPreference(KEY_FLIP_ACTION);
+            if (flipPreference != null) {
+                List<Sensor> sensorList = sensorManager.getSensorList(Sensor.TYPE_ORIENTATION);
+                if (sensorList.size() < 1) { // This will be true if no orientation sensor
+                    flipPreference.setValue("0"); // Turn it off
+                    if (category != null) {
+                        LogUtils.d(LogUtils.LOGTAG, "filpPreference is removed");
+                        category.removePreference(flipPreference);
+                    }
+                } else {
+                    int i = flipPreference.findIndexOfValue(flipPreference.getValue());
+                    flipPreference.setSummary(getString(
+                            R.string.flip_action_summary,
+                            getResources().getStringArray(R.array.action_summary_entries)[i]));
+                    flipPreference.setOnPreferenceChangeListener(this);
+                }
+            }
 
-            listPref = (ListPreference) findPreference(KEY_SHAKE_ACTION);
-            updateActionSummary(listPref, listPref.getValue(), R.string.shake_action_summary);
-            listPref.setOnPreferenceChangeListener(this);
+            ListPreference shakePreference = (ListPreference) findPreference(KEY_SHAKE_ACTION);
+            if (shakePreference != null) {
+                List<Sensor> sensorList = sensorManager.getSensorList(Sensor.TYPE_ACCELEROMETER);
+                if (sensorList.size() < 1) { // This will be true if no accelerometer sensor
+                    shakePreference.setValue("0"); // Turn it off
+                    if (category != null) {
+                        LogUtils.d(LogUtils.LOGTAG, "shakePreference is removed");
+                        category.removePreference(shakePreference);
+                    }
+                } else {
+                    int i = shakePreference.findIndexOfValue(shakePreference.getValue());
+                    shakePreference.setSummary(getString(
+                            R.string.shake_action_summary,
+                            getResources().getStringArray(
+                                    R.array.action_summary_entries)[i]));
+                    shakePreference.setOnPreferenceChangeListener(this);
+                }
+            }
         }
 
         private void updateAutoSnoozeSummary(ListPreference listPref, String delay) {
@@ -384,6 +445,27 @@ public final class SettingsActivity extends BaseActivity {
                     name.append(" \u2600"); // Sun symbol
                 }
                 return name.toString();
+            }
+        }
+    }
+
+    @Override
+    public void onActivityResult(int requestCode, int resultCode, Intent data) {
+        if (resultCode == Activity.RESULT_OK) {
+            switch (requestCode) {
+                case AlarmClockFragment.REQUEST_CODE_RINGTONE:
+                    mdefaultAlarmTone.saveRingtoneUri(data);
+                    break;
+                case AlarmClockFragment.REQUEST_CODE_EXTERN_AUDIO:
+                    if (!AlarmUtils.hasPermissionToDisplayRingtoneTitle(this, data.getData())) {
+                        final String[] perms = {Manifest.permission.READ_EXTERNAL_STORAGE};
+                        requestPermissions(perms, AlarmClockFragment.REQUEST_CODE_PERMISSIONS);
+                    }
+                    mdefaultAlarmTone.saveRingtoneUri(data);
+                    break;
+                default:
+                    LogUtils.w("Unhandled request code in onActivityResult: "
+                            + requestCode);
             }
         }
     }

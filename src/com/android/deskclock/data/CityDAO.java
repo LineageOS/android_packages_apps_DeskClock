@@ -24,8 +24,11 @@ import android.support.annotation.VisibleForTesting;
 import android.text.TextUtils;
 import android.util.ArrayMap;
 
+import com.android.deskclock.LogUtils;
 import com.android.deskclock.R;
 import com.android.deskclock.Utils;
+import com.android.deskclock.worldclock.db.DbCities;
+import com.android.deskclock.worldclock.db.DbCity;
 
 import java.util.ArrayList;
 import java.util.Collection;
@@ -116,7 +119,10 @@ final class CityDAO {
             throw new IllegalStateException(message);
         }
 
-        final Map<String, City> cities = new ArrayMap<>(ids.length);
+        //add the clock db data to all cities list
+        List<DbCity> dbCities = DbCities.getCities(context.getContentResolver());
+        final Map<String, City> cities = new ArrayMap<>(ids.length + dbCities.size());
+
         for (int i = 0; i < ids.length; i++) {
             final String id = ids[i];
             if ("C0".equals(id)) {
@@ -124,6 +130,16 @@ final class CityDAO {
             }
             cities.put(id, createCity(id, names[i], timezones[i]));
         }
+
+        //add the clock db data to all cities list
+        for (int i = 0; i < dbCities.size(); i++) {
+            DbCity dbCity = dbCities.get(i);
+            String formatName = dbCity.name.charAt(0) + "=" + dbCity.name;
+            LogUtils.d(LogUtils.LOGTAG, "getCities: formatName = " + formatName);
+            cities.put("UD" + dbCity.id, CityDAO.createCity("UD" + dbCity.id,
+                    formatName, dbCity.tz));
+        }
+
         return Collections.unmodifiableMap(cities);
     }
 
@@ -135,7 +151,7 @@ final class CityDAO {
      * @param timeZoneId identifies the timezone in which the city is located
      */
     @VisibleForTesting
-    static City createCity(String id, String formattedName, String timeZoneId) {
+    public static City createCity(String id, String formattedName, String timeZoneId) {
         final String[] parts = formattedName.split("[=:]");
         final String name = parts[1];
         // Extract index string from input, use the first character of city name as index string

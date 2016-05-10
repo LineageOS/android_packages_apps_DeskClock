@@ -28,8 +28,9 @@
             app:showAsAction="ifRoom"/>
         <item android:id="@+id/menu_item_add"
             android:title="@string/menu_item_add"
-            android:icon="@drawable/ic_menu_add"
-            android:showAsAction="ifRoom|withText"/>
+            android:icon="@drawable/ic_actionbar_add"
+            app:showAsAction="always"
+            android:orderInCategory="2"/>
         <item
             android:id="@+id/menu_item_sort"
             android:title="@string/menu_item_sort_by_gmt_offset"

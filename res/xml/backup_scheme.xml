@@ -17,4 +17,8 @@
 <full-backup-content>
     <include domain="database" path="alarms.db" />
     <include domain="sharedpref" path="com.android.deskclock_preferences.xml" />
+    <include domain="database" path="cities.db" />
+    <include domain="sharedpref" path="ce_shared_preferences.xml" />
+    <include domain="sharedpref" path="de_shared_preferences.xml" />
+
 </full-backup-content>

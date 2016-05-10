@@ -30,6 +30,7 @@ import android.os.PowerManager;
 import android.preference.PreferenceManager;
 import android.provider.Settings;
 import android.support.v4.app.NotificationManagerCompat;
+import android.telephony.TelephonyManager;
 import android.text.format.DateFormat;
 import android.widget.Toast;
 
@@ -131,14 +132,14 @@ public final class AlarmStateManager extends BroadcastReceiver {
     public static final String ALARM_SNOOZE_TAG = "SNOOZE_TAG";
     public static final String ALARM_DELETE_TAG = "DELETE_TAG";
 
-    // key to to retrieve pending alarm set
-    public static final String ALARM_PENDING_ALARM_KEY = "pending.alarm.key";
-
     // Intent category tag used when schedule state change intents in alarm manager.
     private static final String ALARM_MANAGER_TAG = "ALARM_MANAGER";
 
     // Buffer time in seconds to fire alarm instead of marking it missed.
     public static final int ALARM_FIRE_BUFFER = 15;
+
+    // key to to retrieve pending alarm set
+    public static final String ALARM_PENDING_ALARM_KEY = "pending.alarm.key";
 
     // A factory for the current time; can be mocked for testing purposes.
     private static CurrentTimeFactory sCurrentTimeFactory;
@@ -168,16 +169,17 @@ public final class AlarmStateManager extends BroadcastReceiver {
     }
 
     public static void updateGlobalIntentId(Context context) {
-        SharedPreferences prefs = Utils.getDefaultSharedPreferences(context);
+        SharedPreferences dePrefs = Utils.getDESharedPreferences(context);
 
         // If there are any pending alarms, do not update the global id - pending alarms
         // will be ignored by the receivers when the user tries to dismiss or snooze
-        Set<String> alarms = prefs.getStringSet(AlarmStateManager.ALARM_PENDING_ALARM_KEY,
+        Set<String> alarms = dePrefs.getStringSet(AlarmStateManager.ALARM_PENDING_ALARM_KEY,
                 new HashSet<String>());
         if (alarms.size() > 0) {
             return;
         }
 
+        SharedPreferences prefs = Utils.getDefaultSharedPreferences(context);
         int globalId = prefs.getInt(ALARM_GLOBAL_ID_EXTRA, -1) + 1;
         prefs.edit().putInt(ALARM_GLOBAL_ID_EXTRA, globalId).commit();
     }
@@ -848,7 +850,7 @@ public final class AlarmStateManager extends BroadcastReceiver {
      * @param instance to change state on
      * @param state to change to
      */
-    public static void setAlarmState(Context context, AlarmInstance instance, int state) {
+    private static void setAlarmState(Context context, AlarmInstance instance, int state) {
         if (instance == null) {
             LogUtils.e("Null alarm instance while setting state to %d", state);
             return;
@@ -909,7 +911,49 @@ public final class AlarmStateManager extends BroadcastReceiver {
         final String action = intent.getAction();
         LogUtils.v("AlarmStateManager received intent " + intent);
         if (CHANGE_STATE_ACTION.equals(action)) {
-            handleChangeStateIntent(context, intent);
+            Uri uri = intent.getData();
+            AlarmInstance instance = AlarmInstance.getInstance(context.getContentResolver(),
+                    AlarmInstance.getId(uri));
+            if (instance == null) {
+                LogUtils.e("Can not change state for unknown instance: " + uri);
+                return;
+            }
+
+            int globalId = getGlobalIntentId(context);
+            int intentId = intent.getIntExtra(ALARM_GLOBAL_ID_EXTRA, -1);
+            int alarmState = intent.getIntExtra(ALARM_STATE_EXTRA, -1);
+            if (intentId != globalId) {
+                LogUtils.i("IntentId: " + intentId + " GlobalId: " + globalId + " AlarmState: " +
+                        alarmState);
+                // Allows dismiss/snooze requests to go through
+                if (!intent.hasCategory(ALARM_DISMISS_TAG) &&
+                        !intent.hasCategory(ALARM_SNOOZE_TAG)) {
+                    LogUtils.i("Ignoring old Intent");
+                    return;
+                }
+            }
+
+            if (intent.getBooleanExtra(FROM_NOTIFICATION_EXTRA, false)) {
+                if (intent.hasCategory(ALARM_DISMISS_TAG)) {
+                    Events.sendAlarmEvent(R.string.action_dismiss, R.string.label_notification);
+                } else if (intent.hasCategory(ALARM_SNOOZE_TAG)) {
+                    Events.sendAlarmEvent(R.string.action_snooze, R.string.label_notification);
+                }
+            }
+
+            //If the phone is busy, add the alarm to a string set in shared preferenecs that will be
+            // cleared when the call is ended.
+            if (context.getResources().getBoolean(R.bool.config_delayalarm)) {
+                TelephonyManager mTelephonyManager = (TelephonyManager) context
+                        .getSystemService(Context.TELEPHONY_SERVICE);
+                if ((mTelephonyManager.getCallState() != TelephonyManager.CALL_STATE_IDLE)
+                        && (alarmState == AlarmInstance.FIRED_STATE)) {
+                    pendAlarm(context, uri, alarmState);
+                    return;
+                }
+            }
+
+            setChangeAlarmState(context, instance, alarmState);
         } else if (SHOW_AND_DISMISS_ALARM_ACTION.equals(action)) {
             Uri uri = intent.getData();
             AlarmInstance instance = AlarmInstance.getInstance(context.getContentResolver(),
@@ -934,76 +978,6 @@ public final class AlarmStateManager extends BroadcastReceiver {
             deleteInstanceAndUpdateParent(context, instance);
         }
     }
-
-    private static void handleChangeStateIntent(Context context, Intent intent) {
-        Uri uri = intent.getData();
-        AlarmInstance instance = AlarmInstance.getInstance(context.getContentResolver(),
-                AlarmInstance.getId(uri));
-        if (instance == null) {
-            // Not a big deal, but it shouldn't happen
-            LogUtils.e("Can not change state for unknown instance: " + uri);
-            return;
-        }
-
-        int globalId = getGlobalIntentId(context);
-        int intentId = intent.getIntExtra(ALARM_GLOBAL_ID_EXTRA, -1);
-        int alarmState = intent.getIntExtra(ALARM_STATE_EXTRA, -1);
-        if (intentId != globalId) {
-            LogUtils.i("Ignoring old Intent. IntentId: " + intentId + " GlobalId: " + globalId +
-                    " AlarmState: " + alarmState);
-            return;
-        }
-
-        // If the phone is busy, add the alarm to a string set in shared preferenecs that will be
-        // cleared when the call is ended.
-        if (context.getResources().getBoolean(R.bool.config_delayalarm)) {
-            TelephonyManager mTelephonyManager = (TelephonyManager) context
-                    .getSystemService(Context.TELEPHONY_SERVICE);
-            if ((mTelephonyManager.getCallState() != TelephonyManager.CALL_STATE_IDLE)
-                    && (alarmState == AlarmInstance.FIRED_STATE)) {
-                pendAlarm(context, uri, alarmState);
-                return;
-            }
-        }
-
-        setChangeAlarmState(context, instance, alarmState);
-    }
-
-    public static void setChangeAlarmState(Context context, AlarmInstance instance,
-        int alarmState) {
-
-        if (alarmState >= 0) {
-            setAlarmState(context, instance, alarmState);
-        } else {
-            // No need to register instance again when alarmState
-            // equals POWER_OFF_ALARM_STATE. POWER_OFF_ALARM_STATE
-            // is an invalid state for rtc power off alarm.
-            if (alarmState == AlarmInstance.POWER_OFF_ALARM_STATE) {
-                return;
-            }
-            registerInstance(context, instance, true);
-        }
-    }
-
-    /**
-     * Add the alarm to list of pending Alarms to be fired after the call is complete.
-     */
-    private static void pendAlarm(Context context, Uri uri, int alarmState) {
-        LogUtils.v("Pending alarm: " + uri);
-
-        SharedPreferences sp = PreferenceManager.getDefaultSharedPreferences(context);
-        Set<String> alarms = sp.getStringSet(ALARM_PENDING_ALARM_KEY, new HashSet<String>());
-
-        // Alarms are stored as "<uri>|<alarmState>"
-        String alarm = uri.toString() + "|" + alarmState;
-
-        HashSet<String> newSet = new HashSet<String>();
-        newSet.addAll(alarms);
-        newSet.add(alarm);
-
-        sp.edit().putStringSet(ALARM_PENDING_ALARM_KEY, newSet).commit();
-    }
-
 
     /**
      * Creates an intent that can be used to set an AlarmManager alarm to set the next alarm
@@ -1069,6 +1043,34 @@ public final class AlarmStateManager extends BroadcastReceiver {
                 am.cancel(pendingIntent);
                 pendingIntent.cancel();
             }
+        }
+    }
+
+    /**
+     * Add the alarm to list of pending Alarms to be fired after the call is complete.
+     */
+    private static void pendAlarm(Context context, Uri uri, int alarmState) {
+        LogUtils.v("Pending alarm: " + uri);
+
+        SharedPreferences sp = Utils.getDESharedPreferences(context);
+        Set<String> alarms = sp.getStringSet(ALARM_PENDING_ALARM_KEY, new HashSet<String>());
+
+        // Alarms are stored as "<uri>|<alarmState>"
+        String alarm = uri.toString() + "|" + alarmState;
+
+        HashSet<String> newSet = new HashSet<String>();
+        newSet.addAll(alarms);
+        newSet.add(alarm);
+
+        sp.edit().putStringSet(ALARM_PENDING_ALARM_KEY, newSet).commit();
+    }
+
+    public static void setChangeAlarmState(Context context, AlarmInstance instance,
+                                           int alarmState) {
+        if (alarmState >= 0) {
+            setAlarmState(context, instance, alarmState);
+        } else {
+            registerInstance(context, instance, true);
         }
     }
 }

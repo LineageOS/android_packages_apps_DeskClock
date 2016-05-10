@@ -16,14 +16,20 @@
 
 package com.android.deskclock;
 
+import android.Manifest;
 import android.app.Activity;
 import android.app.LoaderManager;
+import android.content.BroadcastReceiver;
+import android.content.ContentResolver;
+import android.content.Context;
 import android.content.Intent;
+import android.content.IntentFilter;
 import android.content.Loader;
 import android.database.Cursor;
 import android.media.RingtoneManager;
 import android.net.Uri;
 import android.os.Bundle;
+import android.provider.Settings;
 import android.support.design.widget.Snackbar;
 import android.support.v7.widget.LinearLayoutManager;
 import android.support.v7.widget.RecyclerView;
@@ -39,6 +45,7 @@ import com.android.deskclock.alarms.TimePickerCompat;
 import com.android.deskclock.alarms.dataadapter.AlarmTimeAdapter;
 import com.android.deskclock.data.DataModel;
 import com.android.deskclock.provider.Alarm;
+import com.android.deskclock.settings.DefaultAlarmToneDialog;
 import com.android.deskclock.widget.EmptyViewController;
 import com.android.deskclock.widget.toast.SnackbarManager;
 import com.android.deskclock.widget.toast.ToastManager;
@@ -56,6 +63,21 @@ public final class AlarmClockFragment extends DeskClockFragment implements
     // This extra is used when receiving an intent to scroll to specific alarm. If alarm
     // can not be found, and toast message will pop up that the alarm has be deleted.
     public static final String SCROLL_TO_ALARM_INTENT_EXTRA = "deskclock.scroll.to.alarm";
+
+    public static final String SEL_AUDIO_SRC = "audio/*";
+    public static final int SEL_SRC_RINGTONE = 0;
+    public static final int SEL_SRC_EXTERNAL = 1;
+    //extend request index is from 10 start
+    public static final int REQUEST_CODE_RINGTONE = 10;
+    public static final int REQUEST_CODE_PERMISSIONS = 11;
+    public static final int REQUEST_CODE_EXTERN_AUDIO = 12;
+
+    //QC hoffc added begin feature6
+    private static final String QUERY_URI = "content://com.android.deskclock/alarms";
+    private String old_default_ringtone_uri;
+    private String new_default_ringtone_Uri;
+    private RefreshDefaultRingtoneBroadcastReceiver mReceiver;
+    //QC hoffc added end
 
     // Views
     private ViewGroup mMainLayout;
@@ -81,6 +103,11 @@ public final class AlarmClockFragment extends DeskClockFragment implements
     public void onCreate(Bundle savedState) {
         super.onCreate(savedState);
         mCursorLoader = getLoaderManager().initLoader(0, null, this);
+
+        mReceiver = new RefreshDefaultRingtoneBroadcastReceiver();
+        IntentFilter filter = new IntentFilter();
+        filter.addAction(DefaultAlarmToneDialog.REFRESH_DEFAULT_RINGTONE_ACTION);
+        getActivity().registerReceiver(mReceiver, filter);
     }
 
     @Override
@@ -156,6 +183,8 @@ public final class AlarmClockFragment extends DeskClockFragment implements
     public void onDestroy() {
         super.onDestroy();
         ToastManager.cancelToast();
+
+        getActivity().unregisterReceiver(mReceiver);
     }
 
     @Override
@@ -227,14 +256,21 @@ public final class AlarmClockFragment extends DeskClockFragment implements
 
         switch (requestCode) {
             case R.id.request_code_ringtone:
+            case REQUEST_CODE_RINGTONE:
+            case REQUEST_CODE_EXTERN_AUDIO:
                 // Extract the selected ringtone uri.
-                Uri uri = data.getParcelableExtra(RingtoneManager.EXTRA_RINGTONE_PICKED_URI);
+
+                Uri uri = null;
+                if (requestCode == REQUEST_CODE_EXTERN_AUDIO) {
+                    uri = data.getData();
+                } else {
+                    uri = data.getParcelableExtra(RingtoneManager.EXTRA_RINGTONE_PICKED_URI);
+                }
+                LogUtils.d(LogUtils.LOGTAG, "AlarmClockFragment:onActivityResult: uri = " + uri);
+
                 if (uri == null) {
                     uri = Alarm.NO_RINGTONE_URI;
                 }
-
-                // Update the default ringtone for future new alarms.
-                DataModel.getDataModel().setDefaultAlarmRingtoneUri(uri);
 
                 // Set the ringtone uri on the alarm.
                 final Alarm alarm = mAlarmTimeClickHandler.getSelectedAlarm();
@@ -247,6 +283,13 @@ public final class AlarmClockFragment extends DeskClockFragment implements
                 // Save the change to alarm.
                 mAlarmUpdateHandler.asyncUpdateAlarm(alarm, false /* popToast */,
                         true /* minorUpdate */);
+
+                // If the user chose an external ringtone and has not yet granted the permission to read
+                // external storage, ask them for that permission now.
+                if (!AlarmUtils.hasPermissionToDisplayRingtoneTitle(getActivity(), uri)) {
+                    final String[] perms = {Manifest.permission.READ_EXTERNAL_STORAGE};
+                    requestPermissions(perms, REQUEST_CODE_PERMISSIONS);
+                }
                 break;
             default:
                 LogUtils.w("Unhandled request code in onActivityResult: " + requestCode);
@@ -288,5 +331,62 @@ public final class AlarmClockFragment extends DeskClockFragment implements
         mAlarmTimeClickHandler.clearSelectedAlarm();
         TimePickerCompat.showTimeEditDialog(this, null /* alarm */,
                 DateFormat.is24HourFormat(getActivity()));
+    }
+
+    private class RefreshDefaultRingtoneBroadcastReceiver extends BroadcastReceiver {
+        @Override
+        public void onReceive(Context context, Intent intent) {
+            old_default_ringtone_uri = intent
+                    .getStringExtra(DefaultAlarmToneDialog.OLD_RING_TONE_URI_STRING);
+            new_default_ringtone_Uri = intent
+                    .getStringExtra(DefaultAlarmToneDialog.NEW_RING_TONE_URI_STRING);
+
+            LogUtils.d(LogUtils.LOGTAG, "old_default_ringtone_uri = " + old_default_ringtone_uri
+                    + " new_default_ringtone_Uri = " + new_default_ringtone_Uri);
+
+            updateAlarmRingTone(new_default_ringtone_Uri, old_default_ringtone_uri);
+            updateAlarmRingTone(new_default_ringtone_Uri, Settings.System.DEFAULT_ALARM_ALERT_URI.toString());
+
+            // Update the default ringtone for future new alarms.
+            DataModel.getDataModel().setDefaultAlarmRingtoneUri(Uri.parse(new_default_ringtone_Uri));
+
+        }
+    }
+
+    private void updateAlarmRingTone(String newRingtone, String oldRingtone) {
+        Context accessContext = getActivity().getApplicationContext();
+        ContentResolver cr = accessContext.getContentResolver();
+
+        String selection = "ringtone = ?";
+        String[] selectionArgs;
+
+        if(oldRingtone != null
+                && !oldRingtone.equals(Settings.System.DEFAULT_ALARM_ALERT_URI.toString())) {
+            selectionArgs = new String[] {oldRingtone};
+        } else {
+            selectionArgs = new String[] {Settings.System.DEFAULT_ALARM_ALERT_URI.toString()};
+        }
+
+        LogUtils.d(LogUtils.LOGTAG, "updateAlarmRingTone: selectionArgs = " + selectionArgs[0]);
+
+        Cursor cursor = cr.query(
+                Uri.parse(QUERY_URI),
+                new String[] { "*" }, selection, selectionArgs, null);
+
+        Alarm a = null;
+        if (cursor != null && cursor.getCount() > 0) {
+            LogUtils.d(LogUtils.LOGTAG, "updateAlarmRingTone cursor.getCount() = " + cursor.getCount());
+            while (cursor.moveToNext()) {
+                a = new Alarm(cursor, Uri.parse(newRingtone));
+                LogUtils.d(LogUtils.LOGTAG, "The update alarm is " + a);
+                mAlarmUpdateHandler.asyncUpdateAlarm(a, false /* popToast */,
+                        true /* minorUpdate */);
+                a = null;
+            }
+        }
+
+        if (cursor != null || cursor.getCount() == 0) {
+            cursor.close();
+        }
     }
 }

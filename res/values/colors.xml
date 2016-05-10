@@ -39,6 +39,7 @@
     <color name="color_accent">#DA4336</color>
     <color name="hairline">#28ffffff</color>
     <color name="bright_foreground_light_disabled">#80000000</color>
+    <color name="dialog_positive_button_disable">#4CDA4336</color>
 
     <color name="clock_white">#ffffff</color>
     <color name="clock_gray">#B3ffffff</color>

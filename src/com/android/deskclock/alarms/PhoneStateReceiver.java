@@ -9,6 +9,7 @@ import android.preference.PreferenceManager;
 import android.telephony.TelephonyManager;
 import android.text.TextUtils;
 import com.android.deskclock.LogUtils;
+import com.android.deskclock.Utils;
 import com.android.deskclock.provider.AlarmInstance;
 
 import java.util.HashSet;
@@ -30,7 +31,7 @@ public class PhoneStateReceiver extends BroadcastReceiver {
                     .getSystemService(Context.TELEPHONY_SERVICE);
             if (mTelephonyManager.getCallState() == TelephonyManager.CALL_STATE_IDLE) {
                 // New call state is idle, update state for any pending alarms
-                SharedPreferences sp = PreferenceManager.getDefaultSharedPreferences(context);
+                SharedPreferences sp = Utils.getDESharedPreferences(context);
                 Set<String> alarms = sp.getStringSet(AlarmStateManager.ALARM_PENDING_ALARM_KEY,
                         new HashSet<String>());
                 if (alarms.size() <= 0) {

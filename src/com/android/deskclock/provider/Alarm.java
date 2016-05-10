@@ -307,6 +307,18 @@ public final class Alarm implements Parcelable, ClockContract.AlarmsColumns {
         deleteAfterUse = p.readInt() == 1;
     }
 
+    public Alarm(Cursor c, Uri defaultRingtoneUri) {
+        id = c.getLong(ID_INDEX);
+        enabled = c.getInt(ENABLED_INDEX) == 1;
+        hour = c.getInt(HOUR_INDEX);
+        minutes = c.getInt(MINUTES_INDEX);
+        daysOfWeek = new DaysOfWeek(c.getInt(DAYS_OF_WEEK_INDEX));
+        vibrate = c.getInt(VIBRATE_INDEX) == 1;
+        label = c.getString(LABEL_INDEX);
+        deleteAfterUse = c.getInt(DELETE_AFTER_USE_INDEX) == 1;
+        alert = defaultRingtoneUri;
+    }
+
     public String getLabelOrDefault(Context context) {
         return label.isEmpty() ? context.getString(R.string.default_label) : label;
     }

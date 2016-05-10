@@ -1,4 +1,6 @@
-/*
+/* Copyright (c) 2016, The Linux Foundation. All rights reserved.
+ * Not a Contribution.
+ *
  * Copyright (C) 2012 The Android Open Source Project
  *
  * Licensed under the Apache License, Version 2.0 (the "License");
@@ -16,6 +18,7 @@
 
 package com.android.deskclock.worldclock;
 
+import android.Manifest;
 import android.app.AlertDialog;
 import android.content.BroadcastReceiver;
 import android.content.Context;
@@ -25,6 +28,7 @@ import android.content.DialogInterface.OnCancelListener;
 import android.content.DialogInterface.OnDismissListener;
 import android.content.Intent;
 import android.content.IntentFilter;
+import android.content.pm.PackageManager;
 import android.content.res.Resources;
 import android.graphics.drawable.Drawable;
 import android.graphics.drawable.AnimationDrawable;
@@ -51,10 +55,11 @@ import android.widget.ArrayAdapter;
 import android.widget.Button;
 import android.widget.EditText;
 import android.widget.ImageButton;
-import android.widget.Spinner;
 import android.widget.Toast;
 
+import com.android.deskclock.LogUtils;
 import com.android.deskclock.R;
+import com.android.deskclock.Utils;
 import com.android.deskclock.worldclock.CityAndTimeZoneLocator.OnCityAndTimeZoneLocatedCallback;
 import com.android.deskclock.worldclock.CityAndTimeZoneLocator.TZ;
 
@@ -64,6 +69,7 @@ import java.util.Calendar;
 import java.util.Collections;
 import java.util.Date;
 import java.util.List;
+import java.util.Locale;
 import java.util.TimeZone;
 
 public class AddCityDialog implements OnClickListener,
@@ -71,9 +77,14 @@ public class AddCityDialog implements OnClickListener,
 
     private static final int HOURS_1 = 60 * 60000;
     private static final long GPS_TIMEOUT = 30000L;
-
     private static final String STATE_CITY_NAME = "city_name";
     private static final String STATE_CITY_TIMEZONE = "city_tz";
+    private static final String ISGPSREQUESTING = "city_dialog";
+    private int mCityDialogWidth = -1;
+    private int mCityDialogHeight = -1;
+    public static CityTimeZone[] mZones;
+
+    static final int REQUEST_FINE_LOCATION_PERMISSIONS = 20;
 
     public interface OnCitySelected {
         public void onCitySelected(String city, String tz);
@@ -81,27 +92,22 @@ public class AddCityDialog implements OnClickListener,
     }
 
     private final AsyncTask<Void, Void, Void> mTzLoadTask = new AsyncTask<Void, Void, Void>() {
-        private String[] mZones;
+
 
         @Override
         protected Void doInBackground(Void... params) {
             List<CityTimeZone> zones = loadTimeZones();
             Collections.sort(zones);
 
-            List<String> tzLabels = new ArrayList<String>();
-            for (CityTimeZone zone : zones)  {
-                tzLabels.add(zone.toString());
-            }
-
-            mZones = tzLabels.toArray(new String[tzLabels.size()]);
-            mDefaultTimeZoneId = zones.indexOf(mDefaultTimeZoneLabel);
+            mZones = zones.toArray(new CityTimeZone[zones.size()]);
+            mDefaultTimeZonePos = zones.indexOf(mDefaultTimeZone);
             return null;
         }
 
         @Override
         protected void onPostExecute(Void result) {
             if (!isCancelled()) {
-                int id = mSavedTimeZonePos != -1 ? mSavedTimeZonePos : mDefaultTimeZoneId;
+                int id = mSavedTimeZonePos != -1 ? mSavedTimeZonePos : mDefaultTimeZonePos;
                 setTimeZoneData(mZones, id, true);
                 mLoadingTz = false;
             }
@@ -128,11 +134,17 @@ public class AddCityDialog implements OnClickListener,
             stopGpsAnimation();
             mGps.setImageResource(R.drawable.ic_gps);
             checkSelectionStatus();
-            mLocationMgr.removeUpdates(AddCityDialog.this);
+            try {
+                mLocationMgr.removeUpdates(AddCityDialog.this);
+            } catch (SecurityException e){
+                LogUtils.d(LogUtils.LOGTAG, "Runnable mGpsTimeout:occur security exception");
+            }
+
         }
     };
 
-    private static class CityTimeZone implements Comparable<CityTimeZone> {
+    public static class CityTimeZone implements Comparable<CityTimeZone> {
+        String mId;
         int mSign;
         int mHours;
         int mMinutes;
@@ -141,6 +153,10 @@ public class AddCityDialog implements OnClickListener,
 
         @Override
         public String toString() {
+            if (mId == null) {
+                // Loading
+                return mLabel;
+            }
             return String.format("GMT%s%02d:%02d - %s",
                     (mSign == -1 ? "-" : "+"), mHours, mMinutes, mLabel);
         }
@@ -155,8 +171,8 @@ public class AddCityDialog implements OnClickListener,
 
         @Override
         public int compareTo(CityTimeZone other) {
-            int offset = getOffset();
-            int otherOffset = other.getOffset();
+            long offset = getOffset();
+            long otherOffset = other.getOffset();
             if (offset != otherOffset) {
                 return offset < otherOffset ? -1 : 1;
             }
@@ -166,8 +182,8 @@ public class AddCityDialog implements OnClickListener,
             return mLabel.compareTo(other.mLabel);
         }
 
-        private int getOffset() {
-            return mSign * (mHours + mMinutes * 60);
+        private long getOffset() {
+            return mSign * (mHours * HOURS_1 + mMinutes * 60000);
         }
     }
 
@@ -175,50 +191,47 @@ public class AddCityDialog implements OnClickListener,
     private final Handler mHandler;
     private final OnCitySelected mListener;
     private final AlertDialog mDialog;
-    private final EditText mCityName;
+    private final View dlgView;
+    private EditText mCityName;
     private final ImageButton mGps;
-    private final Spinner mTimeZones;
     private Button mButton;
-
-    private List<String> mCurrentTimeZones;
+    public static TimeZoneSpinner mTimeZones;
 
     private LocationManager mLocationMgr;
     private ConnectivityManager mConnectivityMgr;
     private CityAndTimeZoneLocator mLocator;
-    private boolean mGpsRequesting;
     private boolean mLoadingTz;
+    public boolean mGpsRequesting;
 
-    private int mDefaultTimeZoneId;
+    private int mDefaultTimeZonePos;
     private int mSavedTimeZonePos;
-    private CityTimeZone mDefaultTimeZoneLabel;
+    private CityTimeZone mDefaultTimeZone;
 
     public AddCityDialog(Context context, LayoutInflater inflater, OnCitySelected listener) {
         mContext = context;
         mHandler = new Handler();
         mListener = listener;
-        mDefaultTimeZoneId = 0;
-        mDefaultTimeZoneLabel = null;
+        mDefaultTimeZonePos = 0;
+        mDefaultTimeZone = null;
         mSavedTimeZonePos = -1;
+
         mLocationMgr = (LocationManager) context.getSystemService(Context.LOCATION_SERVICE);
-        mLocationMgr.addGpsStatusListener(new GpsStatus.Listener() {
-            @Override
-            public void onGpsStatusChanged(int event) {
-            }
-        });
-        mConnectivityMgr = (ConnectivityManager)context.getSystemService(Context.CONNECTIVITY_SERVICE);
+        mConnectivityMgr = (ConnectivityManager)context
+                .getSystemService(Context.CONNECTIVITY_SERVICE);
         mGpsRequesting = false;
         mLoadingTz = true;
 
         // Initialize dialog
-        View dlgView = inflater.inflate(R.layout.city_add, null);
+        dlgView = inflater.inflate(R.layout.city_add, null);
         mCityName = (EditText) dlgView.findViewById(R.id.add_city_name);
         mCityName.addTextChangedListener(this);
-
-        mTimeZones = (Spinner) dlgView.findViewById(R.id.add_city_tz);
-        setTimeZoneData(new String[]{ context.getString(R.string.cities_add_loading) }, 0, false);
+        mTimeZones = (TimeZoneSpinner) dlgView.findViewById(R.id.add_city_tz);
+        CityTimeZone loading = new CityTimeZone();
+        loading.mId = null;
+        loading.mLabel = context.getString(R.string.cities_add_loading);
+        setTimeZoneData(new CityTimeZone[]{ loading }, 0, false);
         mTimeZones.setEnabled(false);
         mTimeZones.setOnItemSelectedListener(this);
-
         mGps = (ImageButton)dlgView.findViewById(R.id.add_city_gps);
         mGps.setOnClickListener(new View.OnClickListener() {
             @Override
@@ -242,7 +255,17 @@ public class AddCityDialog implements OnClickListener,
                 return true;
             }
         });
+
         checkGpsAvailability();
+        try {
+            mLocationMgr.addGpsStatusListener(new GpsStatus.Listener() {
+                @Override
+                public void onGpsStatusChanged(int event) {
+                }
+            });
+        } catch (SecurityException e) {
+            LogUtils.d(LogUtils.LOGTAG, "AddCityDialog:occur security exception");
+        }
 
         // Create the dialog
         AlertDialog.Builder builder = new AlertDialog.Builder(context);
@@ -284,11 +307,14 @@ public class AddCityDialog implements OnClickListener,
         filter.addAction(ConnectivityManager.CONNECTIVITY_ACTION);
         context.registerReceiver(mReceiver, filter);
         mReceiverRegistered = true;
+        mCityDialogWidth = dlgView.getWidth();
+        mCityDialogHeight = dlgView.getHeight();
     }
 
-    private void setTimeZoneData(String[] data, int selected, boolean enabled) {
-        ArrayAdapter<String> adapter = new ArrayAdapter<String>(mContext,
-                android.R.layout.simple_spinner_item, data);
+    public void setTimeZoneData(CityTimeZone[] data, int selected,
+            boolean enabled) {
+        ArrayAdapter<CityTimeZone> adapter = new ArrayAdapter<CityTimeZone>(
+                mContext, android.R.layout.simple_spinner_item, data);
         adapter.setDropDownViewResource(android.R.layout.simple_spinner_dropdown_item);
         mTimeZones.setAdapter(adapter);
         mTimeZones.setSelection(selected);
@@ -296,15 +322,13 @@ public class AddCityDialog implements OnClickListener,
         if (mButton != null) {
             checkSelectionStatus();
         }
-
-        mCurrentTimeZones = Arrays.asList(data);
     }
 
     private List<CityTimeZone> loadTimeZones() {
         ArrayList<CityTimeZone> timeZones = new ArrayList<CityTimeZone>();
         Resources res = mContext.getResources();
         final long date = Calendar.getInstance().getTimeInMillis();
-        mDefaultTimeZoneLabel = buildCityTimeZone(TimeZone.getDefault().getID(), date);
+        mDefaultTimeZone = buildCityTimeZone(TimeZone.getDefault().getID(), date);
         String[] ids = res.getStringArray(R.array.cities_tz);
         for (String id : ids) {
             CityTimeZone zone = buildCityTimeZone(id, date);
@@ -325,6 +349,7 @@ public class AddCityDialog implements OnClickListener,
         final boolean inDst = tz.inDaylightTime(new Date(date));
 
         CityTimeZone timeZone = new CityTimeZone();
+        timeZone.mId = tz.getID();
         timeZone.mLabel = tz.getDisplayName(inDst, TimeZone.LONG);
         timeZone.mSign = offset < 0 ? -1 : 1;
         timeZone.mHours = p / (HOURS_1);
@@ -346,8 +371,11 @@ public class AddCityDialog implements OnClickListener,
         } else {
             id = info.name;
         }
-
         return buildCityTimeZone(id, date);
+    }
+
+    public static void setSelectItem(int itemId) {
+        mTimeZones.setSelection(itemId);
     }
 
     private void checkSelectionStatus() {
@@ -361,12 +389,32 @@ public class AddCityDialog implements OnClickListener,
                 mCityName.isEnabled() && !TextUtils.isEmpty(name) &&
                 mTimeZones.isEnabled() && !TextUtils.isEmpty(tz);
         mButton.setEnabled(enabled);
+        if (enabled) {
+            mButton.setTextColor(mContext.getResources().getColor(
+                    R.color.color_accent, null));
+        } else {
+            mButton.setTextColor(mContext.getResources().getColor(
+                    R.color.dialog_positive_button_disable, null));
+        }
     }
 
     private void checkGpsAvailability() {
         boolean gpsEnabled = mLocationMgr.isProviderEnabled(LocationManager.GPS_PROVIDER);
         boolean networkEnabled = mLocationMgr.isProviderEnabled(LocationManager.NETWORK_PROVIDER);
         mGps.setEnabled(gpsEnabled || (networkEnabled && isNetworkStatusAvailable()));
+        LogUtils.d(LogUtils.LOGTAG, "checkGpsAvailability: gpsEnabled = "
+                + gpsEnabled + " networkEnabled = " + networkEnabled);
+
+        //check & request gps permission when GPS enable, if gps disable, don't
+        if(gpsEnabled || (networkEnabled && isNetworkStatusAvailable())) {
+            if(!hasPermissionOfFineLocation(mContext)
+                    && Utils.isMOrLater()) {
+                LogUtils.d(LogUtils.LOGTAG, "checkGpsAvailability:request fine location permission");
+                final String[] perms = {Manifest.permission.ACCESS_FINE_LOCATION};
+                ((CitySelectionActivity) mContext).requestPermissions(perms,
+                        REQUEST_FINE_LOCATION_PERMISSIONS);
+            }
+        }
     }
 
     private boolean isNetworkStatusAvailable() {
@@ -381,7 +429,6 @@ public class AddCityDialog implements OnClickListener,
         Criteria criteria = new Criteria();
         criteria.setHorizontalAccuracy(Criteria.ACCURACY_LOW);
         Looper looper = mContext.getMainLooper();
-
         mHandler.postDelayed(mGpsTimeout, GPS_TIMEOUT);
         mGpsRequesting = true;
         mCityName.setEnabled(false);
@@ -397,18 +444,26 @@ public class AddCityDialog implements OnClickListener,
         // We have to use the network to locate the city and tz, so user also the network to detect
         // location (we not need to much accuracy and this method is faster). Otherwise, use
         // the GPS to locate the coordinates
-        if (mLocationMgr.isProviderEnabled(LocationManager.NETWORK_PROVIDER)) {
-            mLocationMgr.requestLocationUpdates(
-                    LocationManager.NETWORK_PROVIDER, 5000, 0, this, looper);
-        } else {
-            mLocationMgr.requestLocationUpdates(
-                    LocationManager.GPS_PROVIDER, 5000, 0, this, looper);
+        try {
+            if (mLocationMgr.isProviderEnabled(LocationManager.NETWORK_PROVIDER)) {
+                mLocationMgr.requestLocationUpdates(
+                        LocationManager.NETWORK_PROVIDER, 5000, 0, this, looper);
+            } else {
+                mLocationMgr.requestLocationUpdates(
+                        LocationManager.GPS_PROVIDER, 5000, 0, this, looper);
+            }
+        } catch (SecurityException e) {
+            LogUtils.d(LogUtils.LOGTAG, "requestGpsLocation:occur security exception");
         }
     }
 
     private void cancelRequestGpsLocation() {
         mHandler.removeCallbacks(mGpsTimeout);
-        mLocationMgr.removeUpdates(this);
+        try {
+            mLocationMgr.removeUpdates(this);
+        } catch (SecurityException e){
+            LogUtils.d(LogUtils.LOGTAG, "cancelRequestGpsLocation:occur security exception");
+        }
         mGpsRequesting = false;
         mCityName.setText("");
         mCityName.setEnabled(true);
@@ -425,13 +480,13 @@ public class AddCityDialog implements OnClickListener,
     }
 
     public void onClick(DialogInterface dialog, int which) {
-        String name = mCityName.getText().toString();
-        String tz = null;
+        String name = mCityName.getText().toString().toUpperCase(Locale.getDefault());
+        CityTimeZone ctz = null;
         if (mTimeZones.getSelectedItem() != null) {
-            tz = mTimeZones.getSelectedItem().toString();
+            ctz = (CityTimeZone)mTimeZones.getSelectedItem();
         }
-        if (tz != null && mListener != null) {
-            mListener.onCitySelected(name, tz.substring(tz.indexOf(" - ") + 3));
+        if (ctz != null && mListener != null) {
+            mListener.onCitySelected(name, ctz.mId);
         }
     }
 
@@ -458,18 +513,23 @@ public class AddCityDialog implements OnClickListener,
         if (mTimeZones.getSelectedItem() != null) {
             tz = mTimeZones.getSelectedItemPosition();
         }
-
+        outState.putBoolean(ISGPSREQUESTING, mGpsRequesting);
         outState.putString(STATE_CITY_NAME, name);
         outState.putInt(STATE_CITY_TIMEZONE, tz);
     }
 
     protected void onRestoreInstanceState(Bundle savedInstanceState) {
         String name = savedInstanceState.getString(STATE_CITY_NAME);
+        Boolean isGpsRequesting = savedInstanceState.getBoolean(ISGPSREQUESTING);
         if (name != null) {
             mCityName.setText(name);
         }
+        if(isGpsRequesting){
+            mCityName.setText("");
+        }
         mSavedTimeZonePos = savedInstanceState.getInt(STATE_CITY_TIMEZONE, -1);
     }
+
 
     public void onItemSelected(AdapterView<?> parent, View view, int position, long id) {
         checkSelectionStatus();
@@ -496,31 +556,26 @@ public class AddCityDialog implements OnClickListener,
         if (!mGpsRequesting) return;
         mGpsRequesting = false;
         mHandler.removeCallbacks(mGpsTimeout);
-        mLocationMgr.removeUpdates(this);
-
+        try {
+            mLocationMgr.removeUpdates(this);
+        } catch (SecurityException e) {
+            LogUtils.d(LogUtils.LOGTAG, "onLocationChanged:occur security exception");
+        }
         CityAndTimeZoneLocator mLocator = new CityAndTimeZoneLocator(
                 mContext, location, mConnectivityMgr, new OnCityAndTimeZoneLocatedCallback() {
             @Override
+            @SuppressWarnings("unchecked")
             public void onCityAndTimeZoneLocated(String city, TZ timezone) {
-                // Now we need to resolve the timezone info into an existing timezone
-                // First try to resolve the id, otherwise select the first occurrence
-                // with the same offset
-                CityTimeZone ctzInfo = toCityTimeZone(timezone);
-                int tz = mCurrentTimeZones.indexOf(ctzInfo.toString());
-                if (tz == -1) {
-                    String offset = ctzInfo.toString().substring(0, 9); //xe: GMT+12:00
-                    int cc = mCurrentTimeZones.size();
-                    for (int i = 0; i < cc; i++) {
-                        String ctz = mCurrentTimeZones.get(i);
-                        if (ctz.startsWith(offset)) {
-                            tz = i;
-                            break;
-                        }
-                    }
+                CityTimeZone ctz = toCityTimeZone(timezone);
+                int pos = ((ArrayAdapter<CityTimeZone>)mTimeZones.getAdapter()).getPosition(ctz);
+                if (pos == -1) {
+                    // This mean you are in the middle of the ocean and Android doesn't have
+                    // a timezone definition for you.
+                    pos = mDefaultTimeZonePos;
                 }
 
                 // Update the views with the new information
-                updateViews(city, tz);
+                updateViews(city, pos);
             }
 
             @Override
@@ -566,5 +621,19 @@ public class AddCityDialog implements OnClickListener,
     @Override
     public void onProviderDisabled(String provider) {
         checkGpsAvailability();
+    }
+
+
+    public static boolean hasPermissionOfFineLocation(Context context) {
+        final PackageManager pm = context.getPackageManager();
+        final String packageName = context.getPackageName();
+
+        // If the permission is already granted, return true.
+        if (pm.checkPermission(Manifest.permission.ACCESS_FINE_LOCATION, packageName)
+                == PackageManager.PERMISSION_GRANTED) {
+            return true;
+        } else {
+            return false;
+        }
     }
 }

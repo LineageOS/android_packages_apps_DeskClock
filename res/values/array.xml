@@ -954,4 +954,9 @@
         <item>C299</item>
         <item>C300</item>
     </string-array>
+    <string-array name="action_summary_entries" translatable="false">
+        <item>@string/action_summary_snooze</item>
+        <item>@string/action_summary_dismiss</item>
+        <item>@string/action_summary_do_nothing</item>
+    </string-array>
 </resources>

@@ -1,4 +1,6 @@
-/*
+/* Copyright (c) 2016, The Linux Foundation. All rights reserved.
+ * Not a Contribution.
+ *
  * Copyright (C) 2012 The Android Open Source Project
  *
  * Licensed under the Apache License, Version 2.0 (the "License");
@@ -27,19 +29,16 @@ import android.os.AsyncTask;
 import android.util.Log;
 import android.util.Xml;
 
-import org.apache.http.HttpResponse;
-import org.apache.http.HttpStatus;
-import org.apache.http.client.HttpClient;
-import org.apache.http.client.methods.HttpGet;
-import org.apache.http.impl.client.DefaultHttpClient;
 import org.xmlpull.v1.XmlPullParser;
 import org.xmlpull.v1.XmlPullParserException;
 
 import java.io.BufferedReader;
 import java.io.InputStreamReader;
 import java.io.IOException;
+import java.net.HttpURLConnection;
 import java.net.URI;
 import java.net.URISyntaxException;
+import java.net.URL;
 import java.util.List;
 import java.util.Locale;
 
@@ -172,20 +171,20 @@ public class CityAndTimeZoneLocator {
     private TZ resolveTimeZone() {
         BufferedReader br = null;
         try {
-            HttpClient client = new DefaultHttpClient();
-            boolean gps = mLocation.getProvider().compareTo(LocationManager.GPS_PROVIDER) == 0;
+            boolean gps = mLocation.getProvider().compareTo(
+                    LocationManager.GPS_PROVIDER) == 0;
             final URI uri = new URI(String.format(TIMEZONE_SERVICE_URI,
                     String.valueOf(mLocation.getLatitude()),
                     String.valueOf(mLocation.getLongitude()),
                     String.valueOf(System.currentTimeMillis() / 1000L),
                     String.valueOf(gps)));
-            HttpGet request = new HttpGet();
-            request.setURI(uri);
-            HttpResponse response = client.execute(request);
-            int status = response.getStatusLine().getStatusCode();
-            if (status == HttpStatus.SC_OK) {
-                // Read the response into XML
-                br = new BufferedReader(new InputStreamReader(response.getEntity().getContent()));
+            URL url = new URL(uri.toString());
+            HttpURLConnection conn = (HttpURLConnection) url.openConnection();
+            conn.setRequestMethod("GET");
+            int status = conn.getResponseCode();
+            if (status == HttpURLConnection.HTTP_OK) {
+                br = new BufferedReader(new InputStreamReader(
+                        conn.getInputStream()));
                 return parseTimeZoneResponse(br);
             }
         } catch (URISyntaxException e) {

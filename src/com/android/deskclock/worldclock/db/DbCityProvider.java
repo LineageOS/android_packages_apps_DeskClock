@@ -1,4 +1,6 @@
-/*
+/* Copyright (c) 2016, The Linux Foundation. All rights reserved.
+ * Not a Contribution.
+ *
  * Copyright (C) 2013 The CyanogenMod Project
  *
  * Licensed under the Apache License, Version 2.0 (the "License");
@@ -167,7 +169,8 @@ public class DbCityProvider extends ContentProvider {
         int mpid = android.os.Process.myPid();
         int cpid = android.os.Binder.getCallingPid();
         if (mpid != cpid) {
-            throw new SecurityException("Permission Denial: writing is only allowed to DeskClock app.");
+            throw new SecurityException("Permission Denial:"
+                    + "writing is only allowed to DeskClock app.");
         }
     }
 }

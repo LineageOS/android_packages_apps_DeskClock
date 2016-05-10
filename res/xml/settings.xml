@@ -47,8 +47,8 @@
     </PreferenceCategory>
 
     <PreferenceCategory
-        android:title="@string/alarm_settings">
-
+        android:title="@string/alarm_settings"
+        android:key="key_alarm_settings">
         <ListPreference
             android:key="auto_silence"
             android:title="@string/auto_silence_title"
@@ -79,21 +79,24 @@
             android:entryValues="@array/volume_button_setting_values"
             android:defaultValue="0" />
 
-        <ListPreference
-            android:key="flip_action"
-            android:title="@string/flip_action_title"
-            android:dialogTitle="@string/flip_action_dialog_title"
-            android:entries="@array/action_summary_entries"
-            android:entryValues="@array/action_summary_values"
-            android:defaultValue="0" />
+        <com.android.deskclock.settings.DefaultAlarmToneDialog
+            android:key="default_alarm_tone"
+            android:title="@string/default_alarm_tone_title" />
 
         <ListPreference
+            android:defaultValue="0"
+            android:dialogTitle="@string/flip_action_title"
+            android:entries="@array/volume_button_setting_entries"
+            android:entryValues="@array/volume_button_setting_values"
+            android:key="flip_action"
+            android:title="@string/flip_action_title" />
+        <ListPreference
+            android:defaultValue="0"
+            android:dialogTitle="@string/shake_action_title"
+            android:entries="@array/volume_button_setting_entries"
+            android:entryValues="@array/volume_button_setting_values"
             android:key="shake_action"
-            android:title="@string/shake_action_title"
-            android:dialogTitle="@string/shake_action_dialog_title"
-            android:entries="@array/action_summary_entries"
-            android:entryValues="@array/action_summary_values"
-            android:defaultValue="0"/>
+            android:title="@string/shake_action_title" />
         <ListPreference
             android:key="week_start"
             android:title="@string/week_start_title"
