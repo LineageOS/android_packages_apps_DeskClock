@@ -25,6 +25,30 @@
     },
     {
       "key": {
+        "uuid": "5faad753_0a2fb2a1",
+        "filename": "src/com/android/deskclock/SettingsActivity.java",
+        "patchSetId": 1
+      },
+      "lineNbr": 253,
+      "author": {
+        "id": 13956
+      },
+      "writtenOn": "2016-05-10T19:10:30Z",
+      "side": 1,
+      "message": "Done",
+      "parentUuid": "5faad753_4f84dcb1",
+      "range": {
+        "startLine": 252,
+        "startChar": 0,
+        "endLine": 253,
+        "endChar": 92
+      },
+      "revId": "1f7021a5881f142efd1b37ea9eb3c1a4e51e3a95",
+      "serverId": "1ec6b3db-b2c1-4fa4-84a2-4c7efe89ba71",
+      "unresolved": false
+    },
+    {
+      "key": {
         "uuid": "5faad753_8f7094de",
         "filename": "src/com/android/deskclock/alarms/AlarmService.java",
         "patchSetId": 1
@@ -36,6 +60,30 @@
       "writtenOn": "2016-05-10T16:07:41Z",
       "side": 1,
       "message": "float",
+      "range": {
+        "startLine": 337,
+        "startChar": 29,
+        "endLine": 337,
+        "endChar": 32
+      },
+      "revId": "1f7021a5881f142efd1b37ea9eb3c1a4e51e3a95",
+      "serverId": "1ec6b3db-b2c1-4fa4-84a2-4c7efe89ba71",
+      "unresolved": false
+    },
+    {
+      "key": {
+        "uuid": "5faad753_ca1afa7b",
+        "filename": "src/com/android/deskclock/alarms/AlarmService.java",
+        "patchSetId": 1
+      },
+      "lineNbr": 337,
+      "author": {
+        "id": 13956
+      },
+      "writtenOn": "2016-05-10T19:10:30Z",
+      "side": 1,
+      "message": "refactored",
+      "parentUuid": "5faad753_8f7094de",
       "range": {
         "startLine": 337,
         "startChar": 29,
@@ -71,6 +119,30 @@
     },
     {
       "key": {
+        "uuid": "5faad753_4a0e0a3c",
+        "filename": "src/com/android/deskclock/alarms/AlarmService.java",
+        "patchSetId": 1
+      },
+      "lineNbr": 359,
+      "author": {
+        "id": 13956
+      },
+      "writtenOn": "2016-05-10T19:10:30Z",
+      "side": 1,
+      "message": "Since MIN_ACCEPT_COUNT \u003d SENSOR_SAMPLES - 1, that will not happens. But it is a little bit weird.",
+      "parentUuid": "5faad753_efab481a",
+      "range": {
+        "startLine": 352,
+        "startChar": 0,
+        "endLine": 359,
+        "endChar": 9
+      },
+      "revId": "1f7021a5881f142efd1b37ea9eb3c1a4e51e3a95",
+      "serverId": "1ec6b3db-b2c1-4fa4-84a2-4c7efe89ba71",
+      "unresolved": false
+    },
+    {
+      "key": {
         "uuid": "5faad753_cf668c2a",
         "filename": "src/com/android/deskclock/alarms/AlarmService.java",
         "patchSetId": 1
@@ -88,6 +160,24 @@
     },
     {
       "key": {
+        "uuid": "5faad753_6a09862f",
+        "filename": "src/com/android/deskclock/alarms/AlarmService.java",
+        "patchSetId": 1
+      },
+      "lineNbr": 374,
+      "author": {
+        "id": 13956
+      },
+      "writtenOn": "2016-05-10T19:10:30Z",
+      "side": 1,
+      "message": "Done",
+      "parentUuid": "5faad753_cf668c2a",
+      "revId": "1f7021a5881f142efd1b37ea9eb3c1a4e51e3a95",
+      "serverId": "1ec6b3db-b2c1-4fa4-84a2-4c7efe89ba71",
+      "unresolved": false
+    },
+    {
+      "key": {
         "uuid": "5faad753_6fb8b875",
         "filename": "src/com/android/deskclock/alarms/AlarmService.java",
         "patchSetId": 1
@@ -99,6 +189,30 @@
       "writtenOn": "2016-05-10T16:07:41Z",
       "side": 1,
       "message": "should this be z \u003c -FACE_DOWN_GRAVITY_THRESHOLD?",
+      "range": {
+        "startLine": 385,
+        "startChar": 41,
+        "endLine": 385,
+        "endChar": 73
+      },
+      "revId": "1f7021a5881f142efd1b37ea9eb3c1a4e51e3a95",
+      "serverId": "1ec6b3db-b2c1-4fa4-84a2-4c7efe89ba71",
+      "unresolved": false
+    },
+    {
+      "key": {
+        "uuid": "5faad753_0a08122a",
+        "filename": "src/com/android/deskclock/alarms/AlarmService.java",
+        "patchSetId": 1
+      },
+      "lineNbr": 385,
+      "author": {
+        "id": 13956
+      },
+      "writtenOn": "2016-05-10T19:10:30Z",
+      "side": 1,
+      "message": "No, since FACE_DOWN_GRAVITY_THRESHOLD is -7. But this had been refactored.",
+      "parentUuid": "5faad753_6fb8b875",
       "range": {
         "startLine": 385,
         "startChar": 41,
