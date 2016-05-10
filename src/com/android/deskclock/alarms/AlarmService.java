@@ -333,14 +333,13 @@ public class AlarmService extends Service {
     }
 
     private final SensorEventListener mFlipListener = new SensorEventListener() {
-        private static final int FACE_UP_LOWER_LIMIT = -45;
-        private static final int FACE_UP_UPPER_LIMIT = 45;
-        private static final int FACE_DOWN_UPPER_LIMIT = 135;
-        private static final int FACE_DOWN_LOWER_LIMIT = -135;
-        private static final int TILT_UPPER_LIMIT = 45;
-        private static final int TILT_LOWER_LIMIT = -45;
+        // Our accelerometers are not quite accurate.
+        private static final int FACE_UP_GRAVITY_THRESHOLD = 7;
+        private static final int FACE_DOWN_GRAVITY_THRESHOLD = -7;
         private static final int SENSOR_SAMPLES = 3;
+        private static final int MIN_ACCEPT_COUNT = SENSOR_SAMPLES - 1;
 
+        private boolean mStopped;
         private boolean mWasFaceUp;
         private boolean[] mSamples = new boolean[SENSOR_SAMPLES];
         private int mSampleIndex;
@@ -349,45 +348,45 @@ public class AlarmService extends Service {
         public void onAccuracyChanged(Sensor sensor, int acc) {
         }
 
+        private boolean filterSamples() {
+            int trues = 0;
+            for (boolean sample : mSamples) {
+                if(sample) {
+                    ++trues;
+                }
+            }
+            return trues >= MIN_ACCEPT_COUNT;
+        }
+
         @Override
         public void onSensorChanged(SensorEvent event) {
             // Add a sample overwriting the oldest one. Several samples
-            // are used
-            // to avoid the erroneous values the sensor sometimes
+            // are used to avoid the erroneous values the sensor sometimes
             // returns.
-            float y = event.values[1];
             float z = event.values[2];
+
+            if (mStopped) {
+                return;
+            }
 
             if (!mWasFaceUp) {
                 // Check if its face up enough.
-                mSamples[mSampleIndex] = y > FACE_UP_LOWER_LIMIT
-                        && y < FACE_UP_UPPER_LIMIT
-                        && z > TILT_LOWER_LIMIT && z < TILT_UPPER_LIMIT;
+                mSamples[mSampleIndex] = z > FACE_UP_GRAVITY_THRESHOLD;
 
-                // The device first needs to be face up.
-                boolean faceUp = true;
-                for (boolean sample : mSamples) {
-                    faceUp = faceUp && sample;
-                }
-                if (faceUp) {
+                // face up
+                if (filterSamples()) {
                     mWasFaceUp = true;
                     for (int i = 0; i < SENSOR_SAMPLES; i++) {
                         mSamples[i] = false;
                     }
                 }
             } else {
-                // Check if its face down enough. Note that wanted
-                // values go from FACE_DOWN_UPPER_LIMIT to 180
-                // and from -180 to FACE_DOWN_LOWER_LIMIT
-                mSamples[mSampleIndex] = (y > FACE_DOWN_UPPER_LIMIT || y < FACE_DOWN_LOWER_LIMIT)
-                        && z > TILT_LOWER_LIMIT
-                        && z < TILT_UPPER_LIMIT;
+                // Check if its face down enough.
+                mSamples[mSampleIndex] = z < FACE_DOWN_GRAVITY_THRESHOLD;
 
-                boolean faceDown = true;
-                for (boolean sample : mSamples) {
-                    faceDown = faceDown && sample;
-                }
-                if (faceDown) {
+                // face down
+                if (filterSamples()) {
+                    mStopped = true;
                     handleAction(mFlipAction);
                 }
             }
@@ -434,7 +433,7 @@ public class AlarmService extends Service {
     private void attachListeners() {
         if (mFlipAction != ALARM_NO_ACTION) {
             mSensorManager.registerListener(mFlipListener,
-                    mSensorManager.getDefaultSensor(Sensor.TYPE_ORIENTATION),
+                    mSensorManager.getDefaultSensor(Sensor.TYPE_ACCELEROMETER),
                     SensorManager.SENSOR_DELAY_NORMAL,
                     300 * 1000); //batch every 300 milliseconds
         }
