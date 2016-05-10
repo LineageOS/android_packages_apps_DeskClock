@@ -360,8 +360,7 @@ public final class SettingsActivity extends BaseActivity {
                     .getSystemService(Context.SENSOR_SERVICE);
             ListPreference flipPreference = (ListPreference) findPreference(KEY_FLIP_ACTION);
             if (flipPreference != null) {
-                List<Sensor> sensorList = sensorManager.getSensorList(Sensor.TYPE_ORIENTATION);
-                if (sensorList.size() < 1) { // This will be true if no orientation sensor
+                if (sensorManager.getDefaultSensor(Sensor.TYPE_ACCELEROMETER) == null) {
                     flipPreference.setValue("0"); // Turn it off
                     if (category != null) {
                         LogUtils.d(LogUtils.LOGTAG, "filpPreference is removed");
