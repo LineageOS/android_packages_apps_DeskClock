@@ -143,6 +143,30 @@
     },
     {
       "key": {
+        "uuid": "5faad753_456a7db3",
+        "filename": "src/com/android/deskclock/alarms/AlarmService.java",
+        "patchSetId": 1
+      },
+      "lineNbr": 359,
+      "author": {
+        "id": 14090
+      },
+      "writtenOn": "2016-05-10T19:20:33Z",
+      "side": 1,
+      "message": "It will return true for the input [true, false, true].\n\nAnother issue is that we are not checking the sample times, so we have no idea how far apart these events are and if there was a long enough stability/face up duration.\n\nWe ask for events at Normal (16.67 Hz) but this is not guaranteed. Android is allowed to report within 90%-200% of the req sample rate. \n\nIf something else is using the accel concurrently, then this listener can get events at a higher rate.",
+      "parentUuid": "5faad753_4a0e0a3c",
+      "range": {
+        "startLine": 352,
+        "startChar": 0,
+        "endLine": 359,
+        "endChar": 9
+      },
+      "revId": "1f7021a5881f142efd1b37ea9eb3c1a4e51e3a95",
+      "serverId": "1ec6b3db-b2c1-4fa4-84a2-4c7efe89ba71",
+      "unresolved": false
+    },
+    {
+      "key": {
         "uuid": "5faad753_cf668c2a",
         "filename": "src/com/android/deskclock/alarms/AlarmService.java",
         "patchSetId": 1
