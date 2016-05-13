@@ -167,6 +167,30 @@
     },
     {
       "key": {
+        "uuid": "5faad753_f5e1d2fd",
+        "filename": "src/com/android/deskclock/alarms/AlarmService.java",
+        "patchSetId": 1
+      },
+      "lineNbr": 359,
+      "author": {
+        "id": 13956
+      },
+      "writtenOn": "2016-05-13T17:23:55Z",
+      "side": 1,
+      "message": "Refactored. For sample times the purpose of this patch is not to change/fine tune the original logic (it is like that in currently). It is just to change to use accelerometer instead of orientation sensor.",
+      "parentUuid": "5faad753_456a7db3",
+      "range": {
+        "startLine": 352,
+        "startChar": 0,
+        "endLine": 359,
+        "endChar": 9
+      },
+      "revId": "1f7021a5881f142efd1b37ea9eb3c1a4e51e3a95",
+      "serverId": "1ec6b3db-b2c1-4fa4-84a2-4c7efe89ba71",
+      "unresolved": false
+    },
+    {
+      "key": {
         "uuid": "5faad753_cf668c2a",
         "filename": "src/com/android/deskclock/alarms/AlarmService.java",
         "patchSetId": 1
