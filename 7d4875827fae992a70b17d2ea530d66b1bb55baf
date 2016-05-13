@@ -25,6 +25,30 @@
     },
     {
       "key": {
+        "uuid": "5faad753_642bf12f",
+        "filename": "src/com/android/deskclock/alarms/AlarmService.java",
+        "patchSetId": 3
+      },
+      "lineNbr": 342,
+      "author": {
+        "id": 13956
+      },
+      "writtenOn": "2016-05-13T21:46:36Z",
+      "side": 1,
+      "message": "Done",
+      "parentUuid": "5faad753_6412110c",
+      "range": {
+        "startLine": 342,
+        "startChar": 35,
+        "endLine": 342,
+        "endChar": 36
+      },
+      "revId": "7d4875827fae992a70b17d2ea530d66b1bb55baf",
+      "serverId": "1ec6b3db-b2c1-4fa4-84a2-4c7efe89ba71",
+      "unresolved": false
+    },
+    {
+      "key": {
         "uuid": "5faad753_04f9ddc6",
         "filename": "src/com/android/deskclock/alarms/AlarmService.java",
         "patchSetId": 3
@@ -36,6 +60,30 @@
       "writtenOn": "2016-05-13T21:34:45Z",
       "side": 1,
       "message": "I\u0027d prefer both to be constants.",
+      "range": {
+        "startLine": 384,
+        "startChar": 50,
+        "endLine": 384,
+        "endChar": 53
+      },
+      "revId": "7d4875827fae992a70b17d2ea530d66b1bb55baf",
+      "serverId": "1ec6b3db-b2c1-4fa4-84a2-4c7efe89ba71",
+      "unresolved": false
+    },
+    {
+      "key": {
+        "uuid": "5faad753_04223d53",
+        "filename": "src/com/android/deskclock/alarms/AlarmService.java",
+        "patchSetId": 3
+      },
+      "lineNbr": 384,
+      "author": {
+        "id": 13956
+      },
+      "writtenOn": "2016-05-13T21:46:36Z",
+      "side": 1,
+      "message": "Done",
+      "parentUuid": "5faad753_04f9ddc6",
       "range": {
         "startLine": 384,
         "startChar": 50,
