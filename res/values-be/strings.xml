@@ -27,7 +27,9 @@
   <!-- Context Menu Item on Alarm Settings screen: Disable alarm -->
   <!-- Delete alarm confirmation dialog message. -->
   <!-- Menu item on Alarm Clock screen: Show clock -->
+  <string name="show_clock">Паказаць гадзіны</string>
   <!-- Menu item on Alarm Clock screen: Hide clock -->
+  <string name="hide_clock">Схаваць гадзіны</string>
   <!-- Setting label on Set alarm screen: Label -->
   <!-- Default label to display for an alarm -->
   <!-- Preference category on Alarm Settings screen: Set alarm -->
@@ -93,6 +95,7 @@
   <!-- Help activity name -->
   <!-- Settings activity name -->
   <!-- Label for the Settings activity displayed on-screen when that activity must be represented to the user. -->
+  <string name="settings">Налады</string>
   <!-- Setting title for changing the snooze duration. -->
   <!-- Auto silence preference title -->
   <!-- Auto silence summary string set based on the preference value. -->
@@ -141,6 +144,7 @@
   <!-- Describes the purpose of the button which provides a list of cities for the world clock settings -->
   <!-- Describes the purpose of the button which pops up a menu of setting choices -->
   <!-- Menu item on most screens to get to more settings -->
+  <string name="menu_item_settings">Налады</string>
   <!-- Menu item on most screens to get to the help information -->
   <!-- Menu item on clock screen to enter night mode. -->
   <!-- Menu item on Cities screen to sort by GMT offset -->
