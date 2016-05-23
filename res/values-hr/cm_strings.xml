@@ -16,11 +16,17 @@
      limitations under the License.
 -->
 <resources xmlns:xliff="urn:oasis:names:tc:xliff:document:1.2">
+  <!-- Setting title for showing/hiding the alarm status bar icon -->
   <string name="show_status_bar_icon_title">Prikaži ikonu</string>
+  <!-- Setting summary for showing/hiding the alarm statusbar icon -->
   <string name="show_status_bar_icon_summary">Prikaži ikonu u obavijestnoj traci kada je podešen alarm</string>
+  <!-- Setting labels on Set alarm screen: Increasing volume on or off -->
   <string name="alarm_increasing_volume">Pojačavanje glasnoće</string>
+  <!-- Setting labels on Set alarm screen: Choose profile -->
   <string name="profile_description">Profil <xliff:g id="profile">%s</xliff:g></string>
+  <!-- No profile selected label -->
   <string name="profile_no_selected">Nije odabran profil</string>
+  <!-- User-defined cities -->
   <string name="menu_item_add">Dodaj</string>
   <string name="cities_add_city_title">Dodaj grad</string>
   <string name="cities_add_city_city">Grad:</string>
@@ -35,27 +41,42 @@
   <string name="cities_delete_city_title">Izbriši grad</string>
   <string name="cities_delete_city_msg">Želite li izbrisati<xliff:g id="city">%s</xliff:g>?</string>
   <string name="cities_delete_city_failed">Nije moguće izbrisati grad</string>
+  <!-- Setting summary for volume buttons setting. -->
   <string name="volume_buttons_summary">Tipke za glasnoću zvuka će <xliff:g id="action">%s</xliff:g></string>
+  <!-- Setting title for the flip action setting. -->
   <string name="flip_action_title">Akcija okreta</string>
+  <!-- Setting summary for the flip action setting. -->
   <string name="flip_action_summary" product="tablet">Preokretanje tableta prema dolje će <xliff:g id="action">%s</xliff:g></string>
   <string name="flip_action_summary" product="default">Preokretanje telefona prema dolje će <xliff:g id="action">%s</xliff:g></string>
+  <!-- Setting title for the shake action setting. -->
   <string name="shake_action_title">Protresi</string>
+  <!-- Setting summary for the shake action setting. -->
   <string name="shake_action_summary" product="tablet">Protresivanje tableta će <xliff:g id="action">%s</xliff:g></string>
   <string name="shake_action_summary" product="default">Protresivanje telefona će <xliff:g id="action">%s</xliff:g></string>
+  <!-- Summary texts for shake and flip actions -->
   <string name="action_summary_snooze">utišati alarm</string>
   <string name="action_summary_dismiss">propustiti alarm</string>
   <string name="action_summary_do_nothing">učiniti ništa</string>
+  <!-- Alarm picker dialog title -->
   <string name="alarm_picker_title">Odaberi tip alarma</string>
+  <!-- Alarm types -->
   <string name="alarm_type_ringtone">Zvuk zvona</string>
   <string name="alarm_type_playlist">Popis za reprodukciju</string>
   <string name="alarm_type_random">Nasumično</string>
+  <!-- Warn Silent Alarm title -->
   <string name="warn_silent_alarm_title">Glasnoća alarma je utišana</string>
+  <!-- Select the source of the alarm -->
   <string name="alarm_select">Odaberite alarm</string>
+  <!-- Select the ringtone as alarm -->
   <string name="alarm_select_ringtone">Zvuk zvona</string>
+  <!-- Select the alarm from external device -->
   <string name="alarm_select_external">Glazba</string>
+  <!-- Ringtone selection default -->
   <string name="ringtone_default">Zadani zvuk zvona</string>
+  <!-- Message that describe an error trying to take a persistent grant permission for an uri ringtone -->
   <string name="take_persistent_grant_uri_permission_failed_msg">Neuspješno preuzimanje trajne dozvole za zvuk zvona</string>
   <string name="menu_item_widget_settings">Postavke widgeta</string>
   <string name="activity_not_found">Aktivnost nije pronađena!</string>
+  <!-- Permissions for reading/writing DeskClock alarms provider -->
   <string name="alarm_modification_service_desc">Usluga dopušta manipuliranje alarmima od strane trećih osoba.</string>
 </resources>

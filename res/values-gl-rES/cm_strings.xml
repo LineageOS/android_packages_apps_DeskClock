@@ -16,11 +16,17 @@
      limitations under the License.
 -->
 <resources xmlns:xliff="urn:oasis:names:tc:xliff:document:1.2">
+  <!-- Setting title for showing/hiding the alarm status bar icon -->
   <string name="show_status_bar_icon_title">Amosar a icona</string>
+  <!-- Setting summary for showing/hiding the alarm statusbar icon -->
   <string name="show_status_bar_icon_summary">Amosar unha icona na barra de estado cando haxa unha alarma definida</string>
+  <!-- Setting labels on Set alarm screen: Increasing volume on or off -->
   <string name="alarm_increasing_volume">Aumentar o volume</string>
+  <!-- Setting labels on Set alarm screen: Choose profile -->
   <string name="profile_description">Perfil <xliff:g id="profile">%s</xliff:g></string>
+  <!-- No profile selected label -->
   <string name="profile_no_selected">Non hai ningún perfil seleccionado</string>
+  <!-- User-defined cities -->
   <string name="menu_item_add">Engadir</string>
   <string name="cities_add_city_title">Engadir unha cidade</string>
   <string name="cities_add_city_city">Cidade:</string>
@@ -35,27 +41,42 @@
   <string name="cities_delete_city_title">Eliminar a cidade</string>
   <string name="cities_delete_city_msg">Confirma que quere eliminar <xliff:g id="city">%s</xliff:g>?</string>
   <string name="cities_delete_city_failed">Non é posíbel eliminar a cidade</string>
+  <!-- Setting summary for volume buttons setting. -->
   <string name="volume_buttons_summary">Ao premer os botóns de volume vai <xliff:g id="action">%s</xliff:g></string>
+  <!-- Setting title for the flip action setting. -->
   <string name="flip_action_title">Acción de xiro</string>
+  <!-- Setting summary for the flip action setting. -->
   <string name="flip_action_summary" product="tablet">Xirando a tableta cara abaixo vai <xliff:g id="action">%s</xliff:g></string>
   <string name="flip_action_summary" product="default">Xirando o teléfono cara abaixo vai <xliff:g id="action">%s</xliff:g></string>
+  <!-- Setting title for the shake action setting. -->
   <string name="shake_action_title">Acción de mexer</string>
+  <!-- Setting summary for the shake action setting. -->
   <string name="shake_action_summary" product="tablet">Mexendo a tableta vai <xliff:g id="action">%s</xliff:g></string>
   <string name="shake_action_summary" product="default">Mexendo o teléfono vai <xliff:g id="action">%s</xliff:g></string>
+  <!-- Summary texts for shake and flip actions -->
   <string name="action_summary_snooze">repetir a alarma</string>
   <string name="action_summary_dismiss">desestimar a alarma</string>
   <string name="action_summary_do_nothing">non facer nada</string>
+  <!-- Alarm picker dialog title -->
   <string name="alarm_picker_title">Escoller o tipo de alarma</string>
+  <!-- Alarm types -->
   <string name="alarm_type_ringtone">Ton de chamada</string>
   <string name="alarm_type_playlist">Lista de reprodución</string>
   <string name="alarm_type_random">Ao chou</string>
+  <!-- Warn Silent Alarm title -->
   <string name="warn_silent_alarm_title">O volume da alarma está silenciado</string>
+  <!-- Select the source of the alarm -->
   <string name="alarm_select">Seleccionar a alarma</string>
+  <!-- Select the ringtone as alarm -->
   <string name="alarm_select_ringtone">Ton de chamada</string>
+  <!-- Select the alarm from external device -->
   <string name="alarm_select_external">Música</string>
+  <!-- Ringtone selection default -->
   <string name="ringtone_default">Ton predeterminado</string>
+  <!-- Message that describe an error trying to take a persistent grant permission for an uri ringtone -->
   <string name="take_persistent_grant_uri_permission_failed_msg">Produciuse un fallo ao estabelecer os permisos persistentes para un ton de chamada</string>
   <string name="menu_item_widget_settings">Configuración do trebello</string>
   <string name="activity_not_found">Actividade non atopada!</string>
+  <!-- Permissions for reading/writing DeskClock alarms provider -->
   <string name="alarm_modification_service_desc">Este servizo permite que terceiras partes manipulen as alarmas.</string>
 </resources>

@@ -16,11 +16,17 @@
      limitations under the License.
 -->
 <resources xmlns:xliff="urn:oasis:names:tc:xliff:document:1.2">
+  <!-- Setting title for showing/hiding the alarm status bar icon -->
   <string name="show_status_bar_icon_title">Show icon</string>
+  <!-- Setting summary for showing/hiding the alarm statusbar icon -->
   <string name="show_status_bar_icon_summary">Show an icon in the status bar when an alarm is set</string>
+  <!-- Setting labels on Set alarm screen: Increasing volume on or off -->
   <string name="alarm_increasing_volume">Increasing volume</string>
+  <!-- Setting labels on Set alarm screen: Choose profile -->
   <string name="profile_description">Profile <xliff:g id="profile">%s</xliff:g></string>
+  <!-- No profile selected label -->
   <string name="profile_no_selected">No profile selected</string>
+  <!-- User-defined cities -->
   <string name="menu_item_add">Add</string>
   <string name="cities_add_city_title">Add city</string>
   <string name="cities_add_city_city">City:</string>
@@ -35,27 +41,42 @@
   <string name="cities_delete_city_title">Delete city</string>
   <string name="cities_delete_city_msg">Do you want to delete <xliff:g id="city">%s</xliff:g>?</string>
   <string name="cities_delete_city_failed">Can\'t delete the city</string>
+  <!-- Setting summary for volume buttons setting. -->
   <string name="volume_buttons_summary">Pressing the volume buttons will <xliff:g id="action">%s</xliff:g></string>
+  <!-- Setting title for the flip action setting. -->
   <string name="flip_action_title">Flip action</string>
+  <!-- Setting summary for the flip action setting. -->
   <string name="flip_action_summary" product="tablet">Flipping the tablet down will <xliff:g id="action">%s</xliff:g></string>
   <string name="flip_action_summary" product="default">Flipping the phone down will <xliff:g id="action">%s</xliff:g></string>
+  <!-- Setting title for the shake action setting. -->
   <string name="shake_action_title">Shake action</string>
+  <!-- Setting summary for the shake action setting. -->
   <string name="shake_action_summary" product="tablet">Shaking the tablet will <xliff:g id="action">%s</xliff:g></string>
   <string name="shake_action_summary" product="default">Shaking the phone will <xliff:g id="action">%s</xliff:g></string>
+  <!-- Summary texts for shake and flip actions -->
   <string name="action_summary_snooze">snooze the alarm</string>
   <string name="action_summary_dismiss">dismiss the alarm</string>
   <string name="action_summary_do_nothing">do nothing</string>
+  <!-- Alarm picker dialog title -->
   <string name="alarm_picker_title">Choose alarm type</string>
+  <!-- Alarm types -->
   <string name="alarm_type_ringtone">Ringtone</string>
   <string name="alarm_type_playlist">Playlist</string>
   <string name="alarm_type_random">Randomly</string>
+  <!-- Warn Silent Alarm title -->
   <string name="warn_silent_alarm_title">Alarm volume is silent</string>
+  <!-- Select the source of the alarm -->
   <string name="alarm_select">Select alarm</string>
+  <!-- Select the ringtone as alarm -->
   <string name="alarm_select_ringtone">Ringtone</string>
+  <!-- Select the alarm from external device -->
   <string name="alarm_select_external">Music</string>
+  <!-- Ringtone selection default -->
   <string name="ringtone_default">Default ringtone</string>
+  <!-- Message that describe an error trying to take a persistent grant permission for an uri ringtone -->
   <string name="take_persistent_grant_uri_permission_failed_msg">Failed to take persistent grant permission for ringtone</string>
   <string name="menu_item_widget_settings">Widget settings</string>
   <string name="activity_not_found">Activity not found!</string>
+  <!-- Permissions for reading/writing DeskClock alarms provider -->
   <string name="alarm_modification_service_desc">A service to allow manipulation of alarms by third parties.</string>
 </resources>

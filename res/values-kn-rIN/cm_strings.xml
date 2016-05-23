@@ -16,11 +16,17 @@
      limitations under the License.
 -->
 <resources xmlns:xliff="urn:oasis:names:tc:xliff:document:1.2">
+  <!-- Setting title for showing/hiding the alarm status bar icon -->
   <string name="show_status_bar_icon_title">ಐಕಾನ್ ಪ್ರದರ್ಶಿಸು</string>
+  <!-- Setting summary for showing/hiding the alarm statusbar icon -->
   <string name="show_status_bar_icon_summary">ಅಲಾರಂ ಹೊಂದಿಸಿದಾಗ ಸ್ಟೇಟಸ್‍ಬಾರ್‍ನಲ್ಲಿ ಒಂದು ಐಕಾನ್ ಪ್ರದರ್ಶಿಸು</string>
+  <!-- Setting labels on Set alarm screen: Increasing volume on or off -->
   <string name="alarm_increasing_volume">ವೃದ್ಧಿಗೊಳ್ಳುವ ವಾಲ್ಯೂಂ</string>
+  <!-- Setting labels on Set alarm screen: Choose profile -->
   <string name="profile_description">ಪ್ರೊಫೈಲ್<xliff:g id="profile">%s</xliff:g></string>
+  <!-- No profile selected label -->
   <string name="profile_no_selected">ಯಾವುದೇ ಪ್ರೊಫೈಲ್ ಆಯ್ಕೆಮಾಡಿಲ್ಲ</string>
+  <!-- User-defined cities -->
   <string name="menu_item_add">ಸೇರಿಸಿ</string>
   <string name="cities_add_city_title">ನಗರವನ್ನು ಸೇರಿಸಿ</string>
   <string name="cities_add_city_city">ನಗರ:</string>
@@ -35,27 +41,42 @@
   <string name="cities_delete_city_title">ನಗರವನ್ನು ಅಳಿಸು</string>
   <string name="cities_delete_city_msg">ನೀವು <xliff:g id="city">%s</xliff:g> ಅಳಿಸಲು ಬಯಸುತ್ತೀರಾ?</string>
   <string name="cities_delete_city_failed">ನಗರವನ್ನು ಅಳಿಸಲು ಸಾಧ್ಯವಾಗುತ್ತಿಲ್ಲ</string>
+  <!-- Setting summary for volume buttons setting. -->
   <string name="volume_buttons_summary">ವಾಲ್ಯೂಮ್ ಬಟನ್ಸ್ ಒತ್ತುವುದರಿಂದ <xliff:g id="action">%s</xliff:g></string>
+  <!-- Setting title for the flip action setting. -->
   <string name="flip_action_title">ಕಾರ್ಯವನ್ನು ಫ್ಲಿಪ್‍ಮಾಡು</string>
+  <!-- Setting summary for the flip action setting. -->
   <string name="flip_action_summary" product="tablet">ಟ್ಯಾಬ್ಲೆಟ್ ಕೆಳಗೆ ಫ್ಲಿಪ್ ಮಾಡುವುದರಿಂದ <xliff:g id="action">%s</xliff:g></string>
   <string name="flip_action_summary" product="default">ಫೋನ್ ಕೆಳಗೆ ಫ್ಲಿಪ್ ಮಾಡುವುದರಿಂದ <xliff:g id="action">%s</xliff:g></string>
+  <!-- Setting title for the shake action setting. -->
   <string name="shake_action_title">ಕುಲುಕು ಕ್ರಿಯೆ</string>
+  <!-- Setting summary for the shake action setting. -->
   <string name="shake_action_summary" product="tablet">ಟ್ಯಾಬ್ಲೆಟ್ ಕುಲುಕುವುದರಿಂದ <xliff:g id="action">%s</xliff:g></string>
   <string name="shake_action_summary" product="default">ಫೋನ್ ಕುಲುಕುವುದರಿಂದ <xliff:g id="action">%s</xliff:g></string>
+  <!-- Summary texts for shake and flip actions -->
   <string name="action_summary_snooze">ಅಲಾರಂ ಸ್ನೂಜ್‍ಮಾಡು</string>
   <string name="action_summary_dismiss">ಅಲಾರಂ ವಜಾಗೊಳಿಸು</string>
   <string name="action_summary_do_nothing">ಏನೂ ಮಾಡಬೇಡ</string>
+  <!-- Alarm picker dialog title -->
   <string name="alarm_picker_title">ಅಲಾರಂ ಪ್ರಕಾರವನ್ನು ಆರಿಸಿ</string>
+  <!-- Alarm types -->
   <string name="alarm_type_ringtone">ರಿಂಗ್‍ಟೋನ್</string>
   <string name="alarm_type_playlist">ಪ್ಲೇಪಟ್ಟಿ</string>
   <string name="alarm_type_random">ಸ್ವೇಚ್ಛೆಯಾಗಿ</string>
+  <!-- Warn Silent Alarm title -->
   <string name="warn_silent_alarm_title">ಅಲಾರಂ ವಾಲ್ಯೂಮ್ ನಿಶ್ಯಬ್ಧವಾಗಿದೆ</string>
+  <!-- Select the source of the alarm -->
   <string name="alarm_select">ಅಲಾರಂ ಆಯ್ಕೆಮಾಡಿ</string>
+  <!-- Select the ringtone as alarm -->
   <string name="alarm_select_ringtone">ರಿಂಗ್‍ಟೋನ್</string>
+  <!-- Select the alarm from external device -->
   <string name="alarm_select_external">ಮ್ಯೂಸಿಕ್</string>
+  <!-- Ringtone selection default -->
   <string name="ringtone_default">ಡೀಫಾಲ್ಟ್ ರಿಂಗ್‍ಟೋನ್</string>
+  <!-- Message that describe an error trying to take a persistent grant permission for an uri ringtone -->
   <string name="take_persistent_grant_uri_permission_failed_msg">ರಿಂಗ್‍ಟೋನ್‍ಗಾಗಿ ನಿರಂತರ ಒಪ್ಪಿಗೆ ಅನುಮತಿಯನ್ನು ಪಡೆಯಲು ವಿಫಲವಾಗಿದೆ</string>
   <string name="menu_item_widget_settings">ವಿಜೆಟ್ ಸೆಟ್ಟಿಂಗ್ಸ್</string>
   <string name="activity_not_found">ಚಟುವಟಿಕೆ ಪತ್ತೆಯಾಗಲಿಲ್ಲ!</string>
+  <!-- Permissions for reading/writing DeskClock alarms provider -->
   <string name="alarm_modification_service_desc">ತೃತೀಯ ಪಕ್ಷೀಯಗಳಿಗೆ ಅಲಾರಂಗಳನ್ನು ಬದಲಿಸುವ ಸಾಮಾರ್ಥ್ಯವನ್ನು ಅನುಮತಿಸುವ ಒಂದು ಸೇವೆ.</string>
 </resources>

@@ -15,43 +15,107 @@
      limitations under the License.
 -->
 <resources xmlns:xliff="urn:oasis:names:tc:xliff:document:1.2">
+  <!-- Label shown on launcher icon -->
+  <!-- Label for the this application displayed on-screen when this application must be represented to the user. -->
   <string name="app_label">کاتژمێر</string>
+  <!-- Title for AlarmClock activity -->
+  <!-- Label for the Alarms activity displayed on-screen when that activity must be represented to the user. -->
   <string name="alarm_list_title">وریاکەرەوەکان</string>
+  <!-- Menu item on Alarm Clock screen: Add alarm -->
   <string name="add_alarm">زیادکردنی ئاگادارکردنه‌وه‌</string>
+  <!-- Menu item on Alarm Clock screen: Desk clock -->
   <string name="menu_desk_clock">کاتژمێری ڕوونما</string>
+  <!-- Menu item on Alarm Clock screen: Edit alarm -->
   <string name="menu_edit_alarm">ده‌ستکاریکردنی ئاگادارکه‌ره‌وه‌</string>
+  <!-- Context Menu Item on Alarm Settings screen: Delete alarm -->
   <string name="delete_alarm">سڕینه‌وه‌ی ئاگادارکه‌ره‌وه‌</string>
+  <!-- Context Menu Item on Alarm Settings screen: Enable alarm -->
   <string name="enable_alarm">کارپێکردنی ئاگادارکه‌ره‌وه‌</string>
+  <!-- Context Menu Item on Alarm Settings screen: Disable alarm -->
   <string name="disable_alarm">له‌کارخستنی ئاگادارکه‌ره‌وه‌</string>
+  <!-- Delete alarm confirmation dialog message. -->
   <string name="delete_alarm_confirm">ئه‌م ئاگادارکه‌ره‌وه‌ ده‌سڕیته‌وه‌؟</string>
+  <!-- Menu item on Alarm Clock screen: Show clock -->
   <string name="show_clock">نیشاندانی کاتژمێر</string>
+  <!-- Menu item on Alarm Clock screen: Hide clock -->
   <string name="hide_clock">شاردنه‌وه‌ی کاتژمێر</string>
+  <!-- Setting label on Set alarm screen: Label -->
   <string name="label">پێناس</string>
+  <!-- Default label to display for an alarm -->
   <string name="default_label">وریاکەرەوە</string>
+  <!-- Preference category on Alarm Settings screen: Set alarm -->
+  <!-- Also label for the old Alarms dialog activity displayed on-screen when that activity must be represented to the user. -->
   <string name="set_alarm">دیاریکردنی ئاگادارکه‌ره‌وه‌</string>
+  <!-- Setting labels on Set alarm screen: Vibration on or off -->
   <string name="alarm_vibrate">لەرزین</string>
+  <!-- Setting labels on Set alarm screen: Repeat -->
   <string name="alarm_repeat">دوبارەکردنەوە</string>
+  <!-- Setting labels on Set alarm screen: Select alarm ringtone  -->
   <string name="alert">زه‌نگی ئاگادارکه‌ره‌وه‌</string>
+  <!-- Label on expanded alarm edit view. -->
   <string name="ringtone">زه‌نگ</string>
+  <!-- Setting labels on Set alarm screen: Set time  -->
   <string name="time">کات</string>
+  <!-- Label shown when user is setting up non-repeating alarm for tomorrow [CHAR LIMIT=15] -->
+  <!-- Label shown when user is setting up non-repeating alarm for later today [CHAR LIMIT=15] -->
+  <!-- The text shown above the clock when alarm is alerting [CHAR LIMIT=10] -->
+  <!-- The text shown as an option to dismiss an alerting alarm [CHAR LIMIT=5] -->
+  <!-- Button labels on the alarm dialog: Dismiss -->
   <string name="alarm_alert_dismiss_text">لابردن</string>
+  <!-- Button labels on the pre-dismiss alarm notifications: Dismiss now -->
   <string name="alarm_alert_dismiss_now_text">لابردن هه‌ر ئێستا</string>
+  <!-- Alarm Alert screen: this message is shown after an alarm rung
+         unattended for a number of minutes.  It tells the user that
+         the alarm has been silenced.-->
   <string name="alarm_missed_title">ئاگادارکه‌ره‌وه‌ی ونبوو</string>
   <string name="alarm_missed_text"><xliff:g id="alarm_time">%s</xliff:g> - <xliff:g id="alarm_label">%s</xliff:g></string>
+  <!-- The text shown after user snoozed an alerting alarm. The text will be shown
+         together with the number of minutes in two separate lines. For example:
+             Snoozed
+             10 min
+         [CHAR LIMIT=10]
+    -->
+  <!-- The text shown after user snoozed an alerting alarm. The text will be shown
+         together with the word 'Snoozed' in two separate lines or example:
+             Snoozed
+             10 min
+         [CHAR LIMIT=10]
+    -->
+  <!-- The text shown after user dismissed an alerting alarm [CHAR LIMIT=15] -->
+  <!-- Button labels on the alarm dialog: Snooze -->
   <string name="alarm_alert_snooze_text">سووکه‌ نوستن</string>
+  <!-- Toast that appears after Alarm is snoozed from the Alarm
+         dialog. Says the alarm will snooze for xxx minutes.  -->
   <plurals name="alarm_alert_snooze_set">
+    <!-- Duration for one minute -->
     <item quantity="one">سوکه‌نوستن بۆ یه‌ک خوله‌ک.</item>
+    <!-- Duration for more than one minute -->
     <item quantity="other">سوکه‌ نوستن بۆ <xliff:g id="minutes">%d</xliff:g> خوله‌ک.</item>
   </plurals>
+  <!-- Text to appear inside a notification while an alarm is snoozing. -->
   <string name="alarm_alert_snooze_until">سووکه‌ نوستن تا <xliff:g id="time">%s</xliff:g></string>
+  <!-- Text to appear in the notification title while an alarm is about to go off. -->
   <string name="alarm_alert_predismiss_title">ئاگادارکه‌ره‌وه‌ی به‌ڕێگا</string>
+  <!-- Text to appear in when trying to view a missed alarm that has been deleted -->
   <string name="missed_alarm_has_been_deleted">ئاگادارکه‌ره‌وه‌ی ونبوو سڕدرایه‌وه‌</string>
+  <!-- 0: nothing
+         1: days
+         2:      hours
+         3: days hours
+         4:            minutes
+         5: days       minutes
+         6:      hours minutes
+         7: days hours minutes
+    -->
+  <!-- Timer notification: how long from now until timer goes off. -->
   <string-array name="timer_notifications">
     <item>که‌متر له‌ یه‌ک خوله‌کی ماوه‌</item>
     <item><xliff:g id="HOURS" example="2 hours">%1$s</xliff:g> remaining ماوه‌</item>
     <item><xliff:g id="MINUTES" example="2 minutes">%2$s</xliff:g> remaining ماوه‌</item>
     <item><xliff:g id="HOURS" example="2 hours">%1$s</xliff:g> <xliff:g id="MINUTES" example="2 minutes">%2$s</xliff:g> remaining ماوه‌</item>
   </string-array>
+  <!-- Alarm confirmation toast: Describes how long from now until
+         alarm fires -->
   <string-array name="alarm_set">
     <item>ئاگادارکه‌ره‌وه‌ دانرا بۆ که‌متر له‌ یه‌ک خوله‌ک له‌ ئێستاوه‌.</item>
     <item>ئاگادارکه‌ره‌وه‌ دانرا بۆ <xliff:g id="DAYS" example="2 days">%1$s</xliff:g> له‌ ئێستاوه‌.</item>
@@ -62,31 +126,62 @@
     <item>ئاگادارکه‌ره‌وه‌ دانرا بۆ  <xliff:g id="DAYS" example="2 days">%2$s</xliff:g>  وه‌ <xliff:g id="HOURS" example="2 hours">%3$s</xliff:g> له‌ ئێستاوه‌.</item>
     <item>ئاگادارکه‌ره‌وه‌ دانرا بۆ  <xliff:g id="DAYS" example="2 days">%1$s</xliff:g>, <xliff:g id="HOURS" example="2 hours">%2$s</xliff:g>,  وه‌  <xliff:g id="MINUTES" example="2 minutes">%3$s</xliff:g> له‌ ئێستاوه‌.</item>
   </string-array>
+  <!-- Alarm confirmation toast: singular day -->
   <string name="day">"1 ڕۆژ"</string>
+  <!-- Alarm confirmation toast: plural days -->
   <string name="days">"<xliff:g id="days">%s</xliff:g>  ڕۆژ"</string>
+  <!-- Alarm confirmation toast: singular hour -->
   <string name="hour">1 کاژێر</string>
+  <!-- Alarm confirmation toast: plural hours -->
   <string name="hours"><xliff:g id="hours">%s</xliff:g> کاژێر</string>
+  <!-- Alarm confirmation toast: singular minute  -->
   <string name="minute">"1 خوله‌ک"</string>
+  <!-- Alarm confirmation toast: plural minutes  -->
   <string name="minutes">"<xliff:g id="minutes">%s</xliff:g> خوله‌ک"</string>
+  <!-- Repeat options that appear under an alarm on main Alarm Clock
+         screen to identify repetition schedule: special case for when
+         the alarm is set to repeat every day -->
   <string name="every_day">هه‌موو ڕۆژێک</string>
+  <!-- Repeat options that appear under an alarm on main Alarm Clock
+         screen to identify repetition schedule: special case for when
+         the alarm is set to never repeat -->
   <string name="never">هیچکات</string>
+  <!-- Repeat options that appear under an alarm on main Alarm Clock
+         screen to identify repetition schedule: concatenate days with
+         this character, i.e. "Mon, Tue, Wed" -->
   <string name="day_concat">", "</string>
+  <!-- Appears at the top of the Clock Picker screen: Tell user to
+         select a clock to display -->
   <string name="clock_instructions">دیاریکردنی کاتژمێر</string>
+  <!-- Label for analog clock gadget displayed on-screen when that gadget is represented to the user. -->
   <string name="analog_gadget">کاتژمێر پێوه‌ری</string>
+  <!-- Help activity name -->
   <string name="help">یارمه‌تیدان</string>
+  <!-- Settings activity name -->
+  <!-- Label for the Settings activity displayed on-screen when that activity must be represented to the user. -->
   <string name="settings">ڕێکخستنه‌کان</string>
+  <!-- Setting title for changing the snooze duration. -->
   <string name="snooze_duration_title">ماوه‌ی سووکه‌نوستن</string>
   <plurals name="snooze_duration">
+    <!-- Duration for one minute -->
     <item quantity="one">1 خوله‌ک</item>
+    <!-- Duration for more than one minute -->
     <item quantity="other"><xliff:g id="number" example="7">%d</xliff:g> خوله‌ک</item>
   </plurals>
   <plurals name="snooze_picker_label">
+    <!-- Duration for one minute -->
     <item quantity="one">خوله‌ک</item>
+    <!-- Duration for more than one minute -->
     <item quantity="other">خولەک</item>
   </plurals>
+  <!-- Auto silence preference title -->
   <string name="auto_silence_title">بێده‌نگ کردن دوای</string>
+  <!-- Auto silence summary string set based on the preference value. -->
   <string name="auto_silence_summary"><xliff:g id="minutes">%d</xliff:g> خوله‌ک</string>
+  <!-- Auto silence summary when turned off -->
   <string name="auto_silence_never">هەرگیز</string>
+  <!-- Entries listed in the ListPreference when invoking the auto silence
+         preference. -->
   <string-array name="auto_silence_entries">
     <item>1 minute</item>
     <item>5 minutes</item>
@@ -96,86 +191,170 @@
     <item>25 minutes</item>
     <item>هیچکات</item>
   </string-array>
+  <!-- Values that are retrieved from the ListPreference. These must match
+         the auto_silence_entries above. -->
+  <!-- Done button when editing an alarm. -->
   <string name="done">ئه‌نجام درا</string>
+  <!-- Revert button when editing an alarm. -->
   <string name="revert">گه‌ڕانه‌وه‌ی باری سه‌ره‌تایی</string>
+  <!-- Delete button when editing an alarm. -->
   <string name="delete">سڕینه‌وه‌</string>
+  <!-- Setting title for changing the alarm volume. -->
   <string name="alarm_volume_title">ئاستی دەنگی ئاگادارکەرەوە</string>
+  <!-- Summary for the alarm preference when silent is chosen. -->
   <string name="silent_alarm_summary">بێدەنگ</string>
+  <!-- Text to display in the small text of the notification -->
   <string name="alarm_notify_text">سووکه‌نوستن یان لابردنی ئاگادارکه‌ره‌وه‌.</string>
+  <!-- Text to display in the notification ticker and label -->
   <string name="alarm_notify_snooze_label"><xliff:g id="label">%s</xliff:g> (سووکه‌نوستن کرا)</string>
+  <!-- Text to display in the notification when the alarm has been snoozed -->
   <string name="alarm_notify_snooze_text">ئاگادارکه‌ره‌وه‌ دانرا بۆ  <xliff:g id="time">%s</xliff:g>.په‌نچه‌ی پێدابنێ بۆ لابردن.</string>
+  <!-- Title of the setting to change hardware button behavior. This string
+         should be changed for each piece of hardware. [CHAR LIMIT=20] -->
   <string name="volume_button_setting_title">دوگمەی دەنگ</string>
+  <!-- Dialog title of the volume and power setting. -->
   <string name="volume_button_dialog_title">کاریگه‌ری دوگمه‌</string>
+  <!-- Entries listed in the setting for the side-button action. -->
   <string-array name="volume_button_setting_entries">
     <item>سووکه‌ نوستن</item>
     <item>گوێ نەدان</item>
     <item>هیچ نه‌کرێت</item>
   </string-array>
+  <!-- Values for the side-button setting. -->
+  <!-- Title of the ringtone setting. -->
   <string name="default_ringtone_setting_title">دیاریکردنی زه‌نگی بنێڕه‌ت</string>
+  <!-- Accessibility labels for Clock activity buttons -->
   <string name="alarm_button_description">ئاگادارکردنه‌وه‌</string>
   <string name="gallery_button_description">پێشەنگا</string>
   <string name="music_button_description">مۆسیقا</string>
   <string name="nightmode_button_description">ڵێڵ</string>
   <string name="home_button_description">به‌کارخه‌ر</string>
   <string name="desk_clock_button_description">ته‌ختی کاتژمێر</string>
+  <!-- Accessibility labels for alarm buttons -->
   <string name="label_description">پێناس</string>
   <string name="ringtone_description">زه‌نگ</string>
+  <!-- What to show the user if the weather widget exists but fails to
+         respond. This is a sign of an error; if the weather widget is not
+         present on the device, we show nothing at all. -->
   <string name="weather_fetch_failure">زانیاری له‌باره‌ی که‌ش و هه‌وا ئێستا ئاماده‌ نییه‌.</string>
+  <!-- A description for the DeskClock alarm sound playback service.
+         [CHAR LIMIT=NONE] -->
   <string name="alarm_klaxon_service_desc">خزمه‌تگوزاری گه‌ڕانه‌لێدانی ده‌نگ بۆ ئاگادارکردنه‌وه‌ دانرا له‌ کاژێردا.</string>
+  <!-- String displayed as the alert summary while loading the alert name from
+         the media player. [CHAR LIMIT=NONE] -->
   <string name="loading_ringtone">ئاماده‌کردنی زه‌نگ\u2026</string>
+  <!-- A description for the DeskClock timer sound playback service.
+         [CHAR LIMIT=NONE] -->
   <string name="timer_ring_service_desc">خزمه‌تگوزاری گه‌ڕانه‌لێدانی ده‌نگ بۆ ئاگادارکردنه‌وه‌ دانرا له‌ کاژێردا.</string>
+  <!-- Label on the main screen control used to set alarm [CHAR LIMIT=30]-->
   <string name="control_set_alarm">دانانی وریاکەرەوە</string>
+  <!-- Label on the main screen control used to set alarm when there is already an existing alarm [CHAR LIMIT=30]-->
   <string name="control_set_alarm_with_existing"><xliff:g id="time">%s</xliff:g></string>
+  <!--  ActionBar strings -->
+  <!-- Describes the purpose of the tab button which which switches the activity to the Alarm page -->
   <string name="menu_alarm">وریاکەرەوە</string>
+  <!-- Describes the purpose of the tab button which which switches the activity to the Timer page -->
   <string name="menu_timer">کاتپێو</string>
+  <!-- Describes the purpose of the tab button which which switches the activity to the Clock page -->
   <string name="menu_clock">کاتژمێر</string>
+  <!-- Describes the purpose of the tab button which which switches the activity to the Stopwatch page -->
   <string name="menu_stopwatch">کات وه‌ستێن</string>
+  <!-- Clock view buttons strings-->
+  <!-- Describes the purpose of the button to start the activity to add/edit/delete alarms -->
+  <!-- Describes the purpose of the button which provides a list of cities for the world clock settings -->
   <string name="button_cities">شاره‌کان</string>
+  <!-- Describes the purpose of the button which pops up a menu of setting choices -->
   <string name="button_menu">بەربژاردەی زیاتر</string>
+  <!-- Menu item on most screens to get to more settings -->
   <string name="menu_item_settings">ڕێکخستنه‌کان</string>
+  <!-- Menu item on most screens to get to the help information -->
   <string name="menu_item_help">یارمەتی</string>
+  <!-- Menu item on clock screen to enter night mode. -->
   <string name="menu_item_night_mode">جۆری شه‌و</string>
+  <!-- Menu item on Cities screen to sort by GMT offset -->
   <string name="menu_item_sort_by_gmt_offset">ڕیزکردن به‌پێی کات</string>
+  <!-- Menu item on Cities screen to sort by alphabetical order -->
   <string name="menu_item_sort_by_name">ڕیزکردن به‌ ناو</string>
+  <!-- Label for selected cities in Cities list view -->
   <string name="selected_cities_label">شاره‌ دیاریکراوه‌کان</string>
+  <!-- Stop Watch strings -->
+  <!-- Describes the purpose of the button to resume running a stopwatch -->
   <string name="sw_resume_button">دەستپێکردنەوە</string>
+  <!-- Describes the purpose of the button to begin running a stopwatch -->
   <string name="sw_start_button">دەستپێکردن</string>
+  <!-- Describes the purpose of the button to pause a stopwatch. -->
   <string name="sw_stop_button">وه‌ستاندن</string>
+  <!-- Describes the purpose of the button to record current the stopwatch value into the4 collection of lap times. -->
   <string name="sw_lap_button">سوڕ</string>
+  <!-- Describes the purpose of the button to return the stopwatch to zero and remove the lap times. -->
   <string name="sw_reset_button">ڕێکخستنەوە</string>
+  <!-- Describes the purpose of the button to share the stopwatch value.
+         Also used as title for chooser when sharing stopwatch results. -->
   <string name="sw_share_button">به‌شداریپێکردن</string>
+  <!-- Abbreviation for temporal hours [CHAR LIMIT=1] -->
   <string name="hours_label">ک</string>
+  <!-- Abbreviation for temporal minutes [CHAR LIMIT=1] -->
   <string name="minutes_label">خ</string>
+  <!-- Abbreviation for temporal seconds [CHAR LIMIT=1] -->
   <string name="seconds_label">چ</string>
+  <!-- Accessibility strings -->
   <string name="hours_label_description">کاژێر</string>
   <string name="minutes_label_description">خولەک</string>
   <string name="seconds_label_description">چرکە</string>
+  <!--  Stopwatch share strings -->
+  <!-- Sentence within the message created to share the total time recorded within the stopwatch -->
   <string name="sw_share_main">کاتی من بریتییه‌ له‌ <xliff:g id="time">%s</xliff:g></string>
+  <!-- Header within the message created to share a list of lap times (a new line is appended to this) -->
   <string name="sw_share_laps">ماوه‌ی سوڕ:</string>
+  <!-- Label to enumerate the number of laps in the notification the user has counted -->
   <string name="sw_notification_lap_number">سوڕی <xliff:g id="number">%d</xliff:g></string>
+  <!-- Formatted stopwatch time -->
+  <!-- Formatted stopwatch time for laps shared using the share button -->
+  <!-- Label to enumerate the number of laps the user has counted -->
+  <!-- Stopwatch accessibility strings -->
   <plurals name="Nhours_description">
+    <!-- 1 hour -->
     <item quantity="one">1 کاژێر</item>
+    <!-- more -->
     <item quantity="other"><xliff:g id="number" example="7">%d</xliff:g> کاتژژمێر</item>
   </plurals>
   <plurals name="Nminutes_description">
+    <!-- 1 minute -->
     <item quantity="one">1 خوله‌ک</item>
+    <!-- more -->
     <item quantity="other"><xliff:g id="number" example="7">%d</xliff:g>خوله‌ک</item>
   </plurals>
   <plurals name="Nseconds_description">
+    <!-- 1 second -->
     <item quantity="one">1 چرکە</item>
+    <!-- more -->
     <item quantity="other"><xliff:g id="number" example="7">%d</xliff:g> چرکه‌</item>
   </plurals>
+  <!-- timer strings -->
+  <!-- Describes the purpose of the button to add a new timer -->
   <string name="timer_add_timer">دیاریکردنی کاتپێو</string>
+  <!-- Describes the purpose of the button to begin or continue running a timer -->
   <string name="timer_start">دەستپێکردن</string>
+  <!-- Describes the purpose of the button to delete a timer. -->
   <string name="timer_delete">سڕینه‌وه‌</string>
+  <!-- Describes the purpose of the button increase the remaining time on a timer by one minute. -->
   <string name="timer_plus_one">زیادکردنی یه‌ک خوله‌ک</string>
+  <!-- Like "timer_plus_one", but with 'minute' abbreviated for the notification. -->
   <string name="timer_plus_1_min">زیاد کردنی ۱ خوله‌ک</string>
+  <!-- Describes the purpose of the button to stop the timer. -->
   <string name="timer_stop">وه‌ستاندن</string>
+  <!-- Describes the purpose of the button to stop and delete the timer. -->
   <string name="timer_done">ئه‌نجام درا</string>
+  <!-- Describes the purpose of the button to return the timer to it's original starting value. -->
   <string name="timer_reset">ڕێکخستنەوە</string>
+  <!-- Describes the purpose of the button to discard the current dialog values. Will also close the dialog if other time's exist -->
   <string name="timer_cancel">هەڵوەشاندنەوە</string>
+  <!-- Notification content shown when a timer has completed and has no more time remaining -->
   <string name="timer_times_up">کات ته‌واو بوو</string>
+  <!-- Label associated with a notification for a Timer -->
   <string name="timer_notification_label">کاتپێو</string>
+  <!-- Toast content shown when user attempts to create a new timer when there are already 4 timers -->
+  <!-- Jocular content that user may append when sharing the lap times -->
   <string-array name="sw_share_strings" translatable="true">
     <item>تۆ خێرایی زۆر به‌رزت بێده‌نگ کرد.</item>
     <item>دڵخۆشبه‌ به به‌ری کاره‌که‌ت.</item>
@@ -189,26 +368,47 @@
     <item>ته‌قاندنه‌وه‌ی فۆتۆن.</item>
   </string-array>
   <plurals name="timers_num">
+    <!-- 1 timer -->
     <item quantity="one">1 خوله‌ک</item>
+    <!-- more -->
     <item quantity="other"><xliff:g id="number" example="7">%d</xliff:g> کاتپێو</item>
   </plurals>
+  <!-- Title with the clock on the main page displaying the user's regular timezone (shows when automatic_home_clock enabled) -->
   <string name="home_label">ماڵەوە</string>
+  <!-- Label for the Cities activity displayed on-screen when that activity must be represented to the user. -->
   <string name="cities_activity_title">شاره‌کان</string>
+  <!-- Settings strings -->
+  <!-- Header in the preferences settings for the section pertaining to clocks on the main fragment -->
+  <!-- Header for a Clock Dream Setting referring to choosing analog or digital style -->
   <string name="clock_style">ستایل</string>
+  <!-- Entries listed in the ListPreference when invoking the clock style
+         preference. -->
   <string-array name="clock_style_entries">
     <item>پێوه‌ری</item>
     <item>ژماره‌یی</item>
   </string-array>
+  <!-- Values that are retrieved from the ListPreference. These must match
+         the clock_style_entries above. -->
+  <!-- Title for an option that will automtically show a clock representing the user's regular timezone on the main fragment whenever the user leaves their regular timezone-->
   <string name="automatic_home_clock">کاتژمێری ماڵه‌وه‌ی خۆکارانه‌</string>
+  <!-- Describes the functionality provided by the automatic_home_clock option -->
   <string name="automatic_home_clock_summary">کاتێک گه‌شت ده‌که‌یت و شوێن ده‌گۆڕیت که‌ کات جیاوازبێت،کاتژمێر زیاد بکه‌ بۆ ماڵ</string>
+  <!-- Title in the preferences change the time zone for the user's home -->
   <string name="home_time_zone">کاتی ماڵ</string>
+  <!-- Title in a list dialog box to pick a time zone for the user's home -->
   <string name="home_time_zone_title">کاتی ماڵ</string>
+  <!-- Textual content of the button to discard the current dialog values and close the dialog -->
   <string name="time_picker_cancel">هەڵوەشاندنەوە</string>
+  <!-- Textual content of the button to update an alarm with the current dialog values -->
   <string name="time_picker_set">باشه‌</string>
   <string name="time_picker_time_seperator">:</string>
+  <!--  place holder for am/pm label when it is not set -->
   <string name="time_picker_ampm_label">--</string>
+  <!-- add 00 as minutes to the time when pressing this button -->
   <string name="time_picker_00_label">:۰۰</string>
+  <!-- add 30 as minutes to the time when pressing this button -->
   <string name="time_picker_30_label">:۳۰</string>
+  <!-- Choices for timezones, must be kept in sync with timezone_values. CHAR LIMIT=25] -->
   <string-array name="timezone_labels">
     <item>"دوورگه‌کانی مارشاڵ"</item>
     <item>"دورگه‌کانی میدوه‌ی"</item>
@@ -296,32 +496,74 @@
     <item>"تۆنگا"</item>
     <item>"جاکارتا"</item>
   </string-array>
+  <!-- Choices for timezones, must be kept in sync with timezone_values. -->
+  <!-- Header in the preferences settings for the section pertaining to alarms -->
+  <!-- Describes the running service for the stopwatch -->
   <string name="stopwatch_service_desc">خزمه‌تگوزاری کات وه‌ستێنه‌ر بۆ ئاگاداری کارده‌کات.</string>
+  <!-- Desription for the stopped stop watch -->
   <string name="swn_stopped">وه‌ستا</string>
+  <!-- Text instruction for dismiss alarm on alarm lock screen. The dismiss button will still
+         be on the right even on RTL languages so please do not reverse this during
+         translation. -->
+  <!-- Text instruction for snooze alarm on alarm lock screen. The snooze button will still
+         be on the left even on RTL languages so please do not reverse this during
+         translation. -->
+  <!-- Notification title when timer is stopped. -->
   <string name="timer_stopped">کاتپێو وه‌ستا</string>
+  <!-- Notification title when multiple timers are stopped. -->
   <string name="timers_stopped"><xliff:g id="number" example="7">%d</xliff:g> کاتپێو وه‌ستا</string>
+  <!-- Notification text when multiple timers are stopped. -->
   <string name="all_timers_stopped_notif">په‌نجه‌ بنێ بێره‌دا بۆ بینینی کاتپێوه‌کان</string>
+  <!-- Notification title when at least one timer, of those in use, is counting down. -->
   <string name="timers_in_use"><xliff:g id="number" example="7">%d</xliff:g> کاتپێو</string>
+  <!-- Notification text when at least one timer, of those in use, is counting down. -->
   <string name="next_timer_notif">کاتپێوی دواتر: <xliff:g id="time_remaining" example="2 minutes remaining">%s</xliff:g></string>
+  <!-- screensaver settings strings -->
+  <!-- Label for the screen saver activity displayed on-screen when that activity must be represented to the user. -->
   <string name="screensaver_settings">ڕێکخستنه‌کانی تیمی خه‌یاڵ</string>
+  <!-- Title for check box to pick intensity of display diminuation during dream mode -->
   <string name="night_mode_title">شێوازی شەو</string>
+  <!-- Describes intensity of display diminuation during dream mode -->
   <string name="night_mode_summary">ڕوونمای زۆر تاریک (بۆ ژووری تاریک به‌کاردێت)</string>
+  <!-- Description of the down caret in the alarm alert screen to expand the alarm content to edit perspective. [CHAR LIMIT=NONE] -->
   <string name="expand_alarm">به‌ربڵاوی ئاگادارکه‌ره‌وه‌</string>
+  <!-- Description of the up caret in the alarm alert screen to collapse the alarm content to summary perspective. [CHAR LIMIT=NONE] -->
   <string name="collapse_alarm">له‌ناوچونی ئاگادارکه‌ره‌وه‌</string>
+  <!-- Description of the button to undo change to alarm -->
   <string name="alarm_undo">گه‌ڕانه‌وه‌</string>
+  <!-- Toast content when an alarm was deleted  -->
   <string name="alarm_deleted">ئاگادارکه‌ره‌وه‌ وه‌ستا.</string>
+  <!-- slash between date and next alarm in the clock -->
   <string name="slash"> / </string>
+  <!-- slash between date and next alarm in the clock -->
   <string name="world_day_of_week_label"> / <xliff:g id="label">%s</xliff:g></string>
+  <!-- Description of field showing the next alarm time in the clock page, for accessibility. -->
   <string name="next_alarm_description">ئاگادارکه‌ره‌وه‌ی داهاتوو:<xliff:g id="alarm_time" example="Wed 8:00am">%s</xliff:g></string>
+  <!-- Displays the number of alarms selected from the list of alarms. -->
   <string name="alarms_selected"><xliff:g id="alarms">%d</xliff:g> selected دیاریکراوه‌</string>
+  <!-- message used by the talkback accessebility app to say that something was deleted -->
   <string name="deleted_message">سڕدرایەوە</string>
+  <!-- Alarm deletion confirmation message-->
   <plurals name="alarm_delete_confirmation">
+    <!-- Confirmation for one alarm -->
     <item quantity="one">سڕینه‌وه‌ی ئاگادارکه‌ره‌وه‌ی دیاریکراو؟</item>
+    <!-- Confirmation more than one alarm  -->
     <item quantity="other">سڕینه‌وه‌ی ئاگادارکه‌ره‌وه‌ی دیاریکراو؟</item>
   </plurals>
+  <!-- Timer deletion confirmation -->
   <string name="timer_delete_confirmation">ئه‌م کاتپێوه‌ ده‌سڕیته‌وه‌؟</string>
+  <!-- world clock deletion confirmation -->
   <string name="city_delete_confirmation">ئه‌م شاره‌ ده‌سڕیته‌وه‌؟</string>
+  <!-- Label for digital clock gadget displayed on-screen when that gadget is represented to the user. -->
   <string name="digital_gadget">کاتژمێر ژماره‌یی</string>
+  <!-- format strings for clocks -->
+  <!-- Font size for AM/PM should match widget_label_font_size -->
+  <!-- Font size for AM/PM should match bottom_text_size -->
+  <!-- Font size for AM/PM should match label_font_size -->
+  <!-- Font size for AM/PM should match alarm_label_size -->
+  <!-- String for no alarms -->
   <string name="no_alarms">ئاگادارکردنه‌وه‌ نییه‌</string>
+  <!-- String for no alarms set [CHAR LIMIT=24] -->
+  <!-- String for no enabled alarms in timeline view [CHAR LIMIT=30] -->
   <string name="no_upcoming_alarms">هیچ ئاگادارکردنه‌وه‌یه‌کی ئاماده‌کراو نییه‌</string>
 </resources>

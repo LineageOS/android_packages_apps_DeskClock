@@ -16,11 +16,17 @@
      limitations under the License.
 -->
 <resources xmlns:xliff="urn:oasis:names:tc:xliff:document:1.2">
+  <!-- Setting title for showing/hiding the alarm status bar icon -->
   <string name="show_status_bar_icon_title">Nişanı göstər</string>
+  <!-- Setting summary for showing/hiding the alarm statusbar icon -->
   <string name="show_status_bar_icon_summary">Zəngli saat tənzimlənəndə durum sətrində nişanı göstər</string>
+  <!-- Setting labels on Set alarm screen: Increasing volume on or off -->
   <string name="alarm_increasing_volume">Artan səs</string>
+  <!-- Setting labels on Set alarm screen: Choose profile -->
   <string name="profile_description">Profil <xliff:g id="profile">%s</xliff:g></string>
+  <!-- No profile selected label -->
   <string name="profile_no_selected">Profil seçilməyib</string>
+  <!-- User-defined cities -->
   <string name="menu_item_add">Əlavə et</string>
   <string name="cities_add_city_title">Şəhər əlavə et</string>
   <string name="cities_add_city_city">Şəhər:</string>
@@ -35,27 +41,42 @@
   <string name="cities_delete_city_title">Şəhəri sil</string>
   <string name="cities_delete_city_msg"><xliff:g id="city">%s</xliff:g> şəhərini silmək istəyirsən?</string>
   <string name="cities_delete_city_failed">Şəhər silinə bilmir</string>
+  <!-- Setting summary for volume buttons setting. -->
   <string name="volume_buttons_summary">Səs düymələri <xliff:g id="action">%s</xliff:g></string>
+  <!-- Setting title for the flip action setting. -->
   <string name="flip_action_title">Çevirmə hərəkəti</string>
+  <!-- Setting summary for the flip action setting. -->
   <string name="flip_action_summary" product="tablet">Planşeti tərsinə çevirəndə <xliff:g id="action">%s</xliff:g></string>
   <string name="flip_action_summary" product="default">Telefonu tərsinə çevirəndə <xliff:g id="action">%s</xliff:g></string>
+  <!-- Setting title for the shake action setting. -->
   <string name="shake_action_title">Silkələmə hərəkəti</string>
+  <!-- Setting summary for the shake action setting. -->
   <string name="shake_action_summary" product="tablet">Planşeti silkələyəndə <xliff:g id="action">%s</xliff:g></string>
   <string name="shake_action_summary" product="default">Telefonu silkələyəndə <xliff:g id="action">%s</xliff:g></string>
+  <!-- Summary texts for shake and flip actions -->
   <string name="action_summary_snooze">zəngli saatı təxirə salacaq</string>
   <string name="action_summary_dismiss">zəngli saatı bağlayacaq</string>
   <string name="action_summary_do_nothing">heçnə etmə</string>
+  <!-- Alarm picker dialog title -->
   <string name="alarm_picker_title">Zəngli saat növünü seçin</string>
+  <!-- Alarm types -->
   <string name="alarm_type_ringtone">Zəng səsi</string>
   <string name="alarm_type_playlist">Çalma siyahısı</string>
   <string name="alarm_type_random">Təsadüfi</string>
+  <!-- Warn Silent Alarm title -->
   <string name="warn_silent_alarm_title">Zəngli saat səssizdədir</string>
+  <!-- Select the source of the alarm -->
   <string name="alarm_select">Zəngli saatı seç</string>
+  <!-- Select the ringtone as alarm -->
   <string name="alarm_select_ringtone">Zəng səsi</string>
+  <!-- Select the alarm from external device -->
   <string name="alarm_select_external">Musiqi</string>
+  <!-- Ringtone selection default -->
   <string name="ringtone_default">İlkin zəng səsi</string>
+  <!-- Message that describe an error trying to take a persistent grant permission for an uri ringtone -->
   <string name="take_persistent_grant_uri_permission_failed_msg">Zəng səsi üçün davamlı icazə alına bilmədi</string>
   <string name="menu_item_widget_settings">Widget tənzimləmələri</string>
   <string name="activity_not_found">Fəaliyyət tapılmadı!</string>
+  <!-- Permissions for reading/writing DeskClock alarms provider -->
   <string name="alarm_modification_service_desc">Bu xidmət zəngli saatların üçüncü tərəflər ilə dəyişdirilməsinə icazə verər.</string>
 </resources>

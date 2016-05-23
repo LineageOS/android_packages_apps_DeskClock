@@ -16,11 +16,17 @@
      limitations under the License.
 -->
 <resources xmlns:xliff="urn:oasis:names:tc:xliff:document:1.2">
+  <!-- Setting title for showing/hiding the alarm status bar icon -->
   <string name="show_status_bar_icon_title">Erakutsi ikonoa</string>
+  <!-- Setting summary for showing/hiding the alarm statusbar icon -->
   <string name="show_status_bar_icon_summary">Bistaratu ikono bat egoera barran alarma bat ezarrita badago</string>
+  <!-- Setting labels on Set alarm screen: Increasing volume on or off -->
   <string name="alarm_increasing_volume">Bolumen gorakorra</string>
+  <!-- Setting labels on Set alarm screen: Choose profile -->
   <string name="profile_description"><xliff:g id="profile">%s</xliff:g> profila</string>
+  <!-- No profile selected label -->
   <string name="profile_no_selected">Ez da profilik ezarri</string>
+  <!-- User-defined cities -->
   <string name="menu_item_add">Gehitu</string>
   <string name="cities_add_city_title">Gehitu hiria</string>
   <string name="cities_add_city_city">Hiria:</string>
@@ -35,27 +41,42 @@
   <string name="cities_delete_city_title">Hiria ezabatu</string>
   <string name="cities_delete_city_msg"><xliff:g id="city">%s</xliff:g> ezabatu nahi duzu?</string>
   <string name="cities_delete_city_failed">Ezin da hiria ezabatu</string>
+  <!-- Setting summary for volume buttons setting. -->
   <string name="volume_buttons_summary">Bolumen botoiak sakatzean <xliff:g id="action">%s</xliff:g></string>
+  <!-- Setting title for the flip action setting. -->
   <string name="flip_action_title">Iraultzerako ekintza</string>
+  <!-- Setting summary for the flip action setting. -->
   <string name="flip_action_summary" product="tablet"><xliff:g id="action">%s</xliff:g></string>
   <string name="flip_action_summary" product="default"><xliff:g id="action">%s</xliff:g></string>
+  <!-- Setting title for the shake action setting. -->
   <string name="shake_action_title">Astintzerako ekintza</string>
+  <!-- Setting summary for the shake action setting. -->
   <string name="shake_action_summary" product="tablet"><xliff:g id="action">%s</xliff:g></string>
   <string name="shake_action_summary" product="default"><xliff:g id="action">%s</xliff:g></string>
+  <!-- Summary texts for shake and flip actions -->
   <string name="action_summary_snooze">atzeratu alarma</string>
   <string name="action_summary_dismiss">baztertu alarma</string>
   <string name="action_summary_do_nothing">Ez egin ezer</string>
+  <!-- Alarm picker dialog title -->
   <string name="alarm_picker_title">Alarma doinua</string>
+  <!-- Alarm types -->
   <string name="alarm_type_ringtone">Dei doinua</string>
   <string name="alarm_type_playlist">Erreprodukzio-zerrenda</string>
   <string name="alarm_type_random">Ausazkoa</string>
+  <!-- Warn Silent Alarm title -->
   <string name="warn_silent_alarm_title">Alarmaren bolumena isilpean</string>
+  <!-- Select the source of the alarm -->
   <string name="alarm_select">Hautatu alarma</string>
+  <!-- Select the ringtone as alarm -->
   <string name="alarm_select_ringtone">Dei doinua</string>
+  <!-- Select the alarm from external device -->
   <string name="alarm_select_external">Musika</string>
+  <!-- Ringtone selection default -->
   <string name="ringtone_default">Dei doinu lehenetsia</string>
+  <!-- Message that describe an error trying to take a persistent grant permission for an uri ringtone -->
   <string name="take_persistent_grant_uri_permission_failed_msg">Huts egin du dei doinuarentzat behin betiko baimen eskaerak</string>
   <string name="menu_item_widget_settings">Trepetaren ezarpenak</string>
   <string name="activity_not_found">Aktibitatea ez da aurkitu!</string>
+  <!-- Permissions for reading/writing DeskClock alarms provider -->
   <string name="alarm_modification_service_desc">Hirugarrengoen aplikazioek alarmak aldatzeko zerbitzu bat.</string>
 </resources>

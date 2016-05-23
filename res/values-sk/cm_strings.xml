@@ -16,11 +16,17 @@
      limitations under the License.
 -->
 <resources xmlns:xliff="urn:oasis:names:tc:xliff:document:1.2">
+  <!-- Setting title for showing/hiding the alarm status bar icon -->
   <string name="show_status_bar_icon_title">Zobraziť ikonu</string>
+  <!-- Setting summary for showing/hiding the alarm statusbar icon -->
   <string name="show_status_bar_icon_summary">Zobraziť ikonu v stavovom riadku, keď je nastavený budík</string>
+  <!-- Setting labels on Set alarm screen: Increasing volume on or off -->
   <string name="alarm_increasing_volume">Zvyšovanie hlasitosti</string>
+  <!-- Setting labels on Set alarm screen: Choose profile -->
   <string name="profile_description">Profil <xliff:g id="profile">%s</xliff:g></string>
+  <!-- No profile selected label -->
   <string name="profile_no_selected">Žiadny profil nebol vybraný</string>
+  <!-- User-defined cities -->
   <string name="menu_item_add">Pridať</string>
   <string name="cities_add_city_title">Pridať mesto</string>
   <string name="cities_add_city_city">Mesto:</string>
@@ -35,27 +41,42 @@
   <string name="cities_delete_city_title">Vymazať mesto</string>
   <string name="cities_delete_city_msg">Vymazať <xliff:g id="city">%s</xliff:g>?</string>
   <string name="cities_delete_city_failed">Nemožno vymazať mesto</string>
+  <!-- Setting summary for volume buttons setting. -->
   <string name="volume_buttons_summary">Stlačením tlačidiel hlasitosti sa <xliff:g id="action">%s</xliff:g></string>
+  <!-- Setting title for the flip action setting. -->
   <string name="flip_action_title">Akcia pri prevrátení</string>
+  <!-- Setting summary for the flip action setting. -->
   <string name="flip_action_summary" product="tablet">Otočením tabletu sa <xliff:g id="action">%s</xliff:g></string>
   <string name="flip_action_summary" product="default">Otočením telefónu sa <xliff:g id="action">%s</xliff:g></string>
+  <!-- Setting title for the shake action setting. -->
   <string name="shake_action_title">Akcia pri zatrasení</string>
+  <!-- Setting summary for the shake action setting. -->
   <string name="shake_action_summary" product="tablet">Zatrasením tabletu sa <xliff:g id="action">%s</xliff:g></string>
   <string name="shake_action_summary" product="default">Zatrasením telefónu sa <xliff:g id="action">%s</xliff:g></string>
+  <!-- Summary texts for shake and flip actions -->
   <string name="action_summary_snooze">odloží budík</string>
   <string name="action_summary_dismiss">vypne budík</string>
   <string name="action_summary_do_nothing">neurobí nič</string>
+  <!-- Alarm picker dialog title -->
   <string name="alarm_picker_title">Vyberte typ budíka</string>
+  <!-- Alarm types -->
   <string name="alarm_type_ringtone">Tón zvonenia</string>
   <string name="alarm_type_playlist">Zoznam skladieb</string>
   <string name="alarm_type_random">Náhodne</string>
+  <!-- Warn Silent Alarm title -->
   <string name="warn_silent_alarm_title">Hlasitosť budíka je tichá</string>
+  <!-- Select the source of the alarm -->
   <string name="alarm_select">Vyberte budík</string>
+  <!-- Select the ringtone as alarm -->
   <string name="alarm_select_ringtone">Zvonenie</string>
+  <!-- Select the alarm from external device -->
   <string name="alarm_select_external">Hudba</string>
+  <!-- Ringtone selection default -->
   <string name="ringtone_default">Predvolené zvonenie</string>
+  <!-- Message that describe an error trying to take a persistent grant permission for an uri ringtone -->
   <string name="take_persistent_grant_uri_permission_failed_msg">Nepodarilo sa získať trvalé udelenie povolenia pre zvonenie</string>
   <string name="menu_item_widget_settings">Nastavenia miniaplikácie</string>
   <string name="activity_not_found">Aktivita sa nenašla!</string>
+  <!-- Permissions for reading/writing DeskClock alarms provider -->
   <string name="alarm_modification_service_desc">Služba na povolenie manipulácie s budíkmi tretími stranami.</string>
 </resources>

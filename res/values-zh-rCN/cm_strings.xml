@@ -16,11 +16,17 @@
      limitations under the License.
 -->
 <resources xmlns:xliff="urn:oasis:names:tc:xliff:document:1.2">
+  <!-- Setting title for showing/hiding the alarm status bar icon -->
   <string name="show_status_bar_icon_title">显示图标</string>
+  <!-- Setting summary for showing/hiding the alarm statusbar icon -->
   <string name="show_status_bar_icon_summary">闹钟设定时在状态栏上显示一个图标</string>
+  <!-- Setting labels on Set alarm screen: Increasing volume on or off -->
   <string name="alarm_increasing_volume">渐强音量</string>
+  <!-- Setting labels on Set alarm screen: Choose profile -->
   <string name="profile_description">情景模式 <xliff:g id="profile">%s</xliff:g></string>
+  <!-- No profile selected label -->
   <string name="profile_no_selected">未选择情景模式</string>
+  <!-- User-defined cities -->
   <string name="menu_item_add">添加</string>
   <string name="cities_add_city_title">添加城市</string>
   <string name="cities_add_city_city">城市：</string>
@@ -35,27 +41,42 @@
   <string name="cities_delete_city_title">删除城市</string>
   <string name="cities_delete_city_msg">确定要删除 <xliff:g id="city">%s</xliff:g> 吗?</string>
   <string name="cities_delete_city_failed">不能删除该城市</string>
+  <!-- Setting summary for volume buttons setting. -->
   <string name="volume_buttons_summary">按下音量按钮将<xliff:g id="action">%s</xliff:g></string>
+  <!-- Setting title for the flip action setting. -->
   <string name="flip_action_title">翻转行为</string>
+  <!-- Setting summary for the flip action setting. -->
   <string name="flip_action_summary" product="tablet">翻转设备将<xliff:g id="action">%s</xliff:g></string>
   <string name="flip_action_summary" product="default">翻转设备将<xliff:g id="action">%s</xliff:g></string>
+  <!-- Setting title for the shake action setting. -->
   <string name="shake_action_title">摇动行为</string>
+  <!-- Setting summary for the shake action setting. -->
   <string name="shake_action_summary" product="tablet">摇动平板将<xliff:g id="action">%s</xliff:g></string>
   <string name="shake_action_summary" product="default">摇动设备将<xliff:g id="action">%s</xliff:g></string>
+  <!-- Summary texts for shake and flip actions -->
   <string name="action_summary_snooze">暂停闹钟</string>
   <string name="action_summary_dismiss">停止闹钟</string>
   <string name="action_summary_do_nothing">不产生任何作用</string>
+  <!-- Alarm picker dialog title -->
   <string name="alarm_picker_title">选择提醒类型</string>
+  <!-- Alarm types -->
   <string name="alarm_type_ringtone">铃声</string>
   <string name="alarm_type_playlist">播放列表</string>
   <string name="alarm_type_random">随机</string>
+  <!-- Warn Silent Alarm title -->
   <string name="warn_silent_alarm_title">闹钟音量为静音</string>
+  <!-- Select the source of the alarm -->
   <string name="alarm_select">选择闹钟</string>
+  <!-- Select the ringtone as alarm -->
   <string name="alarm_select_ringtone">铃声</string>
+  <!-- Select the alarm from external device -->
   <string name="alarm_select_external">音乐</string>
+  <!-- Ringtone selection default -->
   <string name="ringtone_default">默认铃声</string>
+  <!-- Message that describe an error trying to take a persistent grant permission for an uri ringtone -->
   <string name="take_persistent_grant_uri_permission_failed_msg">获取此铃声的永久授权失败。</string>
   <string name="menu_item_widget_settings">小部件设置</string>
   <string name="activity_not_found">没有找到活动！</string>
+  <!-- Permissions for reading/writing DeskClock alarms provider -->
   <string name="alarm_modification_service_desc">允许第三方控制闹钟的服务。</string>
 </resources>

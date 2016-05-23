@@ -16,11 +16,17 @@
      limitations under the License.
 -->
 <resources xmlns:xliff="urn:oasis:names:tc:xliff:document:1.2">
+  <!-- Setting title for showing/hiding the alarm status bar icon -->
   <string name="show_status_bar_icon_title">නිරූපකය පෙන්වන්න</string>
+  <!-- Setting summary for showing/hiding the alarm statusbar icon -->
   <string name="show_status_bar_icon_summary">ඇඟවීමක් පිහිට වූ විට ඇඟවීමේ නිරූපකය තත්ව තීරුවේ පෙන්වන්න</string>
+  <!-- Setting labels on Set alarm screen: Increasing volume on or off -->
   <string name="alarm_increasing_volume">වැඩිවන හඬ තීව්‍රතාව</string>
+  <!-- Setting labels on Set alarm screen: Choose profile -->
   <string name="profile_description">පැතිකඩ <xliff:g id="profile">%s</xliff:g></string>
+  <!-- No profile selected label -->
   <string name="profile_no_selected">පැතිකඩක් තෝරා නොමැත</string>
+  <!-- User-defined cities -->
   <string name="menu_item_add">එක් කරන්න</string>
   <string name="cities_add_city_title">නගරය එක් කරන්න</string>
   <string name="cities_add_city_city">නගරය:</string>
@@ -35,20 +41,35 @@
   <string name="cities_delete_city_title">නගරය මකන්න</string>
   <string name="cities_delete_city_msg">ඔබට <xliff:g id="city">%s</xliff:g> මැකීමට අවශ්‍යද?</string>
   <string name="cities_delete_city_failed">නගරය මැකිය නොහැක</string>
+  <!-- Setting summary for volume buttons setting. -->
+  <!-- Setting title for the flip action setting. -->
   <string name="flip_action_title">පෙරළීමේ ක්‍රියාව</string>
+  <!-- Setting summary for the flip action setting. -->
   <string name="flip_action_summary" product="tablet">ටැබ්ලටය පහළට පෙරළීමේදී <xliff:g id="action">%s</xliff:g></string>
   <string name="flip_action_summary" product="default">උපාංගය පහළට පෙරළීමේදී <xliff:g id="action">%s</xliff:g></string>
+  <!-- Setting title for the shake action setting. -->
   <string name="shake_action_title">සෙලවීමේ ක්‍රියාව</string>
+  <!-- Setting summary for the shake action setting. -->
   <string name="shake_action_summary" product="tablet">ටැබ්ලටය සෙලවීමේදී <xliff:g id="action">%s</xliff:g></string>
   <string name="shake_action_summary" product="default">උපාංගය සෙලවීමේදී <xliff:g id="action">%s</xliff:g></string>
+  <!-- Summary texts for shake and flip actions -->
   <string name="action_summary_do_nothing">කිසිවක් නොකරන්න</string>
+  <!-- Alarm picker dialog title -->
   <string name="alarm_picker_title">ඇඟවීම් විලාසය තෝරන්න</string>
+  <!-- Alarm types -->
   <string name="alarm_type_ringtone">රින්ග්ටෝනය</string>
   <string name="alarm_type_random">අහඹු ලෙස</string>
+  <!-- Warn Silent Alarm title -->
   <string name="warn_silent_alarm_title">ඇඟවීමේ නාදය නිශ්ශබ්දය</string>
+  <!-- Select the source of the alarm -->
   <string name="alarm_select">ඇඟවීම තෝරන්න</string>
+  <!-- Select the ringtone as alarm -->
   <string name="alarm_select_ringtone">රින්ග්ටෝනය</string>
+  <!-- Select the alarm from external device -->
   <string name="alarm_select_external">සංගීත</string>
+  <!-- Ringtone selection default -->
   <string name="ringtone_default">පෙරනිමි රිංටෝනය</string>
+  <!-- Message that describe an error trying to take a persistent grant permission for an uri ringtone -->
   <string name="take_persistent_grant_uri_permission_failed_msg">රිංටෝනය සඳහා නිබැඳි අනුමැතිය ලබාගැනීමට අසමත් විය</string>
+  <!-- Permissions for reading/writing DeskClock alarms provider -->
 </resources>

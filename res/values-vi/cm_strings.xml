@@ -16,11 +16,17 @@
      limitations under the License.
 -->
 <resources xmlns:xliff="urn:oasis:names:tc:xliff:document:1.2">
+  <!-- Setting title for showing/hiding the alarm status bar icon -->
   <string name="show_status_bar_icon_title">Hiện biểu tượng</string>
+  <!-- Setting summary for showing/hiding the alarm statusbar icon -->
   <string name="show_status_bar_icon_summary">Hiện biểu tượng trên thanh trạng thái khi đặt báo thức</string>
+  <!-- Setting labels on Set alarm screen: Increasing volume on or off -->
   <string name="alarm_increasing_volume">Âm lượng tăng dần</string>
+  <!-- Setting labels on Set alarm screen: Choose profile -->
   <string name="profile_description">Cấu hình <xliff:g id="profile">%s</xliff:g></string>
+  <!-- No profile selected label -->
   <string name="profile_no_selected">Không có cấu hình được chọn</string>
+  <!-- User-defined cities -->
   <string name="menu_item_add">Thêm</string>
   <string name="cities_add_city_title">Thêm thành phố</string>
   <string name="cities_add_city_city">Thành phố:</string>
@@ -35,27 +41,42 @@
   <string name="cities_delete_city_title">Xóa thành phố</string>
   <string name="cities_delete_city_msg">Bạn có muốn xóa <xliff:g id="city">%s </xliff:g>?</string>
   <string name="cities_delete_city_failed">Không thể xóa bỏ thành phố</string>
+  <!-- Setting summary for volume buttons setting. -->
   <string name="volume_buttons_summary">Nhấn nút âm lượng sẽ <xliff:g id="action">%s </xliff:g></string>
+  <!-- Setting title for the flip action setting. -->
   <string name="flip_action_title">Hành động Lật</string>
+  <!-- Setting summary for the flip action setting. -->
   <string name="flip_action_summary" product="tablet">Lật máy tính bảng xuống sẽ <xliff:g id="action">%s </xliff:g></string>
   <string name="flip_action_summary" product="default">Lật điện thoại xuống sẽ <xliff:g id="action">%s </xliff:g></string>
+  <!-- Setting title for the shake action setting. -->
   <string name="shake_action_title">Hành động Lắc</string>
+  <!-- Setting summary for the shake action setting. -->
   <string name="shake_action_summary" product="tablet">Lắc máy tính bảng sẽ <xliff:g id="action">%s</xliff:g></string>
   <string name="shake_action_summary" product="default">Lắc điện thoại sẽ <xliff:g id="action">%s</xliff:g></string>
+  <!-- Summary texts for shake and flip actions -->
   <string name="action_summary_snooze">báo lại báo thức</string>
   <string name="action_summary_dismiss">bỏ qua báo thức</string>
   <string name="action_summary_do_nothing">không làm gì</string>
+  <!-- Alarm picker dialog title -->
   <string name="alarm_picker_title">Chọn loại báo thức</string>
+  <!-- Alarm types -->
   <string name="alarm_type_ringtone">Nhạc chuông</string>
   <string name="alarm_type_playlist">Danh sách phát</string>
   <string name="alarm_type_random">Ngẫu nhiên</string>
+  <!-- Warn Silent Alarm title -->
   <string name="warn_silent_alarm_title">Âm lượng báo thức được tắt</string>
+  <!-- Select the source of the alarm -->
   <string name="alarm_select">Chọn báo thức</string>
+  <!-- Select the ringtone as alarm -->
   <string name="alarm_select_ringtone">Nhạc chuông</string>
+  <!-- Select the alarm from external device -->
   <string name="alarm_select_external">Nhạc</string>
+  <!-- Ringtone selection default -->
   <string name="ringtone_default">Nhạc chuông mặc định</string>
+  <!-- Message that describe an error trying to take a persistent grant permission for an uri ringtone -->
   <string name="take_persistent_grant_uri_permission_failed_msg">Không thể cấp quyền vĩnh viễn cho nhạc chuông</string>
   <string name="menu_item_widget_settings">Cài đặt tiện ích con</string>
   <string name="activity_not_found">Không tìm thấy hoạt động!</string>
+  <!-- Permissions for reading/writing DeskClock alarms provider -->
   <string name="alarm_modification_service_desc">Dịch vụ cho phép các bên thứ ba thao tác với báo thức.</string>
 </resources>

@@ -16,11 +16,17 @@
      limitations under the License.
 -->
 <resources xmlns:xliff="urn:oasis:names:tc:xliff:document:1.2">
+  <!-- Setting title for showing/hiding the alarm status bar icon -->
   <string name="show_status_bar_icon_title">Afficher l\'icône</string>
+  <!-- Setting summary for showing/hiding the alarm statusbar icon -->
   <string name="show_status_bar_icon_summary">Afficher l\'icône dans la barre d\'état quand une alarme est activée</string>
+  <!-- Setting labels on Set alarm screen: Increasing volume on or off -->
   <string name="alarm_increasing_volume">Volume progressif</string>
+  <!-- Setting labels on Set alarm screen: Choose profile -->
   <string name="profile_description">Profil <xliff:g id="profile">%s</xliff:g></string>
+  <!-- No profile selected label -->
   <string name="profile_no_selected">Aucun profil sélectionné</string>
+  <!-- User-defined cities -->
   <string name="menu_item_add">Ajouter</string>
   <string name="cities_add_city_title">Ajouter une ville</string>
   <string name="cities_add_city_city">Ville\u00A0:</string>
@@ -35,27 +41,42 @@
   <string name="cities_delete_city_title">Supprimer la ville</string>
   <string name="cities_delete_city_msg">Voulez-vous supprimer <xliff:g id="city">%s</xliff:g>\u00A0?</string>
   <string name="cities_delete_city_failed">Impossible de supprimer la ville</string>
+  <!-- Setting summary for volume buttons setting. -->
   <string name="volume_buttons_summary">Appuyer sur les boutons de volume <xliff:g id="action">%s</xliff:g></string>
-  <string name="flip_action_title">Action quand retourné</string>
+  <!-- Setting title for the flip action setting. -->
+  <string name="flip_action_title">Action retourner</string>
+  <!-- Setting summary for the flip action setting. -->
   <string name="flip_action_summary" product="tablet">Retourner la tablette vers le bas <xliff:g id="action">%s</xliff:g></string>
   <string name="flip_action_summary" product="default">Retourner le téléphone <xliff:g id="action">%s</xliff:g></string>
+  <!-- Setting title for the shake action setting. -->
   <string name="shake_action_title">Action secousse</string>
+  <!-- Setting summary for the shake action setting. -->
   <string name="shake_action_summary" product="tablet">Secouer la tablette <xliff:g id="action">%s</xliff:g></string>
   <string name="shake_action_summary" product="default">Secouer le téléphone <xliff:g id="action">%s</xliff:g></string>
-  <string name="action_summary_snooze">pour répéter l\'alarme</string>
-  <string name="action_summary_dismiss">pour arrêter l\'alarme</string>
+  <!-- Summary texts for shake and flip actions -->
+  <string name="action_summary_snooze">répétera l\'alarme</string>
+  <string name="action_summary_dismiss">arrêtera l\'alarme</string>
   <string name="action_summary_do_nothing">ne fera rien</string>
+  <!-- Alarm picker dialog title -->
   <string name="alarm_picker_title">Définir le type d\'alarme</string>
+  <!-- Alarm types -->
   <string name="alarm_type_ringtone">Sonnerie</string>
   <string name="alarm_type_playlist">Liste de lecture</string>
   <string name="alarm_type_random">Aléatoire</string>
+  <!-- Warn Silent Alarm title -->
   <string name="warn_silent_alarm_title">Le volume de l\'alarme est silencieux</string>
+  <!-- Select the source of the alarm -->
   <string name="alarm_select">Sélectionner une alarme</string>
+  <!-- Select the ringtone as alarm -->
   <string name="alarm_select_ringtone">Sonnerie</string>
+  <!-- Select the alarm from external device -->
   <string name="alarm_select_external">Musique</string>
+  <!-- Ringtone selection default -->
   <string name="ringtone_default">Sonnerie par défaut</string>
+  <!-- Message that describe an error trying to take a persistent grant permission for an uri ringtone -->
   <string name="take_persistent_grant_uri_permission_failed_msg">Impossible d\'obtenir une autorisation permanente pour la sonnerie</string>
   <string name="menu_item_widget_settings">Paramètres du widget</string>
-  <string name="activity_not_found">Activité non trouvée !</string>
+  <string name="activity_not_found">Activité introuvable !</string>
+  <!-- Permissions for reading/writing DeskClock alarms provider -->
   <string name="alarm_modification_service_desc">Un service pour permettre la manipulation des alarmes par des tiers.</string>
 </resources>

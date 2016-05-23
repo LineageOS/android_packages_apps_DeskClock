@@ -16,11 +16,17 @@
      limitations under the License.
 -->
 <resources xmlns:xliff="urn:oasis:names:tc:xliff:document:1.2">
+  <!-- Setting title for showing/hiding the alarm status bar icon -->
   <string name="show_status_bar_icon_title">Näytä kuvake</string>
+  <!-- Setting summary for showing/hiding the alarm statusbar icon -->
   <string name="show_status_bar_icon_summary">Näytä kuvake tilapalkissa, kun hälytys on asetettu</string>
+  <!-- Setting labels on Set alarm screen: Increasing volume on or off -->
   <string name="alarm_increasing_volume">Nouseva äänenvoimakkuus</string>
+  <!-- Setting labels on Set alarm screen: Choose profile -->
   <string name="profile_description">Profiili <xliff:g id="profile">%s</xliff:g></string>
+  <!-- No profile selected label -->
   <string name="profile_no_selected">Profiilia ei valittu</string>
+  <!-- User-defined cities -->
   <string name="menu_item_add">Lisää</string>
   <string name="cities_add_city_title">Lisää kaupunki</string>
   <string name="cities_add_city_city">Kaupunki:</string>
@@ -35,27 +41,42 @@
   <string name="cities_delete_city_title">Poista kaupunki</string>
   <string name="cities_delete_city_msg">Haluatko varmasti poistaa kaupungin <xliff:g id="city">%s</xliff:g>?</string>
   <string name="cities_delete_city_failed">Ei voida poistaa kaupunkia</string>
+  <!-- Setting summary for volume buttons setting. -->
   <string name="volume_buttons_summary">Äänenvoimakkuuspainikkeiden painaminen <xliff:g id="action">%s</xliff:g></string>
+  <!-- Setting title for the flip action setting. -->
   <string name="flip_action_title">Laitteen kääntö</string>
+  <!-- Setting summary for the flip action setting. -->
   <string name="flip_action_summary" product="tablet">Tabletin kääntö <xliff:g id="action">%s</xliff:g></string>
   <string name="flip_action_summary" product="default">Puhelimen kääntö <xliff:g id="action">%s</xliff:g></string>
+  <!-- Setting title for the shake action setting. -->
   <string name="shake_action_title">Ravistaminen</string>
+  <!-- Setting summary for the shake action setting. -->
   <string name="shake_action_summary" product="tablet">Tabletin ravistaminen <xliff:g id="action">%s</xliff:g></string>
   <string name="shake_action_summary" product="default">Puhelimen ravistaminen <xliff:g id="action">%s</xliff:g></string>
+  <!-- Summary texts for shake and flip actions -->
   <string name="action_summary_snooze">asettaa torkun</string>
   <string name="action_summary_dismiss">lopettaa hälytyksen</string>
   <string name="action_summary_do_nothing">ei tee mitään</string>
+  <!-- Alarm picker dialog title -->
   <string name="alarm_picker_title">Valitse hälytyksen tyyppi</string>
+  <!-- Alarm types -->
   <string name="alarm_type_ringtone">Soittoääni</string>
   <string name="alarm_type_playlist">Soittolista</string>
   <string name="alarm_type_random">Satunnainen</string>
+  <!-- Warn Silent Alarm title -->
   <string name="warn_silent_alarm_title">Hälytyksen äänenvoimakkuus on äänettömällä</string>
+  <!-- Select the source of the alarm -->
   <string name="alarm_select">Valitse hälytys</string>
+  <!-- Select the ringtone as alarm -->
   <string name="alarm_select_ringtone">Soittoääni</string>
+  <!-- Select the alarm from external device -->
   <string name="alarm_select_external">Musiikki</string>
+  <!-- Ringtone selection default -->
   <string name="ringtone_default">Oletussoittoääni</string>
+  <!-- Message that describe an error trying to take a persistent grant permission for an uri ringtone -->
   <string name="take_persistent_grant_uri_permission_failed_msg">Pysyvän käyttöoikeuden ottaminen soittoäänelle epäonnistui</string>
   <string name="menu_item_widget_settings">Widget-asetukset</string>
   <string name="activity_not_found">Aktiviteetteja ei löydy!</string>
+  <!-- Permissions for reading/writing DeskClock alarms provider -->
   <string name="alarm_modification_service_desc">Palvelu sallii kolmannen osapuolen manipuloida hälytyksiä.</string>
 </resources>

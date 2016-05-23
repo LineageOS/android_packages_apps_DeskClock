@@ -16,11 +16,17 @@
      limitations under the License.
 -->
 <resources xmlns:xliff="urn:oasis:names:tc:xliff:document:1.2">
+  <!-- Setting title for showing/hiding the alarm status bar icon -->
   <string name="show_status_bar_icon_title">แสดงไอคอน</string>
+  <!-- Setting summary for showing/hiding the alarm statusbar icon -->
   <string name="show_status_bar_icon_summary">แสดงไอคอนบนแถบสถานะเมื่อการตั้งปลุกถูกกำหนด</string>
+  <!-- Setting labels on Set alarm screen: Increasing volume on or off -->
   <string name="alarm_increasing_volume">เพิ่มระดับเสียง</string>
+  <!-- Setting labels on Set alarm screen: Choose profile -->
   <string name="profile_description">โปรไฟล์ <xliff:g id="profile">%s</xliff:g></string>
+  <!-- No profile selected label -->
   <string name="profile_no_selected">ไม่ได้เลือกโปรไฟล์</string>
+  <!-- User-defined cities -->
   <string name="menu_item_add">เพิ่ม</string>
   <string name="cities_add_city_title">เพิ่มเมือง</string>
   <string name="cities_add_city_city">เมือง:</string>
@@ -35,27 +41,42 @@
   <string name="cities_delete_city_title">ลบเมือง</string>
   <string name="cities_delete_city_msg">ต้องการลบ <xliff:g id="city">%s</xliff:g> หรือไม่</string>
   <string name="cities_delete_city_failed">ไม่สามารถลบเมืองได้</string>
+  <!-- Setting summary for volume buttons setting. -->
   <string name="volume_buttons_summary">การกดปุ่มปรับระดับเสียงจะ <xliff:g id="action">%s</xliff:g></string>
+  <!-- Setting title for the flip action setting. -->
   <string name="flip_action_title">การพลิก</string>
+  <!-- Setting summary for the flip action setting. -->
   <string name="flip_action_summary" product="tablet">การคว่ำแท็บเล็ตของคุณจะ<xliff:g id="action">%s</xliff:g></string>
   <string name="flip_action_summary" product="default">การคว่ำโทรศัพท์ลงจะ<xliff:g id="action">%s</xliff:g></string>
+  <!-- Setting title for the shake action setting. -->
   <string name="shake_action_title">การเขย่า</string>
+  <!-- Setting summary for the shake action setting. -->
   <string name="shake_action_summary" product="tablet">เมื่อเขย่าแท็บเล็ตจะ <xliff:g id="action">%s</xliff:g></string>
   <string name="shake_action_summary" product="default">เมื่อเขย่าโทรศัพท์จะ <xliff:g id="action">%s</xliff:g></string>
+  <!-- Summary texts for shake and flip actions -->
   <string name="action_summary_snooze">พักการปลุก</string>
   <string name="action_summary_dismiss">ปิดนาฬิกาปลุก</string>
   <string name="action_summary_do_nothing">ไม่ทำอะไร</string>
+  <!-- Alarm picker dialog title -->
   <string name="alarm_picker_title">เลือกชนิดการปลุก</string>
+  <!-- Alarm types -->
   <string name="alarm_type_ringtone">เสียง​เรียก​เข้า</string>
   <string name="alarm_type_playlist">รายการที่จะเล่น</string>
   <string name="alarm_type_random">สุ่ม</string>
+  <!-- Warn Silent Alarm title -->
   <string name="warn_silent_alarm_title">ไม่ส่งเสียงปลุก</string>
+  <!-- Select the source of the alarm -->
   <string name="alarm_select">เลือกปลุก</string>
+  <!-- Select the ringtone as alarm -->
   <string name="alarm_select_ringtone">เสียง​เรียก​เข้า</string>
+  <!-- Select the alarm from external device -->
   <string name="alarm_select_external">เพลง</string>
+  <!-- Ringtone selection default -->
   <string name="ringtone_default">เสียงเรียกเข้าเริ่มต้น</string>
+  <!-- Message that describe an error trying to take a persistent grant permission for an uri ringtone -->
   <string name="take_persistent_grant_uri_permission_failed_msg">ไม่สามารถใช้เสียงเรียกเข้าได้เนื่องจากไม่ได้รับอนุญาต</string>
   <string name="menu_item_widget_settings">การตั้งค่าวิจิท</string>
   <string name="activity_not_found">ไม่พบกิจกรรม!</string>
+  <!-- Permissions for reading/writing DeskClock alarms provider -->
   <string name="alarm_modification_service_desc">บริการที่อนุญาตให้มีการควบคุมการปลุกเตือนโดยบุคคลที่สาม</string>
 </resources>

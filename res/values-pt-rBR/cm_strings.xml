@@ -16,11 +16,17 @@
      limitations under the License.
 -->
 <resources xmlns:xliff="urn:oasis:names:tc:xliff:document:1.2">
+  <!-- Setting title for showing/hiding the alarm status bar icon -->
   <string name="show_status_bar_icon_title">Exibir ícone</string>
+  <!-- Setting summary for showing/hiding the alarm statusbar icon -->
   <string name="show_status_bar_icon_summary">Exibir um ícone na barra de status quando um alarme for definido</string>
+  <!-- Setting labels on Set alarm screen: Increasing volume on or off -->
   <string name="alarm_increasing_volume">Volume crescente</string>
+  <!-- Setting labels on Set alarm screen: Choose profile -->
   <string name="profile_description">Perfil <xliff:g xmlns:xliff="urn:oasis:names:tc:xliff:document:1.2" id="profile">%s</xliff:g></string>
+  <!-- No profile selected label -->
   <string name="profile_no_selected">Nenhum perfil selecionado</string>
+  <!-- User-defined cities -->
   <string name="menu_item_add">Adicionar</string>
   <string name="cities_add_city_title">Adicionar cidade</string>
   <string name="cities_add_city_city">Cidade:</string>
@@ -29,33 +35,48 @@
   <string name="cities_add_loading">Carregando\2026</string>
   <string name="cities_add_searching">Buscando\2026</string>
   <string name="cities_add_gps_no_results">A busca com GPS não retornou nenhum local</string>
-  <string name="cities_add_gps_not_available">GPS não está disponível</string>
+  <string name="cities_add_gps_not_available">GPS indisponível</string>
   <string name="cities_add_already_exists">A cidade já existe no banco de dados</string>
   <string name="cities_add_city_failed">Não foi possível criar a cidade</string>
   <string name="cities_delete_city_title">Excluir cidade</string>
-  <string name="cities_delete_city_msg">Você deseja excluir <xliff:g xmlns:xliff="urn:oasis:names:tc:xliff:document:1.2" id="city">%s</xliff:g>?</string>
+  <string name="cities_delete_city_msg">Você deseja excluir <xliff:g id="city">%s</xliff:g>?</string>
   <string name="cities_delete_city_failed">Não foi possível excluir a cidade</string>
-  <string name="volume_buttons_summary">Pressionar os botões do volume vai <xliff:g id="action">%s</xliff:g></string>
+  <!-- Setting summary for volume buttons setting. -->
+  <string name="volume_buttons_summary">Pressionar o botão de volume vai <xliff:g id="action">%s</xliff:g></string>
+  <!-- Setting title for the flip action setting. -->
   <string name="flip_action_title">Ação de virar</string>
+  <!-- Setting summary for the flip action setting. -->
   <string name="flip_action_summary" product="tablet">Virar o tablet irá <xliff:g id="action">%s</xliff:g></string>
   <string name="flip_action_summary" product="default">Virar o telefone irá <xliff:g id="action">%s</xliff:g></string>
+  <!-- Setting title for the shake action setting. -->
   <string name="shake_action_title">Ação de agitar</string>
+  <!-- Setting summary for the shake action setting. -->
   <string name="shake_action_summary" product="tablet">Agitar o tablet irá <xliff:g id="action">%s</xliff:g></string>
   <string name="shake_action_summary" product="default">Agitar o telefone irá <xliff:g id="action">%s</xliff:g></string>
-  <string name="action_summary_snooze">ignora o alarme</string>
-  <string name="action_summary_dismiss">suspender o alarme</string>
-  <string name="action_summary_do_nothing">Fazer nada</string>
-  <string name="alarm_picker_title">Escolher tipo de alarme</string>
+  <!-- Summary texts for shake and flip actions -->
+  <string name="action_summary_snooze">ignorar o alarme</string>
+  <string name="action_summary_dismiss">dispensar o alarme</string>
+  <string name="action_summary_do_nothing">fazer nada</string>
+  <!-- Alarm picker dialog title -->
+  <string name="alarm_picker_title">Escolha o tipo de alarme</string>
+  <!-- Alarm types -->
   <string name="alarm_type_ringtone">Toque</string>
   <string name="alarm_type_playlist">Lista de reprodução</string>
   <string name="alarm_type_random">Aleatório</string>
-  <string name="warn_silent_alarm_title">Volume do alarme está silenciado</string>
+  <!-- Warn Silent Alarm title -->
+  <string name="warn_silent_alarm_title">Volume do alarme silenciado</string>
+  <!-- Select the source of the alarm -->
   <string name="alarm_select">Selecione o alarme</string>
-  <string name="alarm_select_ringtone">Toque de telefone</string>
+  <!-- Select the ringtone as alarm -->
+  <string name="alarm_select_ringtone">Toque</string>
+  <!-- Select the alarm from external device -->
   <string name="alarm_select_external">Música</string>
+  <!-- Ringtone selection default -->
   <string name="ringtone_default">Toque padrão</string>
+  <!-- Message that describe an error trying to take a persistent grant permission for an uri ringtone -->
   <string name="take_persistent_grant_uri_permission_failed_msg">Falha ao conceder permissão persistente para o toque</string>
   <string name="menu_item_widget_settings">Configurações do widget</string>
   <string name="activity_not_found">Atividade não encontrada!</string>
+  <!-- Permissions for reading/writing DeskClock alarms provider -->
   <string name="alarm_modification_service_desc">Um serviço para permitir a manipulação dos alarmes por terceiros.</string>
 </resources>

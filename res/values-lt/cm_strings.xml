@@ -16,11 +16,17 @@
      limitations under the License.
 -->
 <resources xmlns:xliff="urn:oasis:names:tc:xliff:document:1.2">
+  <!-- Setting title for showing/hiding the alarm status bar icon -->
   <string name="show_status_bar_icon_title">Rodyti piktogramą</string>
+  <!-- Setting summary for showing/hiding the alarm statusbar icon -->
   <string name="show_status_bar_icon_summary">Rodyti piktogramą būsenos juostoje, kai yra nustatytas signalas</string>
+  <!-- Setting labels on Set alarm screen: Increasing volume on or off -->
   <string name="alarm_increasing_volume">Didėjantis garsumas</string>
+  <!-- Setting labels on Set alarm screen: Choose profile -->
   <string name="profile_description">Profilis <xliff:g id="profile">%s</xliff:g></string>
+  <!-- No profile selected label -->
   <string name="profile_no_selected">Nepasirinktas profilis</string>
+  <!-- User-defined cities -->
   <string name="menu_item_add">Pridėti</string>
   <string name="cities_add_city_title">Pridėti miestą</string>
   <string name="cities_add_city_city">Miestas:</string>
@@ -35,27 +41,42 @@
   <string name="cities_delete_city_title">Ištrinti miestą</string>
   <string name="cities_delete_city_msg">Ar norite ištrinti <xliff:g id="city">%s</xliff:g>?</string>
   <string name="cities_delete_city_failed">Negalima ištrinti miesto</string>
+  <!-- Setting summary for volume buttons setting. -->
   <string name="volume_buttons_summary">Paspaudus garsumo mygtukus <xliff:g id="action">%s</xliff:g></string>
+  <!-- Setting title for the flip action setting. -->
   <string name="flip_action_title">Apvertimo veiksmas</string>
+  <!-- Setting summary for the flip action setting. -->
   <string name="flip_action_summary" product="tablet">Apverčiant planšetinį kompiuterį <xliff:g id="action">%s</xliff:g></string>
   <string name="flip_action_summary" product="default">Apverčiant telefoną <xliff:g id="action">%s</xliff:g></string>
+  <!-- Setting title for the shake action setting. -->
   <string name="shake_action_title">Purtymo veiksmas</string>
+  <!-- Setting summary for the shake action setting. -->
   <string name="shake_action_summary" product="tablet">Purtant planšetinį kompiuterį <xliff:g id="action">%s</xliff:g></string>
   <string name="shake_action_summary" product="default">Purtant telefoną <xliff:g id="action">%s</xliff:g></string>
+  <!-- Summary texts for shake and flip actions -->
   <string name="action_summary_snooze">snausti signalą</string>
   <string name="action_summary_dismiss">atsisakyti signalo</string>
   <string name="action_summary_do_nothing">nieko nedaryti</string>
+  <!-- Alarm picker dialog title -->
   <string name="alarm_picker_title">Pasirinkti signalo tipą</string>
+  <!-- Alarm types -->
   <string name="alarm_type_ringtone">Skambėjimo tonas</string>
   <string name="alarm_type_playlist">Grojaraštis</string>
   <string name="alarm_type_random">Atsitiktinis</string>
+  <!-- Warn Silent Alarm title -->
   <string name="warn_silent_alarm_title">Signalo garsumas yra tylus</string>
+  <!-- Select the source of the alarm -->
   <string name="alarm_select">Pasirinkti signalą</string>
+  <!-- Select the ringtone as alarm -->
   <string name="alarm_select_ringtone">Skambėjimo tonas</string>
+  <!-- Select the alarm from external device -->
   <string name="alarm_select_external">Muzika</string>
+  <!-- Ringtone selection default -->
   <string name="ringtone_default">Numatytasis skambėjimo stonas</string>
+  <!-- Message that describe an error trying to take a persistent grant permission for an uri ringtone -->
   <string name="take_persistent_grant_uri_permission_failed_msg">Nepavyko nuolat suteikti leidimo skambėjimo tonui</string>
   <string name="menu_item_widget_settings">Valdiklio nustatymai</string>
   <string name="activity_not_found">Veikla nerasta!</string>
+  <!-- Permissions for reading/writing DeskClock alarms provider -->
   <string name="alarm_modification_service_desc">Paslauga leidžianti manipuliuoti trečiųjų šalių signalus.</string>
 </resources>
