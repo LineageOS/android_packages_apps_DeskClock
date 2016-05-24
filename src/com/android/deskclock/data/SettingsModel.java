@@ -23,6 +23,7 @@ import android.provider.Settings;
 import com.android.deskclock.R;
 import com.android.deskclock.data.DataModel.CitySort;
 import com.android.deskclock.data.DataModel.ClockStyle;
+import com.android.deskclock.settings.DefaultAlarmToneDialog;
 
 import java.util.TimeZone;
 
@@ -92,7 +93,7 @@ final class SettingsModel {
 
     Uri getDefaultAlarmRingtoneUri() {
         return SettingsDAO.getDefaultAlarmRingtoneUri(mContext,
-                Settings.System.DEFAULT_ALARM_ALERT_URI);
+                Uri.parse(DefaultAlarmToneDialog.DEFAULT_RING_TONE_DEFAULT));
     }
 
     void setDefaultAlarmRingtoneUri(Uri uri) {

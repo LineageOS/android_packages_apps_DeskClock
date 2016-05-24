@@ -72,12 +72,10 @@ public final class AlarmClockFragment extends DeskClockFragment implements
     public static final int REQUEST_CODE_PERMISSIONS = 11;
     public static final int REQUEST_CODE_EXTERN_AUDIO = 12;
 
-    //QC hoffc added begin feature6
     private static final String QUERY_URI = "content://com.android.deskclock/alarms";
     private String old_default_ringtone_uri;
     private String new_default_ringtone_Uri;
     private RefreshDefaultRingtoneBroadcastReceiver mReceiver;
-    //QC hoffc added end
 
     // Views
     private ViewGroup mMainLayout;
