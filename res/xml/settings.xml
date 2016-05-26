@@ -88,4 +88,25 @@
             android:persistent="false"
             android:defaultValue="true" />
     </PreferenceCategory>
+
+    <PreferenceCategory
+        android:key="digital_clock"
+        android:title="@string/digital_gadget">
+
+        <net.margaritov.preference.colorpicker.ColorPickerPreference
+            android:key="digital_clock_time_color"
+            android:title="@string/clock_time_color_title"
+            android:summary="@string/clock_time_color_summary"
+            android:defaultValue="@color/clock_white" />
+        <net.margaritov.preference.colorpicker.ColorPickerPreference
+            android:key="digital_clock_date_color"
+            android:title="@string/clock_date_color_title"
+            android:summary="@string/clock_date_color_summary"
+            android:defaultValue="@color/clock_white" />
+        <net.margaritov.preference.colorpicker.ColorPickerPreference
+            android:key="digital_clock_alarm_color"
+            android:title="@string/clock_alarm_color_title"
+            android:summary="@string/clock_alarm_color_summary"
+            android:defaultValue="@color/clock_gray" />
+    </PreferenceCategory>
 </PreferenceScreen>

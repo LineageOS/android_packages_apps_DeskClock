@@ -57,4 +57,27 @@
     <string name="profile_no_selected">No profile selected</string>
 
     <string name="alarm_modification_service_desc">A service to allow manipulation of alarms by third parties.</string>
+
+    <!-- Color Picker -->
+    <string name="dialog_color_picker">Color Picker</string>
+    <string name="press_color_to_apply">Press on Color to apply</string>
+    <string name="arrow_right">→</string>
+    <string name="arrow_down">↓</string>
+    <string name="hex">Hex:</string>
+    <string name="hex_hint">#FF000000</string>
+    <string name="set">Set</string>
+    <string name="ics_color">White</string>
+
+    <!-- Label for the digital clock time color settings -->
+    <string name="clock_time_color_title">Time color</string>
+    <!-- Label for the digital clock time color settings summary -->
+    <string name="clock_time_color_summary">Set the time color of the digital clock widget.</string>
+    <!-- Label for the digital clock date color settings -->
+    <string name="clock_date_color_title">Date color</string>
+    <!-- Label for the digital clock date color settings summary -->
+    <string name="clock_date_color_summary">Set the date color of the digital clock widget.</string>
+    <!-- Label for the digital clock alarm color settings -->
+    <string name="clock_alarm_color_title">Alarm color</string>
+    <!-- Label for the digital clock alarm color settings summary -->
+    <string name="clock_alarm_color_summary">Set the alarm color of the digital clock widget.</string>
 </resources>

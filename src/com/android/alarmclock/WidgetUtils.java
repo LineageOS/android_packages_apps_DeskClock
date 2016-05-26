@@ -20,12 +20,15 @@ import android.appwidget.AppWidgetManager;
 import android.content.Context;
 import android.content.res.Configuration;
 import android.content.res.Resources;
+import android.content.SharedPreferences;
 import android.os.Bundle;
 import android.util.TypedValue;
 import android.widget.RemoteViews;
 
 import com.android.deskclock.R;
 import com.android.deskclock.Utils;
+
+import net.margaritov.preference.colorpicker.ColorPickerPreference;
 
 public class WidgetUtils {
     static final String TAG = "WidgetUtils";
@@ -34,6 +37,19 @@ public class WidgetUtils {
         float fontSize = context.getResources().getDimension(R.dimen.widget_big_font_size);
         clock.setTextViewTextSize(
                 R.id.the_clock, TypedValue.COMPLEX_UNIT_PX, fontSize * scale);
+    }
+
+    public static void setClockColor(Context context, RemoteViews clock, SharedPreferences mPrefs) {
+        int colorTime = mPrefs.getInt("digital_clock_time_color",
+            context.getResources().getColor(R.color.clock_white));
+        int colorDate = mPrefs.getInt("digital_clock_date_color",
+            context.getResources().getColor(R.color.clock_white));
+        int colorAlarm = mPrefs.getInt("digital_clock_alarm_color",
+            context.getResources().getColor(R.color.clock_gray));
+
+        clock.setTextColor(R.id.the_clock, colorTime);
+        clock.setTextColor(R.id.date, colorDate);
+        clock.setTextColor(R.id.nextAlarm, colorAlarm);
     }
 
     // Calculate the scale factor of the fonts in the widget
