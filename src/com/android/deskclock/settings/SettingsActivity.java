@@ -21,6 +21,7 @@ import android.app.Activity;
 import android.content.Context;
 import android.content.Intent;
 import android.content.SharedPreferences;
+import android.content.pm.PackageManager;
 import android.content.res.Resources;
 import android.hardware.Sensor;
 import android.hardware.SensorManager;
@@ -38,6 +39,7 @@ import android.provider.Settings;
 import android.text.format.DateUtils;
 import android.view.Menu;
 import android.view.MenuItem;
+import android.widget.Toast;
 
 import com.android.deskclock.AlarmClockFragment;
 import com.android.deskclock.AlarmUtils;
@@ -78,6 +80,7 @@ public final class SettingsActivity extends BaseActivity {
 
     public static final String KEY_DEFAULT_ALARM_TONE = "default_alarm_tone";
     private static DefaultAlarmToneDialog mdefaultAlarmTone;
+    private Intent mWaitUpdateIntent;
 
     public static final String KEY_ALARM_SETTINGS = "key_alarm_settings";
     public static final String KEY_FLIP_ACTION = "flip_action";
@@ -458,15 +461,38 @@ public final class SettingsActivity extends BaseActivity {
                     break;
                 case AlarmClockFragment.REQUEST_CODE_EXTERN_AUDIO:
                     if (!AlarmUtils.hasPermissionToDisplayRingtoneTitle(this, data.getData())) {
+                        mWaitUpdateIntent = data;
                         final String[] perms = {Manifest.permission.READ_EXTERNAL_STORAGE};
                         requestPermissions(perms, AlarmClockFragment.REQUEST_CODE_PERMISSIONS);
+                    } else {
+                        mdefaultAlarmTone.saveRingtoneUri(data);
                     }
-                    mdefaultAlarmTone.saveRingtoneUri(data);
                     break;
                 default:
                     LogUtils.w("Unhandled request code in onActivityResult: "
                             + requestCode);
             }
+        }
+    }
+
+    @Override
+    public void onRequestPermissionsResult(int requestCode, String[] permissions,
+                                           int[] grantResults) {
+        switch (requestCode) {
+            case AlarmClockFragment.REQUEST_CODE_PERMISSIONS:
+                if(grantResults[0] == PackageManager.PERMISSION_GRANTED) {
+                    LogUtils.d(LogUtils.LOGTAG, "onRequestPermissionsResult: mWaitUpdateIntent = "
+                            + mWaitUpdateIntent);
+                    mdefaultAlarmTone.saveRingtoneUri(mWaitUpdateIntent);
+                } else {
+                    //Toast you denied the external storage permission
+                    Toast.makeText(this, getString(R.string.have_denied_storage_permission),
+                            Toast.LENGTH_LONG).show();
+                }
+                break;
+            default:
+                super.onRequestPermissionsResult(requestCode, permissions, grantResults);
+                break;
         }
     }
 }

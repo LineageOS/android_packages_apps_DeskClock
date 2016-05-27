@@ -63,15 +63,28 @@ public class DefaultAlarmToneDialog extends DialogPreference {
     public static final String REFRESH_DEFAULT_RINGTONE_ACTION =
             "com.android.deskclock.action.REFRSH_DEFAULT_RING_TONE";
     public static final String SETTING_SYSTEM_RINGTONE = "content://settings/system/ringtone";
-    public SharedPreferences sp;
-    public Context mcontext;
+    private SharedPreferences mSharedPref;
+    private Context mContext;
 
     public DefaultAlarmToneDialog(Context context, AttributeSet attrs) {
         super(context, attrs);
-        this.mcontext = context;
-        sp = Utils.getCESharedPreferences(context);
+        this.mContext = context;
+        mSharedPref = Utils.getCESharedPreferences(context);
 
-        if (sp.getString(DEFAULT_RING_TONE_NAME_KEY, null) == null) {
+        //reset to the default ringtone when the current ringtone has been deleted
+        String defaultRingTone = mSharedPref.getString(DEFAULT_RING_TONE_URI_KEY,
+                DEFAULT_RING_TONE_DEFAULT);
+        if ("".equalsIgnoreCase(defaultRingTone)) {
+            LogUtils.d(LogUtils.LOGTAG, "DefaultAlarmToneDialog: defaultRingTone is empty");
+        } else if(!Utils.isRingToneUriValid(context, Uri.parse(defaultRingTone))) {
+            mSharedPref.edit().putString(DEFAULT_RING_TONE_URI_KEY, DEFAULT_RING_TONE_DEFAULT).apply();
+            String displayNameString = getRingtoneString(Uri.parse(DEFAULT_RING_TONE_DEFAULT));
+            mSharedPref.edit().putString(DEFAULT_RING_TONE_NAME_KEY, displayNameString).apply();
+            DataModel.getDataModel().setDefaultAlarmRingtoneUri(
+                    Uri.parse(DEFAULT_RING_TONE_DEFAULT));
+        }
+
+        if (mSharedPref.getString(DEFAULT_RING_TONE_NAME_KEY, null) == null) {
             LogUtils.d(LogUtils.LOGTAG, "DefaultAlarmToneDialog: summary = null");
             setSummary(DEFAULT_RING_TONE_NAME);
         }
@@ -81,12 +94,12 @@ public class DefaultAlarmToneDialog extends DialogPreference {
     protected void onPrepareDialogBuilder(Builder builder) {
         super.onPrepareDialogBuilder(builder);
         builder.setTitle(
-                mcontext.getResources().getString(R.string.alarm_select))
+                mContext.getResources().getString(R.string.alarm_select))
                 .setItems(
                         new String[] {
-                                mcontext.getResources().getString(
+                                mContext.getResources().getString(
                                         R.string.alarm_select_ringtone),
-                                mcontext.getResources().getString(
+                                mContext.getResources().getString(
                                         R.string.alarm_select_external) },
                         new OnClickListener() {
 
@@ -109,8 +122,8 @@ public class DefaultAlarmToneDialog extends DialogPreference {
     }
 
     private void sendPickIntent(int selectSource) {
-        SettingsActivity activity = (SettingsActivity) mcontext;
-        String defaultRingTone = sp.getString(DEFAULT_RING_TONE_URI_KEY, DEFAULT_RING_TONE_DEFAULT);
+        SettingsActivity activity = (SettingsActivity) mContext;
+        String defaultRingTone = mSharedPref.getString(DEFAULT_RING_TONE_URI_KEY, DEFAULT_RING_TONE_DEFAULT);
         if ("".equalsIgnoreCase(defaultRingTone)) {
             oldRingTone = null;
         } else {
@@ -140,9 +153,9 @@ public class DefaultAlarmToneDialog extends DialogPreference {
 
     public void saveRingtoneUri(Intent intent) {
         Uri uri = getRingtoneUri(intent);
-        sp.edit().putString(DEFAULT_RING_TONE_URI_KEY, uri.toString()).apply();
+        mSharedPref.edit().putString(DEFAULT_RING_TONE_URI_KEY, uri.toString()).apply();
         String displayNameString = getRingtoneString(uri);
-        sp.edit().putString(DEFAULT_RING_TONE_NAME_KEY, displayNameString)
+        mSharedPref.edit().putString(DEFAULT_RING_TONE_NAME_KEY, displayNameString)
                 .apply();
 
         LogUtils.d(LogUtils.LOGTAG, "saveRingtoneUri: uri = " + uri
@@ -159,7 +172,7 @@ public class DefaultAlarmToneDialog extends DialogPreference {
 
         if (uri.toString().equals(SETTING_SYSTEM_RINGTONE)) {
             LogUtils.d(LogUtils.LOGTAG, "saveRingtoneUri: remove SP DEFAULT_RING_TONE_URI_KEY");
-            sp.edit().remove(DEFAULT_RING_TONE_URI_KEY).apply();
+            mSharedPref.edit().remove(DEFAULT_RING_TONE_URI_KEY).apply();
         }
     }
 
@@ -168,12 +181,12 @@ public class DefaultAlarmToneDialog extends DialogPreference {
         uriIntent.putExtra(OLD_RING_TONE_URI_STRING, oldRingTone.toString());
         uriIntent.putExtra(NEW_RING_TONE_URI_STRING, uri.toString());
         uriIntent.setAction(REFRESH_DEFAULT_RINGTONE_ACTION);
-        mcontext.sendBroadcast(uriIntent);
+        mContext.sendBroadcast(uriIntent);
     }
 
     private String getRingtoneString(Uri uri) {
         if (Alarm.NO_RINGTONE_URI.equals(uri)) {
-            mRingtone = mcontext.getResources().getString(R.string.silent_ringtone_title);
+            mRingtone = mContext.getResources().getString(R.string.silent_ringtone_title);
         } else {
             mRingtone = DataModel.getDataModel().getAlarmRingtoneTitle(uri);
         }

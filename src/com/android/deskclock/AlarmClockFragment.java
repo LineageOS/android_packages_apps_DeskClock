@@ -25,6 +25,7 @@ import android.content.Context;
 import android.content.Intent;
 import android.content.IntentFilter;
 import android.content.Loader;
+import android.content.pm.PackageManager;
 import android.database.Cursor;
 import android.media.RingtoneManager;
 import android.net.Uri;
@@ -37,6 +38,7 @@ import android.text.format.DateFormat;
 import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
+import android.widget.Toast;
 
 import com.android.deskclock.alarms.AlarmTimeClickHandler;
 import com.android.deskclock.alarms.AlarmUpdateHandler;
@@ -71,6 +73,8 @@ public final class AlarmClockFragment extends DeskClockFragment implements
     public static final int REQUEST_CODE_RINGTONE = 10;
     public static final int REQUEST_CODE_PERMISSIONS = 11;
     public static final int REQUEST_CODE_EXTERN_AUDIO = 12;
+    public static final int REQUEST_READ_EXTERNAL_STORAGE_PERMISSION = 13;
+    private Uri mWaitUpdateUri;
 
     private static final String QUERY_URI = "content://com.android.deskclock/alarms";
     private String old_default_ringtone_uri;
@@ -261,32 +265,23 @@ public final class AlarmClockFragment extends DeskClockFragment implements
                 Uri uri = null;
                 if (requestCode == REQUEST_CODE_EXTERN_AUDIO) {
                     uri = data.getData();
+                    LogUtils.d(LogUtils.LOGTAG,
+                            "AlarmClockFragment:onActivityResult: music uri = " + uri);
+
+                    // If the user chose an external ringtone and has not yet granted the permission
+                    // to read external storage, ask them for that permission now.
+                    if (!AlarmUtils.hasPermissionToDisplayRingtoneTitle(getActivity(), uri)) {
+                        mWaitUpdateUri = uri;
+                        final String[] perms = {Manifest.permission.READ_EXTERNAL_STORAGE};
+                        requestPermissions(perms, REQUEST_READ_EXTERNAL_STORAGE_PERMISSION);
+                    } else {
+                        updateSelectAlarmRingToneUri(uri);
+                    }
                 } else {
                     uri = data.getParcelableExtra(RingtoneManager.EXTRA_RINGTONE_PICKED_URI);
-                }
-                LogUtils.d(LogUtils.LOGTAG, "AlarmClockFragment:onActivityResult: uri = " + uri);
-
-                if (uri == null) {
-                    uri = Alarm.NO_RINGTONE_URI;
-                }
-
-                // Set the ringtone uri on the alarm.
-                final Alarm alarm = mAlarmTimeClickHandler.getSelectedAlarm();
-                if (alarm == null) {
-                    LogUtils.e("Could not get selected alarm to set ringtone");
-                    return;
-                }
-                alarm.alert = uri;
-
-                // Save the change to alarm.
-                mAlarmUpdateHandler.asyncUpdateAlarm(alarm, false /* popToast */,
-                        true /* minorUpdate */);
-
-                // If the user chose an external ringtone and has not yet granted the permission to read
-                // external storage, ask them for that permission now.
-                if (!AlarmUtils.hasPermissionToDisplayRingtoneTitle(getActivity(), uri)) {
-                    final String[] perms = {Manifest.permission.READ_EXTERNAL_STORAGE};
-                    requestPermissions(perms, REQUEST_CODE_PERMISSIONS);
+                    LogUtils.d(LogUtils.LOGTAG,
+                            "AlarmClockFragment:onActivityResult: ringtone uri = " + uri);
+                    updateSelectAlarmRingToneUri(uri);
                 }
                 break;
             default:
@@ -343,7 +338,6 @@ public final class AlarmClockFragment extends DeskClockFragment implements
                     + " new_default_ringtone_Uri = " + new_default_ringtone_Uri);
 
             updateAlarmRingTone(new_default_ringtone_Uri, old_default_ringtone_uri);
-            updateAlarmRingTone(new_default_ringtone_Uri, Settings.System.DEFAULT_ALARM_ALERT_URI.toString());
 
             // Update the default ringtone for future new alarms.
             DataModel.getDataModel().setDefaultAlarmRingtoneUri(Uri.parse(new_default_ringtone_Uri));
@@ -385,6 +379,45 @@ public final class AlarmClockFragment extends DeskClockFragment implements
 
         if (cursor != null || cursor.getCount() == 0) {
             cursor.close();
+        }
+    }
+
+    private void updateSelectAlarmRingToneUri(Uri uri) {
+        if (uri == null) {
+            uri = Alarm.NO_RINGTONE_URI;
+        }
+
+        // Set the ringtone uri on the alarm.
+        final Alarm alarm = mAlarmTimeClickHandler.getSelectedAlarm();
+        if (alarm == null) {
+            LogUtils.e("Could not get selected alarm to set ringtone");
+            return;
+        }
+        alarm.alert = uri;
+
+        // Save the change to alarm.
+        mAlarmUpdateHandler.asyncUpdateAlarm(alarm, false /* popToast */,
+                true /* minorUpdate */);
+    }
+
+    @Override
+    public void onRequestPermissionsResult(int requestCode, String[] permissions,
+                                           int[] grantResults) {
+        switch (requestCode) {
+            case REQUEST_READ_EXTERNAL_STORAGE_PERMISSION:
+                if(grantResults[0] == PackageManager.PERMISSION_GRANTED) {
+                    LogUtils.d(LogUtils.LOGTAG, "onRequestPermissionsResult: mWaitUpdateUri = "
+                            + mWaitUpdateUri);
+                    updateSelectAlarmRingToneUri(mWaitUpdateUri);
+                } else {
+                    //Toast you denied the external storage permission
+                    Toast.makeText(getActivity(), getString(R.string.have_denied_storage_permission),
+                            Toast.LENGTH_LONG).show();
+                }
+                break;
+            default:
+                super.onRequestPermissionsResult(requestCode, permissions, grantResults);
+                break;
         }
     }
 }

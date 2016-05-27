@@ -405,4 +405,7 @@
     <string name="pick_alarm_to_dismiss" msgid="5408769235866082896">"選擇要關閉的鬧鐘"</string>
     <string name="no_firing_alarms" msgid="4986161963178722289">"目前沒有鬧鐘正在響鈴"</string>
     <string name="alarm_is_snoozed" msgid="7044644119744928846">"<xliff:g id="ALARM_TIME">%s</xliff:g> 的鬧鐘已延後 10 分鐘"</string>
+    <string name="custom_ringtone" msgid="3477418548382111184">"自訂鈴聲"</string>
+    <string name="ringtone_default">"默認鈴聲"</string>
+    <string name="have_denied_storage_permission">"你主動拒絕了存儲訪問權限,可以去設置應用重新開啓該應用權限"</string>
 </resources>

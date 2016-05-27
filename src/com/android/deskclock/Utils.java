@@ -23,19 +23,24 @@ import android.animation.TimeInterpolator;
 import android.annotation.TargetApi;
 import android.app.AlarmManager;
 import android.content.ContentResolver;
+import android.content.ContentUris;
 import android.content.Context;
 import android.content.SharedPreferences;
 import android.content.res.Resources;
 import android.content.res.TypedArray;
+import android.database.Cursor;
 import android.graphics.Color;
 import android.graphics.Paint;
 import android.graphics.PorterDuff;
 import android.graphics.PorterDuffColorFilter;
 import android.graphics.Typeface;
+import android.net.Uri;
 import android.os.Build;
 import android.os.Handler;
 import android.os.Looper;
 import android.preference.PreferenceManager;
+import android.provider.DocumentsContract;
+import android.provider.MediaStore;
 import android.provider.Settings;
 import android.support.v4.content.ContextCompat;
 import android.support.v4.os.BuildCompat;
@@ -56,6 +61,7 @@ import android.widget.TextClock;
 import android.widget.TextView;
 
 import com.android.deskclock.data.DataModel;
+import com.android.deskclock.provider.Alarm;
 import com.android.deskclock.provider.AlarmInstance;
 import com.android.deskclock.provider.DaysOfWeek;
 import com.android.deskclock.settings.SettingsActivity;
@@ -91,6 +97,14 @@ public class Utils {
 
     public static final String DESKCLOCK_DE_SHARED_PREFERENCES = "de_sharedPreferences";
     public static final String DESKCLOCK_CE_SHARED_PREFERENCES = "ce_sharedPreferences";
+
+    /** Content provider paths that could be passed back from documents ui **/
+    public static final String DOC_AUTHORITY = "com.android.providers.media.documents";
+    public static final String DOC_DOWNLOAD = "com.android.providers.downloads.documents";
+    public static final String DOC_EXTERNAL = "com.android.externalstorage.documents";
+    public static final String DOWNLOAD_CONTENT = "content://downloads/public_downloads";
+    public static final String COLON = ":";
+    public static final int ID_INDEX = 1;
 
     /**
      * The background colors of the app - it changes throughout out the day to mimic the sky.
@@ -754,5 +768,108 @@ public class Utils {
         SharedPreferences sharedPreferences = context.getSharedPreferences(
                 DESKCLOCK_CE_SHARED_PREFERENCES, Context.MODE_PRIVATE);
         return sharedPreferences;
+    }
+
+    public static boolean isRingToneUriValid(Context context, Uri uri) {
+        if (uri == null) {
+            LogUtils.d(LogUtils.LOGTAG, "isRingToneUriValid: uri is null");
+            return false;
+        }
+
+        if (uri.equals(Alarm.NO_RINGTONE_URI)) {
+            return true;
+        } else if (uri.getScheme().contentEquals("file")) {
+            File f = new File(uri.getPath());
+            if (f.exists()) {
+                return true;
+            }
+        } else if (uri.getScheme().contentEquals("content")) {
+            if (AlarmUtils.hasPermissionToDisplayRingtoneTitle(context, uri)) {
+                //convert the following uri to the correct, otherwise raise permission exception
+                if (uri.getAuthority().equals(Utils.DOC_DOWNLOAD)) {
+                    final String id = DocumentsContract.getDocumentId(uri);
+                    uri = ContentUris.withAppendedId(
+                            Uri.parse(DOWNLOAD_CONTENT), Long.valueOf(id));
+                } else if (uri.getAuthority().equals(Utils.DOC_AUTHORITY)) {
+                    uri = MediaStore.Audio.Media.EXTERNAL_CONTENT_URI;
+                }
+
+                Cursor cursor = null;
+                try {
+                    cursor = context.getContentResolver().query(uri,
+                            new String[]{getTitleColumnNameForUri(uri)}, null, null, null);
+                    if (cursor != null && cursor.getCount() > 0) {
+                        return true;
+                    }
+                } catch (Exception e) {
+                    LogUtils.d(LogUtils.LOGTAG, "isRingToneUriValid: e.toString=" + e.toString());
+                } finally {
+                    if (cursor != null) {
+                        cursor.close();
+                    }
+                }
+
+                LogUtils.d(LogUtils.LOGTAG, "isRingToneUriValid: invalid uri = " + uri);
+                return false;
+            } else {
+                LogUtils.d(LogUtils.LOGTAG,
+                        "isRingToneUriValid: do not have storage permission uri = " + uri);
+            }
+        }
+
+        LogUtils.d(LogUtils.LOGTAG,
+                "isRingToneUriValid: return false for invalid uri = " + uri);
+        return false;
+    }
+
+    public static String getTitleColumnNameForUri(Uri uri) {
+        if (DOC_EXTERNAL.equals(uri.getAuthority())) {
+            return DocumentsContract.Document.COLUMN_DISPLAY_NAME;
+        }
+        return MediaStore.Audio.Media.TITLE;
+    }
+
+    public static String getDisplayNameFromDatabase(Context context, Uri uri) {
+        String selection = null;
+        String[] selectionArgs = null;
+        String title = context.getString(R.string.ringtone_default);
+
+        // If restart Alarm,there is no permission to get the title from the uri.
+        // No matter in which database,the music has the same id.
+        // So we can only get the info of the music from other database by id in uri.
+        if (uri.getAuthority().equals(Utils.DOC_DOWNLOAD)) {
+            final String id = DocumentsContract.getDocumentId(uri);
+            uri = ContentUris.withAppendedId(
+                    Uri.parse(DOWNLOAD_CONTENT), Long.valueOf(id));
+        } else if (uri.getAuthority().equals(Utils.DOC_AUTHORITY)) {
+            final String docId = DocumentsContract.getDocumentId(uri);
+            final String[] split = docId.split(COLON);
+            uri = MediaStore.Audio.Media.EXTERNAL_CONTENT_URI;
+            selection = "_id=?";
+            selectionArgs = new String[] {
+                    split[ID_INDEX]
+            };
+        }
+
+        Cursor cursor = null;
+        try {
+            cursor = context.getContentResolver().query(uri,
+                    new String[] {
+                            Utils.getTitleColumnNameForUri(uri),
+                    }, selection, selectionArgs, null);
+            if (cursor != null && cursor.getCount() > 0) {
+                cursor.moveToFirst();
+                title = cursor.getString(0);
+            }
+        } catch (Exception e) {
+            LogUtils.e(LogUtils.LOGTAG,
+                    "getDisplayNameFromDatabase: e.toString=" + e.toString());
+        } finally {
+            if (cursor != null) {
+                cursor.close();
+            }
+        }
+
+        return title;
     }
 }

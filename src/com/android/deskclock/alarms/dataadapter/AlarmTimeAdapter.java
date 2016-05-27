@@ -18,6 +18,7 @@ package com.android.deskclock.alarms.dataadapter;
 
 import android.content.Context;
 import android.database.Cursor;
+import android.net.Uri;
 import android.os.Bundle;
 import android.os.Vibrator;
 import android.support.v7.widget.RecyclerView;
@@ -27,10 +28,12 @@ import android.view.ViewGroup;
 
 import com.android.deskclock.LogUtils;
 import com.android.deskclock.R;
+import com.android.deskclock.Utils;
 import com.android.deskclock.alarms.AlarmTimeClickHandler;
 import com.android.deskclock.alarms.ScrollHandler;
 import com.android.deskclock.provider.Alarm;
 import com.android.deskclock.provider.AlarmInstance;
+import com.android.deskclock.settings.DefaultAlarmToneDialog;
 
 /**
  * Data adapter for alarm time items.
@@ -90,6 +93,13 @@ public final class AlarmTimeAdapter extends RecyclerView.Adapter<AlarmTimeViewHo
             return;
         }
         final Alarm alarm = new Alarm(mCursor);
+
+        //reset to the default ringtone when the current ringtone has been deleted
+        if (!Utils.isRingToneUriValid(mContext, alarm.alert)) {
+            alarm.alert = Uri.parse(DefaultAlarmToneDialog.DEFAULT_RING_TONE_DEFAULT);
+            mAlarmTimeClickHandler.mAlarmUpdateHandler.asyncUpdateAlarm(alarm, false, true);
+        }
+
         final AlarmInstance alarmInstance = alarm.canPreemptivelyDismiss()
                 ? new AlarmInstance(mCursor, true /* joinedTable */) : null;
         viewHolder.bindAlarm(mContext, alarm, alarmInstance);

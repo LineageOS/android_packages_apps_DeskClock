@@ -16,6 +16,8 @@ import android.preference.PreferenceManager;
 import android.telephony.TelephonyManager;
 import android.text.format.DateUtils;
 
+import com.android.deskclock.settings.DefaultAlarmToneDialog;
+
 import java.io.IOException;
 import java.lang.reflect.Method;
 
@@ -301,6 +303,9 @@ public final class AsyncRingtonePlayer {
             if (alarmNoise == null) {
                 alarmNoise = RingtoneManager.getDefaultUri(RingtoneManager.TYPE_ALARM);
                 LogUtils.v("Using default alarm: " + alarmNoise.toString());
+            } else if (!Utils.isRingToneUriValid(context, alarmNoise)) {
+                //reset to the default ringtone when the current ringtone has been deleted
+                alarmNoise = Uri.parse(DefaultAlarmToneDialog.DEFAULT_RING_TONE_DEFAULT);
             }
 
             mMediaPlayer = new MediaPlayer();
@@ -505,6 +510,10 @@ public final class AsyncRingtonePlayer {
                 // fall back to the default ringtone
                 final Uri defaultUri = RingtoneManager.getDefaultUri(RingtoneManager.TYPE_ALARM);
                 mRingtone = RingtoneManager.getRingtone(context, defaultUri);
+            } else if (!Utils.isRingToneUriValid(context, ringtoneUri)) {
+                //reset to the default ringtone when the current ringtone has been deleted
+                mRingtone = RingtoneManager.getRingtone(context,
+                        Uri.parse(DefaultAlarmToneDialog.DEFAULT_RING_TONE_DEFAULT));
             }
 
             // Attempt to enable looping the ringtone.

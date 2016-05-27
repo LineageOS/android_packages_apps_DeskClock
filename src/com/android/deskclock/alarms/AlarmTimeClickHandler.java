@@ -50,7 +50,7 @@ public final class AlarmTimeClickHandler {
     private static final String KEY_SELECT_SOURCE = "selectedSource";
 
     private final Fragment mFragment;
-    private final AlarmUpdateHandler mAlarmUpdateHandler;
+    public final AlarmUpdateHandler mAlarmUpdateHandler;
     private final ScrollHandler mScrollHandler;
 
     private Alarm mSelectedAlarm;

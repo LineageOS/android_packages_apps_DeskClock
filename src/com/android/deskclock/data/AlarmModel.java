@@ -26,8 +26,10 @@ import android.os.Handler;
 import android.provider.Settings;
 import android.util.ArrayMap;
 
+import com.android.deskclock.AlarmUtils;
 import com.android.deskclock.LogUtils;
 import com.android.deskclock.R;
+import com.android.deskclock.Utils;
 import com.android.deskclock.provider.Alarm;
 
 import java.util.Map;
@@ -81,16 +83,33 @@ final class AlarmModel {
         String title = mRingtoneTitles.get(uri);
 
         if (title == null) {
-            // This is slow because a media player is created during Ringtone object creation.
-            final Ringtone ringtone = RingtoneManager.getRingtone(mContext, uri);
-            if (ringtone == null) {
-                LogUtils.e("No ringtone for uri: %s", uri);
-                return mContext.getString(R.string.unknown_ringtone_title);
-            }
+            // If the user cannot read the ringtone file, insert our own name rather than the
+            // ugly one returned by Ringtone.getTitle().
+            if (!AlarmUtils.hasPermissionToDisplayRingtoneTitle(mContext, uri)) {
+                title = mContext.getString(R.string.custom_ringtone);
+            } else {
+                if (Utils.isRingToneUriValid(mContext, uri)) {
+                    if (uri.getAuthority().equals(Utils.DOC_AUTHORITY)
+                            || uri.getAuthority().equals(Utils.DOC_DOWNLOAD)
+                            || uri.getAuthority().equals(Utils.DOC_EXTERNAL)) {
+                        title = Utils.getDisplayNameFromDatabase(mContext,uri);
+                    } else {
+                        // This is slow because a media player is created during Ringtone object creation.
+                        final Ringtone ringtone = RingtoneManager.getRingtone(mContext, uri);
+                        if (ringtone == null) {
+                            LogUtils.e("No ringtone for uri: %s", uri);
+                            return mContext.getString(R.string.unknown_ringtone_title);
+                        }
 
-            // Cache the title for later use.
-            title = ringtone.getTitle(mContext);
-            mRingtoneTitles.put(uri, title);
+                        // Cache the title for later use.
+                        title = ringtone.getTitle(mContext);
+                    }
+
+                    if (title != null) {
+                        mRingtoneTitles.put(uri, title);
+                    }
+                }
+            }
         }
         return title;
     }

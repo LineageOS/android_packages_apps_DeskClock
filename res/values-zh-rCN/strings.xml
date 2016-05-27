@@ -422,4 +422,7 @@
     <string name="action_summary_snooze">暂停闹铃</string>
     <string name="action_summary_dismiss">停止闹铃</string>
     <string name="action_summary_do_nothing">不产生任何作用</string>
+    <string name="custom_ringtone" msgid="3477418548382111184">"自定义铃声"</string>
+    <string name="ringtone_default">"默认铃声"</string>
+    <string name="have_denied_storage_permission">"你主动拒绝了存储访问权限,可以去设置应用重新开启该应用权限"</string>
 </resources>

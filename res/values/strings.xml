@@ -1157,5 +1157,13 @@
     <string name="action_summary_dismiss">dismiss the alarm</string>
     <string name="action_summary_do_nothing">do nothing</string>
 
+    <!-- Label on expanded alarm edit view indicating the ringtone is custom. -->
+    <string name="custom_ringtone">Custom Ringtone</string>
+
+    <!-- Ringtone selection default" -->
+    <string name="ringtone_default">"Default ringtone"</string>
+
+    <!--used for prompt to user storage permission status-->
+    <string name="have_denied_storage_permission">You have denied storage permission,and can manually add this permission again in setting application</string>
 </resources>
 
