@@ -429,13 +429,13 @@ public class AlarmService extends Service {
                 // Setup Snooze Action
                 Intent snoozeIntent = AlarmStateManager.createStateChangeIntent(this, "SNOOZE_TAG",
                         mCurrentAlarm, AlarmInstance.SNOOZE_STATE);
-                sendBroadcast(snoozeIntent);
+                startService(snoozeIntent);
                 break;
             case ALARM_DISMISS:
                 // Setup Dismiss Action
                 Intent dismissIntent = AlarmStateManager.createStateChangeIntent(this,
                         "DISMISS_TAG", mCurrentAlarm, AlarmInstance.DISMISSED_STATE);
-                sendBroadcast(dismissIntent);
+                startService(dismissIntent);
                 break;
             case ALARM_NO_ACTION:
             default:
