@@ -53,6 +53,7 @@
   <!-- Setting labels on Set alarm screen: Select alarm ringtone  -->
   <string name="alert">Tonu d\'alarma</string>
   <!-- Label on expanded alarm edit view indicating the ringtone is custom. -->
+  <string name="custom_ringtone">Tonu de llamada personalizáu</string>
   <!-- Label on expanded alarm edit view. -->
   <string name="ringtone">Tonu de llamada</string>
   <!-- Setting labels on Set alarm screen: Set time  -->
@@ -140,8 +141,26 @@
     <item>L\'alarma va sonar en <xliff:g id="DAYS">%1$s</xliff:g>, <xliff:g id="HOURS">%2$s</xliff:g> y <xliff:g id="MINUTES">%3$s</xliff:g>.</item>
   </string-array>
   <!-- Alarm confirmation toast: days -->
+  <plurals name="days">
+    <!-- Duration for one day -->
+    <item quantity="one">1 día</item>
+    <!-- Duration for more than one day -->
+    <item quantity="other"><xliff:g id="number" example="7">%s</xliff:g> díes</item>
+  </plurals>
   <!-- Alarm confirmation toast and timer notification: hours -->
+  <plurals name="hours">
+    <!-- Duration for one hour -->
+    <item quantity="one">1 hora</item>
+    <!-- Duration for more than one hour -->
+    <item quantity="other"><xliff:g id="number" example="7">%s</xliff:g> hores</item>
+  </plurals>
   <!-- Alarm confirmation toast and timer notification: minutes -->
+  <plurals name="minutes">
+    <!-- Duration for one minute -->
+    <item quantity="one">1 minutu</item>
+    <!-- Duration for more than one minute -->
+    <item quantity="other"><xliff:g id="number" example="7">%s</xliff:g> minutos</item>
+  </plurals>
   <!-- Repeat options that appear under an alarm on main Alarm Clock
          screen to identify repetition schedule: special case for when
          the alarm is set to repeat every day -->
@@ -162,6 +181,12 @@
   <string name="settings">Axustes</string>
   <!-- Setting title for changing the snooze duration. -->
   <string name="snooze_duration_title">Repetir alarma dempués de</string>
+  <plurals name="snooze_duration">
+    <!-- Duration for one minute -->
+    <item quantity="one">1 minutu</item>
+    <!-- Duration for more than one minute -->
+    <item quantity="other"><xliff:g id="number" example="7">%s</xliff:g> minutos</item>
+  </plurals>
   <plurals name="snooze_picker_label">
     <!-- Duration for one minute -->
     <item quantity="one">minutu</item>
@@ -171,6 +196,12 @@
   <!-- Auto silence preference title -->
   <string name="auto_silence_title">Silenciar dempués de</string>
   <!-- Auto silence summary string set based on the preference value. -->
+  <plurals name="auto_silence_summary">
+    <!-- Duration for one minute -->
+    <item quantity="one">1 minutu</item>
+    <!-- Duration for more than one minute -->
+    <item quantity="other"><xliff:g id="formatted_number" example="7">%s</xliff:g> minutos</item>
+  </plurals>
   <!-- Auto silence summary when turned off -->
   <string name="auto_silence_never">Enxamás</string>
   <!-- Entries listed in the ListPreference when invoking the auto silence
@@ -187,7 +218,13 @@
   <!-- Values that are retrieved from the ListPreference. These must match
          the auto_silence_entries above. -->
   <!-- Week start day preference title. -->
+  <string name="week_start_title">Entamar la selmana el</string>
   <!-- Entries listed in ListPreference for start day. -->
+  <string-array name="week_start_entries">
+    <item>Sábadu</item>
+    <item>Domingu</item>
+    <item>Llunes</item>
+  </string-array>
   <!-- Values for ListPreference for start day of week. -->
   <!-- Done button when editing an alarm. -->
   <string name="done">Fecho</string>
@@ -335,6 +372,7 @@
   <!-- Describes the purpose of the button to delete a timer. -->
   <string name="timer_delete">Desaniciar</string>
   <!-- Talkback description for deleting a number. -->
+  <string name="timer_descriptive_delete">Desaniciar <xliff:g id="number_string">%s</xliff:g></string>
   <!-- Describes the purpose of the button increase the remaining time on a timer by one minute. -->
   <string name="timer_plus_one">Amestar 1 minutu</string>
   <!-- Like "timer_plus_one", but with 'minute' abbreviated for the notification. -->
@@ -508,6 +546,7 @@
   <!-- Text instruction for alarm icon on alarm lock screen. The snooze button will still
          be on the left even on RTL languages so please do not reverse this during
          translation. -->
+  <string name="description_direction_both">Esliza\'l deu a manzorga pa posponer l\'alarma o a mandrecha pa inorala</string>
   <!-- Notification title when timer is stopped. -->
   <string name="timer_stopped">Temporizador deteníu</string>
   <!-- Notification title when multiple timers are stopped. -->
@@ -532,6 +571,7 @@
   <!-- Description of the button to undo change to alarm -->
   <string name="alarm_undo">desfacer</string>
   <!-- Toast content when an alarm was deleted  -->
+  <string name="alarm_deleted">Alarma desaniciada</string>
   <!-- slash between date and next alarm in the clock -->
   <string name="slash"> / </string>
   <!-- slash between date and next alarm in the clock -->
@@ -573,12 +613,14 @@
         a represents am/pm
         Ex: h:mm a = 12:54 am, 8:05 pm
     -->
+  <string name="time_format_12_mode">h:mm a</string>
   <!--
         String that represents time format for 24-hour time.
         k represents hour in range (0-23) with the minimum number of digits
         mm represents minute with leading 0 in case of values < 10
         Ex: k:mm = 13:51, 5:05
     -->
+  <string name="time_format_24_mode">k:mm</string>
   <!--
         String that represents weekday, time format for 12-hour time.
         EEE represents weekday name in short form (ex. Mon, Tue, Wed)
@@ -587,6 +629,7 @@
         a represents am/pm
         Ex: EEE, h:mm a = Mon, 2:55 pm
     -->
+  <string name="weekday_time_format_12_mode">EEE, h:mm a</string>
   <!--
         String that represents weekday, time format for 24-hour time.
         EEE represents weekday name in short form (ex. Mon, Tue, Wed)
@@ -594,153 +637,192 @@
         mm represents minute with leading 0 in case of values < 10
         Ex: EEE, k:mm = Mon, 2:55
     -->
+  <string name="weekday_time_format_24_mode">EEE, k:mm</string>
   <!-- String that represents that invalid time for an alarm was specified, e.g. 23:00am
      or 27:68pm.
     First %d represents hour, second %d represents minutes, %s represents am/pm,
     If no am/pm is passed in (e.g. the locale uses 24h time) only hour and minute are printed.
     [CHAR LIMIT=NONE]
     -->
+  <string name="invalid_time">La hora <xliff:g id="invalid_hour" example="25">%d</xliff:g>:<xliff:g id="invalid_minutes" example="63">%d</xliff:g> <xliff:g id="invalid_ampm" example="PM">%s</xliff:g> nun ye válida</string>
   <!-- String that represents that no alarm has been specified for a requested hour:minutes.
     This happens when a user sends a voice command 'dismiss my alarm at 3:00pm' but they have no
     alarms specified for that time. %s represents the time of the alarm.
     [CHAR LIMIT=NONE]
     -->
+  <string name="no_alarm_at">Nun hai alarma pa les <xliff:g id="alarm_time_hour" example="14">%d</xliff:g>:<xliff:g id="alarm_time_minutes" example="23">%d</xliff:g></string>
   <!-- String that represents that the user doesn't have any alarms scheduled. This happens when
     a user sends a voice command 'dismiss next alarm' or 'dismiss all of my alarms' but they have
     no alarms scheduled in the app.
     [CHAR LIMIT=NONE]
     -->
+  <string name="no_scheduled_alarms">Nun hai alarmes programaes</string>
   <!-- String that represents that the user specified that they want to select an alarm to
     dismiss by specifying a 'label' but they didn't specify any labels.
     [CHAR LIMIT=NONE]
     -->
+  <string name="no_label_specified">Nun s\'especificó nenguna etiqueta</string>
   <!-- String that represents that no alarm has been specified for a requested label.
     This happens when a user sends a voice command 'dismiss my alarm with label pick up kids'
      but they have no alarms with that label.
     [CHAR LIMIT=NONE]
     -->
+  <string name="no_alarms_with_label">Nun hai nenguna alarma con esa etiqueta</string>
   <!-- String that represents that the user has sent a voice command 'start a stopwatch' when
     the stopwatch was already running so the command wasn't executed.
     [CHAR LIMIT=NONE]
     -->
+  <string name="stopwatch_already_running">El cronómetru yá ta executándose</string>
   <!-- String that represents that the user has sent a voice command 'stop the stopwatch' or
     'lap the stopwatch' when the stopwatch wasn't running so the command wasn't executed.
     [CHAR LIMIT=NONE]
     -->
+  <string name="stopwatch_isnt_running">El cronómetru nun se ta executando</string>
   <!-- String that represents that the user has sent a voice command 'reset the stopwatch' or
      when the stopwatch was running so the command wasn't executed.
     [CHAR LIMIT=NONE]
     -->
+  <string name="stopwatch_cant_be_reset_because_is_running">Nun pue resetease\'l cronómetru porque ta executándose</string>
   <!-- String that represents that the user has successfully sent a voice command stopping
      the stopwatch.
     [CHAR LIMIT=NONE]
     -->
+  <string name="stopwatch_stopped">Paróse\'l cronómetru</string>
   <!-- String that represents that the user has successfully sent a voice command resetting
     the stopwatch.
     [CHAR LIMIT=NONE]
     -->
+  <string name="stopwatch_reset">Restablecióse\'l cronómetru</string>
   <!-- String that represents that the user has successfully sent a voice command lapping
     the stopwatch.
     [CHAR LIMIT=NONE]
     -->
+  <string name="stopwatch_lapped">Restablecióse una vuelta\'l cronómetru</string>
   <!-- String that represents that the user has successfully sent a voice command starting
     the stopwatch.
     [CHAR LIMIT=NONE]
     -->
+  <string name="stopwatch_started">Anicióse\'l cronómetru</string>
   <!-- String that represents that the user has sent a voice command 'dismiss my alarm at 3pm' when
     there was no alarm scheduled for that time (they might have had an alarm for 3pm on the list
     but it was disabled).
     [CHAR LIMIT=NONE]
     -->
+  <string name="no_alarm_scheduled_for_this_time">Nun se planificaron alarmes pa esta hora</string>
   <!-- String that represents that the user has dismissed an alarm through a voice action.
     %s represents alarm time, e.g. 14:20
     [CHAR LIMIT=NONE]
     -->
+  <string name="alarm_is_dismissed">Inoróse l\'alarma <xliff:g id="alarm_time" example="14:20">%s</xliff:g></string>
   <!-- String that represents that the user has dismissed an alarm through a voice action.
     %s represents alarm time, e.g. 14:20
     [CHAR LIMIT=NONE]
     -->
+  <string name="alarm_is_set">Afitóse l\'alarma a les <xliff:g id="alarm_time" example="14:20">%s</xliff:g></string>
   <!-- String that represents that the user attempted to send a voice action 'delete a timer'
     when there were no timers available.
     [CHAR LIMIT=NONE]
     -->
+  <string name="no_timer_set">Nun se configuró nengún temporizador</string>
   <!-- String that represents that the user has successfully deleted a timer through a voice action.
     [CHAR LIMIT=NONE]
     -->
+  <string name="timer_deleted">Desanicióse\'l temporizador</string>
   <!-- String that represents that the user has attempted to start a timer when a timer was
     already running.
     [CHAR LIMIT=NONE]
     -->
+  <string name="timer_already_running">El temporizador yá ta executándose</string>
   <!-- String that represents that the user has attempted to start or reset a timer when
      there were more than 1 timer of desired state in which case it's ambiguous
      which timer the user meant.
     [CHAR LIMIT=NONE]
      -->
+  <string name="multiple_timers_available">Nun pue completase la solicitú porque hai dellos temporizadores disponibles</string>
   <!-- String that represents that the user has successfully started a timer through a voice action.
     [CHAR LIMIT=NONE]
     -->
+  <string name="timer_started">Anicióse\'l temporizador</string>
   <!-- String that represents that the user has successfully created a timer through a voice action.
     [CHAR LIMIT=NONE]
     -->
+  <string name="timer_created">Creóse\'l temporizador</string>
   <!-- String that represents that the user attempted to start a timer through a voice action
     but specified invalid length.
     [CHAR LIMIT=NONE]
     -->
+  <string name="invalid_timer_length">La duración del temporizador nun ye válida</string>
   <!-- String that represents that the user has successfully reset a timer through a voice action.
     [CHAR LIMIT=NONE]
     -->
+  <string name="timer_was_reset">Restablecióse\'l temporizador</string>
   <!-- String that represents that the user attempted to reset a timer through a voice action but
     the timer wasn't stopped (resetting is only allowed when a timer is stopped).
     [CHAR LIMIT=NONE]
     -->
+  <string name="timer_cant_be_reset_because_its_running">Nun pue restablecese\'l temporizador porque aínda ta executándose. Pa restablecelu, deténlu.</string>
   <!-- String that represents that the user attempted to stop a timer through a voice action but
     the timer was already stopped (resetting is only allowed when a timer is stopped).
     [CHAR LIMIT=NONE]
     -->
+  <string name="timer_already_stopped">Yá se paró\'l temporizador</string>
   <!-- String that represents that the user attempted to add or delete a world clock through
     a voice action
     but they didn't specify a city so no world clock was selected.
     [CHAR LIMIT=NONE]
     -->
+  <string name="no_city_selected">Nun s\'esbilló ciudá dala</string>
   <!-- String that represents that the user attempted to add or delete a world clock through
     a voice action
     but the city they specified wasn't listed in the database.
     [CHAR LIMIT=NONE]
     -->
+  <string name="the_city_you_specified_is_not_available">La ciudá qu\'especifiquesti nun ta disponible</string>
   <!-- String that represents that the user attempted to add a world clock through a voice action
     but the city they specified is already added to the list.
     [CHAR LIMIT=NONE]
     -->
+  <string name="the_city_already_added">Yá s\'amestó esa ciudá</string>
   <!-- String that represents that the user successfully added a world clock through a
     voice action
     %s represents the name of the city they added.
     [CHAR LIMIT=NONE]
     -->
+  <string name="city_added">Amestóse la ciudá <xliff:g id="city_name" example="Paris">%s</xliff:g></string>
   <!-- String that represents that the user successfully deleted a world clock through
     a voice action
     %s represents the name of the city they deleted.
     [CHAR LIMIT=NONE]
     -->
+  <string name="city_deleted">Desanicióse la ciudá <xliff:g id="city_name" example="Paris">%s</xliff:g></string>
   <!-- String that represents that the user attempted to dismiss an alarm that is more than
     24 hours away
     %s represents the time of the alarm (e.g. 15:39)
     [CHAR LIMIT=NONE]
     -->
+  <string name="alarm_cant_be_dismissed_still_more_than_24_hours_away">Aínda nun pue inorase l\'alarma <xliff:g id="alarm_time" example="14:20">%s</xliff:g> porque entá falten más de 24 hores pa que s\'active</string>
   <!-- String that shows up in the action bar for the Picker Activity
          where a use gets to pick which alarm to dismiss
    [CHAR LIMIT=NONE]
    -->
+  <string name="dismiss_alarm">Inorar alarma</string>
   <!-- String that represents that further action is needed from the user in case their
     voice command was ambiguous or there are more than 1 alarms that match their request.
     The user needs to choose an alarm they want to dismiss through the UI
    [CHAR LIMIT=NONE]
    -->
+  <string name="pick_alarm_to_dismiss">Esbilla l\'alarma que quies inorar</string>
   <!-- String that represents that the user doesn't have any alarms firing at the moment.
     [CHAR LIMIT=NONE]
     -->
+  <string name="no_firing_alarms">Nun hai alarmes actives</string>
   <!-- String that represents that the user has snoozed an alarm through a voice action for 10
     minutes.
     %s represents alarm time, e.g. 14:20
     [CHAR LIMIT=NONE]
     -->
+  <string name="alarm_is_snoozed">L\'alarma <xliff:g id="alarm_time" example="14:20">%s</xliff:g> pospúsose por diez minutos</string>
+  <string name="power_on_text">Power on</string>
+  <string name="power_on_yes_text">Sí</string>
+  <string name="power_on_no_text">Non</string>
 </resources>

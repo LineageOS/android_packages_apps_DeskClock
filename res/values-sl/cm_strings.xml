@@ -33,7 +33,7 @@
   <string name="action_summary_dismiss">bo opustilo budilko</string>
   <string name="action_summary_do_nothing">ne bo naredilo ničesar</string>
   <!-- Setting title for accessing the cLock widget settings -->
-  <string name="menu_item_widget_settings">Nastavitve gradnika</string>
+  <string name="menu_item_widget_settings">Nastavitve pripomočka</string>
   <string name="activity_not_found">Dejavnost ni bila najdena!</string>
   <!-- Setting title for showing/hiding the alarm status bar icon -->
   <string name="show_status_bar_icon_title">Prikaži ikono</string>
