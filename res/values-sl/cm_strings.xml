@@ -75,7 +75,7 @@
   <string name="ringtone_default">Privzeta melodija zvonjenja</string>
   <!-- Message that describe an error trying to take a persistent grant permission for an uri ringtone -->
   <string name="take_persistent_grant_uri_permission_failed_msg">Privzemanje vztrajnega dovoljenja za melodijo zvonjenja je spodletelo</string>
-  <string name="menu_item_widget_settings">Nastavitve gradnika</string>
+  <string name="menu_item_widget_settings">Nastavitve pripomočka</string>
   <string name="activity_not_found">Dejavnost ni bila najdena!</string>
   <!-- Permissions for reading/writing DeskClock alarms provider -->
   <string name="alarm_modification_service_desc">Storitev, ki tretjim osebam omogoča upravljanje z budilkami.</string>
