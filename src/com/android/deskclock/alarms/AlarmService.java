@@ -143,6 +143,14 @@ public class AlarmService extends Service {
         }
     };
 
+    public static void startAlarm(Context context, AlarmInstance instance) {
+        final Intent intent = AlarmInstance.createIntent(context, AlarmService.class, instance.mId)
+                .setAction(AlarmStateManager.CHANGE_STATE_ACTION);
+        intent.putExtra(AlarmStateManager.ALARM_STATE_EXTRA, AlarmInstance.FIRED_STATE);
+        AlarmAlertWakeLock.acquireCpuWakeLock(context);
+        context.startService(intent);
+    }
+
     private void startAlarm(AlarmInstance instance) {
         LogUtils.v("AlarmService.start with instance: " + instance.mId);
         if (mCurrentAlarm != null) {
@@ -153,7 +161,16 @@ public class AlarmService extends Service {
         AlarmAlertWakeLock.acquireCpuWakeLock(this);
 
         mCurrentAlarm = instance;
-        AlarmNotifications.showAlarmNotification(this, mCurrentAlarm);
+        if (AlarmStateManager.isAlarmBoot()) {
+            Intent alarmIntent = AlarmInstance.createIntent(this, AlarmActivity.class,
+                        instance.mId);
+            alarmIntent.setAction("fullscreen_activity");
+            alarmIntent.setFlags(Intent.FLAG_ACTIVITY_NEW_TASK |
+                        Intent.FLAG_ACTIVITY_NO_USER_ACTION);
+            this.startActivity(alarmIntent);
+        } else {
+            AlarmNotifications.showAlarmNotification(this, mCurrentAlarm);
+        }
         mInitialCallState = mTelephonyManager.getCallState();
         mTelephonyManager.listen(mPhoneStateListener, PhoneStateListener.LISTEN_CALL_STATE);
         AlarmKlaxon.start(this, mCurrentAlarm);

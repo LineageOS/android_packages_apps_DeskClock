@@ -41,6 +41,7 @@
     <uses-permission android:name="android.permission.INTERNET" />
     <uses-permission android:name="android.permission.ACCESS_NETWORK_STATE" />
     <uses-permission android:name="com.android.deskclock.worldclock.permissions.WRITE_DATABASE" />
+    <uses-permission android:name="org.codeaurora.permission.POWER_ON_ALERT" />
 
     <application android:label="@string/app_label"
                  android:name=".DeskClockApplication"
@@ -261,6 +262,7 @@
                 <action android:name="android.intent.action.TIMEZONE_CHANGED" />
                 <action android:name="android.intent.action.LOCALE_CHANGED" />
                 <action android:name="android.intent.action.MY_PACKAGE_REPLACED" />
+                <action android:name="org.codeaurora.alarm.action.POWER_OFF_ALARM" />
             </intent-filter>
         </receiver>
 

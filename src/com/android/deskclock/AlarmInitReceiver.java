@@ -18,13 +18,22 @@ package com.android.deskclock;
 
 import android.annotation.SuppressLint;
 import android.content.BroadcastReceiver;
+import android.content.ContentResolver;
 import android.content.Context;
 import android.content.Intent;
 import android.os.PowerManager.WakeLock;
+import android.os.SystemProperties;
 
+import com.android.deskclock.alarms.AlarmActivity;
 import com.android.deskclock.alarms.AlarmStateManager;
+import com.android.deskclock.alarms.AlarmService;
+import com.android.deskclock.provider.Alarm;
+import com.android.deskclock.provider.AlarmInstance;
 import com.android.deskclock.data.DataModel;
 import com.android.deskclock.events.Events;
+
+import java.util.Calendar;
+import java.util.List;
 
 public class AlarmInitReceiver extends BroadcastReceiver {
 
@@ -35,6 +44,24 @@ public class AlarmInitReceiver extends BroadcastReceiver {
     @SuppressLint("InlinedApi")
     private static final String ACTION_BOOT_COMPLETED = Utils.isNOrLater()
             ? Intent.ACTION_LOCKED_BOOT_COMPLETED : Intent.ACTION_BOOT_COMPLETED;
+
+
+    // Indicates that it is power off alarm boot
+    private static final String ALARM_BOOT_PROP = "ro.alarm_boot";
+    // Power off alarm was handled in encryption mode
+    private static final String ALARM_HANDLED_PROP = "ro.alarm_handled";
+    // Alarm instance which was handled in encryption mode
+    private static final String ALARM_INSTANCE_PROP = "ro.alarm_instance";
+
+    private static final String DECRYPT_PROP = "vold.decrypt";
+
+    private static final String ENCRYPTING_STATE = "trigger_restart_min_framework";
+    private static final String ENCRYPTED_STATE = "1";
+
+    private static final String ACTION_POWER_OFF_ALARM =
+            "org.codeaurora.alarm.action.POWER_OFF_ALARM";
+
+    private static final String ALARM_GLOBAL_ID_EXTRA = "intent.extra.alarm.global.id";
 
     /**
      * This receiver handles a variety of actions:
@@ -57,6 +84,9 @@ public class AlarmInitReceiver extends BroadcastReceiver {
         final WakeLock wl = AlarmAlertWakeLock.createPartialWakeLock(context);
         wl.acquire();
 
+        boolean isAlarmBoot = AlarmStateManager.isAlarmBoot();
+        ContentResolver cr = context.getContentResolver();
+
         // We need to increment the global id out of the async task to prevent race conditions
         AlarmStateManager.updateGlobalIntentId(context);
 
@@ -67,6 +97,53 @@ public class AlarmInitReceiver extends BroadcastReceiver {
             DataModel.getDataModel().resetStopwatch();
             Events.sendStopwatchEvent(R.string.action_reset, R.string.label_reboot);
             DataModel.getDataModel().resetTimers(R.string.label_reboot);
+
+            // When ALARM_HANDLED_PROP is true which means that the alarm is handled in encryption
+            // mode. Find the handled alarm by alarm time and set it as dismiss state.
+            if (!isAlarmBoot && SystemProperties.getBoolean(ALARM_HANDLED_PROP, false)) {
+                long instanceTime = SystemProperties.getLong(ALARM_INSTANCE_PROP, 0);
+                if (instanceTime != 0) {
+                    List<AlarmInstance> alarmInstances = AlarmInstance
+                            .getInstances(cr, null);
+                    AlarmInstance alarmInstance = null;
+                    for (AlarmInstance instance : alarmInstances) {
+                        if (instance.getAlarmTime().getTimeInMillis() == instanceTime) {
+                            alarmInstance = instance;
+                            break;
+                        }
+                    }
+
+                    if (alarmInstance != null) {
+                        AlarmStateManager.setDismissState(context, alarmInstance);
+                    }
+                }
+            }
+        }
+
+        // When ACTION_POWER_OFF_ALARM comes, AlarmActivity should be started for
+        // power off alarm.
+        //     1. Normal mode: just get next firing alarm and pass it to alarm activity
+        //     2. Encryption mode: We need to create an alarm as there is no firing alarm
+        //        in this mode.
+        if (ACTION_POWER_OFF_ALARM.equals(action)) {
+            AlarmInstance instance = AlarmStateManager.getNextFiringAlarm(context);
+            String cryptState = SystemProperties.get(DECRYPT_PROP);
+            if (instance == null && (ENCRYPTING_STATE.equals(cryptState) ||
+                    ENCRYPTED_STATE.equals(cryptState))) {
+                Calendar c = Calendar.getInstance();
+                Alarm a = new Alarm();
+                a.hour = c.get(Calendar.HOUR_OF_DAY);
+                a.minutes = c.get(Calendar.MINUTE);
+                a.enabled = true;
+                Alarm newAlarm = Alarm.addAlarm(cr, a);
+                instance = newAlarm.createInstanceAfter(Calendar.getInstance());
+                instance = AlarmInstance.addInstance(cr, instance);
+            }
+
+            if (instance != null) {
+                AlarmStateManager.setFiredState(context, instance);
+                AlarmService.startAlarm(context, instance);
+            }
         }
 
         // Notifications are canceled by the system on application upgrade. This broadcast signals

@@ -17,7 +17,6 @@ LOCAL_RESOURCE_DIR += prebuilts/sdk/current/support/v7/recyclerview/res
 endif
 
 LOCAL_MODULE_TAGS := optional
-LOCAL_SDK_VERSION := current
 
 LOCAL_PACKAGE_NAME := DeskClock
 LOCAL_OVERRIDES_PACKAGES := AlarmClock
