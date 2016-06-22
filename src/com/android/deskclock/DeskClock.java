@@ -222,15 +222,14 @@ public class DeskClock extends BaseActivity
 
         if (mRecreateActivity) {
             mRecreateActivity = false;
-
-            // A runnable must be posted here or the new DeskClock activity will be recreated in a
-            // paused state, even though it is the foreground activity.
-            mViewPager.post(new Runnable() {
-                @Override
-                public void run() {
-                    recreate();
-                }
-            });
+            /*
+            * (1) the reason of recreate is called here not like android M which called in
+            *     onActivityResult: if called in onActivityResult, the DeskClock activity
+            *     maybe recreated in a paused state, even though it is the foreground activity.
+            * (2) the reason of delete the runnable: the runnable will lead to the flicker
+            *     screen or blackscreen issue when settingsActivity's item is changed.
+            */
+            recreate();
         }
     }
 

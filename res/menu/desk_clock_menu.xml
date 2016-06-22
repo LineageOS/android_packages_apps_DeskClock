@@ -30,6 +30,7 @@
             android:title="@string/menu_item_add"
             android:icon="@drawable/ic_actionbar_add"
             app:showAsAction="always"
+            android:visible="false"
             android:orderInCategory="2"/>
         <item
             android:id="@+id/menu_item_sort"
