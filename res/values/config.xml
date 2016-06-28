@@ -23,6 +23,7 @@
     <bool name="config_requiresScreenSaver">true</bool>
     <bool name="config_dockAppEnabled">true</bool>
     <bool name="config_rotateAlarmAlert">false</bool>
+    <bool name="config_rotateTimerAlert">false</bool>
     <!-- Default action for flip (turn face down) during alarm
          0 means no action, 1 means snooze
          2 means dismiss. -->

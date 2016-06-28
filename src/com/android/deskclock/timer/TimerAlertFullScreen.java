@@ -23,6 +23,7 @@ import android.view.View;
 import android.view.ViewGroup;
 import android.view.Window;
 import android.view.WindowManager;
+import android.content.pm.ActivityInfo;
 
 import com.android.deskclock.BaseActivity;
 import com.android.deskclock.R;
@@ -70,6 +71,16 @@ public class TimerAlertFullScreen extends BaseActivity implements OnEmptyListLis
             // Add the fragment to the 'fragment_container' FrameLayout
             getFragmentManager().beginTransaction()
                     .add(R.id.fragment_container, timerFragment, FRAGMENT).commit();
+        }
+        // Following issue was found on Alarm and same can be applied on timer:
+        // In order to allow tablets to freely rotate and phones to stick
+        // with "nosensor" (use default device orientation) we have to have
+        // the manifest start with an orientation of unspecified" and only limit
+        // to "nosensor" for phones. Otherwise we get behavior like in b/8728671
+        // where tablets start off in their default orientation and then are
+        // able to freely rotate.
+        if (!getResources().getBoolean(R.bool.config_rotateTimerAlert)) {
+            setRequestedOrientation(ActivityInfo.SCREEN_ORIENTATION_NOSENSOR);
         }
     }
 
