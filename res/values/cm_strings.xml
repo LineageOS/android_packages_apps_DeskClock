@@ -57,4 +57,8 @@
     <string name="profile_no_selected">No profile selected</string>
 
     <string name="alarm_modification_service_desc">A service to allow manipulation of alarms by third parties.</string>
+
+    <string name="power_on_text">Power on device?</string>
+    <string name="power_on_yes_text">Yes</string>
+    <string name="power_on_no_text">No</string>
 </resources>

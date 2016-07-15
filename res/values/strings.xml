@@ -1135,8 +1135,5 @@
     -->
     <string name="alarm_is_snoozed"><xliff:g id="alarm_time" example="14:20">%s</xliff:g> alarm snoozed for 10 minutes</string>
 
-    <string name="power_on_text">Power on</string>
-    <string name="power_on_yes_text">Yes</string>
-    <string name="power_on_no_text">No</string>
 </resources>
 
