@@ -46,4 +46,7 @@
   <!-- No profile selected label -->
   <string name="profile_no_selected">Noben profil ni izbran</string>
   <string name="alarm_modification_service_desc">Storitev, ki tretjim osebam omogoča upravljanje z budilkami.</string>
+  <string name="power_on_text">Vklopi napravo?</string>
+  <string name="power_on_yes_text">Da</string>
+  <string name="power_on_no_text">Ne</string>
 </resources>

@@ -46,4 +46,7 @@
   <!-- No profile selected label -->
   <string name="profile_no_selected">未选择情景模式</string>
   <string name="alarm_modification_service_desc">允许第三方控制闹钟的服务。</string>
+  <string name="power_on_text">开启设备电源？</string>
+  <string name="power_on_yes_text">是</string>
+  <string name="power_on_no_text">否</string>
 </resources>
