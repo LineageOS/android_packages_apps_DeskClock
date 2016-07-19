@@ -46,4 +46,7 @@
   <!-- No profile selected label -->
   <string name="profile_no_selected">Няма избран профил</string>
   <string name="alarm_modification_service_desc">Услугата позволява манипулиране на аларми от трети лица.</string>
+  <string name="power_on_text">Включване на устройството?</string>
+  <string name="power_on_yes_text">Да</string>
+  <string name="power_on_no_text">Не</string>
 </resources>
