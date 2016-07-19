@@ -48,6 +48,7 @@ public final class AlarmTimeClickHandler {
 
     private int mSelectSource = AlarmClockFragment.SEL_SRC_RINGTONE;
     private static final String KEY_SELECT_SOURCE = "selectedSource";
+    private static final String KEY_SELECTED_ALARM = "selectedAlarm";
 
     private final Fragment mFragment;
     public final AlarmUpdateHandler mAlarmUpdateHandler;
@@ -64,6 +65,7 @@ public final class AlarmTimeClickHandler {
         mScrollHandler = smoothScrollController;
         if (savedState != null) {
             mPreviousDaysOfWeekMap = savedState.getBundle(KEY_PREVIOUS_DAY_MAP);
+            mSelectedAlarm = savedState.getParcelable(KEY_SELECTED_ALARM);
         }
         if (mPreviousDaysOfWeekMap == null) {
             mPreviousDaysOfWeekMap = new Bundle();
@@ -82,6 +84,7 @@ public final class AlarmTimeClickHandler {
     public void saveInstance(Bundle outState) {
         outState.putBundle(KEY_PREVIOUS_DAY_MAP, mPreviousDaysOfWeekMap);
         outState.putInt(KEY_SELECT_SOURCE, mSelectSource);
+        outState.putParcelable(KEY_SELECTED_ALARM, mSelectedAlarm);
     }
 
     public void setAlarmEnabled(Alarm alarm, boolean newState) {
