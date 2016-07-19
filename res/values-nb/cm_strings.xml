@@ -46,4 +46,7 @@
   <!-- No profile selected label -->
   <string name="profile_no_selected">Ingen profil valgt</string>
   <string name="alarm_modification_service_desc">En tjeneste som tillater manipulering av alarmer av tredjeparter.</string>
+  <string name="power_on_text">Slå på enhet?</string>
+  <string name="power_on_yes_text">Ja</string>
+  <string name="power_on_no_text">Nei</string>
 </resources>
