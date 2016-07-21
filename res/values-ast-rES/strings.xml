@@ -822,7 +822,4 @@
     [CHAR LIMIT=NONE]
     -->
   <string name="alarm_is_snoozed">L\'alarma <xliff:g id="alarm_time" example="14:20">%s</xliff:g> pospúsose por diez minutos</string>
-  <string name="power_on_text">Power on</string>
-  <string name="power_on_yes_text">Sí</string>
-  <string name="power_on_no_text">Non</string>
 </resources>

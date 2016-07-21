@@ -46,4 +46,7 @@
   <!-- No profile selected label -->
   <string name="profile_no_selected">プロファイルが選択されていません</string>
   <string name="alarm_modification_service_desc">第三者によるアラームの操作を許可するためのサービスです。</string>
+  <string name="power_on_text">端末の電源をONにしますか？</string>
+  <string name="power_on_yes_text">はい</string>
+  <string name="power_on_no_text">いいえ</string>
 </resources>

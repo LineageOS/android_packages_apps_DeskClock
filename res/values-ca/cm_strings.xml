@@ -46,4 +46,7 @@
   <!-- No profile selected label -->
   <string name="profile_no_selected">Cap perfil seleccionat</string>
   <string name="alarm_modification_service_desc">Un servei per permetre la manipulació d\'alarmes per part de tercers.</string>
+  <string name="power_on_text">Vols encendre el dispositiu?</string>
+  <string name="power_on_yes_text">Sí</string>
+  <string name="power_on_no_text">No</string>
 </resources>
