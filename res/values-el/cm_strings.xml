@@ -46,4 +46,7 @@
   <!-- No profile selected label -->
   <string name="profile_no_selected">Δεν επιλέχθηκε προφίλ</string>
   <string name="alarm_modification_service_desc">Μια υπηρεσία που επιτρέπει την χειραγώγηση των αφυπνίσεων από τρίτους.</string>
+  <string name="power_on_text">Ενεργοποίηση συσκευής;</string>
+  <string name="power_on_yes_text">Ναι</string>
+  <string name="power_on_no_text">Όχι</string>
 </resources>
