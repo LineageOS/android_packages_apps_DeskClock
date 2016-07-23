@@ -46,4 +46,7 @@
   <!-- No profile selected label -->
   <string name="profile_no_selected">Nije odabran profil</string>
   <string name="alarm_modification_service_desc">Usluga dopušta manipuliranje alarmima od strane trećih osoba.</string>
+  <string name="power_on_text">Uključiti uređaj?</string>
+  <string name="power_on_yes_text">Da</string>
+  <string name="power_on_no_text">Ne</string>
 </resources>
