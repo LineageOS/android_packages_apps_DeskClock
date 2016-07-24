@@ -46,6 +46,7 @@
   <!-- No profile selected label -->
   <string name="profile_no_selected">Ez da profilik ezarri</string>
   <string name="alarm_modification_service_desc">Hirugarrengoen aplikazioek alarmak aldatzeko zerbitzu bat.</string>
+  <string name="power_on_text">Gailuak argindarra du?</string>
   <string name="power_on_yes_text">Bai</string>
   <string name="power_on_no_text">Ez</string>
 </resources>
