@@ -605,4 +605,9 @@ public final class DataModel {
             return mExecuted;
         }
     }
+
+    public void cleanCityMap() {
+        enforceMainLooper();
+        mCityModel.cleanCityMap();
+    }
 }

@@ -425,6 +425,9 @@ public final class CitySelectionActivity extends BaseActivity
                                 // Remove from the list and from the selection
                                 mUserSelectedCities.remove(c.getId());
 
+                                //clean cities map, recreate mCityMap
+                                DataModel.getDataModel().cleanCityMap();
+
                                 // set the selected cities in order to recreate list content
                                 DataModel.getDataModel().setSelectedCities(getSelectedCities());
 
@@ -714,6 +717,9 @@ public final class CitySelectionActivity extends BaseActivity
 
         //insert new record to DB
         if (insertNewRecordToClockDB(name, tz)) {
+            //clean cities map, recreate mCityMap
+            DataModel.getDataModel().cleanCityMap();
+
             //recreate allCities selectedCities list
             DataModel.getDataModel().setSelectedCities(mCitiesAdapter.getSelectedCities());
 
