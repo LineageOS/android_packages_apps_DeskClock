@@ -37,6 +37,7 @@ import com.android.deskclock.data.DataModel;
 import com.android.deskclock.provider.Alarm;
 import android.app.AlertDialog.Builder;
 import android.content.Context;
+import android.content.ContentResolver;
 import android.content.DialogInterface;
 import android.content.Intent;
 import android.content.SharedPreferences;
@@ -44,6 +45,7 @@ import android.content.DialogInterface.OnClickListener;
 import android.media.RingtoneManager;
 import android.net.Uri;
 import android.preference.DialogPreference;
+import android.provider.DocumentsContract;
 import android.util.AttributeSet;
 
 public class DefaultAlarmToneDialog extends DialogPreference {
@@ -142,7 +144,9 @@ public class DefaultAlarmToneDialog extends DialogPreference {
             activity.startActivityForResult(intent,
                     AlarmClockFragment.REQUEST_CODE_RINGTONE);
         } else {
-            final Intent intent = new Intent(Intent.ACTION_GET_CONTENT);
+            // As the minSdkVersion for this app is 19, we don't need to add sdk version check
+            // here to use ACTION_OPEN_DOCUMENT.
+            final Intent intent = new Intent(Intent.ACTION_OPEN_DOCUMENT);
             intent.putExtra(RingtoneManager.EXTRA_RINGTONE_EXISTING_URI,
                     oldRingTone);
             intent.setType(AlarmClockFragment.SEL_AUDIO_SRC);
@@ -166,6 +170,26 @@ public class DefaultAlarmToneDialog extends DialogPreference {
         }
 
         if (uri != oldRingTone) {
+            ContentResolver resolver = mContext.getContentResolver();
+            final int takeFlags = intent.getFlags() & Intent.FLAG_GRANT_READ_URI_PERMISSION;
+
+            if (DocumentsContract.isDocumentUri(mContext, oldRingTone)) {
+                try {
+                    resolver.releasePersistableUriPermission(oldRingTone, takeFlags);
+                } catch (Exception ex) {
+                    LogUtils.e(LogUtils.LOGTAG, "releasePersistableUriPermission exception : "+ ex);
+                }
+            }
+
+            if (DocumentsContract.isDocumentUri(mContext, uri)) {
+                // Check for the freshest data and take persist permission.
+                try {
+                    resolver.takePersistableUriPermission(uri, takeFlags);
+                } catch (Exception ex) {
+                    LogUtils.e(LogUtils.LOGTAG, "takePersistableUriPermission exception : "+ ex);
+                }
+            }
+
             // sendBroadcast to refresh Alarm's ringtone which is default
             sendRefreshBroadcast(uri);
         }

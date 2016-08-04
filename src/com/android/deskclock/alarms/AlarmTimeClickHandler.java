@@ -253,7 +253,9 @@ public final class AlarmTimeClickHandler {
             LogUtils.d(TAG, "Showing ringtone picker.");
             mFragment.startActivityForResult(intent, AlarmClockFragment.REQUEST_CODE_RINGTONE);
         } else {
-            final Intent intent = new Intent(Intent.ACTION_GET_CONTENT);
+            // As the minSdkVersion for this app is 19, we don't need to add sdk version check
+            // here to use ACTION_OPEN_DOCUMENT.
+            final Intent intent = new Intent(Intent.ACTION_OPEN_DOCUMENT);
             intent.putExtra(RingtoneManager.EXTRA_RINGTONE_EXISTING_URI, mSelectedAlarm.alert);
             intent.setType(AlarmClockFragment.SEL_AUDIO_SRC);
             mFragment.startActivityForResult(intent, AlarmClockFragment.REQUEST_CODE_EXTERN_AUDIO);

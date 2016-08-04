@@ -26,10 +26,12 @@ import android.content.Intent;
 import android.content.IntentFilter;
 import android.content.Loader;
 import android.content.pm.PackageManager;
+import android.content.SharedPreferences;
 import android.database.Cursor;
 import android.media.RingtoneManager;
 import android.net.Uri;
 import android.os.Bundle;
+import android.provider.DocumentsContract;
 import android.provider.Settings;
 import android.support.design.widget.Snackbar;
 import android.support.v7.widget.LinearLayoutManager;
@@ -51,6 +53,8 @@ import com.android.deskclock.settings.DefaultAlarmToneDialog;
 import com.android.deskclock.widget.EmptyViewController;
 import com.android.deskclock.widget.toast.SnackbarManager;
 import com.android.deskclock.widget.toast.ToastManager;
+
+import java.util.List;
 
 /**
  * A fragment that displays a list of alarm time and allows interaction with them.
@@ -382,6 +386,12 @@ public final class AlarmClockFragment extends DeskClockFragment implements
         }
     }
 
+    private List<Alarm> getAlarmsByUri(Context context, Uri uri) {
+       final String selection = String.format("%s=?", Alarm.RINGTONE);
+       final String[] args = { uri.toString() };
+       return Alarm.getAlarms(context.getContentResolver(), selection, args);
+    }
+
     private void updateSelectAlarmRingToneUri(Uri uri) {
         if (uri == null) {
             uri = Alarm.NO_RINGTONE_URI;
@@ -393,6 +403,43 @@ public final class AlarmClockFragment extends DeskClockFragment implements
             LogUtils.e("Could not get selected alarm to set ringtone");
             return;
         }
+
+        // If the selected uri doesn't equals to the original uri, we need
+        // to check if the new uir is document uri and take the persistable
+        // permission.
+        // If there is no other alarm which uses the original uri and it is
+        // not the default alarm ringtone uri, then we need to release the
+        // permission of the orignal uri.
+        if (uri != alarm.alert) {
+            Context context = getActivity().getApplicationContext();
+            ContentResolver resolver = context.getContentResolver();
+            final int takeFlag = Intent.FLAG_GRANT_READ_URI_PERMISSION;
+
+            SharedPreferences sharedPref = Utils.getCESharedPreferences(context);
+            String defaultRingTone = sharedPref.getString(
+                    DefaultAlarmToneDialog.DEFAULT_RING_TONE_URI_KEY,
+                    DefaultAlarmToneDialog.DEFAULT_RING_TONE_DEFAULT);
+            Uri defaultUri = Uri.parse(defaultRingTone);
+
+            if (DocumentsContract.isDocumentUri(context, alarm.alert) &&
+                    alarm.alert != defaultUri && getAlarmsByUri(context, alarm.alert).size() == 1) {
+                try {
+                    resolver.releasePersistableUriPermission(alarm.alert, takeFlag);
+                } catch (Exception ex) {
+                    LogUtils.e("releasePersistableUriPermission exception : "+ ex);
+                }
+            }
+
+            if (DocumentsContract.isDocumentUri(context, uri)) {
+                // Check for the freshest data and take persist permission.
+                try {
+                    resolver.takePersistableUriPermission(uri, takeFlag);
+                } catch (Exception ex) {
+                    LogUtils.e("takePersistableUriPermission exception : " + ex);
+                }
+            }
+        }
+
         alarm.alert = uri;
 
         // Save the change to alarm.
