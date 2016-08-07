@@ -46,7 +46,7 @@
   <!-- No profile selected label -->
   <string name="profile_no_selected">לא נבחר פרופיל</string>
   <string name="alarm_modification_service_desc">שירות המאפשר שינויי שעונים מעוררים בידי יישומי צד שלישי.</string>
-  <string name="power_on_text">להפעיל את המכשיר?</string>
+  <string name="power_on_text">להדליק את המכשיר?</string>
   <string name="power_on_yes_text">כן</string>
   <string name="power_on_no_text">לא</string>
 </resources>
