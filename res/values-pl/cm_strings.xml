@@ -46,4 +46,6 @@
   <!-- No profile selected label -->
   <string name="profile_no_selected">Nie wybrano profilu</string>
   <string name="alarm_modification_service_desc">Usługa umożliwiająca manipulację alarmami przez inne aplikacje.</string>
+  <string name="power_on_yes_text">Tak</string>
+  <string name="power_on_no_text">Nie</string>
 </resources>
