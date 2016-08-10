@@ -428,7 +428,7 @@ public final class AlarmInstance implements ClockContract.InstancesColumns {
      * @return the time when alarm should be silence, or null if never
      */
     public Calendar getTimeout(Context context) {
-        String timeoutSetting = PreferenceManager.getDefaultSharedPreferences(context)
+        String timeoutSetting = Utils.getDefaultSharedPreferences(context)
                 .getString(SettingsActivity.KEY_AUTO_SILENCE, null);
         if (timeoutSetting == null) {
             timeoutSetting = context.getResources()
