@@ -46,4 +46,6 @@
   <!-- No profile selected label -->
   <string name="profile_no_selected">Ingen profil vald</string>
   <string name="alarm_modification_service_desc">En tjänst för att tillåta manipulation av alarm av tredje part.</string>
+  <string name="power_on_yes_text">Ja</string>
+  <string name="power_on_no_text">Nej</string>
 </resources>
