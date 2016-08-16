@@ -46,4 +46,7 @@
   <!-- No profile selected label -->
   <string name="profile_no_selected">Ühtegi profiili pole valitud</string>
   <string name="alarm_modification_service_desc">Teenus, mis võimaldab alarmide manipuleerimist kolmandate isikute poolt.</string>
+  <string name="power_on_text">Lülita seade sisse?</string>
+  <string name="power_on_yes_text">Jah</string>
+  <string name="power_on_no_text">Ei</string>
 </resources>
