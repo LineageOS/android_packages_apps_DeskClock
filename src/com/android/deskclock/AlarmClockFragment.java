@@ -167,7 +167,7 @@ public class AlarmClockFragment extends DeskClockFragment implements
     private View mUndoFrame;
 
     private Alarm mSelectedAlarm;
-    private static final String[] SEL_AUDIO_SRC = {/*"audio/*", */"application/ogg", "application/x-ogg"};
+    private static final String[] SEL_AUDIO_SRC = {"audio/*", "application/ogg", "application/x-ogg"};
     private static final int SEL_SRC_RINGTONE = 0;
     private static final int SEL_SRC_EXTERNAL = 1;
     private int mSelectSource = SEL_SRC_RINGTONE;
