@@ -46,4 +46,7 @@
   <!-- No profile selected label -->
   <string name="profile_no_selected">Nincs kiválasztva profil</string>
   <string name="alarm_modification_service_desc">Szolgáltatás a riasztások harmadik fél általi kezeléséhez.</string>
+  <string name="power_on_text">Bekapcsolja a készüléket?</string>
+  <string name="power_on_yes_text">Igen</string>
+  <string name="power_on_no_text">Nem</string>
 </resources>
