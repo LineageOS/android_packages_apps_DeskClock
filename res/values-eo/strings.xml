@@ -17,6 +17,7 @@
 <resources xmlns:xliff="urn:oasis:names:tc:xliff:document:1.2">
   <!-- Label shown on launcher icon -->
   <!-- Label for the this application displayed on-screen when this application must be represented to the user. -->
+  <string name="app_label">Horloĝo</string>
   <!-- Title for AlarmClock activity -->
   <!-- Label for the Alarms activity displayed on-screen when that activity must be represented to the user. -->
   <!-- Menu item on Alarm Clock screen: Add alarm -->
@@ -39,6 +40,7 @@
   <!-- Label on expanded alarm edit view. -->
   <!-- Setting labels on Set alarm screen: Set time  -->
   <!-- Label shown when user is setting up non-repeating alarm for tomorrow [CHAR LIMIT=15] -->
+  <string name="alarm_tomorrow">Morgaŭ</string>
   <!-- Label shown when user is setting up non-repeating alarm for later today [CHAR LIMIT=15] -->
   <!-- The text shown above the clock when alarm is alerting [CHAR LIMIT=10] -->
   <!-- The text shown as an option to dismiss an alerting alarm [CHAR LIMIT=5] -->
@@ -93,6 +95,7 @@
   <!-- Help activity name -->
   <!-- Settings activity name -->
   <!-- Label for the Settings activity displayed on-screen when that activity must be represented to the user. -->
+  <string name="settings">Agordoj</string>
   <!-- Setting title for changing the snooze duration. -->
   <!-- Auto silence preference title -->
   <!-- Auto silence summary string set based on the preference value. -->
@@ -107,6 +110,7 @@
   <!-- Done button when editing an alarm. -->
   <!-- Revert button when editing an alarm. -->
   <!-- Delete button when editing an alarm. -->
+  <string name="delete">Forigi</string>
   <!-- Setting title for changing the alarm volume. -->
   <!-- Summary for the alarm preference when silent is chosen. -->
   <!-- Text to display in the small text of the notification -->
@@ -141,6 +145,7 @@
   <!-- Describes the purpose of the button which provides a list of cities for the world clock settings -->
   <!-- Describes the purpose of the button which pops up a menu of setting choices -->
   <!-- Menu item on most screens to get to more settings -->
+  <string name="menu_item_settings">Agordoj</string>
   <!-- Menu item on most screens to get to the help information -->
   <!-- Menu item on clock screen to enter night mode. -->
   <!-- Menu item on Cities screen to sort by GMT offset -->
@@ -170,6 +175,7 @@
   <!-- Describes the purpose of the button to add a new timer -->
   <!-- Describes the purpose of the button to begin or continue running a timer -->
   <!-- Describes the purpose of the button to delete a timer. -->
+  <string name="timer_delete">Forigi</string>
   <!-- Talkback description for deleting a number. -->
   <!-- Describes the purpose of the button increase the remaining time on a timer by one minute. -->
   <!-- Like "timer_plus_one", but with 'minute' abbreviated for the notification. -->
@@ -177,6 +183,7 @@
   <!-- Describes the purpose of the button to stop and delete the timer. -->
   <!-- Describes the purpose of the button to return the timer to it's original starting value. -->
   <!-- Describes the purpose of the button to discard the current dialog values. Will also close the dialog if other time's exist -->
+  <string name="timer_cancel">Nuligi</string>
   <!-- Notification content shown when a timer has completed and has no more time remaining -->
   <!-- Label associated with a notification for a Timer -->
   <!-- Toast content shown when user attempts to create a new timer when there are already 4 timers -->
@@ -195,10 +202,13 @@
   <!-- Title in the preferences change the time zone for the user's home -->
   <!-- Title in a list dialog box to pick a time zone for the user's home -->
   <!-- Textual content of the button to discard the current dialog values and close the dialog -->
+  <string name="time_picker_cancel">Nuligi</string>
   <!-- Textual content of the button to update an alarm with the current dialog values -->
   <!--  place holder for am/pm label when it is not set -->
   <!-- add 00 as minutes to the time when pressing this button -->
+  <string name="time_picker_00_label">:00</string>
   <!-- add 30 as minutes to the time when pressing this button -->
+  <string name="time_picker_30_label">:30</string>
   <!-- Choices for timezones, must be kept in sync with timezone_values. CHAR LIMIT=25] -->
   <!-- Choices for timezones, must be kept in sync with timezone_values. -->
   <!-- Header in the preferences settings for the section pertaining to alarms -->
@@ -231,6 +241,7 @@
   <!-- Description of field showing the next alarm time in the clock page, for accessibility. -->
   <!-- Displays the number of alarms selected from the list of alarms. -->
   <!-- message used by the talkback accessebility app to say that something was deleted -->
+  <string name="deleted_message">Forigita</string>
   <!-- Alarm deletion confirmation message-->
   <!-- Timer deletion confirmation -->
   <!-- world clock deletion confirmation -->
