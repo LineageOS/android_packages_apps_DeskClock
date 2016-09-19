@@ -17,6 +17,7 @@
 <resources xmlns:xliff="urn:oasis:names:tc:xliff:document:1.2">
   <!-- Label shown on launcher icon -->
   <!-- Label for the this application displayed on-screen when this application must be represented to the user. -->
+  <string name="app_label">Horloĝo</string>
   <!-- Title for AlarmClock activity -->
   <!-- Label for the Alarms activity displayed on-screen when that activity must be represented to the user. -->
   <!-- Menu item on Alarm Clock screen: Add alarm -->
@@ -29,6 +30,7 @@
   <!-- Menu item on Alarm Clock screen: Show clock -->
   <!-- Menu item on Alarm Clock screen: Hide clock -->
   <!-- Setting label on Set alarm screen: Label -->
+  <string name="label">Etikedo</string>
   <!-- Default label to display for an alarm -->
   <!-- Preference category on Alarm Settings screen: Set alarm -->
   <!-- Also label for the old Alarms dialog activity displayed on-screen when that activity must be represented to the user. -->
@@ -39,7 +41,9 @@
   <!-- Label on expanded alarm edit view. -->
   <!-- Setting labels on Set alarm screen: Set time  -->
   <!-- Label shown when user is setting up non-repeating alarm for tomorrow [CHAR LIMIT=15] -->
+  <string name="alarm_tomorrow">Morgaŭ</string>
   <!-- Label shown when user is setting up non-repeating alarm for later today [CHAR LIMIT=15] -->
+  <string name="alarm_today">Hodiaŭ</string>
   <!-- The text shown above the clock when alarm is alerting [CHAR LIMIT=10] -->
   <!-- The text shown as an option to dismiss an alerting alarm [CHAR LIMIT=5] -->
   <!-- Button labels on the alarm dialog: Dismiss -->
@@ -47,6 +51,7 @@
   <!-- Alarm Alert screen: this message is shown after an alarm rung
          unattended for a number of minutes.  It tells the user that
          the alarm has been silenced.-->
+  <string name="alarm_missed_text"><xliff:g id="alarm_time">%s</xliff:g> - <xliff:g id="alarm_label">%s</xliff:g></string>
   <!-- The text shown after user snoozed an alerting alarm. The text will be shown
          together with the number of minutes in two separate lines. For example:
              Snoozed
@@ -79,6 +84,12 @@
   <!-- Alarm confirmation toast: Describes how long from now until
          alarm fires -->
   <!-- Alarm confirmation toast: days -->
+  <plurals name="days">
+    <!-- Duration for one day -->
+    <item quantity="one">1 tago</item>
+    <!-- Duration for more than one day -->
+    <item quantity="other"><xliff:g id="number" example="7">%s</xliff:g> tagoj</item>
+  </plurals>
   <!-- Alarm confirmation toast and timer notification: hours -->
   <!-- Alarm confirmation toast and timer notification: minutes -->
   <!-- Repeat options that appear under an alarm on main Alarm Clock
@@ -87,18 +98,48 @@
   <!-- Repeat options that appear under an alarm on main Alarm Clock
          screen to identify repetition schedule: concatenate days with
          this character, i.e. "Mon, Tue, Wed" -->
+  <string name="day_concat">", "</string>
   <!-- Appears at the top of the Clock Picker screen: Tell user to
          select a clock to display -->
   <!-- Label for analog clock gadget displayed on-screen when that gadget is represented to the user. -->
   <!-- Help activity name -->
   <!-- Settings activity name -->
   <!-- Label for the Settings activity displayed on-screen when that activity must be represented to the user. -->
+  <string name="settings">Agordoj</string>
   <!-- Setting title for changing the snooze duration. -->
+  <plurals name="snooze_duration">
+    <!-- Duration for one minute -->
+    <item quantity="one">1 minuto</item>
+    <!-- Duration for more than one minute -->
+    <item quantity="other"><xliff:g id="number" example="7">%s</xliff:g> minutoj</item>
+  </plurals>
+  <plurals name="snooze_picker_label">
+    <!-- Duration for one minute -->
+    <item quantity="one">minuto</item>
+    <!-- Duration for more than one minute -->
+    <item quantity="other">minutoj</item>
+  </plurals>
   <!-- Auto silence preference title -->
   <!-- Auto silence summary string set based on the preference value. -->
+  <plurals name="auto_silence_summary">
+    <!-- Duration for one minute -->
+    <item quantity="one">1 minuto</item>
+    <!-- Duration for more than one minute -->
+    <item quantity="other"><xliff:g id="formatted_number" example="7">%s</xliff:g> minutoj</item>
+  </plurals>
   <!-- Auto silence summary when turned off -->
+  <string name="auto_silence_never">Neniam</string>
   <!-- Entries listed in the ListPreference when invoking the auto silence
          preference. -->
+  <string-array name="auto_silence_entries">
+    <item>1 minuto</item>
+    <item>5 minutoj</item>
+    <item>10 minutoj</item>
+    <item>15 minutoj</item>
+    <item>20 minutoj</item>
+    <item>25 minutoj</item>
+    <item>Neniam</item>
+  </string-array>
   <!-- Values that are retrieved from the ListPreference. These must match
          the auto_silence_entries above. -->
   <!-- Week start day preference title. -->
@@ -107,6 +148,7 @@
   <!-- Done button when editing an alarm. -->
   <!-- Revert button when editing an alarm. -->
   <!-- Delete button when editing an alarm. -->
+  <string name="delete">Forigi</string>
   <!-- Setting title for changing the alarm volume. -->
   <!-- Summary for the alarm preference when silent is chosen. -->
   <!-- Text to display in the small text of the notification -->
@@ -120,6 +162,7 @@
   <!-- Title of the ringtone setting. -->
   <!-- Accessibility labels for Clock activity buttons -->
   <!-- Accessibility labels for alarm buttons -->
+  <string name="label_description">Etikedo</string>
   <!-- What to show the user if the weather widget exists but fails to
          respond. This is a sign of an error; if the weather widget is not
          present on the device, we show nothing at all. -->
@@ -141,8 +184,10 @@
   <!-- Describes the purpose of the button which provides a list of cities for the world clock settings -->
   <!-- Describes the purpose of the button which pops up a menu of setting choices -->
   <!-- Menu item on most screens to get to more settings -->
+  <string name="menu_item_settings">Agordoj</string>
   <!-- Menu item on most screens to get to the help information -->
   <!-- Menu item on clock screen to enter night mode. -->
+  <string name="menu_item_night_mode">Nokta reĝimo</string>
   <!-- Menu item on Cities screen to sort by GMT offset -->
   <!-- Menu item on Cities screen to sort by alphabetical order -->
   <!-- Label for selected cities in Cities list view -->
@@ -154,10 +199,15 @@
   <!-- Describes the purpose of the button to return the stopwatch to zero and remove the lap times. -->
   <!-- Describes the purpose of the button to share the stopwatch value.
          Also used as title for chooser when sharing stopwatch results. -->
+  <string name="sw_share_button">Konigi</string>
   <!-- Abbreviation for temporal hours [CHAR LIMIT=1] -->
   <!-- Abbreviation for temporal minutes [CHAR LIMIT=1] -->
   <!-- Abbreviation for temporal seconds [CHAR LIMIT=1] -->
+  <string name="seconds_label">s</string>
   <!-- Accessibility strings -->
+  <string name="hours_label_description">horoj</string>
+  <string name="minutes_label_description">minutoj</string>
+  <string name="seconds_label_description">sekundoj</string>
   <!--  Stopwatch share strings -->
   <!-- Sentence within the message created to share the total time recorded within the stopwatch -->
   <!-- Header within the message created to share a list of lap times (a new line is appended to this) -->
@@ -166,10 +216,17 @@
   <!-- Formatted stopwatch time for laps shared using the share button -->
   <!-- Label to enumerate the number of laps the user has counted -->
   <!-- Stopwatch accessibility strings -->
+  <plurals name="Nseconds_description">
+    <!-- 1 second -->
+    <item quantity="one">1 sekundo</item>
+    <!-- more -->
+    <item quantity="other"><xliff:g id="number" example="7">%d</xliff:g> sekundoj</item>
+  </plurals>
   <!-- timer strings -->
   <!-- Describes the purpose of the button to add a new timer -->
   <!-- Describes the purpose of the button to begin or continue running a timer -->
   <!-- Describes the purpose of the button to delete a timer. -->
+  <string name="timer_delete">Forigi</string>
   <!-- Talkback description for deleting a number. -->
   <!-- Describes the purpose of the button increase the remaining time on a timer by one minute. -->
   <!-- Like "timer_plus_one", but with 'minute' abbreviated for the notification. -->
@@ -177,6 +234,7 @@
   <!-- Describes the purpose of the button to stop and delete the timer. -->
   <!-- Describes the purpose of the button to return the timer to it's original starting value. -->
   <!-- Describes the purpose of the button to discard the current dialog values. Will also close the dialog if other time's exist -->
+  <string name="timer_cancel">Nuligi</string>
   <!-- Notification content shown when a timer has completed and has no more time remaining -->
   <!-- Label associated with a notification for a Timer -->
   <!-- Toast content shown when user attempts to create a new timer when there are already 4 timers -->
@@ -195,10 +253,13 @@
   <!-- Title in the preferences change the time zone for the user's home -->
   <!-- Title in a list dialog box to pick a time zone for the user's home -->
   <!-- Textual content of the button to discard the current dialog values and close the dialog -->
+  <string name="time_picker_cancel">Nuligi</string>
   <!-- Textual content of the button to update an alarm with the current dialog values -->
   <!--  place holder for am/pm label when it is not set -->
   <!-- add 00 as minutes to the time when pressing this button -->
+  <string name="time_picker_00_label">:00</string>
   <!-- add 30 as minutes to the time when pressing this button -->
+  <string name="time_picker_30_label">:30</string>
   <!-- Choices for timezones, must be kept in sync with timezone_values. CHAR LIMIT=25] -->
   <!-- Choices for timezones, must be kept in sync with timezone_values. -->
   <!-- Header in the preferences settings for the section pertaining to alarms -->
@@ -221,6 +282,7 @@
   <!-- screensaver settings strings -->
   <!-- Label for the screen saver activity displayed on-screen when that activity must be represented to the user. -->
   <!-- Title for check box to pick intensity of display diminuation during dream mode -->
+  <string name="night_mode_title">Nokta reĝimo</string>
   <!-- Describes intensity of display diminuation during dream mode -->
   <!-- Description of the down caret in the alarm alert screen to expand the alarm content to edit perspective. [CHAR LIMIT=NONE] -->
   <!-- Description of the up caret in the alarm alert screen to collapse the alarm content to summary perspective. [CHAR LIMIT=NONE] -->
@@ -231,6 +293,7 @@
   <!-- Description of field showing the next alarm time in the clock page, for accessibility. -->
   <!-- Displays the number of alarms selected from the list of alarms. -->
   <!-- message used by the talkback accessebility app to say that something was deleted -->
+  <string name="deleted_message">Forigita</string>
   <!-- Alarm deletion confirmation message-->
   <!-- Timer deletion confirmation -->
   <!-- world clock deletion confirmation -->
