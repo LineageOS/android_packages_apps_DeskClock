@@ -125,8 +125,8 @@ public class AlarmInitReceiver extends BroadcastReceiver {
         //     1. Normal mode: just get next firing alarm and pass it to alarm activity
         //     2. Encryption mode: We need to create an alarm as there is no firing alarm
         //        in this mode.
-        if (ACTION_POWER_OFF_ALARM.equals(action)) {
-            AlarmInstance instance = AlarmStateManager.getNextFiringAlarm(context);
+        if (Intent.ACTION_BOOT_COMPLETED.equals(action) && isAlarmBoot) {
+            AlarmInstance instance = AlarmInstance.getFirstAlarmInstance(cr);
             String cryptState = SystemProperties.get(DECRYPT_PROP);
             if (instance == null && (ENCRYPTING_STATE.equals(cryptState) ||
                     ENCRYPTED_STATE.equals(cryptState))) {
