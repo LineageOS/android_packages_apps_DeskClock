@@ -771,7 +771,7 @@ public final class AlarmStateManager extends BroadcastReceiver {
             alarmBuffer.add(Calendar.SECOND, ALARM_FIRE_BUFFER);
             if (currentTime.before(alarmBuffer)) {
                 setFiredState(context, instance);
-            } else if (!isAlarmBoot()) {
+            } else {
                 setMissedState(context, instance);
             }
         } else if (instance.mAlarmState == AlarmInstance.SNOOZE_STATE) {
