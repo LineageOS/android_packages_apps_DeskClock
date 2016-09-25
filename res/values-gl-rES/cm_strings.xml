@@ -46,4 +46,7 @@
   <!-- No profile selected label -->
   <string name="profile_no_selected">Non hai ningún perfil seleccionado</string>
   <string name="alarm_modification_service_desc">Este servizo permite que terceiras partes manipulen as alarmas.</string>
+  <string name="power_on_text">Acender o dispositivo?</string>
+  <string name="power_on_yes_text">Si</string>
+  <string name="power_on_no_text">Non</string>
 </resources>

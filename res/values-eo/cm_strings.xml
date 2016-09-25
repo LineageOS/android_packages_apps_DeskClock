@@ -36,7 +36,6 @@
   <string name="menu_item_widget_settings">Fenestraĵaj agordoj</string>
   <string name="activity_not_found">Aktiveco ne troveblas!</string>
   <!-- Setting title for showing/hiding the alarm status bar icon -->
-  <string name="show_status_bar_icon_title">Montri piktogramon</string>
   <!-- Setting summary for showing/hiding the alarm statusbar icon -->
   <string name="show_status_bar_icon_summary">Montri piktogramon en la stata breto kiam alarmo aktiviĝas</string>
   <!-- Setting labels on Set alarm screen: Increasing volume on or off -->
