@@ -74,6 +74,7 @@ public final class ClockFragment extends DeskClockFragment {
     private ListView mCityList;
     private String mDateFormat;
     private String mDateFormatForAccessibility;
+    private BroadcastReceiver mCitesChangedReceiver;
 
     /** The public no-arg constructor required by all fragments. */
     public ClockFragment() {}
@@ -119,6 +120,18 @@ public final class ClockFragment extends DeskClockFragment {
 
         mDigitalClock = (TextClock) mClockFrame.findViewById(R.id.digital_clock);
         mAnalogClock = mClockFrame.findViewById(R.id.analog_clock);
+
+        final IntentFilter filter = new IntentFilter();
+        filter.addAction(DataModel.ACTION_DIGITAL_WIDGET_CHANGED);
+        getActivity().registerReceiver(mCitesChangedReceiver = new BroadcastReceiver() {
+            @Override
+            public void onReceive(Context context, Intent intent) {
+                if (mCityAdapter != null) {
+                    mCityAdapter.notifyDataSetChanged();
+                }
+            }
+        }, filter);
+
         return fragmentView;
     }
 
@@ -181,6 +194,17 @@ public final class ClockFragment extends DeskClockFragment {
     }
 
     @Override
+    public void onDestroyView() {
+
+        if (mCitesChangedReceiver != null) {
+            getActivity().unregisterReceiver(mCitesChangedReceiver);
+            mCitesChangedReceiver = null;
+        }
+
+        super.onDestroyView();
+    }
+
+    @Override
     public void onFabClick(View view) {
         startActivity(new Intent(getActivity(), CitySelectionActivity.class));
     }
@@ -227,6 +251,11 @@ public final class ClockFragment extends DeskClockFragment {
      */
     private void refreshAlarm() {
         Utils.refreshAlarm(getActivity(), mClockFrame);
+
+        // Refresh the next alarm in header view
+        if (mCityAdapter != null) {
+            mCityAdapter.notifyDataSetChanged();
+        }
     }
 
     /**
