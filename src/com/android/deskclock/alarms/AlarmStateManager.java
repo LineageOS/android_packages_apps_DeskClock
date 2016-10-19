@@ -763,19 +763,23 @@ public final class AlarmStateManager extends BroadcastReceiver {
         final Calendar currentTime = getCurrentTime();
         for (AlarmInstance instance : AlarmInstance.getInstances(contentResolver, null)) {
             final Alarm alarm = Alarm.getAlarm(contentResolver, instance.mAlarmId);
-            final Calendar priorAlarmTime = alarm.getPreviousAlarmTime(instance.getAlarmTime());
-            final Calendar missedTTLTime = instance.getMissedTimeToLive();
-            if (currentTime.before(priorAlarmTime) || currentTime.after(missedTTLTime)) {
-                final Calendar oldAlarmTime = instance.getAlarmTime();
-                final Calendar newAlarmTime = alarm.getNextAlarmTime(currentTime);
-                final CharSequence oldTime = DateFormat.format("MM/dd/yyyy hh:mm a", oldAlarmTime);
-                final CharSequence newTime = DateFormat.format("MM/dd/yyyy hh:mm a", newAlarmTime);
-                LogUtils.i("A time change has caused an existing alarm scheduled to fire at %s to" +
-                        " be replaced by a new alarm scheduled to fire at %s", oldTime, newTime);
+            if (alarm != null) {
+                final Calendar priorAlarmTime = alarm.getPreviousAlarmTime(instance.getAlarmTime());
+                final Calendar missedTTLTime = instance.getMissedTimeToLive();
+                if (currentTime.before(priorAlarmTime) || currentTime.after(missedTTLTime)) {
+                    final Calendar oldAlarmTime = instance.getAlarmTime();
+                    final Calendar newAlarmTime = alarm.getNextAlarmTime(currentTime);
+                    final CharSequence oldTime = DateFormat.format("MM/dd/yyyy hh:mm a", oldAlarmTime);
+                    final CharSequence newTime = DateFormat.format("MM/dd/yyyy hh:mm a", newAlarmTime);
+                    LogUtils.i("A time change has caused an existing alarm scheduled to fire at %s to" +
+                            " be replaced by a new alarm scheduled to fire at %s", oldTime, newTime);
 
-                // The time change is so dramatic the AlarmInstance doesn't make any sense;
-                // remove it and schedule the new appropriate instance.
-                AlarmStateManager.setDismissState(context, instance);
+                    // The time change is so dramatic the AlarmInstance doesn't make any sense;
+                    // remove it and schedule the new appropriate instance.
+                    AlarmStateManager.setDismissState(context, instance);
+                } else {
+                    registerInstance(context, instance, false);
+                }
             } else {
                 registerInstance(context, instance, false);
             }
