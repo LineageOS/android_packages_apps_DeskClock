@@ -1,0 +1,21 @@
+{
+  "comments": [
+    {
+      "key": {
+        "uuid": "ff2e2bb8_d1a2609a",
+        "filename": "src/com/android/deskclock/provider/ClockDatabaseHelper.java",
+        "patchSetId": 1
+      },
+      "lineNbr": 103,
+      "author": {
+        "id": 12076
+      },
+      "writtenOn": "2016-11-03T12:52:50Z",
+      "side": 1,
+      "message": "getting an FC error due to this line: \nCaused by: android.database.sqlite.SQLiteException: duplicate column name: delete_after_use (code 1): , while compiling: CREATE TABLE alarm_templates (_id INTEGER PRIMARY KEY,hour INTEGER NOT NULL, minutes INTEGER NOT NULL, daysofweek INTEGER NOT NULL, enabled INTEGER NOT NULL, vibrate INTEGER NOT NULL, label TEXT NOT NULL, ringtone TEXT, delete_after_use INTEGER NOT NULL DEFAULT 0, delete_after_use INTEGER NOT NULL DEFAULT 0, incvol INTEGER NOT NULL DEFAULT 0, profile TEXT NOT NULL DEFAULT \u002700000000-0000-0000-0000-000000000000\u0027);",
+      "revId": "0179b3f49d4fd120aa8e9b2fb71c50478d53beb3",
+      "serverId": "1ec6b3db-b2c1-4fa4-84a2-4c7efe89ba71",
+      "unresolved": false
+    }
+  ]
+}
