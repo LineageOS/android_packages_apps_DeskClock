@@ -30,10 +30,11 @@
   <!-- Context Menu Item on Alarm Settings screen: Disable alarm -->
   <!-- Delete alarm confirmation dialog message. -->
   <!-- Menu item on Alarm Clock screen: Show clock -->
+  <string name="show_clock">Паказаць гадзіны</string>
   <!-- Menu item on Alarm Clock screen: Hide clock -->
+  <string name="hide_clock">Схаваць гадзіны</string>
   <!-- Setting label on Set alarm screen: Label -->
   <!-- Content description for alarm on/off switch in On state -->
-  <string name="on_switch">Uključeno</string>
   <!-- Content description for alarm on/off switch in Off state -->
   <!-- Default label to display for an alarm -->
   <!-- Preference category on Alarm Settings screen: Set alarm -->
@@ -42,7 +43,6 @@
   <!-- Setting labels on Set alarm screen: Repeat -->
   <!-- Setting labels on Set alarm screen: Select alarm ringtone  -->
   <!-- Title of default ringtone played when a timer expires. -->
-  <string name="default_timer_ringtone_title">Tajmer je istekao</string>
   <!-- Title of silent ringtone played when a timer expires. -->
   <!-- Label on expanded alarm edit view. -->
   <!-- Setting labels on Set alarm screen: Set time  -->
@@ -84,18 +84,14 @@
          7: days hours minutes
     -->
   <!-- Timer notification: how long from now until timer goes off. -->
-  <string name="timer_notifications_hours"><xliff:g id="HOURS">%1$s</xliff:g><xliff:g id="REMAINING"> %3$s</xliff:g></string>
-  <string name="timer_notifications_minutes"><xliff:g id="MINUTES">%2$s</xliff:g><xliff:g id="REMAINING"> %3$s</xliff:g></string>
   <!--
         Verb inflection to use for single time units remaining
         Ex. "1 minute remaining"
     -->
-  <string name="timer_remaining_single">preostalo</string>
   <!--
         Verb inflection to use for multiple time units remaining
         Ex. "2 minutes remaining"
     -->
-  <string name="timer_remaining_multiple">preostalo</string>
   <!-- Alarm confirmation toast: Describes how long from now until alarm fires -->
   <!-- Alarm confirmation toast: days -->
   <!-- Alarm confirmation toast and timer notification: hours -->
@@ -112,12 +108,11 @@
   <!-- Help activity name -->
   <!-- Settings activity name -->
   <!-- Label for the Settings activity displayed on-screen when that activity must be represented to the user. -->
+  <string name="settings">Налады</string>
   <!-- Setting title for changing the snooze duration. -->
   <!-- Setting title for changing the crescendo duration. -->
-  <string name="crescendo_duration_title">Postepeno povećavaj jačinu zvuka</string>
   <!-- Summary value for changing the crescendo duration to 0. -->
   <!-- Summary value for changing the crescendo duration. -->
-  <string name="crescendo_duration">Broj sekundi: <xliff:g id="NUMBER">%s</xliff:g></string>
   <!-- Setting label when changing the crescendo duration. -->
   <!-- Auto silence preference title -->
   <!-- Auto silence summary string set based on the preference value. -->
@@ -135,7 +130,6 @@
   <!-- Setting title for changing the alarm volume. -->
   <!-- Title for the silent ringtone. -->
   <!-- Title for ringtones that cannot be located by uri. -->
-  <string name="unknown_ringtone_title">Nepoznato</string>
   <!-- Text to display in the small text of the notification -->
   <!-- Text to display in the notification ticker and label -->
   <!-- Text to display in the notification when the alarm has been snoozed -->
@@ -168,6 +162,7 @@
   <!-- Describes the purpose of the button which provides a list of cities for the world clock settings -->
   <!-- Describes the purpose of the button which pops up a menu of setting choices -->
   <!-- Menu item on most screens to get to more settings -->
+  <string name="menu_item_settings">Налады</string>
   <!-- Menu item on most screens to get to the help information -->
   <!-- Menu item on clock screen to add world city. -->
   <!-- Menu item on clock screen to enter night mode. -->
@@ -185,7 +180,6 @@
   <!-- Stopwatch strings -->
   <!-- Describes the purpose of the button to begin running a stopwatch -->
   <!-- Describes the purpose of the button to pause a stopwatch. -->
-  <string name="sw_pause_button">Pauziraj</string>
   <!-- Describes the purpose of the button to record current the stopwatch value into the collection of lap times. -->
   <!-- Describes the purpose of the button to share the stopwatch value.
          Also used as title for chooser when sharing stopwatch results. -->
@@ -207,23 +201,18 @@
   <!-- Like "timer_plus_one", but with 'minute' abbreviated for the notification. -->
   <!-- Describes the purpose of the button to stop the timer. -->
   <!-- Describes the purpose of the button to stop all currently firing timers. [CHAR LIMIT=25] -->
-  <string name="timer_stop_all">Zaustavi sve tajmere</string>
   <!-- Describes the purpose of the button to return the timer to it's original starting value. -->
   <!-- Describes the purpose of the button to discard the current dialog values. Will also close the dialog if other time's exist -->
   <!-- Accessibility announcement when a timer is canceled. -->
-  <string name="timer_canceled">Tajmer otkazan</string>
   <!-- Notification content shown when a timer has completed and has no more time remaining -->
   <!--
         Notification content shown when multiple timers have completed and have no more time
         remaining. Arg is the number of timers. [CHAR LIMIT=25]
     -->
-  <string name="timer_multi_times_up">Isteklih tajmera: <xliff:g id="NUM_TIMERS">%d</xliff:g></string>
   <!-- Label associated with a notification for a Timer -->
   <!-- Toast content shown when user attempts to create a new timer when there are already 4 timers -->
   <!-- Describes the purpose of the notification button to pause the timer. [CHAR LIMIT=15] -->
-  <string name="timer_pause">Pauziraj</string>
   <!-- Describes the purpose of the notification button to reset all running timers. [CHAR LIMIT=31] -->
-  <string name="timer_reset_all">Poništi sve tajmere</string>
   <!-- Jocular content that user may append when sharing the lap times -->
   <!-- Title with the clock on the main page displaying the user's regular timezone (shows when automatic_home_clock enabled) -->
   <!-- Label for the Cities activity displayed on-screen when that activity must be represented to the user. -->
@@ -231,7 +220,6 @@
   <!-- Header in the preferences settings for the section pertaining to clocks on the main fragment -->
   <!-- Header for a Clock Dream Setting referring to choosing analog or digital style -->
   <!-- Title for preference to change date & time -->
-  <string name="open_date_settings">Promijenite datum i vrijeme</string>
   <!-- Entries listed in the ListPreference when invoking the clock style
          preference. -->
   <!-- Values that are retrieved from the ListPreference. These must match
@@ -249,21 +237,16 @@
         Accessibility string read when a city checkbox is checked.
         Ex. "Ann Arbor checked"
     -->
-  <string name="city_checked">Grad <xliff:g id="CITY_NAME">%s</xliff:g> potvrđen</string>
   <!--
         Accessibility string read when a city checkbox is unchecked.
         Ex. "Ann Arbor unchecked"
     -->
-  <string name="city_unchecked">Grad <xliff:g id="CITY_NAME">%s</xliff:g> nije potvrđen</string>
   <!-- Choices for timezones, must be kept in sync with timezone_values. CHAR LIMIT=25] -->
   <!-- Choices for timezones, must be kept in sync with timezone_values. -->
   <!-- Header in the preferences settings for the section pertaining to alarms -->
   <!-- Describes the service that processes actions originating from timer notifications. -->
-  <string name="timer_service_desc">Obrađuje radnje iz obavijesti tajmera.</string>
   <!-- Describes the service that processes actions originating from stopwatch notifications. -->
-  <string name="stopwatch_service_desc">Obrađuje radnje iz obavijesti štoperice.</string>
   <!-- Description for the paused stop watch -->
-  <string name="swn_paused">Pauzirana</string>
   <!-- Text instruction for dismiss alarm on alarm lock screen. The dismiss button will still
          be on the right even on RTL languages so please do not reverse this during
          translation. -->
@@ -274,14 +257,10 @@
          be on the left even on RTL languages so please do not reverse this during
          translation. -->
   <!-- Header in the preferences settings for the section pertaining to timers. -->
-  <string name="timer_settings">Tajmeri</string>
   <!-- Description for timer ringtone setting. -->
-  <string name="timer_ringtone_title">Melodija zvona za tajmer</string>
   <!-- Description when timer is stopped. -->
   <!-- Notification title when timer is paused. [CHAR LIMIT=25] -->
-  <string name="timer_paused">Tajmer pauziran</string>
   <!-- Notification title when multiple timers are paused. [CHAR LIMIT = 30] -->
-  <string name="timers_stopped">Pauziranih tajmera: <xliff:g id="NUMBER">%d</xliff:g></string>
   <!-- Notification text when multiple timers are paused. -->
   <!-- Notification title when at least one timer, of those in use, is counting down. -->
   <!-- Notification text when at least one timer, of those in use, is counting down. -->
@@ -348,7 +327,6 @@
      the stopwatch.
     [CHAR LIMIT=NONE]
     -->
-  <string name="stopwatch_paused">Štoperica pauzirana</string>
   <!-- String that represents that the user has successfully sent a voice command resetting
     the stopwatch.
     [CHAR LIMIT=NONE]
@@ -378,17 +356,14 @@
     no timers are defined.
     [CHAR LIMIT=NONE]
     -->
-  <string name="no_timers_exist">Nema tajmera</string>
   <!-- String that represents that the user attempted to control a timer with a voice action when
     more than one timer is defined.
     [CHAR LIMIT=NONE]
     -->
-  <string name="too_many_timers_exist">Postoji više od jednog tajmera</string>
   <!-- String that represents that the user attempted to control a timer with a voice action but
     the timer could not be located.
     [CHAR LIMIT=NONE]
     -->
-  <string name="timer_does_not_exist">Tajmer je uklonjen.</string>
   <!-- String that represents that the user has successfully created a timer through a voice action.
     [CHAR LIMIT=NONE]
     -->
