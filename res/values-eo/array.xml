@@ -63,7 +63,7 @@
     <item>H<xliff:g id="separator">=</xliff:g>Harare</item>
     <item>J<xliff:g id="separator">=</xliff:g>Johannesburg</item>
     <item>K<xliff:g id="separator">=</xliff:g>Kampala</item>
-    <item>K<xliff:g id="separator">=</xliff:g>Khartoum</item>
+    <item>Ĥ<xliff:g id="separator">=</xliff:g>Ĥartumo</item>
     <item>K<xliff:g id="separator">=</xliff:g>Kigali</item>
     <item>K<xliff:g id="separator">=</xliff:g>Kinshasa</item>
     <item>L<xliff:g id="separator">=</xliff:g>Lagos</item>
@@ -85,7 +85,7 @@
     <item>C<xliff:g id="separator">=</xliff:g>Cancun</item>
     <item>C<xliff:g id="separator">=</xliff:g>Caracas</item>
     <item>C<xliff:g id="separator">=</xliff:g>Cayman</item>
-    <item>C<xliff:g id="separator">=</xliff:g>Chicago</item>
+    <item>Ĉ<xliff:g id="separator">=</xliff:g>Ĉikago</item>
     <item>C<xliff:g id="separator">=</xliff:g>Costa Rica</item>
     <item>C<xliff:g id="separator">=</xliff:g>Curaçao</item>
     <item>D<xliff:g id="separator">=</xliff:g>Dawson Creek</item>
@@ -97,7 +97,7 @@
     <item>F<xliff:g id="separator">=</xliff:g>Fortaleza</item>
     <item>G<xliff:g id="separator">=</xliff:g>Grand Turk</item>
     <item>G<xliff:g id="separator">=</xliff:g>Grenada</item>
-    <item>G<xliff:g id="SEPARATOR">=</xliff:g>Guatemala City</item>
+    <item>G<xliff:g id="separator">=</xliff:g>Guatemala City</item>
     <item>G<xliff:g id="separator">=</xliff:g>Guyana</item>
     <item>H<xliff:g id="separator">=</xliff:g>Halifax</item>
     <item>H<xliff:g id="separator">=</xliff:g>Havana</item>
@@ -142,7 +142,7 @@
     <item>T<xliff:g id="separator">=</xliff:g>Toronto</item>
     <item>V<xliff:g id="separator">=</xliff:g>Vancouver</item>
     <item>W<xliff:g id="separator">=</xliff:g>Winnipeg</item>
-    <item><xliff:g id="SEPARATOR">=</xliff:g>Južni pol<xliff:g id="PHONETIC">:</xliff:g></item>
+    <item>S<xliff:g id="separator">=</xliff:g>South Pole<xliff:g id="phonetic">:</xliff:g></item>
     <item>L<xliff:g id="separator">=</xliff:g>Longyearbyen</item>
     <item>A<xliff:g id="separator">=</xliff:g>Almaty</item>
     <item>A<xliff:g id="separator">=</xliff:g>Amman</item>
@@ -160,9 +160,9 @@
     <item>G<xliff:g id="separator">=</xliff:g>Gaza</item>
     <item>H<xliff:g id="separator">=</xliff:g>Hebron</item>
     <item>H<xliff:g id="separator">=</xliff:g>Ho Chi Minh</item>
-    <item><xliff:g id="SEPARATOR">=</xliff:g>Hong Kong<xliff:g id="PHONETIC">:</xliff:g></item>
+    <item>H<xliff:g id="separator">=</xliff:g>Hong Kong<xliff:g id="phonetic">:</xliff:g></item>
     <item>I<xliff:g id="separator">=</xliff:g>Istanbul</item>
-    <item>J<xliff:g id="separator">=</xliff:g>Jakarta</item>
+    <item>Ĝ<xliff:g id="separator">=</xliff:g>Ĝakarto</item>
     <item>J<xliff:g id="separator">=</xliff:g>Jerusalem</item>
     <item>K<xliff:g id="separator">=</xliff:g>Kabul</item>
     <item>K<xliff:g id="separator">=</xliff:g>Karachi</item>
@@ -173,18 +173,18 @@
     <item>M<xliff:g id="separator">=</xliff:g>Manila</item>
     <item>M<xliff:g id="separator">=</xliff:g>Muscat</item>
     <item>P<xliff:g id="separator">=</xliff:g>Phnom Penh</item>
-    <item><xliff:g id="SEPARATOR">=</xliff:g>Pjongjang<xliff:g id="PHONETIC">:</xliff:g></item>
+    <item>P<xliff:g id="separator">=</xliff:g>Pyongyang<xliff:g id="phonetic">:</xliff:g></item>
     <item>Q<xliff:g id="separator">=</xliff:g>Qatar</item>
     <item>R<xliff:g id="separator">=</xliff:g>Rangoon</item>
     <item>R<xliff:g id="separator">=</xliff:g>Riyadh</item>
     <item>S<xliff:g id="separator">=</xliff:g>Saigon</item>
     <item>S<xliff:g id="separator">=</xliff:g>Seoul</item>
-    <item><xliff:g id="SEPARATOR">=</xliff:g>Šangaj<xliff:g id="PHONETIC">:</xliff:g></item>
+    <item>S<xliff:g id="separator">=</xliff:g>Shanghai<xliff:g id="phonetic">:</xliff:g></item>
     <item>S<xliff:g id="separator">=</xliff:g>Singapore</item>
-    <item><xliff:g id="SEPARATOR">=</xliff:g>Tajpeh<xliff:g id="PHONETIC">:</xliff:g></item>
+    <item>T<xliff:g id="separator">=</xliff:g>Taipei<xliff:g id="phonetic">:</xliff:g></item>
     <item>T<xliff:g id="separator">=</xliff:g>Tehran</item>
     <item>T<xliff:g id="separator">=</xliff:g>Tel Aviv</item>
-    <item><xliff:g id="SEPARATOR">=</xliff:g>Tokio<xliff:g id="PHONETIC">:</xliff:g></item>
+    <item>T<xliff:g id="separator">=</xliff:g>Tokyo<xliff:g id="phonetic">:</xliff:g></item>
     <item>U<xliff:g id="separator">=</xliff:g>Ulaanbaatar</item>
     <item>B<xliff:g id="separator">=</xliff:g>Bermuda</item>
     <item>C<xliff:g id="separator">=</xliff:g>Canary</item>
@@ -199,31 +199,31 @@
     <item>N<xliff:g id="separator">=</xliff:g>New South Wales</item>
     <item>P<xliff:g id="separator">=</xliff:g>Perth</item>
     <item>Q<xliff:g id="separator">=</xliff:g>Queensland</item>
-    <item>S<xliff:g id="separator">=</xliff:g>Sydney</item>
+    <item>S<xliff:g id="separator">=</xliff:g>Sidnejo</item>
     <item>V<xliff:g id="separator">=</xliff:g>Victoria</item>
     <item>N<xliff:g id="separator">=</xliff:g>Newfoundland</item>
     <item>S<xliff:g id="separator">=</xliff:g>Saskatchewan</item>
     <item>E<xliff:g id="separator">=</xliff:g>Easter Island</item>
-    <item>A<xliff:g id="separator">=</xliff:g>Amsterdam</item>
+    <item>A<xliff:g id="separator">=</xliff:g>Amsterdamo</item>
     <item>A<xliff:g id="separator">=</xliff:g>Andorra</item>
     <item>A<xliff:g id="separator">=</xliff:g>Athens</item>
     <item>B<xliff:g id="separator">=</xliff:g>Belfast</item>
     <item>B<xliff:g id="separator">=</xliff:g>Belgrade</item>
-    <item>B<xliff:g id="separator">=</xliff:g>Berlin</item>
-    <item>B<xliff:g id="separator">=</xliff:g>Bratislava</item>
-    <item>B<xliff:g id="separator">=</xliff:g>Brussels</item>
-    <item>B<xliff:g id="separator">=</xliff:g>Bucharest</item>
-    <item>B<xliff:g id="separator">=</xliff:g>Budapest</item>
+    <item>B<xliff:g id="separator">=</xliff:g>Berlino</item>
+    <item>B<xliff:g id="separator">=</xliff:g>Bratislavo</item>
+    <item>B<xliff:g id="separator">=</xliff:g>Bruselo</item>
+    <item>B<xliff:g id="separator">=</xliff:g>Bukareŝto</item>
+    <item>B<xliff:g id="separator">=</xliff:g>Budapeŝto</item>
     <item>C<xliff:g id="separator">=</xliff:g>Chisinau</item>
-    <item>C<xliff:g id="separator">=</xliff:g>Copenhagen</item>
+    <item>K<xliff:g id="separator">=</xliff:g>Kopenhago</item>
     <item>D<xliff:g id="separator">=</xliff:g>Dublin</item>
-    <item>G<xliff:g id="separator">=</xliff:g>Gibraltar</item>
+    <item>Ĝ<xliff:g id="separator">=</xliff:g>Ĝibraltaro</item>
     <item>H<xliff:g id="separator">=</xliff:g>Helsinki</item>
     <item>I<xliff:g id="separator">=</xliff:g>Isle of Man</item>
     <item>I<xliff:g id="separator">=</xliff:g>Istanbul</item>
     <item>K<xliff:g id="separator">=</xliff:g>Kiev</item>
     <item>L<xliff:g id="separator">=</xliff:g>Lisbon</item>
-    <item>L<xliff:g id="separator">=</xliff:g>London</item>
+    <item>L<xliff:g id="separator">=</xliff:g>Londono</item>
     <item>L<xliff:g id="separator">=</xliff:g>Luxembourg</item>
     <item>M<xliff:g id="separator">=</xliff:g>Madrid</item>
     <item>M<xliff:g id="separator">=</xliff:g>Malta</item>
@@ -231,8 +231,8 @@
     <item>M<xliff:g id="separator">=</xliff:g>Monaco</item>
     <item>M<xliff:g id="separator">=</xliff:g>Moscow</item>
     <item>O<xliff:g id="separator">=</xliff:g>Oslo</item>
-    <item>P<xliff:g id="separator">=</xliff:g>Paris</item>
-    <item>P<xliff:g id="separator">=</xliff:g>Prague</item>
+    <item>P<xliff:g id="separator">=</xliff:g>Parizo</item>
+    <item>P<xliff:g id="separator">=</xliff:g>Prago</item>
     <item>R<xliff:g id="separator">=</xliff:g>Riga</item>
     <item>R<xliff:g id="separator">=</xliff:g>Rome</item>
     <item>S<xliff:g id="separator">=</xliff:g>San Marino</item>
@@ -245,9 +245,9 @@
     <item>V<xliff:g id="separator">=</xliff:g>Vatican</item>
     <item>V<xliff:g id="separator">=</xliff:g>Vienna</item>
     <item>V<xliff:g id="separator">=</xliff:g>Vilnius</item>
-    <item>W<xliff:g id="separator">=</xliff:g>Warsaw</item>
-    <item>Z<xliff:g id="separator">=</xliff:g>Zagreb</item>
-    <item>Z<xliff:g id="separator">=</xliff:g>Zurich</item>
+    <item>V<xliff:g id="separator">=</xliff:g>Varsovio</item>
+    <item>Z<xliff:g id="separator">=</xliff:g>Zagrebo</item>
+    <item>Z<xliff:g id="separator">=</xliff:g>Zuriko</item>
     <item>A<xliff:g id="separator">=</xliff:g>Antananarivo</item>
     <item>M<xliff:g id="separator">=</xliff:g>Maldives</item>
     <item>M<xliff:g id="separator">=</xliff:g>Mauritius</item>
@@ -301,13 +301,13 @@
     <item>R<xliff:g id="separator">=</xliff:g>Reno</item>
     <item>B<xliff:g id="separator">=</xliff:g>Black Rock City</item>
     <item>D<xliff:g id="separator">=</xliff:g>Doha</item>
-    <item><xliff:g id="SEPARATOR">=</xliff:g>Peking<xliff:g id="PHONETIC">:</xliff:g></item>
+    <item>B<xliff:g id="separator">=</xliff:g>Beijing<xliff:g id="phonetic">:</xliff:g></item>
     <item>M<xliff:g id="separator">=</xliff:g>Mumbai</item>
     <item>D<xliff:g id="separator">=</xliff:g>Delhi</item>
-    <item><xliff:g id="SEPARATOR">=</xliff:g>Osaka<xliff:g id="PHONETIC">:</xliff:g></item>
+    <item>O<xliff:g id="separator">=</xliff:g>Osaka<xliff:g id="phonetic">:</xliff:g></item>
     <item>L<xliff:g id="separator">=</xliff:g>Lahore</item>
     <item>S<xliff:g id="separator">=</xliff:g>Sana\'a</item>
-    <item>B<xliff:g id="separator">=</xliff:g>Barcelona</item>
+    <item>B<xliff:g id="separator">=</xliff:g>Barcelono</item>
     <item>M<xliff:g id="separator">=</xliff:g>Munich</item>
     <item>M<xliff:g id="separator">=</xliff:g>Milan</item>
     <item>F<xliff:g id="separator">=</xliff:g>Frankfurt</item>
@@ -323,7 +323,7 @@
     <item>C<xliff:g id="separator">=</xliff:g>Cambridge</item>
     <item>K<xliff:g id="separator">=</xliff:g>Kirkland</item>
     <item>M<xliff:g id="separator">=</xliff:g>Madison</item>
-    <item><xliff:g id="SEPARATOR">=</xliff:g>Guangzou<xliff:g id="PHONETIC">:</xliff:g></item>
+    <item>G<xliff:g id="separator">=</xliff:g>Guangzhou<xliff:g id="phonetic">:</xliff:g></item>
     <item>H<xliff:g id="separator">=</xliff:g>Hyderabad</item>
     <item>R<xliff:g id="separator">=</xliff:g>Reston</item>
     <item>B<xliff:g id="separator">=</xliff:g>Belo Horizonte</item>
@@ -337,7 +337,7 @@
     <item>K<xliff:g id="separator">=</xliff:g>Kyiv</item>
     <item>S<xliff:g id="separator">=</xliff:g>St. Petersburg</item>
     <item>K<xliff:g id="separator">=</xliff:g>Kraków</item>
-    <item>W<xliff:g id="separator">=</xliff:g>Wroclaw</item>
+    <item>V<xliff:g id="separator">=</xliff:g>Vroclavo</item>
     <item>H<xliff:g id="separator">=</xliff:g>Hamburg</item>
     <item>O<xliff:g id="separator">=</xliff:g>Oulu</item>
     <item>H<xliff:g id="separator">=</xliff:g>Haifa</item>
