@@ -19,6 +19,7 @@ package com.android.deskclock;
 import android.Manifest;
 import android.app.Activity;
 import android.app.LoaderManager;
+import android.content.ActivityNotFoundException;
 import android.content.BroadcastReceiver;
 import android.content.ContentResolver;
 import android.content.Context;
@@ -78,6 +79,7 @@ public final class AlarmClockFragment extends DeskClockFragment implements
     public static final int REQUEST_CODE_PERMISSIONS = 11;
     public static final int REQUEST_CODE_EXTERN_AUDIO = 12;
     public static final int REQUEST_READ_EXTERNAL_STORAGE_PERMISSION = 13;
+    public static final int REQUEST_CODE_WRITE_SETTINGS = 14;
     private Uri mWaitUpdateUri;
 
     private static final String QUERY_URI = "content://com.android.deskclock/alarms";
@@ -288,6 +290,12 @@ public final class AlarmClockFragment extends DeskClockFragment implements
                     updateSelectAlarmRingToneUri(uri);
                 }
                 break;
+            case REQUEST_CODE_WRITE_SETTINGS:
+                if (Settings.System.canWrite(getContext())) {
+                    DataModel.getDataModel().setDefaultAlarmRingtoneUri(
+                            Uri.parse(new_default_ringtone_Uri));
+                }
+                break;
             default:
                 LogUtils.w("Unhandled request code in onActivityResult: " + requestCode);
         }
@@ -345,7 +353,15 @@ public final class AlarmClockFragment extends DeskClockFragment implements
 
             // Update the default ringtone for future new alarms.
             DataModel.getDataModel().setDefaultAlarmRingtoneUri(Uri.parse(new_default_ringtone_Uri));
-
+            if (!Settings.System.canWrite(context)) {
+                Intent settingIntent = new Intent(Settings.ACTION_MANAGE_WRITE_SETTINGS,
+                        Uri.parse("package:" + context.getPackageName()));
+                try {
+                    startActivityForResult(settingIntent, REQUEST_CODE_WRITE_SETTINGS);
+                } catch (ActivityNotFoundException e) {
+                    e.printStackTrace();
+                }
+            }
         }
     }
 
