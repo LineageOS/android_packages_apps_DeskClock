@@ -74,13 +74,11 @@ class ClockDatabaseHelper extends SQLiteOpenHelper {
 
     //fixed ringtone dialog not selected any list item when first enter
     private static final String DEFAULT_ALARM_1 = "(8, 30, 31, 0, 1, '', "
-            + "'content://media/internal/audio/media/9', 0, 0, "
-            + ProfileManager.NO_PROFILE.toString() + ");";
+            + "NULL, 0, 0, " + ProfileManager.NO_PROFILE.toString() + ");";
 
     // This creates a default alarm at 9:30 for every Sat,Sun
     private static final String DEFAULT_ALARM_2 = "(9, 00, 96, 0, 1, '', "
-            + "'content://media/internal/audio/media/9', 0, 0, "
-            + ProfileManager.NO_PROFILE.toString() + ");";
+            + "NULL, 0, 0, " + ProfileManager.NO_PROFILE.toString() + ");";
 
     // Database and table names
     static final String DATABASE_NAME = "alarms.db";
