@@ -17,31 +17,16 @@
 -->
 <resources xmlns:xliff="urn:oasis:names:tc:xliff:document:1.2">
   <!-- Settings summary for the volume buttons setting. -->
-  <string name="volume_buttons_summary">Premi laŭtecajn butonojn faros <xliff:g id="action">%s</xliff:g></string>
   <!-- Setting title for the flip action setting. -->
-  <string name="flip_action_title">Ago de renverso</string>
   <!-- Setting summary for the flip action setting. -->
-  <string name="flip_action_summary" product="tablet">Renversi la tabulon faros <xliff:g id="action">%s</xliff:g></string>
-  <string name="flip_action_summary" product="default">Renversi la telefonon faros <xliff:g id="action">%s</xliff:g></string>
   <!-- Setting title for the shake action setting. -->
-  <string name="shake_action_title">Ago de skuado</string>
   <!-- Setting summary for the shake action setting. -->
-  <string name="shake_action_summary" product="tablet">Skui la tabulon faros <xliff:g id="action">%s</xliff:g></string>
-  <string name="shake_action_summary" product="default">Skui la telefonon faros <xliff:g id="action">%s</xliff:g></string>
   <!-- Summary texts for shake and flip actions -->
-  <string name="action_summary_snooze">prokrasti alarmon</string>
-  <string name="action_summary_dismiss">rezigni alarmon</string>
-  <string name="action_summary_do_nothing">fari nenion</string>
   <!-- Setting title for accessing the cLock widget settings -->
-  <string name="menu_item_widget_settings">Fenestraĵaj agordoj</string>
-  <string name="activity_not_found">Aktiveco ne troveblas!</string>
   <!-- Setting title for showing/hiding the alarm status bar icon -->
   <!-- Setting summary for showing/hiding the alarm statusbar icon -->
-  <string name="show_status_bar_icon_summary">Montri piktogramon en la stata breto kiam alarmo aktiviĝas</string>
   <!-- Setting labels on Set alarm screen: Increasing volume on or off -->
-  <string name="alarm_increasing_volume">Pliigi la laŭtecon</string>
   <!-- Setting labels on Set alarm screen: Choose profile -->
-  <string name="profile_description">Profilo <xliff:g id="profile">%s</xliff:g></string>
   <!-- No profile selected label -->
-  <string name="profile_no_selected">Neniu profilo elektita</string>
+  <string name="power_on_yes_text">Jes</string>
 </resources>
