@@ -76,6 +76,11 @@ public class DefaultAlarmToneDialog extends DialogPreference {
         //reset to the default ringtone when the current ringtone has been deleted
         String defaultRingTone = mSharedPref.getString(DEFAULT_RING_TONE_URI_KEY,
                 DEFAULT_RING_TONE_DEFAULT);
+        Uri alert = DataModel.getDataModel().getDefaultAlarmRingtoneUri();
+        if (alert != null) {
+            defaultRingTone = alert.toString();
+        }
+
         if ("".equalsIgnoreCase(defaultRingTone)) {
             LogUtils.d(LogUtils.LOGTAG, "DefaultAlarmToneDialog: defaultRingTone is empty");
         } else if(!Utils.isRingToneUriValid(context, Uri.parse(defaultRingTone))) {
@@ -84,6 +89,10 @@ public class DefaultAlarmToneDialog extends DialogPreference {
             mSharedPref.edit().putString(DEFAULT_RING_TONE_NAME_KEY, displayNameString).apply();
             DataModel.getDataModel().setDefaultAlarmRingtoneUri(
                     Uri.parse(DEFAULT_RING_TONE_DEFAULT));
+        } else if (defaultRingTone != null) {
+            mSharedPref.edit().putString(DEFAULT_RING_TONE_URI_KEY, defaultRingTone).apply();
+            String displayNameString = DataModel.getDataModel().getAlarmRingtoneTitle(alert);
+            mSharedPref.edit().putString(DEFAULT_RING_TONE_NAME_KEY, displayNameString).apply();
         }
 
         if (mSharedPref.getString(DEFAULT_RING_TONE_NAME_KEY, null) == null) {
