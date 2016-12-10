@@ -289,7 +289,7 @@ public final class Alarm implements Parcelable, ClockContract.AlarmsColumns {
         if (c.isNull(RINGTONE_INDEX)) {
             // Should we be saving this with the current ringtone or leave it null
             // so it changes when user changes default ringtone?
-            alert = RingtoneManager.getDefaultUri(RingtoneManager.TYPE_ALARM);
+            alert = DataModel.getDataModel().getDefaultAlarmRingtoneUri();
         } else {
             alert = Uri.parse(c.getString(RINGTONE_INDEX));
         }

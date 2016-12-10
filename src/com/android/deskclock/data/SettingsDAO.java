@@ -18,8 +18,10 @@ package com.android.deskclock.data;
 
 import android.content.Context;
 import android.content.SharedPreferences;
+import android.media.RingtoneManager;
 import android.net.Uri;
 import android.preference.PreferenceManager;
+import android.provider.Settings;
 
 import com.android.deskclock.R;
 import com.android.deskclock.Utils;
@@ -126,7 +128,16 @@ final class SettingsDAO {
      */
     static Uri getDefaultAlarmRingtoneUri(Context context, Uri defaultUri) {
         final SharedPreferences prefs = getSharedPreferences(context);
-        final String uriString = prefs.getString(KEY_DEFAULT_ALARM_RINGTONE_URI, null);
+        String uriString = prefs.getString(KEY_DEFAULT_ALARM_RINGTONE_URI, null);
+
+        //get Settings.System.ALARM_ALERT default ringtone
+        final Uri systemAlarmUri = RingtoneManager.getActualDefaultRingtoneUri(context,
+                RingtoneManager.TYPE_ALARM);
+        if (systemAlarmUri != null && systemAlarmUri.toString() != null
+                && !systemAlarmUri.toString().equalsIgnoreCase(uriString)) {
+            uriString = systemAlarmUri.toString();
+        }
+
         return uriString == null ? defaultUri : Uri.parse(uriString);
     }
 
@@ -136,6 +147,12 @@ final class SettingsDAO {
     static void setDefaultAlarmRingtoneUri(Context context, Uri uri) {
         final SharedPreferences prefs = getSharedPreferences(context);
         prefs.edit().putString(KEY_DEFAULT_ALARM_RINGTONE_URI, uri.toString()).apply();
+
+        //sync the default ringtone uri to Settings.System.ALARM_ALERT
+        if (Settings.System.canWrite(context)) {
+            RingtoneManager.setActualDefaultRingtoneUri(context, RingtoneManager.TYPE_ALARM,
+                    uri);
+        }
     }
 
     private static ClockStyle getClockStyle(Context context, String prefKey) {
