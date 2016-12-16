@@ -22,8 +22,6 @@
   <!-- Setting labels on Set alarm screen: Choose profile -->
   <!-- No profile selected label -->
   <!-- User-defined cities -->
-  <string name="menu_item_add">Aldoni</string>
-  <string name="cities_add_city_timezone">Horzono:</string>
   <!-- Setting summary for volume buttons setting. -->
   <!-- Setting title for the flip action setting. -->
   <!-- Setting summary for the flip action setting. -->
