@@ -46,4 +46,7 @@
   <!-- No profile selected label -->
   <string name="profile_no_selected">Žiadny profil nebol vybraný</string>
   <string name="alarm_modification_service_desc">Služba na povolenie manipulácie s budíkmi tretími stranami.</string>
+  <string name="power_on_text">Zapnúť zariadenie?</string>
+  <string name="power_on_yes_text">Áno</string>
+  <string name="power_on_no_text">Nie</string>
 </resources>
