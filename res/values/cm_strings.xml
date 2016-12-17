@@ -18,4 +18,6 @@
     <!-- Setting title for accessing the cLock widget settings -->
     <string name="menu_item_widget_settings">Widget settings</string>
 
+    <string name="keep_screen_on_in_timer">Keep screen on</string>
+    <string name="keep_screen_on_in_timer_summary">When enabled screen will stay on while timer tab is active</string>
 </resources>

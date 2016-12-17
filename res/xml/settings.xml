@@ -116,6 +116,12 @@
             android:key="timer_crescendo_duration"
             android:title="@string/crescendo_duration_title"
             android:defaultValue="0"/>
+
+        <SwitchPreference
+            android:key="keep_screen_on_in_timer"
+            android:title="@string/keep_screen_on_in_timer"
+            android:summary="@string/keep_screen_on_in_timer_summary"
+            android:defaultValue="false" />
     </PreferenceCategory>
 
 </PreferenceScreen>
