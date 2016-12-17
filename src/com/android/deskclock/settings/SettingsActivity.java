@@ -72,6 +72,7 @@ public final class SettingsActivity extends BaseActivity {
     public static final String KEY_CLOCK_STYLE = "clock_style";
     public static final String KEY_HOME_TZ = "home_time_zone";
     public static final String KEY_AUTO_HOME_CLOCK = "automatic_home_clock";
+    public static final String KEY_KEEP_SCREEN_ON_IN_TIMER = "keep_screen_on_in_timer";
     public static final String KEY_DATE_TIME = "date_time";
     public static final String KEY_VOLUME_BUTTONS = "volume_button_setting";
     public static final String KEY_WEEK_START = "week_start";
@@ -176,6 +177,9 @@ public final class SettingsActivity extends BaseActivity {
                     final boolean autoHomeClockEnabled = ((SwitchPreference) pref).isChecked();
                     final Preference homeTimeZonePref = findPreference(KEY_HOME_TZ);
                     homeTimeZonePref.setEnabled(!autoHomeClockEnabled);
+                    break;
+                case KEY_KEEP_SCREEN_ON_IN_TIMER:
+                    final boolean keepScreenOnInTimerEnabled = ((SwitchPreference) pref).isChecked();
                     break;
                 case KEY_VOLUME_BUTTONS:
                     final ListPreference volumeButtonsPref = (ListPreference) pref;
@@ -302,6 +306,10 @@ public final class SettingsActivity extends BaseActivity {
             final Preference autoHomeClockPref = findPreference(KEY_AUTO_HOME_CLOCK);
             final boolean autoHomeClockEnabled = ((SwitchPreference) autoHomeClockPref).isChecked();
             autoHomeClockPref.setOnPreferenceChangeListener(this);
+
+            final Preference keepScreenOnInTimerPref = findPreference(KEY_KEEP_SCREEN_ON_IN_TIMER);
+            final boolean keepScreenOnInTimerEnabled = ((SwitchPreference) keepScreenOnInTimerPref).isChecked();
+            keepScreenOnInTimerPref.setOnPreferenceChangeListener(this);
 
             final ListPreference homeTimezonePref = (ListPreference) findPreference(KEY_HOME_TZ);
             homeTimezonePref.setEnabled(autoHomeClockEnabled);

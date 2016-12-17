@@ -20,6 +20,7 @@ import android.app.Fragment;
 import android.app.FragmentManager;
 import android.content.Context;
 import android.content.Intent;
+import android.content.SharedPreferences;
 import android.media.AudioManager;
 import android.os.Bundle;
 import android.support.annotation.VisibleForTesting;
@@ -36,6 +37,7 @@ import android.view.MenuItem;
 import android.view.View;
 import android.view.View.OnClickListener;
 import android.view.ViewGroup;
+import android.view.WindowManager.LayoutParams;
 import android.widget.ImageButton;
 import android.widget.ImageView;
 
@@ -48,8 +50,10 @@ import com.android.deskclock.alarms.AlarmStateManager;
 import com.android.deskclock.data.DataModel;
 import com.android.deskclock.events.Events;
 import com.android.deskclock.provider.Alarm;
+import com.android.deskclock.settings.SettingsActivity;
 import com.android.deskclock.stopwatch.StopwatchFragment;
 import com.android.deskclock.timer.TimerFragment;
+import com.android.deskclock.Utils;
 import com.android.deskclock.widget.RtlViewPager;
 
 import java.util.ArrayList;
@@ -404,6 +408,14 @@ public class DeskClock extends BaseActivity
             if (f != null) {
                 f.setFabAppearance();
                 f.setLeftRightButtonAppearance();
+            }
+
+            SharedPreferences prefs = Utils.getDefaultSharedPreferences(mContext);
+            if (getSelectedTab() == DeskClock.TIMER_TAB_INDEX
+                    && prefs.getBoolean(SettingsActivity.KEY_KEEP_SCREEN_ON_IN_TIMER, true)) {
+                getWindow().addFlags(LayoutParams.FLAG_KEEP_SCREEN_ON);
+            } else {
+                getWindow().clearFlags(LayoutParams.FLAG_KEEP_SCREEN_ON);
             }
         }
 
