@@ -45,4 +45,8 @@
   <string name="profile_description">設定檔「<xliff:g id="profile">%s</xliff:g>」</string>
   <!-- No profile selected label -->
   <string name="profile_no_selected">未選取設定檔</string>
+  <string name="alarm_modification_service_desc">允許第三方監控鬧鐘服務。</string>
+  <string name="power_on_text">啟動裝置電源？</string>
+  <string name="power_on_yes_text">是</string>
+  <string name="power_on_no_text">否</string>
 </resources>
