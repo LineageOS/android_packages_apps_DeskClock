@@ -15,6 +15,7 @@
      limitations under the License.
 -->
 <resources xmlns:xliff="urn:oasis:names:tc:xliff:document:1.2">
+  <!-- -->
   <!-- Label shown on launcher icon -->
   <!-- Label for the this application displayed on-screen when this application must be represented to the user. -->
   <string name="app_label">Auer</string>
@@ -119,6 +120,7 @@
          6:      hours minutes
          7: days hours minutes
     -->
+  <skip></skip>
   <!-- Timer notification: how long from now until timer goes off. -->
   <string-array name="timer_notifications">
     <item>Manner wéi eng Minutt iwwreg</item>
@@ -236,6 +238,7 @@
   <!-- Title of the ringtone setting. -->
   <string name="default_ringtone_setting_title">Als Standard-Schelltoun setzen</string>
   <!-- Accessibility labels for Clock activity buttons -->
+  <skip></skip>
   <string name="alarm_button_description">Weckeren</string>
   <string name="gallery_button_description">Galerie</string>
   <string name="music_button_description">Musek</string>
@@ -558,6 +561,7 @@
   <string name="world_day_of_week_label"> / <xliff:g id="label">%s</xliff:g></string>
   <!-- Description of field showing the next alarm time in the clock page, for accessibility. -->
   <string name="next_alarm_description">Nächste Wecker: <xliff:g id="alarm_time" example="Wed 8:00am">%s</xliff:g></string>
+  <string name="label_unlabeled"></string>
   <!-- Displays the number of alarms selected from the list of alarms. -->
   <string name="alarms_selected"><xliff:g id="alarms">%d</xliff:g> ausgewielt</string>
   <!-- message used by the talkback accessebility app to say that something was deleted -->
