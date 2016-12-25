@@ -18,6 +18,7 @@
      limitations under the License.
 -->
 <resources xmlns:xliff="urn:oasis:names:tc:xliff:document:1.2">
+  <!-- -->
   <!-- Label shown on launcher icon -->
   <!-- Label for the this application displayed on-screen when this application must be represented to the user. -->
   <string name="app_label">Reló</string>
@@ -128,6 +129,7 @@
          6:      hours minutes
          7: days hours minutes
     -->
+  <skip></skip>
   <!-- Timer notification: how long from now until timer goes off. -->
   <string name="timer_notifications_less_min">Queda menos de 1 minutu</string>
   <string name="timer_notifications_hours_minutes">Queden <xliff:g id="HOURS">%1$s</xliff:g> y <xliff:g id="MINUTES">%2$s</xliff:g></string>
@@ -275,6 +277,7 @@
   <!-- Title of the ringtone setting. -->
   <string name="default_ringtone_setting_title">Afitar tonu predetermináu</string>
   <!-- Accessibility labels for Clock activity buttons -->
+  <skip></skip>
   <string name="alarm_button_description">Alarmes</string>
   <string name="gallery_button_description">Galería</string>
   <string name="music_button_description">Música</string>
