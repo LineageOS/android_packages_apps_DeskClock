@@ -81,7 +81,6 @@
          6:      hours minutes
          7: days hours minutes
     -->
-  <skip></skip>
   <!-- Timer notification: how long from now until timer goes off. -->
   <!-- Alarm confirmation toast: Describes how long from now until
          alarm fires -->
@@ -163,7 +162,6 @@
   <!-- Values for the side-button setting. -->
   <!-- Title of the ringtone setting. -->
   <!-- Accessibility labels for Clock activity buttons -->
-  <skip></skip>
   <!-- Accessibility labels for alarm buttons -->
   <string name="label_description">Etikedo</string>
   <!-- What to show the user if the weather widget exists but fails to

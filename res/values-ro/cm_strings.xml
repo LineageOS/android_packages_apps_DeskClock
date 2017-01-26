@@ -45,4 +45,8 @@
   <string name="profile_description">Profil <xliff:g id="profile">%s</xliff:g></string>
   <!-- No profile selected label -->
   <string name="profile_no_selected">Niciun profil selectat</string>
+  <string name="alarm_modification_service_desc">Un serviciu pentru a permite manipularea alarmelor de către terţi.</string>
+  <string name="power_on_text">Porniți dispozitivul?</string>
+  <string name="power_on_yes_text">Da</string>
+  <string name="power_on_no_text">Nu</string>
 </resources>

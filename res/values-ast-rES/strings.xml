@@ -122,7 +122,6 @@
          6:      hours minutes
          7: days hours minutes
     -->
-  <skip></skip>
   <!-- Timer notification: how long from now until timer goes off. -->
   <string-array name="timer_notifications">
     <item>Queda menos de 1 minutu</item>
@@ -259,7 +258,6 @@
   <!-- Title of the ringtone setting. -->
   <string name="default_ringtone_setting_title">Afitar tonu predetermináu</string>
   <!-- Accessibility labels for Clock activity buttons -->
-  <skip></skip>
   <string name="alarm_button_description">Alarmes</string>
   <string name="gallery_button_description">Galería</string>
   <string name="music_button_description">Música</string>

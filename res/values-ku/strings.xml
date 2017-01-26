@@ -109,7 +109,6 @@
          6:      hours minutes
          7: days hours minutes
     -->
-  <skip></skip>
   <!-- Timer notification: how long from now until timer goes off. -->
   <string-array name="timer_notifications">
     <item>که‌متر له‌ یه‌ک خوله‌کی ماوه‌</item>
@@ -210,7 +209,6 @@
   <!-- Title of the ringtone setting. -->
   <string name="default_ringtone_setting_title">دیاریکردنی زه‌نگی بنێڕه‌ت</string>
   <!-- Accessibility labels for Clock activity buttons -->
-  <skip></skip>
   <string name="alarm_button_description">ئاگادارکردنه‌وه‌</string>
   <string name="gallery_button_description">پێشەنگا</string>
   <string name="music_button_description">مۆسیقا</string>

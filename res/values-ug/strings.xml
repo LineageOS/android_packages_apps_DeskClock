@@ -108,7 +108,6 @@
          6:      hours minutes
          7: days hours minutes
     -->
-  <skip></skip>
   <!-- Timer notification: how long from now until timer goes off. -->
   <string-array name="timer_notifications">
     <item>بىر مىنۇتمۇ قالمىدى</item>
@@ -208,7 +207,6 @@
   <!-- Title of the ringtone setting. -->
   <string name="default_ringtone_setting_title">كۆڭۈلدىكى قوڭغۇراق ئاۋاز تەڭشىكى</string>
   <!-- Accessibility labels for Clock activity buttons -->
-  <skip></skip>
   <string name="alarm_button_description">قوڭغۇراقلىق سائەت</string>
   <string name="gallery_button_description">سۈرەت يىغقۇچ</string>
   <string name="music_button_description">نەغمە</string>
