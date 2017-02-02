@@ -46,4 +46,7 @@
   <!-- No profile selected label -->
   <string name="profile_no_selected">Profil seçilmedi</string>
   <string name="alarm_modification_service_desc">Bu hizmet alarmların üçüncü taraflarca değiştirilmesine izin verir.</string>
+  <string name="power_on_text">Cihazı açtın mı?</string>
+  <string name="power_on_yes_text">Evet</string>
+  <string name="power_on_no_text">Hayır</string>
 </resources>
