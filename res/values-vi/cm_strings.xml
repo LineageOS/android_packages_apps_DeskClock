@@ -46,4 +46,7 @@
   <!-- No profile selected label -->
   <string name="profile_no_selected">Không có cấu hình được chọn</string>
   <string name="alarm_modification_service_desc">Dịch vụ cho phép các bên thứ ba thao tác với báo thức.</string>
+  <string name="power_on_text">Bật nguồn thiết bị?</string>
+  <string name="power_on_yes_text">Có</string>
+  <string name="power_on_no_text">Không</string>
 </resources>
