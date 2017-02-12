@@ -103,6 +103,8 @@ public class Utils {
     public static final String DOC_DOWNLOAD = "com.android.providers.downloads.documents";
     public static final String DOC_EXTERNAL = "com.android.externalstorage.documents";
     public static final String DOWNLOAD_CONTENT = "content://downloads/public_downloads";
+    /** passed back from RingtoneManager **/
+    public static final String DOC_MEDIA = "media";
     public static final String COLON = ":";
     public static final int ID_INDEX = 1;
 
@@ -785,6 +787,11 @@ public class Utils {
             }
         } else if (uri.getScheme().contentEquals("content")) {
             if (AlarmUtils.hasPermissionToDisplayRingtoneTitle(context, uri)) {
+                // If the uri is provided by RingtoneManager return true --> if file is not
+                // available RingtoneManager will play a default tone.
+                if (uri.getAuthority().equals(Utils.DOC_MEDIA)){
+                    return true;
+                }
                 //convert the following uri to the correct, otherwise raise permission exception
                 if (uri.getAuthority().equals(Utils.DOC_DOWNLOAD)) {
                     final String id = DocumentsContract.getDocumentId(uri);

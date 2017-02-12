@@ -133,6 +133,12 @@ public class AlarmUtils {
             return true;
         }
 
+        // If using ringtones from RingtoneManager stored on external sd-card return true
+        // even if their uri points to "content://media/external/*"
+        if (ringtoneUri.getAuthority().equals(Utils.DOC_MEDIA)){
+            return true;
+        }
+
         // If the ringtone is internal, return true;
         // external ringtones require the permission to see their title
         return ringtoneUri.toString().startsWith("content://media/internal/");
