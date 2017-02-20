@@ -46,4 +46,7 @@
   <!-- No profile selected label -->
   <string name="profile_no_selected">Жодний профіль не обраний</string>
   <string name="alarm_modification_service_desc">Служба, що дозволяє маніпуляції з сигналами будильника.</string>
+  <string name="power_on_text">Увімкнути пристрій?</string>
+  <string name="power_on_yes_text">Так</string>
+  <string name="power_on_no_text">Ні</string>
 </resources>
