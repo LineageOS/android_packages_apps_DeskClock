@@ -277,7 +277,7 @@ public final class Alarm implements Parcelable, ClockContract.AlarmsColumns {
         this.id = INVALID_ID;
         this.hour = hour;
         this.minutes = minutes;
-        this.vibrate = true;
+        this.vibrate = false;
         this.daysOfWeek = new DaysOfWeek(0);
         this.label = "";
         this.alert = DataModel.getDataModel().getDefaultAlarmRingtoneUri();
