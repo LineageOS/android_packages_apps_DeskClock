@@ -159,6 +159,7 @@
   <!-- Describes the purpose of the button to start the activity to add/edit/delete alarms -->
   <!-- Describes the purpose of the button which provides a list of cities for the world clock settings -->
   <!-- Describes the purpose of the button which pops up a menu of setting choices -->
+  <string name="button_menu">Más opciones</string>
   <!-- Menu item on most screens to get to more settings -->
   <!-- Menu item on most screens to get to the help information -->
   <!-- Menu item on clock screen to add world city. -->
@@ -200,6 +201,7 @@
   <!-- Describes the purpose of the button to stop all currently firing timers. [CHAR LIMIT=25] -->
   <!-- Describes the purpose of the button to return the timer to it's original starting value. -->
   <!-- Describes the purpose of the button to discard the current dialog values. Will also close the dialog if other time's exist -->
+  <string name="timer_cancel">Encaboxar</string>
   <!-- Accessibility announcement when a timer is canceled. -->
   <!-- Notification content shown when a timer has completed and has no more time remaining -->
   <!--
@@ -226,7 +228,9 @@
   <!-- Title in the preferences change the time zone for the user's home -->
   <!-- Title in a list dialog box to pick a time zone for the user's home -->
   <!-- Textual content of the button to discard the current dialog values and close the dialog -->
+  <string name="time_picker_cancel">Encaboxar</string>
   <!-- Textual content of the button to update an alarm with the current dialog values -->
+  <string name="time_picker_set">ACEUTAR</string>
   <!--  place holder for am/pm label when it is not set -->
   <!-- add 00 as minutes to the time when pressing this button -->
   <!-- add 30 as minutes to the time when pressing this button -->
@@ -273,7 +277,9 @@
   <!-- Select the ringtone as alarm -->
   <!-- Select the alarm from external device -->
   <!-- Ok for selection -->
+  <string name="alarm_select_ok">ACEUTAR</string>
   <!-- Cancel for selection -->
+  <string name="alarm_select_cancel">Encaboxar</string>
   <!-- slash between date and next alarm in the clock -->
   <!-- slash between date and next alarm in the clock -->
   <!-- Description of field showing the next alarm time in the clock page, for accessibility. -->
