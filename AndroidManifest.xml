@@ -44,6 +44,8 @@
     <uses-permission android:name="org.codeaurora.permission.POWER_ON_ALERT" />
     <uses-permission android:name="android.permission.WRITE_SETTINGS" />
     <uses-permission android:name="android.permission.WRITE_SECURE_SETTINGS" />
+    <uses-permission android:name="android.permission.READ_PRIVILEGED_PHONE_STATE" />
+    <uses-permission android:name="android.permission.READ_PHONE_STATE" />
 
     <application android:label="@string/app_label"
                  android:name=".DeskClockApplication"
