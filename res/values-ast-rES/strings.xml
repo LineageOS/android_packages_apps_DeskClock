@@ -41,9 +41,11 @@
   <!-- Setting labels on Set alarm screen: Vibration on or off -->
   <!-- Setting labels on Set alarm screen: Repeat -->
   <!-- Setting labels on Set alarm screen: Select alarm ringtone  -->
+  <string name="alert">Timbre d\'alarma</string>
   <!-- Title of default ringtone played when a timer expires. -->
   <!-- Title of silent ringtone played when a timer expires. -->
   <!-- Label on expanded alarm edit view. -->
+  <string name="ringtone">Timbre</string>
   <!-- Setting labels on Set alarm screen: Set time  -->
   <!-- Label shown when user is setting up non-repeating alarm for tomorrow [CHAR LIMIT=15] -->
   <!-- Label shown when user is setting up non-repeating alarm for later today [CHAR LIMIT=15] -->
@@ -107,6 +109,7 @@
   <!-- Help activity name -->
   <!-- Settings activity name -->
   <!-- Label for the Settings activity displayed on-screen when that activity must be represented to the user. -->
+  <string name="settings">Axustes</string>
   <!-- Setting title for changing the snooze duration. -->
   <!-- Setting title for changing the crescendo duration. -->
   <!-- Summary value for changing the crescendo duration to 0. -->
@@ -114,6 +117,12 @@
   <!-- Setting label when changing the crescendo duration. -->
   <!-- Auto silence preference title -->
   <!-- Auto silence summary string set based on the preference value. -->
+  <plurals name="auto_silence_summary">
+    <!-- Duration for one minute -->
+    <item quantity="one">1 minutu</item>
+    <!-- Duration for more than one minute -->
+    <item quantity="other"><xliff:g id="formatted_number" example="7">%s</xliff:g> minutos</item>
+  </plurals>
   <!-- Auto silence summary when turned off -->
   <!-- Entries listed in the ListPreference when invoking the auto silence
          preference. -->
@@ -138,8 +147,10 @@
   <!-- Entries listed in the setting for the side-button action. -->
   <!-- Values for the side-button setting. -->
   <!-- Title of the ringtone setting. -->
+  <string name="default_ringtone_setting_title">Afitar timbre por defeutu</string>
   <!-- Accessibility labels for Clock activity buttons -->
   <!-- Accessibility labels for alarm buttons -->
+  <string name="ringtone_description">Timbre</string>
   <!-- What to show the user if the weather widget exists but fails to
          respond. This is a sign of an error; if the weather widget is not
          present on the device, we show nothing at all. -->
@@ -147,6 +158,7 @@
          [CHAR LIMIT=NONE] -->
   <!-- String displayed as the alert summary while loading the alert name from
          the media player. [CHAR LIMIT=NONE] -->
+  <string name="loading_ringtone">Cargando timbre\u2026</string>
   <!-- A description for the DeskClock timer sound playback service.
          [CHAR LIMIT=NONE] -->
   <!-- Label on the main screen control used to set alarm [CHAR LIMIT=30]-->
@@ -161,6 +173,7 @@
   <!-- Describes the purpose of the button which pops up a menu of setting choices -->
   <string name="button_menu">Más opciones</string>
   <!-- Menu item on most screens to get to more settings -->
+  <string name="menu_item_settings">Axustes</string>
   <!-- Menu item on most screens to get to the help information -->
   <!-- Menu item on clock screen to add world city. -->
   <!-- Menu item on clock screen to enter night mode. -->
@@ -259,6 +272,7 @@
          translation. -->
   <!-- Header in the preferences settings for the section pertaining to timers. -->
   <!-- Description for timer ringtone setting. -->
+  <string name="timer_ringtone_title">Timbre del temporizador</string>
   <!-- Description when timer is stopped. -->
   <!-- Notification title when timer is paused. [CHAR LIMIT=25] -->
   <!-- Notification title when multiple timers are paused. [CHAR LIMIT = 30] -->
@@ -275,6 +289,7 @@
   <!-- Toast content when an alarm was deleted  -->
   <!-- Select the source of the alarm -->
   <!-- Select the ringtone as alarm -->
+  <string name="alarm_select_ringtone">Timbre</string>
   <!-- Select the alarm from external device -->
   <!-- Ok for selection -->
   <string name="alarm_select_ok">ACEUTAR</string>
@@ -436,6 +451,8 @@
   <!-- Setting summary for the shake action setting. -->
   <!-- Summary texts for shake and flip actions -->
   <!-- Label on expanded alarm edit view indicating the ringtone is custom. -->
+  <string name="custom_ringtone">TImbre personalizáu</string>
   <!-- Ringtone selection default" -->
+  <string name="ringtone_default">"Timbre por defeutu"</string>
   <!--used for prompt to user storage permission status-->
 </resources>
