@@ -134,7 +134,8 @@ final class SettingsDAO {
         final Uri systemAlarmUri = RingtoneManager.getActualDefaultRingtoneUri(context,
                 RingtoneManager.TYPE_ALARM);
         if (systemAlarmUri != null && systemAlarmUri.toString() != null
-                && !systemAlarmUri.toString().equalsIgnoreCase(uriString)) {
+                && !systemAlarmUri.toString().equalsIgnoreCase(uriString)
+                && Utils.isRingToneUriValid(context, systemAlarmUri)) {
             uriString = systemAlarmUri.toString();
         }
 
