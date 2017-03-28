@@ -96,8 +96,11 @@ public final class AlarmTimeAdapter extends RecyclerView.Adapter<AlarmTimeViewHo
 
         //reset to the default ringtone when the current ringtone has been deleted
         if (!Utils.isRingToneUriValid(mContext, alarm.alert)) {
-            alarm.alert = Uri.parse(DefaultAlarmToneDialog.DEFAULT_RING_TONE_DEFAULT);
-            mAlarmTimeClickHandler.mAlarmUpdateHandler.asyncUpdateAlarm(alarm, false, true);
+            Uri defaultUri = Uri.parse(DefaultAlarmToneDialog.DEFAULT_RING_TONE_DEFAULT);
+            if (defaultUri != null && !defaultUri.equals(alarm.alert)) {
+                alarm.alert = defaultUri;
+                mAlarmTimeClickHandler.mAlarmUpdateHandler.asyncUpdateAlarm(alarm, false, true);
+            }
         }
 
         final AlarmInstance alarmInstance = alarm.canPreemptivelyDismiss()
