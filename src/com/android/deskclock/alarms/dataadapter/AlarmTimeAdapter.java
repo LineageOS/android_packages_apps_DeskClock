@@ -31,6 +31,7 @@ import com.android.deskclock.R;
 import com.android.deskclock.Utils;
 import com.android.deskclock.alarms.AlarmTimeClickHandler;
 import com.android.deskclock.alarms.ScrollHandler;
+import com.android.deskclock.data.DataModel;
 import com.android.deskclock.provider.Alarm;
 import com.android.deskclock.provider.AlarmInstance;
 import com.android.deskclock.settings.DefaultAlarmToneDialog;
@@ -96,7 +97,7 @@ public final class AlarmTimeAdapter extends RecyclerView.Adapter<AlarmTimeViewHo
 
         //reset to the default ringtone when the current ringtone has been deleted
         if (!Utils.isRingToneUriValid(mContext, alarm.alert)) {
-            Uri defaultUri = Uri.parse(DefaultAlarmToneDialog.DEFAULT_RING_TONE_DEFAULT);
+            Uri defaultUri = DataModel.getDataModel().getDefaultAlarmRingtoneUri();
             if (defaultUri != null && !defaultUri.equals(alarm.alert)) {
                 alarm.alert = defaultUri;
                 mAlarmTimeClickHandler.mAlarmUpdateHandler.asyncUpdateAlarm(alarm, false, true);
