@@ -179,6 +179,7 @@
   <!-- Menu item on clock screen to enter night mode. -->
   <!-- Menu item on Cities screen to sort by GMT offset -->
   <!-- Menu item on Cities screen to sort by alphabetical order -->
+  <string name="cities_add_gps_not_available">GPS non disponible</string>
   <!-- Label for selected cities in Cities list view -->
   <!-- Stopwatch and Timer shared strings -->
   <!-- Describes the purpose of the button to resume running timer. [CHAR LIMIT=15] -->
@@ -409,6 +410,7 @@
     but the city they specified wasn't listed in the database.
     [CHAR LIMIT=NONE]
     -->
+  <string name="the_city_you_specified_is_not_available">La ciudá qu\'especifiquesti nun ta disponible</string>
   <!-- String that represents that the user attempted to add a world clock through a voice action
     but the city they specified is already added to the list.
     [CHAR LIMIT=NONE]
