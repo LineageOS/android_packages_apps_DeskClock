@@ -22,6 +22,30 @@
       "revId": "d6b4ff8d859bb7e029782462342321b234a305e8",
       "serverId": "1ec6b3db-b2c1-4fa4-84a2-4c7efe89ba71",
       "unresolved": false
+    },
+    {
+      "key": {
+        "uuid": "5a4e6583_a295c7e5",
+        "filename": "/COMMIT_MSG",
+        "patchSetId": 4
+      },
+      "lineNbr": 10,
+      "author": {
+        "id": 13589
+      },
+      "writtenOn": "2017-04-21T18:18:02Z",
+      "side": 1,
+      "message": "Weird, looks like my second commit\u0027s Change Id changed since I wrote this one. Updating.",
+      "parentUuid": "5a4e6583_82f3eb72",
+      "range": {
+        "startLine": 10,
+        "startChar": 4,
+        "endLine": 10,
+        "endChar": 52
+      },
+      "revId": "d6b4ff8d859bb7e029782462342321b234a305e8",
+      "serverId": "1ec6b3db-b2c1-4fa4-84a2-4c7efe89ba71",
+      "unresolved": false
     }
   ]
 }
