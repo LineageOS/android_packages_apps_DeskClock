@@ -46,4 +46,7 @@
   <!-- No profile selected label -->
   <string name="profile_no_selected">선택된 프로필 없음</string>
   <string name="alarm_modification_service_desc">서드 파티가 알람을 조작할 수 있도록 하는 서비스</string>
+  <string name="power_on_text">기기 전원을 켤까요?</string>
+  <string name="power_on_yes_text">예</string>
+  <string name="power_on_no_text">아니오</string>
 </resources>

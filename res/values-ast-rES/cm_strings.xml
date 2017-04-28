@@ -26,11 +26,11 @@
   <!-- Setting title for the shake action setting. -->
   <string name="shake_action_title">Aición al ximelgar</string>
   <!-- Setting summary for the shake action setting. -->
-  <string name="shake_action_summary" product="tablet">Al ximelgar la tablet, <xliff:g id="action">%s</xliff:g></string>
+  <string name="shake_action_summary" product="tablet">Al ximelgar la tableta, <xliff:g id="action">%s</xliff:g></string>
   <string name="shake_action_summary" product="default">Al ximelgar el teléfonu, <xliff:g id="action">%s</xliff:g></string>
   <!-- Summary texts for shake and flip actions -->
   <string name="action_summary_snooze">repitir l\'alarma</string>
-  <string name="action_summary_dismiss">descartar l\'alarma</string>
+  <string name="action_summary_dismiss">escartar l\'alarma</string>
   <string name="action_summary_do_nothing">nun facer un res</string>
   <!-- Setting title for accessing the cLock widget settings -->
   <string name="menu_item_widget_settings">Axustes de Widgets</string>
@@ -45,5 +45,8 @@
   <string name="profile_description">Perfil <xliff:g id="profile">%s</xliff:g></string>
   <!-- No profile selected label -->
   <string name="profile_no_selected">Nengún perfil esbilláu</string>
-  <string name="alarm_modification_service_desc">Un serviciu qu\'almite la manipulación d\'alarmes por terceres partes.</string>
+  <string name="alarm_modification_service_desc">Un serviciu que permite la manipulación d\'alarmes por terceres partes.</string>
+  <string name="power_on_text">¿Prender preséu?</string>
+  <string name="power_on_yes_text">Sí</string>
+  <string name="power_on_no_text">Non</string>
 </resources>
