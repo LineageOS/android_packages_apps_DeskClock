@@ -165,7 +165,7 @@ public final class AlarmTimeClickHandler {
         final Intent dismissIntent = AlarmStateManager.createStateChangeIntent(
                 mContext, AlarmStateManager.ALARM_DISMISS_TAG, alarmInstance,
                 AlarmInstance.PREDISMISSED_STATE);
-        mContext.startService(dismissIntent);
+        mContext.sendBroadcast(dismissIntent);
         mAlarmUpdateHandler.showPredismissToast(alarmInstance);
     }
 
