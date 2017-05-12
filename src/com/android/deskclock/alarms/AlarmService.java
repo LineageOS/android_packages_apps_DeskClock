@@ -120,6 +120,14 @@ public class AlarmService extends Service {
     private int mFlipAction;
     private int mShakeAction;
 
+    public static void startAlarm(Context context, AlarmInstance instance) {
+        final Intent intent = AlarmInstance.createIntent(context, AlarmService.class, instance.mId)
+                .setAction(AlarmStateManager.CHANGE_STATE_ACTION);
+        intent.putExtra(AlarmStateManager.ALARM_STATE_EXTRA, AlarmInstance.FIRED_STATE);
+        AlarmAlertWakeLock.acquireCpuWakeLock(context);
+        context.startService(intent);
+    }
+
     private void startAlarm(AlarmInstance instance) {
         LogUtils.v("AlarmService.start with instance: " + instance.mId);
         if (mCurrentAlarm != null) {
@@ -128,6 +136,8 @@ public class AlarmService extends Service {
         }
 
         AlarmAlertWakeLock.acquireCpuWakeLock(this);
+
+        Events.sendEvent(R.string.category_alarm, R.string.action_fire, 0);
 
         mCurrentAlarm = instance;
         AlarmNotifications.showAlarmNotification(this, mCurrentAlarm);
@@ -216,28 +226,22 @@ public class AlarmService extends Service {
         final long instanceId = AlarmInstance.getId(intent.getData());
         switch (intent.getAction()) {
             case AlarmStateManager.CHANGE_STATE_ACTION:
-                AlarmStateManager.handleIntent(this, intent);
-
-                // If state is changed to firing, actually fire the alarm!
-                final int alarmState = intent.getIntExtra(AlarmStateManager.ALARM_STATE_EXTRA, -1);
-                if (alarmState == AlarmInstance.FIRED_STATE) {
-                    final ContentResolver cr = this.getContentResolver();
-                    final AlarmInstance instance = AlarmInstance.getInstance(cr, instanceId);
-                    if (instance == null) {
-                        LogUtils.e("No instance found to start alarm: %d", instanceId);
-                        if (mCurrentAlarm != null) {
-                            // Only release lock if we are not firing alarm
-                            AlarmAlertWakeLock.releaseCpuLock();
-                        }
-                        break;
+                final ContentResolver cr = this.getContentResolver();
+                final AlarmInstance instance = AlarmInstance.getInstance(cr, instanceId);
+                if (instance == null) {
+                    LogUtils.e("No instance found to start alarm: %d", instanceId);
+                    if (mCurrentAlarm != null) {
+                        // Only release lock if we are not firing alarm
+                        AlarmAlertWakeLock.releaseCpuLock();
                     }
-
-                    if (mCurrentAlarm != null && mCurrentAlarm.mId == instanceId) {
-                        LogUtils.e("Alarm already started for instance: %d", instanceId);
-                        break;
-                    }
-                    startAlarm(instance);
+                    break;
                 }
+
+                if (mCurrentAlarm != null && mCurrentAlarm.mId == instanceId) {
+                    LogUtils.e("Alarm already started for instance: %d", instanceId);
+                    break;
+                }
+                startAlarm(instance);
                 break;
             case STOP_ALARM_ACTION:
                 if (mCurrentAlarm != null && mCurrentAlarm.mId != instanceId) {
@@ -282,7 +286,7 @@ public class AlarmService extends Service {
             }
 
             if (state != TelephonyManager.CALL_STATE_IDLE && state != mPhoneCallState) {
-                startService(AlarmStateManager.createStateChangeIntent(AlarmService.this,
+                sendBroadcast(AlarmStateManager.createStateChangeIntent(AlarmService.this,
                         "AlarmService", mCurrentAlarm, AlarmInstance.MISSED_STATE));
             }
         }
@@ -429,13 +433,13 @@ public class AlarmService extends Service {
         switch (action) {
             case ALARM_SNOOZE:
                 // Setup Snooze Action
-                startService(AlarmStateManager.createStateChangeIntent(this,
+                sendBroadcast(AlarmStateManager.createStateChangeIntent(this,
                         AlarmStateManager.ALARM_SNOOZE_TAG, mCurrentAlarm,
                         AlarmInstance.SNOOZE_STATE));
                 break;
             case ALARM_DISMISS:
                 // Setup Dismiss Action
-                startService(AlarmStateManager.createStateChangeIntent(this,
+                sendBroadcast(AlarmStateManager.createStateChangeIntent(this,
                         AlarmStateManager.ALARM_DISMISS_TAG, mCurrentAlarm,
                         AlarmInstance.DISMISSED_STATE));
                 break;
