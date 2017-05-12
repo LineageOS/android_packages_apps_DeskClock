@@ -739,17 +739,14 @@ final class TimerModel {
      * displayed whether the application is open or not.
      */
     private void updateHeadsUpNotification() {
-        // Nothing can be done with the heads-up notification without a valid service reference.
-        if (mService == null) {
-            return;
-        }
-
         final List<Timer> expired = getExpiredTimers();
 
         // If no expired timers exist, stop the service (which cancels the foreground notification).
         if (expired.isEmpty()) {
-            mService.stopSelf();
-            mService = null;
+            if (mService != null) {
+                mService.stopSelf();
+                mService = null;
+            }
             return;
         }
 
@@ -820,7 +817,9 @@ final class TimerModel {
         // Update the notification.
         final Notification notification = builder.build();
         final int notificationId = mNotificationModel.getExpiredTimerNotificationId();
-        mService.startForeground(notificationId, notification);
+        if (mService != null) {
+            mService.startForeground(notificationId, notification);
+        }
     }
 
     /**

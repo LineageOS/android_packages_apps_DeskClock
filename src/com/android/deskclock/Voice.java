@@ -16,10 +16,8 @@
 
 package com.android.deskclock;
 
-import android.annotation.TargetApi;
 import android.app.Activity;
 import android.app.VoiceInteractor;
-import android.os.Build;
 
 /**
  * Notifies Voice Interactor about whether the action
@@ -34,10 +32,6 @@ public final class Voice {
 
     public static void setDelegate(Delegate delegate) {
         sDelegate = delegate;
-    }
-
-    public static Delegate getDelegate() {
-        return sDelegate;
     }
 
     public static void notifySuccess(Activity activity, String message) {
@@ -58,7 +52,6 @@ public final class Voice {
         void notifyFailure(VoiceInteractor vi, String message);
     }
 
-    @TargetApi(Build.VERSION_CODES.M)
     private static class VoiceInteractorDelegate implements Delegate {
         @Override
         public void notifySuccess(VoiceInteractor vi, String message) {
