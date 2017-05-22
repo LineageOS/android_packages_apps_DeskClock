@@ -1082,7 +1082,7 @@ public final class AlarmStateManager extends BroadcastReceiver {
                 AlarmInstance instance) {
             Intent stateChangePowerOffIntent = createStateChangeIntent(context, ALARM_MANAGER_TAG,
                     instance, AlarmInstance.POWER_OFF_ALARM_STATE);
-            PendingIntent pendingPowerOffIntent = PendingIntent.getService(context,
+            PendingIntent pendingPowerOffIntent = PendingIntent.getBroadcast(context,
                     instance.hashCode(), stateChangePowerOffIntent, PendingIntent.FLAG_ONE_SHOT);
 
             final AlarmManager am = (AlarmManager) context.getSystemService(Context.ALARM_SERVICE);
@@ -1093,7 +1093,7 @@ public final class AlarmStateManager extends BroadcastReceiver {
         @Override
         public void cancelSchedulePowerOffAlarmInstanceStateChange(Context context,
                 AlarmInstance instance) {
-            PendingIntent pendingPowerOffIntent = PendingIntent.getService(context,
+            PendingIntent pendingPowerOffIntent = PendingIntent.getBroadcast(context,
                     instance.hashCode(),
                     createStateChangeIntent(context, ALARM_MANAGER_TAG, instance, null),
                     PendingIntent.FLAG_ONE_SHOT);

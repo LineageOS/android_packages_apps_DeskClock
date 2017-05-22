@@ -129,7 +129,7 @@ public class AlarmService extends Service {
 
             if (AlarmService.this.getResources().getBoolean(R.bool.config_silent_during_call)
                     && state != TelephonyManager.CALL_STATE_IDLE) {
-                startService(AlarmStateManager.createStateChangeIntent(AlarmService.this,
+                sendBroadcast(AlarmStateManager.createStateChangeIntent(AlarmService.this,
                         "AlarmService", mCurrentAlarm, AlarmInstance.MISSED_STATE));
                 return;
             }
@@ -455,13 +455,13 @@ public class AlarmService extends Service {
                 // Setup Snooze Action
                 Intent snoozeIntent = AlarmStateManager.createStateChangeIntent(this, "SNOOZE_TAG",
                         mCurrentAlarm, AlarmInstance.SNOOZE_STATE);
-                startService(snoozeIntent);
+                sendBroadcast(snoozeIntent);
                 break;
             case ALARM_DISMISS:
                 // Setup Dismiss Action
                 Intent dismissIntent = AlarmStateManager.createStateChangeIntent(this,
                         "DISMISS_TAG", mCurrentAlarm, AlarmInstance.DISMISSED_STATE);
-                startService(dismissIntent);
+                sendBroadcast(dismissIntent);
                 break;
             case ALARM_NO_ACTION:
             default:
