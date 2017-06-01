@@ -21,6 +21,7 @@
   <!-- -->
   <!-- Label shown on launcher icon -->
   <!-- Label for the this application displayed on-screen when this application must be represented to the user. -->
+  <string name="app_label">Reló</string>
   <!-- Title for AlarmClock activity -->
   <!-- Label for the Alarms activity displayed on-screen when that activity must be represented to the user. -->
   <!-- Menu item on Alarm Clock screen: Add alarm -->
@@ -179,6 +180,7 @@
   <!-- Menu item on clock screen to enter night mode. -->
   <!-- Menu item on Cities screen to sort by GMT offset -->
   <!-- Menu item on Cities screen to sort by alphabetical order -->
+  <string name="cities_add_gps_no_results">La consulta GPS nun devolvió dengún resultáu d\'allugamientu</string>
   <string name="cities_add_gps_not_available">GPS non disponible</string>
   <!-- Label for selected cities in Cities list view -->
   <!-- Stopwatch and Timer shared strings -->
