@@ -31,7 +31,7 @@
   <!-- Summary texts for shake and flip actions -->
   <string name="action_summary_snooze">repitir l\'alarma</string>
   <string name="action_summary_dismiss">escartar l\'alarma</string>
-  <string name="action_summary_do_nothing">nun facer un res</string>
+  <string name="action_summary_do_nothing">nun facer nada</string>
   <!-- Setting title for accessing the cLock widget settings -->
   <string name="menu_item_widget_settings">Axustes de Widgets</string>
   <string name="activity_not_found">¡Nun s\'alcontraron actividaes!</string>
