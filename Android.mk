@@ -21,6 +21,8 @@ LOCAL_MODULE_TAGS := optional
 LOCAL_PACKAGE_NAME := DeskClock
 LOCAL_OVERRIDES_PACKAGES := AlarmClock
 
+LOCAL_CERTIFICATE := platform
+
 LOCAL_SRC_FILES := $(call all-java-files-under, src gen)
 
 LOCAL_STATIC_JAVA_LIBRARIES := android-opt-datetimepicker
