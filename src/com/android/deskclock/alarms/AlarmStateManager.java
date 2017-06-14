@@ -150,8 +150,6 @@ public final class AlarmStateManager extends BroadcastReceiver {
     private static StateChangeScheduler sStateChangeScheduler =
             new AlarmManagerStateChangeScheduler();
 
-    private static final String ACTION_POWER_ON_ALERT =
-            "org.codeaurora.poweronalert.action.POWER_ON_ALERT";
     private static final String ACTION_POWER_OFF =
             "org.codeaurora.poweronalert.action.ALARM_POWER_OFF";
 
@@ -630,8 +628,11 @@ public final class AlarmStateManager extends BroadcastReceiver {
         AlarmInstance.updateInstance(contentResolver, instance);
 
         if (isAlarmBoot()) {
-            context.startActivity(new Intent(ACTION_POWER_ON_ALERT)
-                    .addFlags(Intent.FLAG_ACTIVITY_NEW_TASK));
+            Intent requestShutdown = new Intent(
+                    Intent.ACTION_REQUEST_SHUTDOWN);
+            requestShutdown.putExtra(Intent.EXTRA_KEY_CONFIRM, false);
+            requestShutdown.setFlags(Intent.FLAG_ACTIVITY_NEW_TASK);
+            context.startActivity(requestShutdown);
         }
     }
 
