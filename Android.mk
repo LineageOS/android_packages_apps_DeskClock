@@ -14,6 +14,7 @@ LOCAL_SRC_FILES := $(call all-java-files-under, src gen)
 LOCAL_PROGUARD_FLAG_FILES := ../../../frameworks/support/design/proguard-rules.pro
 LOCAL_PROGUARD_FLAG_FILES += ../../../frameworks/support/v7/preference/proguard-rules.pro
 LOCAL_PROGUARD_FLAG_FILES += ../../../frameworks/support/v7/recyclerview/proguard-rules.pro
+LOCAL_PROGUARD_FLAG_FILES += proguard-rules.pro
 
 LOCAL_STATIC_ANDROID_LIBRARIES := \
         android-support-design \
