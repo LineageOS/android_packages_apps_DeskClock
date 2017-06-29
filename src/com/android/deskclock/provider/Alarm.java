@@ -103,9 +103,9 @@ public final class Alarm implements Parcelable, ClockContract.AlarmsColumns {
     private static final int LABEL_INDEX = 6;
     private static final int RINGTONE_INDEX = 7;
     private static final int DELETE_AFTER_USE_INDEX = 8;
-    private static final int INCREASING_VOLUME_INDEX = 10;
-    private static final int PROFILE_INDEX = 11;
-    private static final int INSTANCE_STATE_INDEX = 9;
+    private static final int INCREASING_VOLUME_INDEX = 9;
+    private static final int PROFILE_INDEX = 10;
+    public static final int INSTANCE_STATE_INDEX = 9;
     public static final int INSTANCE_ID_INDEX = 10;
     public static final int INSTANCE_YEAR_INDEX = 11;
     public static final int INSTANCE_MONTH_INDEX = 12;
