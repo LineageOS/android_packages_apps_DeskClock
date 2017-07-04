@@ -17,4 +17,8 @@
 -->
 <resources xmlns:xliff="urn:oasis:names:tc:xliff:document:1.2">
   <!-- Setting title for accessing the cLock widget settings -->
+  <!-- Setting labels on Set alarm screen: Choose profile -->
+  <string name="profile_description">Profils <xliff:g id="profile">%s</xliff:g></string>
+  <!-- No profile selected label -->
+  <string name="profile_no_selected">Profils nav izvēlēts</string>
 </resources>

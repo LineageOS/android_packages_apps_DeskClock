@@ -17,4 +17,6 @@
 -->
 <resources xmlns:xliff="urn:oasis:names:tc:xliff:document:1.2">
   <!-- Setting title for accessing the cLock widget settings -->
+  <!-- Setting labels on Set alarm screen: Choose profile -->
+  <!-- No profile selected label -->
 </resources>
