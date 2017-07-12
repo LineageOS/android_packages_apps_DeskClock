@@ -1014,6 +1014,7 @@ public final class AlarmStateManager extends BroadcastReceiver {
     private static void setPowerOffAlarm(Context context, AlarmInstance instance) {
          LogUtils.i("Set next power off alarm : instance id "+ instance.mId);
          Intent intent = new Intent(ACTION_SET_POWEROFF_ALARM);
+         intent.addFlags(Intent.FLAG_RECEIVER_FOREGROUND);
          intent.setPackage(POWER_OFF_ALARM_PACKAGE);
          intent.putExtra(TIME, instance.getAlarmTime().getTimeInMillis());
          context.sendBroadcast(intent);
@@ -1021,6 +1022,7 @@ public final class AlarmStateManager extends BroadcastReceiver {
 
     private static void cancelPowerOffAlarm(Context context, AlarmInstance instance) {
          Intent intent = new Intent(ACTION_CANCEL_POWEROFF_ALARM);
+         intent.addFlags(Intent.FLAG_RECEIVER_FOREGROUND);
          intent.putExtra(TIME, instance.getAlarmTime().getTimeInMillis());
          intent.setPackage(POWER_OFF_ALARM_PACKAGE);
          context.sendBroadcast(intent);
