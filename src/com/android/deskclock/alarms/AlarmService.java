@@ -167,15 +167,15 @@ public class AlarmService extends Service {
 
         // Is the current profile different?
         Profile activeProfile = profileManager.getActiveProfile();
-        if (activeProfile == null || !profile.getUuid().equals(activeProfile.getUuid())) {
-            // Change to profile
-            LogUtils.i("Changing to profile \"" + profile.getName() + "\" (" + profile.getUuid()
-                    + ") requested by alarm \"" + instance.mLabel + "\" (" + instance.mId + ")");
-            profileManager.setActiveProfile(profile.getUuid());
-        } else {
+        LogUtils.i("Changing to profile \"" + profile.getName() + "\" (" + profile.getUuid()
+                + ") requested by alarm \"" + instance.mLabel + "\" (" + instance.mId + ")");
+        if (activeProfile == null || profile.getUuid().equals(activeProfile.getUuid())) {
             LogUtils.v("The profile \"" + profile.getName() + "\" (" + profile.getUuid()
-                    + " is already active. No need to change to");
+                    + " is already active. Resetting to profile anyway.");
         }
+        // Change to profile
+        profileManager.setActiveProfile(profile.getUuid());
+
     }
 
     public static void startAlarm(Context context, AlarmInstance instance) {
