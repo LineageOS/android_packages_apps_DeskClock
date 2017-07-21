@@ -103,15 +103,15 @@ public final class Alarm implements Parcelable, ClockContract.AlarmsColumns {
     private static final int DELETE_AFTER_USE_INDEX = 8;
     private static final int INCREASING_VOLUME_INDEX = 9;
 
-    private static final int INSTANCE_STATE_INDEX = 9;
-    public static final int INSTANCE_ID_INDEX = 10;
-    public static final int INSTANCE_YEAR_INDEX = 11;
-    public static final int INSTANCE_MONTH_INDEX = 12;
-    public static final int INSTANCE_DAY_INDEX = 13;
-    public static final int INSTANCE_HOUR_INDEX = 14;
-    public static final int INSTANCE_MINUTE_INDEX = 15;
-    public static final int INSTANCE_LABEL_INDEX = 16;
-    public static final int INSTANCE_VIBRATE_INDEX = 17;
+    public static final int INSTANCE_STATE_INDEX = 10;
+    public static final int INSTANCE_ID_INDEX = 11;
+    public static final int INSTANCE_YEAR_INDEX = 12;
+    public static final int INSTANCE_MONTH_INDEX = 13;
+    public static final int INSTANCE_DAY_INDEX = 14;
+    public static final int INSTANCE_HOUR_INDEX = 15;
+    public static final int INSTANCE_MINUTE_INDEX = 16;
+    public static final int INSTANCE_LABEL_INDEX = 17;
+    public static final int INSTANCE_VIBRATE_INDEX = 18;
 
     private static final int COLUMN_COUNT = INCREASING_VOLUME_INDEX + 1;
     private static final int ALARM_JOIN_INSTANCE_COLUMN_COUNT = INSTANCE_VIBRATE_INDEX + 1;
