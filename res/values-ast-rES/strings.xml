@@ -57,6 +57,7 @@
   <!-- Alarm Alert screen: this message is shown after an alarm rung
          unattended for a number of minutes.  It tells the user that
          the alarm has been silenced.-->
+  <string name="alarm_missed_title">Alarma perdida</string>
   <!-- The text shown after user snoozed an alerting alarm. The text will be shown
          together with the number of minutes in two separate lines. For example:
              Snoozed
@@ -69,6 +70,12 @@
              10 min
          [CHAR LIMIT=10]
     -->
+  <plurals name="alarm_alert_snooze_duration">
+    <!-- Duration for one minute -->
+    <item quantity="one">1 min</item>
+    <!-- Duration for more than one minute -->
+    <item quantity="other"><xliff:g id="number" example="7">%d</xliff:g> mins</item>
+  </plurals>
   <!-- The text shown after user dismissed an alerting alarm [CHAR LIMIT=15] -->
   <!-- Button labels on the alarm dialog: Snooze -->
   <!-- Toast that appears after Alarm is snoozed from the Alarm
@@ -90,14 +97,22 @@
         Verb inflection to use for single time units remaining
         Ex. "1 minute remaining"
     -->
+  <string name="timer_remaining_single">restante</string>
   <!--
         Verb inflection to use for multiple time units remaining
         Ex. "2 minutes remaining"
     -->
+  <string name="timer_remaining_multiple">restantes</string>
   <!-- Alarm confirmation toast: Describes how long from now until alarm fires -->
   <!-- Alarm confirmation toast: days -->
   <!-- Alarm confirmation toast and timer notification: hours -->
   <!-- Alarm confirmation toast and timer notification: minutes -->
+  <plurals name="minutes">
+    <!-- Duration for one minute -->
+    <item quantity="one">1 minutu</item>
+    <!-- Duration for more than one minute -->
+    <item quantity="other"><xliff:g id="number" example="7">%s</xliff:g> minutos</item>
+  </plurals>
   <!-- Repeat options that appear under an alarm on main Alarm Clock
          screen to identify repetition schedule: special case for when
          the alarm is set to repeat every day -->
@@ -112,6 +127,18 @@
   <!-- Label for the Settings activity displayed on-screen when that activity must be represented to the user. -->
   <string name="settings">Axustes</string>
   <!-- Setting title for changing the snooze duration. -->
+  <plurals name="snooze_duration">
+    <!-- Duration for one minute -->
+    <item quantity="one">1 minutu</item>
+    <!-- Duration for more than one minute -->
+    <item quantity="other"><xliff:g id="number" example="7">%s</xliff:g> minutos</item>
+  </plurals>
+  <plurals name="snooze_picker_label">
+    <!-- Duration for one minute -->
+    <item quantity="one">minutu</item>
+    <!-- Duration for more than one minute -->
+    <item quantity="other">minutos</item>
+  </plurals>
   <!-- Setting title for changing the crescendo duration. -->
   <!-- Summary value for changing the crescendo duration to 0. -->
   <!-- Summary value for changing the crescendo duration. -->
@@ -127,6 +154,15 @@
   <!-- Auto silence summary when turned off -->
   <!-- Entries listed in the ListPreference when invoking the auto silence
          preference. -->
+  <string-array name="auto_silence_entries">
+    <item>1 minutu</item>
+    <item>5 minutos</item>
+    <item>10 minutos</item>
+    <item>15 minutos</item>
+    <item>20 minutos</item>
+    <item>25 minutos</item>
+    <item>Never</item>
+  </string-array>
   <!-- Values that are retrieved from the ListPreference. These must match
          the auto_silence_entries above. -->
   <!-- Week start day preference title. -->
@@ -199,13 +235,21 @@
          Also used as title for chooser when sharing stopwatch results. -->
   <!-- Abbreviation for temporal hours [CHAR LIMIT=1] -->
   <!-- Abbreviation for temporal minutes [CHAR LIMIT=1] -->
+  <string name="minutes_label">m</string>
   <!-- Abbreviation for temporal seconds [CHAR LIMIT=1] -->
   <!-- Accessibility strings -->
+  <string name="minutes_label_description">minutos</string>
   <!--  Stopwatch share strings -->
   <!-- Sentence within the message created to share the total time recorded within the stopwatch -->
   <!-- Header within the message created to share a list of lap times (a new line is appended to this) -->
   <!-- Label to enumerate the number of laps in the notification the user has counted -->
   <!-- Stopwatch accessibility strings -->
+  <plurals name="Nminutes_description">
+    <!-- 1 minute -->
+    <item quantity="one">1 minutu</item>
+    <!-- more -->
+    <item quantity="other"><xliff:g id="NUMBER">%d</xliff:g> minutos</item>
+  </plurals>
   <!-- timer strings -->
   <!-- Describes the purpose of the button to add a new timer -->
   <!-- Describes the purpose of the button to begin or continue running a timer -->
@@ -249,7 +293,9 @@
   <string name="time_picker_set">ACEUTAR</string>
   <!--  place holder for am/pm label when it is not set -->
   <!-- add 00 as minutes to the time when pressing this button -->
+  <string name="time_picker_00_label">:00</string>
   <!-- add 30 as minutes to the time when pressing this button -->
+  <string name="time_picker_30_label">:30</string>
   <!--
         Accessibility string read when a city checkbox is checked.
         Ex. "Ann Arbor checked"
