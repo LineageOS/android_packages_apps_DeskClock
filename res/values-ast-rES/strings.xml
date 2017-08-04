@@ -53,6 +53,7 @@
   <!-- The text shown above the clock when alarm is alerting [CHAR LIMIT=10] -->
   <!-- The text shown as an option to dismiss an alerting alarm [CHAR LIMIT=5] -->
   <!-- Button labels on the alarm dialog: Dismiss -->
+  <string name="alarm_alert_dismiss_text">Escartar</string>
   <!-- Button labels on the pre-dismiss alarm notifications: Dismiss now -->
   <!-- Alarm Alert screen: this message is shown after an alarm rung
          unattended for a number of minutes.  It tells the user that
@@ -93,6 +94,7 @@
          7: days hours minutes
     -->
   <!-- Timer notification: how long from now until timer goes off. -->
+  <string name="timer_notifications_minutes"><xliff:g id="MINUTES" example="2 minutes">%2$s</xliff:g><xliff:g id="REMAINING" example="remaining"> %3$s</xliff:g></string>
   <!--
         Verb inflection to use for single time units remaining
         Ex. "1 minute remaining"
@@ -169,9 +171,11 @@
   <!-- Entries listed in ListPreference for start day. -->
   <!-- Values for ListPreference for start day of week. -->
   <!-- Done button when editing an alarm. -->
+  <string name="done">Fecho</string>
   <!-- Revert button when editing an alarm. -->
   <!-- Delete button when editing an alarm. -->
   <!-- Setting title for changing the alarm volume. -->
+  <string name="alarm_volume_title">Volume d\'alarma</string>
   <!-- Title for the silent ringtone. -->
   <!-- Title for ringtones that cannot be located by uri. -->
   <!-- Text to display in the small text of the notification -->
@@ -179,9 +183,15 @@
   <!-- Text to display in the notification when the alarm has been snoozed -->
   <!-- Title of the setting to change hardware button behavior. This string
          should be changed for each piece of hardware. [CHAR LIMIT=20] -->
+  <string name="volume_button_setting_title">Botones de volume</string>
   <!-- Title of the setting default alarm tone  -->
   <!-- Dialog title of the volume and power setting. -->
   <!-- Entries listed in the setting for the side-button action. -->
+  <string-array name="volume_button_setting_entries">
+    <item>Snooze</item>
+    <item>Escartar</item>
+    <item>Do nothing</item>
+  </string-array>
   <!-- Values for the side-button setting. -->
   <!-- Title of the ringtone setting. -->
   <string name="default_ringtone_setting_title">Afitar timbre por defeutu</string>
@@ -218,6 +228,7 @@
   <!-- Menu item on Cities screen to sort by alphabetical order -->
   <string name="cities_add_gps_no_results">La consulta GPS nun devolvió dengún resultáu d\'allugamientu</string>
   <string name="cities_add_gps_not_available">GPS non disponible</string>
+  <string name="cities_add_loading">Cargando\u2026</string>
   <!-- Label for selected cities in Cities list view -->
   <!-- Stopwatch and Timer shared strings -->
   <!-- Describes the purpose of the button to resume running timer. [CHAR LIMIT=15] -->
@@ -253,6 +264,7 @@
   <!-- timer strings -->
   <!-- Describes the purpose of the button to add a new timer -->
   <!-- Describes the purpose of the button to begin or continue running a timer -->
+  <string name="timer_start">Aniciar</string>
   <!-- Describes the purpose of the button to delete a timer. -->
   <!-- Talkback description for deleting a number. -->
   <!-- Describes the purpose of the button increase the remaining time on a timer by one minute. -->
@@ -308,11 +320,14 @@
   <!-- Choices for timezones, must be kept in sync with timezone_values. -->
   <!-- Header in the preferences settings for the section pertaining to alarms -->
   <!-- Describes the service that processes actions originating from timer notifications. -->
+  <string name="timer_service_desc">Procesa les aiciones de los avisos del temporizador.</string>
   <!-- Describes the service that processes actions originating from stopwatch notifications. -->
+  <string name="stopwatch_service_desc">Procesa les aiciones de los avisos del cronómetru.</string>
   <!-- Description for the paused stop watch -->
   <!-- Text instruction for dismiss alarm on alarm lock screen. The dismiss button will still
          be on the right even on RTL languages so please do not reverse this during
          translation. -->
+  <string name="description_direction_right">Esliza a la drecha pa escartar</string>
   <!-- Text instruction for snooze alarm on alarm lock screen. The snooze button will still
          be on the left even on RTL languages so please do not reverse this during
          translation. -->
@@ -500,6 +515,7 @@
   <!-- Setting title for the shake action setting. -->
   <!-- Setting summary for the shake action setting. -->
   <!-- Summary texts for shake and flip actions -->
+  <string name="action_summary_dismiss">escartar l\'alarma</string>
   <!-- Label on expanded alarm edit view indicating the ringtone is custom. -->
   <string name="custom_ringtone">TImbre personalizáu</string>
   <!-- Ringtone selection default" -->
