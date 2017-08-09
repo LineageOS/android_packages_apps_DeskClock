@@ -318,5 +318,6 @@
     <item msgid="1641840677391275004">"P<xliff:g id="SEPARATOR">=</xliff:g>Paramaribo"</item>
     <item msgid="7317049454800260290">"Q<xliff:g id="SEPARATOR">=</xliff:g>Quito"</item>
     <item msgid="4524380876433343244">"L<xliff:g id="SEPARATOR">=</xliff:g>Ljubljana"</item>
+    <item>"U<xliff:g id="SEPARATOR">=</xliff:g>UTC"</item>
   </string-array>
 </resources>

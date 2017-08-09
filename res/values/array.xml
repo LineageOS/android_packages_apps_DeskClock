@@ -347,6 +347,7 @@
         <item>P<xliff:g id="separator">=</xliff:g>Paramaribo</item>
         <item>Q<xliff:g id="separator">=</xliff:g>Quito</item>
         <item>L<xliff:g id="separator">=</xliff:g>Ljubljana</item>
+        <item>U<xliff:g id="separator">=</xliff:g>UTC</item>
     </string-array>
 
     <string-array name="cities_tz" translatable="false">
@@ -650,6 +651,7 @@
         <item>America/Paramaribo</item>
         <item>America/Panama</item>
         <item>Europe/Ljubljana</item>
+        <item>UTC</item>
     </string-array>
 
     <string-array name="cities_id" translatable="false">
@@ -953,6 +955,7 @@
         <item>C298</item>
         <item>C299</item>
         <item>C300</item>
+        <item>C301</item>
     </string-array>
     <string-array name="action_summary_entries" translatable="false">
         <item>@string/action_summary_snooze</item>
