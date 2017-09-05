@@ -1,6 +1,7 @@
 <?xml version="1.0" encoding="utf-8"?>
 <!--
      Copyright (C) 2012-2016 The CyanogenMod Project
+     Copyright (C) 2017 The LineageOS Project
 
      Licensed under the Apache License, Version 2.0 (the "License");
      you may not use this file except in compliance with the License.
@@ -24,4 +25,7 @@
     <!-- No profile selected label -->
     <string name="profile_no_selected">No profile selected</string>
 
+    <string name="power_on_text">Power on device?</string>
+    <string name="power_on_yes_text">Yes</string>
+    <string name="power_on_no_text">No</string>
 </resources>
