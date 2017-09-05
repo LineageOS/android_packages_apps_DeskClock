@@ -28,6 +28,8 @@
     <uses-permission android:name="android.permission.WAKE_LOCK"/>
     <uses-permission android:name="android.permission.VIBRATE"/>
     <uses-permission android:name="android.permission.DISABLE_KEYGUARD" />
+    <uses-permission android:name="android.permission.SHUTDOWN" />
+    <uses-permission android:name="android.permission.REBOOT" />
     <!-- WRITE_SETTINGS is required to record the upcoming alarm prior to L -->
     <uses-permission android:name="android.permission.WRITE_SETTINGS" />
     <!-- READ_PHONE_STATE is required to determine when a phone call exists prior to M -->
@@ -41,7 +43,6 @@
     <uses-permission android:name="android.permission.INTERNET" />
     <uses-permission android:name="android.permission.ACCESS_NETWORK_STATE" />
     <uses-permission android:name="com.android.deskclock.worldclock.permissions.WRITE_DATABASE" />
-    <uses-permission android:name="org.codeaurora.permission.POWER_ON_ALERT" />
     <uses-permission android:name="android.permission.WRITE_SETTINGS" />
     <uses-permission android:name="android.permission.WRITE_SECURE_SETTINGS" />
     <uses-permission android:name="cyanogenmod.permission.MODIFY_PROFILES" />

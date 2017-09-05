@@ -28,7 +28,6 @@ import android.os.Build;
 import android.os.Handler;
 import android.os.PowerManager;
 import android.os.SystemProperties;
-
 import android.preference.PreferenceManager;
 import android.provider.Settings;
 import android.support.v4.app.NotificationManagerCompat;
@@ -149,11 +148,6 @@ public final class AlarmStateManager extends BroadcastReceiver {
     // Schedules alarm state transitions; can be mocked for testing purposes.
     private static StateChangeScheduler sStateChangeScheduler =
             new AlarmManagerStateChangeScheduler();
-
-    private static final String ACTION_POWER_ON_ALERT =
-            "org.codeaurora.poweronalert.action.POWER_ON_ALERT";
-    private static final String ACTION_POWER_OFF =
-            "org.codeaurora.poweronalert.action.ALARM_POWER_OFF";
 
     private static Calendar getCurrentTime() {
         return sCurrentTimeFactory == null ?
@@ -547,7 +541,7 @@ public final class AlarmStateManager extends BroadcastReceiver {
         updateNextAlarm(context);
 
         if (isAlarmBoot()) {
-            context.sendBroadcast(new Intent(ACTION_POWER_OFF));
+            powerOff(context);
         }
     }
 
@@ -630,8 +624,7 @@ public final class AlarmStateManager extends BroadcastReceiver {
         AlarmInstance.updateInstance(contentResolver, instance);
 
         if (isAlarmBoot()) {
-            context.startActivity(new Intent(ACTION_POWER_ON_ALERT)
-                    .addFlags(Intent.FLAG_ACTIVITY_NEW_TASK));
+            reboot(context);
         }
     }
 
@@ -901,7 +894,7 @@ public final class AlarmStateManager extends BroadcastReceiver {
             case AlarmInstance.MISSED_STATE:
                 setMissedState(context, instance);
                 if (isAlarmBoot()) {
-                    context.sendBroadcast(new Intent(ACTION_POWER_OFF));
+                    powerOff(context);
                 }
                 break;
             case AlarmInstance.PREDISMISSED_STATE:
@@ -1141,10 +1134,28 @@ public final class AlarmStateManager extends BroadcastReceiver {
         }
     }
 
-    /*
-     * Check if it is alarm boot
+    /**
+     * Check if the device booted because of an alarm
      */
-    public static boolean isAlarmBoot () {
-       return SystemProperties.getBoolean("ro.alarm_boot", false);
+    public static boolean isAlarmBoot() {
+        return SystemProperties.getBoolean("ro.alarm_boot", false);
+    }
+
+    /**
+     * Power off immediately
+     */
+    private static void powerOff(Context context) {
+        Intent requestShutdown = new Intent(Intent.ACTION_REQUEST_SHUTDOWN);
+        requestShutdown.putExtra(Intent.EXTRA_KEY_CONFIRM, false);
+        requestShutdown.setFlags(Intent.FLAG_ACTIVITY_NEW_TASK);
+        context.startActivity(requestShutdown);
+    }
+
+    /**
+     * Reboot immediately
+     */
+    private static void reboot(Context context) {
+        PowerManager pm = (PowerManager) context.getSystemService(Context.POWER_SERVICE);
+        pm.reboot(null);
     }
 }
