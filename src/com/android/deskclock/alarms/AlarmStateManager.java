@@ -17,10 +17,12 @@ package com.android.deskclock.alarms;
 
 import android.annotation.TargetApi;
 import android.app.AlarmManager;
+import android.app.AlertDialog;
 import android.app.PendingIntent;
 import android.content.BroadcastReceiver;
 import android.content.ContentResolver;
 import android.content.Context;
+import android.content.DialogInterface;
 import android.content.Intent;
 import android.content.SharedPreferences;
 import android.net.Uri;
@@ -28,12 +30,12 @@ import android.os.Build;
 import android.os.Handler;
 import android.os.PowerManager;
 import android.os.SystemProperties;
-
 import android.preference.PreferenceManager;
 import android.provider.Settings;
 import android.support.v4.app.NotificationManagerCompat;
 import android.telephony.TelephonyManager;
 import android.text.format.DateFormat;
+import android.view.WindowManager;
 import android.widget.Toast;
 
 import com.android.deskclock.AlarmAlertWakeLock;
@@ -149,11 +151,6 @@ public final class AlarmStateManager extends BroadcastReceiver {
     // Schedules alarm state transitions; can be mocked for testing purposes.
     private static StateChangeScheduler sStateChangeScheduler =
             new AlarmManagerStateChangeScheduler();
-
-    private static final String ACTION_POWER_ON_ALERT =
-            "org.codeaurora.poweronalert.action.POWER_ON_ALERT";
-    private static final String ACTION_POWER_OFF =
-            "org.codeaurora.poweronalert.action.ALARM_POWER_OFF";
 
     private static Calendar getCurrentTime() {
         return sCurrentTimeFactory == null ?
@@ -547,7 +544,7 @@ public final class AlarmStateManager extends BroadcastReceiver {
         updateNextAlarm(context);
 
         if (isAlarmBoot()) {
-            context.sendBroadcast(new Intent(ACTION_POWER_OFF));
+            powerOff(context);
         }
     }
 
@@ -630,8 +627,7 @@ public final class AlarmStateManager extends BroadcastReceiver {
         AlarmInstance.updateInstance(contentResolver, instance);
 
         if (isAlarmBoot()) {
-            context.startActivity(new Intent(ACTION_POWER_ON_ALERT)
-                    .addFlags(Intent.FLAG_ACTIVITY_NEW_TASK));
+            showPowerOffDialog(context);
         }
     }
 
@@ -901,7 +897,7 @@ public final class AlarmStateManager extends BroadcastReceiver {
             case AlarmInstance.MISSED_STATE:
                 setMissedState(context, instance);
                 if (isAlarmBoot()) {
-                    context.sendBroadcast(new Intent(ACTION_POWER_OFF));
+                    powerOff(context);
                 }
                 break;
             case AlarmInstance.PREDISMISSED_STATE:
@@ -1141,10 +1137,55 @@ public final class AlarmStateManager extends BroadcastReceiver {
         }
     }
 
-    /*
-     * Check if it is alarm boot
+    /**
+     * Check if the device booted because of an alarm
      */
-    public static boolean isAlarmBoot () {
-       return SystemProperties.getBoolean("ro.alarm_boot", false);
+    public static boolean isAlarmBoot() {
+        return SystemProperties.getBoolean("ro.alarm_boot", false);
+    }
+
+    /**
+     * Power off immediately
+     */
+    private static void powerOff(Context context) {
+        Intent requestShutdown = new Intent(Intent.ACTION_REQUEST_SHUTDOWN);
+        requestShutdown.putExtra(Intent.EXTRA_KEY_CONFIRM, false);
+        requestShutdown.setFlags(Intent.FLAG_ACTIVITY_NEW_TASK);
+        context.startActivity(requestShutdown);
+    }
+
+    /**
+     * Ask whether to power off or continue boot
+     */
+    private static void showPowerOffDialog(Context context) {
+        AlertDialog.Builder builder = new AlertDialog.Builder(context);
+        builder.setMessage(R.string.power_on_text)
+               .setTitle(R.string.alarm_list_title);
+        builder.setPositiveButton(R.string.power_on_yes_text,
+                new DialogInterface.OnClickListener() {
+                    @Override
+                    public void onClick(DialogInterface dialog, int which) {
+                        // Do nothing
+                    }
+                });
+        builder.setNegativeButton(R.string.power_on_no_text,
+                new DialogInterface.OnClickListener() {
+                    @Override
+                    public void onClick(DialogInterface dialog, int which) {
+                        powerOff(context);
+                    }
+                });
+
+        AlertDialog powerOffDialog = builder.create();
+        powerOffDialog.setCancelable(false);
+        powerOffDialog.setCanceledOnTouchOutside(false);
+        powerOffDialog.getWindow().addFlags(WindowManager.LayoutParams.FLAG_SHOW_WHEN_LOCKED |
+                WindowManager.LayoutParams.FLAG_DISMISS_KEYGUARD |
+                WindowManager.LayoutParams.FLAG_KEEP_SCREEN_ON |
+                WindowManager.LayoutParams.FLAG_TURN_SCREEN_ON |
+                WindowManager.LayoutParams.FLAG_ALLOW_LOCK_WHILE_SCREEN_ON |
+                WindowManager.LayoutParams.FLAG_FULLSCREEN |
+                WindowManager.LayoutParams.FLAG_LAYOUT_IN_SCREEN);
+        powerOffDialog.show();
     }
 }
