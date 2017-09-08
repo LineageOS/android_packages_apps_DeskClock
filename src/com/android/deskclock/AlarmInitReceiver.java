@@ -58,9 +58,6 @@ public class AlarmInitReceiver extends BroadcastReceiver {
     private static final String ENCRYPTING_STATE = "trigger_restart_min_framework";
     private static final String ENCRYPTED_STATE = "1";
 
-    private static final String ACTION_POWER_OFF_ALARM =
-            "org.codeaurora.alarm.action.POWER_OFF_ALARM";
-
     private static final String ALARM_GLOBAL_ID_EXTRA = "intent.extra.alarm.global.id";
 
     /**
@@ -120,7 +117,7 @@ public class AlarmInitReceiver extends BroadcastReceiver {
             }
         }
 
-        // When ACTION_POWER_OFF_ALARM comes, AlarmActivity should be started for
+        // When ACTION_BOOT_COMPLETED comes, AlarmActivity should be started for
         // power off alarm.
         //     1. Normal mode: just get next firing alarm and pass it to alarm activity
         //     2. Encryption mode: We need to create an alarm as there is no firing alarm
