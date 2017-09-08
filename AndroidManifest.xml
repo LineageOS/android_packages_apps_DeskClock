@@ -265,7 +265,6 @@
                 <action android:name="android.intent.action.TIMEZONE_CHANGED" />
                 <action android:name="android.intent.action.LOCALE_CHANGED" />
                 <action android:name="android.intent.action.MY_PACKAGE_REPLACED" />
-                <action android:name="org.codeaurora.alarm.action.POWER_OFF_ALARM" />
             </intent-filter>
         </receiver>
 
