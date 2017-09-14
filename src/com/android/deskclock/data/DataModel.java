@@ -27,6 +27,7 @@ import android.os.Looper;
 import android.support.annotation.StringRes;
 import android.view.View;
 
+import com.android.deskclock.NotificationUtils;
 import com.android.deskclock.Predicate;
 import com.android.deskclock.R;
 import com.android.deskclock.Utils;
