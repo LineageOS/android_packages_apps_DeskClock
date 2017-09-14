@@ -20,6 +20,9 @@ import android.annotation.SuppressLint;
 import android.annotation.TargetApi;
 import android.app.AlarmManager;
 import android.app.AlarmManager.AlarmClockInfo;
+import android.app.Notification;
+import android.app.NotificationChannel;
+import android.app.NotificationManager;
 import android.app.PendingIntent;
 import android.appwidget.AppWidgetManager;
 import android.content.ContentResolver;
@@ -624,5 +627,42 @@ public class Utils {
             info.addAction(new AccessibilityActionCompat(
                     AccessibilityActionCompat.ACTION_CLICK.getId(), mLabel));
         }
+    }
+
+    public static void createNotificationChannel(Context context, String id, String name, int importance) {
+        if (Build.VERSION.SDK_INT < Build.VERSION_CODES.O) {
+            return;
+        }
+
+        NotificationManager manager =
+                ((NotificationManager) context.getSystemService(Context.NOTIFICATION_SERVICE));
+
+        NotificationChannel channel = new NotificationChannel(id, name, importance);
+
+        manager.createNotificationChannel(channel);
+    }
+
+    static boolean areNotificationChannelsCreated = false;
+
+    public static final String STOPWATCH_CHANNEL = "stopwatch_notification_channel";
+    public static final String TIMER_CHANNEL = "timer_notification_channel";
+    public static final String ALARM_CHANNEL = "alarm_notification_channel";
+
+    public static void createNotificationChannelsIfNeeded(Context context) {
+        if (areNotificationChannelsCreated) {
+            return;
+        }
+
+        areNotificationChannelsCreated = true;
+
+        createNotificationChannel(context, STOPWATCH_CHANNEL,
+                context.getString(R.string.stopwatch_channel_name),
+                NotificationManager.IMPORTANCE_HIGH);
+        createNotificationChannel(context, TIMER_CHANNEL,
+                context.getString(R.string.timer_channel_name),
+                NotificationManager.IMPORTANCE_HIGH);
+        createNotificationChannel(context, ALARM_CHANNEL,
+                context.getString(R.string.alarm_channel_name),
+                NotificationManager.IMPORTANCE_HIGH);
     }
 }
