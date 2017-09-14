@@ -23,6 +23,7 @@ import android.net.Uri;
 import android.os.Handler;
 import android.provider.Settings;
 
+import com.android.deskclock.NotificationUtils;
 import com.android.deskclock.data.DataModel.AlarmVolumeButtonBehavior;
 import com.android.deskclock.provider.Alarm;
 
@@ -39,6 +40,8 @@ final class AlarmModel {
 
     AlarmModel(Context context, SettingsModel settingsModel) {
         mSettingsModel = settingsModel;
+
+        NotificationUtils.createAlarmChannels(context);
 
         // Clear caches affected by system settings when system settings change.
         final ContentResolver cr = context.getContentResolver();
