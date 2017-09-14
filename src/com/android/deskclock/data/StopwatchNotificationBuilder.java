@@ -27,6 +27,7 @@ import android.support.annotation.StringRes;
 import android.support.v4.app.NotificationCompat;
 import android.support.v4.app.NotificationCompat.Action;
 import android.support.v4.app.NotificationCompat.Builder;
+import android.support.v4.app.NotificationCompat;
 import android.support.v4.content.ContextCompat;
 import android.widget.RemoteViews;
 
@@ -127,13 +128,15 @@ class StopwatchNotificationBuilder {
             content.setViewVisibility(R.id.state, VISIBLE);
         }
 
-        final Builder notification = new NotificationCompat.Builder(context)
+        Utils.createNotificationChannelsIfNeeded(context);
+
+        final Builder notification = new NotificationCompat.Builder(context,
+                    Utils.STOPWATCH_CHANNEL)
                 .setLocalOnly(true)
                 .setOngoing(running)
                 .setCustomContentView(content)
                 .setContentIntent(pendingShowApp)
                 .setAutoCancel(stopwatch.isPaused())
-                .setPriority(Notification.PRIORITY_MAX)
                 .setSmallIcon(R.drawable.stat_notify_stopwatch)
                 .setStyle(new NotificationCompat.DecoratedCustomViewStyle())
                 .setColor(ContextCompat.getColor(context, R.color.default_background));
