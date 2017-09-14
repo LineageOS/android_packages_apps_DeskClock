@@ -26,8 +26,8 @@ import android.support.annotation.DrawableRes;
 import android.support.annotation.StringRes;
 import android.support.v4.app.NotificationCompat.Action;
 import android.support.v4.app.NotificationCompat.Builder;
+import android.support.v4.app.NotificationCompat;
 import android.support.v4.content.ContextCompat;
-import android.support.v7.app.NotificationCompat;
 import android.widget.RemoteViews;
 
 import com.android.deskclock.R;
@@ -127,7 +127,10 @@ class StopwatchNotificationBuilder {
             content.setViewVisibility(R.id.state, VISIBLE);
         }
 
-        final Builder notification = new NotificationCompat.Builder(context)
+        Utils.createNotificationChannelsIfNeeded(context);
+
+        final Builder notification = new NotificationCompat.Builder(context,
+                    Utils.STOPWATCH_CHANNEL)
                 .setLocalOnly(true)
                 .setOngoing(running)
                 .setCustomContentView(content)

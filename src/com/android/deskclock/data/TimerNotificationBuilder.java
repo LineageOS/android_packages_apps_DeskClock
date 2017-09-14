@@ -26,8 +26,8 @@ import android.content.res.Resources;
 import android.os.Build;
 import android.os.SystemClock;
 import android.support.annotation.DrawableRes;
+import android.support.v4.app.NotificationCompat;
 import android.support.v4.content.ContextCompat;
-import android.support.v7.app.NotificationCompat;
 import android.text.TextUtils;
 import android.widget.RemoteViews;
 
@@ -148,7 +148,10 @@ class TimerNotificationBuilder {
                 PendingIntent.getService(context, REQUEST_CODE_UPCOMING, showApp,
                         PendingIntent.FLAG_ONE_SHOT | PendingIntent.FLAG_UPDATE_CURRENT);
 
-        final Builder notification = new NotificationCompat.Builder(context)
+        Utils.createNotificationChannelsIfNeeded(context);
+
+        final Builder notification = new NotificationCompat.Builder(context,
+                    Utils.TIMER_CHANNEL)
                 .setOngoing(true)
                 .setLocalOnly(true)
                 .setShowWhen(false)
@@ -261,7 +264,10 @@ class TimerNotificationBuilder {
                 .setFlags(Intent.FLAG_ACTIVITY_NEW_TASK | Intent.FLAG_ACTIVITY_NO_USER_ACTION);
         final PendingIntent pendingFullScreen = Utils.pendingActivityIntent(context, fullScreen);
 
-        final Builder notification = new NotificationCompat.Builder(context)
+        Utils.createNotificationChannelsIfNeeded(context);
+
+        final Builder notification = new NotificationCompat.Builder(context,
+                    Utils.TIMER_CHANNEL)
                 .setOngoing(true)
                 .setLocalOnly(true)
                 .setShowWhen(false)
@@ -344,7 +350,10 @@ class TimerNotificationBuilder {
                 PendingIntent.getService(context, REQUEST_CODE_MISSING, showApp,
                         PendingIntent.FLAG_ONE_SHOT | PendingIntent.FLAG_UPDATE_CURRENT);
 
-        final Builder notification = new NotificationCompat.Builder(context)
+        Utils.createNotificationChannelsIfNeeded(context);
+
+        final Builder notification = new NotificationCompat.Builder(context,
+                    Utils.TIMER_CHANNEL)
                 .setLocalOnly(true)
                 .setShowWhen(false)
                 .setAutoCancel(false)
