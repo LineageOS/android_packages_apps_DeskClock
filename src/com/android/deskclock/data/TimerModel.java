@@ -34,6 +34,7 @@ import android.util.ArraySet;
 
 import com.android.deskclock.AlarmAlertWakeLock;
 import com.android.deskclock.LogUtils;
+import com.android.deskclock.NotificationUtils;
 import com.android.deskclock.R;
 import com.android.deskclock.Utils;
 import com.android.deskclock.events.Events;
@@ -138,6 +139,8 @@ final class TimerModel {
         mNotificationManager = NotificationManagerCompat.from(context);
 
         mAlarmManager = (AlarmManager) mContext.getSystemService(Context.ALARM_SERVICE);
+
+        NotificationUtils.createTimerChannels(context);
 
         // Clear caches affected by preferences when preferences change.
         prefs.registerOnSharedPreferenceChangeListener(mPreferenceListener);

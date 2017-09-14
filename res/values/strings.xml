@@ -1051,4 +1051,10 @@
     -->
     <string name="alarm_is_snoozed"><xliff:g id="alarm_time" example="14:20">%s</xliff:g> alarm snoozed for 10 minutes</string>
 
+    <!-- The user visible name of the stopwatch channel. -->
+    <string name="stopwatch_channel_name">Stopwatch</string>
+    <!-- The user visible name of the timers channel. -->
+    <string name="timer_channel_name">Timers</string>
+    <!-- The user visible name of the alarms channel. -->
+    <string name="alarm_channel_name">Alarms</string>
 </resources>
