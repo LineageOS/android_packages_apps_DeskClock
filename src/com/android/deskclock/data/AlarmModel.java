@@ -40,6 +40,8 @@ final class AlarmModel {
     AlarmModel(Context context, SettingsModel settingsModel) {
         mSettingsModel = settingsModel;
 
+        NotificationUtils.createAlarmChannels(context);
+
         // Clear caches affected by system settings when system settings change.
         final ContentResolver cr = context.getContentResolver();
         final ContentObserver observer = new SystemAlarmAlertChangeObserver();
