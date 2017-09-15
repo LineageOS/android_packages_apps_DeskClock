@@ -19,6 +19,8 @@ package com.android.deskclock.data;
 import android.annotation.TargetApi;
 import android.app.AlarmManager;
 import android.app.Notification;
+import android.app.Notification.Action;
+import android.app.Notification.Builder;
 import android.app.PendingIntent;
 import android.content.Context;
 import android.content.Intent;
@@ -26,7 +28,6 @@ import android.content.res.Resources;
 import android.os.Build;
 import android.os.SystemClock;
 import android.support.annotation.DrawableRes;
-import android.support.v4.app.NotificationCompat;
 import android.support.v4.content.ContextCompat;
 import android.text.TextUtils;
 import android.widget.RemoteViews;
@@ -41,8 +42,6 @@ import com.android.deskclock.timer.TimerService;
 import java.util.ArrayList;
 import java.util.List;
 
-import static android.support.v4.app.NotificationCompat.Action;
-import static android.support.v4.app.NotificationCompat.Builder;
 import static android.text.format.DateUtils.MINUTE_IN_MILLIS;
 import static android.text.format.DateUtils.SECOND_IN_MILLIS;
 
@@ -150,18 +149,18 @@ class TimerNotificationBuilder {
 
         Utils.createNotificationChannelsIfNeeded(context);
 
-        final Builder notification = new NotificationCompat.Builder(context,
+        final Builder notification = new Notification.Builder(context,
                     Utils.TIMER_CHANNEL)
                 .setOngoing(true)
                 .setLocalOnly(true)
                 .setShowWhen(false)
                 .setAutoCancel(false)
                 .setContentIntent(pendingShowApp)
-                .setCategory(NotificationCompat.CATEGORY_ALARM)
+                .setCategory(Notification.CATEGORY_ALARM)
                 .setSmallIcon(R.drawable.stat_notify_timer)
                 .setSortKey(nm.getTimerNotificationSortKey())
-                .setVisibility(NotificationCompat.VISIBILITY_PUBLIC)
-                .setStyle(new NotificationCompat.DecoratedCustomViewStyle())
+                .setVisibility(Notification.VISIBILITY_PUBLIC)
+                .setStyle(new Notification.DecoratedCustomViewStyle())
                 .setColor(ContextCompat.getColor(context, R.color.default_background));
 
         for (Action action : actions) {
@@ -265,7 +264,7 @@ class TimerNotificationBuilder {
 
         Utils.createNotificationChannelsIfNeeded(context);
 
-        final Builder notification = new NotificationCompat.Builder(context,
+        final Builder notification = new Notification.Builder(context,
                     Utils.TIMER_CHANNEL)
                 .setOngoing(true)
                 .setLocalOnly(true)
@@ -275,7 +274,7 @@ class TimerNotificationBuilder {
                 .setDefaults(Notification.DEFAULT_LIGHTS)
                 .setSmallIcon(R.drawable.stat_notify_timer)
                 .setFullScreenIntent(pendingFullScreen, true)
-                .setStyle(new NotificationCompat.DecoratedCustomViewStyle())
+                .setStyle(new Notification.DecoratedCustomViewStyle())
                 .setColor(ContextCompat.getColor(context, R.color.default_background));
 
         for (Action action : actions) {
@@ -350,17 +349,17 @@ class TimerNotificationBuilder {
 
         Utils.createNotificationChannelsIfNeeded(context);
 
-        final Builder notification = new NotificationCompat.Builder(context,
+        final Builder notification = new Notification.Builder(context,
                     Utils.TIMER_CHANNEL)
                 .setLocalOnly(true)
                 .setShowWhen(false)
                 .setAutoCancel(false)
                 .setContentIntent(pendingShowApp)
-                .setCategory(NotificationCompat.CATEGORY_ALARM)
+                .setCategory(Notification.CATEGORY_ALARM)
                 .setSmallIcon(R.drawable.stat_notify_timer)
-                .setVisibility(NotificationCompat.VISIBILITY_PUBLIC)
+                .setVisibility(Notification.VISIBILITY_PUBLIC)
                 .setSortKey(nm.getTimerNotificationMissedSortKey())
-                .setStyle(new NotificationCompat.DecoratedCustomViewStyle())
+                .setStyle(new Notification.DecoratedCustomViewStyle())
                 .addAction(action)
                 .setColor(ContextCompat.getColor(context, R.color.default_background));
 
