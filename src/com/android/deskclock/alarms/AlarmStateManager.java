@@ -1042,7 +1042,7 @@ public final class AlarmStateManager extends BroadcastReceiver {
                     createStateChangeIntent(context, ALARM_MANAGER_TAG, instance, newState);
             // Treat alarm state change as high priority, use foreground broadcasts
             stateChangeIntent.addFlags(Intent.FLAG_RECEIVER_FOREGROUND);
-            PendingIntent pendingIntent = PendingIntent.getService(context, instance.hashCode(),
+            PendingIntent pendingIntent = PendingIntent.getForegroundService(context, instance.hashCode(),
                     stateChangeIntent, PendingIntent.FLAG_UPDATE_CURRENT);
 
             final AlarmManager am = (AlarmManager) context.getSystemService(ALARM_SERVICE);
