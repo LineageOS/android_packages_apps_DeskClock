@@ -43,6 +43,7 @@ import java.util.List;
 
 import static android.support.v4.app.NotificationCompat.Action;
 import static android.support.v4.app.NotificationCompat.Builder;
+import static android.support.v7.app.NotificationCompat.DecoratedCustomViewStyle;
 import static android.text.format.DateUtils.MINUTE_IN_MILLIS;
 import static android.text.format.DateUtils.SECOND_IN_MILLIS;
 
@@ -161,7 +162,7 @@ class TimerNotificationBuilder {
                 .setSmallIcon(R.drawable.stat_notify_timer)
                 .setSortKey(nm.getTimerNotificationSortKey())
                 .setVisibility(NotificationCompat.VISIBILITY_PUBLIC)
-                .setStyle(new NotificationCompat.DecoratedCustomViewStyle())
+                .setStyle(new DecoratedCustomViewStyle())
                 .setColor(ContextCompat.getColor(context, R.color.default_background));
 
         for (Action action : actions) {
@@ -275,7 +276,7 @@ class TimerNotificationBuilder {
                 .setDefaults(Notification.DEFAULT_LIGHTS)
                 .setSmallIcon(R.drawable.stat_notify_timer)
                 .setFullScreenIntent(pendingFullScreen, true)
-                .setStyle(new NotificationCompat.DecoratedCustomViewStyle())
+                .setStyle(new DecoratedCustomViewStyle())
                 .setColor(ContextCompat.getColor(context, R.color.default_background));
 
         for (Action action : actions) {
@@ -360,7 +361,7 @@ class TimerNotificationBuilder {
                 .setSmallIcon(R.drawable.stat_notify_timer)
                 .setVisibility(NotificationCompat.VISIBILITY_PUBLIC)
                 .setSortKey(nm.getTimerNotificationMissedSortKey())
-                .setStyle(new NotificationCompat.DecoratedCustomViewStyle())
+                .setStyle(new DecoratedCustomViewStyle())
                 .addAction(action)
                 .setColor(ContextCompat.getColor(context, R.color.default_background));
 

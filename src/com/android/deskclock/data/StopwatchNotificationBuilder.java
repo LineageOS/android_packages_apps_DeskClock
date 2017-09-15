@@ -38,6 +38,7 @@ import com.android.deskclock.stopwatch.StopwatchService;
 import java.util.ArrayList;
 import java.util.List;
 
+import static android.support.v7.app.NotificationCompat.DecoratedCustomViewStyle;
 import static android.view.View.GONE;
 import static android.view.View.VISIBLE;
 
@@ -137,7 +138,7 @@ class StopwatchNotificationBuilder {
                 .setContentIntent(pendingShowApp)
                 .setAutoCancel(stopwatch.isPaused())
                 .setSmallIcon(R.drawable.stat_notify_stopwatch)
-                .setStyle(new NotificationCompat.DecoratedCustomViewStyle())
+                .setStyle(new DecoratedCustomViewStyle())
                 .setColor(ContextCompat.getColor(context, R.color.default_background));
 
         if (Utils.isNOrLater()) {
