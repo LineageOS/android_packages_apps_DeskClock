@@ -17,6 +17,8 @@
 package com.android.deskclock.data;
 
 import android.app.Notification;
+import android.app.Notification.Action;
+import android.app.Notification.Builder;
 import android.app.PendingIntent;
 import android.content.Context;
 import android.content.Intent;
@@ -24,9 +26,6 @@ import android.content.res.Resources;
 import android.os.SystemClock;
 import android.support.annotation.DrawableRes;
 import android.support.annotation.StringRes;
-import android.support.v4.app.NotificationCompat.Action;
-import android.support.v4.app.NotificationCompat.Builder;
-import android.support.v4.app.NotificationCompat;
 import android.support.v4.content.ContextCompat;
 import android.widget.RemoteViews;
 
@@ -129,7 +128,7 @@ class StopwatchNotificationBuilder {
 
         Utils.createNotificationChannelsIfNeeded(context);
 
-        final Builder notification = new NotificationCompat.Builder(context,
+        final Builder notification = new Notification.Builder(context,
                     Utils.STOPWATCH_CHANNEL)
                 .setLocalOnly(true)
                 .setOngoing(running)
@@ -137,7 +136,7 @@ class StopwatchNotificationBuilder {
                 .setContentIntent(pendingShowApp)
                 .setAutoCancel(stopwatch.isPaused())
                 .setSmallIcon(R.drawable.stat_notify_stopwatch)
-                .setStyle(new NotificationCompat.DecoratedCustomViewStyle())
+                .setStyle(new Notification.DecoratedCustomViewStyle())
                 .setColor(ContextCompat.getColor(context, R.color.default_background));
 
         if (Utils.isNOrLater()) {
