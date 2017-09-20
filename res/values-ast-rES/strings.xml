@@ -18,7 +18,6 @@
   <!-- -->
   <!-- Label shown on launcher icon -->
   <!-- Label for the this application displayed on-screen when this application must be represented to the user. -->
-  <string name="app_label">Reló</string>
   <!-- Title for AlarmClock activity -->
   <!-- Label for the Alarms activity displayed on-screen when that activity must be represented to the user. -->
   <!-- Menu item on Alarm Clock screen: Add alarm -->
@@ -52,7 +51,6 @@
   <!-- Alarm Alert screen: this message is shown after an alarm rung
          unattended for a number of minutes.  It tells the user that
          the alarm has been silenced.-->
-  <string name="alarm_missed_title">Alarma perdida</string>
   <!-- The text shown after user snoozed an alerting alarm. The text will be shown
          together with the number of minutes in two separate lines. For example:
              Snoozed
@@ -65,12 +63,6 @@
              10 min
          [CHAR LIMIT=10]
     -->
-  <plurals name="alarm_alert_snooze_duration">
-    <!-- Duration for one minute -->
-    <item quantity="one">1 min</item>
-    <!-- Duration for more than one minute -->
-    <item quantity="other"><xliff:g id="number" example="7">%d</xliff:g> mins</item>
-  </plurals>
   <!-- The text shown after user dismissed an alerting alarm [CHAR LIMIT=15] -->
   <!-- Button labels on the alarm dialog: Snooze -->
   <!-- Toast that appears after Alarm is snoozed from the Alarm
@@ -117,19 +109,12 @@
   <!-- Help activity name -->
   <!-- Settings activity name -->
   <!-- Label for the Settings activity displayed on-screen when that activity must be represented to the user. -->
-  <string name="settings">Axustes</string>
   <!-- Setting title for changing the snooze duration. -->
   <plurals name="snooze_duration">
     <!-- Duration for one minute -->
     <item quantity="one">1 minutu</item>
     <!-- Duration for more than one minute -->
     <item quantity="other"><xliff:g id="number" example="7">%s</xliff:g> minutos</item>
-  </plurals>
-  <plurals name="snooze_picker_label">
-    <!-- Duration for one minute -->
-    <item quantity="one">minutu</item>
-    <!-- Duration for more than one minute -->
-    <item quantity="other">minutos</item>
   </plurals>
   <!-- Auto silence preference title -->
   <!-- Auto silence summary string set based on the preference value. -->
@@ -160,6 +145,7 @@
   <!-- Revert button when editing an alarm. -->
   <!-- Delete button when editing an alarm. -->
   <!-- Setting title for changing the alarm volume. -->
+  <string name="alarm_volume_title">Volume d\'alarma</string>
   <!-- Summary for the alarm preference when silent is chosen. -->
   <!-- Text to display in the small text of the notification -->
   <!-- Text to display in the notification ticker and label -->
@@ -168,6 +154,11 @@
          should be changed for each piece of hardware. [CHAR LIMIT=20] -->
   <!-- Dialog title of the volume and power setting. -->
   <!-- Entries listed in the setting for the side-button action. -->
+  <string-array name="volume_button_setting_entries">
+    <item>Snooze</item>
+    <item>Escartar</item>
+    <item>Do nothing</item>
+  </string-array>
   <!-- Values for the side-button setting. -->
   <!-- Title of the ringtone setting. -->
   <string name="default_ringtone_setting_title">Afitar timbre por defeutu</string>
@@ -195,9 +186,7 @@
   <!-- Describes the purpose of the button to start the activity to add/edit/delete alarms -->
   <!-- Describes the purpose of the button which provides a list of cities for the world clock settings -->
   <!-- Describes the purpose of the button which pops up a menu of setting choices -->
-  <string name="button_menu">Más opciones</string>
   <!-- Menu item on most screens to get to more settings -->
-  <string name="menu_item_settings">Axustes</string>
   <!-- Menu item on most screens to get to the help information -->
   <!-- Menu item on clock screen to enter night mode. -->
   <!-- Menu item on Cities screen to sort by GMT offset -->
@@ -213,10 +202,11 @@
          Also used as title for chooser when sharing stopwatch results. -->
   <!-- Abbreviation for temporal hours [CHAR LIMIT=1] -->
   <!-- Abbreviation for temporal minutes [CHAR LIMIT=1] -->
-  <string name="minutes_label">m</string>
   <!-- Abbreviation for temporal seconds [CHAR LIMIT=1] -->
   <!-- Accessibility strings -->
   <string name="minutes_label_description">minutos</string>
+  <string name="seconds_label_description">segundos</string>
+  <string name="zero">0</string>
   <!--  Stopwatch share strings -->
   <!-- Sentence within the message created to share the total time recorded within the stopwatch -->
   <!-- Header within the message created to share a list of lap times (a new line is appended to this) -->
@@ -224,6 +214,10 @@
   <!-- Formatted stopwatch time -->
   <!-- Formatted stopwatch time for laps shared using the share button -->
   <!-- Label to enumerate the number of laps the user has counted -->
+  <string-array name="sw_lap_number_set" translatable="true">
+    <item># <xliff:g id="number">%d</xliff:g></item>
+    <item># <xliff:g id="number">%02d</xliff:g></item>
+  </string-array>
   <!-- Stopwatch accessibility strings -->
   <plurals name="Nminutes_description">
     <!-- 1 minute -->
@@ -242,7 +236,6 @@
   <!-- Describes the purpose of the button to stop and delete the timer. -->
   <!-- Describes the purpose of the button to return the timer to it's original starting value. -->
   <!-- Describes the purpose of the button to discard the current dialog values. Will also close the dialog if other time's exist -->
-  <string name="timer_cancel">Encaboxar</string>
   <!-- Notification content shown when a timer has completed and has no more time remaining -->
   <!-- Label associated with a notification for a Timer -->
   <!-- Toast content shown when user attempts to create a new timer when there are already 4 timers -->
@@ -261,14 +254,11 @@
   <!-- Title in the preferences change the time zone for the user's home -->
   <!-- Title in a list dialog box to pick a time zone for the user's home -->
   <!-- Textual content of the button to discard the current dialog values and close the dialog -->
-  <string name="time_picker_cancel">Encaboxar</string>
   <!-- Textual content of the button to update an alarm with the current dialog values -->
   <string name="time_picker_set">ACEUTAR</string>
   <!--  place holder for am/pm label when it is not set -->
   <!-- add 00 as minutes to the time when pressing this button -->
-  <string name="time_picker_00_label">:00</string>
   <!-- add 30 as minutes to the time when pressing this button -->
-  <string name="time_picker_30_label">:30</string>
   <!-- Choices for timezones, must be kept in sync with timezone_values. CHAR LIMIT=25] -->
   <!-- Choices for timezones, must be kept in sync with timezone_values. -->
   <!-- Header in the preferences settings for the section pertaining to alarms -->
@@ -277,6 +267,7 @@
   <!-- Text instruction for dismiss alarm on alarm lock screen. The dismiss button will still
          be on the right even on RTL languages so please do not reverse this during
          translation. -->
+  <string name="description_direction_right">Esliza a la drecha pa escartar</string>
   <!-- Text instruction for snooze alarm on alarm lock screen. The snooze button will still
          be on the left even on RTL languages so please do not reverse this during
          translation. -->
@@ -320,14 +311,12 @@
         a represents am/pm
         Ex: h:mm a = 12:54 am, 8:05 pm
     -->
-  <string name="time_format_12_mode">h:mm a</string>
   <!--
         String that represents time format for 24-hour time.
         k represents hour in range (0-23) with the minimum number of digits
         mm represents minute with leading 0 in case of values < 10
         Ex: k:mm = 13:51, 5:05
     -->
-  <string name="time_format_24_mode">k:mm</string>
   <!--
         String that represents weekday, time format for 12-hour time.
         EEE represents weekday name in short form (ex. Mon, Tue, Wed)
@@ -336,7 +325,6 @@
         a represents am/pm
         Ex: EEE, h:mm a = Mon, 2:55 pm
     -->
-  <string name="weekday_time_format_12_mode">EEE, h:mm a</string>
   <!--
         String that represents weekday, time format for 24-hour time.
         EEE represents weekday name in short form (ex. Mon, Tue, Wed)
@@ -344,7 +332,6 @@
         mm represents minute with leading 0 in case of values < 10
         Ex: EEE, k:mm = Mon, 2:55
     -->
-  <string name="weekday_time_format_24_mode">EEE, k:mm</string>
   <!-- String that represents that invalid time for an alarm was specified, e.g. 23:00am
      or 27:68pm.
     First %d represents hour, second %d represents minutes, %s represents am/pm,
@@ -458,7 +445,6 @@
     but the city they specified wasn't listed in the database.
     [CHAR LIMIT=NONE]
     -->
-  <string name="the_city_you_specified_is_not_available">La ciudá qu\'especifiquesti nun ta disponible</string>
   <!-- String that represents that the user attempted to add a world clock through a voice action
     but the city they specified is already added to the list.
     [CHAR LIMIT=NONE]
