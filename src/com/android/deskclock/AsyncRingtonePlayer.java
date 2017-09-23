@@ -411,6 +411,7 @@ public final class AsyncRingtonePlayer {
             }
 
             if (mAudioManager != null) {
+                mAudioManager.setSpeakerphoneOn(false);
                 mAudioManager.abandonAudioFocus(null);
             }
         }
@@ -596,6 +597,7 @@ public final class AsyncRingtonePlayer {
             mRingtone = null;
 
             if (mAudioManager != null) {
+                mAudioManager.setSpeakerphoneOn(false);
                 mAudioManager.abandonAudioFocus(null);
             }
         }
