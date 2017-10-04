@@ -1,0 +1,21 @@
+{
+  "comments": [
+    {
+      "key": {
+        "uuid": "854c84b5_b72f9269",
+        "filename": "src/com/android/deskclock/Utils.java",
+        "patchSetId": 11
+      },
+      "lineNbr": 633,
+      "author": {
+        "id": 16082
+      },
+      "writtenOn": "2017-10-04T13:10:33Z",
+      "side": 1,
+      "message": "Errr? If this is on lineage-15.0 branch, is this necessary?",
+      "revId": "c7e4fdc1475d3a149c43c27f0168f90711d84e5e",
+      "serverId": "1ec6b3db-b2c1-4fa4-84a2-4c7efe89ba71",
+      "unresolved": false
+    }
+  ]
+}
