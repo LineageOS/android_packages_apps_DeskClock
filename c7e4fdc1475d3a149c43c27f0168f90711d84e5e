@@ -16,6 +16,24 @@
       "revId": "c7e4fdc1475d3a149c43c27f0168f90711d84e5e",
       "serverId": "1ec6b3db-b2c1-4fa4-84a2-4c7efe89ba71",
       "unresolved": false
+    },
+    {
+      "key": {
+        "uuid": "255cf0a3_9f75c5ba",
+        "filename": "src/com/android/deskclock/Utils.java",
+        "patchSetId": 11
+      },
+      "lineNbr": 633,
+      "author": {
+        "id": 13589
+      },
+      "writtenOn": "2017-10-13T19:41:31Z",
+      "side": 1,
+      "message": "I don\u0027t see a downside, knowing some use the newer app sources like DeskClock to build apks for older versions.",
+      "parentUuid": "854c84b5_b72f9269",
+      "revId": "c7e4fdc1475d3a149c43c27f0168f90711d84e5e",
+      "serverId": "1ec6b3db-b2c1-4fa4-84a2-4c7efe89ba71",
+      "unresolved": false
     }
   ]
 }
