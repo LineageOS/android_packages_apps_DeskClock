@@ -1,0 +1,27 @@
+{
+  "comments": [
+    {
+      "key": {
+        "uuid": "5bf402ac_1612439a",
+        "filename": "res/values/cm_strings.xml",
+        "patchSetId": 1
+      },
+      "lineNbr": 25,
+      "author": {
+        "id": 3671
+      },
+      "writtenOn": "2018-01-04T04:56:40Z",
+      "side": 1,
+      "message": "these should probably just go away and use the short string",
+      "range": {
+        "startLine": 25,
+        "startChar": 18,
+        "endLine": 25,
+        "endChar": 37
+      },
+      "revId": "9ad264fd94feccd0d5b62cbb2c9384fe097743f2",
+      "serverId": "1ec6b3db-b2c1-4fa4-84a2-4c7efe89ba71",
+      "unresolved": false
+    }
+  ]
+}
