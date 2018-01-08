@@ -1,0 +1,96 @@
+{
+  "comments": [
+    {
+      "key": {
+        "uuid": "b47472b3_0845c244",
+        "filename": "src/com/android/deskclock/alarms/AlarmService.java",
+        "patchSetId": 2
+      },
+      "lineNbr": 18,
+      "author": {
+        "id": 13648
+      },
+      "writtenOn": "2018-01-08T17:07:46Z",
+      "side": 1,
+      "message": "Unused",
+      "range": {
+        "startLine": 18,
+        "startChar": 0,
+        "endLine": 18,
+        "endChar": 33
+      },
+      "revId": "9ee38374baf88fa026b0b3f5067e94a35dc01e05",
+      "serverId": "1ec6b3db-b2c1-4fa4-84a2-4c7efe89ba71",
+      "unresolved": false
+    },
+    {
+      "key": {
+        "uuid": "3224f53a_a6f15604",
+        "filename": "src/com/android/deskclock/alarms/AlarmService.java",
+        "patchSetId": 2
+      },
+      "lineNbr": 27,
+      "author": {
+        "id": 13648
+      },
+      "writtenOn": "2018-01-08T17:07:46Z",
+      "side": 1,
+      "message": "Unused",
+      "range": {
+        "startLine": 27,
+        "startChar": 0,
+        "endLine": 27,
+        "endChar": 41
+      },
+      "revId": "9ee38374baf88fa026b0b3f5067e94a35dc01e05",
+      "serverId": "1ec6b3db-b2c1-4fa4-84a2-4c7efe89ba71",
+      "unresolved": false
+    },
+    {
+      "key": {
+        "uuid": "f9474540_f8c59811",
+        "filename": "src/com/android/deskclock/alarms/AlarmService.java",
+        "patchSetId": 2
+      },
+      "lineNbr": 31,
+      "author": {
+        "id": 13648
+      },
+      "writtenOn": "2018-01-08T17:07:46Z",
+      "side": 1,
+      "message": "Place above import android.os.Binder;",
+      "range": {
+        "startLine": 28,
+        "startChar": 0,
+        "endLine": 31,
+        "endChar": 38
+      },
+      "revId": "9ee38374baf88fa026b0b3f5067e94a35dc01e05",
+      "serverId": "1ec6b3db-b2c1-4fa4-84a2-4c7efe89ba71",
+      "unresolved": false
+    },
+    {
+      "key": {
+        "uuid": "e43de5c7_8e4313a3",
+        "filename": "src/com/android/deskclock/alarms/AlarmService.java",
+        "patchSetId": 2
+      },
+      "lineNbr": 32,
+      "author": {
+        "id": 13648
+      },
+      "writtenOn": "2018-01-08T17:07:46Z",
+      "side": 1,
+      "message": "Unused",
+      "range": {
+        "startLine": 32,
+        "startChar": 0,
+        "endLine": 32,
+        "endChar": 44
+      },
+      "revId": "9ee38374baf88fa026b0b3f5067e94a35dc01e05",
+      "serverId": "1ec6b3db-b2c1-4fa4-84a2-4c7efe89ba71",
+      "unresolved": false
+    }
+  ]
+}
