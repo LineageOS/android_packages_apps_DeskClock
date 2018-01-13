@@ -34,6 +34,7 @@
   <!-- Menu item on Alarm Clock screen: Hide clock -->
   <!-- Setting label on Set alarm screen: Label -->
   <!-- Content description for alarm on/off switch in On state -->
+  <string name="on_switch">Ymlaen</string>
   <!-- Content description for alarm on/off switch in Off state -->
   <!-- Default label to display for an alarm -->
   <!-- Preference category on Alarm Settings screen: Set alarm -->
@@ -83,14 +84,18 @@
          7: days hours minutes
     -->
   <!-- Timer notification: how long from now until timer goes off. -->
+  <string name="timer_notifications_hours"><xliff:g id="HOURS" example="2 hours">%1$s</xliff:g><xliff:g id="REMAINING" example="remaining"> %3$s</xliff:g></string>
+  <string name="timer_notifications_minutes"><xliff:g id="MINUTES" example="2 minutes">%2$s</xliff:g><xliff:g id="REMAINING" example="remaining"> %3$s</xliff:g></string>
   <!--
         Verb inflection to use for single time units remaining
         Ex. "1 minute remaining"
     -->
+  <string name="timer_remaining_single">yn weddill</string>
   <!--
         Verb inflection to use for multiple time units remaining
         Ex. "2 minutes remaining"
     -->
+  <string name="timer_remaining_multiple">yn weddill</string>
   <!-- Alarm confirmation toast: Describes how long from now until alarm fires -->
   <!-- Alarm confirmation toast: days -->
   <!-- Alarm confirmation toast and timer notification: hours -->
@@ -111,6 +116,7 @@
   <!-- Setting title for changing the crescendo duration. -->
   <!-- Summary value for changing the crescendo duration to 0. -->
   <!-- Summary value for changing the crescendo duration. -->
+  <string name="crescendo_duration"><xliff:g id="number" example="7">%s</xliff:g> eiliad</string>
   <!-- Setting label when changing the crescendo duration. -->
   <!-- Auto silence preference title -->
   <!-- Auto silence summary string set based on the preference value. -->
@@ -134,6 +140,7 @@
   <!-- Title of the setting to change hardware button behavior. This string
          should be changed for each piece of hardware. [CHAR LIMIT=20] -->
   <!-- Title of the setting default alarm tone  -->
+  <string name="default_alarm_tone_title">Tôn larwm rhagosodedig</string>
   <!-- Dialog title of the volume and power setting. -->
   <!-- Entries listed in the setting for the side-button action. -->
   <!-- Values for the side-button setting. -->
@@ -162,9 +169,13 @@
   <!-- Menu item on most screens to get to more settings -->
   <!-- Menu item on most screens to get to the help information -->
   <!-- Menu item on clock screen to add world city. -->
+  <string name="menu_item_add">Ychwanegu</string>
   <!-- Menu item on clock screen to enter night mode. -->
   <!-- Menu item on Cities screen to sort by GMT offset -->
   <!-- Menu item on Cities screen to sort by alphabetical order -->
+  <string name="cities_add_city_title">Ychwanegu dinas</string>
+  <string name="cities_add_city_city">Dinas:</string>
+  <string name="cities_add_city_timezone">Cylchfa amser:</string>
   <!-- Label for selected cities in Cities list view -->
   <!-- Stopwatch and Timer shared strings -->
   <!-- Describes the purpose of the button to resume running timer. [CHAR LIMIT=15] -->
@@ -177,6 +188,7 @@
   <!-- Stopwatch strings -->
   <!-- Describes the purpose of the button to begin running a stopwatch -->
   <!-- Describes the purpose of the button to pause a stopwatch. -->
+  <string name="sw_pause_button">Saib</string>
   <!-- Describes the purpose of the button to record current the stopwatch value into the collection of lap times. -->
   <!-- Describes the purpose of the button to share the stopwatch value.
          Also used as title for chooser when sharing stopwatch results. -->
@@ -201,14 +213,17 @@
   <!-- Describes the purpose of the button to return the timer to it's original starting value. -->
   <!-- Describes the purpose of the button to discard the current dialog values. Will also close the dialog if other time's exist -->
   <!-- Accessibility announcement when a timer is canceled. -->
+  <string name="timer_canceled">Diddymwyd yr amserydd</string>
   <!-- Notification content shown when a timer has completed and has no more time remaining -->
   <!--
         Notification content shown when multiple timers have completed and have no more time
         remaining. Arg is the number of timers. [CHAR LIMIT=25]
     -->
+  <string name="timer_multi_times_up"><xliff:g id="NUM_TIMERS" example="2">%d</xliff:g> amserydd wedi dod i ben</string>
   <!-- Label associated with a notification for a Timer -->
   <!-- Toast content shown when user attempts to create a new timer when there are already 4 timers -->
   <!-- Describes the purpose of the notification button to pause the timer. [CHAR LIMIT=15] -->
+  <string name="timer_pause">Saib</string>
   <!-- Describes the purpose of the notification button to reset all running timers. [CHAR LIMIT=31] -->
   <!-- Jocular content that user may append when sharing the lap times -->
   <!-- Title with the clock on the main page displaying the user's regular timezone (shows when automatic_home_clock enabled) -->
@@ -234,16 +249,19 @@
         Accessibility string read when a city checkbox is checked.
         Ex. "Ann Arbor checked"
     -->
+  <string name="city_checked"><xliff:g id="city_name">%s</xliff:g> wedi ei ddewis</string>
   <!--
         Accessibility string read when a city checkbox is unchecked.
         Ex. "Ann Arbor unchecked"
     -->
+  <string name="city_unchecked"><xliff:g id="city_name">%s</xliff:g> heb ei ddewis</string>
   <!-- Choices for timezones, must be kept in sync with timezone_values. CHAR LIMIT=25] -->
   <!-- Choices for timezones, must be kept in sync with timezone_values. -->
   <!-- Header in the preferences settings for the section pertaining to alarms -->
   <!-- Describes the service that processes actions originating from timer notifications. -->
   <!-- Describes the service that processes actions originating from stopwatch notifications. -->
   <!-- Description for the paused stop watch -->
+  <string name="swn_paused">Wedi seibio</string>
   <!-- Text instruction for dismiss alarm on alarm lock screen. The dismiss button will still
          be on the right even on RTL languages so please do not reverse this during
          translation. -->
@@ -254,6 +272,7 @@
          be on the left even on RTL languages so please do not reverse this during
          translation. -->
   <!-- Header in the preferences settings for the section pertaining to timers. -->
+  <string name="timer_settings">Amseryddion</string>
   <!-- Description for timer ringtone setting. -->
   <!-- Description when timer is stopped. -->
   <!-- Notification title when timer is paused. [CHAR LIMIT=25] -->
@@ -270,6 +289,7 @@
   <!-- Description of the button to undo change to alarm -->
   <!-- Toast content when an alarm was deleted  -->
   <!-- Select the source of the alarm -->
+  <string name="alarm_select">Dewis Larwm</string>
   <!-- Select the ringtone as alarm -->
   <!-- Select the alarm from external device -->
   <!-- Ok for selection -->
@@ -429,6 +449,9 @@
   <!-- Setting title for the shake action setting. -->
   <!-- Setting summary for the shake action setting. -->
   <!-- Summary texts for shake and flip actions -->
+  <string name="action_summary_snooze">ail-ganu’r larwm mewn ychydig funudau</string>
+  <string name="action_summary_dismiss">diddymu\'r larwm</string>
+  <string name="action_summary_do_nothing">gwneud dim</string>
   <!-- Label on expanded alarm edit view indicating the ringtone is custom. -->
   <!-- Ringtone selection default" -->
   <!--used for prompt to user storage permission status-->
