@@ -1,0 +1,27 @@
+{
+  "comments": [
+    {
+      "key": {
+        "uuid": "dae0a07e_4708bb9d",
+        "filename": "src/com/android/deskclock/provider/ClockDatabaseHelper.java",
+        "patchSetId": 1
+      },
+      "lineNbr": 99,
+      "author": {
+        "id": 3671
+      },
+      "writtenOn": "2018-01-16T12:09:36Z",
+      "side": 1,
+      "message": "dupe line",
+      "range": {
+        "startLine": 99,
+        "startChar": 0,
+        "endLine": 99,
+        "endChar": 96
+      },
+      "revId": "567feb60bf99ec013861f8a6893537cc16ca306b",
+      "serverId": "1ec6b3db-b2c1-4fa4-84a2-4c7efe89ba71",
+      "unresolved": false
+    }
+  ]
+}
