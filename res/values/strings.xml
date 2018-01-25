@@ -1055,6 +1055,7 @@
     <string name="stopwatch_channel_name">Stopwatch</string>
     <!-- The user visible name of the timers channel. -->
     <string name="timer_channel_name">Timers</string>
-    <!-- The user visible name of the alarms channel. -->
+    <!-- The user visible names of the alarm channels. -->
     <string name="alarm_channel_name">Alarms</string>
+    <string name="alarm_channel_low_priority_name">Alarm information</string>
 </resources>
