@@ -87,7 +87,7 @@ final class AlarmNotifications {
         Utils.createNotificationChannelsIfNeeded(context);
 
         Notification.Builder builder = new Notification.Builder(context,
-                    Utils.ALARM_CHANNEL)
+                    Utils.ALARM_CHANNEL_LOW)
                 .setShowWhen(false)
                 .setContentTitle(context.getString(
                         R.string.alarm_alert_predismiss_title))
@@ -139,7 +139,7 @@ final class AlarmNotifications {
         Utils.createNotificationChannelsIfNeeded(context);
 
         Notification.Builder builder = new Notification.Builder(context,
-                    Utils.ALARM_CHANNEL)
+                    Utils.ALARM_CHANNEL_HIGH)
                 .setShowWhen(false)
                 .setContentTitle(context.getString(R.string.alarm_alert_predismiss_title))
                 .setContentText(AlarmUtils.getAlarmText(context, instance, true /* includeLabel */))
@@ -250,7 +250,7 @@ final class AlarmNotifications {
             Utils.createNotificationChannelsIfNeeded(context);
 
             summary = new Notification.Builder(context,
-                        Utils.ALARM_CHANNEL)
+                        Utils.ALARM_CHANNEL_HIGH)
                     .setShowWhen(false)
                     .setContentIntent(firstUpcoming.contentIntent)
                     .setColor(ContextCompat.getColor(context, R.color.default_background))
@@ -286,7 +286,7 @@ final class AlarmNotifications {
             Utils.createNotificationChannelsIfNeeded(context);
 
             summary = new Notification.Builder(context,
-                        Utils.ALARM_CHANNEL)
+                        Utils.ALARM_CHANNEL_HIGH)
                     .setShowWhen(false)
                     .setContentIntent(firstMissed.contentIntent)
                     .setColor(ContextCompat.getColor(context, R.color.default_background))
@@ -308,7 +308,7 @@ final class AlarmNotifications {
         Utils.createNotificationChannelsIfNeeded(context);
 
         Notification.Builder builder = new Notification.Builder(context,
-                    Utils.ALARM_CHANNEL)
+                    Utils.ALARM_CHANNEL_HIGH)
                 .setShowWhen(false)
                 .setContentTitle(instance.getLabelOrDefault(context))
                 .setContentText(context.getString(R.string.alarm_alert_snooze_until,
@@ -356,7 +356,7 @@ final class AlarmNotifications {
         Utils.createNotificationChannelsIfNeeded(context);
 
         Notification.Builder builder = new Notification.Builder(context,
-                    Utils.ALARM_CHANNEL)
+                    Utils.ALARM_CHANNEL_HIGH)
                 .setShowWhen(false)
                 .setContentTitle(context.getString(R.string.alarm_missed_title))
                 .setContentText(instance.mLabel.isEmpty() ? alarmTime :
@@ -403,7 +403,7 @@ final class AlarmNotifications {
         Utils.createNotificationChannelsIfNeeded(service);
 
         Notification.Builder notification = new Notification.Builder(service,
-                    Utils.ALARM_CHANNEL)
+                    Utils.ALARM_CHANNEL_HIGH)
                 .setContentTitle(instance.getLabelOrDefault(service))
                 .setContentText(AlarmUtils.getFormattedTime(service, instance.getAlarmTime()))
                 .setColor(ContextCompat.getColor(service, R.color.default_background))

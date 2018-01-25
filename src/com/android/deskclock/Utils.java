@@ -646,7 +646,8 @@ public class Utils {
 
     public static final String STOPWATCH_CHANNEL = "stopwatch_notification_channel";
     public static final String TIMER_CHANNEL = "timer_notification_channel";
-    public static final String ALARM_CHANNEL = "alarm_notification_channel";
+    public static final String ALARM_CHANNEL_HIGH = "alarm_notification_channel_high";
+    public static final String ALARM_CHANNEL_LOW = "alarm_notification_channel_low";
 
     public static void createNotificationChannelsIfNeeded(Context context) {
         if (areNotificationChannelsCreated) {
@@ -661,8 +662,11 @@ public class Utils {
         createNotificationChannel(context, TIMER_CHANNEL,
                 context.getString(R.string.timer_channel_name),
                 NotificationManager.IMPORTANCE_HIGH);
-        createNotificationChannel(context, ALARM_CHANNEL,
+        createNotificationChannel(context, ALARM_CHANNEL_HIGH,
                 context.getString(R.string.alarm_channel_name),
                 NotificationManager.IMPORTANCE_HIGH);
+        createNotificationChannel(context, ALARM_CHANNEL_LOW,
+                context.getString(R.string.alarm_channel_name),
+                NotificationManager.IMPORTANCE_LOW);
     }
 }
