@@ -87,7 +87,7 @@ final class AlarmNotifications {
         Utils.createNotificationChannelsIfNeeded(context);
 
         Notification.Builder builder = new Notification.Builder(context,
-                    Utils.ALARM_CHANNEL)
+                    Utils.ALARM_CHANNEL_LOW_PRIORITY)
                 .setShowWhen(false)
                 .setContentTitle(context.getString(
                         R.string.alarm_alert_predismiss_title))
