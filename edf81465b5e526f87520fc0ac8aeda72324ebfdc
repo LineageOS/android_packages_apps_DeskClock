@@ -1,0 +1,27 @@
+{
+  "comments": [
+    {
+      "key": {
+        "uuid": "5728c2c6_01821ad0",
+        "filename": "src/com/android/deskclock/Utils.java",
+        "patchSetId": 3
+      },
+      "lineNbr": 671,
+      "author": {
+        "id": 3671
+      },
+      "writtenOn": "2018-01-26T13:06:41Z",
+      "side": 1,
+      "message": "I wonder if this ought to be IMPORTANCE_MIN",
+      "range": {
+        "startLine": 671,
+        "startChar": 36,
+        "endLine": 671,
+        "endChar": 50
+      },
+      "revId": "edf81465b5e526f87520fc0ac8aeda72324ebfdc",
+      "serverId": "1ec6b3db-b2c1-4fa4-84a2-4c7efe89ba71",
+      "unresolved": false
+    }
+  ]
+}
