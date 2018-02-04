@@ -201,12 +201,12 @@ public final class SettingsActivity extends BaseActivity {
                     pref.setSummary(DataModel.getDataModel().getTimerRingtoneTitle());
                     break;
                 case KEY_FLIP_ACTION:
-                    final ListPreference flipActionPref = (ListPreference) pref;
+                    final SimpleMenuPreference flipActionPref = (SimpleMenuPreference) pref;
                     updateActionSummary(flipActionPref,
                             (String) newValue, R.string.flip_action_summary);
                     break;
                 case KEY_SHAKE_ACTION:
-                    final ListPreference shakeActionPref = (ListPreference) pref;
+                    final SimpleMenuPreference shakeActionPref = (SimpleMenuPreference) pref;
                     updateActionSummary(shakeActionPref,
                             (String) newValue, R.string.shake_action_summary);
                     break;
@@ -328,7 +328,8 @@ public final class SettingsActivity extends BaseActivity {
             SensorManager sensorManager = (SensorManager)
                     getActivity().getSystemService(Context.SENSOR_SERVICE);
 
-            final ListPreference flipActionPref = (ListPreference) findPreference(KEY_FLIP_ACTION);
+            final SimpleMenuPreference flipActionPref =
+                    (SimpleMenuPreference) findPreference(KEY_FLIP_ACTION);
             if (flipActionPref != null) {
                 List<Sensor> sensorList = sensorManager.getSensorList(Sensor.TYPE_ORIENTATION);
                 if (sensorList.size() < 1) { // This will be true if no orientation sensor
@@ -340,7 +341,8 @@ public final class SettingsActivity extends BaseActivity {
                 }
             }
 
-            final ListPreference shakeActionPref = (ListPreference) findPreference(KEY_SHAKE_ACTION);
+            final SimpleMenuPreference shakeActionPref =
+                    (SimpleMenuPreference) findPreference(KEY_SHAKE_ACTION);
             if (shakeActionPref != null) {
                 List<Sensor> sensorList = sensorManager.getSensorList(Sensor.TYPE_ACCELEROMETER);
                 if (sensorList.size() < 1) { // This will be true if no accelerometer sensor
