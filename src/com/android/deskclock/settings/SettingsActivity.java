@@ -177,6 +177,8 @@ public final class SettingsActivity extends BaseActivity {
                 case KEY_CLOCK_STYLE:
                 case KEY_WEEK_START:
                 case KEY_VOLUME_BUTTONS:
+                case KEY_FLIP_ACTION:
+                case KEY_SHAKE_ACTION:
                     final SimpleMenuPreference simpleMenuPreference = (SimpleMenuPreference) pref;
                     final int i = simpleMenuPreference.findIndexOfValue((String) newValue);
                     pref.setSummary(simpleMenuPreference.getEntries()[i]);
@@ -199,16 +201,6 @@ public final class SettingsActivity extends BaseActivity {
                     break;
                 case KEY_TIMER_RINGTONE:
                     pref.setSummary(DataModel.getDataModel().getTimerRingtoneTitle());
-                    break;
-                case KEY_FLIP_ACTION:
-                    final ListPreference flipActionPref = (ListPreference) pref;
-                    updateActionSummary(flipActionPref,
-                            (String) newValue, R.string.flip_action_summary);
-                    break;
-                case KEY_SHAKE_ACTION:
-                    final ListPreference shakeActionPref = (ListPreference) pref;
-                    updateActionSummary(shakeActionPref,
-                            (String) newValue, R.string.shake_action_summary);
                     break;
             }
             // Set result so DeskClock knows to refresh itself
@@ -328,26 +320,26 @@ public final class SettingsActivity extends BaseActivity {
             SensorManager sensorManager = (SensorManager)
                     getActivity().getSystemService(Context.SENSOR_SERVICE);
 
-            final ListPreference flipActionPref = (ListPreference) findPreference(KEY_FLIP_ACTION);
+            final SimpleMenuPreference flipActionPref =
+                    (SimpleMenuPreference) findPreference(KEY_FLIP_ACTION);
             if (flipActionPref != null) {
                 List<Sensor> sensorList = sensorManager.getSensorList(Sensor.TYPE_ORIENTATION);
                 if (sensorList.size() < 1) { // This will be true if no orientation sensor
                     flipActionPref.setValue("0"); // Turn it off
                 } else {
-                    updateActionSummary(flipActionPref,
-                            flipActionPref.getValue(), R.string.flip_action_summary);
+                    flipActionPref.setSummary(flipActionPref.getEntry());
                     flipActionPref.setOnPreferenceChangeListener(this);
                 }
             }
 
-            final ListPreference shakeActionPref = (ListPreference) findPreference(KEY_SHAKE_ACTION);
+            final SimpleMenuPreference shakeActionPref =
+                    (SimpleMenuPreference) findPreference(KEY_SHAKE_ACTION);
             if (shakeActionPref != null) {
                 List<Sensor> sensorList = sensorManager.getSensorList(Sensor.TYPE_ACCELEROMETER);
                 if (sensorList.size() < 1) { // This will be true if no accelerometer sensor
                     shakeActionPref.setValue("0"); // Turn it off
                 } else {
-                    updateActionSummary(shakeActionPref,
-                            shakeActionPref.getValue(), R.string.shake_action_summary);
+                    shakeActionPref.setSummary(shakeActionPref.getEntry());
                     shakeActionPref.setOnPreferenceChangeListener(this);
                 }
             }
@@ -366,12 +358,6 @@ public final class SettingsActivity extends BaseActivity {
                 listPref.setSummary(Utils.getNumberFormattedQuantityString(getActivity(),
                         R.plurals.auto_silence_summary, i));
             }
-        }
-
-        private void updateActionSummary(ListPreference listPref, String action, int summaryResId) {
-            int i = listPref.findIndexOfValue(action);
-            listPref.setSummary(getString(summaryResId,
-                    getResources().getStringArray(R.array.action_summary_entries)[i]));
         }
     }
 }
