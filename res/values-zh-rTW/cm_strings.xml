@@ -21,5 +21,5 @@
   <!-- Setting labels on Set alarm screen: Choose profile -->
   <string name="profile_description">設定檔「<xliff:g id="profile">%s</xliff:g>」</string>
   <!-- No profile selected label -->
-  <string name="profile_no_selected">未選取設定檔</string>
+  <string name="profile_no_selected">未選擇設定檔</string>
 </resources>
