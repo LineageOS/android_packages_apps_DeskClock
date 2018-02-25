@@ -20,6 +20,11 @@
   <!-- Setting title for the flip action setting. -->
   <!-- Setting title for the shake action setting. -->
   <!-- Entries listed in the setting flip and shake. -->
+  <string-array name="action_setting_entries">
+    <item>Snooze</item>
+    <item>Dismiss</item>
+    <item>Não fazer nada</item>
+  </string-array>
   <!-- Setting title for accessing the cLock widget settings -->
   <string name="menu_item_widget_settings">Configurações do widget</string>
 </resources>

@@ -65,11 +65,6 @@
   <string name="alarm_alert_snooze_text">قايتا جىرىڭلاتما</string>
   <!-- Toast that appears after Alarm is snoozed from the Alarm
          dialog. Says the alarm will snooze for xxx minutes.  -->
-  <plurals name="alarm_alert_snooze_set">
-    <!-- Duration for one minute -->
-    <!-- Duration for more than one minute -->
-    <item quantity="other">1 مىنۇتقىچە جىرىڭلاتما.</item>
-  </plurals>
   <!-- Text to appear inside a notification while an alarm is snoozing. -->
   <string name="alarm_alert_snooze_until"><xliff:g id="TIME">%s</xliff:g> غىچە كېچىكتۈر</string>
   <!-- Text to appear in the notification title while an alarm is about to go off. -->
