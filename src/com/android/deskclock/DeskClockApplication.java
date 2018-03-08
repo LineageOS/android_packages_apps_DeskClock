@@ -36,7 +36,8 @@ public class DeskClockApplication extends Application {
 
         final Context applicationContext = getApplicationContext();
         final SharedPreferences prefs = getDefaultSharedPreferences(applicationContext);
-
+        // [Notification Channel] init channel for first boot
+        NotificationChannelManager.getInstance().firstInitIfNeeded(this);
         DataModel.getDataModel().init(applicationContext, prefs);
         UiDataModel.getUiDataModel().init(applicationContext, prefs);
         Controller.getController().setContext(applicationContext);

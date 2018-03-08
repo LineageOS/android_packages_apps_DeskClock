@@ -33,6 +33,8 @@ import android.widget.RemoteViews;
 import com.android.deskclock.R;
 import com.android.deskclock.Utils;
 import com.android.deskclock.events.Events;
+import com.android.deskclock.NotificationChannelManager.Channel;
+import com.android.deskclock.NotificationChannelManager;
 import com.android.deskclock.stopwatch.StopwatchService;
 
 import java.util.ArrayList;
@@ -137,7 +139,8 @@ class StopwatchNotificationBuilder {
                 .setSmallIcon(R.drawable.stat_notify_stopwatch)
                 .setStyle(new NotificationCompat.DecoratedCustomViewStyle())
                 .setColor(ContextCompat.getColor(context, R.color.default_background));
-
+        /// [Notification Channel] Set channel type
+        NotificationChannelManager.applyChannel(notification, context, Channel.EVENT_EXPIRED);
         if (Utils.isNOrLater()) {
             notification.setGroup(nm.getStopwatchNotificationGroupKey());
         }

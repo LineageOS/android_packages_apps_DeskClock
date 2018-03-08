@@ -83,6 +83,7 @@ public class AlarmInitReceiver extends BroadcastReceiver {
         if (Intent.ACTION_MY_PACKAGE_REPLACED.equals(action)) {
             DataModel.getDataModel().updateAllNotifications();
             Controller.getController().updateShortcuts();
+            NotificationChannelManager.getInstance().initChannels(context);
         }
 
         AsyncHandler.post(new Runnable() {
