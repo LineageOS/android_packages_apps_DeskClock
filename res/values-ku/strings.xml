@@ -590,9 +590,4 @@
     %s represents alarm time, e.g. 14:20
     [CHAR LIMIT=NONE]
     -->
-  <!-- The user visible name of the stopwatch channel. -->
-  <string name="stopwatch_channel_name">کات وه‌ستێن</string>
-  <!-- The user visible name of the timers channel. -->
-  <!-- The user visible names of the alarm channels. -->
-  <string name="alarm_channel_name">وریاکەرەوەکان</string>
 </resources>

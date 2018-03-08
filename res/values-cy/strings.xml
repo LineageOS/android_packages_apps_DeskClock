@@ -521,9 +521,4 @@
     %s represents alarm time, e.g. 14:20
     [CHAR LIMIT=NONE]
     -->
-  <!-- The user visible name of the stopwatch channel. -->
-  <!-- The user visible name of the timers channel. -->
-  <string name="timer_channel_name">Amseryddion</string>
-  <!-- The user visible names of the alarm channels. -->
-  <string name="alarm_channel_name">Larymau</string>
 </resources>

@@ -18,10 +18,14 @@
 <resources xmlns:xliff="urn:oasis:names:tc:xliff:document:1.2" xmlns:tools="http://schemas.android.com/tools">
   <!-- Label shown on launcher icon -->
   <!-- Label for the this application displayed on-screen when this application must be represented to the user. -->
+  <string name="app_label">Reló</string>
   <!-- Setting label on Set alarm screen: Label -->
   <!-- Default label to display for an alarm -->
+  <string name="default_label">Alarma</string>
   <!-- Setting labels on Set alarm screen: Vibration on or off -->
+  <string name="alarm_vibrate">Vibrar</string>
   <!-- Setting labels on Set alarm screen: Repeat -->
+  <string name="alarm_repeat">Repitir</string>
   <!-- Setting labels on Set alarm screen: Delete [CHAR LIMIT=15] -->
   <!-- Title of default ringtone played when an alarm triggers [CHAR LIMIT=30] -->
   <!-- Title for alarm ringtone picker screen [CHAR LIMIT=30] -->
@@ -423,8 +427,4 @@
     %s represents alarm time, e.g. 14:20
     [CHAR LIMIT=NONE]
     -->
-  <!-- The user visible name of the stopwatch channel. -->
-  <!-- The user visible name of the timers channel. -->
-  <string name="timer_channel_name">Temporizadores</string>
-  <!-- The user visible names of the alarm channels. -->
 </resources>
