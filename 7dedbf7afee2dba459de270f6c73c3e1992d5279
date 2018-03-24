@@ -2,6 +2,29 @@
   "comments": [
     {
       "key": {
+        "uuid": "51ecd498_c7ae06c4",
+        "filename": "src/com/android/deskclock/NotificationChannelManager.java",
+        "patchSetId": 3
+      },
+      "lineNbr": 129,
+      "author": {
+        "id": 16
+      },
+      "writtenOn": "2018-03-24T12:15:51Z",
+      "side": 1,
+      "message": "The use of a preference to prevent rerunning the init method is strictly speaking not necessary. Recreating the same channels is supposedly a no-op.",
+      "range": {
+        "startLine": 129,
+        "startChar": 28,
+        "endLine": 129,
+        "endChar": 48
+      },
+      "revId": "7dedbf7afee2dba459de270f6c73c3e1992d5279",
+      "serverId": "1ec6b3db-b2c1-4fa4-84a2-4c7efe89ba71",
+      "unresolved": false
+    },
+    {
+      "key": {
         "uuid": "a19a3dc7_fafdea93",
         "filename": "src/com/android/deskclock/NotificationChannelManager.java",
         "patchSetId": 3
