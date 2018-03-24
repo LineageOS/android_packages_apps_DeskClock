@@ -2,6 +2,52 @@
   "comments": [
     {
       "key": {
+        "uuid": "263e578b_6d2d56db",
+        "filename": "res/values/cm_strings.xml",
+        "patchSetId": 3
+      },
+      "lineNbr": 37,
+      "author": {
+        "id": 16
+      },
+      "writtenOn": "2018-03-24T12:45:11Z",
+      "side": 1,
+      "message": "Should probably use a more descriptive string.",
+      "range": {
+        "startLine": 37,
+        "startChar": 35,
+        "endLine": 37,
+        "endChar": 41
+      },
+      "revId": "7dedbf7afee2dba459de270f6c73c3e1992d5279",
+      "serverId": "1ec6b3db-b2c1-4fa4-84a2-4c7efe89ba71",
+      "unresolved": false
+    },
+    {
+      "key": {
+        "uuid": "5f9929a8_521123d0",
+        "filename": "res/values/cm_strings.xml",
+        "patchSetId": 3
+      },
+      "lineNbr": 38,
+      "author": {
+        "id": 16
+      },
+      "writtenOn": "2018-03-24T12:45:11Z",
+      "side": 1,
+      "message": "Should maybe be renamed to either \"Firing events\" or \"Firing alarms \u0026 timers\", the latter if we want to match the string in the Play Store version.",
+      "range": {
+        "startLine": 38,
+        "startChar": 4,
+        "endLine": 38,
+        "endChar": 65
+      },
+      "revId": "7dedbf7afee2dba459de270f6c73c3e1992d5279",
+      "serverId": "1ec6b3db-b2c1-4fa4-84a2-4c7efe89ba71",
+      "unresolved": false
+    },
+    {
+      "key": {
         "uuid": "51ecd498_c7ae06c4",
         "filename": "src/com/android/deskclock/NotificationChannelManager.java",
         "patchSetId": 3
