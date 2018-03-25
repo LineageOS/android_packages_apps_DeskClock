@@ -159,6 +159,46 @@
       "revId": "7dedbf7afee2dba459de270f6c73c3e1992d5279",
       "serverId": "1ec6b3db-b2c1-4fa4-84a2-4c7efe89ba71",
       "unresolved": false
+    },
+    {
+      "key": {
+        "uuid": "90ddbdd7_78960697",
+        "filename": "src/com/android/deskclock/data/StopwatchNotificationBuilder.java",
+        "patchSetId": 3
+      },
+      "lineNbr": 143,
+      "author": {
+        "id": 16
+      },
+      "writtenOn": "2018-03-25T01:26:36Z",
+      "side": 1,
+      "message": "Shouldn\u0027t this be Channel.HIGH_NOTIFICATION? I don\u0027t see a reason for this to trigger a popup notification. Google\u0027s app seems to agree.",
+      "range": {
+        "startLine": 143,
+        "startChar": 71,
+        "endLine": 143,
+        "endChar": 92
+      },
+      "revId": "7dedbf7afee2dba459de270f6c73c3e1992d5279",
+      "serverId": "1ec6b3db-b2c1-4fa4-84a2-4c7efe89ba71",
+      "unresolved": false
+    },
+    {
+      "key": {
+        "uuid": "34c9a88d_a27b9c26",
+        "filename": "src/com/android/deskclock/data/TimerNotificationBuilder.java",
+        "patchSetId": 3
+      },
+      "lineNbr": 284,
+      "author": {
+        "id": 16
+      },
+      "writtenOn": "2018-03-25T01:26:36Z",
+      "side": 1,
+      "message": "The following code should probably be added here? I\u0027ll test it and upload a new patchset.\n\nNotificationChannelManager.applyChannel(notification, context, Channel.EVENT_EXPIRED);",
+      "revId": "7dedbf7afee2dba459de270f6c73c3e1992d5279",
+      "serverId": "1ec6b3db-b2c1-4fa4-84a2-4c7efe89ba71",
+      "unresolved": false
     }
   ]
 }
