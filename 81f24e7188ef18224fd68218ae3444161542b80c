@@ -1,0 +1,55 @@
+{
+  "comments": [
+    {
+      "key": {
+        "uuid": "ec8696d8_a3c33f08",
+        "filename": "src/com/android/deskclock/NotificationChannelManager.java",
+        "patchSetId": 4
+      },
+      "lineNbr": 106,
+      "author": {
+        "id": 11883
+      },
+      "writtenOn": "2018-03-25T06:44:29Z",
+      "side": 1,
+      "message": "whitespace",
+      "revId": "81f24e7188ef18224fd68218ae3444161542b80c",
+      "serverId": "1ec6b3db-b2c1-4fa4-84a2-4c7efe89ba71",
+      "unresolved": false
+    },
+    {
+      "key": {
+        "uuid": "a757f772_3a2027ac",
+        "filename": "src/com/android/deskclock/NotificationChannelManager.java",
+        "patchSetId": 4
+      },
+      "lineNbr": 154,
+      "author": {
+        "id": 11883
+      },
+      "writtenOn": "2018-03-25T06:44:29Z",
+      "side": 1,
+      "message": "remove any reference to lockscreen",
+      "revId": "81f24e7188ef18224fd68218ae3444161542b80c",
+      "serverId": "1ec6b3db-b2c1-4fa4-84a2-4c7efe89ba71",
+      "unresolved": false
+    },
+    {
+      "key": {
+        "uuid": "0ae06c9e_517c1553",
+        "filename": "src/com/android/deskclock/NotificationChannelManager.java",
+        "patchSetId": 4
+      },
+      "lineNbr": 201,
+      "author": {
+        "id": 11883
+      },
+      "writtenOn": "2018-03-25T06:44:29Z",
+      "side": 1,
+      "message": "ditto",
+      "revId": "81f24e7188ef18224fd68218ae3444161542b80c",
+      "serverId": "1ec6b3db-b2c1-4fa4-84a2-4c7efe89ba71",
+      "unresolved": false
+    }
+  ]
+}
