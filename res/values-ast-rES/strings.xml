@@ -21,25 +21,40 @@
   <!-- -->
   <!-- Label shown on launcher icon -->
   <!-- Label for the this application displayed on-screen when this application must be represented to the user. -->
+  <string name="app_label">Reló</string>
   <!-- Title for AlarmClock activity -->
   <!-- Label for the Alarms activity displayed on-screen when that activity must be represented to the user. -->
+  <string name="alarm_list_title">Alarmes</string>
   <!-- Menu item on Alarm Clock screen: Add alarm -->
+  <string name="add_alarm">Amestar alarma</string>
   <!-- Menu item on Alarm Clock screen: Desk clock -->
+  <string name="menu_desk_clock">Reló d\'escritoriu</string>
   <!-- Menu item on Alarm Clock screen: Edit alarm -->
+  <string name="menu_edit_alarm">Editar alarma</string>
   <!-- Context Menu Item on Alarm Settings screen: Delete alarm -->
+  <string name="delete_alarm">Desaniciar alarma</string>
   <!-- Context Menu Item on Alarm Settings screen: Enable alarm -->
+  <string name="enable_alarm">Activar alarma</string>
   <!-- Context Menu Item on Alarm Settings screen: Disable alarm -->
+  <string name="disable_alarm">Desactivar alarma</string>
   <!-- Delete alarm confirmation dialog message. -->
+  <string name="delete_alarm_confirm">¿Desaniciar esta alarma?</string>
   <!-- Menu item on Alarm Clock screen: Show clock -->
+  <string name="show_clock">Amosar reló</string>
   <!-- Menu item on Alarm Clock screen: Hide clock -->
+  <string name="hide_clock">Anubrir reló</string>
   <!-- Setting label on Set alarm screen: Label -->
   <!-- Content description for alarm on/off switch in On state -->
   <!-- Content description for alarm on/off switch in Off state -->
   <!-- Default label to display for an alarm -->
+  <string name="default_label">Alarma</string>
   <!-- Preference category on Alarm Settings screen: Set alarm -->
   <!-- Also label for the old Alarms dialog activity displayed on-screen when that activity must be represented to the user. -->
+  <string name="set_alarm">Afitar alarma</string>
   <!-- Setting labels on Set alarm screen: Vibration on or off -->
+  <string name="alarm_vibrate">Vibrar</string>
   <!-- Setting labels on Set alarm screen: Repeat -->
+  <string name="alarm_repeat">Repitir</string>
   <!-- Setting labels on Set alarm screen: Select alarm ringtone  -->
   <string name="alert">Timbre d\'alarma</string>
   <!-- Title of default ringtone played when a timer expires. -->
