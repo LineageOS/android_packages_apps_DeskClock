@@ -140,7 +140,7 @@ class StopwatchNotificationBuilder {
                 .setStyle(new NotificationCompat.DecoratedCustomViewStyle())
                 .setColor(ContextCompat.getColor(context, R.color.default_background));
 
-        NotificationChannelManager.applyChannel(notification, context, Channel.HIGH_NOTIFICATION);
+        NotificationChannelManager.applyChannel(notification, context, Channel.EVENT_EXPIRED);
         if (Utils.isNOrLater()) {
             notification.setGroup(nm.getStopwatchNotificationGroupKey());
         }

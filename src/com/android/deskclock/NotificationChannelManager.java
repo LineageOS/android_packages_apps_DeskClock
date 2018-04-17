@@ -76,9 +76,9 @@ public class NotificationChannelManager {
 
     @Channel
     private static final String[] allChannels = new String[] {
-            Channel.EVENT_EXPIRED, 
+            Channel.EVENT_EXPIRED,
             Channel.HIGH_NOTIFICATION,
-            Channel.DEFAULT_NOTIFICATION 
+            Channel.DEFAULT_NOTIFICATION
     };
 
     @NonNull
