@@ -260,8 +260,6 @@
   <!-- Title of the setting to change hardware button behavior. This string
          should be changed for each piece of hardware. [CHAR LIMIT=20] -->
   <string name="volume_button_setting_title">Botymau uchder sain</string>
-  <!-- Title of the setting default alarm tone  -->
-  <string name="default_alarm_tone_title">Tôn larwm rhagosodedig</string>
   <!-- Dialog title of the volume and power setting. -->
   <!-- Entries listed in the setting for the side-button action. -->
   <string-array name="volume_button_setting_entries">
@@ -653,14 +651,6 @@
     %s represents alarm time, e.g. 14:20
     [CHAR LIMIT=NONE]
     -->
-  <!-- Setting title for the flip action setting. -->
-  <!-- Setting summary for the flip action setting. -->
-  <!-- Setting title for the shake action setting. -->
-  <!-- Setting summary for the shake action setting. -->
-  <!-- Summary texts for shake and flip actions -->
-  <string name="action_summary_snooze">ail-ganu’r larwm mewn ychydig funudau</string>
-  <string name="action_summary_dismiss">diddymu\'r larwm</string>
-  <string name="action_summary_do_nothing">gwneud dim</string>
   <!-- Label on expanded alarm edit view indicating the ringtone is custom. -->
   <string name="custom_ringtone">Tôn Canu Personol</string>
   <!-- Ringtone selection default" -->

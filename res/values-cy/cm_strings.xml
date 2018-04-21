@@ -19,4 +19,8 @@
   <!-- Setting title for accessing the cLock widget settings -->
   <!-- Setting labels on Set alarm screen: Choose profile -->
   <!-- No profile selected label -->
+  <string name="default_alarm_tone_title">Tôn larwm rhagosodedig</string>
+  <string name="action_summary_snooze">ail-ganu’r larwm mewn ychydig funudau</string>
+  <string name="action_summary_dismiss">diddymu\'r larwm</string>
+  <string name="action_summary_do_nothing">gwneud dim</string>
 </resources>

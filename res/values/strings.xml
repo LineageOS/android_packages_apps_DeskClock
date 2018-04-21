@@ -364,8 +364,6 @@
     <!-- Title of the setting to change hardware button behavior. This string
          should be changed for each piece of hardware. [CHAR LIMIT=20] -->
     <string name="volume_button_setting_title">Volume buttons</string>
-    <!-- Title of the setting default alarm tone  -->
-    <string name="default_alarm_tone_title">Default alarm tone</string>
 
     <!-- Dialog title of the volume and power setting. -->
     <string name="volume_button_dialog_title">Button effect</string>
@@ -1136,26 +1134,6 @@
     [CHAR LIMIT=NONE]
     -->
     <string name="alarm_is_snoozed"><xliff:g id="alarm_time" example="14:20">%s</xliff:g> alarm snoozed for 10 minutes</string>
-    <!-- Setting title for the flip action setting. -->
-    <string name="flip_action_title">Flip action</string>
-
-      <!-- Setting summary for the flip action setting. -->
-    <string name="flip_action_summary" product="default">Flipping the phone down will
-        <xliff:g id="action">%s</xliff:g>
-    </string>
-
-    <!-- Setting title for the shake action setting. -->
-    <string name="shake_action_title">Shake action</string>
-
-    <!-- Setting summary for the shake action setting. -->
-    <string name="shake_action_summary" product="default">Shaking the phone will
-        <xliff:g id="action">%s</xliff:g>
-    </string>
-
-    <!-- Summary texts for shake and flip actions -->
-    <string name="action_summary_snooze">snooze the alarm</string>
-    <string name="action_summary_dismiss">dismiss the alarm</string>
-    <string name="action_summary_do_nothing">do nothing</string>
 
     <!-- Label on expanded alarm edit view indicating the ringtone is custom. -->
     <string name="custom_ringtone">Custom Ringtone</string>

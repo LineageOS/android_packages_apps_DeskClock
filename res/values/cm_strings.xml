@@ -24,4 +24,27 @@
     <!-- No profile selected label -->
     <string name="profile_no_selected">No profile selected</string>
 
+    <!-- Title of the setting default alarm tone  -->
+    <string name="default_alarm_tone_title">Default alarm tone</string>
+
+    <!-- Setting title for the flip action setting. -->
+    <string name="flip_action_title">Flip action</string>
+
+      <!-- Setting summary for the flip action setting. -->
+    <string name="flip_action_summary" product="default">Flipping the phone down will
+        <xliff:g id="action">%s</xliff:g>
+    </string>
+
+    <!-- Setting title for the shake action setting. -->
+    <string name="shake_action_title">Shake action</string>
+
+    <!-- Setting summary for the shake action setting. -->
+    <string name="shake_action_summary" product="default">Shaking the phone will
+        <xliff:g id="action">%s</xliff:g>
+    </string>
+
+    <!-- Summary texts for shake and flip actions -->
+    <string name="action_summary_snooze">snooze the alarm</string>
+    <string name="action_summary_dismiss">dismiss the alarm</string>
+    <string name="action_summary_do_nothing">do nothing</string>
 </resources>
