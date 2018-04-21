@@ -179,8 +179,8 @@ public final class SettingsActivity extends BaseActivity {
                     break;
                 case KEY_VOLUME_BUTTONS:
                     final ListPreference volumeButtonsPref = (ListPreference) pref;
-                    final int index = volumeButtonsPref.findIndexOfValue((String) newValue);
-                    volumeButtonsPref.setSummary(volumeButtonsPref.getEntries()[index]);
+                    updateActionSummary(volumeButtonsPref, (String) newValue,
+                            R.string.volume_buttons_summary);
                     break;
                 case KEY_WEEK_START:
                     final ListPreference weekStartPref = (ListPreference)
@@ -196,20 +196,13 @@ public final class SettingsActivity extends BaseActivity {
                 case KEY_FLIP_ACTION:
                     LogUtils.d(LogUtils.LOGTAG, "onPreferenceChange: flip");
                     final ListPreference flipPref = (ListPreference) pref;
-                    int i = flipPref.findIndexOfValue((String) newValue);
-                    flipPref.setSummary(getString(
-                            R.string.flip_action_summary,
-                            getResources().getStringArray(
-                                    R.array.action_summary_entries)[i]));
+                    updateActionSummary(flipPref, (String) newValue, R.string.flip_action_summary);
                     break;
                 case KEY_SHAKE_ACTION:
                     LogUtils.d(LogUtils.LOGTAG, "onPreferenceChange: shake");
                     final ListPreference shakePref = (ListPreference) pref;
-                    int ii = shakePref.findIndexOfValue((String) newValue);
-                    shakePref.setSummary(getString(
-                            R.string.shake_action_summary,
-                            getResources().getStringArray(
-                                    R.array.action_summary_entries)[ii]));
+                    updateActionSummary(shakePref, (String) newValue,
+                            R.string.shake_action_summary);
                     break;
             }
             // Set result so DeskClock knows to refresh itself
@@ -310,7 +303,8 @@ public final class SettingsActivity extends BaseActivity {
 
             final ListPreference volumeButtonsPref =
                     (ListPreference) findPreference(KEY_VOLUME_BUTTONS);
-            volumeButtonsPref.setSummary(volumeButtonsPref.getEntry());
+            updateActionSummary(volumeButtonsPref, volumeButtonsPref.getValue(),
+                    R.string.volume_buttons_summary);
             volumeButtonsPref.setOnPreferenceChangeListener(this);
 
             final Preference volumePref = findPreference(KEY_ALARM_VOLUME);
@@ -367,10 +361,8 @@ public final class SettingsActivity extends BaseActivity {
                         category.removePreference(flipPreference);
                     }
                 } else {
-                    int i = flipPreference.findIndexOfValue(flipPreference.getValue());
-                    flipPreference.setSummary(getString(
-                            R.string.flip_action_summary,
-                            getResources().getStringArray(R.array.action_summary_entries)[i]));
+                    updateActionSummary(flipPreference, flipPreference.getValue(),
+                            R.string.flip_action_summary);
                     flipPreference.setOnPreferenceChangeListener(this);
                 }
             }
@@ -385,11 +377,8 @@ public final class SettingsActivity extends BaseActivity {
                         category.removePreference(shakePreference);
                     }
                 } else {
-                    int i = shakePreference.findIndexOfValue(shakePreference.getValue());
-                    shakePreference.setSummary(getString(
-                            R.string.shake_action_summary,
-                            getResources().getStringArray(
-                                    R.array.action_summary_entries)[i]));
+                    updateActionSummary(shakePreference, shakePreference.getValue(),
+                            R.string.shake_action_summary);
                     shakePreference.setOnPreferenceChangeListener(this);
                 }
             }
@@ -403,6 +392,12 @@ public final class SettingsActivity extends BaseActivity {
                 listPref.setSummary(Utils.getNumberFormattedQuantityString(getActivity(),
                         R.plurals.auto_silence_summary, i));
             }
+        }
+
+        private void updateActionSummary(ListPreference listPref, String action, int summaryResId) {
+            int i = listPref.findIndexOfValue(action);
+            listPref.setSummary(getString(summaryResId,
+                    getResources().getStringArray(R.array.action_summary_entries)[i]));
         }
 
         private static class TimeZoneRow implements Comparable<TimeZoneRow> {

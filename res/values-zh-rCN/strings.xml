@@ -38,7 +38,6 @@
     <string name="default_timer_ringtone_title" msgid="1370799536406862317">"计时结束"</string>
     <string name="silent_timer_ringtone_title" msgid="7588723137323327647">"静音"</string>
     <string name="ringtone" msgid="9110746249688559579">"铃声"</string>
-    <string name="default_alarm_tone_title">默认闹钟铃声</string>
     <string name="cities_add_city_title">加城市</string>
     <string name="cities_add_city_city">城市:</string>
     <string name="cities_add_city_timezone">时区:</string>
@@ -414,14 +413,6 @@
     <string name="pick_alarm_to_dismiss" msgid="5408769235866082896">"请选择要关闭的闹钟"</string>
     <string name="no_firing_alarms" msgid="4986161963178722289">"目前没有正在响铃的闹钟"</string>
     <string name="alarm_is_snoozed" msgid="7044644119744928846">"<xliff:g id="ALARM_TIME">%s</xliff:g> 的闹钟已延后 10 分钟"</string>
-    <string name="flip_action_title">翻转行为</string>
-    <string name="shake_action_title">摇动行为</string>
-    <string name="shake_action_summary">摇动设备将<xliff:g id="action">%s</xliff:g></string>
-    <string name="flip_action_summary">翻转设备将<xliff:g id="action">%s</xliff:g></string>
-        <!-- Summary texts for shake and flip actions -->
-    <string name="action_summary_snooze">暂停闹铃</string>
-    <string name="action_summary_dismiss">停止闹铃</string>
-    <string name="action_summary_do_nothing">不产生任何作用</string>
     <string name="custom_ringtone" msgid="3477418548382111184">"自定义铃声"</string>
     <string name="ringtone_default">"默认铃声"</string>
     <string name="have_denied_storage_permission">"你主动拒绝了存储访问权限,可以去设置应用重新开启该应用权限"</string>
