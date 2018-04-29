@@ -1,0 +1,50 @@
+{
+  "comments": [
+    {
+      "key": {
+        "uuid": "fbab2c72_1f1e4b2f",
+        "filename": "src/com/android/deskclock/NotificationChannelManager.java",
+        "patchSetId": 6
+      },
+      "lineNbr": 79,
+      "author": {
+        "id": 11883
+      },
+      "writtenOn": "2018-04-29T12:41:00Z",
+      "side": 1,
+      "message": "ew",
+      "range": {
+        "startLine": 79,
+        "startChar": 34,
+        "endLine": 79,
+        "endChar": 35
+      },
+      "revId": "b3bf52593253d53b93e4c1a29aa665aeb0f1e403",
+      "serverId": "1ec6b3db-b2c1-4fa4-84a2-4c7efe89ba71",
+      "unresolved": false
+    },
+    {
+      "key": {
+        "uuid": "bf02c0c7_8fea4b10",
+        "filename": "src/com/android/deskclock/NotificationChannelManager.java",
+        "patchSetId": 6
+      },
+      "lineNbr": 81,
+      "author": {
+        "id": 11883
+      },
+      "writtenOn": "2018-04-29T12:41:00Z",
+      "side": 1,
+      "message": "ew",
+      "range": {
+        "startLine": 81,
+        "startChar": 40,
+        "endLine": 81,
+        "endChar": 41
+      },
+      "revId": "b3bf52593253d53b93e4c1a29aa665aeb0f1e403",
+      "serverId": "1ec6b3db-b2c1-4fa4-84a2-4c7efe89ba71",
+      "unresolved": false
+    }
+  ]
+}

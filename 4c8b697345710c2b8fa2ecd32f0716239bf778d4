@@ -2,6 +2,52 @@
   "comments": [
     {
       "key": {
+        "uuid": "5f1ad68c_24df187e",
+        "filename": "src/com/android/deskclock/AlarmInitReceiver.java",
+        "patchSetId": 5
+      },
+      "lineNbr": 86,
+      "author": {
+        "id": 11883
+      },
+      "writtenOn": "2018-04-29T12:41:00Z",
+      "side": 1,
+      "message": "we want this",
+      "range": {
+        "startLine": 86,
+        "startChar": 0,
+        "endLine": 86,
+        "endChar": 75
+      },
+      "revId": "4c8b697345710c2b8fa2ecd32f0716239bf778d4",
+      "serverId": "1ec6b3db-b2c1-4fa4-84a2-4c7efe89ba71",
+      "unresolved": false
+    },
+    {
+      "key": {
+        "uuid": "2f9bdbc3_354b52fd",
+        "filename": "src/com/android/deskclock/DeskClockApplication.java",
+        "patchSetId": 5
+      },
+      "lineNbr": 39,
+      "author": {
+        "id": 11883
+      },
+      "writtenOn": "2018-04-29T12:41:00Z",
+      "side": 1,
+      "message": "erm, we want that",
+      "range": {
+        "startLine": 39,
+        "startChar": 0,
+        "endLine": 39,
+        "endChar": 73
+      },
+      "revId": "4c8b697345710c2b8fa2ecd32f0716239bf778d4",
+      "serverId": "1ec6b3db-b2c1-4fa4-84a2-4c7efe89ba71",
+      "unresolved": false
+    },
+    {
+      "key": {
         "uuid": "6d5accbf_b6629143",
         "filename": "src/com/android/deskclock/NotificationChannelManager.java",
         "patchSetId": 5
