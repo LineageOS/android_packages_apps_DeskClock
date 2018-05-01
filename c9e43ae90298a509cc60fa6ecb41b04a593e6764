@@ -1,0 +1,27 @@
+{
+  "comments": [
+    {
+      "key": {
+        "uuid": "5314a847_e8285d71",
+        "filename": "src/com/android/deskclock/data/StopwatchNotificationBuilder.java",
+        "patchSetId": 8
+      },
+      "lineNbr": 143,
+      "author": {
+        "id": 16
+      },
+      "writtenOn": "2018-05-01T20:37:20Z",
+      "side": 1,
+      "message": "This should not show a heads-up notification. It should probably be Channel.HIGH_NOTIFICATION. I already addressed this before it seems so I\u0027m not sure why that fix was dropped.",
+      "range": {
+        "startLine": 143,
+        "startChar": 71,
+        "endLine": 143,
+        "endChar": 92
+      },
+      "revId": "c9e43ae90298a509cc60fa6ecb41b04a593e6764",
+      "serverId": "1ec6b3db-b2c1-4fa4-84a2-4c7efe89ba71",
+      "unresolved": false
+    }
+  ]
+}
