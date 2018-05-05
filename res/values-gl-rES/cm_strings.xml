@@ -22,4 +22,21 @@
   <string name="profile_description">Perfil <xliff:g id="profile">%s</xliff:g></string>
   <!-- No profile selected label -->
   <string name="profile_no_selected">Non hai ningún perfil seleccionado</string>
+  <!-- Title of the setting default alarm tone  -->
+  <!-- Settings summary for the volume buttons setting. -->
+  <string name="volume_buttons_summary">Ao premer os botóns de volume vai <xliff:g id="action">%s</xliff:g></string>
+  <!-- Setting title for the flip action setting. -->
+  <string name="flip_action_title">Acción de xiro</string>
+  <!-- Setting summary for the flip action setting. -->
+  <string name="flip_action_summary" product="tablet">Xirando a tableta cara abaixo vai <xliff:g id="action">%s</xliff:g></string>
+  <string name="flip_action_summary" product="default">Xirando o teléfono cara abaixo vai <xliff:g id="action">%s</xliff:g></string>
+  <!-- Setting title for the shake action setting. -->
+  <string name="shake_action_title">Acción de mexer</string>
+  <!-- Setting summary for the shake action setting. -->
+  <string name="shake_action_summary" product="tablet">Mexendo a tableta vai <xliff:g id="action">%s</xliff:g></string>
+  <string name="shake_action_summary" product="default">Mexendo o teléfono vai <xliff:g id="action">%s</xliff:g></string>
+  <!-- Summary texts for shake and flip actions -->
+  <string name="action_summary_snooze">repetir a alarma</string>
+  <string name="action_summary_dismiss">desestimar a alarma</string>
+  <string name="action_summary_do_nothing">non facer nada</string>
 </resources>

@@ -22,4 +22,21 @@
   <string name="profile_description">Profilis <xliff:g id="profile">%s</xliff:g></string>
   <!-- No profile selected label -->
   <string name="profile_no_selected">Nepasirinktas profilis</string>
+  <!-- Title of the setting default alarm tone  -->
+  <!-- Settings summary for the volume buttons setting. -->
+  <string name="volume_buttons_summary">Paspaudus garsumo mygtukus <xliff:g id="action">%s</xliff:g></string>
+  <!-- Setting title for the flip action setting. -->
+  <string name="flip_action_title">Apvertimo veiksmas</string>
+  <!-- Setting summary for the flip action setting. -->
+  <string name="flip_action_summary" product="tablet">Apverčiant planšetinį kompiuterį <xliff:g id="action">%s</xliff:g></string>
+  <string name="flip_action_summary" product="default">Apverčiant telefoną <xliff:g id="action">%s</xliff:g></string>
+  <!-- Setting title for the shake action setting. -->
+  <string name="shake_action_title">Purtymo veiksmas</string>
+  <!-- Setting summary for the shake action setting. -->
+  <string name="shake_action_summary" product="tablet">Purtant planšetinį kompiuterį <xliff:g id="action">%s</xliff:g></string>
+  <string name="shake_action_summary" product="default">Purtant telefoną <xliff:g id="action">%s</xliff:g></string>
+  <!-- Summary texts for shake and flip actions -->
+  <string name="action_summary_snooze">snausti signalą</string>
+  <string name="action_summary_dismiss">atsisakyti signalo</string>
+  <string name="action_summary_do_nothing">nieko nedaryti</string>
 </resources>

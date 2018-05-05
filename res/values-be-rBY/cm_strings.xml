@@ -22,4 +22,21 @@
   <string name="profile_description">Профіль <xliff:g id="profile">%s</xliff:g></string>
   <!-- No profile selected label -->
   <string name="profile_no_selected">Профіль не абраны</string>
+  <!-- Title of the setting default alarm tone  -->
+  <!-- Settings summary for the volume buttons setting. -->
+  <string name="volume_buttons_summary">Пры націску на кнопкі гучнасці <xliff:g id="action">%s</xliff:g></string>
+  <!-- Setting title for the flip action setting. -->
+  <string name="flip_action_title">Пераварот</string>
+  <!-- Setting summary for the flip action setting. -->
+  <string name="flip_action_summary" product="tablet">Пры пераварочванні планшэта <xliff:g id="action">%s</xliff:g></string>
+  <string name="flip_action_summary" product="default">Пры пераварочванні тэлефона <xliff:g id="action">%s</xliff:g></string>
+  <!-- Setting title for the shake action setting. -->
+  <string name="shake_action_title">Падтрасанне</string>
+  <!-- Setting summary for the shake action setting. -->
+  <string name="shake_action_summary" product="tablet">Пры падтрасанні планшэта <xliff:g id="action">%s</xliff:g></string>
+  <string name="shake_action_summary" product="default">Пры падтрасанні тэлефона <xliff:g id="action">%s</xliff:g></string>
+  <!-- Summary texts for shake and flip actions -->
+  <string name="action_summary_snooze">адкласці сігнал будзільніка</string>
+  <string name="action_summary_dismiss">адключыць будзільнік</string>
+  <string name="action_summary_do_nothing">Нічога не рабіць</string>
 </resources>

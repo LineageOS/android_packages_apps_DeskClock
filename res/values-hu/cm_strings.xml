@@ -22,4 +22,21 @@
   <string name="profile_description"><xliff:g id="profile">%s</xliff:g> profil</string>
   <!-- No profile selected label -->
   <string name="profile_no_selected">Nincs kiválasztva profil</string>
+  <!-- Title of the setting default alarm tone  -->
+  <!-- Settings summary for the volume buttons setting. -->
+  <string name="volume_buttons_summary">Hangerő gombok érintése <xliff:g id="action">%s</xliff:g></string>
+  <!-- Setting title for the flip action setting. -->
+  <string name="flip_action_title">Megfordítás művelete</string>
+  <!-- Setting summary for the flip action setting. -->
+  <string name="flip_action_summary" product="tablet">A táblagép megfordítására <xliff:g id="action">%s</xliff:g></string>
+  <string name="flip_action_summary" product="default">A telefon megfordítására <xliff:g id="action">%s</xliff:g></string>
+  <!-- Setting title for the shake action setting. -->
+  <string name="shake_action_title">Rázás művelete</string>
+  <!-- Setting summary for the shake action setting. -->
+  <string name="shake_action_summary" product="tablet">A táblagép rázására <xliff:g id="action">%s</xliff:g></string>
+  <string name="shake_action_summary" product="default">A telefon rázására <xliff:g id="action">%s</xliff:g></string>
+  <!-- Summary texts for shake and flip actions -->
+  <string name="action_summary_snooze">elhalasztja az ébresztést</string>
+  <string name="action_summary_dismiss">elveti az ébresztést</string>
+  <string name="action_summary_do_nothing">nem történik semmi</string>
 </resources>

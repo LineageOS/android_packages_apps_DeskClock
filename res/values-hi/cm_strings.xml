@@ -22,4 +22,21 @@
   <string name="profile_description">प्रोफ़ाइल <xliff:g id="profile">%s</xliff:g></string>
   <!-- No profile selected label -->
   <string name="profile_no_selected">कोई प्रोफ़ाइल नहीं चुनी गई है</string>
+  <!-- Title of the setting default alarm tone  -->
+  <!-- Settings summary for the volume buttons setting. -->
+  <string name="volume_buttons_summary">वोल्यूम बटन को दबाने पर <xliff:g id="action">%s</xliff:g> होगा</string>
+  <!-- Setting title for the flip action setting. -->
+  <string name="flip_action_title">फ्लिप करने की क्रिया</string>
+  <!-- Setting summary for the flip action setting. -->
+  <string name="flip_action_summary" product="tablet">टैब्लेट को नीचे की ओर फ़्लिप करने पर <xliff:g id="action">%s</xliff:g> होगा</string>
+  <string name="flip_action_summary" product="default">फ़ोन को नीचे की ओर फ़्लिप करने पर <xliff:g id="action">%s</xliff:g> होगा</string>
+  <!-- Setting title for the shake action setting. -->
+  <string name="shake_action_title">हिलाने की क्रिया</string>
+  <!-- Setting summary for the shake action setting. -->
+  <string name="shake_action_summary" product="tablet">टैब्लेट को हिलाने पर <xliff:g id="action">%s</xliff:g> होगा</string>
+  <string name="shake_action_summary" product="default">फ़ोन को हिलाने पर <xliff:g id="action">%s</xliff:g> होगा</string>
+  <!-- Summary texts for shake and flip actions -->
+  <string name="action_summary_snooze">अलार्म को स्नूज़ कराएँ</string>
+  <string name="action_summary_dismiss">अलार्म का खारिज करें</string>
+  <string name="action_summary_do_nothing">कुछ नहीं करें</string>
 </resources>

@@ -21,4 +21,21 @@
   <string name="profile_description">Profils <xliff:g id="profile">%s</xliff:g></string>
   <!-- No profile selected label -->
   <string name="profile_no_selected">Profils nav izvēlēts</string>
+  <!-- Title of the setting default alarm tone  -->
+  <!-- Settings summary for the volume buttons setting. -->
+  <string name="volume_buttons_summary">Nospiežot skaļuma pogas <xliff:g id="action">%s</xliff:g></string>
+  <!-- Setting title for the flip action setting. -->
+  <string name="flip_action_title">Apmešanas darbība</string>
+  <!-- Setting summary for the flip action setting. -->
+  <string name="flip_action_summary" product="tablet">Apmetot planšeti uz leju <xliff:g id="action">%s</xliff:g></string>
+  <string name="flip_action_summary" product="default">Apmetot telefonu uz leju <xliff:g id="action">%s</xliff:g></string>
+  <!-- Setting title for the shake action setting. -->
+  <string name="shake_action_title">Kratīšanas darbība</string>
+  <!-- Setting summary for the shake action setting. -->
+  <string name="shake_action_summary" product="tablet">Kratot planšeti tiks <xliff:g id="action">%s</xliff:g></string>
+  <string name="shake_action_summary" product="default">Kratot telefonu tiks <xliff:g id="action">%s</xliff:g></string>
+  <!-- Summary texts for shake and flip actions -->
+  <string name="action_summary_snooze">atlikt modinātāju</string>
+  <string name="action_summary_dismiss">izslēgt modinātāju</string>
+  <string name="action_summary_do_nothing">nedarīt neko</string>
 </resources>

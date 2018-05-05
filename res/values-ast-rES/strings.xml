@@ -186,7 +186,6 @@
   <!-- Text to display in the notification when the alarm has been snoozed -->
   <!-- Title of the setting to change hardware button behavior. This string
          should be changed for each piece of hardware. [CHAR LIMIT=20] -->
-  <!-- Title of the setting default alarm tone  -->
   <!-- Dialog title of the volume and power setting. -->
   <!-- Entries listed in the setting for the side-button action. -->
   <string-array name="volume_button_setting_entries">

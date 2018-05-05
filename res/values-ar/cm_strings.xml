@@ -22,4 +22,21 @@
   <string name="profile_description">ملف تعريف <xliff:g id="profile">%s</xliff:g></string>
   <!-- No profile selected label -->
   <string name="profile_no_selected">لا ملف تعريفي محدد</string>
+  <!-- Title of the setting default alarm tone  -->
+  <!-- Settings summary for the volume buttons setting. -->
+  <string name="volume_buttons_summary">الضغط على أزرار الصوت سيترتب عليه <xliff:g id="action">%s</xliff:g></string>
+  <!-- Setting title for the flip action setting. -->
+  <string name="flip_action_title">إجراء الانعكاس</string>
+  <!-- Setting summary for the flip action setting. -->
+  <string name="flip_action_summary" product="tablet">قلب الجهاز اللوحي لأسفل سوف<xliff:g id="action">%s</xliff:g></string>
+  <string name="flip_action_summary" product="default">تبديل الى الهاتف لأسفل <xliff:g id="action"> %s </xliff:g></string>
+  <!-- Setting title for the shake action setting. -->
+  <string name="shake_action_title">إجراء الاهتزاز</string>
+  <!-- Setting summary for the shake action setting. -->
+  <string name="shake_action_summary" product="tablet">اهتزاز الجهاز اللوحي سيؤدي إلى <xliff:g id="action">%s</xliff:g></string>
+  <string name="shake_action_summary" product="default">اهتزاز الهاتف سوف <xliff:g id="action"> %s </xliff:g></string>
+  <!-- Summary texts for shake and flip actions -->
+  <string name="action_summary_snooze">تأجيل المنبه</string>
+  <string name="action_summary_dismiss">رفض المنبه</string>
+  <string name="action_summary_do_nothing">لا تفعل شيئا</string>
 </resources>

@@ -22,4 +22,22 @@
   <string name="profile_description">Profilo <xliff:g id="profile">%s</xliff:g></string>
   <!-- No profile selected label -->
   <string name="profile_no_selected">Nessun profilo selezionato</string>
+  <!-- Title of the setting default alarm tone  -->
+  <string name="default_alarm_tone_title">Tono sveglia predefinito</string>
+  <!-- Settings summary for the volume buttons setting. -->
+  <string name="volume_buttons_summary">Premere i pulsanti volume farà <xliff:g id="action">%s</xliff:g></string>
+  <!-- Setting title for the flip action setting. -->
+  <string name="flip_action_title">Azione capovolgimento</string>
+  <!-- Setting summary for the flip action setting. -->
+  <string name="flip_action_summary" product="tablet">Capovolgere il tablet verso il basso: <xliff:g id="action">%s</xliff:g></string>
+  <string name="flip_action_summary" product="default">Capovolgere il telefono verso il basso: <xliff:g id="action">%s</xliff:g></string>
+  <!-- Setting title for the shake action setting. -->
+  <string name="shake_action_title">Azione scuotimento</string>
+  <!-- Setting summary for the shake action setting. -->
+  <string name="shake_action_summary" product="tablet">Agitare il tablet: <xliff:g id="action">%s</xliff:g></string>
+  <string name="shake_action_summary" product="default">Agitare il telefono: <xliff:g id="action">%s</xliff:g></string>
+  <!-- Summary texts for shake and flip actions -->
+  <string name="action_summary_snooze">posporre l\'allarme</string>
+  <string name="action_summary_dismiss">interrompere l\'allarme</string>
+  <string name="action_summary_do_nothing">nessuna azione</string>
 </resources>

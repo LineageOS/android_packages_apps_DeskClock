@@ -22,4 +22,21 @@
   <string name="profile_description">Profiel <xliff:g id="profile">%s</xliff:g></string>
   <!-- No profile selected label -->
   <string name="profile_no_selected">Geen profiel geselecteerd</string>
+  <!-- Title of the setting default alarm tone  -->
+  <!-- Settings summary for the volume buttons setting. -->
+  <string name="volume_buttons_summary">Op de volumeknoppen drukken zal <xliff:g id="action">%s</xliff:g></string>
+  <!-- Setting title for the flip action setting. -->
+  <string name="flip_action_title">Omdraai-actie</string>
+  <!-- Setting summary for the flip action setting. -->
+  <string name="flip_action_summary" product="tablet">Omdraaien van uw tablet zal <xliff:g id="action">%s</xliff:g></string>
+  <string name="flip_action_summary" product="default">Omdraaien van uw telefoon zal <xliff:g id="action">%s</xliff:g></string>
+  <!-- Setting title for the shake action setting. -->
+  <string name="shake_action_title">Schudactie</string>
+  <!-- Setting summary for the shake action setting. -->
+  <string name="shake_action_summary" product="tablet">Schudden van uw tablet zal <xliff:g id="action">%s</xliff:g></string>
+  <string name="shake_action_summary" product="default">Schudden van uw telefoon zal <xliff:g id="action">%s</xliff:g></string>
+  <!-- Summary texts for shake and flip actions -->
+  <string name="action_summary_snooze">het alarm snoozen</string>
+  <string name="action_summary_dismiss">het alarm uitschakelen</string>
+  <string name="action_summary_do_nothing">niets doen</string>
 </resources>

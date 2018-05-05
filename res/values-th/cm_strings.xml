@@ -22,4 +22,21 @@
   <string name="profile_description">โปรไฟล์ <xliff:g id="profile">%s</xliff:g></string>
   <!-- No profile selected label -->
   <string name="profile_no_selected">ไม่ได้เลือกโปรไฟล์</string>
+  <!-- Title of the setting default alarm tone  -->
+  <!-- Settings summary for the volume buttons setting. -->
+  <string name="volume_buttons_summary">การกดปุ่มปรับระดับเสียงจะ <xliff:g id="action">%s</xliff:g></string>
+  <!-- Setting title for the flip action setting. -->
+  <string name="flip_action_title">การพลิก</string>
+  <!-- Setting summary for the flip action setting. -->
+  <string name="flip_action_summary" product="tablet">การคว่ำแท็บเล็ตของคุณจะ<xliff:g id="action">%s</xliff:g></string>
+  <string name="flip_action_summary" product="default">การคว่ำโทรศัพท์ลงจะ<xliff:g id="action">%s</xliff:g></string>
+  <!-- Setting title for the shake action setting. -->
+  <string name="shake_action_title">การเขย่า</string>
+  <!-- Setting summary for the shake action setting. -->
+  <string name="shake_action_summary" product="tablet">เมื่อเขย่าแท็บเล็ตจะ <xliff:g id="action">%s</xliff:g></string>
+  <string name="shake_action_summary" product="default">เมื่อเขย่าโทรศัพท์จะ <xliff:g id="action">%s</xliff:g></string>
+  <!-- Summary texts for shake and flip actions -->
+  <string name="action_summary_snooze">พักการปลุก</string>
+  <string name="action_summary_dismiss">ปิดนาฬิกาปลุก</string>
+  <string name="action_summary_do_nothing">ไม่ทำอะไร</string>
 </resources>

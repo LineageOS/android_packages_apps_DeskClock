@@ -22,4 +22,22 @@
   <string name="profile_description">情景模式 <xliff:g id="profile">%s</xliff:g></string>
   <!-- No profile selected label -->
   <string name="profile_no_selected">未选择情景模式</string>
+  <!-- Title of the setting default alarm tone  -->
+  <string name="default_alarm_tone_title">默认闹钟铃声</string>
+  <!-- Settings summary for the volume buttons setting. -->
+  <string name="volume_buttons_summary">按下音量按钮将<xliff:g id="action">%s</xliff:g></string>
+  <!-- Setting title for the flip action setting. -->
+  <string name="flip_action_title">翻转行为</string>
+  <!-- Setting summary for the flip action setting. -->
+  <string name="flip_action_summary" product="tablet">翻转设备将<xliff:g id="action">%s</xliff:g></string>
+  <string name="flip_action_summary" product="default">翻转设备将<xliff:g id="action">%s</xliff:g></string>
+  <!-- Setting title for the shake action setting. -->
+  <string name="shake_action_title">摇动行为</string>
+  <!-- Setting summary for the shake action setting. -->
+  <string name="shake_action_summary" product="tablet">摇动平板电脑将<xliff:g id="action">%s</xliff:g></string>
+  <string name="shake_action_summary" product="default">摇动设备将<xliff:g id="action">%s</xliff:g></string>
+  <!-- Summary texts for shake and flip actions -->
+  <string name="action_summary_snooze">暂停闹钟</string>
+  <string name="action_summary_dismiss">停止闹钟</string>
+  <string name="action_summary_do_nothing">不产生任何作用</string>
 </resources>

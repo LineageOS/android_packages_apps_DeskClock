@@ -22,4 +22,22 @@
   <string name="profile_description"><xliff:g id="profile">%s</xliff:g> profila</string>
   <!-- No profile selected label -->
   <string name="profile_no_selected">Ez da profilik ezarri</string>
+  <!-- Title of the setting default alarm tone  -->
+  <string name="default_alarm_tone_title">Lehenetsitako alarma-doinua</string>
+  <!-- Settings summary for the volume buttons setting. -->
+  <string name="volume_buttons_summary">Bolumen botoiak sakatzean <xliff:g id="action">%s</xliff:g></string>
+  <!-- Setting title for the flip action setting. -->
+  <string name="flip_action_title">Buruz behera jartzearen ekintza</string>
+  <!-- Setting summary for the flip action setting. -->
+  <string name="flip_action_summary" product="tablet">Tableta buruz behera jartzean: <xliff:g id="action">%s</xliff:g></string>
+  <string name="flip_action_summary" product="default">Telefonoa buruz behera jartzean: <xliff:g id="action">%s</xliff:g></string>
+  <!-- Setting title for the shake action setting. -->
+  <string name="shake_action_title">Astintzerako ekintza</string>
+  <!-- Setting summary for the shake action setting. -->
+  <string name="shake_action_summary" product="tablet">Tableta astintzen denean: <xliff:g id="action">%s</xliff:g></string>
+  <string name="shake_action_summary" product="default">Telefonoa astintzen denean: <xliff:g id="action">%s</xliff:g></string>
+  <!-- Summary texts for shake and flip actions -->
+  <string name="action_summary_snooze">atzeratu alarma</string>
+  <string name="action_summary_dismiss">baztertu alarma</string>
+  <string name="action_summary_do_nothing">Ez egin ezer</string>
 </resources>

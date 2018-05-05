@@ -22,4 +22,21 @@
   <string name="profile_description">சுயவிவரம் <xliff:g id="profile">%s</xliff:g></string>
   <!-- No profile selected label -->
   <string name="profile_no_selected">சுயவிவரம் எதுவும் தேர்வுசெய்யப்படவில்லை</string>
+  <!-- Title of the setting default alarm tone  -->
+  <!-- Settings summary for the volume buttons setting. -->
+  <string name="volume_buttons_summary">ஒலியளவு பொத்தான்களை அழுத்துதல் <xliff:g id="action">%s</xliff:g> செய்யும்</string>
+  <!-- Setting title for the flip action setting. -->
+  <string name="flip_action_title">திருப்புதல் செயல்பாடு</string>
+  <!-- Setting summary for the flip action setting. -->
+  <string name="flip_action_summary" product="tablet">டேப்ளட்டை கீழே திருப்புதல் <xliff:g id="action">%s</xliff:g> செய்யும்</string>
+  <string name="flip_action_summary" product="default">தொலைப்பேசியை கீழே திருப்புதல் <xliff:g id="action">%s</xliff:g> செய்யும்</string>
+  <!-- Setting title for the shake action setting. -->
+  <string name="shake_action_title">அதிர்வு செயல்பாடு</string>
+  <!-- Setting summary for the shake action setting. -->
+  <string name="shake_action_summary" product="tablet">டேப்ளட்டை அதிரச்செய்தல் <xliff:g id="action">%s</xliff:g> செய்யும்</string>
+  <string name="shake_action_summary" product="default">தொலைப்பேசியை அதிரச்செய்தல் <xliff:g id="action">%s</xliff:g> செய்யும்</string>
+  <!-- Summary texts for shake and flip actions -->
+  <string name="action_summary_snooze">அலாரத்தை ஒத்திவை</string>
+  <string name="action_summary_dismiss">அலாரத்தை நிராகரி</string>
+  <string name="action_summary_do_nothing">எதுவும் செய்யாதே</string>
 </resources>

@@ -23,4 +23,21 @@
 </string>
   <!-- No profile selected label -->
   <string name="profile_no_selected">هیچ ڕێژەیەك دیاری نەکراوە</string>
+  <!-- Title of the setting default alarm tone  -->
+  <!-- Settings summary for the volume buttons setting. -->
+  <string name="volume_buttons_summary">دەستنان بەسەر دوگمەی دەنگەکان  <xliff:g id="action">%s</xliff:g></string>
+  <!-- Setting title for the flip action setting. -->
+  <string name="flip_action_title">بە دەمەوە دانان</string>
+  <!-- Setting summary for the flip action setting. -->
+  <string name="flip_action_summary" product="tablet">ته‌قله‌ لێدان به‌ تابلێت بۆ خواره‌وه‌ بۆ <xliff:g id="action">%s</xliff:g></string>
+  <string name="flip_action_summary" product="default">ته‌قله‌ لێدان به‌ ئامێر بۆ خواره‌وه‌ بۆ <xliff:g id="action">%s</xliff:g></string>
+  <!-- Setting title for the shake action setting. -->
+  <string name="shake_action_title">کرداری جوڵاندن</string>
+  <!-- Setting summary for the shake action setting. -->
+  <string name="shake_action_summary" product="tablet">له‌رینه‌وه‌ی تابلێت <xliff:g id="action">%s</xliff:g></string>
+  <string name="shake_action_summary" product="default">له‌رینه‌وه‌ی ئامێر <xliff:g id="action">%s</xliff:g></string>
+  <!-- Summary texts for shake and flip actions -->
+  <string name="action_summary_snooze">زەنگی سەرخەوشکاندن</string>
+  <string name="action_summary_dismiss">لەبیرکردنی دەنگی بیرخەرەوە</string>
+  <string name="action_summary_do_nothing">هیچ کارێك مەکە</string>
 </resources>

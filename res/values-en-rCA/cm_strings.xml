@@ -19,4 +19,11 @@
   <!-- Setting title for accessing the cLock widget settings -->
   <!-- Setting labels on Set alarm screen: Choose profile -->
   <!-- No profile selected label -->
+  <!-- Title of the setting default alarm tone  -->
+  <!-- Settings summary for the volume buttons setting. -->
+  <!-- Setting title for the flip action setting. -->
+  <!-- Setting summary for the flip action setting. -->
+  <!-- Setting title for the shake action setting. -->
+  <!-- Setting summary for the shake action setting. -->
+  <!-- Summary texts for shake and flip actions -->
 </resources>

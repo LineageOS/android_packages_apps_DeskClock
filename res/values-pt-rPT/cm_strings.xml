@@ -22,4 +22,22 @@
   <string name="profile_description">Perfil <xliff:g id="profile">%s</xliff:g></string>
   <!-- No profile selected label -->
   <string name="profile_no_selected">Nenhum perfil selecionado</string>
+  <!-- Title of the setting default alarm tone  -->
+  <string name="default_alarm_tone_title">Som de alarme predefinido</string>
+  <!-- Settings summary for the volume buttons setting. -->
+  <string name="volume_buttons_summary">Pressionar os botões do volume <xliff:g id="action">%s</xliff:g></string>
+  <!-- Setting title for the flip action setting. -->
+  <string name="flip_action_title">Ação de virar</string>
+  <!-- Setting summary for the flip action setting. -->
+  <string name="flip_action_summary" product="tablet">Virar o tablet ao contrário <xliff:g id="action">%s</xliff:g></string>
+  <string name="flip_action_summary" product="default">Virar o telefone ao contrário <xliff:g id="action">%s</xliff:g></string>
+  <!-- Setting title for the shake action setting. -->
+  <string name="shake_action_title">Ação de agitar</string>
+  <!-- Setting summary for the shake action setting. -->
+  <string name="shake_action_summary" product="tablet">Agitar o tablet <xliff:g id="action">%s</xliff:g></string>
+  <string name="shake_action_summary" product="default">Agitar o telefone <xliff:g id="action">%s</xliff:g></string>
+  <!-- Summary texts for shake and flip actions -->
+  <string name="action_summary_snooze">suspende o alarme</string>
+  <string name="action_summary_dismiss">ignora o alarme</string>
+  <string name="action_summary_do_nothing">não faz nada</string>
 </resources>

@@ -22,4 +22,22 @@
   <string name="profile_description">Προφίλ <xliff:g id="profile">%s</xliff:g></string>
   <!-- No profile selected label -->
   <string name="profile_no_selected">Δεν επιλέχθηκε προφίλ</string>
+  <!-- Title of the setting default alarm tone  -->
+  <string name="default_alarm_tone_title">Προεπιλεγμένος ήχος ξυπνητηριού</string>
+  <!-- Settings summary for the volume buttons setting. -->
+  <string name="volume_buttons_summary">Πιέζοντας τα πλήκτρα ήχου <xliff:g id="action">%s</xliff:g></string>
+  <!-- Setting title for the flip action setting. -->
+  <string name="flip_action_title">Ενέργεια αναποδογυρίσματος</string>
+  <!-- Setting summary for the flip action setting. -->
+  <string name="flip_action_summary" product="tablet">Αναποδογυρίζοντας το tablet <xliff:g id="action">%s</xliff:g></string>
+  <string name="flip_action_summary" product="default">Αναποδογυρίζοντας το τηλέφωνο <xliff:g id="action">%s</xliff:g></string>
+  <!-- Setting title for the shake action setting. -->
+  <string name="shake_action_title">Ενέργεια κουνήματος</string>
+  <!-- Setting summary for the shake action setting. -->
+  <string name="shake_action_summary" product="tablet">Κουνώντας το tablet <xliff:g id="action">%s</xliff:g></string>
+  <string name="shake_action_summary" product="default">Κουνώντας το τηλέφωνο <xliff:g id="action">%s</xliff:g></string>
+  <!-- Summary texts for shake and flip actions -->
+  <string name="action_summary_snooze">θα αναβάλλετε το ξυπνητήρι</string>
+  <string name="action_summary_dismiss">θα παραβλέπετε το ξυπνητήρι</string>
+  <string name="action_summary_do_nothing">δεν θα εκτελείτε καμία ενέργεια</string>
 </resources>

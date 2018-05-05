@@ -22,4 +22,21 @@
   <string name="profile_description">Profil <xliff:g id="profile">%s</xliff:g></string>
   <!-- No profile selected label -->
   <string name="profile_no_selected">Tidak ada profil yang terpilih</string>
+  <!-- Title of the setting default alarm tone  -->
+  <!-- Settings summary for the volume buttons setting. -->
+  <string name="volume_buttons_summary">Menekan tombol volume akan <xliff:g id="action">%s</xliff:g></string>
+  <!-- Setting title for the flip action setting. -->
+  <string name="flip_action_title">Tindakan membalik</string>
+  <!-- Setting summary for the flip action setting. -->
+  <string name="flip_action_summary" product="tablet">Membalikkan tablet ke bawah akan <xliff:g id="action">%s</xliff:g></string>
+  <string name="flip_action_summary" product="default">Membalikkan telepon ke bawah akan <xliff:g id="action">%s</xliff:g></string>
+  <!-- Setting title for the shake action setting. -->
+  <string name="shake_action_title">Tindakan goyang</string>
+  <!-- Setting summary for the shake action setting. -->
+  <string name="shake_action_summary" product="tablet">Menggoyangkan tablet akan <xliff:g id="action">%s</xliff:g></string>
+  <string name="shake_action_summary" product="default">Menggoyangkan ponsel akan <xliff:g id="action">%s</xliff:g></string>
+  <!-- Summary texts for shake and flip actions -->
+  <string name="action_summary_snooze">tunda alarm</string>
+  <string name="action_summary_dismiss">mengabaikan alarm</string>
+  <string name="action_summary_do_nothing">tidak melakukan apa-apa</string>
 </resources>

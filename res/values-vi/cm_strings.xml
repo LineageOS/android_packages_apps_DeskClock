@@ -22,4 +22,22 @@
   <string name="profile_description">Cấu hình <xliff:g id="profile">%s</xliff:g></string>
   <!-- No profile selected label -->
   <string name="profile_no_selected">Không có cấu hình được chọn</string>
+  <!-- Title of the setting default alarm tone  -->
+  <string name="default_alarm_tone_title">Âm báo thức mặc định</string>
+  <!-- Settings summary for the volume buttons setting. -->
+  <string name="volume_buttons_summary">Nhấn nút âm lượng sẽ <xliff:g id="action">%s </xliff:g></string>
+  <!-- Setting title for the flip action setting. -->
+  <string name="flip_action_title">Hành động Lật</string>
+  <!-- Setting summary for the flip action setting. -->
+  <string name="flip_action_summary" product="tablet">Lật máy tính bảng xuống sẽ <xliff:g id="action">%s </xliff:g></string>
+  <string name="flip_action_summary" product="default">Lật điện thoại xuống sẽ <xliff:g id="action">%s </xliff:g></string>
+  <!-- Setting title for the shake action setting. -->
+  <string name="shake_action_title">Hành động Lắc</string>
+  <!-- Setting summary for the shake action setting. -->
+  <string name="shake_action_summary" product="tablet">Lắc máy tính bảng sẽ <xliff:g id="action">%s</xliff:g></string>
+  <string name="shake_action_summary" product="default">Lắc điện thoại sẽ <xliff:g id="action">%s</xliff:g></string>
+  <!-- Summary texts for shake and flip actions -->
+  <string name="action_summary_snooze">báo lại báo thức</string>
+  <string name="action_summary_dismiss">bỏ qua báo thức</string>
+  <string name="action_summary_do_nothing">không làm gì</string>
 </resources>

@@ -21,4 +21,18 @@
   <string name="profile_description">පැතිකඩ <xliff:g id="profile">%s</xliff:g></string>
   <!-- No profile selected label -->
   <string name="profile_no_selected">පැතිකඩක් තෝරා නොමැත</string>
+  <!-- Title of the setting default alarm tone  -->
+  <!-- Settings summary for the volume buttons setting. -->
+  <!-- Setting title for the flip action setting. -->
+  <string name="flip_action_title">පෙරළීමේ ක්‍රියාව</string>
+  <!-- Setting summary for the flip action setting. -->
+  <string name="flip_action_summary" product="tablet">ටැබ්ලටය පහළට පෙරළීමේදී <xliff:g id="action">%s</xliff:g></string>
+  <string name="flip_action_summary" product="default">උපාංගය පහළට පෙරළීමේදී <xliff:g id="action">%s</xliff:g></string>
+  <!-- Setting title for the shake action setting. -->
+  <string name="shake_action_title">සෙලවීමේ ක්‍රියාව</string>
+  <!-- Setting summary for the shake action setting. -->
+  <string name="shake_action_summary" product="tablet">ටැබ්ලටය සෙලවීමේදී <xliff:g id="action">%s</xliff:g></string>
+  <string name="shake_action_summary" product="default">උපාංගය සෙලවීමේදී <xliff:g id="action">%s</xliff:g></string>
+  <!-- Summary texts for shake and flip actions -->
+  <string name="action_summary_do_nothing">කිසිවක් නොකරන්න</string>
 </resources>

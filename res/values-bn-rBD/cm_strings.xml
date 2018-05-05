@@ -20,4 +20,11 @@
   <!-- Setting labels on Set alarm screen: Choose profile -->
   <!-- No profile selected label -->
   <string name="profile_no_selected">কোন প্রোফাইল নির্বাচিত নয়</string>
+  <!-- Title of the setting default alarm tone  -->
+  <!-- Settings summary for the volume buttons setting. -->
+  <!-- Setting title for the flip action setting. -->
+  <!-- Setting summary for the flip action setting. -->
+  <!-- Setting title for the shake action setting. -->
+  <!-- Setting summary for the shake action setting. -->
+  <!-- Summary texts for shake and flip actions -->
 </resources>

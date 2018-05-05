@@ -22,4 +22,22 @@
   <string name="profile_description">프로필 <xliff:g id="profile">%s</xliff:g></string>
   <!-- No profile selected label -->
   <string name="profile_no_selected">선택된 프로필 없음</string>
+  <!-- Title of the setting default alarm tone  -->
+  <string name="default_alarm_tone_title">기본 알람 소리</string>
+  <!-- Settings summary for the volume buttons setting. -->
+  <string name="volume_buttons_summary">볼륨 버튼을 누르면 <xliff:g id="action">%s</xliff:g></string>
+  <!-- Setting title for the flip action setting. -->
+  <string name="flip_action_title">뒤집기 동작</string>
+  <!-- Setting summary for the flip action setting. -->
+  <string name="flip_action_summary" product="tablet">태블릿을 뒤집으면 <xliff:g id="action">%s</xliff:g></string>
+  <string name="flip_action_summary" product="default">휴대전화를 뒤집으면 <xliff:g id="action">%s</xliff:g></string>
+  <!-- Setting title for the shake action setting. -->
+  <string name="shake_action_title">흔들기 동작</string>
+  <!-- Setting summary for the shake action setting. -->
+  <string name="shake_action_summary" product="tablet">태블릿을 흔들면 <xliff:g id="action">%s</xliff:g></string>
+  <string name="shake_action_summary" product="default">휴대전화를 흔들면 <xliff:g id="action">%s</xliff:g></string>
+  <!-- Summary texts for shake and flip actions -->
+  <string name="action_summary_snooze">알람 일시 중지</string>
+  <string name="action_summary_dismiss">알람 해제</string>
+  <string name="action_summary_do_nothing">아무것도 안 함</string>
 </resources>

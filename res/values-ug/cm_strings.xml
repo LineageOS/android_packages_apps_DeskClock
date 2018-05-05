@@ -22,4 +22,21 @@
   <string name="profile_description">سەپلىمە ھۆججەت <xliff:g id="profile">%s</xliff:g></string>
   <!-- No profile selected label -->
   <string name="profile_no_selected">ھېچقانداق سەپلىمە ھۆججەت تاللانمىدى</string>
+  <!-- Title of the setting default alarm tone  -->
+  <!-- Settings summary for the volume buttons setting. -->
+  <string name="volume_buttons_summary">ئاۋاز مىقدارى توپچىسى بېسىلسا <xliff:g id="action">%s</xliff:g></string>
+  <!-- Setting title for the flip action setting. -->
+  <string name="flip_action_title">ئايلاندۇرۇش مەشغۇلاتى</string>
+  <!-- Setting summary for the flip action setting. -->
+  <string name="flip_action_summary" product="tablet">تاختا كومپيۇتېر تۆۋەنگە ئايلاندۇرۇلسا <xliff:g id="action">%s</xliff:g></string>
+  <string name="flip_action_summary" product="default">تېلېفون تۆۋەنگە ئايلاندۇرۇلسا <xliff:g id="action">%s</xliff:g></string>
+  <!-- Setting title for the shake action setting. -->
+  <string name="shake_action_title">پۇلاڭلىتىش مەشغۇلاتى</string>
+  <!-- Setting summary for the shake action setting. -->
+  <string name="shake_action_summary" product="tablet">تاختا كومپيۇتېر پۇلاڭلىتىلسا <xliff:g id="action">%s</xliff:g></string>
+  <string name="shake_action_summary" product="default">تېلېفون پۇلاڭلىتىلسا <xliff:g id="action">%s</xliff:g></string>
+  <!-- Summary texts for shake and flip actions -->
+  <string name="action_summary_snooze">قوڭغۇراقنى كېچىكتۈرىدۇ</string>
+  <string name="action_summary_dismiss">قوڭغۇراقنى توختىتىدۇ</string>
+  <string name="action_summary_do_nothing">ھېچقانداق قىلما</string>
 </resources>

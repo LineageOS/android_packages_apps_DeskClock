@@ -22,4 +22,21 @@
   <string name="profile_description"><xliff:g id="profile">%s</xliff:g> ప్రొఫైల్</string>
   <!-- No profile selected label -->
   <string name="profile_no_selected">ఎటువంటి ప్రొఫైల్ ఎంచుకోబడలేదు</string>
+  <!-- Title of the setting default alarm tone  -->
+  <!-- Settings summary for the volume buttons setting. -->
+  <string name="volume_buttons_summary">వాల్యూమ్ బటన్లను నొక్కడం <xliff:g id="action">%s</xliff:g> వలన</string>
+  <!-- Setting title for the flip action setting. -->
+  <string name="flip_action_title">చర్యను ఫ్లిప్ చేయుము</string>
+  <!-- Setting summary for the flip action setting. -->
+  <string name="flip_action_summary" product="tablet">టాబ్లెటును క్రిందికి ఫ్లిప్ చేయడం <xliff:g id="action">%s</xliff:g></string>
+  <string name="flip_action_summary" product="default">ఫోనును క్రిందికి ఫ్లిప్ చేయడం <xliff:g id="action">%s</xliff:g></string>
+  <!-- Setting title for the shake action setting. -->
+  <string name="shake_action_title">కదుపు చర్య</string>
+  <!-- Setting summary for the shake action setting. -->
+  <string name="shake_action_summary" product="tablet">టాబ్లెటును కదపడం <xliff:g id="action">%s</xliff:g></string>
+  <string name="shake_action_summary" product="default">ఫోనును కదపడం <xliff:g id="action">%s</xliff:g></string>
+  <!-- Summary texts for shake and flip actions -->
+  <string name="action_summary_snooze">అలారమును స్నూజ్ చేయుము</string>
+  <string name="action_summary_dismiss">అలారమును తొలగించుము</string>
+  <string name="action_summary_do_nothing">ఏమీ చేయవద్దు</string>
 </resources>

@@ -22,4 +22,19 @@
   <string name="profile_description">設定檔<xliff:g id="profile">%s</xliff:g></string>
   <!-- No profile selected label -->
   <string name="profile_no_selected">未選取設定檔</string>
+  <!-- Title of the setting default alarm tone  -->
+  <!-- Settings summary for the volume buttons setting. -->
+  <!-- Setting title for the flip action setting. -->
+  <string name="flip_action_title">翻轉操作</string>
+  <!-- Setting summary for the flip action setting. -->
+  <string name="flip_action_summary" product="tablet">翻轉平板電腦將<xliff:g id="action">%s</xliff:g></string>
+  <string name="flip_action_summary" product="default">翻轉電話將<xliff:g id="action">%s</xliff:g></string>
+  <!-- Setting title for the shake action setting. -->
+  <string name="shake_action_title">搖動操作</string>
+  <!-- Setting summary for the shake action setting. -->
+  <string name="shake_action_summary" product="tablet">搖動平板電腦將<xliff:g id="action">%s</xliff:g></string>
+  <string name="shake_action_summary" product="default">搖動電話將<xliff:g id="action">%s</xliff:g></string>
+  <!-- Summary texts for shake and flip actions -->
+  <string name="action_summary_snooze">延遲鬧鐘</string>
+  <string name="action_summary_do_nothing">什麼都不做</string>
 </resources>

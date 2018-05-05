@@ -22,4 +22,22 @@
   <string name="profile_description">Профил <xliff:g id="profile">%s </xliff:g></string>
   <!-- No profile selected label -->
   <string name="profile_no_selected">Няма избран профил</string>
+  <!-- Title of the setting default alarm tone  -->
+  <string name="default_alarm_tone_title">Стандартен тон на аларма</string>
+  <!-- Settings summary for the volume buttons setting. -->
+  <string name="volume_buttons_summary">Натискане на бутоните за сила на звука <xliff:g id="action">%s </xliff:g></string>
+  <!-- Setting title for the flip action setting. -->
+  <string name="flip_action_title">Действие при обръщане</string>
+  <!-- Setting summary for the flip action setting. -->
+  <string name="flip_action_summary" product="tablet">Обръщането на таблета надолу <xliff:g id="action">%s</xliff:g></string>
+  <string name="flip_action_summary" product="default">Обръщането на телефона надолу <xliff:g id="action">%s </xliff:g></string>
+  <!-- Setting title for the shake action setting. -->
+  <string name="shake_action_title">Действие при разклащанне</string>
+  <!-- Setting summary for the shake action setting. -->
+  <string name="shake_action_summary" product="tablet">Разклащането на таблета <xliff:g id="action">%s</xliff:g></string>
+  <string name="shake_action_summary" product="default">Разклащане на телефона <xliff:g id="action">%s </xliff:g></string>
+  <!-- Summary texts for shake and flip actions -->
+  <string name="action_summary_snooze">ще отложи алармата</string>
+  <string name="action_summary_dismiss">ще отхвърли алармата</string>
+  <string name="action_summary_do_nothing">не прави нищо</string>
 </resources>

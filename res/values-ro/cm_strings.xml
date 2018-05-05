@@ -22,4 +22,22 @@
   <string name="profile_description">Profil <xliff:g id="profile">%s</xliff:g></string>
   <!-- No profile selected label -->
   <string name="profile_no_selected">Niciun profil selectat</string>
+  <!-- Title of the setting default alarm tone  -->
+  <string name="default_alarm_tone_title">Ton de alarmă prestabilit</string>
+  <!-- Settings summary for the volume buttons setting. -->
+  <string name="volume_buttons_summary">Apăsarea butoanelor de volum va <xliff:g id="action">%s </xliff:g></string>
+  <!-- Setting title for the flip action setting. -->
+  <string name="flip_action_title">Acțiune de rotire</string>
+  <!-- Setting summary for the flip action setting. -->
+  <string name="flip_action_summary" product="tablet">Rotirea tabletei în jos va <xliff:g id="action">%s</xliff:g></string>
+  <string name="flip_action_summary" product="default">Rotirea telefonului în jos va <xliff:g id="action">%s</xliff:g></string>
+  <!-- Setting title for the shake action setting. -->
+  <string name="shake_action_title">Acțiunea de agitare</string>
+  <!-- Setting summary for the shake action setting. -->
+  <string name="shake_action_summary" product="tablet">Agitarea tabletei va <xliff:g id="action">%s</xliff:g></string>
+  <string name="shake_action_summary" product="default">Agitarea telefonului va <xliff:g id="action">%s</xliff:g></string>
+  <!-- Summary texts for shake and flip actions -->
+  <string name="action_summary_snooze">amânare alarmă</string>
+  <string name="action_summary_dismiss">anulare alarmă</string>
+  <string name="action_summary_do_nothing">nu fă nimic</string>
 </resources>

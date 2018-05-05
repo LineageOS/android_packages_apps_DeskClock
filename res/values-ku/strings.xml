@@ -213,7 +213,6 @@
   <!-- Title of the setting to change hardware button behavior. This string
          should be changed for each piece of hardware. [CHAR LIMIT=20] -->
   <string name="volume_button_setting_title">دوگمەی دەنگ</string>
-  <!-- Title of the setting default alarm tone  -->
   <!-- Dialog title of the volume and power setting. -->
   <string name="volume_button_dialog_title">کاریگه‌ری دوگمه‌</string>
   <!-- Entries listed in the setting for the side-button action. -->
@@ -724,11 +723,6 @@
     %s represents alarm time, e.g. 14:20
     [CHAR LIMIT=NONE]
     -->
-  <!-- Setting title for the flip action setting. -->
-  <!-- Setting summary for the flip action setting. -->
-  <!-- Setting title for the shake action setting. -->
-  <!-- Setting summary for the shake action setting. -->
-  <!-- Summary texts for shake and flip actions -->
   <!-- Label on expanded alarm edit view indicating the ringtone is custom. -->
   <!-- Ringtone selection default" -->
   <!--used for prompt to user storage permission status-->
