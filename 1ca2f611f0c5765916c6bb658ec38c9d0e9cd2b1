@@ -1,0 +1,21 @@
+{
+  "comments": [
+    {
+      "key": {
+        "uuid": "11e67ac1_309fc8ba",
+        "filename": "src/com/android/deskclock/DeskClockApplication.java",
+        "patchSetId": 9
+      },
+      "lineNbr": 39,
+      "author": {
+        "id": 13028
+      },
+      "writtenOn": "2018-05-10T11:52:14Z",
+      "side": 0,
+      "message": "unneccessary",
+      "revId": "1ca2f611f0c5765916c6bb658ec38c9d0e9cd2b1",
+      "serverId": "1ec6b3db-b2c1-4fa4-84a2-4c7efe89ba71",
+      "unresolved": false
+    }
+  ]
+}

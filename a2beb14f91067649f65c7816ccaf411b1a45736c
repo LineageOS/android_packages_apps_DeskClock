@@ -1,0 +1,55 @@
+{
+  "comments": [
+    {
+      "key": {
+        "uuid": "1788f9ac_d6785459",
+        "filename": "src/com/android/deskclock/alarms/AlarmNotifications.java",
+        "patchSetId": 9
+      },
+      "lineNbr": 349,
+      "author": {
+        "id": 13028
+      },
+      "writtenOn": "2018-05-10T11:52:14Z",
+      "side": 1,
+      "message": "not required",
+      "revId": "a2beb14f91067649f65c7816ccaf411b1a45736c",
+      "serverId": "1ec6b3db-b2c1-4fa4-84a2-4c7efe89ba71",
+      "unresolved": false
+    },
+    {
+      "key": {
+        "uuid": "3abda252_441d5199",
+        "filename": "src/com/android/deskclock/alarms/AlarmNotifications.java",
+        "patchSetId": 9
+      },
+      "lineNbr": 394,
+      "author": {
+        "id": 13028
+      },
+      "writtenOn": "2018-05-10T11:52:14Z",
+      "side": 1,
+      "message": "not required",
+      "revId": "a2beb14f91067649f65c7816ccaf411b1a45736c",
+      "serverId": "1ec6b3db-b2c1-4fa4-84a2-4c7efe89ba71",
+      "unresolved": false
+    },
+    {
+      "key": {
+        "uuid": "67ba8a77_3c58d772",
+        "filename": "src/com/android/deskclock/data/TimerNotificationBuilder.java",
+        "patchSetId": 9
+      },
+      "lineNbr": 40,
+      "author": {
+        "id": 13028
+      },
+      "writtenOn": "2018-05-10T11:52:14Z",
+      "side": 1,
+      "message": "empty line",
+      "revId": "a2beb14f91067649f65c7816ccaf411b1a45736c",
+      "serverId": "1ec6b3db-b2c1-4fa4-84a2-4c7efe89ba71",
+      "unresolved": false
+    }
+  ]
+}
