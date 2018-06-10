@@ -23,6 +23,7 @@
   <!-- No profile selected label -->
   <string name="profile_no_selected">Tidak ada profil yang terpilih</string>
   <!-- Title of the setting default alarm tone  -->
+  <string name="default_alarm_tone_title">Nada alarm standar</string>
   <!-- Settings summary for the volume buttons setting. -->
   <string name="volume_buttons_summary">Menekan tombol volume akan <xliff:g id="action">%s</xliff:g></string>
   <!-- Setting title for the flip action setting. -->

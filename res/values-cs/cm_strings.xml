@@ -23,6 +23,7 @@
   <!-- No profile selected label -->
   <string name="profile_no_selected">Žádný profil</string>
   <!-- Title of the setting default alarm tone  -->
+  <string name="default_alarm_tone_title">Výchozí tón budíku</string>
   <!-- Settings summary for the volume buttons setting. -->
   <string name="volume_buttons_summary">Stiskem tlačítek hlasitosti: <xliff:g id="action">%s</xliff:g></string>
   <!-- Setting title for the flip action setting. -->
