@@ -22,4 +22,5 @@
   <!-- Entries listed in the setting flip and shake. -->
   <!-- Setting title for accessing the cLock widget settings -->
   <string name="menu_item_widget_settings">Legstuk instellings</string>
+  <!-- Notification channels -->
 </resources>

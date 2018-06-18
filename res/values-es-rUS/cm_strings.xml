@@ -29,4 +29,8 @@
   </string-array>
   <!-- Setting title for accessing the cLock widget settings -->
   <string name="menu_item_widget_settings">Ajustes del widget</string>
+  <!-- Notification channels -->
+  <string name="channel_default">Otros</string>
+  <string name="channel_expired_events">Encendido de alarmas y temporizadores</string>
+  <string name="channel_important">Notificaciones importantes</string>
 </resources>

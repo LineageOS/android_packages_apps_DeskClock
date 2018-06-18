@@ -29,4 +29,7 @@
   </string-array>
   <!-- Setting title for accessing the cLock widget settings -->
   <string name="menu_item_widget_settings">הגדרות ווידג\'ט</string>
+  <!-- Notification channels -->
+  <string name="channel_default">אחרים</string>
+  <string name="channel_important">התראות חשובות</string>
 </resources>
