@@ -30,5 +30,7 @@
   <!-- Setting title for accessing the cLock widget settings -->
   <string name="menu_item_widget_settings">Настройки виджетов</string>
   <!-- Notification channels -->
+  <string name="channel_default">Другие</string>
+  <string name="channel_expired_events">Важные сигналы &amp; таймеры</string>
   <string name="channel_important">Важные уведомления</string>
 </resources>
