@@ -31,5 +31,6 @@
   <string name="menu_item_widget_settings">הגדרות ווידג\'ט</string>
   <!-- Notification channels -->
   <string name="channel_default">אחרים</string>
+  <string name="channel_expired_events">הפעלת שעונים מעוררים וטימרים</string>
   <string name="channel_important">התראות חשובות</string>
 </resources>
