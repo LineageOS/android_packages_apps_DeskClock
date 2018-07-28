@@ -36,6 +36,7 @@ public class DeskClockApplication extends Application {
 
         final Context applicationContext = getApplicationContext();
         final SharedPreferences prefs = getDefaultSharedPreferences(applicationContext);
+
         DataModel.getDataModel().init(applicationContext, prefs);
         UiDataModel.getUiDataModel().init(applicationContext, prefs);
         Controller.getController().setContext(applicationContext);
