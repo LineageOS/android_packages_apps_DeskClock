@@ -35,9 +35,6 @@ import com.android.deskclock.AlarmUtils;
 import com.android.deskclock.R;
 import com.android.deskclock.Utils;
 import com.android.deskclock.events.Events;
-import com.android.deskclock.NotificationChannelManager.Channel;
-import com.android.deskclock.NotificationChannelManager;
-
 import com.android.deskclock.timer.ExpiredTimersActivity;
 import com.android.deskclock.timer.TimerService;
 
@@ -165,7 +162,6 @@ class TimerNotificationBuilder {
                 .setStyle(new NotificationCompat.DecoratedCustomViewStyle())
                 .setColor(ContextCompat.getColor(context, R.color.default_background));
 
-        NotificationChannelManager.applyChannel(notification, context, Channel.HIGH_NOTIFICATION);
         for (Action action : actions) {
             notification.addAction(action);
         }
@@ -282,7 +278,6 @@ class TimerNotificationBuilder {
             notification.addAction(action);
         }
 
-        NotificationChannelManager.applyChannel(notification, context, Channel.EVENT_EXPIRED);
         if (Utils.isNOrLater()) {
             notification.setCustomContentView(buildChronometer(pname, base, true, stateText));
         } else {
@@ -363,7 +358,6 @@ class TimerNotificationBuilder {
                 .addAction(action)
                 .setColor(ContextCompat.getColor(context, R.color.default_background));
 
-        NotificationChannelManager.applyChannel(notification, context, Channel.HIGH_NOTIFICATION);
         if (Utils.isNOrLater()) {
             notification.setCustomContentView(buildChronometer(pname, base, true, stateText))
                     .setGroup(nm.getTimerNotificationGroupKey());
