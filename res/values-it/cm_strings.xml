@@ -29,8 +29,4 @@
   </string-array>
   <!-- Setting title for accessing the cLock widget settings -->
   <string name="menu_item_widget_settings">Impostazioni widget</string>
-  <!-- Notification channels -->
-  <string name="channel_default">Altro</string>
-  <string name="channel_expired_events">Sveglie &amp; timer</string>
-  <string name="channel_important">Notifiche importanti</string>
 </resources>

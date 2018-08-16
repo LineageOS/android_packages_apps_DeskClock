@@ -29,8 +29,4 @@
   </string-array>
   <!-- Setting title for accessing the cLock widget settings -->
   <string name="menu_item_widget_settings">小部件设置</string>
-  <!-- Notification channels -->
-  <string name="channel_default">其他</string>
-  <string name="channel_expired_events">触发闹钟和计时器</string>
-  <string name="channel_important">重要通知</string>
 </resources>

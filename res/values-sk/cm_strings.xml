@@ -29,8 +29,4 @@
   </string-array>
   <!-- Setting title for accessing the cLock widget settings -->
   <string name="menu_item_widget_settings">Nastavenia miniaplikácie</string>
-  <!-- Notification channels -->
-  <string name="channel_default">Ostatné</string>
-  <string name="channel_expired_events">Výstražné poplachy &amp; časovače</string>
-  <string name="channel_important">Dôležité upozornenia</string>
 </resources>

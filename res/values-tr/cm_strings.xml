@@ -29,8 +29,4 @@
   </string-array>
   <!-- Setting title for accessing the cLock widget settings -->
   <string name="menu_item_widget_settings">Widget ayarları</string>
-  <!-- Notification channels -->
-  <string name="channel_default">Diğerleri</string>
-  <string name="channel_expired_events">Alarmı ve zamanlayıcıları tetikler</string>
-  <string name="channel_important">Önemli bildirimler</string>
 </resources>

@@ -29,8 +29,4 @@
   </string-array>
   <!-- Setting title for accessing the cLock widget settings -->
   <string name="menu_item_widget_settings">Ustawienia widżetów</string>
-  <!-- Notification channels -->
-  <string name="channel_default">Inne</string>
-  <string name="channel_expired_events">Uruchamianie alarmów i timerów</string>
-  <string name="channel_important">Ważne powiadomienia</string>
 </resources>

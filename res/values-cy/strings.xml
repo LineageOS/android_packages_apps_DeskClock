@@ -44,7 +44,7 @@
   <!-- Label shown when user is setting up non-repeating alarm for later today [CHAR LIMIT=15] -->
   <string name="alarm_today">Heddiw</string>
   <!-- Button labels on the alarm dialog: Dismiss -->
-  <string name="alarm_alert_dismiss_text">Gwrthod</string>
+  <string name="alarm_alert_dismiss_text">Wfftio</string>
   <!-- Alarm Alert screen: this message is shown after an alarm rung
          unattended for a number of minutes.  It tells the user that
          the alarm has been silenced.-->
@@ -278,7 +278,7 @@
   <!-- Entries listed in the setting for the side-button action. -->
   <string-array name="volume_button_setting_entries">
     <item>Snooze</item>
-    <item>Gwrthod</item>
+    <item>Wfftio</item>
     <item>Control volume</item>
   </string-array>
   <!-- Values for the side-button setting. -->
@@ -561,6 +561,7 @@
   <!-- Text instruction for dismiss alarm on alarm lock screen. The dismiss button will still
          be on the right even on RTL languages so please do not reverse this during
          translation. -->
+  <string name="description_direction_right">Llusga i\'r dde i\'w wfftio</string>
   <!-- Text instruction for snooze alarm on alarm lock screen. The snooze button will still
          be on the left even on RTL languages so please do not reverse this during
          translation. -->
@@ -644,6 +645,7 @@
     %s represents alarm time, e.g. 14:20
     [CHAR LIMIT=NONE]
     -->
+  <string name="alarm_is_dismissed">Larwm <xliff:g id="alarm_time" example="14:20">%s</xliff:g> wedi\'i wfftio</string>
   <!-- String that represents that the user has dismissed an alarm through a voice action.
     %s represents alarm time, e.g. 14:20
     [CHAR LIMIT=NONE]
@@ -668,15 +670,18 @@
     %s represents the time of the alarm (e.g. 15:39)
     [CHAR LIMIT=NONE]
     -->
+  <string name="alarm_cant_be_dismissed_still_more_than_24_hours_away">Ni ellir wfftio larwm <xliff:g id="alarm_time" example="14:20">%s</xliff:g> eto gan ei fod dros 24 awr i ffwrdd</string>
   <!-- String that shows up in the action bar for the Picker Activity
          where a use gets to pick which alarm to dismiss
    [CHAR LIMIT=NONE]
    -->
+  <string name="dismiss_alarm">Wfftio\'r larwm</string>
   <!-- String that represents that further action is needed from the user in case their
     voice command was ambiguous or there are more than 1 alarms that match their request.
     The user needs to choose an alarm they want to dismiss through the UI
    [CHAR LIMIT=NONE]
    -->
+  <string name="pick_alarm_to_dismiss">Dewis pa larymau i\'w wfftio</string>
   <!-- String that represents that the user doesn't have any alarms firing at the moment.
     [CHAR LIMIT=NONE]
     -->

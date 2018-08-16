@@ -22,5 +22,4 @@
   <!-- Entries listed in the setting flip and shake. -->
   <!-- Setting title for accessing the cLock widget settings -->
   <string name="menu_item_widget_settings">Valdiklio nustatymai</string>
-  <!-- Notification channels -->
 </resources>
