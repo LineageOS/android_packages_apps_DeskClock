@@ -15,6 +15,7 @@
  */
 package com.android.deskclock.actionbarmenu;
 
+import android.content.ActivityNotFoundException;
 import android.content.ComponentName;
 import android.content.Context;
 import android.content.Intent;
@@ -36,9 +37,12 @@ public final class WidgetMenuItemController implements MenuItemController {
     private static final String LOG_TAG = "DeskClock";
 
     private static final String LC_PACKAGE = "org.lineageos.lockclock";
+    private static final String LC_PACKAGE_FALLBACK = "com.cyanogenmod.lockclock";
     private static final String LC_ACTIVITY = LC_PACKAGE + ".preference.Preferences";
     private static final ComponentName sWidgetSettingComponentName = new ComponentName
             (LC_PACKAGE, LC_ACTIVITY);
+    private static final ComponentName sWidgetSettingComponentNameFallback = new ComponentName
+            (LC_PACKAGE_FALLBACK, LC_ACTIVITY);
 
     private static final int WIDGET_MENU_RES_ID = R.id.menu_item_widget_settings;
     private final Context mContext;
@@ -67,7 +71,12 @@ public final class WidgetMenuItemController implements MenuItemController {
     public boolean onOptionsItemSelected(MenuItem item) {
         Intent wsi = new Intent();
         wsi.setComponent(sWidgetSettingComponentName);
-        mContext.startActivity(wsi);
+        try {
+            mContext.startActivity(wsi);
+        } catch (ActivityNotFoundException anfe) {
+            wsi.setComponent(sWidgetSettingComponentNameFallback);
+            mContext.startActivity(wsi);
+        }
         return true;
     }
 
