@@ -25,7 +25,7 @@
   <string-array name="action_setting_entries">
     <item>Snoozen</item>
     <item>Uitschakelen</item>
-    <item>Niets</item>
+    <item>Geen</item>
   </string-array>
   <!-- Setting title for accessing the cLock widget settings -->
   <string name="menu_item_widget_settings">Instellingen widget</string>

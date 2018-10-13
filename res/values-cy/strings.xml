@@ -31,11 +31,13 @@
   <string name="delete">Dileu</string>
   <!-- Title of default ringtone played when an alarm triggers [CHAR LIMIT=30] -->
   <!-- Title for alarm ringtone picker screen [CHAR LIMIT=30] -->
+  <string name="alarm_sound">Sain larwm</string>
   <!-- Title for timer ringtone picker screen [CHAR LIMIT=30] -->
   <!-- Label for adding a new ringtone sound [CHAR LIMIT=30]-->
   <!-- Label for removing a ringtone sound [CHAR LIMIT=30] -->
   <!-- Text that explains what happens to alarms and timers after removing the custom ringtone sound they use [CHAR LIMIT=NONE] -->
   <!-- Label for "Your sounds" section on ringtone selection screen [CHAR LIMIT=60] -->
+  <string name="your_sounds">Dy seiniau</string>
   <!-- Label for "Device sounds" section on ringtone selection screen [CHAR LIMIT=60] -->
   <!-- Text that explains that the ringtone is inaccessible to the app [CHAR LIMIT=NONE] -->
   <!-- Title of default ringtone played when a timer expires. -->
@@ -140,6 +142,16 @@
     <!-- Duration for more than one hour -->
     <item quantity="other"><xliff:g id="number" example="7">%s</xliff:g> awr</item>
   </plurals>
+  <plurals name="hours_short">
+    <item quantity="zero"><xliff:g id="number" example="7">%s</xliff:g> awr</item>
+    <!-- Duration for one hour [CHAR LIMIT=8] -->
+    <item quantity="one">1 awr</item>
+    <item quantity="two"><xliff:g id="number" example="7">%s</xliff:g> awr</item>
+    <item quantity="few"><xliff:g id="number" example="7">%s</xliff:g> awr</item>
+    <item quantity="many"><xliff:g id="number" example="7">%s</xliff:g> awr</item>
+    <!-- Duration for more than one hour [CHAR LIMIT=8]-->
+    <item quantity="other"><xliff:g id="number" example="7">%s</xliff:g> awr</item>
+  </plurals>
   <!-- Alarm confirmation toast and timer notification: minutes -->
   <plurals name="minutes">
     <item quantity="zero"><xliff:g id="number" example="7">%s</xliff:g> munudau</item>
@@ -151,7 +163,27 @@
     <!-- Duration for more than one minute -->
     <item quantity="other"><xliff:g id="number" example="7">%s</xliff:g> munud</item>
   </plurals>
+  <plurals name="minutes_short">
+    <item quantity="zero"><xliff:g id="number" example="7">%s</xliff:g> mun</item>
+    <!-- Duration for one minute [CHAR LIMIT=8] -->
+    <item quantity="one">1 mun</item>
+    <item quantity="two"><xliff:g id="number" example="7">%s</xliff:g> fun</item>
+    <item quantity="few"><xliff:g id="number" example="7">%s</xliff:g> mun</item>
+    <item quantity="many"><xliff:g id="number" example="7">%s</xliff:g> mun</item>
+    <!-- Duration for more than one minute [CHAR LIMIT=8] -->
+    <item quantity="other"><xliff:g id="number" example="7">%s</xliff:g> mun</item>
+  </plurals>
   <!-- Timer accessibility announcement -->
+  <plurals name="seconds">
+    <item quantity="zero"><xliff:g id="number" example="7">%s</xliff:g> eiliadau</item>
+    <!-- Duration for one second -->
+    <item quantity="one">1 eiliad</item>
+    <item quantity="two"><xliff:g id="number" example="7">%s</xliff:g> eiliad</item>
+    <item quantity="few"><xliff:g id="number" example="7">%s</xliff:g> eiliad</item>
+    <item quantity="many"><xliff:g id="number" example="7">%s</xliff:g> eiliad</item>
+    <!-- Duration for more than one minute -->
+    <item quantity="other"><xliff:g id="number" example="7">%s</xliff:g> eiliad</item>
+  </plurals>
   <!-- Repeat options that appear under an alarm on main Alarm Clock
          screen to identify repetition schedule: special case for when
          the alarm is set to repeat every day -->
@@ -170,6 +202,7 @@
   <string name="settings">Gosodiadau</string>
   <!-- Setting title for changing the snooze duration. -->
   <!-- Setting title for changing the crescendo duration. -->
+  <string name="crescendo_duration_title">Cynyddu\'r sain yn raddol</string>
   <!-- Auto silence preference title -->
   <string name="auto_silence_title">Distawrwydd ar ôl</string>
   <!-- Auto silence summary string set based on the preference value. -->
@@ -201,54 +234,54 @@
   <!-- Entries listed in the ListPreference when invoking gradually increase
      volume preferences. -->
   <string-array name="crescendo_entries">
-    <item>I Ffwrdd</item>
-    <item>5 seconds</item>
-    <item>10 seconds</item>
-    <item>15 seconds</item>
-    <item>20 seconds</item>
-    <item>25 seconds</item>
-    <item>30 seconds</item>
-    <item>35 seconds</item>
-    <item>40 seconds</item>
-    <item>45 seconds</item>
-    <item>50 seconds</item>
-    <item>55 seconds</item>
-    <item>60 seconds</item>
+    <item>I ffwrdd</item>
+    <item>5 eiliad</item>
+    <item>10 eiliad</item>
+    <item>15 eiliad</item>
+    <item>20 eiliad</item>
+    <item>25 eiliad</item>
+    <item>30 eiliad</item>
+    <item>35 eiliad</item>
+    <item>40 eiliad</item>
+    <item>45 eiliad</item>
+    <item>50 eiliad</item>
+    <item>55 eiliad</item>
+    <item>60 eiliad</item>
   </string-array>
   <!-- Values that are retrieved from the ListPreference. These must match
          the crescendo_entries above. -->
   <!-- Entries listed in the ListPreference when invoking the snooze duration preference -->
   <string-array name="snooze_duration_entries">
     <item>1 munud</item>
-    <item>2 minutes</item>
-    <item>3 minutes</item>
-    <item>4 minutes</item>
+    <item>2 funud</item>
+    <item>3 munud</item>
+    <item>4 munud</item>
     <item>5 munud</item>
-    <item>6 minutes</item>
-    <item>7 minutes</item>
-    <item>8 minutes</item>
-    <item>9 minutes</item>
+    <item>6 munud</item>
+    <item>7 munud</item>
+    <item>8 munud</item>
+    <item>9 munud</item>
     <item>10 munud</item>
-    <item>11 minutes</item>
-    <item>12 minutes</item>
-    <item>13 minutes</item>
-    <item>14 minutes</item>
+    <item>11 munud</item>
+    <item>12 munud</item>
+    <item>13 munud</item>
+    <item>14 munud</item>
     <item>15 munud</item>
-    <item>16 minutes</item>
-    <item>17 minutes</item>
-    <item>18 minutes</item>
-    <item>19 minutes</item>
+    <item>16 munud</item>
+    <item>17 munud</item>
+    <item>18 munud</item>
+    <item>19 munud</item>
     <item>20 munud</item>
-    <item>21 minutes</item>
-    <item>22 minutes</item>
-    <item>23 minutes</item>
-    <item>24 minutes</item>
+    <item>21 munud</item>
+    <item>22 munud</item>
+    <item>23 munud</item>
+    <item>24 munud</item>
     <item>25 munud</item>
-    <item>26 minutes</item>
-    <item>27 minutes</item>
-    <item>28 minutes</item>
-    <item>29 minutes</item>
-    <item>30 minutes</item>
+    <item>26 munud</item>
+    <item>27 munud</item>
+    <item>28 munud</item>
+    <item>29 munud</item>
+    <item>30 munud</item>
   </string-array>
   <!-- Values that are retrieved from the ListPreference. These must match
          the snooze_duration_entries above. -->
@@ -262,30 +295,28 @@
   </string-array>
   <!-- Values for ListPreference for start day of week. -->
   <!-- Setting title for changing the alarm volume. -->
-  <string name="alarm_volume_title">Uchder sain larwm</string>
+  <string name="alarm_volume_title">Uchder sain larymau</string>
   <!-- Title for the silent ringtone. -->
   <string name="silent_ringtone_title">Distaw</string>
   <!-- Title for ringtones that cannot be located by uri. -->
   <!-- Text to display when alarm volume is muted. [CHAR LIMIT=50] -->
+  <string name="alarm_volume_muted">Larymau wedi\'u distewi</string>
   <!-- Text for action that presents a volume control to adjust alarm volume. [CHAR LIMIT=20] -->
   <!-- Text to display when system default alarm ringtone is silent. [CHAR LIMIT=50] -->
+  <string name="silent_default_alarm_ringtone">Mae\'r tôn larwm arferol yn ddistaw</string>
   <!-- Text for action that shows the UI that changes the default alarm ringtone. [CHAR LIMIT=20] -->
   <!-- Text to display when app notifications are blocked. [CHAR LIMIT=50] -->
+  <string name="app_notifications_blocked">Mae hysbysiadau cloc wedi\'u rhwystro</string>
   <!-- Text to display when do-not-disturb is blocking alarms. [CHAR LIMIT=60] -->
   <!-- Title of the setting to change hardware button behavior. This string
          should be changed for each piece of hardware. [CHAR LIMIT=20] -->
   <string name="volume_button_setting_title">Botymau uchder sain</string>
   <!-- Entries listed in the setting for the side-button action. -->
-  <string-array name="volume_button_setting_entries">
-    <item>Snooze</item>
-    <item>Wfftio</item>
-    <item>Control volume</item>
-  </string-array>
   <!-- Values for the side-button setting. -->
   <!-- Accessibility labels for Clock activity buttons -->
   <!-- Accessibility labels for alarm buttons -->
   <string name="label_description">Label</string>
-  <string name="ringtone_description">Tôn Canu</string>
+  <string name="ringtone_description">Tôn caniad</string>
   <!--  ActionBar strings -->
   <!-- Describes the purpose of the tab button which which switches the activity to the Alarm page -->
   <string name="menu_alarm">Larwm</string>
@@ -305,6 +336,7 @@
   <!-- Menu item on most screens to get to the help information -->
   <string name="menu_item_help">Cymorth</string>
   <!-- Menu item on clock screen to enter screen saver. -->
+  <string name="menu_item_night_mode">Arbedwr sgrin</string>
   <!-- Menu item on Cities screen to sort by GMT offset -->
   <string name="menu_item_sort_by_gmt_offset">Trefnu\'n ôl amser</string>
   <!-- Menu item on Cities screen to sort by alphabetical order -->
@@ -426,9 +458,9 @@
   <!-- Describes the functionality provided by the automatic_home_clock option -->
   <string name="automatic_home_clock_summary">Wrth deithio rhywle ble mae\'r amser yn wahanol, ychwanega cloc ar gyfer adref.</string>
   <!-- Title in the preferences change the time zone for the user's home -->
-  <string name="home_time_zone">Cylchfa amser cartref</string>
+  <string name="home_time_zone">Cylchfa amser adref</string>
   <!-- Title in a list dialog box to pick a time zone for the user's home -->
-  <string name="home_time_zone_title">Cylchfa amser cartref</string>
+  <string name="home_time_zone_title">Cylchfa amser adref</string>
   <!--
         Accessibility string read when a city checkbox is checked.
         Ex. "Ann Arbor checked"
@@ -523,7 +555,7 @@
     <item>"Guam"</item>
     <item>"Magadan"</item>
     <item>"Auckland"</item>
-    <item>"Fiji"</item>
+    <item>"Ffiji"</item>
     <item>"Tonga"</item>
     <item>"Jakarta"</item>
   </string-array>
@@ -548,6 +580,7 @@
          (longer translations may be truncated). -->
   <!-- Short label for a shortcut to start the screensaver. The maximum length is ~10 characters
          (longer translations may be truncated). -->
+  <string name="shortcut_start_screensaver_short">Arbedwr sgrin</string>
   <!-- Long label for a shortcut to start the screensaver. The maximum length is ~25 characters
          (longer translations may be truncated). -->
   <!-- Header in the preferences settings for the section pertaining to alarms -->
@@ -580,6 +613,7 @@
   <string name="next_timer_notif">Amserydd nesaf: <xliff:g id="time_remaining" example="2 minutes remaining">%s</xliff:g></string>
   <!-- screensaver settings strings -->
   <!-- Title for the screen saver settings activity. -->
+  <string name="screensaver_settings">Gosodiadau arbedwr sgrin</string>
   <!-- Title for check box to pick intensity of display diminuation during screen saver -->
   <string name="night_mode_title">Modd nos</string>
   <!-- Describes intensity of display diminuation during screen saver -->
@@ -595,14 +629,21 @@
   <!-- slash between date and next alarm in the clock: used for the DigitalAppWidget -->
   <string name="world_day_of_week_label"> / <xliff:g id="label">%s</xliff:g></string>
   <!-- Number of hours or minutes the world city is ahead of the current city [CHAR LIMIT=NONE] -->
+  <string name="world_time_ahead"><xliff:g id="time" example="6 hours">%1$s</xliff:g> ymlaen</string>
   <!-- Number of hours or minutes the world city is behind the current city [CHAR LIMIT=NONE] -->
+  <string name="world_time_behind"><xliff:g id="time" example="4 hours">%1$s</xliff:g> tu ôl</string>
   <!-- Number of hours and minutes the world city is ahead of the current city [CHAR LIMIT=NONE] -->
+  <string name="world_hours_minutes_ahead"><xliff:g id="hours" example="6 hr">%1$s</xliff:g> <xliff:g id="minutes" example="30 min">%2$s</xliff:g> ymlaen</string>
   <!-- Number of hours and minutes the world city is behind the current city [CHAR LIMIT=NONE] -->
+  <string name="world_hours_minutes_behind"><xliff:g id="hours" example="6 hr">%1$s</xliff:g> <xliff:g id="minutes" example="30 min">%2$s</xliff:g> tu ôl</string>
   <!-- The time and day the world city is ahead of the current city [CHAR LIMIT=NONE] -->
+  <string name="world_hours_tomorrow">Yfory, <xliff:g id="time" example="6 hours ahead">%1$s</xliff:g></string>
   <!-- Number of hours the world city is behind the current city [CHAR LIMIT=NONE] -->
+  <string name="world_hours_yesterday">Ddoe, <xliff:g id="time" example="4 hours behind">%1$s</xliff:g></string>
   <!-- The time in a world city is the day after the time in the current city (used in landscape) [CHAR LIMIT=NONE] -->
   <string name="world_tomorrow">Yfory</string>
   <!-- The time in a world city is the day before the time in the current city (used in landscape) [CHAR LIMIT=NONE] -->
+  <string name="world_yesterday">Ddoe</string>
   <!-- Description of field showing the next alarm time in the clock page, for accessibility. -->
   <string name="next_alarm_description">Larwm nesaf: <xliff:g id="alarm_time" example="Wed 8:00am">%s</xliff:g></string>
   <!-- String for no alarms -->
@@ -613,11 +654,13 @@
     If no am/pm is passed in (e.g. the locale uses 24h time) only hour and minute are printed.
     [CHAR LIMIT=NONE]
     -->
+  <string name="invalid_time">Amser annilys <xliff:g id="invalid_hour" example="25">%1$d</xliff:g><xliff:g id="invalid_minutes" example="63">%2$d</xliff:g> <xliff:g id="invalid_ampm" example="PM">%3$s</xliff:g></string>
   <!-- String that represents that no alarm has been specified for a requested hour:minutes.
     This happens when a user sends a voice command 'dismiss my alarm at 3:00pm' but they have no
     alarms specified for that time. %s represents the time of the alarm.
     [CHAR LIMIT=NONE]
     -->
+  <string name="no_alarm_at">Dim larwm am <xliff:g id="alarm_time_hour" example="14">%1$d</xliff:g>:<xliff:g id="alarm_time_minutes" example="23">%2$d</xliff:g></string>
   <!-- String that represents that the user doesn't have any alarms scheduled. This happens when
     a user sends a voice command 'dismiss next alarm' or 'dismiss all of my alarms' but they have
     no alarms scheduled in the app.
