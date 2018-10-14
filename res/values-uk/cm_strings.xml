@@ -23,6 +23,7 @@
   <!-- No profile selected label -->
   <string name="profile_no_selected">Жодний профіль не обраний</string>
   <!-- Title of the setting default alarm tone  -->
+  <string name="default_alarm_tone_title">Типовий звук будильника</string>
   <!-- Settings summary for the volume buttons setting. -->
   <string name="volume_buttons_summary">Натиск на кнопку гучності <xliff:g id="action">%s</xliff:g></string>
   <!-- Setting title for the flip action setting. -->

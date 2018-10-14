@@ -23,6 +23,7 @@
   <!-- No profile selected label -->
   <string name="profile_no_selected">Geen profiel geselecteerd</string>
   <!-- Title of the setting default alarm tone  -->
+  <string name="default_alarm_tone_title">Standaard alarmgeluid</string>
   <!-- Settings summary for the volume buttons setting. -->
   <string name="volume_buttons_summary">Op de volumeknoppen drukken zal <xliff:g id="action">%s</xliff:g></string>
   <!-- Setting title for the flip action setting. -->
