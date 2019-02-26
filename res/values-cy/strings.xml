@@ -54,7 +54,7 @@
     <!-- Label shown when user is setting up non-repeating alarm for later today [CHAR LIMIT=15] -->
     <string name="alarm_today">Heddiw</string>
     <!-- Button labels on the alarm dialog: Dismiss -->
-    <string name="alarm_alert_dismiss_text">Wfftio</string>
+    <string name="alarm_alert_dismiss_text">Gwrthod</string>
     <!-- Alarm Alert screen: this message is shown after an alarm rung
          unattended for a number of minutes.  It tells the user that
          the alarm has been silenced.-->
@@ -66,6 +66,7 @@
              10 min
          [CHAR LIMIT=10]
     -->
+    <string name="alarm_alert_snoozed_text">Yn caniatáu hepian</string>
     <!-- The text shown after user snoozed an alerting alarm. The text will be shown
          together with the word 'Snoozed' in two separate lines or example:
              Snoozed
@@ -85,9 +86,21 @@
     <!-- The text shown after user dismissed an alerting alarm [CHAR LIMIT=15] -->
     <string name="alarm_alert_off_text">Larwm i ffwrdd</string>
     <!-- Button labels on the alarm dialog: Snooze -->
+    <string name="alarm_alert_snooze_text">Hepian</string>
     <!-- Toast that appears after Alarm is snoozed from the Alarm
          dialog. Says the alarm will snooze for xxx minutes.  -->
+    <plurals name="alarm_alert_snooze_set">
+        <item quantity="zero">Yn caniatáu hepian am <xliff:g id="minutes">%d</xliff:g> munudau.</item>
+        <!-- Duration for one minute -->
+        <item quantity="one">Yn caniatáu hepian am 1 munud.</item>
+        <item quantity="two">Yn caniatáu hepian am <xliff:g id="minutes">%d</xliff:g> funud.</item>
+        <item quantity="few">Yn caniatáu hepian am <xliff:g id="minutes">%d</xliff:g> munud.</item>
+        <item quantity="many">Yn caniatáu hepian am <xliff:g id="minutes">%d</xliff:g> munud.</item>
+        <!-- Duration for more than one minute -->
+        <item quantity="other">Yn caniatáu hepian am <xliff:g id="minutes">%d</xliff:g> munud.</item>
+    </plurals>
     <!-- Text to appear inside a notification while an alarm is snoozing. -->
+    <string name="alarm_alert_snooze_until">Yn hepian nes <xliff:g id="time">%s</xliff:g></string>
     <!-- Text to appear in the notification title while an alarm is about to go off. -->
     <string name="alarm_alert_predismiss_title">Larwm yn dod i fyny</string>
     <!-- Text to appear in when trying to view a missed alarm that has been deleted -->
@@ -106,9 +119,9 @@
     <string name="timer_notifications_less_min">Llai na funud i fynd</string>
     <string name="timer_notifications_hours"><xliff:g id="HOURS" example="2 hours">%1$s</xliff:g><xliff:g id="REMAINING" example="remaining"> %3$s</xliff:g></string>
     <string name="timer_notifications_minutes"><xliff:g id="MINUTES" example="2 minutes">%2$s</xliff:g><xliff:g id="REMAINING" example="remaining"> %3$s</xliff:g></string>
-    <string name="timer_notifications_hours_minutes"><xliff:g id="HOURS" example="2 hours">%1$s</xliff:g><xliff:g id="MINUTES" example="2 minutes"> %2$s</xliff:g> yn weddill</string>
+    <string name="timer_notifications_hours_minutes"><xliff:g id="HOURS" example="2 hours">%1$s</xliff:g> <xliff:g id="MINUTES" example="2 minutes">%2$s</xliff:g> yn weddill</string>
     <string name="timer_notifications_seconds"><xliff:g id="SECONDS" example="2 seconds">%4$s</xliff:g><xliff:g id="REMAINING" example="remaining"> %3$s</xliff:g></string>
-    <string name="timer_notifications_minutes_seconds"><xliff:g id="MINUTES" example="2 minutes">%2$s</xliff:g> <xliff:g id="SECONDS" example="2 seconds"> %4$s</xliff:g><xliff:g id="REMAINING" example="remaining"> %3$s</xliff:g></string>
+    <string name="timer_notifications_minutes_seconds"><xliff:g id="MINUTES" example="2 minutes">%2$s</xliff:g> <xliff:g id="SECONDS" example="2 seconds">%4$s</xliff:g> <xliff:g id="REMAINING" example="remaining">%3$s</xliff:g></string>
     <string name="timer_notifications_hours_seconds"><xliff:g id="HOURS" example="2 hours">%1$s</xliff:g> <xliff:g id="SECONDS" example="2 seconds"> %4$s</xliff:g><xliff:g id="REMAINING" example="remaining"> %3$s</xliff:g></string>
     <string name="timer_notifications_hours_minutes_seconds"><xliff:g id="HOURS" example="2 hours">%1$s</xliff:g><xliff:g id="MINUTES" example="2 minutes"> %2$s</xliff:g><xliff:g id="SECONDS" example="2 seconds"> %4$s</xliff:g><xliff:g id="REMAINING" example="remaining"> %3$s</xliff:g></string>
     <!-- Timer accessibility announcements -->
@@ -218,6 +231,7 @@
     <!-- Label for the Settings activity displayed on-screen when that activity must be represented to the user. -->
     <string name="settings">Gosodiadau</string>
     <!-- Setting title for changing the snooze duration. -->
+    <string name="snooze_duration_title">Hyd hepian</string>
     <!-- Setting title for changing the crescendo duration. -->
     <string name="crescendo_duration_title">Cynyddu\'r sain yn raddol</string>
     <!-- Auto silence preference title -->
@@ -334,8 +348,8 @@
     <string name="volume_button_setting_title">Botymau uchder sain</string>
     <!-- Entries listed in the setting for the side-button action. -->
     <string-array name="volume_button_setting_entries">
-        <item>Snooze</item>
-        <item>Wfftio\'r larwm</item>
+        <item>Hepian</item>
+        <item>Diystyru</item>
         <item>Rheoli uchder sain</item>
     </string-array>
     <!-- Values for the side-button setting. -->
@@ -460,16 +474,16 @@
     <string name="seconds"><xliff:g id="seconds" example="44">%d</xliff:g></string>
     <!-- Jocular content that user may append when sharing the lap times -->
     <string-array name="sw_share_strings" translatable="true">
-        <item>You\'re quite the speed demon.</item>
-        <item>Enjoy the fruits of your labor.</item>
+        <item>Dy amseroedd di</item>
+        <item>Dy amseroedd di</item>
         <item>Mae Android yn gyflym, ond nid mor gyflym ag wyt ti!</item>
-        <item>Phew.</item>
-        <item>L33t times.</item>
-        <item>Such prodigious velocity.</item>
-        <item>Let\'s do the time warp again.</item>
-        <item>Just a jump to the left.</item>
-        <item>You have a palette for haste.</item>
-        <item>Photonic velocity.</item>
+        <item>Dy amseroedd di</item>
+        <item>Dy amseroedd di</item>
+        <item>Dy amseroedd di</item>
+        <item>Dy amseroedd di</item>
+        <item>Dy amseroedd di</item>
+        <item>Dy amseroedd di</item>
+        <item>Dy amseroedd di</item>
     </string-array>
     <!-- Title with the clock on the main page displaying the user's regular timezone (shows when automatic_home_clock enabled) -->
     <string name="home_label">Cartref</string>
@@ -513,23 +527,23 @@
     <!-- Choices for timezones, must be kept in sync with timezone_values. CHAR LIMIT=25] -->
     <string-array name="timezone_labels" tools:ignore="Typos">
         <item>"Ynysoedd Marshall"</item>
-        <item>"Midway Island"</item>
+        <item>"Ynys Midway"</item>
         <item>"Hawaii"</item>
         <item>"Alasga"</item>
-        <item>"Pacific Time"</item>
+        <item>"Amser y Cefnfor Tawel"</item>
         <item>"Tijuana"</item>
         <item>"Arizona"</item>
         <item>"Chihuahua"</item>
-        <item>"Mountain Time"</item>
-        <item>"Central America"</item>
-        <item>"Central Time"</item>
+        <item>"Amser y Mynyddoedd (Gog. America)"</item>
+        <item>"Canolbarth America"</item>
+        <item>"Amser y Canolbarth (Gog. America)"</item>
         <item>"Dinas Mecsico"</item>
         <item>"Saskatchewan"</item>
         <item>"Bogota"</item>
-        <item>"Eastern Time"</item>
+        <item>"Amser y Dwyrain (Gog. America)"</item>
         <item>"Feneswela"</item>
-        <item>"Atlantic Time (Barbados)"</item>
-        <item>"Atlantic Time (Canada)"</item>
+        <item>"Amser yr Iwerydd (Barbados)"</item>
+        <item>"Amser yr Iwerydd (Canada)"</item>
         <item>"Manaus"</item>
         <item>"Santiago"</item>
         <item>"Y Tir Newydd"</item>
@@ -537,9 +551,9 @@
         <item>"Buenos Aires"</item>
         <item>"Yr Ynys Las"</item>
         <item>"Montevideo"</item>
-        <item>"Mid-Atlantic"</item>
-        <item>"Azores"</item>
-        <item>"Cape Verde Islands"</item>
+        <item>"Canol yr Iwerydd"</item>
+        <item>"Asores"</item>
+        <item>"Ynysoedd Penrhyn Verde"</item>
         <item>"Casablanca"</item>
         <item>"Llundain, Dulyn"</item>
         <item>"Amsterdam, Berlin"</item>
@@ -547,7 +561,7 @@
         <item>"Brwsel"</item>
         <item>"Sarajevo"</item>
         <item>"Windhoek"</item>
-        <item>"W. Africa Time"</item>
+        <item>"Amser Gorll. Affrica"</item>
         <item>"Amman, Gwlad Iorddonen"</item>
         <item>"Athen, Istanbul"</item>
         <item>"Beirut, Libanus"</item>
@@ -640,13 +654,15 @@
     <!-- Text instruction for dismiss alarm on alarm lock screen. The dismiss button will still
          be on the right even on RTL languages so please do not reverse this during
          translation. -->
-    <string name="description_direction_right">Llusga i\'r dde i\'w wfftio</string>
+    <string name="description_direction_right">Llusga i\'r dde i\'w ddiystyru</string>
     <!-- Text instruction for snooze alarm on alarm lock screen. The snooze button will still
          be on the left even on RTL languages so please do not reverse this during
          translation. -->
+    <string name="description_direction_left">Llusga i\'r chwith i hepian</string>
     <!-- Text instruction for alarm icon on alarm lock screen. The snooze button will still
          be on the left even on RTL languages so please do not reverse this during
          translation. -->
+    <string name="description_direction_both">Llusga i\'r chwith i hepian neu i\'r dde i ddiystyru</string>
     <!-- Header in the preferences settings for the section pertaining to timers. -->
     <string name="timer_settings">Amseryddion</string>
     <!-- Description for timer vibration. -->
@@ -656,7 +672,7 @@
     <!-- Notification title when multiple timers are paused. [CHAR LIMIT = 30] -->
     <string name="timers_stopped"><xliff:g id="number" example="7">%d</xliff:g> amserydd wedi eu hoedi</string>
     <!-- Notification text when multiple timers are paused. -->
-    <string name="all_timers_stopped_notif">Tara i weld dy amseryddion</string>
+    <string name="all_timers_stopped_notif">Tapia i weld dy amseryddion</string>
     <!-- Notification title when at least one timer, of those in use, is counting down. -->
     <string name="timers_in_use"><xliff:g id="number" example="7">%d</xliff:g> amserydd</string>
     <!-- Notification text when at least one timer, of those in use, is counting down. -->
@@ -716,7 +732,7 @@
     no alarms scheduled in the app.
     [CHAR LIMIT=NONE]
     -->
-    <string name="no_scheduled_alarms">Dim larymau ar y gweill</string>
+    <string name="no_scheduled_alarms">Dim larymau wedi\'u gosod</string>
     <!-- String that represents that the user specified that they want to select an alarm to
     dismiss by specifying a 'label' but they didn't specify any labels.
     [CHAR LIMIT=NONE]
@@ -738,7 +754,7 @@
     %s represents alarm time, e.g. 14:20
     [CHAR LIMIT=NONE]
     -->
-    <string name="alarm_is_dismissed">Larwm <xliff:g id="alarm_time" example="14:20">%s</xliff:g> wedi\'i wfftio</string>
+    <string name="alarm_is_dismissed">Larwm <xliff:g id="alarm_time" example="14:20">%s</xliff:g> wedi\'i ddiystyru</string>
     <!-- String that represents that the user has dismissed an alarm through a voice action.
     %s represents alarm time, e.g. 14:20
     [CHAR LIMIT=NONE]
@@ -772,24 +788,26 @@
     %s represents the time of the alarm (e.g. 15:39)
     [CHAR LIMIT=NONE]
     -->
-    <string name="alarm_cant_be_dismissed_still_more_than_24_hours_away">Ni ellir wfftio larwm <xliff:g id="alarm_time" example="14:20">%s</xliff:g> eto gan ei fod dros 24 awr i ffwrdd</string>
+    <string name="alarm_cant_be_dismissed_still_more_than_24_hours_away">Ni ellir diystyru larwm <xliff:g id="alarm_time" example="14:20">%s</xliff:g> eto gan ei fod dros 24 awr i ffwrdd</string>
     <!-- String that shows up in the action bar for the Picker Activity
          where a use gets to pick which alarm to dismiss
    [CHAR LIMIT=NONE]
    -->
-    <string name="dismiss_alarm">Wfftio\'r larwm</string>
+    <string name="dismiss_alarm">Diystyru\'r larwm</string>
     <!-- String that represents that further action is needed from the user in case their
     voice command was ambiguous or there are more than 1 alarms that match their request.
     The user needs to choose an alarm they want to dismiss through the UI
    [CHAR LIMIT=NONE]
    -->
-    <string name="pick_alarm_to_dismiss">Dewis pa larymau i\'w wfftio</string>
+    <string name="pick_alarm_to_dismiss">Dewis pa larwm i\'w ddiystyru</string>
     <!-- String that represents that the user doesn't have any alarms firing at the moment.
     [CHAR LIMIT=NONE]
     -->
+    <string name="no_firing_alarms">Dim larymau yn canu</string>
     <!-- String that represents that the user has snoozed an alarm through a voice action for 10
     minutes.
     %s represents alarm time, e.g. 14:20
     [CHAR LIMIT=NONE]
     -->
+    <string name="alarm_is_snoozed"><xliff:g id="alarm_time" example="14:20">%s</xliff:g> larwm yn caniatáu hepian am 10 munud</string>
 </resources>

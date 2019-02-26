@@ -24,7 +24,7 @@
     <!-- Entries listed in the setting flip and shake. -->
     <string-array name="action_setting_entries">
         <item>Snooze</item>
-        <item>Wfftio</item>
+        <item>Diystyru</item>
         <item>Dim byd</item>
     </string-array>
     <!-- Setting title for accessing the cLock widget settings -->
