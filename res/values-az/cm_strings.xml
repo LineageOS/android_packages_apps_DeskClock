@@ -17,9 +17,5 @@
      limitations under the License.
 -->
 <resources xmlns:xliff="urn:oasis:names:tc:xliff:document:1.2">
-    <!-- Setting title for the flip action setting. -->
-    <!-- Setting title for the shake action setting. -->
-    <!-- Entries listed in the setting flip and shake. -->
-    <!-- Setting title for accessing the cLock widget settings -->
     <string name="menu_item_widget_settings">Widget tənzimləmələri</string>
 </resources>
