@@ -16,15 +16,5 @@
      limitations under the License.
 -->
 <resources xmlns:xliff="urn:oasis:names:tc:xliff:document:1.2">
-  <!-- Setting title for accessing the cLock widget settings -->
-  <!-- Setting labels on Set alarm screen: Choose profile -->
-  <!-- No profile selected label -->
-  <!-- Title of the setting default alarm tone  -->
-  <string name="default_alarm_tone_title">Sonu predefinidu de s\'isvèllia</string>
-  <!-- Settings summary for the volume buttons setting. -->
-  <!-- Setting title for the flip action setting. -->
-  <!-- Setting summary for the flip action setting. -->
-  <!-- Setting title for the shake action setting. -->
-  <!-- Setting summary for the shake action setting. -->
-  <!-- Summary texts for shake and flip actions -->
+    <string name="default_alarm_tone_title">Sonu predefinidu de s\'isvèllia</string>
 </resources>

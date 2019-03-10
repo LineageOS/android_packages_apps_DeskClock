@@ -16,21 +16,18 @@
      limitations under the License.
 -->
 <resources xmlns:xliff="urn:oasis:names:tc:xliff:document:1.2">
-  <!-- Setting title for accessing the cLock widget settings -->
-  <!-- Setting labels on Set alarm screen: Choose profile -->
-  <!-- No profile selected label -->
-  <!-- Title of the setting default alarm tone  -->
-  <!-- Settings summary for the volume buttons setting. -->
-  <string name="volume_buttons_summary">Bydd gwasgu\'r botymau sain yn <xliff:g id="action">%s</xliff:g></string>
-  <!-- Setting title for the flip action setting. -->
-  <string name="flip_action_title">Effaith troi drosodd</string>
-  <!-- Setting summary for the flip action setting. -->
-  <string name="flip_action_summary" product="tablet">Bydd troi y llechen wyneb i lawr yn <xliff:g id="action">%s</xliff:g></string>
-  <string name="flip_action_summary" product="default">Bydd troi y ffôn wyneb i lawr yn <xliff:g id="action">%s</xliff:g></string>
-  <!-- Setting title for the shake action setting. -->
-  <string name="shake_action_title">Effaith ysgwyd</string>
-  <!-- Setting summary for the shake action setting. -->
-  <string name="shake_action_summary" product="tablet">Bydd ysgwyd y llechen yn <xliff:g id="action">%s</xliff:g></string>
-  <string name="shake_action_summary" product="default">Bydd ysgwyd y ffôn yn <xliff:g id="action">%s</xliff:g></string>
-  <!-- Summary texts for shake and flip actions -->
+    <string name="menu_item_widget_settings">Gosodiadau teclyn</string>
+    <string name="profile_description">Proffil <xliff:g id="profile">%s</xliff:g></string>
+    <string name="profile_no_selected">Dim proffil wedi\'i ddewis</string>
+    <string name="default_alarm_tone_title">Tôn larwm rhagosodedig</string>
+    <string name="volume_buttons_summary">Bydd gwasgu\'r botymau sain yn <xliff:g id="action">%s</xliff:g></string>
+    <string name="flip_action_title">Effaith troi drosodd</string>
+    <string name="flip_action_summary" product="tablet">Bydd troi y llechen wyneb i lawr yn <xliff:g id="action">%s</xliff:g></string>
+    <string name="flip_action_summary" product="default">Bydd troi y ffôn wyneb i lawr yn <xliff:g id="action">%s</xliff:g></string>
+    <string name="shake_action_title">Effaith ysgwyd</string>
+    <string name="shake_action_summary" product="tablet">Bydd ysgwyd y llechen yn <xliff:g id="action">%s</xliff:g></string>
+    <string name="shake_action_summary" product="default">Bydd ysgwyd y ffôn yn <xliff:g id="action">%s</xliff:g></string>
+    <string name="action_summary_snooze">ail-ganu’r larwm mewn ychydig funudau</string>
+    <string name="action_summary_dismiss">diystyru\'r larwm</string>
+    <string name="action_summary_do_nothing">gwneud dim</string>
 </resources>
