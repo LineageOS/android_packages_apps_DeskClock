@@ -17,5 +17,12 @@
      limitations under the License.
 -->
 <resources xmlns:xliff="urn:oasis:names:tc:xliff:document:1.2">
-    <string name="menu_item_widget_settings">Widget tənzimləmələri</string>
+    <string name="flip_action_title">Cihazı çevirmə hərəkəti</string>
+    <string name="shake_action_title">Cihaz silkələmə hərəkəti</string>
+    <string-array name="action_setting_entries">
+        <item>Ertələ</item>
+        <item>Rədd et</item>
+        <item>Heç biri</item>
+    </string-array>
+    <string name="menu_item_widget_settings">Vidget tənzimləmələri</string>
 </resources>
