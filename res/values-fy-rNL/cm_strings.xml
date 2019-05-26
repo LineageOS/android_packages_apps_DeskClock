@@ -17,12 +17,12 @@
      limitations under the License.
 -->
 <resources xmlns:xliff="urn:oasis:names:tc:xliff:document:1.2">
-    <string name="flip_action_title">การพลิกอุปกรณ์</string>
-    <string name="shake_action_title">การเขย่าอุปกรณ์</string>
+    <string name="flip_action_title">Aksje by tastel omdraaie</string>
+    <string name="shake_action_title">Aksje by tastel skodzje</string>
     <string-array name="action_setting_entries">
-        <item>งีบหลับ</item>
-        <item>ยกเลิก</item>
-        <item>ไม่ทำอะไร</item>
+        <item>Snooze</item>
+        <item>Utskeakelje</item>
+        <item>Neat</item>
     </string-array>
-    <string name="menu_item_widget_settings">การตั้งค่าวิจิท</string>
+    <string name="menu_item_widget_settings">Ynstellingen widget</string>
 </resources>
