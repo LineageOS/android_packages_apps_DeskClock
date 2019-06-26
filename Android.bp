@@ -22,4 +22,6 @@ android_app {
         "android-support-v7-preference",
         "android-support-v7-recyclerview",
     ],
+
+    aaptflags: ["--legacy"],
 }
