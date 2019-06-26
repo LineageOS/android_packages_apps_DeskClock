@@ -26,4 +26,6 @@ android_app {
         "androidx.gridlayout_gridlayout",
         "androidx.recyclerview_recyclerview",
     ],
+
+    aaptflags: ["--legacy"],
 }
