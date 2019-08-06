@@ -19,6 +19,7 @@
     <string name="menu_item_widget_settings">Parametrat e Widget-it</string>
     <string name="profile_description">Profili <xliff:g id="profile">%s</xliff:g></string>
     <string name="profile_no_selected">Nuk është zgjedhur asnjë profil</string>
+    <string name="default_alarm_tone_title">Zilja e parazgjedhur e alarmit</string>
     <string name="volume_buttons_summary">Kur shtyp butonat e volumit <xliff:g id="action">%s</xliff:g></string>
     <string name="flip_action_title">Veprimi i kthimit përmbys</string>
     <string name="flip_action_summary" product="tablet">Kur kthen tabletën përmbys <xliff:g id="action">%s</xliff:g></string>

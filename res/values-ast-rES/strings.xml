@@ -30,6 +30,7 @@
     <string name="show_clock">Amosar reló</string>
     <string name="hide_clock">Anubrir reló</string>
     <string name="label">Nome l\'alarma</string>
+    <string name="on_switch">Prendíu</string>
     <string name="off_switch">Non</string>
     <string name="default_label">Alarma</string>
     <string name="set_alarm">Afitar alarma</string>
@@ -135,6 +136,7 @@
     <string name="delete">Desaniciar</string>
     <string name="alarm_volume_title">Volume d\'alarma</string>
     <string name="silent_ringtone_title">Silenciu</string>
+    <string name="unknown_ringtone_title">Desconocíu</string>
     <string name="alarm_notify_text">Posponer o inorar alarma</string>
     <string name="alarm_notify_snooze_label"><xliff:g id="LABEL">%s</xliff:g> (pospuesta)</string>
     <string name="alarm_notify_snooze_text">L\'alarma va sonar a les <xliff:g id="TIME">%s</xliff:g>. Toca pa encaboxar.</string>
@@ -223,12 +225,16 @@
     <string name="timer_plus_one">Amestar 1 minutu</string>
     <string name="timer_plus_1_min">Añadir 1 min</string>
     <string name="timer_stop">Detener</string>
+    <string name="timer_stop_all">Parar tolos temporizadores</string>
     <string name="timer_reset">Llimpiar</string>
     <string name="timer_cancel">Encaboxar</string>
+    <string name="timer_canceled">Encaboxóse\'l temporizador</string>
     <string name="timer_times_up">Tiempu agotáu</string>
+    <string name="timer_multi_times_up"><xliff:g id="NUM_TIMERS" example="2">%d</xliff:g> temporizadores deteníos</string>
     <string name="timer_notification_label">Temporizador</string>
     <string name="timers_max_count_reached">4 temporizadores como máximu</string>
     <string name="timer_pause">Posar</string>
+    <string name="timer_reset_all">Reaniciar tolos temporizadores</string>
     <string-array name="sw_share_strings" translatable="true">
         <item>Yes el rei de la velocidá.</item>
         <item>Esfruta de los frutos del to trabayu.</item>
@@ -260,6 +266,8 @@
     <string name="time_picker_ampm_label">--</string>
     <string name="time_picker_00_label">:00</string>
     <string name="time_picker_30_label">:30</string>
+    <string name="city_checked"><xliff:g id="city_name">%s</xliff:g> xequeáu</string>
+    <string name="city_unchecked"><xliff:g id="city_name">%s</xliff:g> ensin xequiar</string>
     <string-array name="timezone_labels">
         <item>"Islles Marshall"</item>
         <item>"Islles Midway"</item>
@@ -350,12 +358,15 @@
     <string name="alarm_settings">Alarmes</string>
     <string name="timer_service_desc">Procesa les aiciones de los avisos del temporizador.</string>
     <string name="stopwatch_service_desc">Procesa les aiciones de los avisos del cronómetru.</string>
+    <string name="swn_paused">Posáu</string>
     <string name="description_direction_right">Esliza pa la drecha pa escartar</string>
     <string name="description_direction_left">Esliza pa la esquierda pa posponer</string>
     <string name="description_direction_both">Esliza\'l deu a manzorga pa posponer l\'alarma o a mandrecha pa inorala</string>
     <string name="timer_settings">Temporizadores</string>
     <string name="timer_ringtone_title">Timbre del temporizador</string>
     <string name="timer_stopped">Temporizador deteníu</string>
+    <string name="timer_paused">Posóse\'l temporizador</string>
+    <string name="timers_stopped"><xliff:g id="Number">%d</xliff:g> temporizadores posaos</string>
     <string name="all_timers_stopped_notif">Toca pa ver los tos temporizadores</string>
     <string name="timers_in_use"><xliff:g id="NUMBER">%d</xliff:g> temporizadores</string>
     <string name="next_timer_notif">Próximu temporizador: <xliff:g id="TIME_REMAINING">%s</xliff:g></string>
@@ -366,6 +377,7 @@
     <string name="collapse_alarm">Contrayer alarma</string>
     <string name="alarm_undo">desfacer</string>
     <string name="alarm_deleted">Alarma desaniciada</string>
+    <string name="alarm_select">Esbillar alarma</string>
     <string name="alarm_select_ringtone">Timbre</string>
     <string name="alarm_select_external">Música</string>
     <string name="alarm_select_ok">ACEUTAR</string>
@@ -391,6 +403,7 @@
     <string name="no_label_specified">Nun s\'especificó nenguna etiqueta</string>
     <string name="no_alarms_with_label">Nun hai nenguna alarma con esa etiqueta</string>
     <string name="stopwatch_isnt_running">El cronómetru nun se ta executando</string>
+    <string name="stopwatch_paused">Posóse\'l cronómetru</string>
     <string name="stopwatch_reset">Restablecióse\'l cronómetru</string>
     <string name="stopwatch_lapped">Restablecióse una vuelta\'l cronómetru</string>
     <string name="stopwatch_started">Anicióse\'l cronómetru</string>
@@ -398,6 +411,8 @@
     <string name="alarm_is_dismissed">Inoróse l\'alarma <xliff:g id="alarm_time" example="14:20">%s</xliff:g></string>
     <string name="alarm_is_set">Afitóse l\'alarma a les <xliff:g id="alarm_time" example="14:20">%s</xliff:g></string>
     <string name="no_timers_exist">Nun esisten temporizadores</string>
+    <string name="too_many_timers_exist">Esiste más d\'un temporizador</string>
+    <string name="timer_does_not_exist">Desanicióse\'l temporizador.</string>
     <string name="timer_created">Creóse\'l temporizador</string>
     <string name="timer_was_reset">Restablecióse\'l temporizador</string>
     <string name="timer_deleted">Desanicióse\'l temporizador</string>
@@ -415,4 +430,5 @@
     <string name="alarm_is_snoozed">L\'alarma <xliff:g id="alarm_time" example="14:20">%s</xliff:g> pospúsose por diez minutos</string>
     <string name="custom_ringtone">TImbre personalizáu</string>
     <string name="ringtone_default">"Timbre por defeutu"</string>
+    <string name="have_denied_storage_permission">Ñeguésti\'l permisu d\'almacenamientu y pues volver amestalu a mano n\'aplicación d\'Axustes</string>
 </resources>

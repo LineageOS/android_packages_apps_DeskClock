@@ -19,14 +19,15 @@
     <string name="menu_item_widget_settings">Widget-indstillinger</string>
     <string name="profile_description">Profil <xliff:g id="profile">%s</xliff:g></string>
     <string name="profile_no_selected">Ingen profil valgt</string>
-    <string name="volume_buttons_summary">Tryk på volumeknapperne vil <xliff:g id="action">%s</xliff:g></string>
+    <string name="default_alarm_tone_title">Standard-alarmtone</string>
+    <string name="volume_buttons_summary">Tryk på lydstyrke-knapperne vil <xliff:g id="action">%s</xliff:g></string>
     <string name="flip_action_title">Vendehandling</string>
-    <string name="flip_action_summary" product="tablet">At vende tabletten nedad vil <xliff:g id="action">%s</xliff:g></string>
-    <string name="flip_action_summary" product="default">At vende telefonen nedad vil <xliff:g id="action">%s</xliff:g></string>
+    <string name="flip_action_summary" product="tablet">Nedad-vending af tablet-computeren vil <xliff:g id="action">%s</xliff:g></string>
+    <string name="flip_action_summary" product="default">Nedad-vending af telefonen vil <xliff:g id="action">%s</xliff:g></string>
     <string name="shake_action_title">Rystehandling</string>
-    <string name="shake_action_summary" product="tablet">At ryste tabletten vil <xliff:g id="action">%s</xliff:g></string>
-    <string name="shake_action_summary" product="default">At ryste telefonen vil <xliff:g id="action">%s</xliff:g></string>
-    <string name="action_summary_snooze">udsætte alarmen</string>
+    <string name="shake_action_summary" product="tablet">Rystelse af tablet-computeren vil <xliff:g id="action">%s</xliff:g></string>
+    <string name="shake_action_summary" product="default">Rystelse af telefonen vil <xliff:g id="action">%s</xliff:g></string>
+    <string name="action_summary_snooze">udskyde alarmen</string>
     <string name="action_summary_dismiss">afvise alarmen</string>
     <string name="action_summary_do_nothing">gøre ingenting</string>
 </resources>

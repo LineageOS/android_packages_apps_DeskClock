@@ -16,9 +16,10 @@
      limitations under the License.
 -->
 <resources xmlns:xliff="urn:oasis:names:tc:xliff:document:1.2">
-    <string name="menu_item_widget_settings">Modul beállítások</string>
+    <string name="menu_item_widget_settings">Modulbeállítások</string>
     <string name="profile_description"><xliff:g id="profile">%s</xliff:g> profil</string>
     <string name="profile_no_selected">Nincs kiválasztva profil</string>
+    <string name="default_alarm_tone_title">Alapértelmezett ébresztési hang</string>
     <string name="volume_buttons_summary">Hangerő gombok érintése <xliff:g id="action">%s</xliff:g></string>
     <string name="flip_action_title">Megfordítás művelete</string>
     <string name="flip_action_summary" product="tablet">A táblagép megfordítására <xliff:g id="action">%s</xliff:g></string>

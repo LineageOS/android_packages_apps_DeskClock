@@ -16,9 +16,10 @@
      limitations under the License.
 -->
 <resources xmlns:xliff="urn:oasis:names:tc:xliff:document:1.2">
-    <string name="menu_item_widget_settings">Widget tənzimləmələri</string>
+    <string name="menu_item_widget_settings">Vidget tənzimləmələri</string>
     <string name="profile_description">Profil <xliff:g id="profile">%s</xliff:g></string>
     <string name="profile_no_selected">Profil seçilməyib</string>
+    <string name="default_alarm_tone_title">İlkin zəngli saat səsi</string>
     <string name="volume_buttons_summary">Səs düymələri <xliff:g id="action">%s</xliff:g></string>
     <string name="flip_action_title">Çevirmə hərəkəti</string>
     <string name="flip_action_summary" product="tablet">Planşeti tərsinə çevirəndə <xliff:g id="action">%s</xliff:g></string>
