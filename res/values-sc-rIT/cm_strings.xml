@@ -16,16 +16,6 @@
      limitations under the License.
 -->
 <resources xmlns:xliff="urn:oasis:names:tc:xliff:document:1.2">
-  <!-- Settings summary for the volume buttons setting. -->
-  <!-- Setting title for the flip action setting. -->
-  <!-- Setting summary for the flip action setting. -->
-  <!-- Setting title for the shake action setting. -->
-  <!-- Setting summary for the shake action setting. -->
-  <!-- Summary texts for shake and flip actions -->
-  <!-- Setting title for accessing the cLock widget settings -->
-  <!-- Setting title for showing/hiding the alarm status bar icon -->
-  <!-- Setting summary for showing/hiding the alarm statusbar icon -->
-  <!-- Setting labels on Set alarm screen: Increasing volume on or off -->
-  <!-- Setting labels on Set alarm screen: Choose profile -->
-  <!-- No profile selected label -->
+    <string name="power_on_yes_text">Eja</string>
+    <string name="power_on_no_text">Nono</string>
 </resources>

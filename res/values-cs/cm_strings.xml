@@ -16,37 +16,25 @@
      limitations under the License.
 -->
 <resources xmlns:xliff="urn:oasis:names:tc:xliff:document:1.2">
-  <!-- Settings summary for the volume buttons setting. -->
-  <string name="volume_buttons_summary">Stiskem tlačítek hlasitosti: <xliff:g id="action">%s</xliff:g></string>
-  <!-- Setting title for the flip action setting. -->
-  <string name="flip_action_title">Akce při otočení</string>
-  <!-- Setting summary for the flip action setting. -->
-  <string name="flip_action_summary" product="tablet">Otočením tabletu dojde k <xliff:g id="action">%s</xliff:g></string>
-  <string name="flip_action_summary" product="default">Otočením telefonu dojde k <xliff:g id="action">%s</xliff:g></string>
-  <!-- Setting title for the shake action setting. -->
-  <string name="shake_action_title">Akce při zatřesení</string>
-  <!-- Setting summary for the shake action setting. -->
-  <string name="shake_action_summary" product="tablet">Zatřesením tabletu dojde k <xliff:g id="action">%s</xliff:g></string>
-  <string name="shake_action_summary" product="default">Zatřesením telefonu dojde k <xliff:g id="action">%s</xliff:g></string>
-  <!-- Summary texts for shake and flip actions -->
-  <string name="action_summary_snooze">odložit budík</string>
-  <string name="action_summary_dismiss">vypnout budík</string>
-  <string name="action_summary_do_nothing">ničemu</string>
-  <!-- Setting title for accessing the cLock widget settings -->
-  <string name="menu_item_widget_settings">Nastavení widgetu</string>
-  <string name="activity_not_found">Aktivita nebyla nalezena!</string>
-  <!-- Setting title for showing/hiding the alarm status bar icon -->
-  <string name="show_status_bar_icon_title">Zobrazit ikonu</string>
-  <!-- Setting summary for showing/hiding the alarm statusbar icon -->
-  <string name="show_status_bar_icon_summary">Pokud je nastaven budík, je v liště zobrazena ikona</string>
-  <!-- Setting labels on Set alarm screen: Increasing volume on or off -->
-  <string name="alarm_increasing_volume">Zvyšující hlasitost</string>
-  <!-- Setting labels on Set alarm screen: Choose profile -->
-  <string name="profile_description">Profil <xliff:g id="profile">%s</xliff:g></string>
-  <!-- No profile selected label -->
-  <string name="profile_no_selected">Žádný profil</string>
-  <string name="alarm_modification_service_desc">Služba, umožnující aplikacím třetích stran manipulovat s budíky.</string>
-  <string name="power_on_text">Zapnout zařízení?</string>
-  <string name="power_on_yes_text">Ano</string>
-  <string name="power_on_no_text">Ne</string>
+    <string name="volume_buttons_summary">Stiskem tlačítek hlasitosti: <xliff:g id="action">%s</xliff:g></string>
+    <string name="flip_action_title">Akce při otočení</string>
+    <string name="flip_action_summary" product="tablet">Otočením tabletu dojde k <xliff:g id="action">%s</xliff:g></string>
+    <string name="flip_action_summary" product="default">Otočením telefonu dojde k <xliff:g id="action">%s</xliff:g></string>
+    <string name="shake_action_title">Akce při zatřesení</string>
+    <string name="shake_action_summary" product="tablet">Zatřesením tabletu dojde k <xliff:g id="action">%s</xliff:g></string>
+    <string name="shake_action_summary" product="default">Zatřesením telefonu dojde k <xliff:g id="action">%s</xliff:g></string>
+    <string name="action_summary_snooze">odložit budík</string>
+    <string name="action_summary_dismiss">vypnout budík</string>
+    <string name="action_summary_do_nothing">ničemu</string>
+    <string name="menu_item_widget_settings">Nastavení widgetu</string>
+    <string name="activity_not_found">Aktivita nebyla nalezena!</string>
+    <string name="show_status_bar_icon_title">Zobrazit ikonu</string>
+    <string name="show_status_bar_icon_summary">Pokud je nastaven budík, je v liště zobrazena ikona</string>
+    <string name="alarm_increasing_volume">Zvyšující hlasitost</string>
+    <string name="profile_description">Profil <xliff:g id="profile">%s</xliff:g></string>
+    <string name="profile_no_selected">Žádný profil</string>
+    <string name="alarm_modification_service_desc">Služba, umožnující aplikacím třetích stran manipulovat s budíky.</string>
+    <string name="power_on_text">Zapnout zařízení?</string>
+    <string name="power_on_yes_text">Ano</string>
+    <string name="power_on_no_text">Ne</string>
 </resources>

@@ -16,34 +16,22 @@
      limitations under the License.
 -->
 <resources xmlns:xliff="urn:oasis:names:tc:xliff:document:1.2">
-  <!-- Settings summary for the volume buttons setting. -->
-  <string name="volume_buttons_summary">ئاۋاز مىقدارى توپچىسى بېسىلسا <xliff:g id="action">%s</xliff:g></string>
-  <!-- Setting title for the flip action setting. -->
-  <string name="flip_action_title">ئايلاندۇرۇش مەشغۇلاتى</string>
-  <!-- Setting summary for the flip action setting. -->
-  <string name="flip_action_summary" product="tablet">تاختا كومپيۇتېر تۆۋەنگە ئايلاندۇرۇلسا <xliff:g id="action">%s</xliff:g></string>
-  <string name="flip_action_summary" product="default">تېلېفون تۆۋەنگە ئايلاندۇرۇلسا <xliff:g id="action">%s</xliff:g></string>
-  <!-- Setting title for the shake action setting. -->
-  <string name="shake_action_title">پۇلاڭلىتىش مەشغۇلاتى</string>
-  <!-- Setting summary for the shake action setting. -->
-  <string name="shake_action_summary" product="tablet">تاختا كومپيۇتېر پۇلاڭلىتىلسا <xliff:g id="action">%s</xliff:g></string>
-  <string name="shake_action_summary" product="default">تېلېفون پۇلاڭلىتىلسا <xliff:g id="action">%s</xliff:g></string>
-  <!-- Summary texts for shake and flip actions -->
-  <string name="action_summary_snooze">قوڭغۇراقنى كېچىكتۈرىدۇ</string>
-  <string name="action_summary_dismiss">قوڭغۇراقنى توختىتىدۇ</string>
-  <string name="action_summary_do_nothing">ھېچقانداق قىلما</string>
-  <!-- Setting title for accessing the cLock widget settings -->
-  <string name="menu_item_widget_settings">كىچىك قىستۇرمىلار تەڭشىكى</string>
-  <string name="activity_not_found">پائالىيەت تاپالمىدى!</string>
-  <!-- Setting title for showing/hiding the alarm status bar icon -->
-  <string name="show_status_bar_icon_title">سىنبەلگىنى كۆرسەت</string>
-  <!-- Setting summary for showing/hiding the alarm statusbar icon -->
-  <string name="show_status_bar_icon_summary">قوڭغۇراق سائەتنى تەڭشىگەندە ھالەت بالداقتا سىنبەلگىدىن بىرنى كۆرسىتىدۇ</string>
-  <!-- Setting labels on Set alarm screen: Increasing volume on or off -->
-  <string name="alarm_increasing_volume">ئاۋازنى يۇقىرىلات</string>
-  <!-- Setting labels on Set alarm screen: Choose profile -->
-  <string name="profile_description">سەپلىمە ھۆججەت <xliff:g id="profile">%s</xliff:g></string>
-  <!-- No profile selected label -->
-  <string name="profile_no_selected">ھېچقانداق سەپلىمە ھۆججەت تاللانمىدى</string>
-  <string name="alarm_modification_service_desc">ئۈچىنچى تەرەپنىڭ قوڭغۇراق مۇلازىمىتىنى كونتىرول قىلىشىغا يول قويۇش.</string>
+    <string name="volume_buttons_summary">ئاۋاز مىقدارى توپچىسى بېسىلسا <xliff:g id="action">%s</xliff:g></string>
+    <string name="flip_action_title">ئايلاندۇرۇش مەشغۇلاتى</string>
+    <string name="flip_action_summary" product="tablet">تاختا كومپيۇتېر تۆۋەنگە ئايلاندۇرۇلسا <xliff:g id="action">%s</xliff:g></string>
+    <string name="flip_action_summary" product="default">تېلېفون تۆۋەنگە ئايلاندۇرۇلسا <xliff:g id="action">%s</xliff:g></string>
+    <string name="shake_action_title">پۇلاڭلىتىش مەشغۇلاتى</string>
+    <string name="shake_action_summary" product="tablet">تاختا كومپيۇتېر پۇلاڭلىتىلسا <xliff:g id="action">%s</xliff:g></string>
+    <string name="shake_action_summary" product="default">تېلېفون پۇلاڭلىتىلسا <xliff:g id="action">%s</xliff:g></string>
+    <string name="action_summary_snooze">قوڭغۇراقنى كېچىكتۈرىدۇ</string>
+    <string name="action_summary_dismiss">قوڭغۇراقنى توختىتىدۇ</string>
+    <string name="action_summary_do_nothing">ھېچقانداق قىلما</string>
+    <string name="menu_item_widget_settings">كىچىك قىستۇرمىلار تەڭشىكى</string>
+    <string name="activity_not_found">پائالىيەت تاپالمىدى!</string>
+    <string name="show_status_bar_icon_title">سىنبەلگىنى كۆرسەت</string>
+    <string name="show_status_bar_icon_summary">قوڭغۇراق سائەتنى تەڭشىگەندە ھالەت بالداقتا سىنبەلگىدىن بىرنى كۆرسىتىدۇ</string>
+    <string name="alarm_increasing_volume">ئاۋازنى يۇقىرىلات</string>
+    <string name="profile_description">سەپلىمە ھۆججەت <xliff:g id="profile">%s</xliff:g></string>
+    <string name="profile_no_selected">ھېچقانداق سەپلىمە ھۆججەت تاللانمىدى</string>
+    <string name="alarm_modification_service_desc">ئۈچىنچى تەرەپنىڭ قوڭغۇراق مۇلازىمىتىنى كونتىرول قىلىشىغا يول قويۇش.</string>
 </resources>

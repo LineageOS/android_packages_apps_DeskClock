@@ -16,37 +16,25 @@
      limitations under the License.
 -->
 <resources xmlns:xliff="urn:oasis:names:tc:xliff:document:1.2">
-  <!-- Settings summary for the volume buttons setting. -->
-  <string name="volume_buttons_summary">Tryk på volumeknapperne vil <xliff:g id="action">%s</xliff:g></string>
-  <!-- Setting title for the flip action setting. -->
-  <string name="flip_action_title">Vendehandling</string>
-  <!-- Setting summary for the flip action setting. -->
-  <string name="flip_action_summary" product="tablet">At vende tabletten nedad vil <xliff:g id="action">%s</xliff:g></string>
-  <string name="flip_action_summary" product="default">At vende telefonen nedad vil <xliff:g id="action">%s</xliff:g></string>
-  <!-- Setting title for the shake action setting. -->
-  <string name="shake_action_title">Rystehandling</string>
-  <!-- Setting summary for the shake action setting. -->
-  <string name="shake_action_summary" product="tablet">At ryste tabletten vil <xliff:g id="action">%s</xliff:g></string>
-  <string name="shake_action_summary" product="default">At ryste telefonen vil <xliff:g id="action">%s</xliff:g></string>
-  <!-- Summary texts for shake and flip actions -->
-  <string name="action_summary_snooze">udsætte alarmen</string>
-  <string name="action_summary_dismiss">afvise alarmen</string>
-  <string name="action_summary_do_nothing">gøre ingenting</string>
-  <!-- Setting title for accessing the cLock widget settings -->
-  <string name="menu_item_widget_settings">Widget-indstillinger</string>
-  <string name="activity_not_found">Aktivitet ikke fundet!</string>
-  <!-- Setting title for showing/hiding the alarm status bar icon -->
-  <string name="show_status_bar_icon_title">Vis ikon</string>
-  <!-- Setting summary for showing/hiding the alarm statusbar icon -->
-  <string name="show_status_bar_icon_summary">Vis et ikon i statuslinjen, når en alarm er indstillet</string>
-  <!-- Setting labels on Set alarm screen: Increasing volume on or off -->
-  <string name="alarm_increasing_volume">Stigende lydstyrke</string>
-  <!-- Setting labels on Set alarm screen: Choose profile -->
-  <string name="profile_description">Profil <xliff:g id="profile">%s</xliff:g></string>
-  <!-- No profile selected label -->
-  <string name="profile_no_selected">Ingen profil valgt</string>
-  <string name="alarm_modification_service_desc">En tjeneste der tillader at manipulere alarmer af tredjepart.</string>
-  <string name="power_on_text">Tænd enheden?</string>
-  <string name="power_on_yes_text">Ja</string>
-  <string name="power_on_no_text">Nej</string>
+    <string name="volume_buttons_summary">Tryk på lydstyrke-knapperne vil <xliff:g id="action">%s</xliff:g></string>
+    <string name="flip_action_title">Vendehandling</string>
+    <string name="flip_action_summary" product="tablet">Nedad-vending af tablet-computeren vil <xliff:g id="action">%s</xliff:g></string>
+    <string name="flip_action_summary" product="default">Nedad-vending af telefonen vil <xliff:g id="action">%s</xliff:g></string>
+    <string name="shake_action_title">Rystehandling</string>
+    <string name="shake_action_summary" product="tablet">Rystelse af tablet-computeren vil <xliff:g id="action">%s</xliff:g></string>
+    <string name="shake_action_summary" product="default">Rystelse af telefonen vil <xliff:g id="action">%s</xliff:g></string>
+    <string name="action_summary_snooze">udskyde alarmen</string>
+    <string name="action_summary_dismiss">afvise alarmen</string>
+    <string name="action_summary_do_nothing">gøre ingenting</string>
+    <string name="menu_item_widget_settings">Widget-indstillinger</string>
+    <string name="activity_not_found">Aktivitet ikke fundet!</string>
+    <string name="show_status_bar_icon_title">Vis ikon</string>
+    <string name="show_status_bar_icon_summary">Vis et ikon i statusbjælken, når en alarm er indstillet</string>
+    <string name="alarm_increasing_volume">Stigende lydstyrke</string>
+    <string name="profile_description">Profil <xliff:g id="profile">%s</xliff:g></string>
+    <string name="profile_no_selected">Ingen profil valgt</string>
+    <string name="alarm_modification_service_desc">En tjeneste til at tillade manipulation af alarmer, af tredjeparter.</string>
+    <string name="power_on_text">Tænd for enhed?</string>
+    <string name="power_on_yes_text">Ja</string>
+    <string name="power_on_no_text">Nej</string>
 </resources>

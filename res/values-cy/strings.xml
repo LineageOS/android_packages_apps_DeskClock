@@ -15,410 +15,435 @@
      limitations under the License.
 -->
 <resources xmlns:xliff="urn:oasis:names:tc:xliff:document:1.2">
-  <!-- -->
-  <!-- Label shown on launcher icon -->
-  <!-- Label for the this application displayed on-screen when this application must be represented to the user. -->
-  <!-- Title for AlarmClock activity -->
-  <!-- Label for the Alarms activity displayed on-screen when that activity must be represented to the user. -->
-  <!-- Menu item on Alarm Clock screen: Add alarm -->
-  <!-- Menu item on Alarm Clock screen: Desk clock -->
-  <!-- Menu item on Alarm Clock screen: Edit alarm -->
-  <!-- Context Menu Item on Alarm Settings screen: Delete alarm -->
-  <!-- Context Menu Item on Alarm Settings screen: Enable alarm -->
-  <!-- Context Menu Item on Alarm Settings screen: Disable alarm -->
-  <!-- Delete alarm confirmation dialog message. -->
-  <!-- Menu item on Alarm Clock screen: Show clock -->
-  <!-- Menu item on Alarm Clock screen: Hide clock -->
-  <!-- Setting label on Set alarm screen: Label -->
-  <!-- Default label to display for an alarm -->
-  <!-- Preference category on Alarm Settings screen: Set alarm -->
-  <!-- Also label for the old Alarms dialog activity displayed on-screen when that activity must be represented to the user. -->
-  <!-- Setting labels on Set alarm screen: Vibration on or off -->
-  <!-- Setting labels on Set alarm screen: Repeat -->
-  <!-- Setting labels on Set alarm screen: Select alarm ringtone  -->
-  <!-- Label on expanded alarm edit view indicating the ringtone is custom. -->
-  <!-- Label on expanded alarm edit view. -->
-  <!-- Setting labels on Set alarm screen: Set time  -->
-  <!-- Label shown when user is setting up non-repeating alarm for tomorrow [CHAR LIMIT=15] -->
-  <!-- Label shown when user is setting up non-repeating alarm for later today [CHAR LIMIT=15] -->
-  <!-- The text shown above the clock when alarm is alerting [CHAR LIMIT=10] -->
-  <!-- The text shown as an option to dismiss an alerting alarm [CHAR LIMIT=5] -->
-  <!-- Button labels on the alarm dialog: Dismiss -->
-  <!-- Button labels on the pre-dismiss alarm notifications: Dismiss now -->
-  <!-- Alarm Alert screen: this message is shown after an alarm rung
-         unattended for a number of minutes.  It tells the user that
-         the alarm has been silenced.-->
-  <!-- The text shown after user snoozed an alerting alarm. The text will be shown
-         together with the number of minutes in two separate lines. For example:
-             Snoozed
-             10 min
-         [CHAR LIMIT=10]
-    -->
-  <!-- The text shown after user snoozed an alerting alarm. The text will be shown
-         together with the word 'Snoozed' in two separate lines or example:
-             Snoozed
-             10 min
-         [CHAR LIMIT=10]
-    -->
-  <!-- The text shown after user dismissed an alerting alarm [CHAR LIMIT=15] -->
-  <!-- Button labels on the alarm dialog: Snooze -->
-  <!-- Toast that appears after Alarm is snoozed from the Alarm
-         dialog. Says the alarm will snooze for xxx minutes.  -->
-  <!-- Text to appear inside a notification while an alarm is snoozing. -->
-  <!-- Text to appear in the notification title while an alarm is about to go off. -->
-  <!-- Text to appear in when trying to view a missed alarm that has been deleted -->
-  <!-- 0: nothing
-         1: days
-         2:      hours
-         3: days hours
-         4:            minutes
-         5: days       minutes
-         6:      hours minutes
-         7: days hours minutes
-    -->
-  <!-- Timer notification: how long from now until timer goes off. -->
-  <!-- Alarm confirmation toast: Describes how long from now until
-         alarm fires -->
-  <!-- Alarm confirmation toast: days -->
-  <!-- Alarm confirmation toast and timer notification: hours -->
-  <!-- Alarm confirmation toast and timer notification: minutes -->
-  <!-- Repeat options that appear under an alarm on main Alarm Clock
-         screen to identify repetition schedule: special case for when
-         the alarm is set to repeat every day -->
-  <!-- Repeat options that appear under an alarm on main Alarm Clock
-         screen to identify repetition schedule: concatenate days with
-         this character, i.e. "Mon, Tue, Wed" -->
-  <!-- Appears at the top of the Clock Picker screen: Tell user to
-         select a clock to display -->
-  <!-- Label for analog clock gadget displayed on-screen when that gadget is represented to the user. -->
-  <!-- Help activity name -->
-  <!-- Settings activity name -->
-  <!-- Label for the Settings activity displayed on-screen when that activity must be represented to the user. -->
-  <!-- Setting title for changing the snooze duration. -->
-  <!-- Auto silence preference title -->
-  <!-- Auto silence summary string set based on the preference value. -->
-  <!-- Auto silence summary when turned off -->
-  <!-- Entries listed in the ListPreference when invoking the auto silence
-         preference. -->
-  <!-- Values that are retrieved from the ListPreference. These must match
-         the auto_silence_entries above. -->
-  <!-- Week start day preference title. -->
-  <!-- Entries listed in ListPreference for start day. -->
-  <!-- Values for ListPreference for start day of week. -->
-  <!-- Done button when editing an alarm. -->
-  <!-- Revert button when editing an alarm. -->
-  <!-- Delete button when editing an alarm. -->
-  <!-- Setting title for changing the alarm volume. -->
-  <!-- Summary for the alarm preference when silent is chosen. -->
-  <!-- Text to display in the small text of the notification -->
-  <!-- Text to display in the notification ticker and label -->
-  <!-- Text to display in the notification when the alarm has been snoozed -->
-  <!-- Title of the setting to change hardware button behavior. This string
-         should be changed for each piece of hardware. [CHAR LIMIT=20] -->
-  <!-- Dialog title of the volume and power setting. -->
-  <!-- Entries listed in the setting for the side-button action. -->
-  <!-- Values for the side-button setting. -->
-  <!-- Title of the ringtone setting. -->
-  <!-- Accessibility labels for Clock activity buttons -->
-  <!-- Accessibility labels for alarm buttons -->
-  <!-- What to show the user if the weather widget exists but fails to
-         respond. This is a sign of an error; if the weather widget is not
-         present on the device, we show nothing at all. -->
-  <!-- A description for the DeskClock alarm sound playback service.
-         [CHAR LIMIT=NONE] -->
-  <!-- String displayed as the alert summary while loading the alert name from
-         the media player. [CHAR LIMIT=NONE] -->
-  <!-- A description for the DeskClock timer sound playback service.
-         [CHAR LIMIT=NONE] -->
-  <!-- Label on the main screen control used to set alarm [CHAR LIMIT=30]-->
-  <!-- Label on the main screen control used to set alarm when there is already an existing alarm [CHAR LIMIT=30]-->
-  <!--  ActionBar strings -->
-  <!-- Describes the purpose of the tab button which which switches the activity to the Alarm page -->
-  <!-- Describes the purpose of the tab button which which switches the activity to the Timer page -->
-  <!-- Describes the purpose of the tab button which which switches the activity to the Clock page -->
-  <!-- Describes the purpose of the tab button which which switches the activity to the Stopwatch page -->
-  <!-- Clock view buttons strings-->
-  <!-- Describes the purpose of the button to start the activity to add/edit/delete alarms -->
-  <!-- Describes the purpose of the button which provides a list of cities for the world clock settings -->
-  <!-- Describes the purpose of the button which pops up a menu of setting choices -->
-  <!-- Menu item on most screens to get to more settings -->
-  <!-- Menu item on most screens to get to the help information -->
-  <!-- Menu item on clock screen to enter night mode. -->
-  <!-- Menu item on Cities screen to sort by GMT offset -->
-  <!-- Menu item on Cities screen to sort by alphabetical order -->
-  <!-- Label for selected cities in Cities list view -->
-  <!-- Stop Watch strings -->
-  <!-- Describes the purpose of the button to resume running a stopwatch -->
-  <!-- Describes the purpose of the button to begin running a stopwatch -->
-  <!-- Describes the purpose of the button to pause a stopwatch. -->
-  <!-- Describes the purpose of the button to record current the stopwatch value into the4 collection of lap times. -->
-  <!-- Describes the purpose of the button to return the stopwatch to zero and remove the lap times. -->
-  <!-- Describes the purpose of the button to share the stopwatch value.
-         Also used as title for chooser when sharing stopwatch results. -->
-  <!-- Abbreviation for temporal hours [CHAR LIMIT=1] -->
-  <!-- Abbreviation for temporal minutes [CHAR LIMIT=1] -->
-  <!-- Abbreviation for temporal seconds [CHAR LIMIT=1] -->
-  <!-- Accessibility strings -->
-  <!--  Stopwatch share strings -->
-  <!-- Sentence within the message created to share the total time recorded within the stopwatch -->
-  <!-- Header within the message created to share a list of lap times (a new line is appended to this) -->
-  <!-- Label to enumerate the number of laps in the notification the user has counted -->
-  <!-- Formatted stopwatch time -->
-  <!-- Formatted stopwatch time for laps shared using the share button -->
-  <!-- Label to enumerate the number of laps the user has counted -->
-  <!-- Stopwatch accessibility strings -->
-  <!-- timer strings -->
-  <!-- Describes the purpose of the button to add a new timer -->
-  <!-- Describes the purpose of the button to begin or continue running a timer -->
-  <!-- Describes the purpose of the button to delete a timer. -->
-  <!-- Talkback description for deleting a number. -->
-  <!-- Describes the purpose of the button increase the remaining time on a timer by one minute. -->
-  <!-- Like "timer_plus_one", but with 'minute' abbreviated for the notification. -->
-  <!-- Describes the purpose of the button to stop the timer. -->
-  <!-- Describes the purpose of the button to stop and delete the timer. -->
-  <!-- Describes the purpose of the button to return the timer to it's original starting value. -->
-  <!-- Describes the purpose of the button to discard the current dialog values. Will also close the dialog if other time's exist -->
-  <!-- Notification content shown when a timer has completed and has no more time remaining -->
-  <!-- Label associated with a notification for a Timer -->
-  <!-- Toast content shown when user attempts to create a new timer when there are already 4 timers -->
-  <!-- Jocular content that user may append when sharing the lap times -->
-  <!-- Title with the clock on the main page displaying the user's regular timezone (shows when automatic_home_clock enabled) -->
-  <!-- Label for the Cities activity displayed on-screen when that activity must be represented to the user. -->
-  <!-- Settings strings -->
-  <!-- Header in the preferences settings for the section pertaining to clocks on the main fragment -->
-  <!-- Header for a Clock Dream Setting referring to choosing analog or digital style -->
-  <!-- Entries listed in the ListPreference when invoking the clock style
-         preference. -->
-  <!-- Values that are retrieved from the ListPreference. These must match
-         the clock_style_entries above. -->
-  <!-- Title for an option that will automtically show a clock representing the user's regular timezone on the main fragment whenever the user leaves their regular timezone-->
-  <!-- Describes the functionality provided by the automatic_home_clock option -->
-  <!-- Title in the preferences change the time zone for the user's home -->
-  <!-- Title in a list dialog box to pick a time zone for the user's home -->
-  <!-- Textual content of the button to discard the current dialog values and close the dialog -->
-  <!-- Textual content of the button to update an alarm with the current dialog values -->
-  <!--  place holder for am/pm label when it is not set -->
-  <!-- add 00 as minutes to the time when pressing this button -->
-  <!-- add 30 as minutes to the time when pressing this button -->
-  <!-- Choices for timezones, must be kept in sync with timezone_values. CHAR LIMIT=25] -->
-  <!-- Choices for timezones, must be kept in sync with timezone_values. -->
-  <!-- Header in the preferences settings for the section pertaining to alarms -->
-  <!-- Describes the running service for the stopwatch -->
-  <!-- Desription for the stopped stop watch -->
-  <!-- Text instruction for dismiss alarm on alarm lock screen. The dismiss button will still
-         be on the right even on RTL languages so please do not reverse this during
-         translation. -->
-  <!-- Text instruction for snooze alarm on alarm lock screen. The snooze button will still
-         be on the left even on RTL languages so please do not reverse this during
-         translation. -->
-  <!-- Text instruction for alarm icon on alarm lock screen. The snooze button will still
-         be on the left even on RTL languages so please do not reverse this during
-         translation. -->
-  <!-- Notification title when timer is stopped. -->
-  <!-- Notification title when multiple timers are stopped. -->
-  <!-- Notification text when multiple timers are stopped. -->
-  <!-- Notification title when at least one timer, of those in use, is counting down. -->
-  <!-- Notification text when at least one timer, of those in use, is counting down. -->
-  <!-- screensaver settings strings -->
-  <!-- Label for the screen saver activity displayed on-screen when that activity must be represented to the user. -->
-  <!-- Title for check box to pick intensity of display diminuation during dream mode -->
-  <!-- Describes intensity of display diminuation during dream mode -->
-  <!-- Description of the down caret in the alarm alert screen to expand the alarm content to edit perspective. [CHAR LIMIT=NONE] -->
-  <!-- Description of the up caret in the alarm alert screen to collapse the alarm content to summary perspective. [CHAR LIMIT=NONE] -->
-  <!-- Description of the button to undo change to alarm -->
-  <!-- Toast content when an alarm was deleted  -->
-  <!-- slash between date and next alarm in the clock -->
-  <!-- slash between date and next alarm in the clock -->
-  <!-- Description of field showing the next alarm time in the clock page, for accessibility. -->
-  <!-- Displays the number of alarms selected from the list of alarms. -->
-  <!-- message used by the talkback accessebility app to say that something was deleted -->
-  <!-- Alarm deletion confirmation message-->
-  <!-- Timer deletion confirmation -->
-  <!-- world clock deletion confirmation -->
-  <!-- Label for digital clock gadget displayed on-screen when that gadget is represented to the user. -->
-  <!-- format strings for clocks -->
-  <!-- Font size for AM/PM should match widget_label_font_size -->
-  <!-- Font size for AM/PM should match bottom_text_size -->
-  <!-- Font size for AM/PM should match label_font_size -->
-  <!-- Font size for AM/PM should match alarm_label_size -->
-  <!-- String for no alarms -->
-  <!-- String for no alarms set [CHAR LIMIT=24] -->
-  <!-- String for no enabled alarms in timeline view [CHAR LIMIT=30] -->
-  <!--
-        String that represents time format for 12-hour time.
-        h represents hour in range (1-12) with the minimum number of digits
-        mm represents minute with leading 0 in case of values < 10
-        a represents am/pm
-        Ex: h:mm a = 12:54 am, 8:05 pm
-    -->
-  <!--
-        String that represents time format for 24-hour time.
-        k represents hour in range (0-23) with the minimum number of digits
-        mm represents minute with leading 0 in case of values < 10
-        Ex: k:mm = 13:51, 5:05
-    -->
-  <!--
-        String that represents weekday, time format for 12-hour time.
-        EEE represents weekday name in short form (ex. Mon, Tue, Wed)
-        h represents hour in range (1-12) with the minimum number of digits
-        mm represents minute with leading 0 in case of values < 10
-        a represents am/pm
-        Ex: EEE, h:mm a = Mon, 2:55 pm
-    -->
-  <!--
-        String that represents weekday, time format for 24-hour time.
-        EEE represents weekday name in short form (ex. Mon, Tue, Wed)
-        k represents hour in range (0-23) with the minimum number of digits
-        mm represents minute with leading 0 in case of values < 10
-        Ex: EEE, k:mm = Mon, 2:55
-    -->
-  <!-- String that represents that invalid time for an alarm was specified, e.g. 23:00am
-     or 27:68pm.
-    First %d represents hour, second %d represents minutes, %s represents am/pm,
-    If no am/pm is passed in (e.g. the locale uses 24h time) only hour and minute are printed.
-    [CHAR LIMIT=NONE]
-    -->
-  <!-- String that represents that no alarm has been specified for a requested hour:minutes.
-    This happens when a user sends a voice command 'dismiss my alarm at 3:00pm' but they have no
-    alarms specified for that time. %s represents the time of the alarm.
-    [CHAR LIMIT=NONE]
-    -->
-  <!-- String that represents that the user doesn't have any alarms scheduled. This happens when
-    a user sends a voice command 'dismiss next alarm' or 'dismiss all of my alarms' but they have
-    no alarms scheduled in the app.
-    [CHAR LIMIT=NONE]
-    -->
-  <!-- String that represents that the user specified that they want to select an alarm to
-    dismiss by specifying a 'label' but they didn't specify any labels.
-    [CHAR LIMIT=NONE]
-    -->
-  <!-- String that represents that no alarm has been specified for a requested label.
-    This happens when a user sends a voice command 'dismiss my alarm with label pick up kids'
-     but they have no alarms with that label.
-    [CHAR LIMIT=NONE]
-    -->
-  <!-- String that represents that the user has sent a voice command 'start a stopwatch' when
-    the stopwatch was already running so the command wasn't executed.
-    [CHAR LIMIT=NONE]
-    -->
-  <!-- String that represents that the user has sent a voice command 'stop the stopwatch' or
-    'lap the stopwatch' when the stopwatch wasn't running so the command wasn't executed.
-    [CHAR LIMIT=NONE]
-    -->
-  <!-- String that represents that the user has sent a voice command 'reset the stopwatch' or
-     when the stopwatch was running so the command wasn't executed.
-    [CHAR LIMIT=NONE]
-    -->
-  <!-- String that represents that the user has successfully sent a voice command stopping
-     the stopwatch.
-    [CHAR LIMIT=NONE]
-    -->
-  <!-- String that represents that the user has successfully sent a voice command resetting
-    the stopwatch.
-    [CHAR LIMIT=NONE]
-    -->
-  <!-- String that represents that the user has successfully sent a voice command lapping
-    the stopwatch.
-    [CHAR LIMIT=NONE]
-    -->
-  <!-- String that represents that the user has successfully sent a voice command starting
-    the stopwatch.
-    [CHAR LIMIT=NONE]
-    -->
-  <!-- String that represents that the user has sent a voice command 'dismiss my alarm at 3pm' when
-    there was no alarm scheduled for that time (they might have had an alarm for 3pm on the list
-    but it was disabled).
-    [CHAR LIMIT=NONE]
-    -->
-  <!-- String that represents that the user has dismissed an alarm through a voice action.
-    %s represents alarm time, e.g. 14:20
-    [CHAR LIMIT=NONE]
-    -->
-  <!-- String that represents that the user has dismissed an alarm through a voice action.
-    %s represents alarm time, e.g. 14:20
-    [CHAR LIMIT=NONE]
-    -->
-  <!-- String that represents that the user attempted to send a voice action 'delete a timer'
-    when there were no timers available.
-    [CHAR LIMIT=NONE]
-    -->
-  <!-- String that represents that the user has successfully deleted a timer through a voice action.
-    [CHAR LIMIT=NONE]
-    -->
-  <!-- String that represents that the user has attempted to start a timer when a timer was
-    already running.
-    [CHAR LIMIT=NONE]
-    -->
-  <!-- String that represents that the user has attempted to start or reset a timer when
-     there were more than 1 timer of desired state in which case it's ambiguous
-     which timer the user meant.
-    [CHAR LIMIT=NONE]
-     -->
-  <!-- String that represents that the user has successfully started a timer through a voice action.
-    [CHAR LIMIT=NONE]
-    -->
-  <!-- String that represents that the user has successfully created a timer through a voice action.
-    [CHAR LIMIT=NONE]
-    -->
-  <!-- String that represents that the user attempted to start a timer through a voice action
-    but specified invalid length.
-    [CHAR LIMIT=NONE]
-    -->
-  <!-- String that represents that the user has successfully reset a timer through a voice action.
-    [CHAR LIMIT=NONE]
-    -->
-  <!-- String that represents that the user attempted to reset a timer through a voice action but
-    the timer wasn't stopped (resetting is only allowed when a timer is stopped).
-    [CHAR LIMIT=NONE]
-    -->
-  <!-- String that represents that the user attempted to stop a timer through a voice action but
-    the timer was already stopped (resetting is only allowed when a timer is stopped).
-    [CHAR LIMIT=NONE]
-    -->
-  <!-- String that represents that the user attempted to add or delete a world clock through
-    a voice action
-    but they didn't specify a city so no world clock was selected.
-    [CHAR LIMIT=NONE]
-    -->
-  <!-- String that represents that the user attempted to add or delete a world clock through
-    a voice action
-    but the city they specified wasn't listed in the database.
-    [CHAR LIMIT=NONE]
-    -->
-  <!-- String that represents that the user attempted to add a world clock through a voice action
-    but the city they specified is already added to the list.
-    [CHAR LIMIT=NONE]
-    -->
-  <!-- String that represents that the user successfully added a world clock through a
-    voice action
-    %s represents the name of the city they added.
-    [CHAR LIMIT=NONE]
-    -->
-  <!-- String that represents that the user successfully deleted a world clock through
-    a voice action
-    %s represents the name of the city they deleted.
-    [CHAR LIMIT=NONE]
-    -->
-  <!-- String that represents that the user attempted to dismiss an alarm that is more than
-    24 hours away
-    %s represents the time of the alarm (e.g. 15:39)
-    [CHAR LIMIT=NONE]
-    -->
-  <!-- String that shows up in the action bar for the Picker Activity
-         where a use gets to pick which alarm to dismiss
-   [CHAR LIMIT=NONE]
-   -->
-  <!-- String that represents that further action is needed from the user in case their
-    voice command was ambiguous or there are more than 1 alarms that match their request.
-    The user needs to choose an alarm they want to dismiss through the UI
-   [CHAR LIMIT=NONE]
-   -->
-  <!-- String that represents that the user doesn't have any alarms firing at the moment.
-    [CHAR LIMIT=NONE]
-    -->
-  <!-- String that represents that the user has snoozed an alarm through a voice action for 10
-    minutes.
-    %s represents alarm time, e.g. 14:20
-    [CHAR LIMIT=NONE]
-    -->
+    <string name="app_label">Cloc</string>
+    <string name="alarm_list_title">Larymau</string>
+    <string name="add_alarm">Ychwanegu larwm</string>
+    <string name="menu_desk_clock">Cloc desg</string>
+    <string name="menu_edit_alarm">Golygu larwm</string>
+    <string name="delete_alarm">Dileu\'r larwm</string>
+    <string name="enable_alarm">Troi larwm ymlaen</string>
+    <string name="disable_alarm">Diffodd larwm</string>
+    <string name="delete_alarm_confirm">Dileu\'r larwm hwn?</string>
+    <string name="show_clock">Dangos y cloc</string>
+    <string name="hide_clock">Cuddio\'r cloc</string>
+    <string name="label">Label</string>
+    <string name="default_label">Larwm</string>
+    <string name="set_alarm">Gosod larwm</string>
+    <string name="alarm_vibrate">Dirgrynu</string>
+    <string name="alarm_repeat">Ailadrodd</string>
+    <string name="alert">Tôn Larwm</string>
+    <string name="custom_ringtone">Tôn Caniad Personol</string>
+    <string name="ringtone">Tôn caniad</string>
+    <string name="time">Amser</string>
+    <string name="alarm_tomorrow">Yfory</string>
+    <string name="alarm_today">Heddiw</string>
+    <string name="alarm_alert_wake_up">Deffro\u0021</string>
+    <string name="alarm_alert_off_action_text">I ffwrdd</string>
+    <string name="alarm_alert_dismiss_text">Gwrthod</string>
+    <string name="alarm_alert_dismiss_now_text">Diystyru Nawr</string>
+    <string name="alarm_missed_title">Larwm wedi\'i methu</string>
+    <string name="alarm_missed_text"><xliff:g id="alarm_time">%s</xliff:g> - <xliff:g id="alarm_label">%s</xliff:g></string>
+    <string name="alarm_alert_snoozed_text">Yn caniatáu hepian</string>
+    <plurals name="alarm_alert_snooze_duration">
+        <item quantity="zero"><xliff:g id="number" example="7">%d</xliff:g> mun</item>
+        <item quantity="one">1 mun</item>
+        <item quantity="two"><xliff:g id="number" example="7">%d</xliff:g> fun</item>
+        <item quantity="few"><xliff:g id="number" example="7">%d</xliff:g> mun</item>
+        <item quantity="many"><xliff:g id="number" example="7">%d</xliff:g> mun</item>
+        <item quantity="other"><xliff:g id="number" example="7">%d</xliff:g> mun</item>
+    </plurals>
+    <string name="alarm_alert_off_text">Larwm i ffwrdd</string>
+    <string name="alarm_alert_snooze_text">Hepian</string>
+    <plurals name="alarm_alert_snooze_set">
+        <item quantity="zero">Yn caniatáu hepian am <xliff:g id="minutes">%d</xliff:g> munudau.</item>
+        <item quantity="one">Yn caniatáu hepian am 1 munud.</item>
+        <item quantity="two">Yn caniatáu hepian am <xliff:g id="minutes">%d</xliff:g> funud.</item>
+        <item quantity="few">Yn caniatáu hepian am <xliff:g id="minutes">%d</xliff:g> munud.</item>
+        <item quantity="many">Yn caniatáu hepian am <xliff:g id="minutes">%d</xliff:g> munud.</item>
+        <item quantity="other">Yn caniatáu hepian am <xliff:g id="minutes">%d</xliff:g> munud.</item>
+    </plurals>
+    <string name="alarm_alert_snooze_until">Yn hepian nes <xliff:g id="time">%s</xliff:g></string>
+    <string name="alarm_alert_predismiss_title">Larwm yn dod i fyny</string>
+    <string name="missed_alarm_has_been_deleted">Mae dy larwm wedi\'i fethu wedi ei dileu</string>
+    <string-array name="timer_notifications">
+        <item>Llai na funud i fynd</item>
+        <item><xliff:g id="HOURS" example="2 hours">%1$s</xliff:g> yn weddill</item>
+        <item><xliff:g id="MINUTES" example="2 minutes">%2$s</xliff:g> yn weddill</item>
+        <item><xliff:g id="HOURS" example="2 hours">%1$s</xliff:g> <xliff:g id="MINUTES" example="2 minutes">%2$s</xliff:g> yn weddill</item>
+    </string-array>
+    <string-array name="alarm_set">
+        <item>Mae\'r larwm wedi\'i osod ar gyfer llai na funud o nawr.</item>
+        <item>Gosodwyd y larwm i ganu ymhen <xliff:g id="DAYS" example="2 days">%1$s</xliff:g> o nawr.</item>
+        <item>Mae\'r larwm wedi\'i osod ar gyfer <xliff:g id="HOURS" example="2 hours">%2$s</xliff:g> o nawr.</item>
+        <item>Gosodwyd y larwm i ganu ymhen <xliff:g id="DAYS" example="2 days">%1$s</xliff:g>, <xliff:g id="HOURS" example="2 hours">%2$s</xliff:g> o nawr.</item>
+        <item>Mae\'r larwm wedi\'i osod ar gyfer <xliff:g id="MINUTES" example="2 minutes">%3$s</xliff:g> o nawr.</item>
+        <item>Gosodwyd y larwm i ganu ymhen <xliff:g id="DAYS" example="2 days">%1$s</xliff:g>, <xliff:g id="MINUTES" example="2 minutes">%3$s</xliff:g> o nawr.</item>
+        <item>Mae\'r larwm wedi\'i osod ar gyfer <xliff:g id="HOURS" example="2 hours">%2$s</xliff:g> a <xliff:g id="MINUTES" example="2 minutes">%3$s</xliff:g> o nawr.</item>
+        <item>Gosodwyd y larwm i ganu ymhen <xliff:g id="DAYS" example="2 days">%1$s</xliff:g>, <xliff:g id="HOURS" example="2 hours">%2$s</xliff:g>, <xliff:g id="MINUTES" example="2 minutes">%3$s</xliff:g> o nawr.</item>
+    </string-array>
+    <plurals name="days">
+        <item quantity="zero"><xliff:g id="number" example="7">%s</xliff:g> diwrnodau</item>
+        <item quantity="one">1 diwrnod</item>
+        <item quantity="two"><xliff:g id="number" example="7">%s</xliff:g> ddiwrnod</item>
+        <item quantity="few"><xliff:g id="number" example="7">%s</xliff:g> diwrnod</item>
+        <item quantity="many"><xliff:g id="number" example="7">%s</xliff:g> diwrnod</item>
+        <item quantity="other"><xliff:g id="number" example="7">%s</xliff:g> diwrnod</item>
+    </plurals>
+    <plurals name="hours">
+        <item quantity="zero"><xliff:g id="number" example="7">%s</xliff:g> oriau</item>
+        <item quantity="one">1 awr</item>
+        <item quantity="two"><xliff:g id="number" example="7">%s</xliff:g> awr</item>
+        <item quantity="few"><xliff:g id="number" example="7">%s</xliff:g> awr</item>
+        <item quantity="many"><xliff:g id="number" example="7">%s</xliff:g> awr</item>
+        <item quantity="other"><xliff:g id="number" example="7">%s</xliff:g> awr</item>
+    </plurals>
+    <plurals name="minutes">
+        <item quantity="zero"><xliff:g id="number" example="7">%s</xliff:g> munudau</item>
+        <item quantity="one">1 munud</item>
+        <item quantity="two"><xliff:g id="number" example="7">%s</xliff:g> funud</item>
+        <item quantity="few"><xliff:g id="number" example="7">%s</xliff:g> munud</item>
+        <item quantity="many"><xliff:g id="number" example="7">%s</xliff:g> munud</item>
+        <item quantity="other"><xliff:g id="number" example="7">%s</xliff:g> munud</item>
+    </plurals>
+    <string name="every_day">Pob dydd</string>
+    <string name="day_concat">", "</string>
+    <string name="clock_instructions">Dewisa gloc</string>
+    <string name="analog_gadget">Cloc analog</string>
+    <string name="help">cymorth</string>
+    <string name="settings">Gosodiadau</string>
+    <string name="snooze_duration_title">Hyd hepian</string>
+    <plurals name="snooze_duration">
+        <item quantity="zero"><xliff:g id="number" example="7">%s</xliff:g> munudau</item>
+        <item quantity="one">1 munud</item>
+        <item quantity="two"><xliff:g id="number" example="7">%s</xliff:g> funud</item>
+        <item quantity="few"><xliff:g id="number" example="7">%s</xliff:g> munud</item>
+        <item quantity="many"><xliff:g id="number" example="7">%s</xliff:g> munud</item>
+        <item quantity="other"><xliff:g id="number" example="7">%s</xliff:g> munud</item>
+    </plurals>
+    <plurals name="snooze_picker_label">
+        <item quantity="zero">munudau</item>
+        <item quantity="one">munud</item>
+        <item quantity="two">funud</item>
+        <item quantity="few">munud</item>
+        <item quantity="many">munud</item>
+        <item quantity="other">munud</item>
+    </plurals>
+    <string name="auto_silence_title">Distawrwydd ar ôl</string>
+    <plurals name="auto_silence_summary">
+        <item quantity="zero"><xliff:g id="formatted_number" example="7">%s</xliff:g> munudau</item>
+        <item quantity="one">1 munud</item>
+        <item quantity="two"><xliff:g id="formatted_number" example="7">%s</xliff:g> funud</item>
+        <item quantity="few"><xliff:g id="formatted_number" example="7">%s</xliff:g> munud</item>
+        <item quantity="many"><xliff:g id="formatted_number" example="7">%s</xliff:g> munud</item>
+        <item quantity="other"><xliff:g id="formatted_number" example="7">%s</xliff:g> munud</item>
+    </plurals>
+    <string name="auto_silence_never">Byth</string>
+    <string-array name="auto_silence_entries">
+        <item>1 munud</item>
+        <item>5 munud</item>
+        <item>10 munud</item>
+        <item>15 munud</item>
+        <item>20 munud</item>
+        <item>25 munud</item>
+        <item>Byth</item>
+    </string-array>
+    <string name="week_start_title">Dechrau\'r wythnos ar</string>
+    <string-array name="week_start_entries">
+        <item>Dydd Sadwrn</item>
+        <item>Dydd Sul</item>
+        <item>Dydd Llun</item>
+    </string-array>
+    <string name="done">Iawn</string>
+    <string name="revert">Adfer</string>
+    <string name="delete">Dileu</string>
+    <string name="alarm_volume_title">Uchder sain larymau</string>
+    <string name="silent_alarm_summary">Distaw</string>
+    <string name="alarm_notify_text">Hepian neu ddiystyru\'r larwm.</string>
+    <string name="alarm_notify_snooze_label"><xliff:g id="label">%s</xliff:g> (yn caniatáu hepian)</string>
+    <string name="alarm_notify_snooze_text">Larwm wedi\'i osod ar gyfer <xliff:g id="time">%s</xliff:g>. Cyffyrdda i\'w ddiddymu.</string>
+    <string name="volume_button_setting_title">Botymau uchder sain</string>
+    <string name="volume_button_dialog_title">Effaith botwm</string>
+    <string-array name="volume_button_setting_entries">
+        <item>Hepian</item>
+        <item>Diystyru</item>
+        <item>Gwneud dim</item>
+    </string-array>
+    <string name="default_ringtone_setting_title">Gosod tôn caniad arferol</string>
+    <string name="alarm_button_description">Larymau</string>
+    <string name="gallery_button_description">Oriel</string>
+    <string name="music_button_description">Cerddoriaeth</string>
+    <string name="nightmode_button_description">Tywyllu</string>
+    <string name="home_button_description">Lansiwr</string>
+    <string name="desk_clock_button_description">Dangosydd cloc</string>
+    <string name="label_description">Label</string>
+    <string name="ringtone_description">Tôn caniad</string>
+    <string name="weather_fetch_failure">Dyw gwybodaeth y tywydd ddim ar gael ar hyn o bryd.</string>
+    <string name="alarm_klaxon_service_desc">Gwasanaeth chwarae sain ar gyfer larymau a osodwyd yn Cloc.</string>
+    <string name="loading_ringtone">Yn llwytho tôn caniad\u2026</string>
+    <string name="timer_ring_service_desc">Gwasanaeth chwarae sain ar gyfer amseryddion a osodwyd yn Cloc.</string>
+    <string name="control_set_alarm">Gosod larwm</string>
+    <string name="control_set_alarm_with_existing"><xliff:g id="time">%s</xliff:g></string>
+    <string name="menu_alarm">Larwm</string>
+    <string name="menu_timer">Amserydd</string>
+    <string name="menu_clock">Cloc</string>
+    <string name="menu_stopwatch">Cloc amseru</string>
+    <string name="button_alarms">Ychwanegu larwm</string>
+    <string name="button_cities">Dinasoedd</string>
+    <string name="button_menu">Rhagor o ddewisiadau</string>
+    <string name="menu_item_settings">Gosodiadau</string>
+    <string name="menu_item_help">Cymorth</string>
+    <string name="menu_item_night_mode">Modd nos</string>
+    <string name="menu_item_sort_by_gmt_offset">Trefnu\'n ôl amser</string>
+    <string name="menu_item_sort_by_name">Trefnu\'n ôl enw</string>
+    <string name="selected_cities_label">Dinasoedd a Ddewiswyd</string>
+    <string name="sw_resume_button">Parhau</string>
+    <string name="sw_start_button">Dechrau</string>
+    <string name="sw_stop_button">Stopio</string>
+    <string name="sw_lap_button">Lap</string>
+    <string name="sw_reset_button">Ailosod</string>
+    <string name="sw_share_button">Rhannu</string>
+    <string name="hours_label">a</string>
+    <string name="minutes_label">m</string>
+    <string name="seconds_label">e</string>
+    <string name="hours_label_description">oriau</string>
+    <string name="minutes_label_description">munudau</string>
+    <string name="seconds_label_description">eiliadau</string>
+    <string name="zero">0</string>
+    <string name="sw_share_main">Fy amser i yw <xliff:g id="time">%s</xliff:g></string>
+    <string name="sw_share_laps">Amseroedd lapiau:</string>
+    <string name="sw_notification_lap_number">Lap <xliff:g id="number">%d</xliff:g></string>
+    <string-array name="sw_lap_number_set" translatable="true">
+        <item># <xliff:g id="number">%d</xliff:g></item>
+        <item># <xliff:g id="number">%02d</xliff:g></item>
+    </string-array>
+    <plurals name="Nhours_description">
+        <item quantity="zero"><xliff:g id="number" example="7">%d</xliff:g> oriau</item>
+        <item quantity="one">1 awr</item>
+        <item quantity="two"><xliff:g id="number" example="7">%d</xliff:g> awr</item>
+        <item quantity="few"><xliff:g id="number" example="7">%d</xliff:g> awr</item>
+        <item quantity="many"><xliff:g id="number" example="7">%d</xliff:g> awr</item>
+        <item quantity="other"><xliff:g id="number" example="7">%d</xliff:g> awr</item>
+    </plurals>
+    <plurals name="Nminutes_description">
+        <item quantity="zero"><xliff:g id="number" example="7">%d</xliff:g> munudau</item>
+        <item quantity="one">1 munud</item>
+        <item quantity="two"><xliff:g id="number" example="7">%d</xliff:g> funud</item>
+        <item quantity="few"><xliff:g id="number" example="7">%d</xliff:g> munud</item>
+        <item quantity="many"><xliff:g id="number" example="7">%d</xliff:g> munud</item>
+        <item quantity="other"><xliff:g id="number" example="7">%d</xliff:g> munud</item>
+    </plurals>
+    <plurals name="Nseconds_description">
+        <item quantity="zero"><xliff:g id="number" example="7">%d</xliff:g> eiliadau</item>
+        <item quantity="one">1 eiliad</item>
+        <item quantity="two"><xliff:g id="number" example="7">%d</xliff:g> eiliad</item>
+        <item quantity="few"><xliff:g id="number" example="7">%d</xliff:g> eiliad</item>
+        <item quantity="many"><xliff:g id="number" example="7">%d</xliff:g> eiliad</item>
+        <item quantity="other"><xliff:g id="number" example="7">%d</xliff:g> eiliad</item>
+    </plurals>
+    <string name="timer_add_timer">Ychwanegu Amserydd</string>
+    <string name="timer_start">Dechrau</string>
+    <string name="timer_delete">Dileu</string>
+    <string name="timer_descriptive_delete">Dileu <xliff:g id="number_string">%s</xliff:g></string>
+    <string name="timer_plus_one">Ychwanegu 1 Munud</string>
+    <string name="timer_plus_1_min">Ychwanegu 1 munud</string>
+    <string name="timer_stop">Stopio</string>
+    <string name="timer_done">Iawn</string>
+    <string name="timer_reset">Ailosod</string>
+    <string name="timer_cancel">Diddymu</string>
+    <string name="timer_times_up">Amser ar ben</string>
+    <string name="timer_notification_label">Amserydd</string>
+    <string name="timers_max_count_reached">Dim mwy na 4 amserydd</string>
+    <string-array name="sw_share_strings" translatable="true">
+        <item>Dy amseroedd di</item>
+        <item>Dy amseroedd di</item>
+        <item>Mae Android yn gyflym, ond nid mor gyflym ag wyt ti!</item>
+        <item>Dy amseroedd di</item>
+        <item>Dy amseroedd di</item>
+        <item>Dy amseroedd di</item>
+        <item>Dy amseroedd di</item>
+        <item>Dy amseroedd di</item>
+        <item>Dy amseroedd di</item>
+        <item>Dy amseroedd di</item>
+    </string-array>
+    <string name="home_label">Cartref</string>
+    <string name="cities_activity_title">Dinasoedd</string>
+    <string name="clock_settings">Cloc</string>
+    <string name="clock_style">Arddull</string>
+    <string-array name="clock_style_entries">
+        <item>Analog</item>
+        <item>Digidol</item>
+    </string-array>
+    <string name="automatic_home_clock">Cloc adref awtomatig</string>
+    <string name="automatic_home_clock_summary">Wrth deithio rhywle ble mae\'r amser yn wahanol, ychwanega cloc ar gyfer adref.</string>
+    <string name="home_time_zone">Cylchfa amser adref</string>
+    <string name="home_time_zone_title">Cylchfa amser adref</string>
+    <string name="time_picker_cancel">Diddymu</string>
+    <string name="time_picker_set">Iawn</string>
+    <string name="time_picker_time_seperator">:</string>
+    <string name="time_picker_ampm_label">--</string>
+    <string name="time_picker_00_label">:00</string>
+    <string name="time_picker_30_label">: 30</string>
+    <string-array name="timezone_labels">
+        <item>"Ynysoedd Marshall"</item>
+        <item>"Ynys Midway"</item>
+        <item>"Hawaii"</item>
+        <item>"Alasga"</item>
+        <item>"Amser y Cefnfor Tawel"</item>
+        <item>"Tijuana"</item>
+        <item>"Arizona"</item>
+        <item>"Chihuahua"</item>
+        <item>"Amser y Mynyddoedd (Gog. America)"</item>
+        <item>"Canolbarth America"</item>
+        <item>"Amser y Canolbarth (Gog. America)"</item>
+        <item>"Dinas Mecsico"</item>
+        <item>"Saskatchewan"</item>
+        <item>"Bogota"</item>
+        <item>"Amser y Dwyrain (Gog. America)"</item>
+        <item>"Feneswela"</item>
+        <item>"Amser yr Iwerydd (Barbados)"</item>
+        <item>"Amser yr Iwerydd (Canada)"</item>
+        <item>"Manaus"</item>
+        <item>"Santiago"</item>
+        <item>"Y Tir Newydd"</item>
+        <item>"Brasilia"</item>
+        <item>"Buenos Aires"</item>
+        <item>"Yr Ynys Las"</item>
+        <item>"Montevideo"</item>
+        <item>"Canol yr Iwerydd"</item>
+        <item>"Asores"</item>
+        <item>"Ynysoedd Penrhyn Verde"</item>
+        <item>"Casablanca"</item>
+        <item>"Llundain, Dulyn"</item>
+        <item>"Amsterdam, Berlin"</item>
+        <item>"Beograd"</item>
+        <item>"Brwsel"</item>
+        <item>"Sarajevo"</item>
+        <item>"Windhoek"</item>
+        <item>"Amser Gorll. Affrica"</item>
+        <item>"Amman, Gwlad Iorddonen"</item>
+        <item>"Athen, Istanbul"</item>
+        <item>"Beirut, Libanus"</item>
+        <item>"Cairo"</item>
+        <item>"Helsinki"</item>
+        <item>"Jerwsalem"</item>
+        <item>"Minsk"</item>
+        <item>"Harare"</item>
+        <item>"Baghdad"</item>
+        <item>"Moscfa"</item>
+        <item>"Coweit"</item>
+        <item>"Nairobi"</item>
+        <item>"Tehran"</item>
+        <item>"Baku"</item>
+        <item>"Tbilisi"</item>
+        <item>"Yerevan"</item>
+        <item>"Dubai"</item>
+        <item>"Kabul"</item>
+        <item>"Islamabad, Karachi"</item>
+        <item>"Ural'sk"</item>
+        <item>"Ekaterinburg"</item>
+        <item>"Kolkata"</item>
+        <item>"Sri Lanka"</item>
+        <item>"Kathmandu"</item>
+        <item>"Astana"</item>
+        <item>"Yangon"</item>
+        <item>"Krasnoyarsk"</item>
+        <item>"Bangkok"</item>
+        <item>"Beijing"</item>
+        <item>"Hong Cong"</item>
+        <item>"Irkutsk"</item>
+        <item>"Kuala Lumpur"</item>
+        <item>"Perth"</item>
+        <item>"Taipei"</item>
+        <item>"Seoul"</item>
+        <item>"Tokyo, Osaka"</item>
+        <item>"Yakutsk"</item>
+        <item>"Adelaide"</item>
+        <item>"Darwin"</item>
+        <item>"Brisbane"</item>
+        <item>"Hobart"</item>
+        <item>"Sydney, Canberra"</item>
+        <item>"Vladivostok"</item>
+        <item>"Guam"</item>
+        <item>"Magadan"</item>
+        <item>"Auckland"</item>
+        <item>"Ffiji"</item>
+        <item>"Tonga"</item>
+        <item>"Jakarta"</item>
+    </string-array>
+    <string name="alarm_settings">Larymau</string>
+    <string name="stopwatch_service_desc">Gwasanaeth cloc amseru i redeg yr hysbysiad.</string>
+    <string name="swn_stopped">Wedi\'i stopio</string>
+    <string name="description_direction_right">Llusga i\'r dde i\'w ddiystyru</string>
+    <string name="description_direction_left">Llusga i\'r chwith i hepian</string>
+    <string name="description_direction_both">Llusga i\'r chwith i hepian neu i\'r dde i ddiystyru</string>
+    <string name="timer_stopped">Amserydd wedi\'i stopio</string>
+    <string name="timers_stopped"><xliff:g id="number" example="7">%d</xliff:g> amserydd wedi eu stopio</string>
+    <string name="all_timers_stopped_notif">Cyffyrdda i weld dy amseryddion</string>
+    <string name="timers_in_use"><xliff:g id="number" example="7">%d</xliff:g> amserydd</string>
+    <string name="next_timer_notif">Amserydd nesaf: <xliff:g id="time_remaining" example="2 minutes remaining">%s</xliff:g></string>
+    <string name="screensaver_settings">Gosodiadau breuddwyd</string>
+    <string name="night_mode_title">Modd nos</string>
+    <string name="night_mode_summary">Dangos â golau isel iawn (ar gyfer ystafelloedd tywyll)</string>
+    <string name="expand_alarm">Ehangu\'r larwm</string>
+    <string name="collapse_alarm">Lleihau\'r larwm</string>
+    <string name="alarm_undo">dad-wneud</string>
+    <string name="alarm_deleted">Dilëwyd y larwm</string>
+    <string name="slash"> / </string>
+    <string name="world_day_of_week_label"> / <xliff:g id="label">%s</xliff:g></string>
+    <string name="next_alarm_description">Larwm nesaf: <xliff:g id="alarm_time" example="Wed 8:00am">%s</xliff:g></string>
+    <string name="alarms_selected"><xliff:g id="alarms">%d</xliff:g> wedi\'u dewis</string>
+    <string name="deleted_message">Dilëwyd</string>
+    <plurals name="alarm_delete_confirmation">
+        <item quantity="zero">Dileu\'r larymau?</item>
+        <item quantity="one">Dileu\'r larwm a ddewiswyd?</item>
+        <item quantity="two">Dileu\'r larymau a ddewiswyd?</item>
+        <item quantity="few">Dileu\'r larymau a ddewiswyd?</item>
+        <item quantity="many">Dileu\'r larymau a ddewiswyd?</item>
+        <item quantity="other">Dileu\'r larymau a ddewiswyd?</item>
+    </plurals>
+    <string name="timer_delete_confirmation">Dileu\'r amserydd hwn?</string>
+    <string name="city_delete_confirmation">Tynnu\'r ddinas hon?</string>
+    <string name="digital_gadget">Cloc digidol</string>
+    <string name="no_alarms">Dim Larymau</string>
+    <string name="no_alarms_set">DIm larymau wedi\'u gosod</string>
+    <string name="no_upcoming_alarms">DIM LARYMAU I DDOD</string>
+    <string name="time_format_12_mode">a:mm a</string>
+    <string name="time_format_24_mode">k:mm</string>
+    <string name="weekday_time_format_12_mode">EEE, h:mm a</string>
+    <string name="weekday_time_format_24_mode">EEE, k:mm</string>
+    <string name="invalid_time">Amser annilys <xliff:g id="invalid_hour" example="25">%d</xliff:g>:<xliff:g id="invalid_minutes" example="63">%d</xliff:g> <xliff:g id="invalid_ampm" example="PM">%s</xliff:g></string>
+    <string name="no_alarm_at">Dim larwm am <xliff:g id="alarm_time_hour" example="14">%d</xliff:g>:<xliff:g id="alarm_time_minutes" example="23">%d</xliff:g></string>
+    <string name="no_scheduled_alarms">Dim larymau wedi\'u gosod</string>
+    <string name="no_label_specified">Dim label wedi\'i nodi</string>
+    <string name="no_alarms_with_label">Does dim larwm yn cynnwys y label</string>
+    <string name="stopwatch_already_running">Mae\'r cloc amseru yn rhedeg eisoes.</string>
+    <string name="stopwatch_isnt_running">Dyw\'r cloc amseru ddim yn rhedeg.</string>
+    <string name="stopwatch_cant_be_reset_because_is_running">Ni ellir ail-osod y cloc amseru am ei fod eisoes yn rhedeg.</string>
+    <string name="stopwatch_stopped">Cloc amser wedi\'i stopio</string>
+    <string name="stopwatch_reset">Cloc amseru wedi\'i ailosod</string>
+    <string name="stopwatch_lapped">Cloc amseru wedi\'i lapio</string>
+    <string name="stopwatch_started">Cloc amseru wedi dechrau</string>
+    <string name="no_alarm_scheduled_for_this_time">Does dim larwm wedi\'i osod ar gyfer yr amser hwn.</string>
+    <string name="alarm_is_dismissed">Larwm <xliff:g id="alarm_time" example="14:20">%s</xliff:g> wedi\'i ddiystyru</string>
+    <string name="alarm_is_set">Mae\'r larwm wedi\'i osod ar gyfer <xliff:g id="alarm_time" example="14:20">%s</xliff:g></string>
+    <string name="no_timer_set">Dim amserydd wedi\'i osod</string>
+    <string name="timer_deleted">Amserydd wedi\'i ddileu</string>
+    <string name="timer_already_running">Amserydd eisoes yn rhedeg</string>
+    <string name="multiple_timers_available">Methu â chwblhau dy gais. Mae mwy nag un amserydd ar gael.</string>
+    <string name="timer_started">Amserydd wedi dechrau</string>
+    <string name="timer_created">Amserydd wedi\'i greu</string>
+    <string name="invalid_timer_length">Hyd amserydd annilys</string>
+    <string name="timer_was_reset">Amserydd wedi\'i ailosod</string>
+    <string name="timer_cant_be_reset_because_its_running">Ni ellir ailosod yr amserydd am ei fod dal yn rhedeg. Rhaid ei stopio er mwyn ei ailosod.</string>
+    <string name="timer_already_stopped">Amserydd eisoes wedi\'i stopio.</string>
+    <string name="no_city_selected">Dim dinas wedi\'i dewis</string>
+    <string name="the_city_you_specified_is_not_available">Dyw\'r dinas honno ddim ar gael</string>
+    <string name="the_city_already_added">Mae\'r ddinas honno eisoes wedi\'i hychwanegu.</string>
+    <string name="city_added"><xliff:g id="city_name" example="Paris">%s</xliff:g> wedi\'i ychwanegu</string>
+    <string name="city_deleted"><xliff:g id="city_name" example="Paris">%s</xliff:g> wedi\'i dileu</string>
+    <string name="alarm_cant_be_dismissed_still_more_than_24_hours_away">Ni ellir diystyru larwm <xliff:g id="alarm_time" example="14:20">%s</xliff:g> eto gan ei fod dros 24 awr i ffwrdd</string>
+    <string name="dismiss_alarm">Diystyru\'r larwm</string>
+    <string name="pick_alarm_to_dismiss">Dewis pa larwm i\'w ddiystyru</string>
+    <string name="no_firing_alarms">Dim larymau yn canu</string>
+    <string name="alarm_is_snoozed"><xliff:g id="alarm_time" example="14:20">%s</xliff:g> larwm yn caniatáu hepian am 10 munud</string>
 </resources>

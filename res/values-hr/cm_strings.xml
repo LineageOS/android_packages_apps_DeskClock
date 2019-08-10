@@ -16,37 +16,25 @@
      limitations under the License.
 -->
 <resources xmlns:xliff="urn:oasis:names:tc:xliff:document:1.2">
-  <!-- Settings summary for the volume buttons setting. -->
-  <string name="volume_buttons_summary">Tipke za glasnoću zvuka će <xliff:g id="action">%s</xliff:g></string>
-  <!-- Setting title for the flip action setting. -->
-  <string name="flip_action_title">Akcija okreta</string>
-  <!-- Setting summary for the flip action setting. -->
-  <string name="flip_action_summary" product="tablet">Preokretanje tableta prema dolje će <xliff:g id="action">%s</xliff:g></string>
-  <string name="flip_action_summary" product="default">Preokretanje telefona prema dolje će <xliff:g id="action">%s</xliff:g></string>
-  <!-- Setting title for the shake action setting. -->
-  <string name="shake_action_title">Protresi</string>
-  <!-- Setting summary for the shake action setting. -->
-  <string name="shake_action_summary" product="tablet">Protresivanje tableta će <xliff:g id="action">%s</xliff:g></string>
-  <string name="shake_action_summary" product="default">Protresivanje telefona će <xliff:g id="action">%s</xliff:g></string>
-  <!-- Summary texts for shake and flip actions -->
-  <string name="action_summary_snooze">utišati alarm</string>
-  <string name="action_summary_dismiss">propustiti alarm</string>
-  <string name="action_summary_do_nothing">učiniti ništa</string>
-  <!-- Setting title for accessing the cLock widget settings -->
-  <string name="menu_item_widget_settings">Postavke widgeta</string>
-  <string name="activity_not_found">Aktivnost nije pronađena!</string>
-  <!-- Setting title for showing/hiding the alarm status bar icon -->
-  <string name="show_status_bar_icon_title">Prikaži ikonu</string>
-  <!-- Setting summary for showing/hiding the alarm statusbar icon -->
-  <string name="show_status_bar_icon_summary">Prikaži ikonu u obavijestnoj traci kada je podešen alarm</string>
-  <!-- Setting labels on Set alarm screen: Increasing volume on or off -->
-  <string name="alarm_increasing_volume">Pojačavanje glasnoće</string>
-  <!-- Setting labels on Set alarm screen: Choose profile -->
-  <string name="profile_description">Profil <xliff:g id="profile">%s</xliff:g></string>
-  <!-- No profile selected label -->
-  <string name="profile_no_selected">Nije odabran profil</string>
-  <string name="alarm_modification_service_desc">Usluga dopušta manipuliranje alarmima od strane trećih osoba.</string>
-  <string name="power_on_text">Uključiti uređaj?</string>
-  <string name="power_on_yes_text">Da</string>
-  <string name="power_on_no_text">Ne</string>
+    <string name="volume_buttons_summary">Tipke za glasnoću zvuka će <xliff:g id="action">%s</xliff:g></string>
+    <string name="flip_action_title">Akcija okreta</string>
+    <string name="flip_action_summary" product="tablet">Preokretanje tableta prema dolje će <xliff:g id="action">%s</xliff:g></string>
+    <string name="flip_action_summary" product="default">Preokretanje telefona prema dolje će <xliff:g id="action">%s</xliff:g></string>
+    <string name="shake_action_title">Protresi</string>
+    <string name="shake_action_summary" product="tablet">Protresivanje tableta će <xliff:g id="action">%s</xliff:g></string>
+    <string name="shake_action_summary" product="default">Protresivanje telefona će <xliff:g id="action">%s</xliff:g></string>
+    <string name="action_summary_snooze">utišati alarm</string>
+    <string name="action_summary_dismiss">propustiti alarm</string>
+    <string name="action_summary_do_nothing">učiniti ništa</string>
+    <string name="menu_item_widget_settings">Postavke widgeta</string>
+    <string name="activity_not_found">Aktivnost nije pronađena!</string>
+    <string name="show_status_bar_icon_title">Prikaži ikonu</string>
+    <string name="show_status_bar_icon_summary">Prikaži ikonu u obavijestnoj traci kada je podešen alarm</string>
+    <string name="alarm_increasing_volume">Pojačavanje glasnoće</string>
+    <string name="profile_description">Profil <xliff:g id="profile">%s</xliff:g></string>
+    <string name="profile_no_selected">Nije odabran profil</string>
+    <string name="alarm_modification_service_desc">Usluga dopušta manipuliranje alarmima od strane trećih osoba.</string>
+    <string name="power_on_text">Uključiti uređaj?</string>
+    <string name="power_on_yes_text">Da</string>
+    <string name="power_on_no_text">Ne</string>
 </resources>
