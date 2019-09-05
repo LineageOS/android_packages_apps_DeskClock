@@ -17,8 +17,8 @@
 package com.android.deskclock;
 
 import android.content.Context;
-import android.support.annotation.VisibleForTesting;
-import android.support.design.widget.Snackbar;
+import androidx.annotation.VisibleForTesting;
+import com.google.android.material.snackbar.Snackbar;
 import android.text.format.DateFormat;
 import android.text.format.DateUtils;
 import android.view.View;
