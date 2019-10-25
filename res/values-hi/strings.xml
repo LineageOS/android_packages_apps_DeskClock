@@ -31,13 +31,13 @@
     <string name="confirm_remove_custom_ringtone" msgid="1724111242265208553">"इस ध्वनि का उपयोग करने वाले अलार्म और टाइमर इसके बजाय डिफ़ॉल्ट ध्वनि बजाएंगे."</string>
     <string name="your_sounds" msgid="1672779351352629681">"आपकी ध्वनियां"</string>
     <string name="device_sounds" msgid="1584894148222639823">"डिवाइस की ध्वनियां"</string>
-    <string name="custom_ringtone_lost_permissions" msgid="3406310054255354331">"ध्वनि संबंधी सामग्री एक्सेस नहीं की जा सकती."</string>
+    <string name="custom_ringtone_lost_permissions" msgid="3406310054255354331">"ध्वनि संबंधी सामग्री ऐक्सेस नहीं की जा सकती."</string>
     <string name="default_timer_ringtone_title" msgid="1370799536406862317">"टाइमर की समय सीमा समाप्‍त हो गई"</string>
     <string name="alarm_tomorrow" msgid="131356848787643420">"कल"</string>
     <string name="alarm_today" msgid="7873594221106531654">"आज"</string>
     <string name="alarm_alert_dismiss_text" msgid="4942914605480888820">"खारिज करें"</string>
     <string name="alarm_missed_title" msgid="3828345099754063392">"छूटा हुआ अलार्म"</string>
-    <string name="alarm_missed_text" msgid="6585658367289194023">"<xliff:g id="ALARM_TIME">%s</xliff:g> - <xliff:g id="ALARM_LABEL">%s</xliff:g>"</string>
+    <string name="alarm_missed_text" msgid="6585658367289194023">"<xliff:g id="ALARM_TIME">%1$s</xliff:g> - <xliff:g id="ALARM_LABEL">%2$s</xliff:g>"</string>
     <string name="alarm_alert_snoozed_text" msgid="7064642998528766113">"याद दिलाया"</string>
     <plurals name="alarm_alert_snooze_duration" formatted="false" msgid="7844300009062867865">
       <item quantity="one"><xliff:g id="NUMBER">%d</xliff:g> मिनट</item>
@@ -231,16 +231,16 @@
     <string name="timer_reset" msgid="7848424809190171640">"रीसेट करें"</string>
     <string name="timer_cancel" msgid="3572868404230815644">"अभी नहीं"</string>
     <string name="timer_canceled" msgid="7327923392567128060">"टाइमर रोक दिया गया"</string>
-    <string name="timer_times_up" msgid="9190440395938519009">"समय समाप्त"</string>
-    <string name="timer_multi_times_up" msgid="1239104626836080409">"<xliff:g id="NUM_TIMERS">%d</xliff:g> टाइमर की समय-सीमा समाप्त"</string>
+    <string name="timer_times_up" msgid="9190440395938519009">"समय खत्म"</string>
+    <string name="timer_multi_times_up" msgid="1239104626836080409">"<xliff:g id="NUM_TIMERS">%d</xliff:g> टाइमर की समय-सीमा खत्म"</string>
     <string name="timer_multi_missed" msgid="9085073572920385362">"<xliff:g id="NUMBER">%d</xliff:g> टाइमर छूट गए"</string>
     <string name="timer_notification_label" msgid="4933184831583137249">"टाइमर"</string>
     <string name="missed_timer_notification_label" msgid="6661928727623284334">"छूटा हुआ टाइमर"</string>
     <string name="missed_named_timer_notification_label" msgid="665604640028289175">"छूटा हुआ टाइमर: <xliff:g id="NAME">%s</xliff:g>"</string>
     <string name="timer_pause" msgid="3748323712728398743">"रोकें"</string>
     <string name="timer_reset_all" msgid="7530633132757866087">"सभी टाइमर रीसेट करें"</string>
-    <string name="hours_minutes_seconds" msgid="5680088738059791288">"<xliff:g id="HOURS">%d</xliff:g>:<xliff:g id="MINUTES">%02d</xliff:g>:<xliff:g id="SECONDS">%02d</xliff:g>"</string>
-    <string name="minutes_seconds" msgid="6189446107009577914">"<xliff:g id="MINUTES">%d</xliff:g>:<xliff:g id="SECONDS">%02d</xliff:g>"</string>
+    <string name="hours_minutes_seconds" msgid="5680088738059791288">"<xliff:g id="HOURS">%1$d</xliff:g>:<xliff:g id="MINUTES">%2$02d</xliff:g>:<xliff:g id="SECONDS">%3$02d</xliff:g>"</string>
+    <string name="minutes_seconds" msgid="6189446107009577914">"<xliff:g id="MINUTES">%1$d</xliff:g>:<xliff:g id="SECONDS">%2$02d</xliff:g>"</string>
     <!-- no translation found for seconds (6550091082396571898) -->
     <skip />
   <string-array name="sw_share_strings">
@@ -260,7 +260,7 @@
     <string name="clock_settings" msgid="8317286807280600391">"घड़ी"</string>
     <string name="clock_style" msgid="2265011060429742344">"शैली"</string>
     <string name="display_clock_seconds_pref" msgid="691506643469501643">"सेकंड के साथ समय प्रदर्शित करें"</string>
-    <string name="open_date_settings" msgid="7712226973337806152">"दिनांक और समय बदलें"</string>
+    <string name="open_date_settings" msgid="7712226973337806152">"तारीख और समय बदलें"</string>
   <string-array name="clock_style_entries">
     <item msgid="917900462224167608">"ऐनालॉग"</item>
     <item msgid="8483930821046925592">"डिजिटल"</item>
