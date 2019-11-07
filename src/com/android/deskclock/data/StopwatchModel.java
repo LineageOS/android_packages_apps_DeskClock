@@ -17,6 +17,7 @@
 package com.android.deskclock.data;
 
 import android.app.Notification;
+import android.app.NotificationChannel;
 import android.content.BroadcastReceiver;
 import android.content.Context;
 import android.content.Intent;
@@ -24,6 +25,8 @@ import android.content.IntentFilter;
 import android.content.SharedPreferences;
 import androidx.annotation.VisibleForTesting;
 import androidx.core.app.NotificationManagerCompat;
+
+import com.android.deskclock.R;
 
 import java.util.ArrayList;
 import java.util.Collections;
@@ -33,6 +36,11 @@ import java.util.List;
  * All {@link Stopwatch} data is accessed via this model.
  */
 final class StopwatchModel {
+
+    /**
+     * Notification channel containing all stopwatch notifications.
+     */
+    static final String STOPWATCH_NOTIFICATION_CHANNEL_ID = "StopwatchNotification";
 
     private final Context mContext;
 
@@ -66,6 +74,13 @@ final class StopwatchModel {
         mPrefs = prefs;
         mNotificationModel = notificationModel;
         mNotificationManager = NotificationManagerCompat.from(context);
+        if (android.os.Build.VERSION.SDK_INT >= android.os.Build.VERSION_CODES.O) {
+            NotificationChannel channel = new NotificationChannel(
+                    STOPWATCH_NOTIFICATION_CHANNEL_ID,
+                    context.getString(R.string.default_label),
+                    NotificationManagerCompat.IMPORTANCE_DEFAULT);
+            mNotificationManager.createNotificationChannel(channel);
+        }
 
         // Update stopwatch notification when locale changes.
         final IntentFilter localeBroadcastFilter = new IntentFilter(Intent.ACTION_LOCALE_CHANGED);
