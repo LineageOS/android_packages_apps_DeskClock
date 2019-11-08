@@ -127,17 +127,16 @@ class StopwatchNotificationBuilder {
             content.setViewVisibility(R.id.state, VISIBLE);
         }
 
-        final Builder notification = new NotificationCompat.Builder(
-                context, StopwatchModel.STOPWATCH_NOTIFICATION_CHANNEL_ID)
-                        .setLocalOnly(true)
-                        .setOngoing(running)
-                        .setCustomContentView(content)
-                        .setContentIntent(pendingShowApp)
-                        .setAutoCancel(stopwatch.isPaused())
-                        .setPriority(Notification.PRIORITY_MAX)
-                        .setSmallIcon(R.drawable.stat_notify_stopwatch)
-                        .setStyle(new NotificationCompat.DecoratedCustomViewStyle())
-                        .setColor(ContextCompat.getColor(context, R.color.default_background));
+        final Builder notification = new NotificationCompat.Builder(context)
+                .setLocalOnly(true)
+                .setOngoing(running)
+                .setCustomContentView(content)
+                .setContentIntent(pendingShowApp)
+                .setAutoCancel(stopwatch.isPaused())
+                .setPriority(Notification.PRIORITY_MAX)
+                .setSmallIcon(R.drawable.stat_notify_stopwatch)
+                .setStyle(new NotificationCompat.DecoratedCustomViewStyle())
+                .setColor(ContextCompat.getColor(context, R.color.default_background));
 
         if (Utils.isNOrLater()) {
             notification.setGroup(nm.getStopwatchNotificationGroupKey());

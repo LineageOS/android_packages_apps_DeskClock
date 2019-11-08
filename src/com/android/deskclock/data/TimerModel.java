@@ -19,7 +19,6 @@ package com.android.deskclock.data;
 import android.annotation.SuppressLint;
 import android.app.AlarmManager;
 import android.app.Notification;
-import android.app.NotificationChannel;
 import android.app.PendingIntent;
 import android.app.Service;
 import android.content.BroadcastReceiver;
@@ -56,11 +55,6 @@ import static com.android.deskclock.data.Timer.State.RESET;
  * All {@link Timer} data is accessed via this model.
  */
 final class TimerModel {
-
-    /**
-     * Notification channel containing all TimerModel notifications.
-     */
-    static final String TIMER_MODEL_NOTIFICATION_CHANNEL_ID = "TimerModelNotification";
 
     /**
      * Running timers less than this threshold are left running/expired; greater than this
@@ -142,13 +136,6 @@ final class TimerModel {
         mRingtoneModel = ringtoneModel;
         mNotificationModel = notificationModel;
         mNotificationManager = NotificationManagerCompat.from(context);
-        if (android.os.Build.VERSION.SDK_INT >= android.os.Build.VERSION_CODES.O) {
-            NotificationChannel channel = new NotificationChannel(
-                    TIMER_MODEL_NOTIFICATION_CHANNEL_ID,
-                    context.getString(R.string.default_label),
-                    NotificationManagerCompat.IMPORTANCE_DEFAULT);
-            mNotificationManager.createNotificationChannel(channel);
-        }
 
         mAlarmManager = (AlarmManager) mContext.getSystemService(Context.ALARM_SERVICE);
 
