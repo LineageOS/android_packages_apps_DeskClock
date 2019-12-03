@@ -37,7 +37,7 @@
     <string name="alarm_today" msgid="7873594221106531654">"Այսօր"</string>
     <string name="alarm_alert_dismiss_text" msgid="4942914605480888820">"Անջատել"</string>
     <string name="alarm_missed_title" msgid="3828345099754063392">"Բաց թողնված ազդանշան"</string>
-    <string name="alarm_missed_text" msgid="6585658367289194023">"<xliff:g id="ALARM_TIME">%1$s</xliff:g> - <xliff:g id="ALARM_LABEL">%2$s</xliff:g>"</string>
+    <string name="alarm_missed_text" msgid="6585658367289194023">"<xliff:g id="ALARM_TIME">%s</xliff:g> - <xliff:g id="ALARM_LABEL">%s</xliff:g>"</string>
     <string name="alarm_alert_snoozed_text" msgid="7064642998528766113">"Հետաձգված է"</string>
     <plurals name="alarm_alert_snooze_duration" formatted="false" msgid="7844300009062867865">
       <item quantity="one"><xliff:g id="NUMBER">%d</xliff:g> րոպե</item>
@@ -67,7 +67,7 @@
     <string name="timer_remaining_multiple" msgid="6052775962092160851">"է մնացել"</string>
   <string-array name="alarm_set">
     <item msgid="6450913786084215050">"Զարթուցիչը դրված է այս պահից 1 րոպեից պակաս:"</item>
-    <item msgid="6002066367368421848">"Զարթուցիչը դրված է այս պահից <xliff:g id="DAYS">%1$s</xliff:g> անց:"</item>
+    <item msgid="6002066367368421848">"Զարթուցիչը դրված է այս պահից <xliff:g id="DAYS">%1$s</xliff:g> օր անց:"</item>
     <item msgid="8824719306247973774">"Զարթուցիչը դրված է այս պահից <xliff:g id="HOURS">%2$s</xliff:g> անց:"</item>
     <item msgid="8182406852935468862">"Զարթուցիչը դրված է այս պահից <xliff:g id="DAYS">%1$s</xliff:g> և <xliff:g id="HOURS">%2$s</xliff:g> անց:"</item>
     <item msgid="2532279224777213194">"Զարթուցիչը դրված է այս պահից <xliff:g id="MINUTES">%3$s</xliff:g> անց:"</item>
@@ -107,7 +107,7 @@
     <string name="settings" msgid="5849739030579520686">"Կարգավորումներ"</string>
     <string name="snooze_duration_title" msgid="1097309861110780483">"Հետաձգման տևողությունը"</string>
     <string name="crescendo_duration_title" msgid="8606408542726189528">"Աստիճանաբար բարձրացնել ձայնը"</string>
-    <string name="auto_silence_title" msgid="2012754009554434544">"Որքան ժամանակից անջատվի"</string>
+    <string name="auto_silence_title" msgid="2012754009554434544">"Լռել"</string>
     <plurals name="auto_silence_summary" formatted="false" msgid="6579258788774360396">
       <item quantity="one"><xliff:g id="FORMATTED_NUMBER">%s</xliff:g> րոպե</item>
       <item quantity="other"><xliff:g id="FORMATTED_NUMBER">%s</xliff:g> րոպե</item>
@@ -239,8 +239,8 @@
     <string name="missed_named_timer_notification_label" msgid="665604640028289175">"Բաց թողնված ժամաչափ՝ <xliff:g id="NAME">%s</xliff:g>"</string>
     <string name="timer_pause" msgid="3748323712728398743">"Դադարեցնել"</string>
     <string name="timer_reset_all" msgid="7530633132757866087">"Վերակայել բոլոր ժամաչափերը"</string>
-    <string name="hours_minutes_seconds" msgid="5680088738059791288">"<xliff:g id="HOURS">%1$d</xliff:g>:<xliff:g id="MINUTES">%2$02d</xliff:g>:<xliff:g id="SECONDS">%3$02d</xliff:g>"</string>
-    <string name="minutes_seconds" msgid="6189446107009577914">"<xliff:g id="MINUTES">%1$d</xliff:g>:<xliff:g id="SECONDS">%2$02d</xliff:g>"</string>
+    <string name="hours_minutes_seconds" msgid="5680088738059791288">"<xliff:g id="HOURS">%d</xliff:g>:<xliff:g id="MINUTES">%02d</xliff:g>:<xliff:g id="SECONDS">%02d</xliff:g>"</string>
+    <string name="minutes_seconds" msgid="6189446107009577914">"<xliff:g id="MINUTES">%d</xliff:g>:<xliff:g id="SECONDS">%02d</xliff:g>"</string>
     <!-- no translation found for seconds (6550091082396571898) -->
     <skip />
   <string-array name="sw_share_strings">

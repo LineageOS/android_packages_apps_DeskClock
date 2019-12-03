@@ -30,14 +30,14 @@
     <string name="remove_sound" msgid="2064643204455734239">"削除"</string>
     <string name="confirm_remove_custom_ringtone" msgid="1724111242265208553">"この音を使用するアラームとタイマーでは、代わりにデフォルトの音が使用されます。"</string>
     <string name="your_sounds" msgid="1672779351352629681">"マイサウンド"</string>
-    <string name="device_sounds" msgid="1584894148222639823">"デバイスのサウンド"</string>
+    <string name="device_sounds" msgid="1584894148222639823">"端末のサウンド"</string>
     <string name="custom_ringtone_lost_permissions" msgid="3406310054255354331">"音声コンテンツにアクセスできません。"</string>
     <string name="default_timer_ringtone_title" msgid="1370799536406862317">"タイマー完了"</string>
     <string name="alarm_tomorrow" msgid="131356848787643420">"明日"</string>
     <string name="alarm_today" msgid="7873594221106531654">"今日"</string>
     <string name="alarm_alert_dismiss_text" msgid="4942914605480888820">"解除"</string>
     <string name="alarm_missed_title" msgid="3828345099754063392">"聞き逃したアラーム"</string>
-    <string name="alarm_missed_text" msgid="6585658367289194023">"<xliff:g id="ALARM_TIME">%1$s</xliff:g> - <xliff:g id="ALARM_LABEL">%2$s</xliff:g>"</string>
+    <string name="alarm_missed_text" msgid="6585658367289194023">"<xliff:g id="ALARM_TIME">%s</xliff:g> - <xliff:g id="ALARM_LABEL">%s</xliff:g>"</string>
     <string name="alarm_alert_snoozed_text" msgid="7064642998528766113">"スヌーズ"</string>
     <plurals name="alarm_alert_snooze_duration" formatted="false" msgid="7844300009062867865">
       <item quantity="other"><xliff:g id="NUMBER">%d</xliff:g>分</item>
@@ -183,7 +183,7 @@
     <string name="silent_default_alarm_ringtone" msgid="6012855475009670997">"アラーム音のデフォルト設定はマナーモードです"</string>
     <string name="change_setting_action" msgid="1224356633832430160">"変更"</string>
     <string name="app_notifications_blocked" msgid="7249150789023936889">"時計の通知はブロックされています"</string>
-    <string name="alarms_blocked_by_dnd" msgid="6089433757505898969">"デバイスは [サイレント] に設定されています"</string>
+    <string name="alarms_blocked_by_dnd" msgid="6089433757505898969">"端末は [サイレント] に設定されています"</string>
     <string name="volume_button_setting_title" msgid="6937131248843413357">"音量ボタン"</string>
   <string-array name="volume_button_setting_entries">
     <item msgid="7972756698723318690">"スヌーズ"</item>
@@ -239,8 +239,8 @@
     <string name="missed_named_timer_notification_label" msgid="665604640028289175">"未応答のタイマー: <xliff:g id="NAME">%s</xliff:g>"</string>
     <string name="timer_pause" msgid="3748323712728398743">"一時停止"</string>
     <string name="timer_reset_all" msgid="7530633132757866087">"全タイマーをリセット"</string>
-    <string name="hours_minutes_seconds" msgid="5680088738059791288">"<xliff:g id="HOURS">%1$d</xliff:g>:<xliff:g id="MINUTES">%2$02d</xliff:g>:<xliff:g id="SECONDS">%3$02d</xliff:g>"</string>
-    <string name="minutes_seconds" msgid="6189446107009577914">"<xliff:g id="MINUTES">%1$d</xliff:g>:<xliff:g id="SECONDS">%2$02d</xliff:g>"</string>
+    <string name="hours_minutes_seconds" msgid="5680088738059791288">"<xliff:g id="HOURS">%d</xliff:g>:<xliff:g id="MINUTES">%02d</xliff:g>:<xliff:g id="SECONDS">%02d</xliff:g>"</string>
+    <string name="minutes_seconds" msgid="6189446107009577914">"<xliff:g id="MINUTES">%d</xliff:g>:<xliff:g id="SECONDS">%02d</xliff:g>"</string>
     <!-- no translation found for seconds (6550091082396571898) -->
     <skip />
   <string-array name="sw_share_strings">
