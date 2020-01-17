@@ -183,8 +183,13 @@ final class RingtoneModel {
                 return mContext.getString(R.string.unknown_ringtone_title);
             }
 
+            try {
+                title = ringtone.getTitle(mContext);
+            } catch (SecurityException e) {
+                LogUtils.w("SecurityException getting ringtone title, assuming it is the default sound");
+                title = mContext.getString(R.string.default_alarm_ringtone_title);
+            }
             // Cache the title for later use.
-            title = ringtone.getTitle(mContext);
             mRingtoneTitles.put(uri, title);
         }
         return title;
