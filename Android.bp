@@ -8,6 +8,7 @@ android_app {
     ],
     platform_apis: true,
     product_specific: true,
+    certificate: "platform",
     static_libs: [
         "androidx.annotation_annotation",
         "androidx.collection_collection",
