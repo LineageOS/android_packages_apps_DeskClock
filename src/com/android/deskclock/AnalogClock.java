@@ -41,7 +41,7 @@ public class AnalogClock extends FrameLayout {
         @Override
         public void onReceive(Context context, Intent intent) {
             if (mTimeZone == null && Intent.ACTION_TIMEZONE_CHANGED.equals(intent.getAction())) {
-                final String tz = intent.getStringExtra("time-zone");
+                final String tz = intent.getStringExtra(Intent.EXTRA_TIMEZONE);
                 mTime = Calendar.getInstance(TimeZone.getTimeZone(tz));
             }
             onTimeChanged();
