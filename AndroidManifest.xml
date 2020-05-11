@@ -104,6 +104,7 @@
 
         <activity
             android:name=".HandleApiCalls"
+            android:permission="com.android.alarm.permission.SET_ALARM"
             android:excludeFromRecents="true"
             android:launchMode="singleInstance"
             android:taskAffinity=""
