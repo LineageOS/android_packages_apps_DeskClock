@@ -9,7 +9,7 @@ import android.widget.FrameLayout;
 import android.widget.TextView;
 
 /**
- * This class adjusts the locations of children buttons and text of this view group by adjusting the
+ * This class adjusts the locations of child buttons and text of this view group by adjusting the
  * margins of each item. The left and right buttons are aligned with the bottom of the circle. The
  * stop button and label text are located within the circle with the stop button near the bottom and
  * the label text near the top. The maximum text size for the label text view is also calculated.

@@ -181,7 +181,7 @@ public class DigitalAppWidgetProvider extends AppWidgetProvider {
             Bundle options) {
         super.onAppWidgetOptionsChanged(context, wm, widgetId, options);
 
-        // scale the fonts of the clock to fit inside the new size
+        // Scale the fonts of the clock to fit inside the new size
         relayoutWidget(context, AppWidgetManager.getInstance(context), widgetId, options);
     }
 

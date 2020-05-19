@@ -82,26 +82,29 @@ final class PeriodicCallbackModel {
 
     /**
      * @param runnable to be called every quarter-hour
-     * @param offset an offset applied to the quarter-hour to control when the callback occurs
      */
-    void addQuarterHourCallback(Runnable runnable, long offset) {
-        addPeriodicCallback(runnable, Period.QUARTER_HOUR, offset);
+    void addQuarterHourCallback(Runnable runnable) {
+        // Callbacks *can* occur early so pad in an extra 100ms on the quarter-hour callback
+        // to ensure the sampled wallclock time reflects the subsequent quarter-hour.
+        addPeriodicCallback(runnable, Period.QUARTER_HOUR, 100L);
     }
 
     /**
      * @param runnable to be called every hour
-     * @param offset an offset applied to the hour to control when the callback occurs
      */
-    void addHourCallback(Runnable runnable, long offset) {
-        addPeriodicCallback(runnable, Period.HOUR, offset);
+    void addHourCallback(Runnable runnable) {
+        // Callbacks *can* occur early so pad in an extra 100ms on the hour callback to ensure
+        // the sampled wallclock time reflects the subsequent hour.
+        addPeriodicCallback(runnable, Period.HOUR, 100L);
     }
 
     /**
      * @param runnable to be called every midnight
-     * @param offset an offset applied to the midnight to control when the callback occurs
      */
-    void addMidnightCallback(Runnable runnable, long offset) {
-        addPeriodicCallback(runnable, Period.MIDNIGHT, offset);
+    void addMidnightCallback(Runnable runnable) {
+        // Callbacks *can* occur early so pad in an extra 100ms on the midnight callback to ensure
+        // the sampled wallclock time reflects the subsequent day.
+        addPeriodicCallback(runnable, Period.MIDNIGHT, 100L);
     }
 
     /**

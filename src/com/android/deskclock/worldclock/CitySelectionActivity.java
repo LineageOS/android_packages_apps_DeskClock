@@ -497,7 +497,7 @@ public final class CitySelectionActivity extends BaseActivity {
             mIs24HoursMode = DateFormat.is24HourFormat(mContext);
 
             // Refresh the user selections.
-            final List<City> selected = DataModel.getDataModel().getSelectedCities();
+            final List<City> selected = (List<City>) DataModel.getDataModel().getSelectedCities();
             mUserSelectedCities.clear();
             mUserSelectedCities.addAll(selected);
             mOriginalUserSelectionCount = selected.size();

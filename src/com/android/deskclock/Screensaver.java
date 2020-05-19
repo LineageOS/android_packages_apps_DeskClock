@@ -133,7 +133,7 @@ public final class Screensaver extends DreamService {
         Utils.refreshAlarm(this, mContentView);
 
         startPositionUpdater();
-        UiDataModel.getUiDataModel().addMidnightCallback(mMidnightUpdater, 100);
+        UiDataModel.getUiDataModel().addMidnightCallback(mMidnightUpdater);
     }
 
     @Override

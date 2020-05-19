@@ -338,29 +338,26 @@ public final class UiDataModel {
 
     /**
      * @param runnable to be called every quarter-hour
-     * @param offset an offset applied to the quarter-hour to control when the callback occurs
      */
-    public void addQuarterHourCallback(Runnable runnable, long offset) {
+    public void addQuarterHourCallback(Runnable runnable) {
         enforceMainLooper();
-        mPeriodicCallbackModel.addQuarterHourCallback(runnable, offset);
+        mPeriodicCallbackModel.addQuarterHourCallback(runnable);
     }
 
     /**
      * @param runnable to be called every hour
-     * @param offset an offset applied to the hour to control when the callback occurs
      */
-    public void addHourCallback(Runnable runnable, long offset) {
+    public void addHourCallback(Runnable runnable) {
         enforceMainLooper();
-        mPeriodicCallbackModel.addHourCallback(runnable, offset);
+        mPeriodicCallbackModel.addHourCallback(runnable);
     }
 
     /**
      * @param runnable to be called every midnight
-     * @param offset an offset applied to the midnight to control when the callback occurs
      */
-    public void addMidnightCallback(Runnable runnable, long offset) {
+    public void addMidnightCallback(Runnable runnable) {
         enforceMainLooper();
-        mPeriodicCallbackModel.addMidnightCallback(runnable, offset);
+        mPeriodicCallbackModel.addMidnightCallback(runnable);
     }
 
     /**

@@ -198,7 +198,7 @@ public final class AlarmClockFragment extends DeskClockFragment implements
 
         // Schedule a runnable to update the "Today/Tomorrow" values displayed for non-repeating
         // alarms when midnight passes.
-        UiDataModel.getUiDataModel().addMidnightCallback(mMidnightUpdater, 100);
+        UiDataModel.getUiDataModel().addMidnightCallback(mMidnightUpdater);
 
         // Check if another app asked us to create a blank new alarm.
         final Intent intent = getActivity().getIntent();

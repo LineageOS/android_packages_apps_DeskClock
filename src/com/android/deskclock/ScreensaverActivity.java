@@ -164,7 +164,7 @@ public class ScreensaverActivity extends BaseActivity {
         Utils.refreshAlarm(ScreensaverActivity.this, mContentView);
 
         startPositionUpdater();
-        UiDataModel.getUiDataModel().addMidnightCallback(mMidnightUpdater, 100);
+        UiDataModel.getUiDataModel().addMidnightCallback(mMidnightUpdater);
 
         final Intent intent = registerReceiver(null, new IntentFilter(ACTION_BATTERY_CHANGED));
         final boolean pluggedIn = intent != null && intent.getIntExtra(EXTRA_PLUGGED, 0) != 0;

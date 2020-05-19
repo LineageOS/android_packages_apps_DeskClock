@@ -93,7 +93,7 @@ public class DigitalAppWidgetCityViewsFactory implements RemoteViewsFactory {
         final int worldClockCount = mCities.size();
         final double totalClockCount = homeClockCount + worldClockCount;
 
-        // number of clocks / 2 clocks per row
+        // Number of clocks / 2 clocks per row
         return (int) Math.ceil(totalClockCount / 2);
     }
 
@@ -216,7 +216,6 @@ public class DigitalAppWidgetCityViewsFactory implements RemoteViewsFactory {
      * occur on the main thread.
      */
     private static final class RefreshRunnable implements Runnable {
-
         private City mHomeCity;
         private List<City> mCities;
         private boolean mShowHomeClock;
