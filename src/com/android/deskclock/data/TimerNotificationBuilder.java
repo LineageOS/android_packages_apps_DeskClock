@@ -34,6 +34,7 @@ import android.text.TextUtils;
 import android.widget.RemoteViews;
 
 import com.android.deskclock.AlarmUtils;
+import com.android.deskclock.NotificationUtils;
 import com.android.deskclock.R;
 import com.android.deskclock.Utils;
 import com.android.deskclock.events.Events;
@@ -51,24 +52,19 @@ import static android.text.format.DateUtils.SECOND_IN_MILLIS;
 /**
  * Builds notifications to reflect the latest state of the timers.
  */
-class TimerNotificationBuilder {
+public class TimerNotificationBuilder {
 
     /**
      * Notification channel containing all TimerModel notifications.
      */
-    private static final String TIMER_MODEL_NOTIFICATION_CHANNEL_ID = "TimerModelNotification";
+    public static final String TIMER_MODEL_NOTIFICATION_CHANNEL_ID = "TimerModelNotification";
 
     private static final int REQUEST_CODE_UPCOMING = 0;
     private static final int REQUEST_CODE_MISSING = 1;
 
     public void buildChannel(Context context, NotificationManagerCompat notificationManager) {
-        if (android.os.Build.VERSION.SDK_INT >= android.os.Build.VERSION_CODES.O) {
-            NotificationChannel channel = new NotificationChannel(
-                    TIMER_MODEL_NOTIFICATION_CHANNEL_ID,
-                    context.getString(R.string.default_label),
-                    NotificationManagerCompat.IMPORTANCE_DEFAULT);
-            notificationManager.createNotificationChannel(channel);
-        }
+        NotificationUtils.createChannel(context, notificationManager,
+                TIMER_MODEL_NOTIFICATION_CHANNEL_ID);
     }
 
     public Notification build(Context context, NotificationModel nm, List<Timer> unexpired) {
@@ -286,7 +282,7 @@ class TimerNotificationBuilder {
                         .setShowWhen(false)
                         .setAutoCancel(false)
                         .setContentIntent(contentIntent)
-                        .setPriority(Notification.PRIORITY_MAX)
+                        .setPriority(Notification.PRIORITY_HIGH)
                         .setDefaults(Notification.DEFAULT_LIGHTS)
                         .setSmallIcon(R.drawable.stat_notify_timer)
                         .setFullScreenIntent(pendingFullScreen, true)
