@@ -1,0 +1,39 @@
+{
+  "comments": [
+    {
+      "key": {
+        "uuid": "d93886f5_cb86f73a",
+        "filename": "res/values/cm_strings.xml",
+        "patchSetId": 2
+      },
+      "lineNbr": 34,
+      "author": {
+        "id": 1063
+      },
+      "writtenOn": "2020-06-05T12:36:09Z",
+      "side": 1,
+      "message": "\u0027Firing alarm\u0027? Or is this also for timers? In this case use \u0027Firing alarms \u0026 timers\u0027 like Google.",
+      "revId": "3677d2527d827ff035de85b3940dac0c74a6f10e",
+      "serverId": "1ec6b3db-b2c1-4fa4-84a2-4c7efe89ba71",
+      "unresolved": true
+    },
+    {
+      "key": {
+        "uuid": "ca066cb1_d7b162de",
+        "filename": "src/com/android/deskclock/alarms/AlarmNotifications.java",
+        "patchSetId": 2
+      },
+      "lineNbr": 164,
+      "author": {
+        "id": 1063
+      },
+      "writtenOn": "2020-06-05T12:36:09Z",
+      "side": 1,
+      "message": "Moving this to a common method also used from above and below would make sense, I think.",
+      "parentUuid": "",
+      "revId": "3677d2527d827ff035de85b3940dac0c74a6f10e",
+      "serverId": "1ec6b3db-b2c1-4fa4-84a2-4c7efe89ba71",
+      "unresolved": true
+    }
+  ]
+}
