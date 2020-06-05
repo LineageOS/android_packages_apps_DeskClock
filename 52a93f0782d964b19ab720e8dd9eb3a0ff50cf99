@@ -1,0 +1,21 @@
+{
+  "comments": [
+    {
+      "key": {
+        "uuid": "c35aa2e3_5c59f716",
+        "filename": "src/com/android/deskclock/Utils.java",
+        "patchSetId": 10
+      },
+      "lineNbr": 159,
+      "author": {
+        "id": 1063
+      },
+      "writtenOn": "2020-06-05T19:22:11Z",
+      "side": 1,
+      "message": "Mit: stray newlines",
+      "revId": "52a93f0782d964b19ab720e8dd9eb3a0ff50cf99",
+      "serverId": "1ec6b3db-b2c1-4fa4-84a2-4c7efe89ba71",
+      "unresolved": true
+    }
+  ]
+}
