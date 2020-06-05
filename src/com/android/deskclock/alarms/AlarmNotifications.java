@@ -213,7 +213,7 @@ public final class AlarmNotifications {
             NotificationChannel channel = new NotificationChannel(
                     ALARM_HIGH_PRIORITY_NOTIFICATION_CHANNEL_ID,
                     context.getString(R.string.default_label),
-                    NotificationManagerCompat.IMPORTANCE_DEFAULT);
+                    NotificationManagerCompat.IMPORTANCE_HIGH);
             nm.createNotificationChannel(channel);
         }
         final Notification notification = builder.build();
@@ -285,7 +285,7 @@ public final class AlarmNotifications {
             NotificationChannel channel = new NotificationChannel(
                     ALARM_NOTIFICATION_CHANNEL_ID,
                     context.getString(R.string.default_label),
-                    NotificationManagerCompat.IMPORTANCE_DEFAULT);
+                    NotificationManagerCompat.IMPORTANCE_HIGH);
             nm.createNotificationChannel(channel);
         }
 
