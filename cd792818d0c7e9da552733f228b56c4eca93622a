@@ -16,6 +16,24 @@
       "revId": "cd792818d0c7e9da552733f228b56c4eca93622a",
       "serverId": "1ec6b3db-b2c1-4fa4-84a2-4c7efe89ba71",
       "unresolved": true
+    },
+    {
+      "key": {
+        "uuid": "aaef8f8c_a4d732e6",
+        "filename": "src/com/android/deskclock/Utils.java",
+        "patchSetId": 12
+      },
+      "lineNbr": 157,
+      "author": {
+        "id": 13028
+      },
+      "writtenOn": "2020-06-05T19:47:15Z",
+      "side": 1,
+      "message": "Done",
+      "parentUuid": "57164508_5b4d2b4c",
+      "revId": "cd792818d0c7e9da552733f228b56c4eca93622a",
+      "serverId": "1ec6b3db-b2c1-4fa4-84a2-4c7efe89ba71",
+      "unresolved": false
     }
   ]
 }
