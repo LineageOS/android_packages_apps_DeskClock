@@ -57,7 +57,7 @@ class StopwatchNotificationBuilder {
         if (android.os.Build.VERSION.SDK_INT >= android.os.Build.VERSION_CODES.O) {
             NotificationChannel channel = new NotificationChannel(
                     STOPWATCH_NOTIFICATION_CHANNEL_ID,
-                    context.getString(R.string.default_label),
+                    context.getString(R.string.stopwatch_notification),
                     NotificationManagerCompat.IMPORTANCE_HIGH);
             notificationManager.createNotificationChannel(channel);
         }
