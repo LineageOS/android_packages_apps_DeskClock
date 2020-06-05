@@ -30,4 +30,11 @@
         <item>Nothing</item>
     </string-array>
 
+    <!-- Strings for notification channel. -->
+    <string name="alarm_notification">Alarm</string>
+    <string name="alarm_missed_notification">Missed alarms</string>
+    <string name="alarm_snooze_notification">Snoozed alarms</string>
+    <string name="alarm_upcoming_notification">Upcoming alarms</string>
+    <string name="stopwatch_notification">Stopwatch</string>
+    <string name="timer_model_notification">Timer</string>
 </resources>
