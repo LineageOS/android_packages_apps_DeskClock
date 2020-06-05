@@ -56,7 +56,7 @@ class TimerNotificationBuilder {
     /**
      * Notification channel containing all TimerModel notifications.
      */
-    private static final String TIMER_MODEL_NOTIFICATION_CHANNEL_ID = "TimerModelNotification";
+    private static final String TIMER_MODEL_NOTIFICATION_CHANNEL_ID = "TimerModelNotifications";
 
     private static final int REQUEST_CODE_UPCOMING = 0;
     private static final int REQUEST_CODE_MISSING = 1;
@@ -66,7 +66,7 @@ class TimerNotificationBuilder {
             NotificationChannel channel = new NotificationChannel(
                     TIMER_MODEL_NOTIFICATION_CHANNEL_ID,
                     context.getString(R.string.default_label),
-                    NotificationManagerCompat.IMPORTANCE_DEFAULT);
+                    NotificationManagerCompat.IMPORTANCE_HIGH);
             notificationManager.createNotificationChannel(channel);
         }
     }
@@ -286,7 +286,7 @@ class TimerNotificationBuilder {
                         .setShowWhen(false)
                         .setAutoCancel(false)
                         .setContentIntent(contentIntent)
-                        .setPriority(Notification.PRIORITY_MAX)
+                        .setPriority(Notification.PRIORITY_HIGH)
                         .setDefaults(Notification.DEFAULT_LIGHTS)
                         .setSmallIcon(R.drawable.stat_notify_timer)
                         .setFullScreenIntent(pendingFullScreen, true)

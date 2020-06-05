@@ -51,30 +51,30 @@ public final class AlarmNotifications {
      * Notification channel containing all low priority notifications.
      */
     private static final String ALARM_LOW_PRIORITY_NOTIFICATION_CHANNEL_ID =
-            "alarmLowPriorityNotification";
+            "alarmLowPriorityNotifications";
 
     /**
      * Notification channel containing all high priority notifications.
      */
     private static final String ALARM_HIGH_PRIORITY_NOTIFICATION_CHANNEL_ID =
-            "alarmHighPriorityNotification";
+            "alarmHighPriorityNotifications";
 
     /**
      * Notification channel containing all snooze notifications.
      */
     private static final String ALARM_SNOOZE_NOTIFICATION_CHANNEL_ID =
-            "alarmSnoozeNotification";
+            "alarmSnoozeNotifications";
 
     /**
      * Notification channel containing all missed notifications.
      */
     private static final String ALARM_MISSED_NOTIFICATION_CHANNEL_ID =
-            "alarmMissedNotification";
+            "alarmMissedNotifications";
 
     /**
      * Notification channel containing all alarm notifications.
      */
-    private static final String ALARM_NOTIFICATION_CHANNEL_ID = "alarmNotification";
+    private static final String ALARM_NOTIFICATION_CHANNEL_ID = "alarmNotifications";
 
     /**
      * Formats times such that chronological order and lexicographical order agree.
@@ -213,7 +213,7 @@ public final class AlarmNotifications {
             NotificationChannel channel = new NotificationChannel(
                     ALARM_HIGH_PRIORITY_NOTIFICATION_CHANNEL_ID,
                     context.getString(R.string.default_label),
-                    NotificationManagerCompat.IMPORTANCE_DEFAULT);
+                    NotificationManagerCompat.IMPORTANCE_HIGH);
             nm.createNotificationChannel(channel);
         }
         final Notification notification = builder.build();
@@ -285,7 +285,7 @@ public final class AlarmNotifications {
             NotificationChannel channel = new NotificationChannel(
                     ALARM_NOTIFICATION_CHANNEL_ID,
                     context.getString(R.string.default_label),
-                    NotificationManagerCompat.IMPORTANCE_DEFAULT);
+                    NotificationManagerCompat.IMPORTANCE_HIGH);
             nm.createNotificationChannel(channel);
         }
 
@@ -326,7 +326,7 @@ public final class AlarmNotifications {
             NotificationChannel channel = new NotificationChannel(
                     ALARM_NOTIFICATION_CHANNEL_ID,
                     context.getString(R.string.default_label),
-                    NotificationManagerCompat.IMPORTANCE_DEFAULT);
+                    NotificationManagerCompat.IMPORTANCE_HIGH);
             nm.createNotificationChannel(channel);
         }
 
@@ -377,7 +377,7 @@ public final class AlarmNotifications {
                         .setSmallIcon(R.drawable.stat_notify_alarm)
                         .setAutoCancel(false)
                         .setSortKey(createSortKey(instance))
-                        .setPriority(NotificationCompat.PRIORITY_MAX)
+                        .setPriority(NotificationCompat.PRIORITY_HIGH)
                         .setCategory(NotificationCompat.CATEGORY_EVENT)
                         .setVisibility(NotificationCompat.VISIBILITY_PUBLIC)
                         .setLocalOnly(true);
@@ -520,7 +520,7 @@ public final class AlarmNotifications {
         notification.setFullScreenIntent(PendingIntent.getActivity(service,
                 ALARM_FIRING_NOTIFICATION_ID, fullScreenIntent, PendingIntent.FLAG_UPDATE_CURRENT),
                 true);
-        notification.setPriority(NotificationCompat.PRIORITY_MAX);
+        notification.setPriority(NotificationCompat.PRIORITY_HIGH);
 
         clearNotification(service, instance);
         service.startForeground(ALARM_FIRING_NOTIFICATION_ID, notification.build());
