@@ -1,0 +1,21 @@
+{
+  "comments": [
+    {
+      "key": {
+        "uuid": "91508c25_67f35165",
+        "filename": "src/com/android/deskclock/NotificationUtils.java",
+        "patchSetId": 8
+      },
+      "lineNbr": 37,
+      "author": {
+        "id": 3075
+      },
+      "writtenOn": "2020-06-05T17:45:55Z",
+      "side": 1,
+      "message": "Consider moving this check into a helper to reduce duplication.\n\nbut should we even worry about backwards compat (bump min sdk instead) ?  It would be simpler not to.  Whilst it\u0027s nice not to second guess how other people use our code, it would nonetheless be strange for someone to run this DeskClock on \u003c O.",
+      "revId": "87f1376268034bb66153caae91897f416beb8c1a",
+      "serverId": "1ec6b3db-b2c1-4fa4-84a2-4c7efe89ba71",
+      "unresolved": true
+    }
+  ]
+}
