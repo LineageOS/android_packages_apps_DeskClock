@@ -48,16 +48,10 @@ public final class AlarmNotifications {
     static final String EXTRA_NOTIFICATION_ID = "extra_notification_id";
 
     /**
-     * Notification channel containing all low priority notifications.
+     * Notification channel containing all upcoming notifications.
      */
-    private static final String ALARM_LOW_PRIORITY_NOTIFICATION_CHANNEL_ID =
-            "alarmLowPriorityNotification";
-
-    /**
-     * Notification channel containing all high priority notifications.
-     */
-    private static final String ALARM_HIGH_PRIORITY_NOTIFICATION_CHANNEL_ID =
-            "alarmHighPriorityNotification";
+    private static final String ALARM_UPCOMING_NOTIFICATION_CHANNEL_ID =
+            "alarmUpcomingNotification";
 
     /**
      * Notification channel containing all snooze notifications.
@@ -117,7 +111,7 @@ public final class AlarmNotifications {
         LogUtils.v("Displaying low priority notification for alarm instance: " + instance.mId);
 
         NotificationCompat.Builder builder = new NotificationCompat.Builder(
-                 context, ALARM_LOW_PRIORITY_NOTIFICATION_CHANNEL_ID)
+                 context, ALARM_UPCOMING_NOTIFICATION_CHANNEL_ID)
                          .setShowWhen(false)
                         .setContentTitle(context.getString(
                                 R.string.alarm_alert_predismiss_title))
@@ -160,9 +154,12 @@ public final class AlarmNotifications {
         NotificationManagerCompat nm = NotificationManagerCompat.from(context);
         if (android.os.Build.VERSION.SDK_INT >= android.os.Build.VERSION_CODES.O) {
             NotificationChannel channel = new NotificationChannel(
-                    ALARM_LOW_PRIORITY_NOTIFICATION_CHANNEL_ID,
-                    context.getString(R.string.default_label),
+                    ALARM_UPCOMING_NOTIFICATION_CHANNEL_ID,
+                    context.getString(R.string.alarm_upcoming_notification),
                     NotificationManagerCompat.IMPORTANCE_DEFAULT);
+            channel.enableLights(false);
+            channel.enableVibration(false);
+            channel.setSound(null, null);
             nm.createNotificationChannel(channel);
         }
         final Notification notification = builder.build();
@@ -175,7 +172,7 @@ public final class AlarmNotifications {
         LogUtils.v("Displaying high priority notification for alarm instance: " + instance.mId);
 
         NotificationCompat.Builder builder = new NotificationCompat.Builder(
-                context, ALARM_HIGH_PRIORITY_NOTIFICATION_CHANNEL_ID)
+                context, ALARM_UPCOMING_NOTIFICATION_CHANNEL_ID)
                         .setShowWhen(false)
                         .setContentTitle(context.getString(
                                 R.string.alarm_alert_predismiss_title))
@@ -211,9 +208,12 @@ public final class AlarmNotifications {
         NotificationManagerCompat nm = NotificationManagerCompat.from(context);
         if (android.os.Build.VERSION.SDK_INT >= android.os.Build.VERSION_CODES.O) {
             NotificationChannel channel = new NotificationChannel(
-                    ALARM_HIGH_PRIORITY_NOTIFICATION_CHANNEL_ID,
-                    context.getString(R.string.default_label),
+                    ALARM_UPCOMING_NOTIFICATION_CHANNEL_ID,
+                    context.getString(R.string.alarm_upcoming_notification),
                     NotificationManagerCompat.IMPORTANCE_DEFAULT);
+            channel.enableLights(false);
+            channel.enableVibration(false);
+            channel.setSound(null, null);
             nm.createNotificationChannel(channel);
         }
         final Notification notification = builder.build();
@@ -284,8 +284,8 @@ public final class AlarmNotifications {
         if (android.os.Build.VERSION.SDK_INT >= android.os.Build.VERSION_CODES.O) {
             NotificationChannel channel = new NotificationChannel(
                     ALARM_NOTIFICATION_CHANNEL_ID,
-                    context.getString(R.string.default_label),
-                    NotificationManagerCompat.IMPORTANCE_DEFAULT);
+                    context.getString(R.string.alarm_notification),
+                    NotificationManagerCompat.IMPORTANCE_HIGH);
             nm.createNotificationChannel(channel);
         }
 
@@ -325,8 +325,8 @@ public final class AlarmNotifications {
         if (android.os.Build.VERSION.SDK_INT >= android.os.Build.VERSION_CODES.O) {
             NotificationChannel channel = new NotificationChannel(
                     ALARM_NOTIFICATION_CHANNEL_ID,
-                    context.getString(R.string.default_label),
-                    NotificationManagerCompat.IMPORTANCE_DEFAULT);
+                    context.getString(R.string.alarm_notification),
+                    NotificationManagerCompat.IMPORTANCE_HIGH);
             nm.createNotificationChannel(channel);
         }
 
@@ -343,8 +343,8 @@ public final class AlarmNotifications {
             if (android.os.Build.VERSION.SDK_INT >= android.os.Build.VERSION_CODES.O) {
                 NotificationChannel channel = new NotificationChannel(
                         ALARM_MISSED_NOTIFICATION_CHANNEL_ID,
-                        context.getString(R.string.default_label),
-                        NotificationManagerCompat.IMPORTANCE_DEFAULT);
+                        context.getString(R.string.alarm_missed_notification),
+                        NotificationManagerCompat.IMPORTANCE_HIGH);
                 nm.createNotificationChannel(channel);
             }
             summary = new NotificationCompat.Builder(context, ALARM_NOTIFICATION_CHANNEL_ID)
@@ -377,7 +377,7 @@ public final class AlarmNotifications {
                         .setSmallIcon(R.drawable.stat_notify_alarm)
                         .setAutoCancel(false)
                         .setSortKey(createSortKey(instance))
-                        .setPriority(NotificationCompat.PRIORITY_MAX)
+                        .setPriority(NotificationCompat.PRIORITY_HIGH)
                         .setCategory(NotificationCompat.CATEGORY_EVENT)
                         .setVisibility(NotificationCompat.VISIBILITY_PUBLIC)
                         .setLocalOnly(true);
@@ -404,8 +404,8 @@ public final class AlarmNotifications {
         if (android.os.Build.VERSION.SDK_INT >= android.os.Build.VERSION_CODES.O) {
             NotificationChannel channel = new NotificationChannel(
                     ALARM_SNOOZE_NOTIFICATION_CHANNEL_ID,
-                    context.getString(R.string.default_label),
-                    NotificationManagerCompat.IMPORTANCE_DEFAULT);
+                    context.getString(R.string.alarm_snooze_notification),
+                    NotificationManagerCompat.IMPORTANCE_HIGH);
             nm.createNotificationChannel(channel);
         }
         final Notification notification = builder.build();
@@ -457,8 +457,8 @@ public final class AlarmNotifications {
         if (android.os.Build.VERSION.SDK_INT >= android.os.Build.VERSION_CODES.O) {
             NotificationChannel channel = new NotificationChannel(
                     ALARM_MISSED_NOTIFICATION_CHANNEL_ID,
-                    context.getString(R.string.default_label),
-                    NotificationManagerCompat.IMPORTANCE_DEFAULT);
+                    context.getString(R.string.alarm_missed_notification),
+                    NotificationManagerCompat.IMPORTANCE_HIGH);
             nm.createNotificationChannel(channel);
         }
         final Notification notification = builder.build();
@@ -520,7 +520,7 @@ public final class AlarmNotifications {
         notification.setFullScreenIntent(PendingIntent.getActivity(service,
                 ALARM_FIRING_NOTIFICATION_ID, fullScreenIntent, PendingIntent.FLAG_UPDATE_CURRENT),
                 true);
-        notification.setPriority(NotificationCompat.PRIORITY_MAX);
+        notification.setPriority(NotificationCompat.PRIORITY_HIGH);
 
         clearNotification(service, instance);
         service.startForeground(ALARM_FIRING_NOTIFICATION_ID, notification.build());
