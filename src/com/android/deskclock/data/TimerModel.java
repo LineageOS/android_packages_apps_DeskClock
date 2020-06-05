@@ -778,6 +778,7 @@ final class TimerModel {
         final Notification notification = mNotificationBuilder.buildMissed(mContext,
                 mNotificationModel, missed);
         final int notificationId = mNotificationModel.getMissedTimerNotificationId();
+        mNotificationBuilder.buildChannel(mContext, mNotificationManager);
         mNotificationManager.notify(notificationId, notification);
     }
 
@@ -803,6 +804,7 @@ final class TimerModel {
         // Otherwise build and post a foreground notification reflecting the latest expired timers.
         final Notification notification = mNotificationBuilder.buildHeadsUp(mContext, expired);
         final int notificationId = mNotificationModel.getExpiredTimerNotificationId();
+        mNotificationBuilder.buildChannel(mContext, mNotificationManager);
         mService.startForeground(notificationId, notification);
     }
 
