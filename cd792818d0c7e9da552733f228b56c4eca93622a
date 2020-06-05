@@ -1,0 +1,21 @@
+{
+  "comments": [
+    {
+      "key": {
+        "uuid": "57164508_5b4d2b4c",
+        "filename": "src/com/android/deskclock/Utils.java",
+        "patchSetId": 12
+      },
+      "lineNbr": 157,
+      "author": {
+        "id": 4550
+      },
+      "writtenOn": "2020-06-05T19:27:37Z",
+      "side": 1,
+      "message": "This should go below the next boolean",
+      "revId": "cd792818d0c7e9da552733f228b56c4eca93622a",
+      "serverId": "1ec6b3db-b2c1-4fa4-84a2-4c7efe89ba71",
+      "unresolved": true
+    }
+  ]
+}
