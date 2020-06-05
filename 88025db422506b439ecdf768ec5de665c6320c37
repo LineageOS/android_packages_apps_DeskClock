@@ -1,0 +1,38 @@
+{
+  "comments": [
+    {
+      "key": {
+        "uuid": "85df8264_db850726",
+        "filename": "src/com/android/deskclock/alarms/AlarmNotifications.java",
+        "patchSetId": 1
+      },
+      "lineNbr": 288,
+      "author": {
+        "id": 16208
+      },
+      "writtenOn": "2020-06-05T13:10:35Z",
+      "side": 1,
+      "message": "This should be IMPORTANCE_DEFAULT",
+      "revId": "88025db422506b439ecdf768ec5de665c6320c37",
+      "serverId": "1ec6b3db-b2c1-4fa4-84a2-4c7efe89ba71",
+      "unresolved": true
+    },
+    {
+      "key": {
+        "uuid": "04229587_226c9ce9",
+        "filename": "src/com/android/deskclock/alarms/AlarmNotifications.java",
+        "patchSetId": 1
+      },
+      "lineNbr": 310,
+      "author": {
+        "id": 16208
+      },
+      "writtenOn": "2020-06-05T13:10:35Z",
+      "side": 1,
+      "message": "same",
+      "revId": "88025db422506b439ecdf768ec5de665c6320c37",
+      "serverId": "1ec6b3db-b2c1-4fa4-84a2-4c7efe89ba71",
+      "unresolved": true
+    }
+  ]
+}
