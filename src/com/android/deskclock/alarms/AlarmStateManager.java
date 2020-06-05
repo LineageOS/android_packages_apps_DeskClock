@@ -383,7 +383,7 @@ public final class AlarmStateManager extends BroadcastReceiver {
         AlarmInstance.updateInstance(contentResolver, instance);
 
         // Setup instance notification and scheduling timers
-        AlarmNotifications.showLowPriorityNotification(context, instance);
+        AlarmNotifications.showUpcomingNotification(context, instance, true);
         scheduleInstanceStateChange(context, instance.getHighNotificationTime(),
                 instance, AlarmInstance.HIGH_NOTIFICATION_STATE);
     }
@@ -427,7 +427,7 @@ public final class AlarmStateManager extends BroadcastReceiver {
         AlarmInstance.updateInstance(contentResolver, instance);
 
         // Setup instance notification and scheduling timers
-        AlarmNotifications.showHighPriorityNotification(context, instance);
+        AlarmNotifications.showUpcomingNotification(context, instance, false);
         scheduleInstanceStateChange(context, instance.getAlarmTime(),
                 instance, AlarmInstance.FIRED_STATE);
     }

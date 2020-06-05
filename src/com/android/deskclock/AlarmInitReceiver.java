@@ -25,6 +25,7 @@ import android.os.PowerManager.WakeLock;
 import com.android.deskclock.alarms.AlarmStateManager;
 import com.android.deskclock.controller.Controller;
 import com.android.deskclock.data.DataModel;
+import com.android.deskclock.NotificationUtils;
 
 public class AlarmInitReceiver extends BroadcastReceiver {
 
@@ -74,6 +75,7 @@ public class AlarmInitReceiver extends BroadcastReceiver {
         if (Intent.ACTION_BOOT_COMPLETED.equals(action)
                 || Intent.ACTION_LOCALE_CHANGED.equals(action)) {
             Controller.getController().updateShortcuts();
+            NotificationUtils.updateNotificationChannels(context);
         }
 
         // Notifications are canceled by the system on application upgrade. This broadcast signals
