@@ -27,6 +27,7 @@ import com.android.deskclock.alarms.AlarmStateManager;
 import com.android.deskclock.alarms.AlarmNotifications;
 import com.android.deskclock.controller.Controller;
 import com.android.deskclock.data.DataModel;
+import com.android.deskclock.NotificationUtils;
 import com.android.deskclock.provider.AlarmInstance;
 
 import java.util.Calendar;
@@ -80,6 +81,8 @@ public class AlarmInitReceiver extends BroadcastReceiver {
         // possible.
         if (ACTION_BOOT_COMPLETED.equals(action)) {
             DataModel.getDataModel().updateAfterReboot();
+            NotificationUtils.updateNotificationChannels(context);
+
             // Stopwatch and timer data need to be updated on time change so the reboot
             // functionality works as expected.
         } else if (Intent.ACTION_TIME_CHANGED.equals(action)) {

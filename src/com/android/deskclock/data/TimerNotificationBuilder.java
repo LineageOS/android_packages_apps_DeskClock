@@ -65,8 +65,8 @@ class TimerNotificationBuilder {
         if (android.os.Build.VERSION.SDK_INT >= android.os.Build.VERSION_CODES.O) {
             NotificationChannel channel = new NotificationChannel(
                     TIMER_MODEL_NOTIFICATION_CHANNEL_ID,
-                    context.getString(R.string.default_label),
-                    NotificationManagerCompat.IMPORTANCE_DEFAULT);
+                    context.getString(R.string.timer_model_notification),
+                    NotificationManagerCompat.IMPORTANCE_HIGH);
             notificationManager.createNotificationChannel(channel);
         }
     }
@@ -286,7 +286,7 @@ class TimerNotificationBuilder {
                         .setShowWhen(false)
                         .setAutoCancel(false)
                         .setContentIntent(contentIntent)
-                        .setPriority(Notification.PRIORITY_MAX)
+                        .setPriority(Notification.PRIORITY_HIGH)
                         .setDefaults(Notification.DEFAULT_LIGHTS)
                         .setSmallIcon(R.drawable.stat_notify_timer)
                         .setFullScreenIntent(pendingFullScreen, true)
