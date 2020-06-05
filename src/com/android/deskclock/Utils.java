@@ -150,6 +150,15 @@ public class Utils {
     }
 
     /**
+     * @return {@code true} if the device is {@link Build.VERSION_CODES#N} or later
+     */
+    public static boolean isOOrLater() {
+        return Build.VERSION.SDK_INT >= Build.VERSION_CODES.O;
+    }
+
+
+
+    /**
      * @return {@code true} if the device is {@link Build.VERSION_CODES#N_MR1} or later
      */
     public static boolean isNMR1OrLater() {
