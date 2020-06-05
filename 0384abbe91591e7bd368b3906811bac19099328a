@@ -1,0 +1,89 @@
+{
+  "comments": [
+    {
+      "key": {
+        "uuid": "13f2a453_aa571dca",
+        "filename": "res/values/cm_strings.xml",
+        "patchSetId": 1
+      },
+      "lineNbr": 36,
+      "author": {
+        "id": 1063
+      },
+      "writtenOn": "2020-06-05T06:37:58Z",
+      "side": 1,
+      "message": "What\u0027s the difference between those 3? That\u0027s probably why Raman used the same string, but there must be a meaningful way to describe those.",
+      "revId": "0384abbe91591e7bd368b3906811bac19099328a",
+      "serverId": "1ec6b3db-b2c1-4fa4-84a2-4c7efe89ba71",
+      "unresolved": true
+    },
+    {
+      "key": {
+        "uuid": "861a0600_7ac22afc",
+        "filename": "res/values/cm_strings.xml",
+        "patchSetId": 1
+      },
+      "lineNbr": 37,
+      "author": {
+        "id": 1063
+      },
+      "writtenOn": "2020-06-05T06:37:58Z",
+      "side": 1,
+      "message": "\u0027Missed alarm\u0027?",
+      "revId": "0384abbe91591e7bd368b3906811bac19099328a",
+      "serverId": "1ec6b3db-b2c1-4fa4-84a2-4c7efe89ba71",
+      "unresolved": true
+    },
+    {
+      "key": {
+        "uuid": "c9511f71_a0e8c050",
+        "filename": "res/values/cm_strings.xml",
+        "patchSetId": 1
+      },
+      "lineNbr": 38,
+      "author": {
+        "id": 1063
+      },
+      "writtenOn": "2020-06-05T06:37:58Z",
+      "side": 1,
+      "message": "\u0027Snoozed alarm\u0027?",
+      "revId": "0384abbe91591e7bd368b3906811bac19099328a",
+      "serverId": "1ec6b3db-b2c1-4fa4-84a2-4c7efe89ba71",
+      "unresolved": true
+    },
+    {
+      "key": {
+        "uuid": "6b30d83c_c4eb4be6",
+        "filename": "res/values/cm_strings.xml",
+        "patchSetId": 1
+      },
+      "lineNbr": 39,
+      "author": {
+        "id": 1063
+      },
+      "writtenOn": "2020-06-05T06:37:58Z",
+      "side": 1,
+      "message": "\u0027Stopwatch\u0027?",
+      "revId": "0384abbe91591e7bd368b3906811bac19099328a",
+      "serverId": "1ec6b3db-b2c1-4fa4-84a2-4c7efe89ba71",
+      "unresolved": true
+    },
+    {
+      "key": {
+        "uuid": "2beb5402_63e81a29",
+        "filename": "res/values/cm_strings.xml",
+        "patchSetId": 1
+      },
+      "lineNbr": 40,
+      "author": {
+        "id": 1063
+      },
+      "writtenOn": "2020-06-05T06:37:58Z",
+      "side": 1,
+      "message": "What is this actually? I doubt a user knows what \u0027timer model\u0027 refers to.",
+      "revId": "0384abbe91591e7bd368b3906811bac19099328a",
+      "serverId": "1ec6b3db-b2c1-4fa4-84a2-4c7efe89ba71",
+      "unresolved": true
+    }
+  ]
+}
