@@ -32,6 +32,7 @@ import androidx.core.app.NotificationManagerCompat;
 import androidx.core.content.ContextCompat;
 import android.widget.RemoteViews;
 
+import com.android.deskclock.NotificationUtils;
 import com.android.deskclock.R;
 import com.android.deskclock.Utils;
 import com.android.deskclock.events.Events;
@@ -46,21 +47,23 @@ import static android.view.View.VISIBLE;
 /**
  * Builds notification to reflect the latest state of the stopwatch and recorded laps.
  */
-class StopwatchNotificationBuilder {
+public class StopwatchNotificationBuilder {
+
+    /*
+     * Old channel id, keep it to be able to remove the channel
+     */
+    public static final String STOPWATCH_NOTIFICATION_CHANNEL_ID = "StopwatchNotification";
 
     /**
      * Notification channel containing all stopwatch notifications.
      */
-    private static final String STOPWATCH_NOTIFICATION_CHANNEL_ID = "StopwatchNotification";
+    public static final String STOPWATCH_NOTIF_CHANNEL_ID = "StopwatchNotif";
 
     public void buildChannel(Context context, NotificationManagerCompat notificationManager) {
-        if (android.os.Build.VERSION.SDK_INT >= android.os.Build.VERSION_CODES.O) {
-            NotificationChannel channel = new NotificationChannel(
-                    STOPWATCH_NOTIFICATION_CHANNEL_ID,
-                    context.getString(R.string.default_label),
-                    NotificationManagerCompat.IMPORTANCE_DEFAULT);
-            notificationManager.createNotificationChannel(channel);
-        }
+        NotificationUtils.createChannelIfRequired(nm,
+                STOPWATCH_NOTIF_CHANNEL_ID,
+                context.getString(R.string.stopwatch_notification),
+                NotificationManagerCompat.IMPORTANCE_LOW);
     }
 
     public Notification build(Context context, NotificationModel nm, Stopwatch stopwatch) {
@@ -145,13 +148,13 @@ class StopwatchNotificationBuilder {
         }
 
         final Builder notification = new NotificationCompat.Builder(
-                context, STOPWATCH_NOTIFICATION_CHANNEL_ID)
+                context, STOPWATCH_NOTIF_CHANNEL_ID)
                         .setLocalOnly(true)
                         .setOngoing(running)
                         .setCustomContentView(content)
                         .setContentIntent(pendingShowApp)
                         .setAutoCancel(stopwatch.isPaused())
-                        .setPriority(Notification.PRIORITY_MAX)
+                        .setPriority(Notification.PRIORITY_HIGH)
                         .setSmallIcon(R.drawable.stat_notify_stopwatch)
                         .setStyle(new NotificationCompat.DecoratedCustomViewStyle())
                         .setColor(ContextCompat.getColor(context, R.color.default_background));
