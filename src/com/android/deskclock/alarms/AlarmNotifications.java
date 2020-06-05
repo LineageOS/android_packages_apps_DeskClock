@@ -213,7 +213,7 @@ public final class AlarmNotifications {
             NotificationChannel channel = new NotificationChannel(
                     ALARM_HIGH_PRIORITY_NOTIFICATION_CHANNEL_ID,
                     context.getString(R.string.default_label),
-                    NotificationManagerCompat.IMPORTANCE_DEFAULT);
+                    NotificationManagerCompat.IMPORTANCE_HIGH);
             nm.createNotificationChannel(channel);
         }
         final Notification notification = builder.build();
@@ -285,7 +285,7 @@ public final class AlarmNotifications {
             NotificationChannel channel = new NotificationChannel(
                     ALARM_NOTIFICATION_CHANNEL_ID,
                     context.getString(R.string.default_label),
-                    NotificationManagerCompat.IMPORTANCE_DEFAULT);
+                    NotificationManagerCompat.IMPORTANCE_HIGH);
             nm.createNotificationChannel(channel);
         }
 
@@ -326,7 +326,7 @@ public final class AlarmNotifications {
             NotificationChannel channel = new NotificationChannel(
                     ALARM_NOTIFICATION_CHANNEL_ID,
                     context.getString(R.string.default_label),
-                    NotificationManagerCompat.IMPORTANCE_DEFAULT);
+                    NotificationManagerCompat.IMPORTANCE_HIGH);
             nm.createNotificationChannel(channel);
         }
 
@@ -377,7 +377,7 @@ public final class AlarmNotifications {
                         .setSmallIcon(R.drawable.stat_notify_alarm)
                         .setAutoCancel(false)
                         .setSortKey(createSortKey(instance))
-                        .setPriority(NotificationCompat.PRIORITY_MAX)
+                        .setPriority(NotificationCompat.PRIORITY_HIGH)
                         .setCategory(NotificationCompat.CATEGORY_EVENT)
                         .setVisibility(NotificationCompat.VISIBILITY_PUBLIC)
                         .setLocalOnly(true);
@@ -520,7 +520,7 @@ public final class AlarmNotifications {
         notification.setFullScreenIntent(PendingIntent.getActivity(service,
                 ALARM_FIRING_NOTIFICATION_ID, fullScreenIntent, PendingIntent.FLAG_UPDATE_CURRENT),
                 true);
-        notification.setPriority(NotificationCompat.PRIORITY_MAX);
+        notification.setPriority(NotificationCompat.PRIORITY_HIGH);
 
         clearNotification(service, instance);
         service.startForeground(ALARM_FIRING_NOTIFICATION_ID, notification.build());

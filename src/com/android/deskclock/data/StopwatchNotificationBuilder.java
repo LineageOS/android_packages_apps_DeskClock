@@ -58,7 +58,7 @@ class StopwatchNotificationBuilder {
             NotificationChannel channel = new NotificationChannel(
                     STOPWATCH_NOTIFICATION_CHANNEL_ID,
                     context.getString(R.string.default_label),
-                    NotificationManagerCompat.IMPORTANCE_DEFAULT);
+                    NotificationManagerCompat.IMPORTANCE_HIGH);
             notificationManager.createNotificationChannel(channel);
         }
     }
@@ -151,7 +151,7 @@ class StopwatchNotificationBuilder {
                         .setCustomContentView(content)
                         .setContentIntent(pendingShowApp)
                         .setAutoCancel(stopwatch.isPaused())
-                        .setPriority(Notification.PRIORITY_MAX)
+                        .setPriority(Notification.PRIORITY_HIGH)
                         .setSmallIcon(R.drawable.stat_notify_stopwatch)
                         .setStyle(new NotificationCompat.DecoratedCustomViewStyle())
                         .setColor(ContextCompat.getColor(context, R.color.default_background));
