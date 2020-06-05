@@ -283,7 +283,7 @@ public final class AlarmNotifications {
         final NotificationManagerCompat nm = NotificationManagerCompat.from(context);
         if (android.os.Build.VERSION.SDK_INT >= android.os.Build.VERSION_CODES.O) {
             NotificationChannel channel = new NotificationChannel(
-                    ALARM_NOTIFICATION_CHANNEL_ID,
+                    ALARM_UPCOMING_NOTIFICATION_CHANNEL_ID,
                     context.getString(R.string.alarm_notification),
                     NotificationManagerCompat.IMPORTANCE_HIGH);
             nm.createNotificationChannel(channel);
@@ -299,7 +299,8 @@ public final class AlarmNotifications {
         Notification summary = getActiveGroupSummaryNotification(context, UPCOMING_GROUP_KEY);
         if (summary == null
                 || !Objects.equals(summary.contentIntent, firstUpcoming.contentIntent)) {
-            summary = new NotificationCompat.Builder(context, ALARM_NOTIFICATION_CHANNEL_ID)
+            summary = new NotificationCompat.Builder(context,
+                        ALARM_UPCOMING_NOTIFICATION_CHANNEL_ID)
                     .setShowWhen(false)
                     .setContentIntent(firstUpcoming.contentIntent)
                     .setColor(ContextCompat.getColor(context, R.color.default_background))
