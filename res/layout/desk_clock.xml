@@ -36,29 +36,18 @@
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
             app:contentInsetStart="0dp"
-            tools:ignore="RtlSymmetry">
+            tools:ignore="RtlSymmetry"
+            android:gravity="center">
 
-            <com.google.android.material.tabs.TabLayout
-                android:id="@+id/tabs"
-                android:layout_width="match_parent"
-                android:layout_height="match_parent"
-                app:tabGravity="fill"
-                app:tabIndicatorColor="@android:color/transparent"
-                app:tabMaxWidth="0dp"
-                app:tabMode="fixed"
-                app:tabPaddingEnd="0dp"
-                app:tabPaddingStart="0dp" />
+        <TextView
+            android:id="@+id/title_view"
+            android:text="Test"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center"
+            style="@style/TextAppearance.AppCompat.Widget.ActionBar.Title" />
 
         </androidx.appcompat.widget.Toolbar>
-
-        <View
-            android:id="@+id/tab_hairline"
-            android:layout_width="match_parent"
-            android:layout_height="@dimen/hairline_height"
-            android:layout_gravity="bottom"
-            android:background="@color/hairline"
-            android:importantForAccessibility="no" />
-
     </com.google.android.material.appbar.AppBarLayout>
 
     <FrameLayout
@@ -83,6 +72,7 @@
         android:layout_gravity="bottom"
         android:baselineAligned="false"
         android:orientation="horizontal"
+        android:paddingBottom="72dp"
         app:layout_behavior="com.android.deskclock.widget.toast.SnackbarSlidingBehavior">
 
         <FrameLayout
@@ -128,4 +118,27 @@
 
     </LinearLayout>
 
+    <com.google.android.material.bottomnavigation.BottomNavigationView
+        android:id="@+id/bottom_view"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_gravity="bottom"
+        android:background="?android:attr/colorSecondary"
+        app:elevation="0dp">
+
+        <com.google.android.material.tabs.TabLayout
+            android:id="@+id/tabs"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            app:tabGravity="fill"
+            app:tabMaxWidth="0dp"
+            app:tabMode="fixed"
+            app:tabPaddingEnd="0dp"
+            app:tabPaddingStart="0dp"
+            app:tabIndicatorHeight="0dp"
+            app:tabTextColor="@color/white_50p"
+            app:tabSelectedTextColor="@color/accent_color"
+            app:tabIconTint="@color/tab_tint_color" />
+
+    </com.google.android.material.bottomnavigation.BottomNavigationView>
 </androidx.coordinatorlayout.widget.CoordinatorLayout>

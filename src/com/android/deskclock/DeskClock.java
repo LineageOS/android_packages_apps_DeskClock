@@ -126,6 +126,9 @@ public class DeskClock extends BaseActivity
     /** The container that stores the tab headers. */
     private TabLayout mTabLayout;
 
+    /** The view that displays the current tab's title */
+    private TextView mTitleView;
+
     /** {@code true} when a settings change necessitates recreating this activity. */
     private boolean mRecreateActivity;
 
@@ -314,6 +317,8 @@ public class DeskClock extends BaseActivity
 
         // Honor changes to the selected tab from outside entities.
         UiDataModel.getUiDataModel().addTabListener(mTabChangeWatcher);
+
+        mTitleView = findViewById(R.id.title_view);
     }
 
     @Override
@@ -329,7 +334,7 @@ public class DeskClock extends BaseActivity
 
         final View dropShadow = findViewById(R.id.drop_shadow);
         mDropShadowController = new DropShadowController(dropShadow, UiDataModel.getUiDataModel(),
-                mSnackbarAnchor.findViewById(R.id.tab_hairline));
+                mSnackbarAnchor.findViewById(R.id.bottom_view));
 
         // ViewPager does not save state; this honors the selected tab in the user interface.
         updateCurrentTab();
@@ -531,7 +536,9 @@ public class DeskClock extends BaseActivity
      * @return a Snackbar that displays the message with the given id for 5 seconds
      */
     private Snackbar createSnackbar(@StringRes int messageId) {
-        return Snackbar.make(mSnackbarAnchor, messageId, 5000 /* duration */);
+        Snackbar snackbar = Snackbar.make(mSnackbarAnchor, messageId, 5000 /* duration */);
+        snackbar.setAnchorView(findViewById(R.id.bottom_view));
+        return snackbar;
     }
 
     /**
