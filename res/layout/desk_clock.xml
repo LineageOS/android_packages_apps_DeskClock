@@ -25,42 +25,6 @@
     android:fitsSystemWindows="true"
     app:statusBarBackground="@null">
 
-    <com.google.android.material.appbar.AppBarLayout
-        android:layout_width="match_parent"
-        android:layout_height="wrap_content"
-        android:background="@null"
-        app:elevation="0dp">
-
-        <androidx.appcompat.widget.Toolbar
-            android:id="@+id/toolbar"
-            android:layout_width="match_parent"
-            android:layout_height="wrap_content"
-            app:contentInsetStart="0dp"
-            tools:ignore="RtlSymmetry">
-
-            <com.google.android.material.tabs.TabLayout
-                android:id="@+id/tabs"
-                android:layout_width="match_parent"
-                android:layout_height="match_parent"
-                app:tabGravity="fill"
-                app:tabIndicatorColor="@android:color/transparent"
-                app:tabMaxWidth="0dp"
-                app:tabMode="fixed"
-                app:tabPaddingEnd="0dp"
-                app:tabPaddingStart="0dp" />
-
-        </androidx.appcompat.widget.Toolbar>
-
-        <View
-            android:id="@+id/tab_hairline"
-            android:layout_width="match_parent"
-            android:layout_height="@dimen/hairline_height"
-            android:layout_gravity="bottom"
-            android:background="@color/hairline"
-            android:importantForAccessibility="no" />
-
-    </com.google.android.material.appbar.AppBarLayout>
-
     <FrameLayout
         android:layout_width="match_parent"
         android:layout_height="match_parent"
@@ -83,6 +47,7 @@
         android:layout_gravity="bottom"
         android:baselineAligned="false"
         android:orientation="horizontal"
+        android:paddingBottom="72dp"
         app:layout_behavior="com.android.deskclock.widget.toast.SnackbarSlidingBehavior">
 
         <FrameLayout
@@ -128,4 +93,40 @@
 
     </LinearLayout>
 
+    <com.google.android.material.bottomnavigation.BottomNavigationView
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_gravity="bottom"
+        android:background="?android:attr/colorSecondary"
+        app:elevation="0dp">
+
+        <androidx.appcompat.widget.Toolbar
+            android:id="@+id/toolbar"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            app:contentInsetStart="0dp"
+            tools:ignore="RtlSymmetry">
+
+            <com.google.android.material.tabs.TabLayout
+                android:id="@+id/tabs"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                app:tabGravity="fill"
+                app:tabIndicatorColor="?android:attr/colorAccent"
+                app:tabMaxWidth="0dp"
+                app:tabMode="fixed"
+                app:tabPaddingEnd="0dp"
+                app:tabPaddingStart="0dp" />
+
+        </androidx.appcompat.widget.Toolbar>
+
+        <View
+            android:id="@+id/tab_hairline"
+            android:layout_width="match_parent"
+            android:layout_height="@dimen/hairline_height"
+            android:layout_gravity="bottom"
+            android:background="@color/hairline"
+            android:importantForAccessibility="no" />
+
+    </com.google.android.material.bottomnavigation.BottomNavigationView>
 </androidx.coordinatorlayout.widget.CoordinatorLayout>
