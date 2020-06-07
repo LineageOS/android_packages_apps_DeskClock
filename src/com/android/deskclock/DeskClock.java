@@ -192,6 +192,7 @@ public class DeskClock extends BaseActivity
                 final TextView text = (TextView) tab.getCustomView()
                         .findViewById(android.R.id.text1);
                 text.setTextColor(mTabLayout.getTabTextColors());
+                text.setAllCaps(false);
 
                 // Bind the icon to the TextView.
                 final Drawable icon = tab.getIcon();
