@@ -531,7 +531,9 @@ public class DeskClock extends BaseActivity
      * @return a Snackbar that displays the message with the given id for 5 seconds
      */
     private Snackbar createSnackbar(@StringRes int messageId) {
-        return Snackbar.make(mSnackbarAnchor, messageId, 5000 /* duration */);
+        Snackbar snackbar = Snackbar.make(mSnackbarAnchor, messageId, 5000 /* duration */);
+        snackbar.setAnchorView(findViewById(R.id.tab_hairline));
+        return snackbar;
     }
 
     /**
