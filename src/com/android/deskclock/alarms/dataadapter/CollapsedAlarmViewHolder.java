@@ -105,6 +105,7 @@ public final class CollapsedAlarmViewHolder extends AlarmItemViewHolder {
         bindReadOnlyLabel(context, alarm);
         bindUpcomingInstance(context, alarm);
         bindPreemptiveDismissButton(context, alarm, alarmInstance);
+        daysOfWeek.setAlpha(alarm.enabled ? CLOCK_ENABLED_ALPHA : CLOCK_DISABLED_ALPHA);
     }
 
     private void bindReadOnlyLabel(Context context, Alarm alarm) {
