@@ -368,8 +368,11 @@ public final class AlarmClockFragment extends DeskClockFragment implements
         } else {
             // Trying to display a deleted alarm should only happen from a missed notification for
             // an alarm that has been marked deleted after use.
-            SnackbarManager.show(Snackbar.make(mMainLayout, R.string
-                    .missed_alarm_has_been_deleted, Snackbar.LENGTH_LONG));
+            final View snackbarAnchor = mMainLayout.getRootView().findViewById(R.id.content);
+            final Snackbar snackbar = Snackbar.make(snackbarAnchor,
+                    R.string.missed_alarm_has_been_deleted, Snackbar.LENGTH_LONG);
+            snackbar.setAnchorView(snackbarAnchor.findViewById(R.id.tab_hairline));
+            SnackbarManager.show(snackbar);
         }
     }
 
