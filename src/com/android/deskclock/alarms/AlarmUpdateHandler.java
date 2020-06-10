@@ -188,7 +188,7 @@ public final class AlarmUpdateHandler {
         final String text = mAppContext.getString(R.string.alarm_is_dismissed, time);
         final View snackbarAnchor = mSnackbarAnchor.getRootView().findViewById(R.id.content);
         final Snackbar snackbar = Snackbar.make(snackbarAnchor, text, Snackbar.LENGTH_SHORT);
-        snackbar.setAnchorView(snackbarAnchor.findViewById(R.id.tab_hairline));
+        snackbar.setAnchorView(snackbarAnchor.findViewById(R.id.bottom_view));
         SnackbarManager.show(snackbar);
     }
 
@@ -212,7 +212,7 @@ public final class AlarmUpdateHandler {
                         asyncAddAlarm(deletedAlarm);
                     }
                 });
-        snackbar.setAnchorView(snackbarAnchor.findViewById(R.id.tab_hairline));
+        snackbar.setAnchorView(snackbarAnchor.findViewById(R.id.bottom_view));
         SnackbarManager.show(snackbar);
     }
 

@@ -106,7 +106,7 @@ public class AlarmUtils {
                 snackbarAnchor.getContext(), alarmTimeDelta);
         final View snackbarAnchorContent = snackbarAnchor.getRootView().findViewById(R.id.content);
         final Snackbar snackbar = Snackbar.make(snackbarAnchorContent, text, Snackbar.LENGTH_SHORT);
-        snackbar.setAnchorView(snackbarAnchorContent.findViewById(R.id.tab_hairline));
+        snackbar.setAnchorView(snackbarAnchorContent.findViewById(R.id.bottom_view));
         SnackbarManager.show(snackbar);
         snackbarAnchor.announceForAccessibility(text);
     }

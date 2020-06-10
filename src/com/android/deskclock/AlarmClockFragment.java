@@ -371,7 +371,7 @@ public final class AlarmClockFragment extends DeskClockFragment implements
             final View snackbarAnchor = mMainLayout.getRootView().findViewById(R.id.content);
             final Snackbar snackbar = Snackbar.make(snackbarAnchor,
                     R.string.missed_alarm_has_been_deleted, Snackbar.LENGTH_LONG);
-            snackbar.setAnchorView(snackbarAnchor.findViewById(R.id.tab_hairline));
+            snackbar.setAnchorView(snackbarAnchor.findViewById(R.id.bottom_view));
             SnackbarManager.show(snackbar);
         }
     }
