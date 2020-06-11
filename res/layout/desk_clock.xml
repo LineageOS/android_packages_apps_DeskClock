@@ -122,6 +122,7 @@
         android:layout_height="wrap_content"
         android:layout_below="@id/content"
         android:background="@color/secondary_color"
+        app:itemHorizontalTranslationEnabled="false"
         app:menu="@menu/bottom_navigation_menu"
         app:itemIconTint="@color/tab_tint_color"
         app:itemTextColor="@color/tab_tint_color"
