@@ -1,0 +1,21 @@
+{
+  "comments": [
+    {
+      "key": {
+        "uuid": "712c7fab_100ed3e9",
+        "filename": "res/layout/desk_clock.xml",
+        "patchSetId": 9
+      },
+      "lineNbr": 128,
+      "author": {
+        "id": 26076
+      },
+      "writtenOn": "2020-06-11T17:25:10Z",
+      "side": 1,
+      "message": "Shifting Need to be disable",
+      "revId": "60ad97486c31e811e45bad045b487d7526b5c278",
+      "serverId": "1ec6b3db-b2c1-4fa4-84a2-4c7efe89ba71",
+      "unresolved": true
+    }
+  ]
+}
