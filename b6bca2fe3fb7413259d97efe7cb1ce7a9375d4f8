@@ -1,0 +1,21 @@
+{
+  "comments": [
+    {
+      "key": {
+        "uuid": "e932aef1_b7e5ef03",
+        "filename": "res/layout/alarm_volume_preference.xml",
+        "patchSetId": 1
+      },
+      "lineNbr": 55,
+      "author": {
+        "id": 11883
+      },
+      "writtenOn": "2020-06-12T17:36:08Z",
+      "side": 1,
+      "message": "you should be using a public id and not one from framework",
+      "revId": "b6bca2fe3fb7413259d97efe7cb1ce7a9375d4f8",
+      "serverId": "1ec6b3db-b2c1-4fa4-84a2-4c7efe89ba71",
+      "unresolved": true
+    }
+  ]
+}
