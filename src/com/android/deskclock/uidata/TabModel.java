@@ -18,6 +18,7 @@ package com.android.deskclock.uidata;
 
 import android.content.SharedPreferences;
 import android.text.TextUtils;
+import androidx.annotation.Keep;
 
 import java.util.ArrayList;
 import java.util.Arrays;
@@ -88,6 +89,7 @@ final class TabModel {
      * @param position the position of the tab in the user interface
      * @return the tab at the given {@code ordinal}
      */
+    @Keep
     Tab getTabAt(int position) {
         final int ordinal;
         if (TextUtils.getLayoutDirectionFromLocale(Locale.getDefault()) == LAYOUT_DIRECTION_RTL) {

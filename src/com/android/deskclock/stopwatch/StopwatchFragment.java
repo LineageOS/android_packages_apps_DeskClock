@@ -294,6 +294,11 @@ public final class StopwatchFragment extends DeskClockFragment {
         }
     }
 
+    @Override
+    public final int getFabTargetVisibility() {
+        return View.VISIBLE;
+    }
+
     /**
      * @param color the newly installed app window color
      */
