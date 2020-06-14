@@ -20,6 +20,7 @@ import android.view.KeyEvent;
 import android.widget.Button;
 import android.widget.ImageView;
 import androidx.annotation.ColorInt;
+import androidx.annotation.Keep;
 import androidx.annotation.NonNull;
 import androidx.fragment.app.Fragment;
 
@@ -104,6 +105,7 @@ public abstract class DeskClockFragment extends Fragment implements FabContainer
     /**
      * Select the tab that displays this fragment.
      */
+    @Keep
     public final void selectTab() {
         UiDataModel.getUiDataModel().setSelectedTab(mTab);
     }
