@@ -31,6 +31,7 @@ import android.widget.TextView;
 import androidx.annotation.NonNull;
 import androidx.loader.app.LoaderManager;
 import androidx.loader.content.Loader;
+import androidx.loader.content.CursorLoader;
 import androidx.recyclerview.widget.LinearLayoutManager;
 import androidx.recyclerview.widget.RecyclerView;
 
@@ -81,7 +82,7 @@ public final class AlarmClockFragment extends DeskClockFragment implements
     private RecyclerView mRecyclerView;
 
     // Data
-    private Loader mCursorLoader;
+    private CursorLoader mCursorLoader;
     private long mScrollToAlarmId = Alarm.INVALID_ID;
     private long mExpandedAlarmId = Alarm.INVALID_ID;
     private long mCurrentUpdateToken;
@@ -103,7 +104,7 @@ public final class AlarmClockFragment extends DeskClockFragment implements
     @Override
     public void onCreate(Bundle savedState) {
         super.onCreate(savedState);
-        mCursorLoader = LoaderManager.getInstance(this).initLoader(0, null, this);
+        mCursorLoader = (CursorLoader) LoaderManager.getInstance(this).initLoader(0, null, this);
         if (savedState != null) {
             mExpandedAlarmId = savedState.getLong(KEY_EXPANDED_ID, Alarm.INVALID_ID);
         }
@@ -400,6 +401,11 @@ public final class AlarmClockFragment extends DeskClockFragment implements
     public void onUpdateFabButtons(@NonNull Button left, @NonNull Button right) {
         left.setVisibility(View.INVISIBLE);
         right.setVisibility(View.INVISIBLE);
+    }
+
+    @Override
+    public final int getFabTargetVisibility() {
+        return View.VISIBLE;
     }
 
     private void startCreatingAlarm() {
