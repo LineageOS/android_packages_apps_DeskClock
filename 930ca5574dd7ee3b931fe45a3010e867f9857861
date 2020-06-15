@@ -1,0 +1,27 @@
+{
+  "comments": [
+    {
+      "key": {
+        "uuid": "85731bbc_8e4cc4f7",
+        "filename": "src/com/android/deskclock/NotificationUtils.java",
+        "patchSetId": 1
+      },
+      "lineNbr": 76,
+      "author": {
+        "id": 11883
+      },
+      "writtenOn": "2020-06-15T13:29:50Z",
+      "side": 1,
+      "message": "Not so dummy, name it better",
+      "range": {
+        "startLine": 76,
+        "startChar": 29,
+        "endLine": 76,
+        "endChar": 40
+      },
+      "revId": "930ca5574dd7ee3b931fe45a3010e867f9857861",
+      "serverId": "1ec6b3db-b2c1-4fa4-84a2-4c7efe89ba71",
+      "unresolved": true
+    }
+  ]
+}
