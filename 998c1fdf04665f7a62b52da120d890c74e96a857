@@ -1,0 +1,27 @@
+{
+  "comments": [
+    {
+      "key": {
+        "uuid": "3a1d984f_349a9110",
+        "filename": "src/com/android/deskclock/NotificationUtils.java",
+        "patchSetId": 2
+      },
+      "lineNbr": 125,
+      "author": {
+        "id": 11883
+      },
+      "writtenOn": "2020-06-15T15:42:05Z",
+      "side": 1,
+      "message": "I think the standard way to check bit fields being set is \u003d! 0",
+      "range": {
+        "startLine": 125,
+        "startChar": 56,
+        "endLine": 125,
+        "endChar": 59
+      },
+      "revId": "998c1fdf04665f7a62b52da120d890c74e96a857",
+      "serverId": "1ec6b3db-b2c1-4fa4-84a2-4c7efe89ba71",
+      "unresolved": true
+    }
+  ]
+}
