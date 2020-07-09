@@ -692,7 +692,7 @@ public final class DataModel {
      * @return the uri of the ringtone to which all new alarms default
      */
     public Uri getDefaultAlarmRingtoneUri() {
-        enforceMainLooper();
+//        enforceMainLooper();
         return mAlarmModel.getDefaultAlarmRingtoneUri();
     }
 
