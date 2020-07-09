@@ -35,8 +35,8 @@
         android:paddingEnd="12dp"
         android:paddingTop="4dp"
         android:paddingBottom="4dp">
-        <com.android.internal.widget.PreferenceImageView
-            android:id="@android:id/icon"
+        <androidx.preference.internal.PreferenceImageView
+            android:id="@+id/icon"
             android:layout_width="24dp"
             android:layout_height="24dp"/>
     </LinearLayout>
@@ -52,7 +52,7 @@
             android:layout_width="match_parent"
             android:layout_height="wrap_content">
             <TextView
-                android:id="@android:id/title"
+                android:id="@+id/title"
                 android:layout_width="0dp"
                 android:layout_height="wrap_content"
                 android:layout_weight="1"
@@ -70,7 +70,7 @@
             android:orientation="vertical">
 
             <SeekBar
-                android:id="@*android:id/seekbar"
+                android:id="@+id/seekbar"
                 android:layout_gravity="center_vertical"
                 android:paddingStart="12dp"
                 android:layout_width="match_parent"
