@@ -24,9 +24,6 @@ import android.content.Context;
 import android.content.Intent;
 import android.os.Bundle;
 import android.os.SystemClock;
-import androidx.annotation.NonNull;
-import androidx.annotation.VisibleForTesting;
-import androidx.viewpager.widget.ViewPager;
 import android.view.KeyEvent;
 import android.view.LayoutInflater;
 import android.view.View;
@@ -36,6 +33,9 @@ import android.view.animation.AccelerateInterpolator;
 import android.view.animation.DecelerateInterpolator;
 import android.widget.Button;
 import android.widget.ImageView;
+import androidx.annotation.NonNull;
+import androidx.annotation.VisibleForTesting;
+import androidx.viewpager.widget.ViewPager;
 
 import com.android.deskclock.AnimatorUtils;
 import com.android.deskclock.DeskClock;
@@ -687,6 +687,11 @@ public final class TimerFragment extends DeskClockFragment {
     }
 
     private Timer getTimer() {
+        if (mAdapter == null) {
+            TimerPagerAdapter adapter = new TimerPagerAdapter(getFragmentManager());
+            return adapter.getCount() == 0 ? null : adapter.getTimer(0);
+        }
+
         if (mViewPager == null) {
             return null;
         }
