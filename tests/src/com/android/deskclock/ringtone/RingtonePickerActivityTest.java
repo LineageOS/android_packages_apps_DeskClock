@@ -75,8 +75,6 @@ public class RingtonePickerActivityTest {
         createTimerRingtonePickerActivity();
 
         final List<ItemHolder<Uri>> systemRingtoneHolders = ringtoneAdapter.getItems();
-
-        assertEquals(28, systemRingtoneHolders.size());
         final Iterator<ItemHolder<Uri>> itemsIter = systemRingtoneHolders.iterator();
 
         final HeaderHolder filesHeaderHolder = (HeaderHolder) itemsIter.next();
@@ -115,8 +113,6 @@ public class RingtonePickerActivityTest {
         createAlarmRingtonePickerActivity(ALERT);
 
         final List<ItemHolder<Uri>> systemRingtoneHolders = ringtoneAdapter.getItems();
-
-        assertEquals(28, systemRingtoneHolders.size());
         final Iterator<ItemHolder<Uri>> itemsIter = systemRingtoneHolders.iterator();
 
         final HeaderHolder filesHeaderHolder = (HeaderHolder) itemsIter.next();
@@ -155,8 +151,6 @@ public class RingtonePickerActivityTest {
         createTimerRingtonePickerActivity();
 
         final List<ItemHolder<Uri>> systemRingtoneHolders = ringtoneAdapter.getItems();
-
-        assertEquals(29, systemRingtoneHolders.size());
         final Iterator<ItemHolder<Uri>> itemsIter = systemRingtoneHolders.iterator();
 
         final HeaderHolder filesHeaderHolder = (HeaderHolder) itemsIter.next();
@@ -210,8 +204,6 @@ public class RingtonePickerActivityTest {
         createAlarmRingtonePickerActivity(ALERT);
 
         final List<ItemHolder<Uri>> systemRingtoneHolders = ringtoneAdapter.getItems();
-
-        assertEquals(29, systemRingtoneHolders.size());
         final Iterator<ItemHolder<Uri>> itemsIter = systemRingtoneHolders.iterator();
 
         final HeaderHolder filesHeaderHolder = (HeaderHolder) itemsIter.next();
