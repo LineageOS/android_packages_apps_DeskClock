@@ -37,9 +37,7 @@ import android.media.AudioManager;
 import android.os.Bundle;
 import android.os.Handler;
 import android.os.IBinder;
-import androidx.annotation.NonNull;
-import androidx.core.graphics.ColorUtils;
-import androidx.core.view.animation.PathInterpolatorCompat;
+import android.os.Looper;
 import android.view.KeyEvent;
 import android.view.MotionEvent;
 import android.view.View;
@@ -49,6 +47,9 @@ import android.view.accessibility.AccessibilityManager;
 import android.widget.ImageView;
 import android.widget.TextClock;
 import android.widget.TextView;
+import androidx.annotation.NonNull;
+import androidx.core.graphics.ColorUtils;
+import androidx.core.view.animation.PathInterpolatorCompat;
 
 import com.android.deskclock.AnimatorUtils;
 import com.android.deskclock.BaseActivity;
@@ -85,7 +86,7 @@ public class AlarmActivity extends BaseActivity
     private static final float BUTTON_SCALE_DEFAULT = 0.7f;
     private static final int BUTTON_DRAWABLE_ALPHA_DEFAULT = 165;
 
-    private final Handler mHandler = new Handler();
+    private final Handler mHandler = new Handler(Looper.myLooper());
     private final BroadcastReceiver mReceiver = new BroadcastReceiver() {
         @Override
         public void onReceive(Context context, Intent intent) {
