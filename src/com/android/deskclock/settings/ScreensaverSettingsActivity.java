@@ -19,11 +19,11 @@ package com.android.deskclock.settings;
 import android.annotation.TargetApi;
 import android.os.Build;
 import android.os.Bundle;
-import android.preference.ListPreference;
-import android.preference.Preference;
-import android.preference.PreferenceFragment;
-import androidx.appcompat.app.AppCompatActivity;
 import android.view.MenuItem;
+import androidx.appcompat.app.AppCompatActivity;
+import androidx.preference.ListPreference;
+import androidx.preference.Preference;
+import androidx.preference.PreferenceFragmentCompat;
 
 import com.android.deskclock.R;
 import com.android.deskclock.Utils;
@@ -55,7 +55,7 @@ public final class ScreensaverSettingsActivity extends AppCompatActivity {
     }
 
 
-    public static class PrefsFragment extends PreferenceFragment
+    public static class PrefsFragment extends PreferenceFragmentCompat
             implements Preference.OnPreferenceChangeListener {
 
         @Override
@@ -66,6 +66,10 @@ public final class ScreensaverSettingsActivity extends AppCompatActivity {
             if (Utils.isNOrLater()) {
                 getPreferenceManager().setStorageDeviceProtected();
             }
+        }
+
+        @Override
+        public void onCreatePreferences(Bundle savedInstanceState, String rootKey) {
             addPreferencesFromResource(R.xml.screensaver_settings);
         }
 
