@@ -106,7 +106,7 @@ public final class TimerFragment extends DeskClockFragment {
             Bundle savedInstanceState) {
         final View view = inflater.inflate(R.layout.timer_fragment, container, false);
 
-        mAdapter = new TimerPagerAdapter(getFragmentManager());
+        mAdapter = new TimerPagerAdapter(getParentFragmentManager());
         mViewPager = (ViewPager) view.findViewById(R.id.vertical_view_pager);
         mViewPager.setAdapter(mAdapter);
         mViewPager.addOnPageChangeListener(mTimerPageChangeListener);
