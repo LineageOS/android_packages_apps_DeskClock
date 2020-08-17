@@ -21,6 +21,7 @@ import android.content.Context;
 import android.database.ContentObserver;
 import android.net.Uri;
 import android.os.Handler;
+import android.os.Looper;
 import android.provider.Settings;
 
 import com.android.deskclock.data.DataModel.AlarmVolumeButtonBehavior;
@@ -85,7 +86,7 @@ final class AlarmModel {
     private final class SystemAlarmAlertChangeObserver extends ContentObserver {
 
         private SystemAlarmAlertChangeObserver() {
-            super(new Handler());
+            super(new Handler(Looper.myLooper()));
         }
 
         @Override

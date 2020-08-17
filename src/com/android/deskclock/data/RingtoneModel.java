@@ -30,6 +30,7 @@ import android.media.Ringtone;
 import android.media.RingtoneManager;
 import android.net.Uri;
 import android.os.Handler;
+import android.os.Looper;
 import android.provider.Settings;
 import android.util.ArrayMap;
 import android.util.ArraySet;
@@ -206,7 +207,7 @@ final class RingtoneModel {
     private final class SystemAlarmAlertChangeObserver extends ContentObserver {
 
         private SystemAlarmAlertChangeObserver() {
-            super(new Handler());
+            super(new Handler(Looper.myLooper()));
         }
 
         @Override
