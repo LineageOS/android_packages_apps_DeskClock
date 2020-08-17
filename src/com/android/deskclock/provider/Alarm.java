@@ -20,13 +20,13 @@ import android.content.ContentResolver;
 import android.content.ContentUris;
 import android.content.ContentValues;
 import android.content.Context;
-import android.content.CursorLoader;
 import android.content.Intent;
 import android.database.Cursor;
 import android.media.RingtoneManager;
 import android.net.Uri;
 import android.os.Parcel;
 import android.os.Parcelable;
+import androidx.loader.content.CursorLoader;
 
 import com.android.deskclock.R;
 import com.android.deskclock.data.DataModel;

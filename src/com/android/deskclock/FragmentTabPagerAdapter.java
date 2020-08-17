@@ -16,14 +16,13 @@
 
 package com.android.deskclock;
 
-import android.app.Fragment;
-import android.app.FragmentManager;
-import android.app.FragmentTransaction;
-import androidx.legacy.app.FragmentCompat;
-import androidx.viewpager.widget.PagerAdapter;
 import android.util.ArrayMap;
 import android.view.View;
 import android.view.ViewGroup;
+import androidx.fragment.app.Fragment;
+import androidx.fragment.app.FragmentManager;
+import androidx.fragment.app.FragmentTransaction;
+import androidx.viewpager.widget.PagerAdapter;
 
 import com.android.deskclock.uidata.UiDataModel;
 
@@ -55,7 +54,7 @@ final class FragmentTabPagerAdapter extends PagerAdapter {
     FragmentTabPagerAdapter(DeskClock deskClock) {
         mDeskClock = deskClock;
         mFragmentCache = new ArrayMap<>(getCount());
-        mFragmentManager = deskClock.getFragmentManager();
+        mFragmentManager = deskClock.getSupportFragmentManager();
     }
 
     @Override
@@ -119,8 +118,8 @@ final class FragmentTabPagerAdapter extends PagerAdapter {
         }
 
         if (fragment != mCurrentPrimaryItem) {
-            FragmentCompat.setMenuVisibility(fragment, false);
-            FragmentCompat.setUserVisibleHint(fragment, false);
+            fragment.setMenuVisibility(false);
+            fragment.setUserVisibleHint(false);
         }
 
         return fragment;
@@ -141,12 +140,12 @@ final class FragmentTabPagerAdapter extends PagerAdapter {
         final Fragment fragment = (Fragment) object;
         if (fragment != mCurrentPrimaryItem) {
             if (mCurrentPrimaryItem != null) {
-                FragmentCompat.setMenuVisibility(mCurrentPrimaryItem, false);
-                FragmentCompat.setUserVisibleHint(mCurrentPrimaryItem, false);
+                mCurrentPrimaryItem.setMenuVisibility(false);
+                mCurrentPrimaryItem.setUserVisibleHint(false);
             }
             if (fragment != null) {
-                FragmentCompat.setMenuVisibility(fragment, true);
-                FragmentCompat.setUserVisibleHint(fragment, true);
+                fragment.setMenuVisibility(true);
+                fragment.setUserVisibleHint(true);
             }
             mCurrentPrimaryItem = fragment;
         }
