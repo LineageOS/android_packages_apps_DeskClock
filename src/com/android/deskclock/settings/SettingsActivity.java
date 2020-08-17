@@ -235,7 +235,8 @@ public final class SettingsActivity extends BaseActivity {
 
         private void showDialog(PreferenceDialogFragmentCompat fragment) {
             // Don't show dialog if one is already shown.
-            if (getFragmentManager().findFragmentByTag(PREFERENCE_DIALOG_FRAGMENT_TAG) != null) {
+            if (getParentFragmentManager()
+                    .findFragmentByTag(PREFERENCE_DIALOG_FRAGMENT_TAG) != null) {
                 return;
             }
             // Always set the target fragment, this is required by PreferenceDialogFragment
@@ -243,7 +244,7 @@ public final class SettingsActivity extends BaseActivity {
             fragment.setTargetFragment(this, 0);
             // Don't use getChildFragmentManager(), it causes issues on older platforms when the
             // target fragment is being restored after an orientation change.
-            fragment.show(getFragmentManager(), PREFERENCE_DIALOG_FRAGMENT_TAG);
+            fragment.show(getParentFragmentManager(), PREFERENCE_DIALOG_FRAGMENT_TAG);
         }
 
         /**
