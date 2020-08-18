@@ -21,6 +21,7 @@ import android.content.Context;
 import android.database.ContentObserver;
 import android.net.Uri;
 import android.os.Handler;
+import android.os.Looper;
 import android.provider.Settings;
 import androidx.annotation.VisibleForTesting;
 import android.text.format.DateFormat;
@@ -59,7 +60,8 @@ public class TextTime extends TextView {
     private int mHour;
     private int mMinute;
 
-    private final ContentObserver mFormatChangeObserver = new ContentObserver(new Handler()) {
+    private final ContentObserver mFormatChangeObserver =
+            new ContentObserver(new Handler(Looper.myLooper())) {
         @Override
         public void onChange(boolean selfChange) {
             chooseFormat();
