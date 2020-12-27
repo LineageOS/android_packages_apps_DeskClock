@@ -1046,6 +1046,7 @@ public final class AlarmStateManager extends BroadcastReceiver {
                     stateChangeIntent, PendingIntent.FLAG_UPDATE_CURRENT);
 
             final AlarmManager am = (AlarmManager) context.getSystemService(ALARM_SERVICE);
+            // Is it possible to add code to power on phone 2 minutes before alarm ?
             if (Utils.isMOrLater()) {
                 // Ensure the alarm fires even if the device is dozing.
                 am.setExactAndAllowWhileIdle(AlarmManager.RTC_WAKEUP, timeInMillis, pendingIntent);
