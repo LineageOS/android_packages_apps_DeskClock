@@ -17,7 +17,7 @@
 -->
 <resources xmlns:xliff="urn:oasis:names:tc:xliff:document:1.2">
     <string-array name="action_setting_entries">
-        <item>Snooze</item>
+        <item>Pausa</item>
         <item>Avvisa</item>
         <item>Ingenting</item>
     </string-array>
