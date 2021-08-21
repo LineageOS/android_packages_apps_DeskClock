@@ -23,4 +23,10 @@
         <item>Leig seachad</item>
         <item>Na dèan dad</item>
     </string-array>
+    <string name="firing_alarms_timers_channel">Caismeachdan ⁊ tìmearan gnìomhach</string>
+    <string name="alarm_missed_channel">Caismeachd a dh’fhalbh ort</string>
+    <string name="alarm_snooze_channel">Caismeachdan ’nan dùsal</string>
+    <string name="alarm_upcoming_channel">Caismeachdan aithghearr</string>
+    <string name="stopwatch_channel">Stad-uaireadair</string>
+    <string name="timer_channel">Tìmear</string>
 </resources>

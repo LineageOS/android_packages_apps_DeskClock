@@ -23,4 +23,10 @@
         <item>閉じる</item>
         <item>なし</item>
     </string-array>
+    <string name="firing_alarms_timers_channel">アラームとタイマーを鳴らす</string>
+    <string name="alarm_missed_channel">聞き逃したアラーム</string>
+    <string name="alarm_snooze_channel">スヌーズしたアラーム</string>
+    <string name="alarm_upcoming_channel">次のアラーム</string>
+    <string name="stopwatch_channel">ストップウォッチ</string>
+    <string name="timer_channel">タイマー</string>
 </resources>

@@ -25,6 +25,7 @@
     </string-array>
     <string name="alarm_missed_channel">Alarm yang terlewat</string>
     <string name="alarm_snooze_channel">Alarm yang ditunda</string>
+    <string name="alarm_upcoming_channel">Alarm mendatang</string>
     <string name="stopwatch_channel">Stopwatch</string>
     <string name="timer_channel">Timer</string>
 </resources>
