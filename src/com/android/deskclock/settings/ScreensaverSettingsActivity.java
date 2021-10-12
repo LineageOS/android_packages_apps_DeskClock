@@ -24,9 +24,11 @@ import androidx.appcompat.app.AppCompatActivity;
 import androidx.preference.ListPreference;
 import androidx.preference.Preference;
 import androidx.preference.PreferenceFragmentCompat;
+import androidx.preference.CheckBoxPreference;
 
 import com.android.deskclock.R;
 import com.android.deskclock.Utils;
+import com.android.deskclock.data.DataModel;
 
 /**
  * Settings for Clock screen saver
@@ -91,8 +93,12 @@ public final class ScreensaverSettingsActivity extends AppCompatActivity {
 
         private void refresh() {
             final ListPreference clockStylePref = (ListPreference) findPreference(KEY_CLOCK_STYLE);
+            final CheckBoxPreference nightModePref =
+                    (CheckBoxPreference) findPreference(KEY_NIGHT_MODE);
+
             clockStylePref.setSummary(clockStylePref.getEntry());
             clockStylePref.setOnPreferenceChangeListener(this);
+            nightModePref.setChecked(DataModel.getDataModel().getScreensaverNightModeOn());
         }
     }
 }
