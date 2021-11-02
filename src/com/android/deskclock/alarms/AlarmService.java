@@ -197,7 +197,7 @@ public class AlarmService extends Service {
         // Register the broadcast receiver
         final IntentFilter filter = new IntentFilter(ALARM_SNOOZE_ACTION);
         filter.addAction(ALARM_DISMISS_ACTION);
-        registerReceiver(mActionsReceiver, filter);
+        registerReceiver(mActionsReceiver, filter, Context.RECEIVER_EXPORTED);
         mIsRegistered = true;
 
         // set up for flip and shake actions
