@@ -44,7 +44,6 @@ public class AlarmVolumePreference extends Preference {
     private static final long ALARM_PREVIEW_DURATION_MS = 2000;
 
     private SeekBar mSeekbar;
-    private ImageView mAlarmIcon;
     private boolean mPreviewPlaying;
 
     public AlarmVolumePreference(Context context, AttributeSet attrs) {
@@ -63,8 +62,8 @@ public class AlarmVolumePreference extends Preference {
 
         mSeekbar = (SeekBar) holder.findViewById(R.id.seekbar);
         mSeekbar.setMax(audioManager.getStreamMaxVolume(STREAM_ALARM));
+        mSeekbar.setMin(Utils.isPOrLater() ? audioManager.getStreamMinVolume(STREAM_ALARM) : 0);
         mSeekbar.setProgress(audioManager.getStreamVolume(STREAM_ALARM));
-        mAlarmIcon = (ImageView) holder.findViewById(android.R.id.icon);
 
         onSeekbarChanged();
 
@@ -123,8 +122,6 @@ public class AlarmVolumePreference extends Preference {
 
     private void onSeekbarChanged() {
         mSeekbar.setEnabled(doesDoNotDisturbAllowAlarmPlayback());
-        mAlarmIcon.setImageResource(mSeekbar.getProgress() == 0 ?
-                R.drawable.ic_alarm_off_24dp : R.drawable.ic_alarm_small);
     }
 
     private boolean doesDoNotDisturbAllowAlarmPlayback() {
