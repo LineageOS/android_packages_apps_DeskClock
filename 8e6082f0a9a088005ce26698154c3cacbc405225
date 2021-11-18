@@ -1,6 +1,7 @@
 {
   "comments": [
     {
+      "unresolved": true,
       "key": {
         "uuid": "ea5ecdd9_f535534a",
         "filename": "src/com/android/deskclock/settings/AlarmVolumePreference.java",
@@ -14,8 +15,25 @@
       "side": 1,
       "message": "wait, did this not have unix line endings before? really?",
       "revId": "8e6082f0a9a088005ce26698154c3cacbc405225",
-      "serverId": "1ec6b3db-b2c1-4fa4-84a2-4c7efe89ba71",
-      "unresolved": true
+      "serverId": "1ec6b3db-b2c1-4fa4-84a2-4c7efe89ba71"
+    },
+    {
+      "unresolved": false,
+      "key": {
+        "uuid": "83d070bb_ddf0f0b5",
+        "filename": "src/com/android/deskclock/settings/AlarmVolumePreference.java",
+        "patchSetId": 4
+      },
+      "lineNbr": 146,
+      "author": {
+        "id": 21651
+      },
+      "writtenOn": "2021-11-18T13:32:12Z",
+      "side": 1,
+      "message": "Done",
+      "parentUuid": "ea5ecdd9_f535534a",
+      "revId": "8e6082f0a9a088005ce26698154c3cacbc405225",
+      "serverId": "1ec6b3db-b2c1-4fa4-84a2-4c7efe89ba71"
     }
   ]
 }
