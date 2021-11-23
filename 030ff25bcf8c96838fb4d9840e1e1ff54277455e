@@ -1,0 +1,21 @@
+{
+  "comments": [
+    {
+      "unresolved": false,
+      "key": {
+        "uuid": "a47b62e2_7e9cf899",
+        "filename": "/PATCHSET_LEVEL",
+        "patchSetId": 1
+      },
+      "lineNbr": 0,
+      "author": {
+        "id": 9760
+      },
+      "writtenOn": "2021-11-23T08:59:16Z",
+      "side": 1,
+      "message": "This problem is present on Lineage-17.1. This patch fixes it.",
+      "revId": "030ff25bcf8c96838fb4d9840e1e1ff54277455e",
+      "serverId": "1ec6b3db-b2c1-4fa4-84a2-4c7efe89ba71"
+    }
+  ]
+}
