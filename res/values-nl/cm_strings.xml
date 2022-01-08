@@ -23,4 +23,10 @@
         <item>Uitschakelen</item>
         <item>Geen</item>
     </string-array>
+    <string name="firing_alarms_timers_channel">Starten van alarmen &amp; timers</string>
+    <string name="alarm_missed_channel">Gemiste alarmen</string>
+    <string name="alarm_snooze_channel">Gesluierde alarmen</string>
+    <string name="alarm_upcoming_channel">Aankomende alarmen</string>
+    <string name="stopwatch_channel">Stopwatch</string>
+    <string name="timer_channel">Timer</string>
 </resources>

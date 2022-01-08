@@ -23,4 +23,10 @@
         <item>تجاهل</item>
         <item>لا شيء</item>
     </string-array>
+    <string name="firing_alarms_timers_channel">الإنذارات والتنبيهات</string>
+    <string name="alarm_missed_channel">التنبيهات الفائتة</string>
+    <string name="alarm_snooze_channel">تنبيهات أُغفلت</string>
+    <string name="alarm_upcoming_channel">التنبيهات القادمة</string>
+    <string name="stopwatch_channel">ساعة إيقاف</string>
+    <string name="timer_channel">المؤقت</string>
 </resources>

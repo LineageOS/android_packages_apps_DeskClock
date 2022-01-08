@@ -23,4 +23,10 @@
         <item>忽略</item>
         <item>無</item>
     </string-array>
+    <string name="firing_alarms_timers_channel">觸發鬧鐘和計時器</string>
+    <string name="alarm_missed_channel">錯過的鬧鐘</string>
+    <string name="alarm_snooze_channel">延後的鬧鐘</string>
+    <string name="alarm_upcoming_channel">預定的鬧鐘</string>
+    <string name="stopwatch_channel">碼錶</string>
+    <string name="timer_channel">計時器</string>
 </resources>

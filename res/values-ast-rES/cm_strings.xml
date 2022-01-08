@@ -23,4 +23,10 @@
         <item>Escartar</item>
         <item>Nada</item>
     </string-array>
+    <string name="firing_alarms_timers_channel">Alarmes y temporizadores que suenen</string>
+    <string name="alarm_missed_channel">Alarmes perdíes</string>
+    <string name="alarm_snooze_channel">Alarmes pospuestes</string>
+    <string name="alarm_upcoming_channel">Alarmes próximes</string>
+    <string name="stopwatch_channel">Cronómetru</string>
+    <string name="timer_channel">Temporizador</string>
 </resources>
