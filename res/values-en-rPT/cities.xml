@@ -1,0 +1,386 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!--
+    Copyright (C) 2016 The Android Open Source Project
+
+    Licensed under the Apache License, Version 2.0 (the "License");
+    you may not use this file except in compliance with the License.
+    You may obtain a copy of the License at
+
+         http://www.apache.org/licenses/LICENSE-2.0
+
+    Unless required by applicable law or agreed to in writing, software
+    distributed under the License is distributed on an "AS IS" BASIS,
+    WITHOUT WARRANTIES OR CONDITIONS OF ANY KIND, either express or implied.
+    See the License for the specific language governing permissions and
+    limitations under the License
+  -->
+<resources xmlns:xliff="urn:oasis:names:tc:xliff:document:1.2" xmlns:tools="http://schemas.android.com/tools" tools:ignore="Typos">
+  <!-- This array enumerates the resource keys to all cities available to the app. -->
+  <!--
+    The city names are presented to the user in an alphabetically-sorted list with section headers.
+    The section header is the "index" of all the cities in the section. By default, the section
+    header is the first character of the city name.
+
+    Format of providing a city entry:
+    [index]<xliff:g>=</xliff:g>[city name]<xliff:g>:</xliff:g>[phonetic name]<xliff:g>|[timezone id]</xliff:g>
+
+    [index] can be blank if the first letter of [city name] is accurate; otherwise it must be given.
+    [city name] is required.
+    [phonetic name] can be absent or blank; specify one to control sorting the city in its group.
+    [timezone id] cannot be modified.
+
+    For example, the following specifies that Abidjan will be indexed using A and will be linked to
+    the Africa/Abidjan timezone:
+    A=Abidjan|Africa/Abidjan
+
+    Since Abidjan starts with A, it could also be left as:
+    =Abidjan|Africa/Abidjan
+
+    If a city sorts incorrectly within its index group, its sort order can be controlled by
+    specifying a phonetic name like so:
+    A=Abidjan:Abeedjan|Africa/Abidjan
+
+    The phonetic should use the alphabet that makes the most sense for the locale. For example,
+    Japanese cities may use Katakana to provide a phonetic name.
+    -->
+  <!-- Format: [index]=[city name]|[timezone id] -->
+  <!-- Format: [index]=[city name]|[timezone id] -->
+  <!-- Format: [index]=[city name]|[timezone id] -->
+  <!-- Format: [index]=[city name]|[timezone id] -->
+  <!-- Format: [index]=[city name]|[timezone id] -->
+  <!-- Format: [index]=[city name]|[timezone id] -->
+  <!-- Format: [index]=[city name]|[timezone id] -->
+  <!-- Format: [index]=[city name]|[timezone id] -->
+  <!-- Format: [index]=[city name]|[timezone id] -->
+  <!-- Format: [index]=[city name]|[timezone id] -->
+  <!-- Format: [index]=[city name]|[timezone id] -->
+  <!-- Format: [index]=[city name]|[timezone id] -->
+  <!-- Format: [index]=[city name]|[timezone id] -->
+  <!-- Format: [index]=[city name]|[timezone id] -->
+  <!-- Format: [index]=[city name]|[timezone id] -->
+  <!-- Format: [index]=[city name]|[timezone id] -->
+  <!-- Format: [index]=[city name]|[timezone id] -->
+  <!-- Format: [index]=[city name]|[timezone id] -->
+  <!-- Format: [index]=[city name]|[timezone id] -->
+  <!-- Format: [index]=[city name]|[timezone id] -->
+  <!-- Format: [index]=[city name]|[timezone id] -->
+  <!-- Format: [index]=[city name]|[timezone id] -->
+  <!-- Format: [index]=[city name]|[timezone id] -->
+  <!-- Format: [index]=[city name]|[timezone id] -->
+  <!-- Format: [index]=[city name]|[timezone id] -->
+  <!-- Format: [index]=[city name]|[timezone id] -->
+  <!-- Format: [index]=[city name]|[timezone id] -->
+  <!-- Format: [index]=[city name]|[timezone id] -->
+  <!-- Format: [index]=[city name]|[timezone id] -->
+  <!-- Format: [index]=[city name]|[timezone id] -->
+  <!-- Format: [index]=[city name]|[timezone id] -->
+  <!-- Format: [index]=[city name]|[timezone id] -->
+  <!-- Format: [index]=[city name]|[timezone id] -->
+  <!-- Format: [index]=[city name]|[timezone id] -->
+  <!-- Format: [index]=[city name]|[timezone id] -->
+  <!-- Format: [index]=[city name]|[timezone id] -->
+  <!-- Format: [index]=[city name]|[timezone id] -->
+  <!-- Format: [index]=[city name]|[timezone id] -->
+  <!-- Format: [index]=[city name]|[timezone id] -->
+  <!-- Format: [index]=[city name]|[timezone id] -->
+  <!-- Format: [index]=[city name]|[timezone id] -->
+  <!-- Format: [index]=[city name]|[timezone id] -->
+  <!-- Format: [index]=[city name]|[timezone id] -->
+  <!-- Format: [index]=[city name]|[timezone id] -->
+  <!-- Format: [index]=[city name]|[timezone id] -->
+  <!-- Format: [index]=[city name]|[timezone id] -->
+  <!-- Format: [index]=[city name]|[timezone id] -->
+  <!-- Format: [index]=[city name]|[timezone id] -->
+  <!-- Format: [index]=[city name]|[timezone id] -->
+  <!-- Format: [index]=[city name]|[timezone id] -->
+  <!-- Format: [index]=[city name]|[timezone id] -->
+  <!-- Format: [index]=[city name]|[timezone id] -->
+  <!-- Format: [index]=[city name]|[timezone id] -->
+  <!-- Format: [index]=[city name]|[timezone id] -->
+  <!-- Format: [index]=[city name]|[timezone id] -->
+  <!-- Format: [index]=[city name]|[timezone id] -->
+  <!-- Format: [index]=[city name]|[timezone id] -->
+  <!-- Format: [index]=[city name]|[timezone id] -->
+  <!-- Format: [index]=[city name]|[timezone id] -->
+  <!-- Format: [index]=[city name]|[timezone id] -->
+  <!-- Format: [index]=[city name]|[timezone id] -->
+  <!-- Format: [index]=[city name]|[timezone id] -->
+  <!-- Format: [index]=[city name]|[timezone id] -->
+  <!-- Format: [index]=[city name]|[timezone id] -->
+  <!-- Format: [index]=[city name]|[timezone id] -->
+  <!-- Format: [index]=[city name]|[timezone id] -->
+  <!-- Format: [index]=[city name]|[timezone id] -->
+  <!-- Format: [index]=[city name]|[timezone id] -->
+  <!-- Format: [index]=[city name]|[timezone id] -->
+  <!-- Format: [index]=[city name]|[timezone id] -->
+  <!-- Format: [index]=[city name]|[timezone id] -->
+  <!-- Format: [index]=[city name]|[timezone id] -->
+  <!-- Format: [index]=[city name]|[timezone id] -->
+  <!-- Format: [index]=[city name]|[timezone id] -->
+  <!-- Format: [index]=[city name]|[timezone id] -->
+  <!-- Format: [index]=[city name]|[timezone id] -->
+  <!-- Format: [index]=[city name]|[timezone id] -->
+  <!-- Format: [index]=[city name]|[timezone id] -->
+  <!-- Format: [index]=[city name]|[timezone id] -->
+  <!-- Format: [index]=[city name]|[timezone id] -->
+  <!-- Format: [index]=[city name]|[timezone id] -->
+  <!-- Format: [index]=[city name]|[timezone id] -->
+  <!-- Format: [index]=[city name]|[timezone id] -->
+  <!-- Format: [index]=[city name]|[timezone id] -->
+  <!-- Format: [index]=[city name]|[timezone id] -->
+  <!-- Format: [index]=[city name]|[timezone id] -->
+  <!-- Format: [index]=[city name]|[timezone id] -->
+  <!-- Format: [index]=[city name]|[timezone id] -->
+  <!-- Format: [index]=[city name]|[timezone id] -->
+  <!-- Format: [index]=[city name]|[timezone id] -->
+  <!-- Format: [index]=[city name]|[timezone id] -->
+  <!-- Format: [index]=[city name]|[timezone id] -->
+  <!-- Format: [index]=[city name]|[timezone id] -->
+  <!-- Format: [index]=[city name]|[timezone id] -->
+  <!-- Format: [index]=[city name]:[phonetic name]|[timezone id] -->
+  <!-- Format: [index]=[city name]|[timezone id] -->
+  <!-- Format: [index]=[city name]|[timezone id] -->
+  <!-- Format: [index]=[city name]|[timezone id] -->
+  <!-- Format: [index]=[city name]|[timezone id] -->
+  <!-- Format: [index]=[city name]|[timezone id] -->
+  <!-- Format: [index]=[city name]|[timezone id] -->
+  <!-- Format: [index]=[city name]|[timezone id] -->
+  <!-- Format: [index]=[city name]|[timezone id] -->
+  <!-- Format: [index]=[city name]|[timezone id] -->
+  <!-- Format: [index]=[city name]|[timezone id] -->
+  <!-- Format: [index]=[city name]|[timezone id] -->
+  <!-- Format: [index]=[city name]|[timezone id] -->
+  <!-- Format: [index]=[city name]|[timezone id] -->
+  <!-- Format: [index]=[city name]|[timezone id] -->
+  <!-- Format: [index]=[city name]|[timezone id] -->
+  <!-- Format: [index]=[city name]|[timezone id] -->
+  <!-- Format: [index]=[city name]|[timezone id] -->
+  <!-- Format: [index]=[city name]:[phonetic name]|[timezone id] -->
+  <!-- Format: [index]=[city name]|[timezone id] -->
+  <!-- Format: [index]=[city name]|[timezone id] -->
+  <!-- Format: [index]=[city name]|[timezone id] -->
+  <!-- Format: [index]=[city name]|[timezone id] -->
+  <!-- Format: [index]=[city name]|[timezone id] -->
+  <!-- Format: [index]=[city name]|[timezone id] -->
+  <!-- Format: [index]=[city name]|[timezone id] -->
+  <!-- Format: [index]=[city name]|[timezone id] -->
+  <!-- Format: [index]=[city name]|[timezone id] -->
+  <!-- Format: [index]=[city name]|[timezone id] -->
+  <!-- Format: [index]=[city name]|[timezone id] -->
+  <!-- Format: [index]=[city name]:[phonetic name]|[timezone id] -->
+  <!-- Format: [index]=[city name]|[timezone id] -->
+  <!-- Format: [index]=[city name]|[timezone id] -->
+  <!-- Format: [index]=[city name]|[timezone id] -->
+  <!-- Format: [index]=[city name]:[phonetic name]|[timezone id] -->
+  <!-- Format: [index]=[city name]|[timezone id] -->
+  <!-- Format: [index]=[city name]:[phonetic name]|[timezone id] -->
+  <!-- Format: [index]=[city name]|[timezone id] -->
+  <!-- Format: [index]=[city name]|[timezone id] -->
+  <!-- Format: [index]=[city name]:[phonetic name]|[timezone id] -->
+  <!-- Format: [index]=[city name]|[timezone id] -->
+  <!-- Format: [index]=[city name]|[timezone id] -->
+  <!-- Format: [index]=[city name]|[timezone id] -->
+  <!-- Format: [index]=[city name]|[timezone id] -->
+  <!-- Format: [index]=[city name]|[timezone id] -->
+  <!-- Format: [index]=[city name]|[timezone id] -->
+  <!-- Format: [index]=[city name]|[timezone id] -->
+  <!-- Format: [index]=[city name]|[timezone id] -->
+  <!-- Format: [index]=[city name]|[timezone id] -->
+  <!-- Format: [index]=[city name]|[timezone id] -->
+  <!-- Format: [index]=[city name]|[timezone id] -->
+  <!-- Format: [index]=[city name]|[timezone id] -->
+  <!-- Format: [index]=[city name]|[timezone id] -->
+  <!-- Format: [index]=[city name]|[timezone id] -->
+  <!-- Format: [index]=[city name]|[timezone id] -->
+  <!-- Format: [index]=[city name]|[timezone id] -->
+  <!-- Format: [index]=[city name]|[timezone id] -->
+  <!-- Format: [index]=[city name]|[timezone id] -->
+  <!-- Format: [index]=[city name]|[timezone id] -->
+  <!-- Format: [index]=[city name]|[timezone id] -->
+  <!-- Format: [index]=[city name]|[timezone id] -->
+  <!-- Format: [index]=[city name]|[timezone id] -->
+  <!-- Format: [index]=[city name]|[timezone id] -->
+  <!-- Format: [index]=[city name]|[timezone id] -->
+  <!-- Format: [index]=[city name]|[timezone id] -->
+  <!-- Format: [index]=[city name]|[timezone id] -->
+  <!-- Format: [index]=[city name]|[timezone id] -->
+  <!-- Format: [index]=[city name]|[timezone id] -->
+  <!-- Format: [index]=[city name]|[timezone id] -->
+  <!-- Format: [index]=[city name]|[timezone id] -->
+  <!-- Format: [index]=[city name]|[timezone id] -->
+  <!-- Format: [index]=[city name]|[timezone id] -->
+  <!-- Format: [index]=[city name]|[timezone id] -->
+  <!-- Format: [index]=[city name]|[timezone id] -->
+  <!-- Format: [index]=[city name]|[timezone id] -->
+  <!-- Format: [index]=[city name]|[timezone id] -->
+  <!-- Format: [index]=[city name]|[timezone id] -->
+  <!-- Format: [index]=[city name]|[timezone id] -->
+  <!-- Format: [index]=[city name]|[timezone id] -->
+  <!-- Format: [index]=[city name]|[timezone id] -->
+  <!-- Format: [index]=[city name]|[timezone id] -->
+  <!-- Format: [index]=[city name]|[timezone id] -->
+  <!-- Format: [index]=[city name]|[timezone id] -->
+  <!-- Format: [index]=[city name]|[timezone id] -->
+  <!-- Format: [index]=[city name]|[timezone id] -->
+  <!-- Format: [index]=[city name]|[timezone id] -->
+  <!-- Format: [index]=[city name]|[timezone id] -->
+  <!-- Format: [index]=[city name]|[timezone id] -->
+  <!-- Format: [index]=[city name]|[timezone id] -->
+  <!-- Format: [index]=[city name]|[timezone id] -->
+  <!-- Format: [index]=[city name]|[timezone id] -->
+  <!-- Format: [index]=[city name]|[timezone id] -->
+  <!-- Format: [index]=[city name]|[timezone id] -->
+  <!-- Format: [index]=[city name]|[timezone id] -->
+  <!-- Format: [index]=[city name]|[timezone id] -->
+  <!-- Format: [index]=[city name]|[timezone id] -->
+  <!-- Format: [index]=[city name]|[timezone id] -->
+  <!-- Format: [index]=[city name]|[timezone id] -->
+  <!-- Format: [index]=[city name]|[timezone id] -->
+  <!-- Format: [index]=[city name]|[timezone id] -->
+  <!-- Format: [index]=[city name]|[timezone id] -->
+  <!-- Format: [index]=[city name]|[timezone id] -->
+  <!-- Format: [index]=[city name]|[timezone id] -->
+  <!-- Format: [index]=[city name]|[timezone id] -->
+  <!-- Format: [index]=[city name]|[timezone id] -->
+  <!-- Format: [index]=[city name]|[timezone id] -->
+  <!-- Format: [index]=[city name]|[timezone id] -->
+  <!-- Format: [index]=[city name]|[timezone id] -->
+  <!-- Format: [index]=[city name]|[timezone id] -->
+  <!-- Format: [index]=[city name]|[timezone id] -->
+  <!-- Format: [index]=[city name]|[timezone id] -->
+  <!-- Format: [index]=[city name]|[timezone id] -->
+  <!-- Format: [index]=[city name]|[timezone id] -->
+  <!-- Format: [index]=[city name]|[timezone id] -->
+  <!-- Format: [index]=[city name]|[timezone id] -->
+  <!-- Format: [index]=[city name]|[timezone id] -->
+  <!-- Format: [index]=[city name]|[timezone id] -->
+  <!-- Format: [index]=[city name]|[timezone id] -->
+  <!-- Format: [index]=[city name]|[timezone id] -->
+  <!-- Format: [index]=[city name]|[timezone id] -->
+  <!-- Format: [index]=[city name]|[timezone id] -->
+  <!-- Format: [index]=[city name]|[timezone id] -->
+  <!-- Format: [index]=[city name]|[timezone id] -->
+  <!-- Format: [index]=[city name]|[timezone id] -->
+  <!-- Format: [index]=[city name]|[timezone id] -->
+  <!-- Format: [index]=[city name]|[timezone id] -->
+  <!-- Format: [index]=[city name]|[timezone id] -->
+  <!-- Format: [index]=[city name]|[timezone id] -->
+  <!-- Format: [index]=[city name]|[timezone id] -->
+  <!-- Format: [index]=[city name]|[timezone id] -->
+  <!-- Format: [index]=[city name]|[timezone id] -->
+  <!-- Format: [index]=[city name]|[timezone id] -->
+  <!-- Format: [index]=[city name]|[timezone id] -->
+  <!-- Format: [index]=[city name]|[timezone id] -->
+  <!-- Format: [index]=[city name]|[timezone id] -->
+  <!-- Format: [index]=[city name]|[timezone id] -->
+  <!-- Format: [index]=[city name]|[timezone id] -->
+  <!-- Format: [index]=[city name]|[timezone id] -->
+  <!-- Format: [index]=[city name]|[timezone id] -->
+  <!-- Format: [index]=[city name]|[timezone id] -->
+  <!-- Format: [index]=[city name]|[timezone id] -->
+  <!-- Format: [index]=[city name]|[timezone id] -->
+  <!-- Format: [index]=[city name]|[timezone id] -->
+  <!-- Format: [index]=[city name]|[timezone id] -->
+  <!-- Format: [index]=[city name]|[timezone id] -->
+  <!-- Format: [index]=[city name]|[timezone id] -->
+  <!-- Format: [index]=[city name]|[timezone id] -->
+  <!-- Format: [index]=[city name]|[timezone id] -->
+  <!-- Format: [index]=[city name]|[timezone id] -->
+  <!-- Format: [index]=[city name]|[timezone id] -->
+  <!-- Format: [index]=[city name]|[timezone id] -->
+  <!-- Format: [index]=[city name]|[timezone id] -->
+  <!-- Format: [index]=[city name]|[timezone id] -->
+  <!-- Format: [index]=[city name]|[timezone id] -->
+  <!-- Format: [index]=[city name]:[phonetic name]|[timezone id] -->
+  <!-- Format: [index]=[city name]|[timezone id] -->
+  <!-- Format: [index]=[city name]|[timezone id] -->
+  <!-- Format: [index]=[city name]:[phonetic name]|[timezone id] -->
+  <!-- Format: [index]=[city name]|[timezone id] -->
+  <!-- Format: [index]=[city name]|[timezone id] -->
+  <!-- Format: [index]=[city name]|[timezone id] -->
+  <!-- Format: [index]=[city name]|[timezone id] -->
+  <!-- Format: [index]=[city name]|[timezone id] -->
+  <!-- Format: [index]=[city name]|[timezone id] -->
+  <!-- Format: [index]=[city name]|[timezone id] -->
+  <!-- Format: [index]=[city name]|[timezone id] -->
+  <!-- Format: [index]=[city name]|[timezone id] -->
+  <!-- Format: [index]=[city name]|[timezone id] -->
+  <!-- Format: [index]=[city name]|[timezone id] -->
+  <!-- Format: [index]=[city name]|[timezone id] -->
+  <!-- Format: [index]=[city name]|[timezone id] -->
+  <!-- Format: [index]=[city name]|[timezone id] -->
+  <!-- Format: [index]=[city name]|[timezone id] -->
+  <!-- Format: [index]=[city name]|[timezone id] -->
+  <!-- Format: [index]=[city name]|[timezone id] -->
+  <!-- Format: [index]=[city name]|[timezone id] -->
+  <!-- Format: [index]=[city name]:[phonetic name]|[timezone id] -->
+  <!-- Format: [index]=[city name]|[timezone id] -->
+  <!-- Format: [index]=[city name]|[timezone id] -->
+  <!-- Format: [index]=[city name]|[timezone id] -->
+  <!-- Format: [index]=[city name]|[timezone id] -->
+  <!-- Format: [index]=[city name]|[timezone id] -->
+  <!-- Format: [index]=[city name]|[timezone id] -->
+  <!-- Format: [index]=[city name]|[timezone id] -->
+  <!-- Format: [index]=[city name]|[timezone id] -->
+  <!-- Format: [index]=[city name]|[timezone id] -->
+  <!-- Format: [index]=[city name]|[timezone id] -->
+  <!-- Format: [index]=[city name]|[timezone id] -->
+  <!-- Format: [index]=[city name]|[timezone id] -->
+  <!-- Format: [index]=[city name]|[timezone id] -->
+  <!-- Format: [index]=[city name]|[timezone id] -->
+  <!-- Format: [index]=[city name]|[timezone id] -->
+  <!-- Format: [index]=[city name]|[timezone id] -->
+  <!-- Format: [index]=[city name]|[timezone id] -->
+  <!-- Format: [index]=[city name]|[timezone id] -->
+  <!-- Format: [index]=[city name]|[timezone id] -->
+  <!-- Format: [index]=[city name]|[timezone id] -->
+  <!-- Format: [index]=[city name]|[timezone id] -->
+  <!-- Format: [index]=[city name]|[timezone id] -->
+  <!-- Format: [index]=[city name]|[timezone id] -->
+  <!-- Format: [index]=[city name]|[timezone id] -->
+  <!-- Format: [index]=[city name]|[timezone id] -->
+  <!-- Format: [index]=[city name]|[timezone id] -->
+  <!-- Format: [index]=[city name]|[timezone id] -->
+  <!-- Format: [index]=[city name]|[timezone id] -->
+  <!-- Format: [index]=[city name]|[timezone id] -->
+  <!-- Format: [index]=[city name]|[timezone id] -->
+  <!-- Format: [index]=[city name]|[timezone id] -->
+  <!-- Format: [index]=[city name]|[timezone id] -->
+  <!-- Format: [index]=[city name]|[timezone id] -->
+  <!-- Format: [index]=[city name]|[timezone id] -->
+  <!-- Format: [index]=[city name]|[timezone id] -->
+  <!-- Format: [index]=[city name]|[timezone id] -->
+  <!-- Format: [index]=[city name]|[timezone id] -->
+  <!-- Format: [index]=[city name]|[timezone id] -->
+  <!-- Format: [index]=[city name]|[timezone id] -->
+  <!-- Format: [index]=[city name]|[timezone id] -->
+  <!-- Format: [index]=[city name]|[timezone id] -->
+  <!-- Format: [index]=[city name]|[timezone id] -->
+  <!-- Format: [index]=[city name]|[timezone id] -->
+  <!-- Format: [index]=[city name]|[timezone id] -->
+  <!-- Format: [index]=[city name]|[timezone id] -->
+  <!-- Format: [index]=[city name]|[timezone id] -->
+  <!-- Format: [index]=[city name]|[timezone id] -->
+  <!-- Format: [index]=[city name]|[timezone id] -->
+  <!-- Format: [index]=[city name]|[timezone id] -->
+  <!-- Format: [index]=[city name]|[timezone id] -->
+  <!-- Format: [index]=[city name]|[timezone id] -->
+  <!-- Format: [index]=[city name]|[timezone id] -->
+  <!-- Format: [index]=[city name]|[timezone id] -->
+  <!-- Format: [index]=[city name]|[timezone id] -->
+  <!-- Format: [index]=[city name]|[timezone id] -->
+  <!-- Format: [index]=[city name]|[timezone id] -->
+  <!-- Format: [index]=[city name]|[timezone id] -->
+  <!-- Format: [index]=[city name]|[timezone id] -->
+  <!-- Format: [index]=[city name]|[timezone id] -->
+  <!-- Format: [index]=[city name]|[timezone id] -->
+  <!-- Format: [index]=[city name]|[timezone id] -->
+  <!-- Format: [index]=[city name]|[timezone id] -->
+  <!-- Format: [index]=[city name]|[timezone id] -->
+  <!-- Format: [index]=[city name]|[timezone id] -->
+  <!-- Format: [index]=[city name]|[timezone id] -->
+  <!-- Format: [index]=[city name]|[timezone id] -->
+  <!-- Format: [index]=[city name]|[timezone id] -->
+  <!-- Format: [index]=[city name]|[timezone id] -->
+  <!-- Format: [index]=[city name]|[timezone id] -->
+</resources>

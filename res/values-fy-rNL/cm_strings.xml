@@ -16,13 +16,17 @@
      limitations under the License.
 -->
 <resources xmlns:xliff="urn:oasis:names:tc:xliff:document:1.2">
+    <!-- Setting title for the flip action setting. -->
     <string name="flip_action_title">Aksje by tastel omdraaie</string>
+    <!-- Setting title for the shake action setting. -->
     <string name="shake_action_title">Aksje by tastel skodzje</string>
+    <!-- Entries listed in the setting flip and shake. -->
     <string-array name="action_setting_entries">
         <item>Snooze</item>
         <item>Utskeakelje</item>
         <item>Neat</item>
     </string-array>
+    <!-- Strings for notification channel. -->
     <string name="firing_alarms_timers_channel">Alarms &amp; timers oan it starten</string>
     <string name="alarm_missed_channel">Miste alarms</string>
     <string name="alarm_snooze_channel">Slommere alarms</string>

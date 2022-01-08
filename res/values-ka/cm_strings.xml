@@ -16,12 +16,16 @@
      limitations under the License.
 -->
 <resources xmlns:xliff="urn:oasis:names:tc:xliff:document:1.2">
+    <!-- Setting title for the flip action setting. -->
     <string name="flip_action_title">მოქმედება მოწყობილობის შეტრიალებისას</string>
+    <!-- Setting title for the shake action setting. -->
+    <!-- Entries listed in the setting flip and shake. -->
     <string-array name="action_setting_entries">
         <item>გადადება</item>
         <item>გაუქმება</item>
         <item>არაფერი</item>
     </string-array>
+    <!-- Strings for notification channel. -->
     <string name="firing_alarms_timers_channel">საგანგებო სიგნალები და წამზომები</string>
     <string name="alarm_missed_channel">გაცდენილი მაღვიძარა</string>
     <string name="alarm_snooze_channel">გადადებული მაღვიძარა</string>

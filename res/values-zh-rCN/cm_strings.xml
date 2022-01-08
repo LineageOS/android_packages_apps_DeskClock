@@ -16,13 +16,17 @@
      limitations under the License.
 -->
 <resources xmlns:xliff="urn:oasis:names:tc:xliff:document:1.2">
+    <!-- Setting title for the flip action setting. -->
     <string name="flip_action_title">设备翻转行为</string>
+    <!-- Setting title for the shake action setting. -->
     <string name="shake_action_title">设备摇晃行为</string>
+    <!-- Entries listed in the setting flip and shake. -->
     <string-array name="action_setting_entries">
         <item>贪睡</item>
         <item>忽略</item>
         <item>无</item>
     </string-array>
+    <!-- Strings for notification channel. -->
     <string name="firing_alarms_timers_channel">触发闹钟和计时器</string>
     <string name="alarm_missed_channel">错过的闹钟</string>
     <string name="alarm_snooze_channel">暂停的闹钟</string>

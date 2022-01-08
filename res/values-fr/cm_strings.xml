@@ -16,13 +16,17 @@
      limitations under the License.
 -->
 <resources xmlns:xliff="urn:oasis:names:tc:xliff:document:1.2">
+    <!-- Setting title for the flip action setting. -->
     <string name="flip_action_title">Action lorsque l\'appareil est retourné</string>
+    <!-- Setting title for the shake action setting. -->
     <string name="shake_action_title">Action lorsque l\'appareil est secoué</string>
+    <!-- Entries listed in the setting flip and shake. -->
     <string-array name="action_setting_entries">
         <item>Répéter</item>
         <item>Ignorer</item>
         <item>Aucune</item>
     </string-array>
+    <!-- Strings for notification channel. -->
     <string name="firing_alarms_timers_channel">Déclenchement d\'alarmes et de minuteurs</string>
     <string name="alarm_missed_channel">Alarmes manquées</string>
     <string name="alarm_snooze_channel">Alarmes reportées</string>

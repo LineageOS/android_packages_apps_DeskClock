@@ -16,9 +16,13 @@
      limitations under the License.
 -->
 <resources xmlns:xliff="urn:oasis:names:tc:xliff:document:1.2">
+    <!-- Setting title for the flip action setting. -->
+    <!-- Setting title for the shake action setting. -->
+    <!-- Entries listed in the setting flip and shake. -->
     <string-array name="action_setting_entries">
         <item>Utsett</item>
         <item>Avvis</item>
         <item>Ingenting</item>
     </string-array>
+    <!-- Strings for notification channel. -->
 </resources>

@@ -16,13 +16,17 @@
      limitations under the License.
 -->
 <resources xmlns:xliff="urn:oasis:names:tc:xliff:document:1.2">
+    <!-- Setting title for the flip action setting. -->
     <string name="flip_action_title">Készülék-megfordítással kiváltott művelet</string>
+    <!-- Setting title for the shake action setting. -->
     <string name="shake_action_title">Készülék-megrázással kiváltott művelet</string>
+    <!-- Entries listed in the setting flip and shake. -->
     <string-array name="action_setting_entries">
         <item>Elhalasztás (Szundi)</item>
         <item>Elvetés</item>
         <item>Semmi</item>
     </string-array>
+    <!-- Strings for notification channel. -->
     <string name="firing_alarms_timers_channel">Elévülő értesítések és időzítők</string>
     <string name="alarm_missed_channel">Elmulasztott ébresztők</string>
     <string name="alarm_snooze_channel">Elhalasztott ébresztők</string>
