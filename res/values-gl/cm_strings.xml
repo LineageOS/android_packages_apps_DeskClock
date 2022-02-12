@@ -1,0 +1,39 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!--
+     Copyright (C) 2012-2015 The CyanogenMod Project
+
+     Licensed under the Apache License, Version 2.0 (the "License");
+     you may not use this file except in compliance with the License.
+     You may obtain a copy of the License at
+
+          http://www.apache.org/licenses/LICENSE-2.0
+
+     Unless required by applicable law or agreed to in writing, software
+     distributed under the License is distributed on an "AS IS" BASIS,
+     WITHOUT WARRANTIES OR CONDITIONS OF ANY KIND, either express or implied.
+     See the License for the specific language governing permissions and
+     limitations under the License.
+-->
+<resources xmlns:xliff="urn:oasis:names:tc:xliff:document:1.2">
+    <string name="volume_buttons_summary">Ao premer os botóns de volume vai <xliff:g id="action">%s</xliff:g></string>
+    <string name="flip_action_title">Acción de xiro</string>
+    <string name="flip_action_summary" product="tablet">Xirando a tableta cara abaixo vai <xliff:g id="action">%s</xliff:g></string>
+    <string name="flip_action_summary" product="default">Xirando o teléfono cara abaixo vai <xliff:g id="action">%s</xliff:g></string>
+    <string name="shake_action_title">Acción de mexer</string>
+    <string name="shake_action_summary" product="tablet">Mexendo a tableta vai <xliff:g id="action">%s</xliff:g></string>
+    <string name="shake_action_summary" product="default">Mexendo o teléfono vai <xliff:g id="action">%s</xliff:g></string>
+    <string name="action_summary_snooze">repetir a alarma</string>
+    <string name="action_summary_dismiss">desestimar a alarma</string>
+    <string name="action_summary_do_nothing">non facer nada</string>
+    <string name="menu_item_widget_settings">Configuración do trebello</string>
+    <string name="activity_not_found">Actividade non atopada!</string>
+    <string name="show_status_bar_icon_title">Amosar a icona</string>
+    <string name="show_status_bar_icon_summary">Amosar unha icona na barra de estado cando haxa unha alarma definida</string>
+    <string name="alarm_increasing_volume">Aumentar o volume</string>
+    <string name="profile_description">Perfil <xliff:g id="profile">%s</xliff:g></string>
+    <string name="profile_no_selected">Non hai ningún perfil seleccionado</string>
+    <string name="alarm_modification_service_desc">Este servizo permite que terceiras partes manipulen as alarmas.</string>
+    <string name="power_on_text">Acender o dispositivo?</string>
+    <string name="power_on_yes_text">Si</string>
+    <string name="power_on_no_text">Non</string>
+</resources>

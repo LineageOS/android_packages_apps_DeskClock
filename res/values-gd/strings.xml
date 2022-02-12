@@ -1,0 +1,424 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!-- Copyright (C) 2007 The Android Open Source Project
+
+     Licensed under the Apache License, Version 2.0 (the "License");
+     you may not use this file except in compliance with the License.
+     You may obtain a copy of the License at
+
+          http://www.apache.org/licenses/LICENSE-2.0
+
+     Unless required by applicable law or agreed to in writing, software
+     distributed under the License is distributed on an "AS IS" BASIS,
+     WITHOUT WARRANTIES OR CONDITIONS OF ANY KIND, either express or implied.
+     See the License for the specific language governing permissions and
+     limitations under the License.
+-->
+<resources xmlns:xliff="urn:oasis:names:tc:xliff:document:1.2">
+    <string name="app_label">Cleoc</string>
+    <string name="alarm_list_title">Caismeachdan</string>
+    <string name="add_alarm">Cuir caismeachd ris</string>
+    <string name="menu_desk_clock">Cleoc deasga</string>
+    <string name="menu_edit_alarm">Deasaich a’ chaismeachd</string>
+    <string name="delete_alarm">Sguab às a’ chaismeachd</string>
+    <string name="enable_alarm">Cuir a’ chaismeachd air</string>
+    <string name="disable_alarm">Cuir a’ chaismeachd dheth</string>
+    <string name="delete_alarm_confirm">An sguab thu às a’ chaismeachd seo?</string>
+    <string name="show_clock">Seall an cleoc</string>
+    <string name="hide_clock">Cuir an cleoc am falach</string>
+    <string name="label">Leubail</string>
+    <string name="default_label">Caismeachd</string>
+    <string name="set_alarm">Suidhich caismeachd</string>
+    <string name="alarm_vibrate">Dèan crith</string>
+    <string name="alarm_repeat">A-rithist</string>
+    <string name="alert">Seirm na caismeachd</string>
+    <string name="custom_ringtone">Seirm ghnàthaichte</string>
+    <string name="ringtone">Seirm</string>
+    <string name="time">Àm</string>
+    <string name="alarm_tomorrow">A-màireach</string>
+    <string name="alarm_today">An-diugh</string>
+    <string name="alarm_alert_wake_up">Dùisg\u0021</string>
+    <string name="alarm_alert_off_action_text">Dheth</string>
+    <string name="alarm_alert_dismiss_text">Leig seachad</string>
+    <string name="alarm_alert_dismiss_now_text">Leig seachad an-dràsta</string>
+    <string name="alarm_missed_title">Caismeachd a dh’fhalbh ort</string>
+    <string name="alarm_missed_text"><xliff:g id="alarm_time">%s</xliff:g> – <xliff:g id="alarm_label">%s</xliff:g></string>
+    <string name="alarm_alert_snoozed_text">Na dhùsal</string>
+    <plurals name="alarm_alert_snooze_duration">
+        <item quantity="one"><xliff:g id="number" example="7">%d</xliff:g> mhion</item>
+        <item quantity="two"><xliff:g id="number" example="7">%d</xliff:g> mhion</item>
+        <item quantity="few"><xliff:g id="number" example="7">%d</xliff:g> mion</item>
+        <item quantity="other"><xliff:g id="number" example="7">%d</xliff:g> mion</item>
+    </plurals>
+    <string name="alarm_alert_off_text">Tha a’ chaismeachd dheth</string>
+    <string name="alarm_alert_snooze_text">Dèan dùsal</string>
+    <plurals name="alarm_alert_snooze_set">
+        <item quantity="one">’Na dhùsal fad <xliff:g id="minutes">%d</xliff:g> mhionaid.</item>
+        <item quantity="two">’Na dhùsal fad <xliff:g id="minutes">%d</xliff:g> mhionaid.</item>
+        <item quantity="few">’Na dhùsal fad <xliff:g id="minutes">%d</xliff:g> mionaidean.</item>
+        <item quantity="other">’Na dhùsal fad <xliff:g id="minutes">%d</xliff:g> mionaid.</item>
+    </plurals>
+    <string name="alarm_alert_snooze_until">A’ dèanamh dùsal gu ruige <xliff:g id="time">%s</xliff:g></string>
+    <string name="alarm_alert_predismiss_title">Tha caismeachd gu bhith ann</string>
+    <string name="missed_alarm_has_been_deleted">Chaidh a’ chaismeachd a dh’fhalbh ort a sguabadh às</string>
+    <string-array name="timer_notifications">
+        <item>Nas lugha na mionaid air fhàgail</item>
+        <item><xliff:g id="HOURS" example="2 hours">%1$s</xliff:g> air fhàgail</item>
+        <item><xliff:g id="MINUTES" example="2 minutes">%2$s</xliff:g> air fhàgail</item>
+        <item><xliff:g id="HOURS" example="2 hours">%1$s</xliff:g> <xliff:g id="MINUTES" example="2 minutes">%2$s</xliff:g> air fhàgail</item>
+    </string-array>
+    <string-array name="alarm_set">
+        <item>Gheibh thu caismeachd am broinn mionaid.</item>
+        <item>Gheibh thu caismeachd an ceann <xliff:g id="DAYS" example="2 days">%1$s</xliff:g>.</item>
+        <item>Gheibh thu caismeachd an ceann <xliff:g id="HOURS" example="2 hours">%2$s</xliff:g>.</item>
+        <item>Gheibh thu caismeachd an ceann <xliff:g id="DAYS" example="2 days">%1$s</xliff:g> ’s <xliff:g id="HOURS" example="2 hours">%2$s</xliff:g>.</item>
+        <item>Gheibh thu caismeachd an ceann <xliff:g id="MINUTES" example="2 minutes">%3$s</xliff:g>.</item>
+        <item>Gheibh thu caismeachd an ceann <xliff:g id="DAYS" example="2 days">%1$s</xliff:g> ’s <xliff:g id="MINUTES" example="2 minutes">%3$s</xliff:g>.</item>
+        <item>Gheibh thu caismeachd an ceann <xliff:g id="HOURS" example="2 hours">%2$s</xliff:g> ’s <xliff:g id="MINUTES" example="2 minutes">%3$s</xliff:g>.</item>
+        <item>Gheibh thu caismeachd <xliff:g id="DAYS" example="2 days">%1$s</xliff:g>, <xliff:g id="HOURS" example="2 hours">%2$s</xliff:g> ’s <xliff:g id="MINUTES" example="2 minutes">%3$s</xliff:g>.</item>
+    </string-array>
+    <plurals name="days">
+        <item quantity="one"><xliff:g id="number" example="7">%s</xliff:g> latha</item>
+        <item quantity="two"><xliff:g id="number" example="7">%s</xliff:g> latha</item>
+        <item quantity="few"><xliff:g id="number" example="7">%s</xliff:g> làithean</item>
+        <item quantity="other"><xliff:g id="number" example="7">%s</xliff:g> latha</item>
+    </plurals>
+    <plurals name="hours">
+        <item quantity="one"><xliff:g id="number" example="7">%s</xliff:g> uair a thìde</item>
+        <item quantity="two"><xliff:g id="number" example="7">%s</xliff:g> uair a thìde</item>
+        <item quantity="few"><xliff:g id="number" example="7">%s</xliff:g> uairean a thìde</item>
+        <item quantity="other"><xliff:g id="number" example="7">%s</xliff:g> uair a thìde</item>
+    </plurals>
+    <plurals name="minutes">
+        <item quantity="one"><xliff:g id="number" example="7">%s</xliff:g> mhionaid</item>
+        <item quantity="two"><xliff:g id="number" example="7">%s</xliff:g> mhionaid</item>
+        <item quantity="few"><xliff:g id="number" example="7">%s</xliff:g> mionaidean</item>
+        <item quantity="other"><xliff:g id="number" example="7">%s</xliff:g> mionaid</item>
+    </plurals>
+    <string name="every_day">Gach latha</string>
+    <string name="day_concat">", "</string>
+    <string name="clock_instructions">Tagh cleoc</string>
+    <string name="analog_gadget">Cleoc analogach</string>
+    <string name="help">cobhair</string>
+    <string name="settings">Roghainnean</string>
+    <string name="snooze_duration_title">Dèan dùsal fad</string>
+    <plurals name="snooze_duration">
+        <item quantity="one"><xliff:g id="number" example="7">%s</xliff:g> mhionaid</item>
+        <item quantity="two"><xliff:g id="number" example="7">%s</xliff:g> mhionaid</item>
+        <item quantity="few"><xliff:g id="number" example="7">%s</xliff:g> mionaidean</item>
+        <item quantity="other"><xliff:g id="number" example="7">%s</xliff:g> mionaid</item>
+    </plurals>
+    <plurals name="snooze_picker_label">
+        <item quantity="one">mhionaid</item>
+        <item quantity="two">mhionaid</item>
+        <item quantity="few">mionaidean</item>
+        <item quantity="other">mionaid</item>
+    </plurals>
+    <string name="auto_silence_title">Cuir ’na thost às dèidh </string>
+    <plurals name="auto_silence_summary">
+        <item quantity="one"><xliff:g id="number" example="7">%s</xliff:g> mhionaid</item>
+        <item quantity="two"><xliff:g id="formatted_number" example="7">%s</xliff:g> mhionaid</item>
+        <item quantity="few"><xliff:g id="formatted_number" example="7">%s</xliff:g> mionaidean</item>
+        <item quantity="other"><xliff:g id="formatted_number" example="7">%s</xliff:g> mionaid</item>
+    </plurals>
+    <string name="auto_silence_never">Chan ann idir</string>
+    <string-array name="auto_silence_entries">
+        <item>Mionaid</item>
+        <item>5 mionaidean</item>
+        <item>10 mionaidean</item>
+        <item>10 mionaidean</item>
+        <item>20 mionaid</item>
+        <item>25 mionaid</item>
+        <item>Chan ann idir</item>
+    </string-array>
+    <string name="week_start_title">Tòisich an t-seachdain air</string>
+    <string-array name="week_start_entries">
+        <item>DiSathairne</item>
+        <item>DiDòmhnaich</item>
+        <item>DiLuain</item>
+    </string-array>
+    <string name="done">Deiseil</string>
+    <string name="revert">Till</string>
+    <string name="delete">Sguab às</string>
+    <string name="alarm_volume_title">Àirde fuaim nan caismeachdan</string>
+    <string name="silent_alarm_summary">’Na thost</string>
+    <string name="alarm_notify_text">Dèan dùsal no leig seachad a’ chaismeachd.</string>
+    <string name="alarm_notify_snooze_label"><xliff:g id="label">%s</xliff:g> (’na dhùsal)</string>
+    <string name="alarm_notify_snooze_text">Chaidh caismeachd a shuidheachadh air <xliff:g id="time">%s</xliff:g>. Suath rithe airson sgur dhith.</string>
+    <string name="volume_button_setting_title">Putain àirde na fuaime</string>
+    <string name="volume_button_dialog_title">Èifeachd putain</string>
+    <string-array name="volume_button_setting_entries">
+        <item>Dèan dùsal</item>
+        <item>Leig seachad</item>
+        <item>Na dèan dad</item>
+    </string-array>
+    <string name="default_ringtone_setting_title">Suidhich an t-seirm bhunaiteach</string>
+    <string name="alarm_button_description">Caismeachdan</string>
+    <string name="gallery_button_description">Gailearaidh</string>
+    <string name="music_button_description">Ceòl</string>
+    <string name="nightmode_button_description">Doilleirich</string>
+    <string name="home_button_description">Lòinsear</string>
+    <string name="desk_clock_button_description">Sealladh a’ chleoca</string>
+    <string name="label_description">Leubail</string>
+    <string name="ringtone_description">Seirm</string>
+    <string name="weather_fetch_failure">Chan eil fiosrachadh na h-aimsire ri làimh an-dràsta fhèin.</string>
+    <string name="alarm_klaxon_service_desc">Seirbheis cluich fuaime airson caismeachdan a chaidh a shuidheachadh leis a’ chleoc.</string>
+    <string name="loading_ringtone">A’ luchdadh na seirme\u2026</string>
+    <string name="timer_ring_service_desc">Seirbheis cluich fuaime airson tìmearan a chaidh a shuidheachadh leis a’ chleoc.</string>
+    <string name="control_set_alarm">Suidhich caismeachd</string>
+    <string name="control_set_alarm_with_existing"><xliff:g id="time">%s</xliff:g></string>
+    <string name="menu_alarm">Caismeachd</string>
+    <string name="menu_timer">Tìmear</string>
+    <string name="menu_clock">Cleoc</string>
+    <string name="menu_stopwatch">Stad-uaireadair</string>
+    <string name="button_alarms">Cuir caismeachd ris</string>
+    <string name="button_cities">Bailtean</string>
+    <string name="button_menu">Barrachd roghainnean</string>
+    <string name="menu_item_settings">Roghainnean</string>
+    <string name="menu_item_help">Cobhair</string>
+    <string name="menu_item_night_mode">Am modh oidhche</string>
+    <string name="menu_item_sort_by_gmt_offset">Seòrsaich a-rèir an ama</string>
+    <string name="menu_item_sort_by_name">Seòrsaich a-rèir ainm</string>
+    <string name="selected_cities_label">Na bailtean a thagh thu</string>
+    <string name="sw_resume_button">Lean air</string>
+    <string name="sw_start_button">Tòisich</string>
+    <string name="sw_stop_button">Cuir stad air</string>
+    <string name="sw_lap_button">Cuairt</string>
+    <string name="sw_reset_button">Ath-shuidhich</string>
+    <string name="sw_share_button">Co-roinn</string>
+    <string name="hours_label">u</string>
+    <string name="minutes_label">m</string>
+    <string name="seconds_label">d</string>
+    <string name="hours_label_description">uair</string>
+    <string name="minutes_label_description">mionaid</string>
+    <string name="seconds_label_description">diog</string>
+    <string name="zero">0</string>
+    <string name="sw_share_main">Thug mi <xliff:g id="time">%s</xliff:g></string>
+    <string name="sw_share_laps">Ùineachan cuairte:</string>
+    <string name="sw_notification_lap_number">Cuairt <xliff:g id="number">%d</xliff:g></string>
+    <string-array name="sw_lap_number_set" translatable="true">
+        <item>Àireamh <xliff:g id="number">%d</xliff:g></item>
+        <item>Àireamh <xliff:g id="number">%02d</xliff:g></item>
+    </string-array>
+    <plurals name="Nhours_description">
+        <item quantity="one"><xliff:g id="number" example="7">%d</xliff:g> uair a thìde</item>
+        <item quantity="two"><xliff:g id="number" example="7">%d</xliff:g> uair a thìde</item>
+        <item quantity="few"><xliff:g id="number" example="7">%d</xliff:g> uairean a thìde</item>
+        <item quantity="other"><xliff:g id="number" example="7">%d</xliff:g> uair a thìde</item>
+    </plurals>
+    <plurals name="Nminutes_description">
+        <item quantity="one"><xliff:g id="number" example="7">%d</xliff:g> mhionaid</item>
+        <item quantity="two"><xliff:g id="number" example="7">%d</xliff:g> mhionaid</item>
+        <item quantity="few"><xliff:g id="number" example="7">%d</xliff:g> mionaidean</item>
+        <item quantity="other"><xliff:g id="number" example="7">%d</xliff:g> mionaid</item>
+    </plurals>
+    <plurals name="Nseconds_description">
+        <item quantity="one"><xliff:g id="number" example="7">%d</xliff:g> diog</item>
+        <item quantity="two"><xliff:g id="number" example="7">%d</xliff:g> dhiog</item>
+        <item quantity="few"><xliff:g id="number" example="7">%d</xliff:g> diogan</item>
+        <item quantity="other"><xliff:g id="number" example="7">%d</xliff:g> diog</item>
+    </plurals>
+    <string name="timer_add_timer">Cuir tìmear ris</string>
+    <string name="timer_start">Tòisich</string>
+    <string name="timer_delete">Sguab às</string>
+    <string name="timer_descriptive_delete">Sguab às <xliff:g id="number_string">%s</xliff:g></string>
+    <string name="timer_plus_one">Cuir mionaid ris</string>
+    <string name="timer_plus_1_min">Cuir mionaid ris</string>
+    <string name="timer_stop">Cuir stad air</string>
+    <string name="timer_done">Deiseil</string>
+    <string name="timer_reset">Ath-shuidhich</string>
+    <string name="timer_cancel">Sguir dheth</string>
+    <string name="timer_times_up">Tha an ùine seachad</string>
+    <string name="timer_notification_label">Tìmear</string>
+    <string name="timers_max_count_reached">4 tìmearan air a char as motha</string>
+    <string-array name="sw_share_strings" translatable="true">
+        <item>Nach tusa a tha luath!</item>
+        <item>Meal d’ obair.</item>
+        <item>Ruigidh each mall muileann.</item>
+        <item>Murt!</item>
+        <item>Cuairt luath.</item>
+        <item>Nach luath sin?</item>
+        <item>A’ falbh leis a’ ghaoth.</item>
+        <item>Làrach nam bonn.</item>
+        <item>Nach ortsa a tha a’ chabhag!</item>
+        <item>Cho luath ri geàrr.</item>
+    </string-array>
+    <string name="home_label">Dachaigh</string>
+    <string name="cities_activity_title">Bailtean</string>
+    <string name="clock_settings">Cleoc</string>
+    <string name="clock_style">Stoidhle</string>
+    <string-array name="clock_style_entries">
+        <item>Analogach</item>
+        <item>Digiteach</item>
+    </string-array>
+    <string name="automatic_home_clock">Cleoc dachaigh fèin-obrachail</string>
+    <string name="automatic_home_clock_summary">Nuair a bhios mi a’ siubhal am badeigin far a bheil an t-àm eadar-dhealaichte, cuir ris cleoc mo dhachaigh</string>
+    <string name="home_time_zone">Roinn-tìde na dachaigh</string>
+    <string name="home_time_zone_title">Roinn-tìde na dachaigh</string>
+    <string name="time_picker_cancel">Sguir dheth</string>
+    <string name="time_picker_set">Ceart ma-thà</string>
+    <string name="time_picker_time_seperator">:</string>
+    <string name="time_picker_ampm_label">--</string>
+    <string name="time_picker_00_label">:00</string>
+    <string name="time_picker_30_label">:30</string>
+    <string-array name="timezone_labels">
+        <item>"Eileanan Mharshall"</item>
+        <item>"Eilean Midway"</item>
+        <item>"Na h-Eileanan Hawai’i"</item>
+        <item>"Alaska"</item>
+        <item>"Àm a’ Chuain Sèimh"</item>
+        <item>"Tijuana"</item>
+        <item>"Arizona"</item>
+        <item>"Chihuahua"</item>
+        <item>"Àm Monaidh"</item>
+        <item>"Meadhan-Aimeireaga"</item>
+        <item>"Àm Meadhain"</item>
+        <item>"Cathair Mheagsago"</item>
+        <item>"Saskatchewan"</item>
+        <item>"Bogotá"</item>
+        <item>"Àm an Ear"</item>
+        <item>"A’ Bheiniseala"</item>
+        <item>"Àm a’ Chuain Siar (Barbados)"</item>
+        <item>"Àm a’ Chuain Siar (Canada)"</item>
+        <item>"Manaus"</item>
+        <item>"Santiago"</item>
+        <item>"Talamh an Èisg"</item>
+        <item>"Brasília"</item>
+        <item>"Buenos Aires"</item>
+        <item>"A’ Ghraonlann"</item>
+        <item>"Montevideo"</item>
+        <item>"Meadhan a’ Chuain Siar"</item>
+        <item>"Na h-Eileanan Asorach"</item>
+        <item>"Eileanan a’ Chip Uaine"</item>
+        <item>"Casablanca"</item>
+        <item>"Lunnainn, Dùn Èideann"</item>
+        <item>"Amsterdam, Berlin"</item>
+        <item>"Beograd"</item>
+        <item>"A’ Bhruiseal"</item>
+        <item>"Sarajevo"</item>
+        <item>"Windhoek"</item>
+        <item>"Taobh an Iar Meadhan-Afraga"</item>
+        <item>"Amman, Iòrdan"</item>
+        <item>"Baile na h‑Àithne, İstanbul"</item>
+        <item>"Beirut, Leabanon"</item>
+        <item>"Cairo"</item>
+        <item>"Helsinki"</item>
+        <item>"Ierusalam"</item>
+        <item>"Minsk"</item>
+        <item>"Harare"</item>
+        <item>"Baghdad"</item>
+        <item>"Mosgo"</item>
+        <item>"Cuibhèit"</item>
+        <item>"Nairobi"</item>
+        <item>"Tehrān"</item>
+        <item>"Baku"</item>
+        <item>"T’bilisi"</item>
+        <item>"Yerevan"</item>
+        <item>"Dubai"</item>
+        <item>"Kabul"</item>
+        <item>"Islamabad, Karachi"</item>
+        <item>"Ural’sk"</item>
+        <item>"Yekaterinburg"</item>
+        <item>"Kolkata"</item>
+        <item>"Sri Lanca"</item>
+        <item>"Kathmandu"</item>
+        <item>"Astana"</item>
+        <item>"Yangon"</item>
+        <item>"Krasnoyarsk"</item>
+        <item>"Bangkok"</item>
+        <item>"Beijing"</item>
+        <item>"Hong Kong"</item>
+        <item>"Irkutsk"</item>
+        <item>"Kuala Lumpur"</item>
+        <item>"Peairt"</item>
+        <item>"Taipei"</item>
+        <item>"Seoul"</item>
+        <item>"Tōkyō, Ōsaka"</item>
+        <item>"Yakutsk"</item>
+        <item>"Adelaide"</item>
+        <item>"Darwin"</item>
+        <item>"Brisbane"</item>
+        <item>"Hobart"</item>
+        <item>"Sidni, Canberra"</item>
+        <item>"Vladivostok"</item>
+        <item>"Guam"</item>
+        <item>"Magadan"</item>
+        <item>"Auckland"</item>
+        <item>"Fìdi"</item>
+        <item>"Tonga"</item>
+        <item>"Jakarta"</item>
+    </string-array>
+    <string name="alarm_settings">Caismeachdan</string>
+    <string name="stopwatch_service_desc">Seirbheis an stad-uaireadair airson am brath a ruith.</string>
+    <string name="swn_stopped">Air a stad</string>
+    <string name="description_direction_right">Grad-shlaighd gu deas ’ga leigeil seachad</string>
+    <string name="description_direction_left">Grad-shlaighd gu clì ’ga chur ’na dhùsal</string>
+    <string name="description_direction_both">Grad-shlaighd gu clì ’ga chur ’na dhùsal no gun taobh deas ’ga leigeil seachad</string>
+    <string name="timer_stopped">Chaidh stad a chur air an tìmear</string>
+    <string name="timers_stopped">Chaidh stad a chur air <xliff:g id="number" example="7">%d</xliff:g> tìmear(an)</string>
+    <string name="all_timers_stopped_notif">Suath ris a shealltainn nan tìmearan agad</string>
+    <string name="timers_in_use"><xliff:g id="number" example="7">%d</xliff:g> tìmear(an)</string>
+    <string name="next_timer_notif">An t-ath-thìmear: <xliff:g id="time_remaining" example="2 minutes remaining">%s</xliff:g></string>
+    <string name="screensaver_settings">Roghainnean suaine</string>
+    <string name="night_mode_title">Am modh oidhche</string>
+    <string name="night_mode_summary">Sgrìn ghlè fhann (do sheòmraichean dorcha)</string>
+    <string name="expand_alarm">Leudaich a’ chaismeachd</string>
+    <string name="collapse_alarm">Co-theannaich a’ chaismeachd</string>
+    <string name="alarm_undo">neo-dhèan</string>
+    <string name="alarm_deleted">Chaidh a’ chaismeachd a sguabadh às</string>
+    <string name="slash"> / </string>
+    <string name="world_day_of_week_label"> / <xliff:g id="label">%s</xliff:g></string>
+    <string name="next_alarm_description">An ath-chaismeachd: <xliff:g id="alarm_time" example="Wed 8:00am">%s</xliff:g></string>
+    <string name="alarms_selected">Chaidh <xliff:g id="alarms">%d</xliff:g> a thaghadh</string>
+    <string name="deleted_message">Chaidh a sguabadh às</string>
+    <plurals name="alarm_delete_confirmation">
+        <item quantity="one">An sguab thu às a’ chaismeachd a thagh thu?</item>
+        <item quantity="two">An sguab thu às na caismeachdan a thagh thu?</item>
+        <item quantity="few">An sguab thu às na caismeachdan a thagh thu?</item>
+        <item quantity="other">An sguab thu às na caismeachdan a thagh thu?</item>
+    </plurals>
+    <string name="timer_delete_confirmation">An sguab thu às an tìmear seo?</string>
+    <string name="city_delete_confirmation">An doir thu air falbh am baile seo?</string>
+    <string name="digital_gadget">Cleoc digiteach</string>
+    <string name="no_alarms">Chan eil caismeachd ann</string>
+    <string name="no_alarms_set">Cha deach caismeachd a shuidheachadh</string>
+    <string name="no_upcoming_alarms">CHA BHI CAISMEACHD ANN A DH’AITHGHEARR</string>
+    <string name="time_format_12_mode">h:mm a</string>
+    <string name="time_format_24_mode">k:mm</string>
+    <string name="weekday_time_format_12_mode">EEE, h:mm a</string>
+    <string name="weekday_time_format_24_mode">EEE, k:mm</string>
+    <string name="invalid_time">Àm mì-dhligheach <xliff:g id="invalid_hour" example="25">%d</xliff:g>:<xliff:g id="invalid_minutes" example="63">%d</xliff:g> <xliff:g id="invalid_ampm" example="PM">%s</xliff:g></string>
+    <string name="no_alarm_at">Cha bhi caismeachd aig <xliff:g id="alarm_time_hour" example="14">%d</xliff:g>:<xliff:g id="alarm_time_minutes" example="23">%d</xliff:g></string>
+    <string name="no_scheduled_alarms">Chan eil caismeachd air an sgeideal</string>
+    <string name="no_label_specified">Cha deach leubail a shònrachadh</string>
+    <string name="no_alarms_with_label">Chan eil caismeachd air a bheil an leubail seo</string>
+    <string name="stopwatch_already_running">Tha stad-uaireadair ’ga ruith mu thràth</string>
+    <string name="stopwatch_isnt_running">Chan eil an stad-uaireadair ’ga ruith</string>
+    <string name="stopwatch_cant_be_reset_because_is_running">Cha ghabh an stad-uaireadair ath-shuidheachadh on a tha e ’ga ruith</string>
+    <string name="stopwatch_stopped">Chaidh stad a chur air an stad-uaireadair</string>
+    <string name="stopwatch_reset">Chaidh an stad-uaireadair ath-shuidheachadh</string>
+    <string name="stopwatch_lapped">Thòisich cuairt air an stad-uaireadair</string>
+    <string name="stopwatch_started">Thòisich an stad-uaireadair</string>
+    <string name="no_alarm_scheduled_for_this_time">Chan eil caismeachd air an sgeideal airson an ama seo</string>
+    <string name="alarm_is_dismissed">Chaidh caismeachd aig <xliff:g id="alarm_time" example="14:20">%s</xliff:g> a leigeil seachad</string>
+    <string name="alarm_is_set">Chaidh caismeachd a shuidheachadh aig <xliff:g id="alarm_time" example="14:20">%s</xliff:g></string>
+    <string name="no_timer_set">Cha deach tìmear a shuidheachadh</string>
+    <string name="timer_deleted">Chaidh an tìmear a sguabadh às</string>
+    <string name="timer_already_running">Tha an tìmear ’ga ruith mu thràth</string>
+    <string name="multiple_timers_available">Chan urrainn dhuinn d’ iarrtas a choileanadh, tha iomadh tìmear ri fhaighinn</string>
+    <string name="timer_started">Thòisich an tìmear</string>
+    <string name="timer_created">Chaidh tìmear a chruthachadh</string>
+    <string name="invalid_timer_length">Seo faide mhì-dhligheach do thìmear</string>
+    <string name="timer_was_reset">Chaidh an tìmear ath-shuidheachadh</string>
+    <string name="timer_cant_be_reset_because_its_running">Cha ghabh an tìmear ath-shuidheachadh on a tha e ’ga ruith mu thràth. Cuir stad air an tìmear airson ath-shuidheachadh.</string>
+    <string name="timer_already_stopped">Chaidh stad a chur air an tìmear mu thràth</string>
+    <string name="no_city_selected">Cha deach baile a thaghadh</string>
+    <string name="the_city_you_specified_is_not_available">Chan eil am baile a shònraich thu ri fhaighinn</string>
+    <string name="the_city_already_added">Chaidh am baile seo a chur ris mu thràth</string>
+    <string name="city_added">Chaidh <xliff:g id="city_name" example="Paris">%s</xliff:g> a chur ris</string>
+    <string name="city_deleted">Chaidh <xliff:g id="city_name" example="Paris">%s</xliff:g> a sguabadh às</string>
+    <string name="alarm_cant_be_dismissed_still_more_than_24_hours_away">Cha ghabh a’ chaismeachd aig <xliff:g id="alarm_time" example="14:20">%s</xliff:g> a leigeil seachad fhathast, tha i còrr is 24 uair a thìde romhad</string>
+    <string name="dismiss_alarm">Leig seachad a’ chaismeachd</string>
+    <string name="pick_alarm_to_dismiss">Tagh dè a’ chaismeachd a leigeas tu seachad</string>
+    <string name="no_firing_alarms">Chan eil caismeachd ghnìomhach ann</string>
+    <string name="alarm_is_snoozed">Chaidh a’ chaismeachd aig <xliff:g id="alarm_time" example="14:20">%s</xliff:g> a chur ’na dùsal fad 10 mionaidean</string>
+</resources>

@@ -1,0 +1,39 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!--
+     Copyright (C) 2012-2015 The CyanogenMod Project
+
+     Licensed under the Apache License, Version 2.0 (the "License");
+     you may not use this file except in compliance with the License.
+     You may obtain a copy of the License at
+
+          http://www.apache.org/licenses/LICENSE-2.0
+
+     Unless required by applicable law or agreed to in writing, software
+     distributed under the License is distributed on an "AS IS" BASIS,
+     WITHOUT WARRANTIES OR CONDITIONS OF ANY KIND, either express or implied.
+     See the License for the specific language governing permissions and
+     limitations under the License.
+-->
+<resources xmlns:xliff="urn:oasis:names:tc:xliff:document:1.2">
+    <string name="volume_buttons_summary">Ma bhrùthas tu putan àirde na fuaime, <xliff:g id="action">%s</xliff:g></string>
+    <string name="flip_action_title">Flipeadh</string>
+    <string name="flip_action_summary" product="tablet">Ma bheir thu flip sìos dhen tablaid, <xliff:g id="action">%s</xliff:g></string>
+    <string name="flip_action_summary" product="default">Ma bheir thu flip sìos dhen fhòn, <xliff:g id="action">%s</xliff:g></string>
+    <string name="shake_action_title">Crathadh</string>
+    <string name="shake_action_summary" product="tablet">Ma chrathas tu an tablaid, <xliff:g id="action">%s</xliff:g></string>
+    <string name="shake_action_summary" product="default">Ma chrathas tu am fòn, <xliff:g id="action">%s</xliff:g></string>
+    <string name="action_summary_snooze">cuiridh seo a’ chaismeachd ’na dhùsal</string>
+    <string name="action_summary_dismiss">leigidh seo seachad a’ chaismeachd</string>
+    <string name="action_summary_do_nothing">cha dèan seo dad</string>
+    <string name="menu_item_widget_settings">Roghainnean a’ widget</string>
+    <string name="activity_not_found">Cha deach a’ ghnìomhachd a lorg!</string>
+    <string name="show_status_bar_icon_title">Seall an ìomhaigheag</string>
+    <string name="show_status_bar_icon_summary">Seall ìomhaigheag ann am bàr na staid nuair a tha caismeachd air a shuidheachadh</string>
+    <string name="alarm_increasing_volume">Cur an àirde na fuaime</string>
+    <string name="profile_description">Pròifil <xliff:g id="profile">%s</xliff:g></string>
+    <string name="profile_no_selected">Cha deach pròifil a thaghadh</string>
+    <string name="alarm_modification_service_desc">Seirbheis a bheir comas do threas-phàrtaidhean caismeachdan a chur air gleus.</string>
+    <string name="power_on_text">A bheil thu airson an t-uidheam a chur air?</string>
+    <string name="power_on_yes_text">Tha</string>
+    <string name="power_on_no_text">Chan eil</string>
+</resources>
