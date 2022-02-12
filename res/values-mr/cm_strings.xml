@@ -1,0 +1,31 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!--
+     Copyright (C) 2012-2016 The CyanogenMod Project
+
+     Licensed under the Apache License, Version 2.0 (the "License");
+     you may not use this file except in compliance with the License.
+     You may obtain a copy of the License at
+
+          http://www.apache.org/licenses/LICENSE-2.0
+
+     Unless required by applicable law or agreed to in writing, software
+     distributed under the License is distributed on an "AS IS" BASIS,
+     WITHOUT WARRANTIES OR CONDITIONS OF ANY KIND, either express or implied.
+     See the License for the specific language governing permissions and
+     limitations under the License.
+-->
+<resources xmlns:xliff="urn:oasis:names:tc:xliff:document:1.2">
+    <string name="menu_item_widget_settings">विजेट सेटिंग्ज</string>
+    <string name="profile_description">प्रोफाइल <xliff:g id="profile">%s</xliff:g></string>
+    <string name="profile_no_selected">कोणताही प्रोफाइल निवडलेला नाही</string>
+    <string name="volume_buttons_summary">व्हॉल्युम बटणे दाबल्यामुळे <xliff:g id="action">%s</xliff:g> होईल</string>
+    <string name="flip_action_title">फ्लिप क्रिया</string>
+    <string name="flip_action_summary" product="tablet">टॅब्लेट खाली फ्लिप केल्यामुळे <xliff:g id="action">%s</xliff:g> होईल</string>
+    <string name="flip_action_summary" product="default">फोन खाली फ्लिप केल्यामुळे <xliff:g id="action">%s</xliff:g> होईल</string>
+    <string name="shake_action_title">हलवणे क्रिया</string>
+    <string name="shake_action_summary" product="tablet">हलवण्यामुळे टॅब्लेट <xliff:g id="action">%s</xliff:g> होईल</string>
+    <string name="shake_action_summary" product="default">हलवण्यामुळे फोन <xliff:g id="action">%s</xliff:g> होईल</string>
+    <string name="action_summary_snooze">अलार्म स्नूझ करा</string>
+    <string name="action_summary_dismiss">अलार्म रद्द करा</string>
+    <string name="action_summary_do_nothing">काहीही करू नका</string>
+</resources>

@@ -1,0 +1,31 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!--
+     Copyright (C) 2012-2016 The CyanogenMod Project
+
+     Licensed under the Apache License, Version 2.0 (the "License");
+     you may not use this file except in compliance with the License.
+     You may obtain a copy of the License at
+
+          http://www.apache.org/licenses/LICENSE-2.0
+
+     Unless required by applicable law or agreed to in writing, software
+     distributed under the License is distributed on an "AS IS" BASIS,
+     WITHOUT WARRANTIES OR CONDITIONS OF ANY KIND, either express or implied.
+     See the License for the specific language governing permissions and
+     limitations under the License.
+-->
+<resources xmlns:xliff="urn:oasis:names:tc:xliff:document:1.2">
+    <string name="menu_item_widget_settings">விட்ஜெட் அமைப்புகள்</string>
+    <string name="profile_description">சுயவிவரம் <xliff:g id="profile">%s</xliff:g></string>
+    <string name="profile_no_selected">சுயவிவரம் எதுவும் தேர்வுசெய்யப்படவில்லை</string>
+    <string name="volume_buttons_summary">ஒலியளவு பொத்தான்களை அழுத்துதல் <xliff:g id="action">%s</xliff:g> செய்யும்</string>
+    <string name="flip_action_title">திருப்புதல் செயல்பாடு</string>
+    <string name="flip_action_summary" product="tablet">டேப்ளட்டை கீழே திருப்புதல் <xliff:g id="action">%s</xliff:g> செய்யும்</string>
+    <string name="flip_action_summary" product="default">தொலைப்பேசியை கீழே திருப்புதல் <xliff:g id="action">%s</xliff:g> செய்யும்</string>
+    <string name="shake_action_title">அதிர்வு செயல்பாடு</string>
+    <string name="shake_action_summary" product="tablet">டேப்ளட்டை அதிரச்செய்தல் <xliff:g id="action">%s</xliff:g> செய்யும்</string>
+    <string name="shake_action_summary" product="default">தொலைப்பேசியை அதிரச்செய்தல் <xliff:g id="action">%s</xliff:g> செய்யும்</string>
+    <string name="action_summary_snooze">அலாரத்தை ஒத்திவை</string>
+    <string name="action_summary_dismiss">அலாரத்தை நிராகரி</string>
+    <string name="action_summary_do_nothing">எதுவும் செய்யாதே</string>
+</resources>

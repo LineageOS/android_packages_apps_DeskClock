@@ -1,0 +1,32 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!--
+     Copyright (C) 2012-2016 The CyanogenMod Project
+
+     Licensed under the Apache License, Version 2.0 (the "License");
+     you may not use this file except in compliance with the License.
+     You may obtain a copy of the License at
+
+          http://www.apache.org/licenses/LICENSE-2.0
+
+     Unless required by applicable law or agreed to in writing, software
+     distributed under the License is distributed on an "AS IS" BASIS,
+     WITHOUT WARRANTIES OR CONDITIONS OF ANY KIND, either express or implied.
+     See the License for the specific language governing permissions and
+     limitations under the License.
+-->
+<resources xmlns:xliff="urn:oasis:names:tc:xliff:document:1.2">
+    <string name="menu_item_widget_settings">Parametrat e Widget-it</string>
+    <string name="profile_description">Profili <xliff:g id="profile">%s</xliff:g></string>
+    <string name="profile_no_selected">Nuk është zgjedhur asnjë profil</string>
+    <string name="default_alarm_tone_title">Zilja e parazgjedhur e alarmit</string>
+    <string name="volume_buttons_summary">Kur shtyp butonat e volumit <xliff:g id="action">%s</xliff:g></string>
+    <string name="flip_action_title">Veprimi i kthimit përmbys</string>
+    <string name="flip_action_summary" product="tablet">Kur kthen tabletën përmbys <xliff:g id="action">%s</xliff:g></string>
+    <string name="flip_action_summary" product="default">Kur kthen telefonin përmbys <xliff:g id="action">%s</xliff:g></string>
+    <string name="shake_action_title">Veprimi i Tundjes</string>
+    <string name="shake_action_summary" product="tablet">Kur tund tabletën <xliff:g id="action">%s</xliff:g></string>
+    <string name="shake_action_summary" product="default">Kur tund telefonin <xliff:g id="action">%s</xliff:g></string>
+    <string name="action_summary_snooze">shty alarmin</string>
+    <string name="action_summary_dismiss">largo alarmin</string>
+    <string name="action_summary_do_nothing">mos bëj asgjë</string>
+</resources>

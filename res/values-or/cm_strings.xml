@@ -1,0 +1,31 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!--
+     Copyright (C) 2012-2016 The CyanogenMod Project
+
+     Licensed under the Apache License, Version 2.0 (the "License");
+     you may not use this file except in compliance with the License.
+     You may obtain a copy of the License at
+
+          http://www.apache.org/licenses/LICENSE-2.0
+
+     Unless required by applicable law or agreed to in writing, software
+     distributed under the License is distributed on an "AS IS" BASIS,
+     WITHOUT WARRANTIES OR CONDITIONS OF ANY KIND, either express or implied.
+     See the License for the specific language governing permissions and
+     limitations under the License.
+-->
+<resources xmlns:xliff="urn:oasis:names:tc:xliff:document:1.2">
+    <string name="menu_item_widget_settings">ୱି୍ଜେଟ ସେଟିଂସ୍‍</string>
+    <string name="profile_description">ପ୍ରୋଫାଇଲ୍‍ <xliff:g id="profile">%s</xliff:g></string>
+    <string name="profile_no_selected">କୌଣସି ପ୍ରୋଫାଇଲ୍‍ ଚୟନ କରାଯାଇନାହିଁ</string>
+    <string name="volume_buttons_summary">ଭୋଲ୍ୟୁମ୍‍ ବଟନ୍‍ ଦବାଇବା <xliff:g id="action">%s</xliff:g>କରିବ</string>
+    <string name="flip_action_title">ଫ୍ଲିପ୍‍ ସଂଚାଳନ</string>
+    <string name="flip_action_summary" product="tablet">ଟାବ୍‍ଲେଟ୍‍ ତଳକୁ ଫ୍ଲିପ୍‍ କରିବା <xliff:g id="action">%s</xliff:g>କରିବ</string>
+    <string name="flip_action_summary" product="default">ଫୋନ୍‍ ତଳକୁ ଫ୍ଲିପ୍‍ କରିବା <xliff:g id="action">%s</xliff:g></string>
+    <string name="shake_action_title">ହଲାଇବା କ୍ରିୟା</string>
+    <string name="shake_action_summary" product="tablet">ଟାବ୍‍ଲେଟ୍‍ ହଲାଇବା <xliff:g id="action">%s</xliff:g>କରିବ</string>
+    <string name="shake_action_summary" product="default">ଫୋନ୍‍ ହଲାଇବା <xliff:g id="action">%s</xliff:g></string>
+    <string name="action_summary_snooze">ଆଲାର୍ମ୍‍ ସ୍ନୁଜ୍‍ କରନ୍ତୁ</string>
+    <string name="action_summary_dismiss">ଆଲା୍ର୍ମ୍‍ ଡିସ୍‍ମିସ୍‍‍ କରନ୍ତୁ</string>
+    <string name="action_summary_do_nothing">କିଛି କରନ୍ତୁ ନାହିଁ</string>
+</resources>
