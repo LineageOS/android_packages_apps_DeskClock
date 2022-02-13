@@ -16,12 +16,5 @@
      limitations under the License.
 -->
 <resources xmlns:xliff="urn:oasis:names:tc:xliff:document:1.2">
-    <string name="flip_action_title">기기 뒤집을 때 동작</string>
-    <string name="shake_action_title">기기 흔들 때 동작</string>
-    <string-array name="action_setting_entries">
-        <item>알람 일시 정지</item>
-        <item>알람 해제</item>
-        <item>사용 안 함</item>
-    </string-array>
-    <string name="menu_item_widget_settings">위젯 설정</string>
+    <string name="menu_item_widget_settings">Widget-Astellungen</string>
 </resources>
