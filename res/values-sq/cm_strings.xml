@@ -23,6 +23,7 @@
         <item>Injoro</item>
         <item>Mos bë gjë</item>
     </string-array>
+    <string name="firing_alarms_timers_channel">Alarmet e ndezjes &amp; kohëmatës</string>
     <string name="alarm_missed_channel">Alarmet e humbura</string>
     <string name="alarm_snooze_channel">Alarmet e shtyra</string>
     <string name="alarm_upcoming_channel">Alarmet e ardhshme</string>
