@@ -1,0 +1,324 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!--
+  Copyright (C) 2016 The Android Open Source Project
+
+  Licensed under the Apache License, Version 2.0 (the "License");
+  you may not use this file except in compliance with the License.
+  You may obtain a copy of the License at
+
+      http://www.apache.org/licenses/LICENSE-2.0
+
+  Unless required by applicable law or agreed to in writing, software
+  distributed under the License is distributed on an "AS IS" BASIS,
+  WITHOUT WARRANTIES OR CONDITIONS OF ANY KIND, either express or implied.
+  See the License for the specific language governing permissions and
+  limitations under the License.
+  -->
+<resources xmlns:xliff="urn:oasis:names:tc:xliff:document:1.2" xmlns:tools="http://schemas.android.com/tools">
+    <string name="app_label">Rellògiu</string>
+    <string name="label">Eticheta</string>
+    <string name="default_label">Isvèllia</string>
+    <string name="alarm_vibrate">Vibra</string>
+    <string name="alarm_repeat">Repite</string>
+    <string name="delete">Cantzella</string>
+    <string name="alarm_tomorrow">Cras</string>
+    <string name="alarm_today">Oe</string>
+    <string name="alarm_alert_dismiss_text">Iscarta</string>
+    <string name="alarm_missed_title">Isvèllia pèrdida</string>
+    <string name="alarm_alert_snoozed_text">Post-posta</string>
+    <plurals name="alarm_alert_snooze_duration">
+        <item quantity="one">1 min</item>
+        <item quantity="other"><xliff:g id="number" example="7">%d</xliff:g> min</item>
+    </plurals>
+    <string name="alarm_alert_off_text">Isvèllia disativada</string>
+    <string name="alarm_alert_snooze_text">Post-pone</string>
+    <plurals name="alarm_alert_snooze_set">
+        <item quantity="one">Post-ponende pro 1 minutu.</item>
+        <item quantity="other">Post-ponende pro <xliff:g id="minutes">%d</xliff:g> minutos.</item>
+    </plurals>
+    <string name="alarm_alert_snooze_until">Post-ponende finas a is <xliff:g id="time">%s</xliff:g></string>
+    <string name="alarm_alert_predismiss_title">Isvèllia imbeniente</string>
+    <string name="missed_alarm_has_been_deleted">S\'isvèllia chi as pèrdidu est istada cantzellada</string>
+    <string name="timer_notifications_less_min">Abarrat prus pagu de unu minutu</string>
+    <string-array name="alarm_set">
+        <item>Isvèllia impostada pro prus pagu de unu minutu dae immoe.</item>
+        <item>Isvèllia impostada pro <xliff:g id="DAYS" example="2 days">%1$s</xliff:g> dae immoe.</item>
+        <item>Isvèllia impostada pro <xliff:g id="HOURS" example="2 hours">%2$s</xliff:g> dae immoe.</item>
+        <item>Isvèllia impostada pro <xliff:g id="DAYS" example="2 days">%1$s</xliff:g> and <xliff:g id="HOURS" example="2 hours">%2$s</xliff:g> dae immoe.</item>
+        <item>Isvèllia impostada pro <xliff:g id="MINUTES" example="2 minutes">%3$s</xliff:g> dae immoe.</item>
+        <item>Isvèllia impostada pro <xliff:g id="DAYS" example="2 days">%1$s</xliff:g> and <xliff:g id="MINUTES" example="2 minutes">%3$s</xliff:g> dae immoe.</item>
+        <item>Isvèllia impostada pro <xliff:g id="HOURS" example="2 hours">%2$s</xliff:g> and <xliff:g id="MINUTES" example="2 minutes">%3$s</xliff:g> dae immoe.</item>
+        <item>Isvèllia impostada pro <xliff:g id="DAYS" example="2 days">%1$s</xliff:g>, <xliff:g id="HOURS" example="2 hours">%2$s</xliff:g>, and <xliff:g id="MINUTES" example="2 minutes">%3$s</xliff:g> dae immoe.</item>
+    </string-array>
+    <plurals name="days">
+        <item quantity="one">1 die</item>
+        <item quantity="other"><xliff:g id="number" example="7">%s</xliff:g> dies</item>
+    </plurals>
+    <plurals name="hours">
+        <item quantity="one">1 ora</item>
+        <item quantity="other"><xliff:g id="number" example="7">%s</xliff:g> oras</item>
+    </plurals>
+    <plurals name="minutes">
+        <item quantity="one">1 minutu</item>
+        <item quantity="other"><xliff:g id="number" example="7">%s</xliff:g> minutos</item>
+    </plurals>
+    <string name="every_day">Cada die</string>
+    <string name="day_concat">", "</string>
+    <string name="analog_gadget">Rellògiu analògicu</string>
+    <string name="digital_gadget">Rellògiu digitale</string>
+    <string name="settings">Impostatziones</string>
+    <string name="snooze_duration_title">Longària de post-ponimentu</string>
+    <string name="auto_silence_title">A sa muda a pustis de</string>
+    <plurals name="auto_silence_summary">
+        <item quantity="one">1 minutu</item>
+        <item quantity="other"><xliff:g id="formatted_number" example="7">%s</xliff:g> minutos</item>
+    </plurals>
+    <string name="auto_silence_never">Mai</string>
+    <string-array name="auto_silence_entries">
+        <item>1 minutu</item>
+        <item>5 minutos</item>
+        <item>10 minutos</item>
+        <item>15 minutos</item>
+        <item>20 minutos</item>
+        <item>25 minutos</item>
+        <item>Mai</item>
+    </string-array>
+    <string-array name="crescendo_entries">
+        <item>Istudadu</item>
+        <item>5 seconds</item>
+        <item>10 seconds</item>
+        <item>15 seconds</item>
+        <item>20 seconds</item>
+        <item>25 seconds</item>
+        <item>30 seconds</item>
+        <item>35 seconds</item>
+        <item>40 seconds</item>
+        <item>45 seconds</item>
+        <item>50 seconds</item>
+        <item>55 seconds</item>
+        <item>60 seconds</item>
+    </string-array>
+    <string-array name="snooze_duration_entries">
+        <item>1 minutu</item>
+        <item>2 minutes</item>
+        <item>3 minutes</item>
+        <item>4 minutes</item>
+        <item>5 minutos</item>
+        <item>6 minutes</item>
+        <item>7 minutes</item>
+        <item>8 minutes</item>
+        <item>9 minutes</item>
+        <item>10 minutos</item>
+        <item>11 minutes</item>
+        <item>12 minutes</item>
+        <item>13 minutes</item>
+        <item>14 minutes</item>
+        <item>15 minutos</item>
+        <item>16 minutes</item>
+        <item>17 minutes</item>
+        <item>18 minutes</item>
+        <item>19 minutes</item>
+        <item>20 minutos</item>
+        <item>21 minutes</item>
+        <item>22 minutes</item>
+        <item>23 minutes</item>
+        <item>24 minutes</item>
+        <item>25 minutos</item>
+        <item>26 minutes</item>
+        <item>27 minutes</item>
+        <item>28 minutes</item>
+        <item>29 minutes</item>
+        <item>30 minutes</item>
+    </string-array>
+    <string name="week_start_title">Cumintza sa chida su</string>
+    <string-array name="week_start_entries">
+        <item>Sàbadu</item>
+        <item>Domìnigu</item>
+        <item>Lunis</item>
+    </string-array>
+    <string name="alarm_volume_title">Volùmene de s\'isvèllia</string>
+    <string name="silent_ringtone_title">A sa muda</string>
+    <string name="volume_button_setting_title">Butones de volume</string>
+    <string-array name="volume_button_setting_entries">
+        <item>Post-pone</item>
+        <item>Iscarta</item>
+        <item>Control volume</item>
+    </string-array>
+    <string name="label_description">Eticheta</string>
+    <string name="ringtone_description">Soneria</string>
+    <string name="menu_alarm">Isvèllia</string>
+    <string name="menu_timer">Contadore de tempus</string>
+    <string name="menu_clock">Rellògiu</string>
+    <string name="menu_stopwatch">Cronòmetru</string>
+    <string name="button_alarms">Agiunghe isvèllia</string>
+    <string name="button_cities">Tzitades</string>
+    <string name="menu_item_settings">Impostatziones</string>
+    <string name="menu_item_help">Agiudu</string>
+    <string name="menu_item_sort_by_gmt_offset">Assenta pro ora</string>
+    <string name="menu_item_sort_by_name">Assenta pro nùmene</string>
+    <string name="selected_cities_label">Tzitades seletzionadas</string>
+    <string name="sw_resume_button">Torra a cumintzare</string>
+    <string name="sw_reset_button">Torra a impostare</string>
+    <string name="sw_start_button">Cumintza</string>
+    <string name="sw_lap_button">Agiunghe giru</string>
+    <string name="sw_share_button">Cumpartzidura</string>
+    <string name="hours_label">o</string>
+    <string name="minutes_label">m</string>
+    <string name="seconds_label">s</string>
+    <string name="sw_share_main">Su tempus miu est <xliff:g id="time">%s</xliff:g></string>
+    <string name="sw_share_laps">Tempus de giru:</string>
+    <string name="sw_notification_lap_number">Giru <xliff:g id="number">%d</xliff:g></string>
+    <string name="timer_add_timer">Agiunghe contadore de tempus</string>
+    <string name="timer_start">Cumintza</string>
+    <string name="timer_delete">Cantzella</string>
+    <string name="timer_descriptive_delete">Cantzella <xliff:g id="number_string">%s</xliff:g></string>
+    <string name="timer_plus_one">Agiunghe 1 minutu</string>
+    <string name="timer_plus_1_min">Agiunghe 1 min</string>
+    <string name="timer_stop">Firma·ddu</string>
+    <string name="timer_reset">Torra a impostare</string>
+    <string name="timer_cancel">Annulla</string>
+    <string name="timer_times_up">Tempus agabbadu</string>
+    <string name="timer_notification_label">Contadore de tempus</string>
+    <string-array name="sw_share_strings" translatable="true">
+        <item>Nemos tenet sa lestresa tua. </item>
+        <item>Gosa·ti sa bravesa chi as tentu.</item>
+        <item>Is Andròides sunt connotos pro èssere lestros, ma non che a tue!</item>
+        <item>Uff.</item>
+        <item>L33t times.</item>
+        <item>Arratza de lestresa.</item>
+        <item>Ajò ca torramus a brincare in su tempus.</item>
+        <item>Isceti unu brincu fache a manca.</item>
+        <item>Tenes unu muntone de cosas de fàghere.</item>
+        <item>Lestresa fotònica.</item>
+    </string-array>
+    <string name="home_label">Pàgina printzipale</string>
+    <string name="cities_activity_title">Tzitades</string>
+    <string name="clock_settings">Rellògiu</string>
+    <string name="clock_style">Istile</string>
+    <string-array name="clock_style_entries">
+        <item>Analògicu</item>
+        <item>Digitale</item>
+    </string-array>
+    <string name="automatic_home_clock">Rellògiu de sa zona tua automàticu</string>
+    <string name="automatic_home_clock_summary">Cando biàgias in un\'àrea in ue s\'ora est diversa, agiunghe unu rellògiu pro s\'ora de sa zona tua</string>
+    <string name="home_time_zone">Fusu oràriu de sa zona tua</string>
+    <string name="home_time_zone_title">Fusu oràriu de sa zona tua</string>
+    <string-array name="timezone_labels" tools:ignore="Typos">
+        <item>"Ìsulas Marshall"</item>
+        <item>"Ìsula de Midway"</item>
+        <item>"Hawaii"</item>
+        <item>"Alaska"</item>
+        <item>"Ora de su Patzìficu"</item>
+        <item>"Tijuana"</item>
+        <item>"Arizona"</item>
+        <item>"Chihuahua"</item>
+        <item>"Ora de is Montes"</item>
+        <item>"Amèrica tzentrale"</item>
+        <item>"Ora de su tzentru"</item>
+        <item>"Tzitade de Mèssicu"</item>
+        <item>"Saskatchewan"</item>
+        <item>"Bogotà"</item>
+        <item>"Ora de s'Est"</item>
+        <item>"Venetzuela"</item>
+        <item>"Ora de s'Atlànticu (Barbados)"</item>
+        <item>"Ora de s'Atlànticu (Cànada)"</item>
+        <item>"Manaus"</item>
+        <item>"Santiago"</item>
+        <item>"Terranova"</item>
+        <item>"Brasìlia"</item>
+        <item>"Buenos Àires"</item>
+        <item>"Groenlàndia"</item>
+        <item>"Montevideo"</item>
+        <item>"Atlànticu de mesu"</item>
+        <item>"Azorras"</item>
+        <item>"Ìsulas de Cabu Birde"</item>
+        <item>"Casablanca"</item>
+        <item>"Londra, Dublinu"</item>
+        <item>"Amsterdam, Berlinu"</item>
+        <item>"Belgradu"</item>
+        <item>"Bruxelles"</item>
+        <item>"Sarajevo"</item>
+        <item>"Windhoek"</item>
+        <item>"Ora de s'Àfrica otzidentale"</item>
+        <item>"Ammàn, Giordània"</item>
+        <item>"Atene, Istanbul"</item>
+        <item>"Beirut, Lìbanu"</item>
+        <item>"Càiru"</item>
+        <item>"Helsinki"</item>
+        <item>"Gerusalemme"</item>
+        <item>"Minsk"</item>
+        <item>"Harare"</item>
+        <item>"Bagdad"</item>
+        <item>"Mosca"</item>
+        <item>"Kuwait"</item>
+        <item>"Nairobi"</item>
+        <item>"Teheran"</item>
+        <item>"Baku"</item>
+        <item>"Tbilisi"</item>
+        <item>"Yerevan"</item>
+        <item>"Dubai"</item>
+        <item>"Kabul"</item>
+        <item>"Islamabad, Karachi"</item>
+        <item>"Oral"</item>
+        <item>"Yekaterinburg"</item>
+        <item>"Calcuta"</item>
+        <item>"Sri Lanka"</item>
+        <item>"Kathmandù"</item>
+        <item>"Astana"</item>
+        <item>"Yangon"</item>
+        <item>"Krasnoyarsk"</item>
+        <item>"Bangkok"</item>
+        <item>"Pechinu"</item>
+        <item>"Hong Kong"</item>
+        <item>"Irkutsk"</item>
+        <item>"Kuala Lumpur"</item>
+        <item>"Perth"</item>
+        <item>"Taipei"</item>
+        <item>"Seul"</item>
+        <item>"Tòkyo, Osaka"</item>
+        <item>"Yakutsk"</item>
+        <item>"Adelàide"</item>
+        <item>"Darwin"</item>
+        <item>"Brisbane"</item>
+        <item>"Hobart"</item>
+        <item>"Sydney, Canberra"</item>
+        <item>"Vladivostok"</item>
+        <item>"Guam"</item>
+        <item>"Magadan"</item>
+        <item>"Auckland"</item>
+        <item>"Figi"</item>
+        <item>"Tonga"</item>
+        <item>"Giacarta"</item>
+    </string-array>
+    <string name="shortcut_start_stopwatch_short">Cumintza</string>
+    <string name="alarm_settings">Isvèllias</string>
+    <string name="description_direction_right">Iscurre a dereta pro iscartare</string>
+    <string name="description_direction_left">Iscurre a manca pro post-pònnere</string>
+    <string name="description_direction_both">Iscurre a manca pro post-pònnere o a dereta pro iscartare</string>
+    <string name="timers_in_use"><xliff:g id="number" example="7">%d</xliff:g> contadores de tempus</string>
+    <string name="next_timer_notif">Contadore de tempus imbeniente: <xliff:g id="time_remaining" example="2 minutes remaining">%s</xliff:g></string>
+    <string name="night_mode_title">Modalidade noturna</string>
+    <string name="night_mode_summary">Ischermu oscuru a beru (pro logos oscuros)</string>
+    <string name="expand_alarm">Ismànnia isvèllia</string>
+    <string name="collapse_alarm">Mìnima isvèllia</string>
+    <string name="alarm_undo">annulla</string>
+    <string name="alarm_deleted">Isvèllia cantzellada</string>
+    <string name="world_day_of_week_label"> / <xliff:g id="label">%s</xliff:g></string>
+    <string name="world_tomorrow">Cras</string>
+    <string name="next_alarm_description">Isvèllia imbeniente: <xliff:g id="alarm_time" example="Wed 8:00am">%s</xliff:g></string>
+    <string name="no_alarms">Peruna isvèllia</string>
+    <string name="no_scheduled_alarms">Peruna isvèllia programmada</string>
+    <string name="no_label_specified">Peruna eticheta ispetzificada</string>
+    <string name="no_alarms_with_label">Peruna isvèllia cuntenet s\'eticheta</string>
+    <string name="no_alarm_scheduled_for_this_time">Peruna isvèllia programmada a cust\'ora</string>
+    <string name="alarm_is_dismissed">Isvèllia de is<xliff:g id="alarm_time" example="14:20">%s</xliff:g> iscartada</string>
+    <string name="alarm_is_set">S\'isvèllia est impostada pro is <xliff:g id="alarm_time" example="14:20">%s</xliff:g></string>
+    <string name="timer_created">Contadore de tempus creadu</string>
+    <string name="timer_deleted">Contadore de tempus cantzelladu</string>
+    <string name="invalid_timer_length">Longària de contadore de tempus non bàlida</string>
+    <string name="alarm_cant_be_dismissed_still_more_than_24_hours_away">S\'isvèllia de is <xliff:g id="alarm_time" example="14:20">%s</xliff:g> non faghet ancora a dd\'iscartare, ca mancant ancora prus de 24 oras</string>
+    <string name="dismiss_alarm">Iscarta isvèllia</string>
+    <string name="pick_alarm_to_dismiss">Sèbera s\'isvèllia chi boles iscartare</string>
+    <string name="no_firing_alarms">Non b\'at isvèllias ativas</string>
+    <string name="alarm_is_snoozed"><xliff:g id="alarm_time" example="14:20">%s</xliff:g> isvèllia post-posta pro 10 minutos</string>
+</resources>
