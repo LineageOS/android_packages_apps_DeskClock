@@ -17,9 +17,8 @@
 -->
 <resources xmlns:xliff="urn:oasis:names:tc:xliff:document:1.2">
     <string-array name="action_setting_entries">
-        <item>Pausa</item>
-        <item>Avvisa</item>
-        <item>Ingenting</item>
+        <item>Snooze</item>
+        <item>Dismiss</item>
+        <item>Nudda</item>
     </string-array>
-    <string name="menu_item_widget_settings">Widget-inställningar</string>
 </resources>

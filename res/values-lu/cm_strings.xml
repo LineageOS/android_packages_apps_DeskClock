@@ -16,10 +16,5 @@
      limitations under the License.
 -->
 <resources xmlns:xliff="urn:oasis:names:tc:xliff:document:1.2">
-    <string-array name="action_setting_entries">
-        <item>Pausa</item>
-        <item>Avvisa</item>
-        <item>Ingenting</item>
-    </string-array>
-    <string name="menu_item_widget_settings">Widget-inställningar</string>
+    <string name="menu_item_widget_settings">Widget-Astellungen</string>
 </resources>
