@@ -33,11 +33,11 @@
 
     <color name="clock_gray">#B3FFFFFF</color>
 
-    <color name="default_background">#1A237E</color>
+    <color name="default_background">@android:color/system_neutral1_900</color>
 
     <!-- shadowColor for widget text -->
     <color name="widget_shadow_color">#000000</color>
 
-    <color name="accent_color">#FFEB40</color>
-    <color name="secondary_color">#2F378A</color>
+    <color name="accent_color">@android:color/system_accent1_400</color>
+    <color name="secondary_color">@android:color/system_neutral1_800</color>
 </resources>
