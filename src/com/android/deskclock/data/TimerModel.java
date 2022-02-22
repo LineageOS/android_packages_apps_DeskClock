@@ -676,18 +676,19 @@ final class TimerModel {
         // Build the intent that signals the timer expiration.
         final Intent intent = TimerService.createTimerExpiredIntent(mContext, nextExpiringTimer);
 
+        int flags = PendingIntent.FLAG_ONE_SHOT | PendingIntent.FLAG_NO_CREATE |
+                PendingIntent.FLAG_IMMUTABLE;
         if (nextExpiringTimer == null) {
             // Cancel the existing timer expiration callback.
-            final PendingIntent pi = PendingIntent.getService(mContext,
-                    0, intent, PendingIntent.FLAG_ONE_SHOT | PendingIntent.FLAG_NO_CREATE);
+            final PendingIntent pi = PendingIntent.getService(mContext, 0, intent, flags);
+
             if (pi != null) {
                 mAlarmManager.cancel(pi);
                 pi.cancel();
             }
         } else {
             // Update the existing timer expiration callback.
-            final PendingIntent pi = PendingIntent.getService(mContext,
-                    0, intent, PendingIntent.FLAG_ONE_SHOT | PendingIntent.FLAG_UPDATE_CURRENT);
+            final PendingIntent pi = PendingIntent.getService(mContext, 0, intent, flags);
             schedulePendingIntent(mAlarmManager, nextExpiringTimer.getExpirationTime(), pi);
         }
     }
