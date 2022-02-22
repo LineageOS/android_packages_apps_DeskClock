@@ -60,7 +60,8 @@ class StopwatchNotificationBuilder {
                 .putExtra(Events.EXTRA_EVENT_LABEL, eventLabel);
 
         final PendingIntent pendingShowApp = PendingIntent.getService(context, 0, showApp,
-                PendingIntent.FLAG_ONE_SHOT | PendingIntent.FLAG_UPDATE_CURRENT);
+                PendingIntent.FLAG_ONE_SHOT | PendingIntent.FLAG_UPDATE_CURRENT |
+                PendingIntent.FLAG_IMMUTABLE);
 
         // Compute some values required below.
         final boolean running = stopwatch.isRunning();
