@@ -71,6 +71,7 @@ import java.util.Locale;
 import java.util.TimeZone;
 
 import static android.app.PendingIntent.FLAG_UPDATE_CURRENT;
+import static android.app.PendingIntent.FLAG_IMMUTABLE;
 import static android.appwidget.AppWidgetManager.OPTION_APPWIDGET_HOST_CATEGORY;
 import static android.appwidget.AppWidgetProviderInfo.WIDGET_CATEGORY_KEYGUARD;
 import static android.content.res.Configuration.ORIENTATION_LANDSCAPE;
@@ -280,7 +281,7 @@ public class Utils {
      * @return a PendingIntent that will start a service
      */
     public static PendingIntent pendingServiceIntent(Context context, Intent intent) {
-        return PendingIntent.getService(context, 0, intent, FLAG_UPDATE_CURRENT);
+        return PendingIntent.getService(context, 0, intent, FLAG_UPDATE_CURRENT | FLAG_IMMUTABLE);
     }
 
     /**
@@ -291,7 +292,7 @@ public class Utils {
      * @return a PendingIntent that will start an activity
      */
     public static PendingIntent pendingActivityIntent(Context context, Intent intent) {
-        return PendingIntent.getActivity(context, 0, intent, FLAG_UPDATE_CURRENT);
+        return PendingIntent.getActivity(context, 0, intent, FLAG_UPDATE_CURRENT | FLAG_IMMUTABLE);
     }
 
     /**
