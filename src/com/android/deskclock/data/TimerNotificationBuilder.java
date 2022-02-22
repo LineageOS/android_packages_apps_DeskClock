@@ -152,7 +152,8 @@ class TimerNotificationBuilder {
 
         final PendingIntent pendingShowApp =
                 PendingIntent.getService(context, REQUEST_CODE_UPCOMING, showApp,
-                        PendingIntent.FLAG_ONE_SHOT | PendingIntent.FLAG_UPDATE_CURRENT);
+                        PendingIntent.FLAG_ONE_SHOT | PendingIntent.FLAG_UPDATE_CURRENT |
+                                PendingIntent.FLAG_IMMUTABLE);
 
         final Builder notification = new NotificationCompat.Builder(
                 context, TIMER_MODEL_NOTIFICATION_CHANNEL_ID)
