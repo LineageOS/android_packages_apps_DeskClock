@@ -57,6 +57,7 @@ import java.util.TimeZone;
 import static android.app.AlarmManager.ACTION_NEXT_ALARM_CLOCK_CHANGED;
 import static android.app.PendingIntent.FLAG_NO_CREATE;
 import static android.app.PendingIntent.FLAG_UPDATE_CURRENT;
+import static android.app.PendingIntent.FLAG_IMMUTABLE;
 import static android.appwidget.AppWidgetManager.OPTION_APPWIDGET_MAX_HEIGHT;
 import static android.appwidget.AppWidgetManager.OPTION_APPWIDGET_MAX_WIDTH;
 import static android.appwidget.AppWidgetManager.OPTION_APPWIDGET_MIN_HEIGHT;
@@ -210,7 +211,7 @@ public class DigitalAppWidgetProvider extends AppWidgetProvider {
         // Tapping on the widget opens the app (if not on the lock screen).
         if (Utils.isWidgetClickable(wm, widgetId)) {
             final Intent openApp = new Intent(context, DeskClock.class);
-            final PendingIntent pi = PendingIntent.getActivity(context, 0, openApp, 0);
+            final PendingIntent pi = PendingIntent.getActivity(context, 0, openApp, FLAG_IMMUTABLE);
             rv.setOnClickPendingIntent(R.id.digital_widget, pi);
         }
 
@@ -276,7 +277,8 @@ public class DigitalAppWidgetProvider extends AppWidgetProvider {
             // Tapping on the widget opens the city selection activity (if not on the lock screen).
             if (Utils.isWidgetClickable(wm, widgetId)) {
                 final Intent selectCity = new Intent(context, CitySelectionActivity.class);
-                final PendingIntent pi = PendingIntent.getActivity(context, 0, selectCity, 0);
+                final PendingIntent pi = PendingIntent.getActivity(context, 0, selectCity,
+                        FLAG_IMMUTABLE);
                 rv.setPendingIntentTemplate(R.id.world_city_list, pi);
             }
         }
@@ -369,8 +371,8 @@ public class DigitalAppWidgetProvider extends AppWidgetProvider {
         final Date nextDay = Utils.getNextDay(new Date(), zones);
 
         // Schedule the next day-change callback; at least one city is displayed.
-        final PendingIntent pi =
-                PendingIntent.getBroadcast(context, 0, DAY_CHANGE_INTENT, FLAG_UPDATE_CURRENT);
+        final PendingIntent pi = PendingIntent.getBroadcast(context, 0, DAY_CHANGE_INTENT,
+                        FLAG_UPDATE_CURRENT | FLAG_IMMUTABLE);
         getAlarmManager(context).setExact(AlarmManager.RTC, nextDay.getTime(), pi);
     }
 
@@ -378,8 +380,8 @@ public class DigitalAppWidgetProvider extends AppWidgetProvider {
      * Remove the existing day-change callback.
      */
     private void removeDayChangeCallback(Context context) {
-        final PendingIntent pi =
-                PendingIntent.getBroadcast(context, 0, DAY_CHANGE_INTENT, FLAG_NO_CREATE);
+        final PendingIntent pi = PendingIntent.getBroadcast(context, 0, DAY_CHANGE_INTENT,
+                        FLAG_NO_CREATE | FLAG_IMMUTABLE);
         if (pi != null) {
             getAlarmManager(context).cancel(pi);
             pi.cancel();
