@@ -242,11 +242,11 @@ public class AnimatorUtils {
     public static Animator getBoundsAnimator(View target, View from, View to) {
         // Fetch the content insets for the views. Content bounds are what matter, not total bounds.
         final Rect targetInsets = new Rect();
-        target.getBackground().getPadding(targetInsets);
+        getPadding(target, targetInsets);
         final Rect fromInsets = new Rect();
-        from.getBackground().getPadding(fromInsets);
+        getPadding(from, fromInsets);
         final Rect toInsets = new Rect();
-        to.getBackground().getPadding(toInsets);
+        getPadding(to, toInsets);
 
         // Before animating, the content bounds of target must match the content bounds of from.
         final int startLeft = from.getLeft() - fromInsets.left + targetInsets.left;
@@ -262,6 +262,14 @@ public class AnimatorUtils {
 
         return getBoundsAnimator(target, startLeft, startTop, startRight, startBottom, endLeft,
                 endTop, endRight, endBottom);
+    }
+
+    private static void getPadding(View view, Rect insets) {
+        if (view.getBackground() != null) {
+            view.getBackground().getPadding(insets);
+        } else {
+            ((View)view.getParent()).getBackground().getPadding(insets);
+        }
     }
 
     /**
