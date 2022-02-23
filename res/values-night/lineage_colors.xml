@@ -1,0 +1,7 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <color name="accent_100">#FEF59E</color>
+    <color name="accent_600">#CCCAB5</color>
+
+    <color name="default_background_lighter">#1C1D25</color>
+</resources>

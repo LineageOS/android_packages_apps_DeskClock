@@ -126,6 +126,6 @@
 
     <Space
         android:layout_width="match_parent"
-        android:layout_height="@dimen/fab_height" />
+        android:layout_height="@dimen/fab_container_height" />
 
 </com.android.deskclock.timer.TimerItem>

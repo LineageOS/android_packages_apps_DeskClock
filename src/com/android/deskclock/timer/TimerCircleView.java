@@ -69,7 +69,8 @@ public final class TimerCircleView extends View {
 
         mDotRadius = dotDiameter / 2f;
         mStrokeSize = resources.getDimension(R.dimen.circletimer_circle_size);
-        mRadiusOffset = Utils.calculateRadiusOffset(mStrokeSize, dotDiameter, 0);
+        float markerStrokeSize = resources.getDimension(R.dimen.circletimer_marker_size);
+        mRadiusOffset = Utils.calculateRadiusOffset(mStrokeSize, dotDiameter, markerStrokeSize);
 
         mRemainderColor = Color.WHITE;
         mCompletedColor = ThemeUtils.resolveColor(context, R.attr.colorAccent);
