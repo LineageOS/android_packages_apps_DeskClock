@@ -55,7 +55,8 @@
                     android:layout_width="40dp"
                     android:layout_height="40dp"
                     android:importantForAccessibility="no"
-                    android:scaleType="center" />
+                    android:scaleType="center"
+                    tools:src="@drawable/ic_ringtone"/>
 
                 <TextView
                     android:id="@+id/ringtone_name"
@@ -64,21 +65,23 @@
                     android:paddingEnd="16dp"
                     android:paddingStart="16dp"
                     android:textColor="@color/white"
-                    android:textSize="@dimen/alarm_text_font_size" />
+                    android:textSize="@dimen/alarm_text_font_size"
+                    tools:text="Standard"/>
 
             </LinearLayout>
 
             <ImageView
                 android:id="@+id/sound_image_selected"
+                android:src="@drawable/selector_checkbox_checked"
                 android:layout_width="40dp"
                 android:layout_height="40dp"
                 android:layout_alignParentEnd="true"
                 android:layout_centerVertical="true"
                 android:importantForAccessibility="no"
                 android:scaleType="center"
-                android:tint="?attr/colorAccent"
                 android:visibility="gone"
-                app:srcCompat="@drawable/ic_checkmark" />
+                app:tint="@color/accent_color"
+                tools:visibility="visible"/>
 
         </RelativeLayout>
 

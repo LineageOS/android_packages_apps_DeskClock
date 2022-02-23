@@ -22,37 +22,39 @@
             ?attr/colorBackgroundFloating
         </item>
         <item name="android:navigationBarColor" tools:targetApi="21">?attr/colorPrimaryDark</item>
-        <item name="android:popupTheme" tools:targetApi="21">?attr/popupTheme</item>
+        <item name="popupTheme">@style/ThemeOverlay.Popup</item>
+
         <item name="android:timePickerStyle" tools:targetApi="21">@style/Widget.TimePicker</item>
         <item name="android:windowBackground">@color/default_background</item>
         <item name="android:windowContentOverlay">@null</item>
 
-        <!-- Attributes from androidx.appcompat.appcompat -->
         <item name="colorAccent">@color/accent_color</item>
-        <item name="colorBackgroundFloating">#303030</item>
+        <item name="android:colorSecondary">@color/secondary_color</item>
+        <item name="android:colorForeground">@android:color/system_neutral1_50</item>
+        <item name="colorSurface">@android:color/system_neutral1_500</item>
+        <item name="colorBackgroundFloating">@android:color/system_neutral1_500</item>
         <item name="colorControlActivated">@android:color/white</item>
         <item name="colorControlNormal">?android:attr/textColorPrimary</item>
-        <item name="colorPrimaryDark">#66000000</item>
+        <item name="colorPrimaryDark">#00000000</item>
         <item name="imageButtonStyle">@style/Widget.ImageButton</item>
-        <item name="popupTheme">@style/ThemeOverlay.Popup</item>
+
+        <item name="android:switchStyle">@style/DeskClock.Switch</item>
+        <item name="alertDialogTheme">@style/AlertDialogTheme</item>
+        <item name="snackbarStyle">@style/SnackBarStyle</item>
+        <item name="actionBarSize">64dp</item>
     </style>
 
     <style name="Theme.DeskClock.Settings">
-        <!-- Attributes from androidx.appcompat.appcompat -->
-        <item name="actionBarStyle">@style/Widget.ActionBar</item>
+        <item name="colorPrimary">@color/default_background</item>
+        <item name="elevationOverlayColor">?attr/colorPrimary</item>
         <item name="colorControlActivated">?attr/colorAccent</item>
-        <item name="windowActionBar">true</item>
-        <item name="windowNoTitle">false</item>
-
-        <!-- Attributes from androidx.preference.-->
-        <item name="preferenceTheme">@style/PreferenceThemeOverlay.v14.Material</item>
+        <item name="android:switchStyle">@style/DeskClock.Switch</item>
+        <item name="preferenceTheme">@style/Theme.DeskClock.Settings.PreferenceTheme</item>
+        <item name="android:dropDownSpinnerStyle">@style/DeskClock.Settings.DropDownSpinnerStyle</item>
     </style>
 
-    <style name="Theme.DeskClock.RingtonePicker">
-        <!-- Attributes from androidx.appcompat.appcompat -->
-        <item name="actionBarStyle">@style/Widget.ActionBar</item>
-        <item name="windowActionBar">true</item>
-        <item name="windowNoTitle">false</item>
+    <style name="Theme.DeskClock.Settings.PreferenceTheme" parent="@style/PreferenceThemeOverlay">
+        <item name="switchPreferenceCompatStyle">@style/DeskClock.SwitchPreferenceCompat</item>
     </style>
 
     <style name="Theme.DeskClock.CitySelection">
@@ -67,8 +69,8 @@
         <item name="colorControlActivated">?attr/colorAccent</item>
     </style>
 
-    <style name="ThemeOverlay.Popup" parent="ThemeOverlay.AppCompat">
-        <item name="android:colorBackground">?attr/colorBackgroundFloating</item>
+    <style name="ThemeOverlay.Popup" parent="Widget.AppCompat.PopupMenu">
+        <item name="android:background">@drawable/popup_background</item>
+        <item name="android:colorBackground">@color/transparent</item>
     </style>
-
 </resources>

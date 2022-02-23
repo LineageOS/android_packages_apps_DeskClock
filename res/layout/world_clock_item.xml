@@ -16,20 +16,20 @@
 
 <LinearLayout
     xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    style="@style/MaterialCardViewStyle"
     android:layout_width="match_parent"
     android:layout_height="wrap_content"
-    android:orientation="horizontal">
-
-    <!-- Left gutter. -->
-    <Space
-        android:layout_width="0dp"
-        android:layout_height="match_parent"
-        android:layout_weight="@integer/gutter_width_percent" />
+    android:orientation="horizontal"
+    android:background="@drawable/alarm_background"
+    android:paddingTop="24.0dip"
+    android:paddingBottom="24.0dip"
+    android:paddingStart="16.0dip"
+    android:paddingEnd="16.0dip">
 
     <LinearLayout
-        android:layout_width="0dp"
+        android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:layout_weight="@integer/guttered_content_width_percent"
         android:gravity="center_vertical">
 
         <include
@@ -38,14 +38,15 @@
             android:layout_height="wrap_content"
             android:layout_weight="1" />
 
-        <TextClock
+        <com.android.deskclock.widget.AutoSizingTextClock
             android:id="@+id/digital_clock"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:paddingStart="24dp"
             android:layout_gravity="end"
             android:singleLine="true"
-            android:textAppearance="@style/world_clock_time"/>
+            android:textAppearance="@style/world_clock_time"
+            tools:text="01:23"/>
 
         <com.android.deskclock.AnalogClock
             android:id="@+id/analog_clock"
@@ -53,14 +54,8 @@
             android:layout_height="@dimen/world_clock_analog_size"
             android:paddingStart="24dp"
             android:layout_gravity="end"
-            android:layout_marginBottom="@dimen/bottom_text_spacing_analog_small" />
+            android:layout_marginBottom="@dimen/bottom_text_spacing_analog_small"
+            android:visibility="gone"/>
 
     </LinearLayout>
-
-    <!-- Right gutter. -->
-    <Space
-        android:layout_width="0dp"
-        android:layout_height="match_parent"
-        android:layout_weight="@integer/gutter_width_percent" />
-
 </LinearLayout>
