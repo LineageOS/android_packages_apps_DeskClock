@@ -14,11 +14,11 @@
 
 package com.android.deskclock.timer;
 
+import android.app.KeyguardManager;
 import android.content.Intent;
 import android.content.pm.ActivityInfo;
 import android.os.Bundle;
 import android.os.SystemClock;
-import androidx.annotation.NonNull;
 import android.text.TextUtils;
 import android.transition.AutoTransition;
 import android.transition.TransitionManager;
@@ -29,6 +29,8 @@ import android.view.ViewGroup;
 import android.view.WindowManager;
 import android.widget.FrameLayout;
 import android.widget.TextView;
+
+import androidx.annotation.NonNull;
 
 import com.android.deskclock.BaseActivity;
 import com.android.deskclock.LogUtils;
@@ -81,11 +83,13 @@ public class ExpiredTimersActivity extends BaseActivity {
         final View view = findViewById(R.id.expired_timers_activity);
         view.setSystemUiVisibility(View.SYSTEM_UI_FLAG_LOW_PROFILE);
 
-        getWindow().addFlags(WindowManager.LayoutParams.FLAG_SHOW_WHEN_LOCKED
-                | WindowManager.LayoutParams.FLAG_TURN_SCREEN_ON
-                | WindowManager.LayoutParams.FLAG_KEEP_SCREEN_ON
-                | WindowManager.LayoutParams.FLAG_DISMISS_KEYGUARD
+        getWindow().addFlags(WindowManager.LayoutParams.FLAG_KEEP_SCREEN_ON
                 | WindowManager.LayoutParams.FLAG_ALLOW_LOCK_WHILE_SCREEN_ON);
+
+        setTurnScreenOn(true);
+        setShowWhenLocked(true);
+        KeyguardManager kgm = getSystemService(KeyguardManager.class);
+        kgm.requestDismissKeyguard(this, null);
 
         // Close dialogs and window shade, so this is fully visible
         sendBroadcast(new Intent(Intent.ACTION_CLOSE_SYSTEM_DIALOGS));
