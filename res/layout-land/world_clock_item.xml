@@ -14,47 +14,47 @@
      limitations under the License.
 -->
 
-<LinearLayout
-    xmlns:android="http://schemas.android.com/apk/res/android"
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    style="@style/MaterialCardViewStyle"
     android:layout_width="match_parent"
-    android:layout_height="wrap_content">
+    android:layout_height="wrap_content"
+    android:background="@drawable/alarm_background"
+    android:paddingTop="22.0dip"
+    android:paddingBottom="22.0dip"
+    android:paddingStart="16.0dip"
+    android:paddingEnd="16.0dip">
 
     <LinearLayout
-        android:layout_width="0dp"
+        android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:layout_weight="29"
         android:orientation="vertical">
 
-        <TextClock
+        <com.android.deskclock.widget.AutoSizingTextClock
             android:id="@+id/digital_clock"
             style="@style/world_clock_time"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
-            android:gravity="center_horizontal"
+            android:gravity="start"
             android:ellipsize="end"
             android:singleLine="true"
-            android:includeFontPadding="false" />
+            android:includeFontPadding="false"
+            tools:text="01:23"/>
 
         <com.android.deskclock.AnalogClock
             android:id="@+id/analog_clock"
             android:layout_width="@dimen/world_clock_analog_size"
             android:layout_height="@dimen/world_clock_analog_size"
-            android:layout_gravity="center_horizontal"
-            android:layout_marginBottom="@dimen/bottom_text_spacing_analog_small" />
+            android:layout_gravity="start"
+            android:layout_marginBottom="@dimen/bottom_text_spacing_analog_small"
+            tools:visibility="gone"/>
 
         <include
             layout="@layout/world_clock_city_container"
             android:layout_width="wrap_content"
-            android:layout_height="0dp"
-            android:layout_gravity="center_horizontal"
-            android:layout_weight="1" />
+            android:layout_height="wrap_content"
+            android:layout_gravity="left" />
 
     </LinearLayout>
-
-    <!-- Right gutter. -->
-    <Space
-        android:layout_width="0dp"
-        android:layout_height="match_parent"
-        android:layout_weight="@integer/gutter_width_percent" />
 
 </LinearLayout>

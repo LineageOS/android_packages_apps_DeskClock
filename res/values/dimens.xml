@@ -34,8 +34,7 @@
 
     <dimen name="alarm_text_font_size">16sp</dimen>
     <dimen name="circletimer_dot_size">12dp</dimen>
-    <dimen name="circletimer_circle_size">4dp</dimen>
-    <dimen name="circletimer_marker_size">16dp</dimen>
+    <dimen name="circletimer_circle_size">12dp</dimen>
     <dimen name="max_timer_circle_size">360dp</dimen>
 
     <dimen name="alarm_lockscreen_alarm_horizontal_padding">16dp</dimen>
@@ -52,7 +51,7 @@
     <dimen name="day_button_font_size">16sp</dimen>
     <dimen name="alarm_info_font_size">36sp</dimen>
     <dimen name="no_alarm_font_size">16sp</dimen>
-    <dimen name="timer_setup_digit_font_size">42sp</dimen>
+    <dimen name="timer_setup_digit_font_size">72sp</dimen>
     <dimen name="timer_setup_top_size">120dip</dimen>
 
     <dimen name="alarm_picker_dialog_horizontal_margin">30dp</dimen>
@@ -129,4 +128,16 @@
 
     <!-- KitKat floating action button container height; see -v21 folder for newer platforms. -->
     <dimen name="fab_height">96dp</dimen>
+
+    <dimen name="fab_container_height">120dp</dimen>
+    <dimen name="tab_content_bottom_padding">@dimen/fab_container_height</dimen>
+
+    <dimen name="gutter_horizontal_padding">24.0dip</dimen>
+    <dimen name="gutter_horizontal_padding_extreme_thin">4.0dip</dimen>
+    <dimen name="gutter_horizontal_padding_thin">16.0dip</dimen>
+    <dimen name="gutter_horizontal_padding_very_thin">8.0dip</dimen>
+
+    <dimen name="alarm_clock_expanded_vertical_margin">8dp</dimen>
+
+    <dimen name="settings_padding">4dp</dimen>
 </resources>
