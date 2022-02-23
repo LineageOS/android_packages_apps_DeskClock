@@ -19,5 +19,5 @@
     <fraction name="timer_circle_height_percent">-100%</fraction>
 
     <!-- In portrait, timer circles are 60% of the container width; height matches width. -->
-    <fraction name="timer_circle_width_percent">60%</fraction>
+    <fraction name="timer_circle_width_percent">80%</fraction>
 </resources>
