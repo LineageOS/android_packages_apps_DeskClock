@@ -24,6 +24,7 @@ import android.content.Intent;
 import android.content.res.ColorStateList;
 import android.content.res.Resources;
 import android.graphics.Canvas;
+import android.graphics.drawable.Drawable;
 import android.graphics.drawable.GradientDrawable;
 import android.os.Bundle;
 import androidx.annotation.ColorInt;
@@ -38,7 +39,6 @@ import android.view.MotionEvent;
 import android.view.View;
 import android.view.ViewGroup;
 import android.view.WindowManager;
-import android.widget.Button;
 import android.widget.ImageView;
 import android.widget.TextView;
 
@@ -223,12 +223,12 @@ public final class StopwatchFragment extends DeskClockFragment {
     }
 
     @Override
-    public void onLeftButtonClick(@NonNull Button left) {
+    public void onLeftButtonClick(@NonNull ImageView left) {
         doReset();
     }
 
     @Override
-    public void onRightButtonClick(@NonNull Button right) {
+    public void onRightButtonClick(@NonNull ImageView right) {
         switch (getStopwatch().getState()) {
             case RUNNING:
                 doAddLap();
@@ -241,10 +241,10 @@ public final class StopwatchFragment extends DeskClockFragment {
 
     private void updateFab(@NonNull ImageView fab) {
         if (getStopwatch().isRunning()) {
-            fab.setImageResource(R.drawable.ic_pause_24dp);
+            fab.setImageResource(R.drawable.ic_play_pause);
             fab.setContentDescription(fab.getResources().getString(R.string.sw_pause_button));
         } else {
-            fab.setImageResource(R.drawable.ic_start_24dp);
+            fab.setImageResource(R.drawable.ic_pause_play);
             fab.setContentDescription(fab.getResources().getString(R.string.sw_start_button));
         }
         fab.setVisibility(VISIBLE);
@@ -264,10 +264,12 @@ public final class StopwatchFragment extends DeskClockFragment {
     }
 
     @Override
-    public void onUpdateFabButtons(@NonNull Button left, @NonNull Button right) {
+    public void onUpdateFabButtons(@NonNull ImageView left, @NonNull ImageView right) {
         final Resources resources = getResources();
+        final Context context = left.getContext();
+        final Drawable icReset = Utils.getVectorDrawable(context, R.drawable.ic_delete);
         left.setClickable(true);
-        left.setText(R.string.sw_reset_button);
+        left.setImageDrawable(icReset);
         left.setContentDescription(resources.getString(R.string.sw_reset_button));
 
         switch (getStopwatch().getState()) {
@@ -279,7 +281,9 @@ public final class StopwatchFragment extends DeskClockFragment {
             case RUNNING:
                 left.setVisibility(VISIBLE);
                 final boolean canRecordLaps = canRecordMoreLaps();
-                right.setText(R.string.sw_lap_button);
+                final Drawable icLap = Utils.getVectorDrawable(context,
+                        R.drawable.ic_stopwatch_black);
+                right.setImageDrawable(icLap);
                 right.setContentDescription(resources.getString(R.string.sw_lap_button));
                 right.setClickable(canRecordLaps);
                 right.setVisibility(canRecordLaps ? VISIBLE : INVISIBLE);
@@ -288,7 +292,8 @@ public final class StopwatchFragment extends DeskClockFragment {
                 left.setVisibility(VISIBLE);
                 right.setClickable(true);
                 right.setVisibility(VISIBLE);
-                right.setText(R.string.sw_share_button);
+                final Drawable icShare = Utils.getVectorDrawable(context, R.drawable.ic_share);
+                right.setImageDrawable(icShare);
                 right.setContentDescription(resources.getString(R.string.sw_share_button));
                 break;
         }
