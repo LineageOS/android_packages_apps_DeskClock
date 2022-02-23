@@ -38,9 +38,6 @@ public final class TimerCircleView extends View {
     /** The size of the dot indicating the progress through the timer. */
     private final float mDotRadius;
 
-    /** An amount to subtract from the true radius to account for drawing thicknesses. */
-    private final float mRadiusOffset;
-
     /** The color indicating the remaining portion of the timer. */
     private final int mRemainderColor;
 
@@ -65,20 +62,17 @@ public final class TimerCircleView extends View {
         super(context, attrs);
 
         final Resources resources = context.getResources();
-        final float dotDiameter = resources.getDimension(R.dimen.circletimer_dot_size);
-
-        mDotRadius = dotDiameter / 2f;
         mStrokeSize = resources.getDimension(R.dimen.circletimer_circle_size);
-        mRadiusOffset = Utils.calculateRadiusOffset(mStrokeSize, dotDiameter, 0);
+        mDotRadius = mStrokeSize / 2;
 
-        mRemainderColor = Color.WHITE;
-        mCompletedColor = ThemeUtils.resolveColor(context, R.attr.colorAccent);
+        mRemainderColor = ThemeUtils.resolveColor(context, R.attr.colorAccent);
+        mCompletedColor = resources.getColor(R.color.secondary_color, context.getTheme());
 
         mPaint.setAntiAlias(true);
         mPaint.setStyle(Paint.Style.STROKE);
 
         mFill.setAntiAlias(true);
-        mFill.setColor(mCompletedColor);
+        mFill.setColor(mRemainderColor);
         mFill.setStyle(Paint.Style.FILL);
     }
 
@@ -98,7 +92,7 @@ public final class TimerCircleView extends View {
         // Compute the size and location of the circle to be drawn.
         final int xCenter = getWidth() / 2;
         final int yCenter = getHeight() / 2;
-        final float radius = Math.min(xCenter, yCenter) - mRadiusOffset;
+        final float radius = Math.min(xCenter, yCenter) - mStrokeSize;
 
         // Reset old painting state.
         mPaint.setColor(mRemainderColor);
@@ -115,7 +109,7 @@ public final class TimerCircleView extends View {
         } else if (mTimer.isExpired()) {
             mPaint.setColor(mCompletedColor);
 
-            // Draw a complete white circle; no red arc required.
+            // Draw a complete circle; no arc required.
             canvas.drawCircle(xCenter, yCenter, radius, mPaint);
 
             // Red percent is 1 since the timer has expired.
@@ -137,7 +131,7 @@ public final class TimerCircleView extends View {
             canvas.drawArc(mArcRect, 270, -redPercent * 360 , false, mPaint);
         }
 
-        // Draw a red dot to indicate current progress through the timer.
+        // Draw a dot to indicate current progress through the timer.
         final float dotAngleDegrees = 270 - redPercent * 360;
         final double dotAngleRadians = Math.toRadians(dotAngleDegrees);
         final float dotX = xCenter + (float) (radius * Math.cos(dotAngleRadians));

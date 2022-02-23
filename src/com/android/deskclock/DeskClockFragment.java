@@ -17,7 +17,6 @@
 package com.android.deskclock;
 
 import android.view.KeyEvent;
-import android.widget.Button;
 import android.widget.ImageView;
 import androidx.annotation.ColorInt;
 import androidx.annotation.Keep;
@@ -55,12 +54,12 @@ public abstract class DeskClockFragment extends Fragment implements FabContainer
     }
 
     @Override
-    public void onLeftButtonClick(@NonNull Button left) {
+    public void onLeftButtonClick(@NonNull ImageView left) {
         // Do nothing here, only in derived classes
     }
 
     @Override
-    public void onRightButtonClick(@NonNull Button right) {
+    public void onRightButtonClick(@NonNull ImageView right) {
         // Do nothing here, only in derived classes
     }
 

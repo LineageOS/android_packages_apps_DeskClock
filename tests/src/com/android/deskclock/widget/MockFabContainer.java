@@ -41,8 +41,8 @@ public final class MockFabContainer implements FabContainer {
     public MockFabContainer(DeskClockFragment fragment, Context context) {
         deskClockFragment = fragment;
         fab = new ImageView(context);
-        leftButton = new Button(context);
-        rightButton = new Button(context);
+        leftButton = new ImageView(context);
+        rightButton = new ImageView(context);
 
         updateFab(FabContainer.FAB_AND_BUTTONS_IMMEDIATE);
 

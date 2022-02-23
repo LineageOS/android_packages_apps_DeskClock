@@ -62,13 +62,6 @@
         </FrameLayout>
 
         <include layout="@layout/date_and_next_alarm_time" />
-
-        <View
-            android:id="@+id/hairline"
-            android:layout_width="match_parent"
-            android:layout_height="@dimen/hairline_height"
-            android:layout_marginTop="24dp"
-            android:background="@color/hairline" />
     </LinearLayout>
 
     <!-- Right gutter. -->
