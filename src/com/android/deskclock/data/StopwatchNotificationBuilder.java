@@ -19,18 +19,16 @@ package com.android.deskclock.data;
 import static com.android.deskclock.NotificationUtils.STOPWATCH_NOTIFICATION_CHANNEL_ID;
 
 import android.app.Notification;
-import android.app.NotificationChannel;
 import android.app.PendingIntent;
 import android.content.Context;
 import android.content.Intent;
 import android.content.res.Resources;
 import android.os.SystemClock;
-import androidx.annotation.DrawableRes;
+
 import androidx.annotation.StringRes;
 import androidx.core.app.NotificationCompat;
 import androidx.core.app.NotificationCompat.Action;
 import androidx.core.app.NotificationCompat.Builder;
-import androidx.core.app.NotificationManagerCompat;
 import androidx.core.content.ContextCompat;
 import android.widget.RemoteViews;
 
@@ -80,10 +78,9 @@ class StopwatchNotificationBuilder {
                     .setAction(StopwatchService.ACTION_PAUSE_STOPWATCH)
                     .putExtra(Events.EXTRA_EVENT_LABEL, eventLabel);
 
-            @DrawableRes final int icon1 = R.drawable.ic_pause_24dp;
             final CharSequence title1 = res.getText(R.string.sw_pause_button);
             final PendingIntent intent1 = Utils.pendingServiceIntent(context, pause);
-            actions.add(new Action.Builder(icon1, title1, intent1).build());
+            actions.add(new Action.Builder(null, title1, intent1).build());
 
             // Right button: Add Lap
             if (DataModel.getDataModel().canAddMoreLaps()) {
@@ -91,10 +88,9 @@ class StopwatchNotificationBuilder {
                         .setAction(StopwatchService.ACTION_LAP_STOPWATCH)
                         .putExtra(Events.EXTRA_EVENT_LABEL, eventLabel);
 
-                @DrawableRes final int icon2 = R.drawable.ic_sw_lap_24dp;
                 final CharSequence title2 = res.getText(R.string.sw_lap_button);
                 final PendingIntent intent2 = Utils.pendingServiceIntent(context, lap);
-                actions.add(new Action.Builder(icon2, title2, intent2).build());
+                actions.add(new Action.Builder(null, title2, intent2).build());
             }
 
             // Show the current lap number if any laps have been recorded.
@@ -113,20 +109,18 @@ class StopwatchNotificationBuilder {
                     .setAction(StopwatchService.ACTION_START_STOPWATCH)
                     .putExtra(Events.EXTRA_EVENT_LABEL, eventLabel);
 
-            @DrawableRes final int icon1 = R.drawable.ic_start_24dp;
             final CharSequence title1 = res.getText(R.string.sw_start_button);
             final PendingIntent intent1 = Utils.pendingServiceIntent(context, start);
-            actions.add(new Action.Builder(icon1, title1, intent1).build());
+            actions.add(new Action.Builder(null, title1, intent1).build());
 
             // Right button: Reset (dismisses notification and resets stopwatch)
             final Intent reset = new Intent(context, StopwatchService.class)
                     .setAction(StopwatchService.ACTION_RESET_STOPWATCH)
                     .putExtra(Events.EXTRA_EVENT_LABEL, eventLabel);
 
-            @DrawableRes final int icon2 = R.drawable.ic_reset_24dp;
             final CharSequence title2 = res.getText(R.string.sw_reset_button);
             final PendingIntent intent2 = Utils.pendingServiceIntent(context, reset);
-            actions.add(new Action.Builder(icon2, title2, intent2).build());
+            actions.add(new Action.Builder(null, title2, intent2).build());
 
             // Indicate the stopwatch is paused.
             content.setTextViewText(R.id.state, res.getString(R.string.swn_paused));
