@@ -14,11 +14,11 @@
      limitations under the License.
 -->
 
-<LinearLayout
-    xmlns:android="http://schemas.android.com/apk/res/android"
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
     android:layout_width="wrap_content"
     android:layout_height="wrap_content"
-    android:layout_gravity="center"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_gravity="center_vertical"
     android:gravity="center">
 
     <TextView
@@ -26,7 +26,8 @@
         style="@style/body"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:textAllCaps="true" />
+        android:textAllCaps="true"
+        tools:text="Sa., 01.01."/>
 
     <TextView
         android:id="@+id/nextAlarmIcon"
@@ -46,6 +47,7 @@
         style="@style/body"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:textAllCaps="true" />
+        android:textAllCaps="true"
+        tools:text="Mo., 07:00"/>
 
 </LinearLayout>

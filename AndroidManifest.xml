@@ -22,7 +22,7 @@
     <original-package android:name="com.android.alarmclock" />
     <original-package android:name="com.android.deskclock" />
 
-    <uses-sdk android:minSdkVersion="24" android:targetSdkVersion="29" />
+    <uses-sdk android:minSdkVersion="27" android:targetSdkVersion="30" />
 
     <uses-permission android:name="android.permission.RECEIVE_BOOT_COMPLETED" />
     <uses-permission android:name="android.permission.WAKE_LOCK" />
@@ -78,8 +78,7 @@
         <activity
             android:name=".ringtone.RingtonePickerActivity"
             android:excludeFromRecents="true"
-            android:taskAffinity=""
-            android:theme="@style/Theme.DeskClock.RingtonePicker" />
+            android:taskAffinity="" />
 
         <activity
             android:name=".worldclock.CitySelectionActivity"
