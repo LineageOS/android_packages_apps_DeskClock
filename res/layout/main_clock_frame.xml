@@ -14,67 +14,45 @@
      limitations under the License.
 -->
 
-<LinearLayout
-    xmlns:android="http://schemas.android.com/apk/res/android"
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
     android:layout_width="match_parent"
     android:layout_height="wrap_content"
-    android:gravity="center_horizontal">
+    xmlns:tools="http://schemas.android.com/tools"
+    android:gravity="center_horizontal"
+    android:paddingBottom="14dp"
+    android:layout_marginStart="24dp"
+    android:layout_marginEnd="24dp"
+    android:orientation="vertical">
 
-    <!-- Left gutter. -->
-    <Space
-        android:layout_width="0dp"
-        android:layout_height="match_parent"
-        android:layout_weight="@integer/gutter_width_percent" />
+    <FrameLayout
+        android:layout_width="wrap_content"
+        android:layout_height="0dp"
+        android:layout_weight="1"
+        android:layout_gravity="start">
 
-    <LinearLayout
-        android:layout_width="0dp"
-        android:layout_height="wrap_content"
-        android:layout_weight="@integer/guttered_content_width_percent"
-        android:gravity="center_horizontal"
-        android:orientation="vertical">
-
-        <FrameLayout
+        <com.android.deskclock.AnalogClock
+            android:id="@+id/analog_clock"
             android:layout_width="wrap_content"
-            android:layout_height="0dp"
-            android:layout_weight="1">
+            android:layout_height="wrap_content"
+            android:layout_marginEnd="@dimen/analog_clock_margin"
+            android:layout_marginLeft="@dimen/analog_clock_margin"
+            android:layout_marginRight="@dimen/analog_clock_margin"
+            android:layout_marginStart="@dimen/analog_clock_margin"
+            android:layout_marginTop="@dimen/circle_margin_top" />
 
-            <com.android.deskclock.AnalogClock
-                android:id="@+id/analog_clock"
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
-                android:layout_marginEnd="@dimen/analog_clock_margin"
-                android:layout_marginLeft="@dimen/analog_clock_margin"
-                android:layout_marginRight="@dimen/analog_clock_margin"
-                android:layout_marginStart="@dimen/analog_clock_margin"
-                android:layout_marginTop="@dimen/circle_margin_top" />
-
-            <com.android.deskclock.widget.AutoSizingTextClock
-                android:id="@+id/digital_clock"
-                style="@style/display_time"
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
-                android:ellipsize="none"
-                android:includeFontPadding="false"
-                android:paddingTop="@dimen/main_clock_digital_padding"
-                android:singleLine="true"
-                android:textSize="@dimen/main_clock_digital_font_size" />
-
-        </FrameLayout>
-
-        <include layout="@layout/date_and_next_alarm_time" />
-
-        <View
-            android:id="@+id/hairline"
+        <com.android.deskclock.widget.AutoSizingTextClock
+            android:id="@+id/digital_clock"
+            style="@style/display_time"
             android:layout_width="match_parent"
-            android:layout_height="@dimen/hairline_height"
-            android:layout_marginTop="24dp"
-            android:background="@color/hairline" />
-    </LinearLayout>
+            android:layout_height="wrap_content"
+            android:ellipsize="none"
+            android:includeFontPadding="false"
+            android:paddingTop="@dimen/main_clock_digital_padding"
+            android:singleLine="true"
+            android:textSize="@dimen/main_clock_digital_font_size"
+            tools:text="01:23" />
 
-    <!-- Right gutter. -->
-    <Space
-        android:layout_width="0dp"
-        android:layout_height="match_parent"
-        android:layout_weight="@integer/gutter_width_percent" />
+    </FrameLayout>
 
+    <include layout="@layout/date_and_next_alarm_time" />
 </LinearLayout>

@@ -20,6 +20,7 @@ import android.content.Context;
 import android.content.Intent;
 import android.os.Bundle;
 import android.os.Vibrator;
+
 import androidx.fragment.app.Fragment;
 
 import com.android.deskclock.AlarmClockFragment;
@@ -28,7 +29,6 @@ import com.android.deskclock.LogUtils;
 import com.android.deskclock.R;
 import com.android.deskclock.alarms.dataadapter.AlarmItemHolder;
 import com.android.deskclock.data.DataModel;
-import com.android.deskclock.data.Weekdays;
 import com.android.deskclock.events.Events;
 import com.android.deskclock.provider.Alarm;
 import com.android.deskclock.provider.AlarmInstance;
@@ -100,36 +100,6 @@ public final class AlarmTimeClickHandler {
                 }
             }
         }
-    }
-
-    public void setAlarmRepeatEnabled(Alarm alarm, boolean isEnabled) {
-        final Calendar now = Calendar.getInstance();
-        final Calendar oldNextAlarmTime = alarm.getNextAlarmTime(now);
-        final String alarmId = String.valueOf(alarm.id);
-        if (isEnabled) {
-            // Set all previously set days
-            // or
-            // Set all days if no previous.
-            final int bitSet = mPreviousDaysOfWeekMap.getInt(alarmId);
-            alarm.daysOfWeek = Weekdays.fromBits(bitSet);
-            if (!alarm.daysOfWeek.isRepeating()) {
-                alarm.daysOfWeek = Weekdays.ALL;
-            }
-        } else {
-            // Remember the set days in case the user wants it back.
-            final int bitSet = alarm.daysOfWeek.getBits();
-            mPreviousDaysOfWeekMap.putInt(alarmId, bitSet);
-
-            // Remove all repeat days
-            alarm.daysOfWeek = Weekdays.NONE;
-        }
-
-        // if the change altered the next scheduled alarm time, tell the user
-        final Calendar newNextAlarmTime = alarm.getNextAlarmTime(now);
-        final boolean popupToast = !oldNextAlarmTime.equals(newNextAlarmTime);
-
-        Events.sendAlarmEvent(R.string.action_toggle_repeat_days, R.string.label_deskclock);
-        mAlarmUpdateHandler.asyncUpdateAlarm(alarm, popupToast, false);
     }
 
     public void setDayOfWeekEnabled(Alarm alarm, boolean checked, int index) {

@@ -19,12 +19,14 @@ package com.android.deskclock.timer;
 import android.content.Context;
 import android.content.res.ColorStateList;
 import android.os.SystemClock;
-import androidx.core.view.ViewCompat;
 import android.text.TextUtils;
 import android.util.AttributeSet;
+import android.view.View;
 import android.widget.Button;
-import android.widget.LinearLayout;
 import android.widget.TextView;
+
+import androidx.constraintlayout.widget.ConstraintLayout;
+import androidx.core.view.ViewCompat;
 
 import com.android.deskclock.R;
 import com.android.deskclock.ThemeUtils;
@@ -35,10 +37,13 @@ import com.android.deskclock.data.Timer;
 import static android.R.attr.state_activated;
 import static android.R.attr.state_pressed;
 
+import androidx.constraintlayout.widget.ConstraintLayout;
+import androidx.core.view.ViewCompat;
+
 /**
  * This view is a visual representation of a {@link Timer}.
  */
-public class TimerItem extends LinearLayout {
+public class TimerItem extends ConstraintLayout {
 
     /** Displays the remaining time or time since expiration. */
     private TextView mTimerText;
@@ -115,10 +120,13 @@ public class TimerItem extends LinearLayout {
 
         // Update some potentially expensive areas of the user interface only on state changes.
         if (timer.getState() != mLastState) {
+            mResetAddButton.setVisibility(View.VISIBLE);
             mLastState = timer.getState();
             final Context context = getContext();
             switch (mLastState) {
                 case RESET:
+                    mResetAddButton.setVisibility(View.GONE);
+                    break;
                 case PAUSED: {
                     mResetAddButton.setText(R.string.timer_reset);
                     mResetAddButton.setContentDescription(null);
