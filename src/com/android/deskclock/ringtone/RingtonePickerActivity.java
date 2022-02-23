@@ -16,6 +16,15 @@
 
 package com.android.deskclock.ringtone;
 
+import static android.content.Intent.FLAG_GRANT_READ_URI_PERMISSION;
+import static android.media.RingtoneManager.TYPE_ALARM;
+import static android.provider.OpenableColumns.DISPLAY_NAME;
+import static com.android.deskclock.ItemAdapter.ItemViewHolder.Factory;
+import static com.android.deskclock.ringtone.AddCustomRingtoneViewHolder.VIEW_TYPE_ADD_NEW;
+import static com.android.deskclock.ringtone.HeaderViewHolder.VIEW_TYPE_ITEM_HEADER;
+import static com.android.deskclock.ringtone.RingtoneViewHolder.VIEW_TYPE_CUSTOM_SOUND;
+import static com.android.deskclock.ringtone.RingtoneViewHolder.VIEW_TYPE_SYSTEM_SOUND;
+
 import android.app.Dialog;
 import android.app.DialogFragment;
 import android.app.FragmentManager;
@@ -32,39 +41,25 @@ import android.net.Uri;
 import android.os.AsyncTask;
 import android.os.Bundle;
 import android.provider.MediaStore;
+import android.view.LayoutInflater;
+import android.view.MenuItem;
+
 import androidx.annotation.VisibleForTesting;
 import androidx.appcompat.app.AlertDialog;
 import androidx.recyclerview.widget.LinearLayoutManager;
 import androidx.recyclerview.widget.RecyclerView;
-import android.view.LayoutInflater;
-import android.view.Menu;
-import android.view.MenuItem;
-import android.view.View;
 
-import com.android.deskclock.BaseActivity;
-import com.android.deskclock.DropShadowController;
 import com.android.deskclock.ItemAdapter;
 import com.android.deskclock.ItemAdapter.OnItemClickedListener;
 import com.android.deskclock.LogUtils;
 import com.android.deskclock.R;
 import com.android.deskclock.RingtonePreviewKlaxon;
-import com.android.deskclock.actionbarmenu.MenuItemControllerFactory;
-import com.android.deskclock.actionbarmenu.NavUpMenuItemController;
-import com.android.deskclock.actionbarmenu.OptionsMenuManager;
 import com.android.deskclock.alarms.AlarmUpdateHandler;
 import com.android.deskclock.data.DataModel;
 import com.android.deskclock.provider.Alarm;
+import com.android.deskclock.widget.CollapsingToolbarBaseActivity;
 
 import java.util.List;
-
-import static android.content.Intent.FLAG_GRANT_READ_URI_PERMISSION;
-import static android.media.RingtoneManager.TYPE_ALARM;
-import static android.provider.OpenableColumns.DISPLAY_NAME;
-import static com.android.deskclock.ItemAdapter.ItemViewHolder.Factory;
-import static com.android.deskclock.ringtone.AddCustomRingtoneViewHolder.VIEW_TYPE_ADD_NEW;
-import static com.android.deskclock.ringtone.HeaderViewHolder.VIEW_TYPE_ITEM_HEADER;
-import static com.android.deskclock.ringtone.RingtoneViewHolder.VIEW_TYPE_CUSTOM_SOUND;
-import static com.android.deskclock.ringtone.RingtoneViewHolder.VIEW_TYPE_SYSTEM_SOUND;
 
 /**
  * This activity presents a set of ringtones from which the user may select one. The set includes:
@@ -75,7 +70,7 @@ import static com.android.deskclock.ringtone.RingtoneViewHolder.VIEW_TYPE_SYSTEM
  *     <li>user-selected audio files available as ringtones</li>
  * </ul>
  */
-public class RingtonePickerActivity extends BaseActivity
+public class RingtonePickerActivity extends CollapsingToolbarBaseActivity
         implements LoaderManager.LoaderCallbacks<List<ItemAdapter.ItemHolder<Uri>>> {
 
     /** Key to an extra that defines resource id to the title of this activity. */
@@ -95,12 +90,6 @@ public class RingtonePickerActivity extends BaseActivity
 
     /** Key to an instance state value indicating if the selected ringtone is currently playing. */
     private static final String STATE_KEY_PLAYING = "extra_is_playing";
-
-    /** The controller that shows the drop shadow when content is not scrolled to the top. */
-    private DropShadowController mDropShadowController;
-
-    /** Generates the items in the activity context menu. */
-    private OptionsMenuManager mOptionsMenuManager;
 
     /** Displays a set of selectable ringtones. */
     private RecyclerView mRecyclerView;
@@ -157,11 +146,6 @@ public class RingtonePickerActivity extends BaseActivity
         setContentView(R.layout.ringtone_picker);
         setVolumeControlStream(AudioManager.STREAM_ALARM);
 
-        mOptionsMenuManager = new OptionsMenuManager();
-        mOptionsMenuManager.addMenuItemController(new NavUpMenuItemController(this))
-                .addMenuItemController(MenuItemControllerFactory.getInstance()
-                        .buildMenuItemControllers(this));
-
         final Context context = getApplicationContext();
         final Intent intent = getIntent();
 
@@ -213,18 +197,7 @@ public class RingtonePickerActivity extends BaseActivity
     }
 
     @Override
-    protected void onResume() {
-        super.onResume();
-
-        final View dropShadow = findViewById(R.id.drop_shadow);
-        mDropShadowController = new DropShadowController(dropShadow, mRecyclerView);
-    }
-
-    @Override
     protected void onPause() {
-        mDropShadowController.stop();
-        mDropShadowController = null;
-
         if (mSelectedRingtoneUri != null) {
             if (mAlarmId != -1) {
                 final Context context = getApplicationContext();
@@ -273,23 +246,6 @@ public class RingtonePickerActivity extends BaseActivity
 
         outState.putBoolean(STATE_KEY_PLAYING, mIsPlaying);
         outState.putParcelable(EXTRA_RINGTONE_URI, mSelectedRingtoneUri);
-    }
-
-    @Override
-    public boolean onCreateOptionsMenu(Menu menu) {
-        mOptionsMenuManager.onCreateOptionsMenu(menu);
-        return true;
-    }
-
-    @Override
-    public boolean onPrepareOptionsMenu(Menu menu) {
-        mOptionsMenuManager.onPrepareOptionsMenu(menu);
-        return true;
-    }
-
-    @Override
-    public boolean onOptionsItemSelected(MenuItem item) {
-        return mOptionsMenuManager.onOptionsItemSelected(item) || super.onOptionsItemSelected(item);
     }
 
     @Override
