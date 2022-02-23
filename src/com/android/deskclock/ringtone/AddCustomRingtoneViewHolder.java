@@ -16,6 +16,7 @@
 
 package com.android.deskclock.ringtone;
 
+import android.content.Context;
 import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
@@ -46,6 +47,9 @@ final class AddCustomRingtoneViewHolder extends ItemViewHolder<AddCustomRingtone
 
         final ImageView imageView = (ImageView) itemView.findViewById(R.id.ringtone_image);
         imageView.setImageResource(R.drawable.ic_add_24dp);
+        Context context = itemView.getContext();
+        imageView.setColorFilter(context.getResources().getColor(R.color.white,
+                context.getTheme()));
         imageView.setAlpha(0.63f);
     }
 
