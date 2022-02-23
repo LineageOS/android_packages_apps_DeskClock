@@ -1,0 +1,45 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <style name="DeskClock.Switch" parent="@android:style/Widget.Material.CompoundButton.Switch">
+        <item name="android:switchMinWidth">52dp</item>
+        <item name="android:minHeight">@dimen/touch_target_min_size</item>
+        <item name="android:track">@drawable/switch_track</item>
+        <item name="track">@drawable/switch_track</item>
+        <item name="android:thumb">@drawable/switch_thumb</item>
+        <item name="thumbTint">@color/default_background</item>
+    </style>
+
+    <style name="DeskClock.SwitchPreferenceCompat" parent="@style/Preference.SwitchPreferenceCompat.Material">
+        <item name="iconSpaceReserved">false</item>
+        <item name="android:widgetLayout">@layout/widget_switch_compat</item>
+    </style>
+
+    <style name="TimerLabelTextAppearance" parent="SecondaryLabelTextAppearance">
+        <item name="android:textSize">32sp</item>
+    </style>
+
+    <style name="MaterialCardViewStyle">
+        <item name="android:layout_marginTop">8.0dip</item>
+        <item name="android:layout_marginStart">16.0dip</item>
+        <item name="android:layout_marginEnd">16.0dip</item>
+        <item name="elevation">0.0dip</item>
+    </style>
+
+    <style name="DayButtonStyle">
+        <item name="android:textSize">@dimen/day_button_font_size</item>
+        <item name="android:gravity">center</item>
+        <item name="android:background">@drawable/toggle_circle</item>
+        <item name="android:layout_width">@dimen/touch_target_min_size</item>
+        <item name="android:layout_height">@dimen/touch_target_min_size</item>
+        <item name="android:button">@null</item>
+    </style>
+
+    <style name="SnackBarStyle" parent="@style/Widget.MaterialComponents.Snackbar">
+        <item name="android:background">@drawable/popup_background</item>
+        <item name="android:layout_margin">@null</item>
+        <item name="android:layout_marginLeft">8.0dip</item>
+        <item name="android:layout_marginTop">8.0dip</item>
+        <item name="android:layout_marginRight">8.0dip</item>
+        <item name="android:layout_marginBottom">8dp</item>
+    </style>
+</resources>

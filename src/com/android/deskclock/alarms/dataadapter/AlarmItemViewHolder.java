@@ -16,19 +16,27 @@
 
 package com.android.deskclock.alarms.dataadapter;
 
+import android.animation.Animator;
 import android.content.Context;
+import android.graphics.Typeface;
 import android.view.View;
 import android.widget.CompoundButton;
 import android.widget.ImageView;
 import android.widget.TextView;
 
 import com.android.deskclock.AlarmUtils;
+import com.android.deskclock.AnimatorUtils;
 import com.android.deskclock.ItemAdapter;
 import com.android.deskclock.ItemAnimator;
 import com.android.deskclock.R;
+import com.android.deskclock.data.DataModel;
+import com.android.deskclock.data.Weekdays;
 import com.android.deskclock.provider.Alarm;
 import com.android.deskclock.provider.AlarmInstance;
+import com.android.deskclock.widget.EllipsizeLayout;
 import com.android.deskclock.widget.TextTime;
+
+import java.util.Calendar;
 
 /**
  * Abstract ViewHolder for alarm time items.
@@ -47,12 +55,14 @@ public abstract class AlarmItemViewHolder extends ItemAdapter.ItemViewHolder<Ala
     public static final float ANIM_LONG_DELAY_INCREMENT_MULTIPLIER =
             1f - ANIM_STANDARD_DELAY_MULTIPLIER - ANIM_SHORT_DURATION_MULTIPLIER;
 
-    public static final String ANIMATE_REPEAT_DAYS = "ANIMATE_REPEAT_DAYS";
-
     public final TextTime clock;
     public final CompoundButton onOff;
     public final ImageView arrow;
     public final TextView preemptiveDismissButton;
+    public final TextView daysOfWeek;
+    public final EllipsizeLayout ellipsizeLayout;
+
+    public float annotationsAlpha = CLOCK_ENABLED_ALPHA;
 
     public AlarmItemViewHolder(View itemView) {
         super(itemView);
@@ -60,8 +70,9 @@ public abstract class AlarmItemViewHolder extends ItemAdapter.ItemViewHolder<Ala
         clock = (TextTime) itemView.findViewById(R.id.digital_clock);
         onOff = (CompoundButton) itemView.findViewById(R.id.onoff);
         arrow = (ImageView) itemView.findViewById(R.id.arrow);
-        preemptiveDismissButton =
-                (TextView) itemView.findViewById(R.id.preemptive_dismiss_button);
+        daysOfWeek = (TextView) itemView.findViewById(R.id.days_of_week);
+        preemptiveDismissButton = itemView.findViewById(R.id.preemptive_dismiss_button);
+        ellipsizeLayout  = (EllipsizeLayout) itemView.findViewById(R.id.ellipse_layout);
         preemptiveDismissButton.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
@@ -98,6 +109,8 @@ public abstract class AlarmItemViewHolder extends ItemAdapter.ItemViewHolder<Ala
     protected void bindClock(Alarm alarm) {
         clock.setTime(alarm.hour, alarm.minutes);
         clock.setAlpha(alarm.enabled ? CLOCK_ENABLED_ALPHA : CLOCK_DISABLED_ALPHA);
+        Typeface oldTypeface = alarm.enabled ? clock.getTypeface() : null;
+        clock.setTypeface(oldTypeface, alarm.enabled ? Typeface.BOLD : Typeface.NORMAL);
     }
 
     protected boolean bindPreemptiveDismissButton(Context context, Alarm alarm,
@@ -116,5 +129,29 @@ public abstract class AlarmItemViewHolder extends ItemAdapter.ItemViewHolder<Ala
             preemptiveDismissButton.setClickable(false);
         }
         return canBind;
+    }
+
+    protected void bindRepeatText(Context context, Alarm alarm) {
+        if (alarm.daysOfWeek.isRepeating()) {
+            final Weekdays.Order weekdayOrder = DataModel.getDataModel().getWeekdayOrder();
+            final String daysOfWeekText = alarm.daysOfWeek.toString(context, weekdayOrder);
+            daysOfWeek.setText(daysOfWeekText);
+
+            final String string = alarm.daysOfWeek.toAccessibilityString(context, weekdayOrder);
+            daysOfWeek.setContentDescription(string);
+        } else {
+            final String labelText = Alarm.isTomorrow(alarm, Calendar.getInstance()) ?
+                    context.getString(R.string.alarm_tomorrow) :
+                    context.getString(R.string.alarm_today);
+            daysOfWeek.setText(labelText);
+        }
+    }
+
+    protected Animator getBoundsAnimator(View from, View to, long duration) {
+        final Animator animator = AnimatorUtils
+                .getBoundsAnimator(from, from, to)
+                .setDuration(duration);
+        animator.setInterpolator(AnimatorUtils.INTERPOLATOR_FAST_OUT_SLOW_IN);
+        return animator;
     }
 }
