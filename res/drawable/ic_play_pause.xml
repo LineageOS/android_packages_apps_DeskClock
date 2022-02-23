@@ -31,9 +31,9 @@
                 android:name="shape_1">
                 <path
                     android:name="path_1"
-                    android:fillColor="#FFFFFFFF"
+                    android:fillColor="#FF000000"
                     android:pathData="M -3.9375,-14.0625 c 0.0,0.0 -8.0625,0.0 -8.0625,0.0 c 0.0,0.0 0.0,28.125 0.0,28.125 c 0.0,0.0 8.0625,0.0 8.0625,0.0 c 0.0,0.0 0.0,-28.125 0.0,-28.125 Z"
-                    android:strokeColor="#FFFFFFFF"
+                    android:strokeColor="#FF000000"
                     android:strokeWidth="0" />
             </group>
         </group>
@@ -47,9 +47,9 @@
                     android:name="shape_2">
                     <path
                         android:name="path_2"
-                        android:fillColor="#FFFFFFFF"
+                        android:fillColor="#FF000000"
                         android:pathData="M -3.9375,-14.0625 c 0.0,0.0 -8.0625,0.0 -8.0625,0.0 c 0.0,0.0 0.0,28.125 0.0,28.125 c 0.0,0.0 8.0625,0.0 8.0625,0.0 c 0.0,0.0 0.0,-28.125 0.0,-28.125 Z"
-                        android:strokeColor="#FFFFFFFF"
+                        android:strokeColor="#FF000000"
                         android:strokeWidth="0" />
                 </group>
             </group>

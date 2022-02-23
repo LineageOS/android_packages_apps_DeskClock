@@ -1,0 +1,19 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <!-- Collapsing toolbar layout dimensions -->
+    <dimen name="expanded_title_height">169dp</dimen>
+    <dimen name="settingslib_scrim_visible_height_trigger">137dp</dimen>
+    <dimen name="expanded_title_margin_start">24dp</dimen>
+    <dimen name="expanded_title_margin_end">24dp</dimen>
+    <dimen name="settingslib_preferred_minimum_touch_target">48dp</dimen>
+    <dimen name="fab_container_height">120dp</dimen>
+
+    <dimen name="gutter_horizontal_padding">24.0dip</dimen>
+    <dimen name="gutter_horizontal_padding_extreme_thin">4.0dip</dimen>
+    <dimen name="gutter_horizontal_padding_thin">16.0dip</dimen>
+    <dimen name="gutter_horizontal_padding_very_thin">8.0dip</dimen>
+
+    <dimen name="tab_content_bottom_padding">@dimen/fab_container_height</dimen>
+
+    <dimen name="alarm_clock_expanded_vertical_margin">8dp</dimen>
+</resources>

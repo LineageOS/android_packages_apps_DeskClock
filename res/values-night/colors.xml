@@ -16,7 +16,7 @@
   -->
 
 <resources>
-    <color name="default_background">#121212</color>
+    <color name="default_background">#141417</color>
     <color name="accent_color">#FEF177</color>
-    <color name="secondary_color">#212121</color>
+    <color name="secondary_color">#23242C</color>
 </resources>

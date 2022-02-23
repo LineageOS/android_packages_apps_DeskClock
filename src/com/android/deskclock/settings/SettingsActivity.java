@@ -16,6 +16,7 @@
 
 package com.android.deskclock.settings;
 
+
 import android.content.Context;
 import android.content.Intent;
 import android.hardware.Sensor;
@@ -23,18 +24,22 @@ import android.hardware.SensorManager;
 import android.os.Bundle;
 import android.os.Vibrator;
 import android.provider.Settings;
+import android.view.Menu;
+import android.view.MenuItem;
+
+import androidx.annotation.NonNull;
+import androidx.annotation.Nullable;
+import androidx.appcompat.app.ActionBar;
+import androidx.appcompat.widget.Toolbar;
+import androidx.coordinatorlayout.widget.CoordinatorLayout;
 import androidx.preference.ListPreference;
 import androidx.preference.ListPreferenceDialogFragmentCompat;
 import androidx.preference.Preference;
 import androidx.preference.PreferenceDialogFragmentCompat;
 import androidx.preference.PreferenceFragmentCompat;
 import androidx.preference.TwoStatePreference;
-import android.view.Menu;
-import android.view.MenuItem;
-import android.view.View;
 
 import com.android.deskclock.BaseActivity;
-import com.android.deskclock.DropShadowController;
 import com.android.deskclock.R;
 import com.android.deskclock.Utils;
 import com.android.deskclock.actionbarmenu.MenuItemControllerFactory;
@@ -44,6 +49,8 @@ import com.android.deskclock.data.DataModel;
 import com.android.deskclock.data.TimeZones;
 import com.android.deskclock.data.Weekdays;
 import com.android.deskclock.ringtone.RingtonePickerActivity;
+
+import com.google.android.material.appbar.AppBarLayout;
 
 import java.util.List;
 
@@ -77,11 +84,6 @@ public final class SettingsActivity extends BaseActivity {
 
     private final OptionsMenuManager mOptionsMenuManager = new OptionsMenuManager();
 
-    /**
-     * The controller that shows the drop shadow when content is not scrolled to the top.
-     */
-    private DropShadowController mDropShadowController;
-
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
@@ -94,26 +96,21 @@ public final class SettingsActivity extends BaseActivity {
         // Create the prefs fragment in code to ensure it's created before PreferenceDialogFragment
         if (savedInstanceState == null) {
             getSupportFragmentManager().beginTransaction()
-                    .replace(R.id.main, new PrefsFragment(), PREFS_FRAGMENT_TAG)
+                    .replace(R.id.content_frame, new PrefsFragment(), PREFS_FRAGMENT_TAG)
                     .disallowAddToBackStack()
                     .commit();
         }
-    }
 
-    @Override
-    protected void onResume() {
-        super.onResume();
+        final Toolbar toolbar = findViewById(R.id.action_bar);
+        setSupportActionBar(toolbar);
 
-        final View dropShadow = findViewById(R.id.drop_shadow);
-        final PrefsFragment fragment =
-                (PrefsFragment) getSupportFragmentManager().findFragmentById(R.id.main);
-        mDropShadowController = new DropShadowController(dropShadow, fragment.getListView());
-    }
-
-    @Override
-    protected void onPause() {
-        mDropShadowController.stop();
-        super.onPause();
+        // Enable title and home button by default
+        final ActionBar actionBar = getSupportActionBar();
+        if (actionBar != null) {
+            actionBar.setDisplayHomeAsUpEnabled(true);
+            actionBar.setHomeButtonEnabled(true);
+            actionBar.setDisplayShowTitleEnabled(true);
+        }
     }
 
     @Override

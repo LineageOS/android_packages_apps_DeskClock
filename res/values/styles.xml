@@ -44,7 +44,7 @@
     <style name="display_time">
         <item name="android:textSize">56sp</item>
         <item name="android:textColor">@color/white</item>
-        <item name="android:fontFamily">sans-serif-light</item>
+        <item name="android:fontFamily">sans-serif</item>
         <item name="android:fontFeatureSettings" tools:targetApi="21">tnum</item>
     </style>
 
@@ -115,12 +115,18 @@
     </style>
 
     <style name="Widget.Button.TimerSetupDigit" parent="Widget.AppCompat.Button.Borderless">
-        <item name="android:background">?attr/selectableItemBackgroundBorderless</item>
-        <item name="android:fontFamily">sans-serif-light</item>
+        <item name="android:foreground">?attr/selectableItemBackgroundBorderless</item>
+        <item name="android:background">@drawable/digit_background</item>
+        <item name="android:fontFamily">sans-serif</item>
         <item name="android:gravity">center</item>
         <item name="android:includeFontPadding">false</item>
         <item name="android:textColor">?android:attr/textColorPrimary</item>
         <item name="android:textSize">36sp</item>
+        <item name="android:layout_margin">2.0dip</item>
+        <item name="layout_constraintDimensionRatio">1:1</item>
+        <item name="roundPercent">1.0</item>
+        <item name="autoSizeMaxTextSize">36sp</item>
+        <item name="autoSizeTextType">uniform</item>
     </style>
 
     <style name="Widget.ImageButton" parent="Widget.AppCompat.ImageButton">
