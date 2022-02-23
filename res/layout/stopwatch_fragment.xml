@@ -32,6 +32,8 @@
             android:id="@+id/stopwatch_time_wrapper"
             android:layout_gravity="center"
             app:layout_aspectRatio="100%"
+            android:layout_height="0dp"
+            android:layout_width="0dp"
             app:layout_heightPercent="@fraction/timer_circle_height_percent"
             app:layout_widthPercent="@fraction/timer_circle_width_percent">
 

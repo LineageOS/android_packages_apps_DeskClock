@@ -31,9 +31,7 @@ public class CircleButtonsLayout extends FrameLayout {
 
         final Resources res = getContext().getResources();
         final float strokeSize = res.getDimension(R.dimen.circletimer_circle_size);
-        final float dotStrokeSize = res.getDimension(R.dimen.circletimer_dot_size);
-        final float markerStrokeSize = res.getDimension(R.dimen.circletimer_marker_size);
-        mDiamOffset = Utils.calculateRadiusOffset(strokeSize, dotStrokeSize, markerStrokeSize) * 2;
+        mDiamOffset = strokeSize * 2;
     }
 
     @Override

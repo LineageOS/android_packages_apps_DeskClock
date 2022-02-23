@@ -44,7 +44,7 @@
     <style name="display_time">
         <item name="android:textSize">56sp</item>
         <item name="android:textColor">@color/white</item>
-        <item name="android:fontFamily">sans-serif-light</item>
+        <item name="android:fontFamily">sans-serif</item>
         <item name="android:fontFeatureSettings" tools:targetApi="21">tnum</item>
     </style>
 
@@ -74,14 +74,6 @@
         <item name="android:shadowColor">@color/widget_shadow_color</item>
         <item name="android:shadowDx">@dimen/widget_shadow_dx</item>
         <item name="android:shadowDy">@dimen/widget_shadow_dy</item>
-    </style>
-
-    <style name="alarm_label">
-        <item name="android:textSize">@dimen/alarm_label_size</item>
-    </style>
-
-    <style name="alarm_label_bold" parent="alarm_label">
-        <item name="android:textStyle">bold</item>
     </style>
 
     <style name="PrimaryLabelTextParentAppearance">
@@ -115,23 +107,84 @@
     </style>
 
     <style name="Widget.Button.TimerSetupDigit" parent="Widget.AppCompat.Button.Borderless">
-        <item name="android:background">?attr/selectableItemBackgroundBorderless</item>
-        <item name="android:fontFamily">sans-serif-light</item>
+        <item name="android:foreground">?attr/selectableItemBackgroundBorderless</item>
+        <item name="android:background">@drawable/digit_background</item>
+        <item name="android:fontFamily">sans-serif</item>
         <item name="android:gravity">center</item>
         <item name="android:includeFontPadding">false</item>
         <item name="android:textColor">?android:attr/textColorPrimary</item>
         <item name="android:textSize">36sp</item>
+        <item name="android:layout_margin">2.0dip</item>
+        <item name="layout_constraintDimensionRatio">1:1</item>
+        <item name="roundPercent">1.0</item>
+        <item name="autoSizeMaxTextSize">36sp</item>
+        <item name="autoSizeTextType">uniform</item>
     </style>
 
     <style name="Widget.ImageButton" parent="Widget.AppCompat.ImageButton">
         <item name="android:background">?attr/selectableItemBackgroundBorderless</item>
     </style>
 
-    <style name="Widget.TimePicker" parent="android:Widget.Material.TimePicker"
-        tools:targetApi="21">
-        <item name="android:headerBackground">@android:color/transparent</item>
-        <item name="android:numbersBackgroundColor">@android:color/transparent</item>
+    <style name="Widget.TimePicker" parent="android:Widget.Material.TimePicker">
+        <item name="android:background">@color/default_background</item>
+        <item name="android:headerBackground">@color/system_neutral2_700</item>
+        <item name="android:numbersBackgroundColor">@color/system_neutral2_700</item>
         <item name="android:numbersSelectorColor">?attr/colorAccent</item>
     </style>
 
+    <style name="AlertDialogTheme" parent="@style/ThemeOverlay.AppCompat.Dialog.Alert">
+        <item name="android:background">@drawable/popup_background</item>
+        <item name="dialogCornerRadius">28dp</item>
+    </style>
+
+    <style name="DeskClock.Settings.DropDownSpinnerStyle" parent="@android:style/Widget.Material.Spinner">
+        <item name="android:popupBackground">@drawable/popup_background</item>
+    </style>
+
+    <style name="DeskClock.Switch" parent="@android:style/Widget.Material.CompoundButton.Switch">
+        <item name="android:switchMinWidth">52dp</item>
+        <item name="android:minHeight">@dimen/touch_target_min_size</item>
+        <item name="android:track">@drawable/switch_track</item>
+        <item name="track">@drawable/switch_track</item>
+        <item name="android:thumb">@drawable/switch_thumb</item>
+        <item name="thumbTint">@color/default_background</item>
+    </style>
+
+    <style name="DeskClock.SwitchPreferenceCompat" parent="@style/Preference.SwitchPreferenceCompat.Material">
+        <item name="iconSpaceReserved">false</item>
+        <item name="android:widgetLayout">@layout/widget_switch_compat</item>
+    </style>
+
+    <style name="TimerLabelTextAppearance" parent="SecondaryLabelTextAppearance">
+        <item name="android:textSize">32sp</item>
+    </style>
+
+    <style name="MaterialCardViewStyle">
+        <item name="android:layout_marginTop">8.0dip</item>
+        <item name="android:layout_marginStart">16.0dip</item>
+        <item name="android:layout_marginEnd">16.0dip</item>
+        <item name="elevation">0.0dip</item>
+    </style>
+
+    <style name="DayButtonStyle">
+        <item name="android:textSize">@dimen/day_button_font_size</item>
+        <item name="android:gravity">center</item>
+        <item name="android:background">@drawable/toggle_circle</item>
+        <item name="android:layout_width">@dimen/touch_target_min_size</item>
+        <item name="android:layout_height">@dimen/touch_target_min_size</item>
+        <item name="android:button">@null</item>
+    </style>
+
+    <style name="SnackBarStyle" parent="@style/Widget.MaterialComponents.Snackbar">
+        <item name="android:background">@drawable/popup_background</item>
+        <item name="android:layout_margin">@null</item>
+        <item name="android:layout_marginLeft">8.0dip</item>
+        <item name="android:layout_marginTop">8.0dip</item>
+        <item name="android:layout_marginRight">8.0dip</item>
+        <item name="android:layout_marginBottom">8dp</item>
+    </style>
+
+    <style name="TextAppearance.Title" parent="@style/TextAppearance.AppCompat.Widget.ActionBar.Title">
+        <item name="android:textSize">22.0sp</item>
+    </style>
 </resources>

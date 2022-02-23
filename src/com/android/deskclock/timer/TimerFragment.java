@@ -22,11 +22,9 @@ import android.animation.AnimatorSet;
 import android.animation.ObjectAnimator;
 import android.content.Context;
 import android.content.Intent;
+import android.graphics.drawable.Drawable;
 import android.os.Bundle;
 import android.os.SystemClock;
-import androidx.annotation.NonNull;
-import androidx.annotation.VisibleForTesting;
-import androidx.viewpager.widget.ViewPager;
 import android.view.KeyEvent;
 import android.view.LayoutInflater;
 import android.view.View;
@@ -34,8 +32,11 @@ import android.view.ViewGroup;
 import android.view.ViewTreeObserver;
 import android.view.animation.AccelerateInterpolator;
 import android.view.animation.DecelerateInterpolator;
-import android.widget.Button;
 import android.widget.ImageView;
+
+import androidx.annotation.NonNull;
+import androidx.annotation.VisibleForTesting;
+import androidx.viewpager.widget.ViewPager;
 
 import com.android.deskclock.AnimatorUtils;
 import com.android.deskclock.DeskClock;
@@ -267,26 +268,26 @@ public final class TimerFragment extends DeskClockFragment {
             fab.setVisibility(VISIBLE);
             switch (timer.getState()) {
                 case RUNNING:
-                    fab.setImageResource(R.drawable.ic_pause_24dp);
+                    fab.setImageResource(R.drawable.ic_play_pause);
                     fab.setContentDescription(fab.getResources().getString(R.string.timer_stop));
                     break;
                 case RESET:
-                    fab.setImageResource(R.drawable.ic_start_24dp);
+                    fab.setImageResource(R.drawable.ic_pause_play);
                     fab.setContentDescription(fab.getResources().getString(R.string.timer_start));
                     break;
                 case PAUSED:
-                    fab.setImageResource(R.drawable.ic_start_24dp);
+                    fab.setImageResource(R.drawable.ic_pause_play);
                     fab.setContentDescription(fab.getResources().getString(R.string.timer_start));
                     break;
                 case MISSED:
                 case EXPIRED:
-                    fab.setImageResource(R.drawable.ic_stop_24dp);
+                    fab.setImageResource(R.drawable.ic_stop_play);
                     fab.setContentDescription(fab.getResources().getString(R.string.timer_stop));
                     break;
             }
         } else if (mCurrentView == mCreateTimerView) {
             if (mCreateTimerView.hasValidInput()) {
-                fab.setImageResource(R.drawable.ic_start_24dp);
+                fab.setImageResource(R.drawable.ic_pause_play);
                 fab.setContentDescription(fab.getResources().getString(R.string.timer_start));
                 fab.setVisibility(VISIBLE);
             } else {
@@ -310,21 +311,24 @@ public final class TimerFragment extends DeskClockFragment {
     }
 
     @Override
-    public void onUpdateFabButtons(@NonNull Button left, @NonNull Button right) {
+    public void onUpdateFabButtons(@NonNull ImageView left, @NonNull ImageView right) {
+        final Context context = left.getContext();
+        final Drawable icDelete = Utils.getVectorDrawable(context, R.drawable.ic_delete);
         if (mCurrentView == mTimersView) {
             left.setClickable(true);
-            left.setText(R.string.timer_delete);
             left.setContentDescription(left.getResources().getString(R.string.timer_delete));
             left.setVisibility(VISIBLE);
+            left.setImageDrawable(icDelete);
 
+            final Drawable icAdd = Utils.getVectorDrawable(context, R.drawable.ic_add_24dp);
+            right.setImageDrawable(icAdd);
             right.setClickable(true);
-            right.setText(R.string.timer_add_timer);
             right.setContentDescription(right.getResources().getString(R.string.timer_add_timer));
             right.setVisibility(VISIBLE);
 
         } else if (mCurrentView == mCreateTimerView) {
             left.setClickable(true);
-            left.setText(R.string.timer_cancel);
+            left.setImageDrawable(icDelete);
             left.setContentDescription(left.getResources().getString(R.string.timer_cancel));
             // If no timers yet exist, the user is forced to create the first one.
             left.setVisibility(hasTimers() ? VISIBLE : INVISIBLE);
@@ -394,7 +398,7 @@ public final class TimerFragment extends DeskClockFragment {
     }
 
     @Override
-    public void onLeftButtonClick(@NonNull Button left) {
+    public void onLeftButtonClick(@NonNull ImageView left) {
         if (mCurrentView == mTimersView) {
             // Clicking the "delete" button.
             final Timer timer = getTimer();
@@ -420,7 +424,7 @@ public final class TimerFragment extends DeskClockFragment {
     }
 
     @Override
-    public void onRightButtonClick(@NonNull Button right) {
+    public void onRightButtonClick(@NonNull ImageView right) {
         if (mCurrentView != mCreateTimerView) {
             animateToView(mCreateTimerView, null, true);
         }

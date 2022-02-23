@@ -13,8 +13,8 @@
      See the License for the specific language governing permissions and
      limitations under the License.
 -->
-<LinearLayout
-    xmlns:android="http://schemas.android.com/apk/res/android"
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
     android:id="@+id/city_container"
     android:layout_width="0dp"
     android:layout_height="wrap_content"
@@ -26,7 +26,8 @@
         android:layout_height="wrap_content"
         android:ellipsize="end"
         android:singleLine="true"
-        android:textAppearance="@style/body"/>
+        android:textAppearance="@style/body"
+        tools:text="Fictive city"/>
 
     <TextView
         android:id="@+id/hours_ahead"
@@ -36,7 +37,8 @@
         android:ellipsize="end"
         android:maxLines="2"
         android:scrollHorizontally="true"
-        android:textAppearance="@style/SecondaryLabelTextAppearance"/>
+        android:textAppearance="@style/SecondaryLabelTextAppearance"
+        tools:text="1 hour ahead"/>
 
 </LinearLayout>
 
