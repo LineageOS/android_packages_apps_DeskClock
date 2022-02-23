@@ -21,23 +21,20 @@ import android.animation.AnimatorListenerAdapter;
 import android.animation.AnimatorSet;
 import android.animation.ObjectAnimator;
 import android.content.Context;
-import android.graphics.Rect;
-import androidx.recyclerview.widget.RecyclerView.ViewHolder;
 import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
 import android.widget.TextView;
 
+import androidx.recyclerview.widget.RecyclerView.ViewHolder;
+
 import com.android.deskclock.AnimatorUtils;
 import com.android.deskclock.ItemAdapter;
 import com.android.deskclock.R;
-import com.android.deskclock.data.DataModel;
-import com.android.deskclock.data.Weekdays;
 import com.android.deskclock.events.Events;
 import com.android.deskclock.provider.Alarm;
 import com.android.deskclock.provider.AlarmInstance;
 
-import java.util.Calendar;
 import java.util.List;
 
 /**
@@ -48,19 +45,11 @@ public final class CollapsedAlarmViewHolder extends AlarmItemViewHolder {
     public static final int VIEW_TYPE = R.layout.alarm_time_collapsed;
 
     private final TextView alarmLabel;
-    public final TextView daysOfWeek;
-    private final TextView upcomingInstanceLabel;
-    private final View hairLine;
-
-    private float annotationsAlpha = CLOCK_ENABLED_ALPHA;
 
     private CollapsedAlarmViewHolder(View itemView) {
         super(itemView);
 
         alarmLabel = (TextView) itemView.findViewById(R.id.label);
-        daysOfWeek = (TextView) itemView.findViewById(R.id.days_of_week);
-        upcomingInstanceLabel = (TextView) itemView.findViewById(R.id.upcoming_instance_label);
-        hairLine = itemView.findViewById(R.id.hairline);
 
         // Expand handler
         itemView.setOnClickListener(new View.OnClickListener() {
@@ -105,9 +94,9 @@ public final class CollapsedAlarmViewHolder extends AlarmItemViewHolder {
         final Context context = itemView.getContext();
         bindRepeatText(context, alarm);
         bindReadOnlyLabel(context, alarm);
-        bindUpcomingInstance(context, alarm);
         bindPreemptiveDismissButton(context, alarm, alarmInstance);
-        bindAnnotations(context, alarm);
+        bindAnnotations(alarm);
+        bindAnnotations(alarm);
     }
 
     private void bindReadOnlyLabel(Context context, Alarm alarm) {
@@ -121,48 +110,21 @@ public final class CollapsedAlarmViewHolder extends AlarmItemViewHolder {
         }
     }
 
-    private void bindRepeatText(Context context, Alarm alarm) {
-        if (alarm.daysOfWeek.isRepeating()) {
-            final Weekdays.Order weekdayOrder = DataModel.getDataModel().getWeekdayOrder();
-            final String daysOfWeekText = alarm.daysOfWeek.toString(context, weekdayOrder);
-            daysOfWeek.setText(daysOfWeekText);
-
-            final String string = alarm.daysOfWeek.toAccessibilityString(context, weekdayOrder);
-            daysOfWeek.setContentDescription(string);
-
-            daysOfWeek.setVisibility(View.VISIBLE);
-        } else {
-            daysOfWeek.setVisibility(View.GONE);
-        }
-    }
-
-    private void bindUpcomingInstance(Context context, Alarm alarm) {
-        if (alarm.daysOfWeek.isRepeating()) {
-            upcomingInstanceLabel.setVisibility(View.GONE);
-        } else {
-            upcomingInstanceLabel.setVisibility(View.VISIBLE);
-            final String labelText = Alarm.isTomorrow(alarm, Calendar.getInstance()) ?
-                    context.getString(R.string.alarm_tomorrow) :
-                    context.getString(R.string.alarm_today);
-            upcomingInstanceLabel.setText(labelText);
-        }
-    }
-
-    private void bindAnnotations(Context context, Alarm alarm) {
+    private void bindAnnotations(Alarm alarm) {
         annotationsAlpha = alarm.enabled ? CLOCK_ENABLED_ALPHA : CLOCK_DISABLED_ALPHA;
         setChangingViewsAlpha(annotationsAlpha);
     }
 
     @Override
     public Animator onAnimateChange(List<Object> payloads, int fromLeft, int fromTop, int fromRight,
-            int fromBottom, long duration) {
+                                    int fromBottom, long duration) {
         /* There are no possible partial animations for collapsed view holders. */
         return null;
     }
 
     @Override
     public Animator onAnimateChange(final ViewHolder oldHolder, ViewHolder newHolder,
-            long duration) {
+                                    long duration) {
         if (!(oldHolder instanceof AlarmItemViewHolder)
                 || !(newHolder instanceof AlarmItemViewHolder)) {
             return null;
@@ -177,9 +139,6 @@ public final class CollapsedAlarmViewHolder extends AlarmItemViewHolder {
         changeAnimatorSet.addListener(new AnimatorListenerAdapter() {
             @Override
             public void onAnimationEnd(Animator animator) {
-                clock.setVisibility(View.VISIBLE);
-                onOff.setVisibility(View.VISIBLE);
-                arrow.setVisibility(View.VISIBLE);
                 arrow.setTranslationY(0f);
                 setChangingViewsAlpha(annotationsAlpha);
                 arrow.jumpDrawablesToCurrentState();
@@ -189,27 +148,31 @@ public final class CollapsedAlarmViewHolder extends AlarmItemViewHolder {
     }
 
     private Animator createExpandingAnimator(AlarmItemViewHolder newHolder, long duration) {
-        clock.setVisibility(View.INVISIBLE);
-        onOff.setVisibility(View.INVISIBLE);
-        arrow.setVisibility(View.INVISIBLE);
-
         final AnimatorSet alphaAnimatorSet = new AnimatorSet();
         alphaAnimatorSet.playTogether(
                 ObjectAnimator.ofFloat(alarmLabel, View.ALPHA, 0f),
-                ObjectAnimator.ofFloat(daysOfWeek, View.ALPHA, 0f),
-                ObjectAnimator.ofFloat(upcomingInstanceLabel, View.ALPHA, 0f),
-                ObjectAnimator.ofFloat(preemptiveDismissButton, View.ALPHA, 0f),
-                ObjectAnimator.ofFloat(hairLine, View.ALPHA, 0f));
+                ObjectAnimator.ofFloat(preemptiveDismissButton, View.ALPHA, 0f));
         alphaAnimatorSet.setDuration((long) (duration * ANIM_SHORT_DURATION_MULTIPLIER));
 
-        final View oldView = itemView;
-        final View newView = newHolder.itemView;
-        final Animator boundsAnimator = AnimatorUtils.getBoundsAnimator(oldView, oldView, newView)
-                .setDuration(duration);
-        boundsAnimator.setInterpolator(AnimatorUtils.INTERPOLATOR_FAST_OUT_SLOW_IN);
+        final Animator boundsAnimator = getBoundsAnimator(itemView, newHolder.itemView, duration);
+        final Animator switchAnimator = getBoundsAnimator(onOff, newHolder.onOff, duration);
+        final Animator clockAnimator = getBoundsAnimator(clock, newHolder.clock, duration);
+        final Animator ellipseAnimator = getBoundsAnimator(ellipsizeLayout,
+                newHolder.ellipsizeLayout, duration);
 
         final AnimatorSet animatorSet = new AnimatorSet();
-        animatorSet.playTogether(alphaAnimatorSet, boundsAnimator);
+        animatorSet.playTogether(alphaAnimatorSet, boundsAnimator, switchAnimator, clockAnimator,
+                ellipseAnimator);
+        animatorSet.addListener(new AnimatorListenerAdapter() {
+            @Override
+            public void onAnimationEnd(Animator animation) {
+                super.onAnimationEnd(animation);
+                clock.setVisibility(View.INVISIBLE);
+                onOff.setVisibility(View.INVISIBLE);
+                arrow.setVisibility(View.INVISIBLE);
+                ellipsizeLayout.setVisibility(View.INVISIBLE);
+            }
+        });
         return animatorSet;
     }
 
@@ -218,9 +181,7 @@ public final class CollapsedAlarmViewHolder extends AlarmItemViewHolder {
         alphaAnimatorSet.playTogether(
                 ObjectAnimator.ofFloat(alarmLabel, View.ALPHA, annotationsAlpha),
                 ObjectAnimator.ofFloat(daysOfWeek, View.ALPHA, annotationsAlpha),
-                ObjectAnimator.ofFloat(upcomingInstanceLabel, View.ALPHA, annotationsAlpha),
-                ObjectAnimator.ofFloat(preemptiveDismissButton, View.ALPHA, annotationsAlpha),
-                ObjectAnimator.ofFloat(hairLine, View.ALPHA, annotationsAlpha));
+                ObjectAnimator.ofFloat(preemptiveDismissButton, View.ALPHA, annotationsAlpha));
         final long standardDelay = (long) (duration * ANIM_STANDARD_DELAY_MULTIPLIER);
         alphaAnimatorSet.setDuration(standardDelay);
         alphaAnimatorSet.setStartDelay(duration - standardDelay);
@@ -230,17 +191,6 @@ public final class CollapsedAlarmViewHolder extends AlarmItemViewHolder {
         final Animator boundsAnimator = AnimatorUtils.getBoundsAnimator(newView, oldView, newView)
                 .setDuration(duration);
         boundsAnimator.setInterpolator(AnimatorUtils.INTERPOLATOR_FAST_OUT_SLOW_IN);
-
-        final View oldArrow = oldHolder.arrow;
-        final Rect oldArrowRect = new Rect(0, 0, oldArrow.getWidth(), oldArrow.getHeight());
-        final Rect newArrowRect = new Rect(0, 0, arrow.getWidth(), arrow.getHeight());
-        ((ViewGroup) newView).offsetDescendantRectToMyCoords(arrow, newArrowRect);
-        ((ViewGroup) oldView).offsetDescendantRectToMyCoords(oldArrow, oldArrowRect);
-        final float arrowTranslationY = oldArrowRect.bottom - newArrowRect.bottom;
-        arrow.setTranslationY(arrowTranslationY);
-        arrow.setVisibility(View.VISIBLE);
-        clock.setVisibility(View.VISIBLE);
-        onOff.setVisibility(View.VISIBLE);
 
         final Animator arrowAnimation = ObjectAnimator.ofFloat(arrow, View.TRANSLATION_Y, 0f)
                 .setDuration(duration);
@@ -260,8 +210,6 @@ public final class CollapsedAlarmViewHolder extends AlarmItemViewHolder {
     private void setChangingViewsAlpha(float alpha) {
         alarmLabel.setAlpha(alpha);
         daysOfWeek.setAlpha(alpha);
-        upcomingInstanceLabel.setAlpha(alpha);
-        hairLine.setAlpha(alpha);
         preemptiveDismissButton.setAlpha(alpha);
     }
 
