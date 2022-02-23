@@ -1,0 +1,17 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout android:focusable="false" android:layout_width="match_parent" android:layout_height="wrap_content"
+    xmlns:android="http://schemas.android.com/apk/res/android" xmlns:app="http://schemas.android.com/apk/res-auto">
+    <androidx.constraintlayout.widget.Guideline android:orientation="vertical" android:id="@+id/one_seventh" android:layout_width="wrap_content" android:layout_height="wrap_content" app:layout_constraintGuide_percent="0.143" />
+    <androidx.constraintlayout.widget.Guideline android:orientation="vertical" android:id="@+id/two_sevenths" android:layout_width="wrap_content" android:layout_height="wrap_content" app:layout_constraintGuide_percent="0.286" />
+    <androidx.constraintlayout.widget.Guideline android:orientation="vertical" android:id="@+id/three_sevenths" android:layout_width="wrap_content" android:layout_height="wrap_content" app:layout_constraintGuide_percent="0.429" />
+    <androidx.constraintlayout.widget.Guideline android:orientation="vertical" android:id="@+id/four_sevenths" android:layout_width="wrap_content" android:layout_height="wrap_content" app:layout_constraintGuide_percent="0.571" />
+    <androidx.constraintlayout.widget.Guideline android:orientation="vertical" android:id="@+id/five_sevenths" android:layout_width="wrap_content" android:layout_height="wrap_content" app:layout_constraintGuide_percent="0.714" />
+    <androidx.constraintlayout.widget.Guideline android:orientation="vertical" android:id="@+id/six_sevenths" android:layout_width="wrap_content" android:layout_height="wrap_content" app:layout_constraintGuide_percent="0.857" />
+    <CheckBox android:id="@+id/day_button_0" app:layout_constraintStart_toStartOf="parent" app:layout_constraintTop_toTopOf="parent" style="@style/DayButtonStyle" />
+    <CheckBox android:id="@+id/day_button_1" app:layout_constraintStart_toEndOf="@id/one_seventh" app:layout_constraintTop_toTopOf="parent" style="@style/DayButtonStyle" />
+    <CheckBox android:id="@+id/day_button_2" app:layout_constraintStart_toEndOf="@id/two_sevenths" app:layout_constraintTop_toTopOf="parent" style="@style/DayButtonStyle" />
+    <CheckBox android:id="@+id/day_button_3" app:layout_constraintStart_toEndOf="@id/three_sevenths" app:layout_constraintTop_toTopOf="parent" style="@style/DayButtonStyle" />
+    <CheckBox android:id="@+id/day_button_4" app:layout_constraintStart_toEndOf="@id/four_sevenths" app:layout_constraintTop_toTopOf="parent" style="@style/DayButtonStyle" />
+    <CheckBox android:id="@+id/day_button_5" app:layout_constraintStart_toEndOf="@id/five_sevenths" app:layout_constraintTop_toTopOf="parent" style="@style/DayButtonStyle" />
+    <CheckBox android:id="@+id/day_button_6" app:layout_constraintStart_toEndOf="@id/six_sevenths" app:layout_constraintTop_toTopOf="parent" style="@style/DayButtonStyle" />
+</androidx.constraintlayout.widget.ConstraintLayout>

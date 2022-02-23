@@ -31,15 +31,15 @@
         android:paddingBottom="@dimen/fab_height">
 
         <include layout="@layout/timer_setup_time" />
-
-        <include layout="@layout/timer_setup_divider" />
-
     </LinearLayout>
 
-    <include
-        layout="@layout/timer_setup_digits"
-        android:layout_width="0dp"
-        android:layout_height="match_parent"
-        android:layout_weight="2" />
+    <LinearLayout
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_weight="2"
+        android:paddingBottom="8dp">
+
+        <include layout="@layout/timer_setup_digits"/>
+    </LinearLayout>
 
 </LinearLayout>
