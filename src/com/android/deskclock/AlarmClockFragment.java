@@ -22,10 +22,10 @@ import android.database.Cursor;
 import android.graphics.drawable.Drawable;
 import android.os.Bundle;
 import android.os.SystemClock;
+import android.util.Log;
 import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
-import android.widget.Button;
 import android.widget.ImageView;
 import android.widget.TextView;
 import androidx.annotation.NonNull;
@@ -119,12 +119,13 @@ public final class AlarmClockFragment extends DeskClockFragment implements
         mRecyclerView = (RecyclerView) v.findViewById(R.id.alarms_recycler_view);
         mLayoutManager = new LinearLayoutManager(context) {
             @Override
-            protected int getExtraLayoutSpace(RecyclerView.State state) {
-                final int extraSpace = super.getExtraLayoutSpace(state);
-                if (state.willRunPredictiveAnimations()) {
-                    return Math.max(getHeight(), extraSpace);
-                }
-                return extraSpace;
+            protected void calculateExtraLayoutSpace(@NonNull RecyclerView.State state,
+                                                     @NonNull int[] extraLayoutSpace) {
+                // We need enough space so after expand/collapse, other items are still
+                // shown properly. The multiplier was chosen after tests
+                extraLayoutSpace[0] = (int)(1.5 * getHeight());
+                extraLayoutSpace[1] = extraLayoutSpace[0];
+
             }
         };
         mRecyclerView.setLayoutManager(mLayoutManager);
@@ -398,7 +399,7 @@ public final class AlarmClockFragment extends DeskClockFragment implements
     }
 
     @Override
-    public void onUpdateFabButtons(@NonNull Button left, @NonNull Button right) {
+    public void onUpdateFabButtons(@NonNull ImageView left, @NonNull ImageView right) {
         left.setVisibility(View.INVISIBLE);
         right.setVisibility(View.INVISIBLE);
     }
