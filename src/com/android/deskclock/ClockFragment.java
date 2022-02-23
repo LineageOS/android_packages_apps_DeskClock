@@ -37,7 +37,6 @@ import android.view.LayoutInflater;
 import android.view.MotionEvent;
 import android.view.View;
 import android.view.ViewGroup;
-import android.widget.Button;
 import android.widget.ImageView;
 import android.widget.TextClock;
 import android.widget.TextView;
@@ -210,7 +209,7 @@ public final class ClockFragment extends DeskClockFragment {
     }
 
     @Override
-    public void onUpdateFabButtons(@NonNull Button left, @NonNull Button right) {
+    public void onUpdateFabButtons(@NonNull ImageView left, @NonNull ImageView right) {
         left.setVisibility(INVISIBLE);
         right.setVisibility(INVISIBLE);
     }

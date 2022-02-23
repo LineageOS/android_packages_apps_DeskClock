@@ -39,13 +39,20 @@
 
     <style name="Theme.DeskClock.Settings">
         <!-- Attributes from androidx.appcompat.appcompat -->
-        <item name="actionBarStyle">@style/Widget.ActionBar</item>
         <item name="colorControlActivated">?attr/colorAccent</item>
-        <item name="windowActionBar">true</item>
-        <item name="windowNoTitle">false</item>
 
         <!-- Attributes from androidx.preference.-->
-        <item name="preferenceTheme">@style/PreferenceThemeOverlay.v14.Material</item>
+        <item name="preferenceTheme">@style/Theme.DeskClock.Settings.PreferenceTheme</item>
+<!--        <item name="android:switchStyle">@style/DeskClock.Switch</item>-->
+    </style>
+
+    <style name="Theme.DeskClock.Settings.PreferenceTheme" parent="@style/PreferenceThemeOverlay">
+        <item name="preferenceStyle">@style/DeskClock.Preference</item>
+        <item name="switchPreferenceCompatStyle">@style/DeskClock.SwitchPreferenceCompat</item>
+        <item name="preferenceCategoryStyle">@style/DeskClock.PreferenceCategory</item>
+        <item name="dropdownPreferenceStyle">@style/DeskClock.DropdownPreference</item>
+        <item name="dialogPreferenceStyle">@style/DeskClock.DialogPreference</item>
+<!--        <item name="android:switchStyle">@style/DeskClock.Switch</item>-->
     </style>
 
     <style name="Theme.DeskClock.RingtonePicker">

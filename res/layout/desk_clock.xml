@@ -43,8 +43,10 @@
                 android:id="@+id/title_view"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
-                android:layout_gravity="center"
-                style="@style/TextAppearance.AppCompat.Widget.ActionBar.Title" />
+                android:layout_gravity="start"
+                style="@style/TextAppearance.AppCompat.Widget.ActionBar.Title"
+                android:paddingStart="24dp"
+                tools:text="Alarm"/>
 
         </androidx.appcompat.widget.Toolbar>
     </com.google.android.material.appbar.AppBarLayout>
@@ -60,7 +62,7 @@
             android:layout_width="match_parent"
             android:layout_height="match_parent"/>
 
-        <LinearLayout
+        <androidx.constraintlayout.widget.ConstraintLayout
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
             android:layout_gravity="bottom"
@@ -68,21 +70,18 @@
             android:orientation="horizontal"
             app:layout_behavior="com.android.deskclock.widget.toast.SnackbarSlidingBehavior">
 
-            <FrameLayout
-                android:layout_width="0dp"
-                android:layout_height="match_parent"
-                android:layout_gravity="start|center_vertical"
-                android:layout_weight="1">
+            <com.google.android.material.floatingactionbutton.FloatingActionButton
+                android:id="@+id/left_button"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_gravity="center"
+                android:contentDescription="@null"
+                app:layout_constraintBottom_toBottomOf="parent"
+                app:layout_constraintEnd_toStartOf="@id/fab"
+                app:layout_constraintHorizontal_bias="0.65"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toTopOf="parent" />
 
-                <Button
-                    android:id="@+id/left_button"
-                    style="?attr/borderlessButtonStyle"
-                    android:layout_width="wrap_content"
-                    android:layout_height="wrap_content"
-                    android:layout_gravity="center"
-                    android:scaleType="centerInside" />
-
-            </FrameLayout>
 
             <com.google.android.material.floatingactionbutton.FloatingActionButton
                 android:id="@+id/fab"
@@ -90,26 +89,27 @@
                 android:layout_height="wrap_content"
                 android:layout_gravity="center"
                 android:layout_margin="@dimen/fab_margin"
+                android:contentDescription="@null"
                 app:borderWidth="0dp"
-                app:elevation="@dimen/fab_elevation" />
+                app:fabCustomSize="@dimen/fab_height"
+                app:layout_constraintBottom_toBottomOf="parent"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toTopOf="parent" />
 
-            <FrameLayout
-                android:layout_width="0dp"
-                android:layout_height="match_parent"
-                android:layout_gravity="end|center_vertical"
-                android:layout_weight="1">
+            <com.google.android.material.floatingactionbutton.FloatingActionButton
+                android:id="@+id/right_button"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_gravity="center"
+                android:contentDescription="@null"
+                app:layout_constraintBottom_toBottomOf="parent"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintHorizontal_bias="0.35"
+                app:layout_constraintStart_toEndOf="@id/fab"
+                app:layout_constraintTop_toTopOf="parent" />
 
-                <Button
-                    android:id="@+id/right_button"
-                    style="?attr/borderlessButtonStyle"
-                    android:layout_width="wrap_content"
-                    android:layout_height="wrap_content"
-                    android:layout_gravity="center"
-                    android:scaleType="centerInside" />
-
-            </FrameLayout>
-
-        </LinearLayout>
+        </androidx.constraintlayout.widget.ConstraintLayout>
 
     </androidx.coordinatorlayout.widget.CoordinatorLayout>
 
@@ -117,7 +117,6 @@
         android:id="@+id/bottom_view"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:layout_below="@id/content"
         android:background="@color/secondary_color"
         app:menu="@menu/bottom_navigation_menu"
         app:itemIconTint="@color/tab_tint_color"

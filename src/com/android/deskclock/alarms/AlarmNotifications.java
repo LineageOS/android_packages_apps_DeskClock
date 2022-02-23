@@ -383,7 +383,7 @@ public final class AlarmNotifications {
         snoozeIntent.putExtra(AlarmStateManager.FROM_NOTIFICATION_EXTRA, true);
         PendingIntent snoozePendingIntent = PendingIntent.getService(service,
                 ALARM_FIRING_NOTIFICATION_ID, snoozeIntent, PendingIntent.FLAG_UPDATE_CURRENT);
-        notification.addAction(R.drawable.ic_snooze_24dp,
+        notification.addAction(0,
                 resources.getString(R.string.alarm_alert_snooze_text), snoozePendingIntent);
 
         // Setup Dismiss Action
