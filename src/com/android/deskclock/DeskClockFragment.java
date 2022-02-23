@@ -55,12 +55,12 @@ public abstract class DeskClockFragment extends Fragment implements FabContainer
     }
 
     @Override
-    public void onLeftButtonClick(@NonNull Button left) {
+    public void onLeftButtonClick(@NonNull ImageView left) {
         // Do nothing here, only in derived classes
     }
 
     @Override
-    public void onRightButtonClick(@NonNull Button right) {
+    public void onRightButtonClick(@NonNull ImageView right) {
         // Do nothing here, only in derived classes
     }
 

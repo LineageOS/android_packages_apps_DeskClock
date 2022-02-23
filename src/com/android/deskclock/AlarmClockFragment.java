@@ -398,7 +398,7 @@ public final class AlarmClockFragment extends DeskClockFragment implements
     }
 
     @Override
-    public void onUpdateFabButtons(@NonNull Button left, @NonNull Button right) {
+    public void onUpdateFabButtons(@NonNull ImageView left, @NonNull ImageView right) {
         left.setVisibility(View.INVISIBLE);
         right.setVisibility(View.INVISIBLE);
     }

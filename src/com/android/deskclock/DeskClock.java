@@ -108,10 +108,10 @@ public class DeskClock extends BaseActivity
     private ImageView mFab;
 
     /** The button left of the {@link #mFab} shared across all tabs in the user interface. */
-    private Button mLeftButton;
+    private ImageView mLeftButton;
 
     /** The button right of the {@link #mFab} shared across all tabs in the user interface. */
-    private Button mRightButton;
+    private ImageView mRightButton;
 
     /** The ViewPager that pages through the fragments representing the content of the tabs. */
     private ViewPager mFragmentTabPager;
@@ -170,8 +170,8 @@ public class DeskClock extends BaseActivity
 
         // Configure the buttons shared by the tabs.
         mFab = (ImageView) findViewById(R.id.fab);
-        mLeftButton = (Button) findViewById(R.id.left_button);
-        mRightButton = (Button) findViewById(R.id.right_button);
+        mLeftButton = (ImageView) findViewById(R.id.left_button);
+        mRightButton = (ImageView) findViewById(R.id.right_button);
 
         mFab.setOnClickListener(new OnClickListener() {
             @Override

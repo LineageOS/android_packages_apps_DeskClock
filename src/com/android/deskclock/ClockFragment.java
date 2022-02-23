@@ -210,7 +210,7 @@ public final class ClockFragment extends DeskClockFragment {
     }
 
     @Override
-    public void onUpdateFabButtons(@NonNull Button left, @NonNull Button right) {
+    public void onUpdateFabButtons(@NonNull ImageView left, @NonNull ImageView right) {
         left.setVisibility(INVISIBLE);
         right.setVisibility(INVISIBLE);
     }

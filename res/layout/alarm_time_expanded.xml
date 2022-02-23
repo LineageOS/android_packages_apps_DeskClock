@@ -15,51 +15,74 @@
   limitations under the License.
   -->
 
-<androidx.gridlayout.widget.GridLayout
+<androidx.constraintlayout.widget.ConstraintLayout
     xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:app="http://schemas.android.com/apk/res-auto"
     android:layout_width="match_parent"
     android:layout_height="wrap_content"
-    android:paddingEnd="16dp"
-    android:paddingStart="16dp"
-    app:columnCount="8"
-    app:columnOrderPreserved="false"
-    app:rowCount="8">
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_marginBottom="8dp"
+    android:layout_marginLeft="16dp"
+    android:layout_marginRight="16dp"
+    android:background="@drawable/alarm_background">
 
     <include
         layout="@layout/alarm_time_summary"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:layout_marginTop="@dimen/alarm_clock_vertical_margin"
-        app:layout_column="0"
-        app:layout_columnSpan="4"
-        app:layout_gravity="center_vertical"
-        app:layout_row="0" />
+        android:layout_marginStart="16dp"
+        app:layout_gravity="top"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/edit_label"/>
 
     <androidx.appcompat.widget.SwitchCompat
         android:id="@+id/onoff"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:layout_marginTop="@dimen/alarm_clock_vertical_margin"
-        android:minHeight="@dimen/touch_target_min_size"
         android:minWidth="@dimen/touch_target_min_size"
+        android:minHeight="@dimen/touch_target_min_size"
         android:theme="@style/ThemeOverlay.Control.Accent"
-        app:layout_column="6"
-        app:layout_columnSpan="2"
+        android:thumb="@drawable/settingslib_switch_thumb"
+        android:layout_marginEnd="16dp"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/digital_clock"
         app:layout_gravity="center_vertical"
-        app:layout_row="0" />
+        app:track="@drawable/settingslib_switch_track" />
 
-    <CheckBox
-        android:id="@+id/repeat_onoff"
-        style="@style/body"
-        android:layout_width="wrap_content"
+    <com.android.deskclock.widget.EllipsizeLayout
+        android:id="@+id/ellipse_layout"
+        android:layout_width="0dp"
         android:layout_height="@dimen/touch_target_min_size"
-        android:paddingEnd="@dimen/checkbox_start_padding"
-        android:paddingStart="@dimen/checkbox_start_padding"
-        android:text="@string/alarm_repeat"
-        app:layout_column="0"
-        app:layout_columnSpan="2"
-        app:layout_row="1" />
+        android:layout_marginStart="16dp"
+        android:gravity="center_vertical"
+        app:layout_constraintEnd_toStartOf="@id/onoff"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/digital_clock">
+
+        <TextView
+            android:id="@+id/days_of_week"
+            style="@style/body"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:ellipsize="none"
+            android:focusable="true"
+            android:maxLines="1"
+            android:paddingStart="@dimen/icon_margin"
+            android:paddingEnd="@dimen/icon_margin"
+            tools:text="Mo.,Tue.,Wed." />
+
+        <TextView
+            android:id="@+id/upcoming_instance_label"
+            style="@style/body"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:ellipsize="none"
+            android:focusable="true"
+            android:paddingStart="@dimen/icon_margin"
+            android:paddingEnd="@dimen/icon_margin"
+            android:singleLine="true" />
+
+    </com.android.deskclock.widget.EllipsizeLayout>
 
     <!-- Day buttons are put here programmatically -->
     <LinearLayout
@@ -67,11 +90,12 @@
         android:layout_width="0dp"
         android:layout_height="@dimen/touch_target_min_size"
         android:orientation="horizontal"
-        android:visibility="gone"
-        app:layout_column="0"
-        app:layout_columnSpan="8"
-        app:layout_gravity="fill_horizontal"
-        app:layout_row="2" />
+        android:layout_marginStart="8dp"
+        android:layout_marginEnd="8dp"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/ellipse_layout"
+        app:layout_gravity="fill_horizontal" />
 
     <TextView
         android:id="@+id/choose_ringtone"
@@ -82,103 +106,99 @@
         android:clickable="true"
         android:drawablePadding="@dimen/alarm_horizontal_padding"
         android:ellipsize="marquee"
+        android:focusable="true"
         android:gravity="start|center_vertical"
         android:marqueeRepeatLimit="marquee_forever"
-        android:paddingEnd="@dimen/icon_margin"
         android:paddingStart="@dimen/icon_margin"
+        android:paddingEnd="@dimen/icon_margin"
         android:scrollHorizontally="true"
         android:singleLine="true"
         android:textAlignment="viewStart"
-        app:layout_column="0"
-        app:layout_columnSpan="5"
+        android:layout_marginStart="16dp"
+        app:drawableStartCompat="@drawable/ic_ringtone"
+        app:layout_constraintEnd_toStartOf="@id/vibrate_onoff"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/repeat_days"
         app:layout_gravity="fill_horizontal"
-        app:layout_row="3" />
+        tools:text="Standard (Hassium)" />
 
     <CheckBox
         android:id="@+id/vibrate_onoff"
         style="@style/body"
         android:layout_width="wrap_content"
         android:layout_height="@dimen/touch_target_min_size"
-        android:paddingEnd="@dimen/checkbox_start_padding"
+        android:layout_marginEnd="16dp"
         android:paddingStart="@dimen/checkbox_start_padding"
+        android:paddingEnd="0dp"
         android:text="@string/alarm_vibrate"
-        app:layout_column="5"
-        app:layout_columnSpan="3"
-        app:layout_gravity="center_vertical"
-        app:layout_row="3" />
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/repeat_days"
+        app:layout_gravity="center_vertical" />
 
     <TextView
         android:id="@+id/edit_label"
         style="@style/body"
         android:layout_width="0dp"
-        android:layout_height="wrap_content"
+        android:layout_height="@dimen/touch_target_min_size"
         android:background="?attr/selectableItemBackground"
         android:drawablePadding="@dimen/alarm_horizontal_padding"
         android:ellipsize="end"
         android:gravity="start|center_vertical"
-        android:hint="@string/label"
-        android:paddingBottom="12dp"
-        android:paddingEnd="4dp"
+        android:hint="@string/add_label"
         android:paddingStart="4dp"
         android:paddingTop="12dp"
+        android:paddingEnd="4dp"
+        android:paddingBottom="12dp"
         android:singleLine="true"
         android:textAlignment="viewStart"
-        app:layout_column="0"
-        app:layout_columnSpan="8"
-        app:layout_gravity="fill_horizontal"
-        app:layout_row="4" />
+        android:layout_marginStart="16dp"
+        app:drawableStartCompat="@drawable/ic_label"
+        app:layout_constraintEnd_toStartOf="@id/arrow"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_gravity="fill_horizontal" />
 
     <include
+        android:id="@+id/preemptive_dismiss_button"
         layout="@layout/preemptive_dismiss"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        app:layout_column="0"
-        app:layout_columnSpan="3"
-        app:layout_row="5" />
-
-    <View
-        android:id="@+id/hairline"
-        android:layout_width="0dp"
-        android:layout_height="@dimen/hairline_height"
-        android:layout_marginRight="@dimen/hairline_side_padding"
-        android:layout_marginLeft="@dimen/hairline_side_padding"
-        android:background="@color/hairline"
-        app:layout_column="0"
-        app:layout_columnSpan="8"
-        app:layout_gravity="fill_horizontal"
-        app:layout_row="6" />
+        android:layout_marginStart="16dp"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/choose_ringtone" />
 
     <Button
         android:id="@+id/delete"
         style="?attr/borderlessButtonStyle"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:layout_marginBottom="@dimen/alarm_clock_vertical_margin"
-        android:layout_marginTop="@dimen/alarm_clock_vertical_margin"
+        android:drawableStart="@drawable/ic_delete_small"
         android:drawablePadding="@dimen/alarm_horizontal_padding"
         android:gravity="start|center_vertical"
-        android:paddingEnd="@dimen/checkbox_start_padding"
         android:paddingStart="@dimen/icon_margin"
+        android:paddingEnd="@dimen/checkbox_start_padding"
         android:text="@string/delete"
         android:textAllCaps="false"
         android:textAppearance="@style/body"
-        app:layout_column="0"
-        app:layout_gravity="center_vertical"
-        app:layout_row="7" />
+        android:layout_marginStart="16dp"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/preemptive_dismiss_button"
+        app:layout_gravity="center_vertical" />
 
     <ImageButton
         android:id="@+id/arrow"
         android:layout_width="wrap_content"
         android:layout_height="@dimen/touch_target_min_size"
-        android:layout_marginBottom="@dimen/alarm_clock_vertical_margin"
-        android:layout_marginTop="@dimen/alarm_clock_vertical_margin"
         android:background="?attr/selectableItemBackgroundBorderless"
         android:contentDescription="@string/collapse_alarm"
         android:padding="@dimen/checkbox_start_padding"
         android:scaleType="center"
         app:layout_column="7"
-        app:layout_gravity="center_vertical"
-        app:layout_row="7"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_gravity="end"
+        app:layout_row="0"
+        app:layout_rowSpan="2"
         app:srcCompat="@drawable/ic_caret_up" />
 
-</androidx.gridlayout.widget.GridLayout>
+</androidx.constraintlayout.widget.ConstraintLayout>

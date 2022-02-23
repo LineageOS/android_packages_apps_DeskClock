@@ -1,0 +1,40 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <style name="CollapsingToolbarTitle.Collapsed" parent="@android:style/TextAppearance.DeviceDefault.Widget.ActionBar.Title">
+        <item name="android:fontFamily">@*android:string/config_headlineFontFamily</item>
+        <item name="android:textSize">20dp</item>
+        <item name="android:textColor">@android:color/white</item>
+    </style>
+
+    <style name="CollapsingToolbarTitle.Expanded" parent="CollapsingToolbarTitle.Collapsed">
+        <item name="android:textSize">36dp</item>
+    </style>
+
+    <style name="DeskClock.Preference" parent="@style/Preference.Material">
+        <item name="iconSpaceReserved">false</item>
+    </style>
+
+    <style name="DeskClock.PreferenceCategory" parent="@style/Preference.Category.Material">
+        <item name="iconSpaceReserved">false</item>
+    </style>
+
+    <style name="DeskClock.DropdownPreference" parent="@style/Preference.DropDown.Material">
+        <item name="iconSpaceReserved">false</item>
+    </style>
+
+    <style name="DeskClock.SwitchPreferenceCompat" parent="@style/Preference.SwitchPreferenceCompat.Material">
+        <item name="iconSpaceReserved">false</item>
+        <item name="android:widgetLayout">@layout/widget_switch_compat</item>
+    </style>
+
+    <style name="DeskClock.DialogPreference" parent="@style/Preference.DialogPreference.Material">
+        <item name="iconSpaceReserved">false</item>
+    </style>
+
+    <style name="DeskClock.Switch" parent="@android:style/Widget.Material.CompoundButton.Switch">
+        <item name="android:switchMinWidth">52dp</item>
+        <item name="android:minHeight">@dimen/settingslib_preferred_minimum_touch_target</item>
+        <item name="android:track">@drawable/settingslib_switch_track</item>
+        <item name="android:thumb">@drawable/settingslib_switch_thumb</item>
+    </style>
+</resources>

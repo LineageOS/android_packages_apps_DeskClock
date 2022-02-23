@@ -1,12 +1,12 @@
 <?xml version="1.0" encoding="utf-8"?>
 <!--
-  Copyright (C) 2016 The Android Open Source Project
+  Copyright (C) 2021 The Android Open Source Project
 
   Licensed under the Apache License, Version 2.0 (the "License");
   you may not use this file except in compliance with the License.
   You may obtain a copy of the License at
 
-      http://www.apache.org/licenses/LICENSE-2.0
+       http://www.apache.org/licenses/LICENSE-2.0
 
   Unless required by applicable law or agreed to in writing, software
   distributed under the License is distributed on an "AS IS" BASIS,
@@ -15,8 +15,15 @@
   limitations under the License.
   -->
 
-<resources>
-    <color name="default_background">#141417</color>
-    <color name="accent_color">#FEF177</color>
-    <color name="secondary_color">#23242C</color>
-</resources>
+<layer-list xmlns:android="http://schemas.android.com/apk/res/android">
+    <item
+        android:top="4dp"
+        android:left="4dp"
+        android:right="4dp"
+        android:bottom="4dp">
+        <shape android:shape="oval" >
+            <size android:height="20dp" android:width="20dp" />
+            <solid android:color="@color/settingslib_switch_thumb_color" />
+        </shape>
+    </item>
+</layer-list>
