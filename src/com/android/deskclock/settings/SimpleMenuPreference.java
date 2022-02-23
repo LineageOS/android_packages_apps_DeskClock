@@ -24,6 +24,7 @@ import android.util.AttributeSet;
 import android.view.View;
 import android.view.ViewGroup;
 import android.widget.ArrayAdapter;
+import android.widget.TextView;
 
 import com.android.deskclock.R;
 import com.android.deskclock.Utils;
@@ -133,9 +134,9 @@ public class SimpleMenuPreference extends DropDownPreference {
         public View getDropDownView(int position, View convertView, @NonNull ViewGroup parent) {
             final View view = super.getDropDownView(position, convertView, parent);
             if (position == 0) {
-                view.setBackgroundColor(ContextCompat.getColor(getContext(), R.color.white_08p));
-            } else {
-                view.setBackgroundColor(ContextCompat.getColor(getContext(), R.color.transparent));
+                view.setBackgroundResource(R.drawable.popup_background_selected);
+                TextView tv = (TextView) view;
+                tv.setTextColor(getContext().getColor(R.color.black));
             }
             return view;
         }

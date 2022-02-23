@@ -28,19 +28,19 @@ import android.net.Uri;
 import android.os.Bundle;
 import android.os.Handler;
 import android.provider.Settings;
-import androidx.annotation.NonNull;
-import androidx.recyclerview.widget.LinearLayoutManager;
-import androidx.recyclerview.widget.RecyclerView;
 import android.text.format.DateUtils;
 import android.view.GestureDetector;
 import android.view.LayoutInflater;
 import android.view.MotionEvent;
 import android.view.View;
 import android.view.ViewGroup;
-import android.widget.Button;
 import android.widget.ImageView;
 import android.widget.TextClock;
 import android.widget.TextView;
+
+import androidx.annotation.NonNull;
+import androidx.recyclerview.widget.LinearLayoutManager;
+import androidx.recyclerview.widget.RecyclerView;
 
 import com.android.deskclock.data.City;
 import com.android.deskclock.data.CityListener;
@@ -210,7 +210,7 @@ public final class ClockFragment extends DeskClockFragment {
     }
 
     @Override
-    public void onUpdateFabButtons(@NonNull Button left, @NonNull Button right) {
+    public void onUpdateFabButtons(@NonNull ImageView left, @NonNull ImageView right) {
         left.setVisibility(INVISIBLE);
         right.setVisibility(INVISIBLE);
     }
@@ -401,7 +401,7 @@ public final class ClockFragment extends DeskClockFragment {
                     break;
                 case MAIN_CLOCK:
                     ((MainClockViewHolder) holder).bind(mContext, mDateFormat,
-                            mDateFormatForAccessibility, getItemCount() > 1);
+                            mDateFormatForAccessibility);
                     break;
                 default:
                     throw new IllegalArgumentException("Unexpected view type: " + viewType);
@@ -524,27 +524,23 @@ public final class ClockFragment extends DeskClockFragment {
 
         private static final class MainClockViewHolder extends RecyclerView.ViewHolder {
 
-            private final View mHairline;
             private final TextClock mDigitalClock;
             private final AnalogClock mAnalogClock;
 
             private MainClockViewHolder(View itemView) {
                 super(itemView);
 
-                mHairline = itemView.findViewById(R.id.hairline);
                 mDigitalClock = (TextClock) itemView.findViewById(R.id.digital_clock);
                 mAnalogClock = (AnalogClock) itemView.findViewById(R.id.analog_clock);
                 Utils.setClockIconTypeface(itemView);
             }
 
             private void bind(Context context, String dateFormat,
-                    String dateFormatForAccessibility, boolean showHairline) {
+                              String dateFormatForAccessibility) {
                 Utils.refreshAlarm(context, itemView);
 
                 Utils.updateDate(dateFormat, dateFormatForAccessibility, itemView);
                 Utils.setClockStyle(mDigitalClock, mAnalogClock);
-                mHairline.setVisibility(showHairline ? VISIBLE : GONE);
-
                 Utils.setClockSecondsEnabled(mDigitalClock, mAnalogClock);
             }
         }

@@ -19,7 +19,8 @@
     android:layout_width="match_parent"
     android:layout_height="match_parent"
     android:baselineAligned="false"
-    android:orientation="horizontal">
+    android:orientation="horizontal"
+    android:layout_gravity="center_vertical">
 
     <!-- Left gutter. -->
     <Space
@@ -31,8 +32,7 @@
     <com.android.deskclock.stopwatch.StopwatchLandscapeLayout
         android:layout_width="0dp"
         android:layout_height="match_parent"
-        android:layout_weight="@integer/guttered_content_width_percent"
-        android:paddingBottom="@dimen/fab_height">
+        android:layout_weight="@integer/guttered_content_width_percent">
 
         <FrameLayout
             android:id="@+id/stopwatch_time_wrapper"
@@ -48,15 +48,14 @@
             android:id="@+id/laps_list"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:clipToPadding="false"
-            android:paddingBottom="@dimen/fab_height" />
+            android:clipToPadding="false" />
 
     </com.android.deskclock.stopwatch.StopwatchLandscapeLayout>
-
-    <!-- Right gutter. -->
+<!--
+    &lt;!&ndash; Right gutter. &ndash;&gt;
     <Space
         android:layout_width="0dp"
         android:layout_height="match_parent"
-        android:layout_weight="@integer/gutter_width_percent" />
+        android:layout_weight="@integer/gutter_width_percent" />-->
 
 </LinearLayout>

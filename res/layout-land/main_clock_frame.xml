@@ -15,6 +15,7 @@
 
 <LinearLayout
     xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="wrap_content"
     android:gravity="center_horizontal"
@@ -42,18 +43,14 @@
             android:layout_height="wrap_content"
             android:ellipsize="none"
             android:singleLine="true"
-            android:textSize="@dimen/main_clock_digital_font_size" />
+            android:textSize="@dimen/main_clock_digital_font_size"
+            tools:text="01:23" />
 
     </FrameLayout>
 
-    <include layout="@layout/date_and_next_alarm_time" />
-
-    <View
-        android:id="@+id/hairline"
-        android:layout_width="match_parent"
-        android:layout_height="@dimen/hairline_height"
-        android:layout_marginTop="24dp"
-        android:background="@color/hairline"
-        android:visibility="gone" />
+    <include layout="@layout/date_and_next_alarm_time"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_gravity="center_horizontal"/>
 
 </LinearLayout>
