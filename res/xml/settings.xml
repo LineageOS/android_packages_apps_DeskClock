@@ -14,48 +14,60 @@
 
 <PreferenceScreen
     xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
     android:title="@string/settings">
+
     <PreferenceCategory
-        android:title="@string/clock_settings">
+        android:title="@string/clock_settings"
+        app:iconSpaceReserved="false">
+
         <com.android.deskclock.settings.SimpleMenuPreference
             android:defaultValue="@string/default_clock_style"
             android:dialogTitle="@string/clock_style"
             android:entries="@array/clock_style_entries"
             android:entryValues="@array/clock_style_values"
             android:key="clock_style"
-            android:title="@string/clock_style" />
+            android:title="@string/clock_style"
+            app:iconSpaceReserved="false" />
 
         <SwitchPreferenceCompat
             android:key="display_clock_seconds"
-            android:title="@string/display_clock_seconds_pref" />
+            android:title="@string/display_clock_seconds_pref"
+            app:iconSpaceReserved="false"  />
 
         <SwitchPreferenceCompat
             android:defaultValue="true"
             android:key="automatic_home_clock"
             android:summary="@string/automatic_home_clock_summary"
-            android:title="@string/automatic_home_clock" />
+            android:title="@string/automatic_home_clock"
+            app:iconSpaceReserved="false"  />
 
         <ListPreference
             android:dialogTitle="@string/home_time_zone_title"
             android:entries="@array/timezone_labels"
             android:entryValues="@array/timezone_values"
             android:key="home_time_zone"
-            android:title="@string/home_time_zone" />
+            android:title="@string/home_time_zone"
+            app:iconSpaceReserved="false"  />
 
         <Preference
             android:key="date_time"
-            android:title="@string/open_date_settings" />
+            android:title="@string/open_date_settings"
+            app:iconSpaceReserved="false" />
     </PreferenceCategory>
 
     <PreferenceCategory
-        android:title="@string/alarm_settings">
+        android:title="@string/alarm_settings"
+        app:iconSpaceReserved="false">
+
         <ListPreference
             android:defaultValue="10"
             android:dialogTitle="@string/auto_silence_title"
             android:entries="@array/auto_silence_entries"
             android:entryValues="@array/auto_silence_values"
             android:key="auto_silence"
-            android:title="@string/auto_silence_title" />
+            android:title="@string/auto_silence_title"
+            app:iconSpaceReserved="false"  />
 
         <ListPreference
             android:defaultValue="10"
@@ -63,7 +75,8 @@
             android:entries="@array/snooze_duration_entries"
             android:entryValues="@array/snooze_duration_values"
             android:key="snooze_duration"
-            android:title="@string/snooze_duration_title" />
+            android:title="@string/snooze_duration_title"
+            app:iconSpaceReserved="false"  />
 
         <com.android.deskclock.settings.AlarmVolumePreference
             android:key="volume_setting"
@@ -77,7 +90,8 @@
             android:entries="@array/crescendo_entries"
             android:entryValues="@array/crescendo_values"
             android:key="alarm_crescendo_duration"
-            android:title="@string/crescendo_duration_title" />
+            android:title="@string/crescendo_duration_title"
+            app:iconSpaceReserved="false"  />
 
         <com.android.deskclock.settings.SimpleMenuPreference
             android:defaultValue="0"
@@ -85,7 +99,8 @@
             android:entries="@array/volume_button_setting_entries"
             android:entryValues="@array/volume_button_setting_values"
             android:key="volume_button_setting"
-            android:title="@string/volume_button_setting_title" />
+            android:title="@string/volume_button_setting_title"
+            app:iconSpaceReserved="false"  />
 
         <com.android.deskclock.settings.SimpleMenuPreference
             android:defaultValue="0"
@@ -93,7 +108,8 @@
             android:entries="@array/action_setting_entries"
             android:entryValues="@array/volume_button_setting_values"
             android:key="flip_action"
-            android:title="@string/flip_action_title" />
+            android:title="@string/flip_action_title"
+            app:iconSpaceReserved="false"  />
 
         <com.android.deskclock.settings.SimpleMenuPreference
             android:defaultValue="0"
@@ -101,21 +117,26 @@
             android:entries="@array/action_setting_entries"
             android:entryValues="@array/volume_button_setting_values"
             android:key="shake_action"
-            android:title="@string/shake_action_title" />
+            android:title="@string/shake_action_title"
+            app:iconSpaceReserved="false"  />
 
         <com.android.deskclock.settings.SimpleMenuPreference
             android:dialogTitle="@string/week_start_title"
             android:entries="@array/week_start_entries"
             android:entryValues="@array/week_start_values"
             android:key="week_start"
-            android:title="@string/week_start_title" />
+            android:title="@string/week_start_title"
+            app:iconSpaceReserved="false"  />
     </PreferenceCategory>
 
     <PreferenceCategory
-        android:title="@string/timer_settings">
+        android:title="@string/timer_settings"
+        app:iconSpaceReserved="false">
+
         <Preference
             android:key="timer_ringtone"
-            android:title="@string/timer_sound" />
+            android:title="@string/timer_sound"
+            app:iconSpaceReserved="false"  />
 
         <ListPreference
             android:defaultValue="0"
@@ -123,13 +144,14 @@
             android:entries="@array/crescendo_entries"
             android:entryValues="@array/crescendo_values"
             android:key="timer_crescendo_duration"
-            android:title="@string/crescendo_duration_title" />
-
+            android:title="@string/crescendo_duration_title"
+            app:iconSpaceReserved="false"  />
 
         <SwitchPreferenceCompat
             android:defaultValue="false"
             android:key="timer_vibrate"
-            android:title="@string/timer_vibrate_title" />
+            android:title="@string/timer_vibrate_title"
+            app:iconSpaceReserved="false"  />
     </PreferenceCategory>
 
 </PreferenceScreen>

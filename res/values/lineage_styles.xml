@@ -1,0 +1,71 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <style name="CollapsingToolbar">
+<!--        <item name="collapsedTitleTextColor">?android:textColorPrimary</item>-->
+        <item name="expandedTitleMarginBottom">24.0dip</item>
+        <item name="expandedTitleMarginEnd">24.0dip</item>
+        <item name="expandedTitleMarginStart">24.0dip</item>
+        <item name="expandedTitleTextAppearance">@style/CollapsingToolbarTitle.Expanded</item>
+        <item name="maxLines">1</item>
+        <item name="scrimVisibleHeightTrigger">@dimen/settingslib_scrim_visible_height_trigger</item>
+        <item name="statusBarScrim">@null</item>
+        <item name="titleCollapseMode">fade</item>
+        <item name="scrimAnimationDuration">50</item>
+        <item name="forceApplySystemWindowInsetTop">true</item>
+        <item name="extraMultilineHeightEnabled">true</item>
+        <item name="android:clipToPadding">false</item>
+    </style>
+
+    <style name="CollapsingToolbarTitle.Collapsed" parent="@android:style/TextAppearance.DeviceDefault.Widget.ActionBar.Title">
+        <item name="android:fontFamily">@*android:string/config_headlineFontFamily</item>
+        <item name="android:textSize">20sp</item>
+        <item name="android:textColor">@android:color/white</item>
+    </style>
+
+    <style name="CollapsingToolbarTitle.Expanded" parent="@style/CollapsingToolbarTitle.Collapsed">
+        <item name="android:textSize">36sp</item>
+    </style>
+
+    <style name="DeskClock.Switch" parent="@android:style/Widget.Material.CompoundButton.Switch">
+        <item name="android:switchMinWidth">52dp</item>
+        <item name="android:minHeight">@dimen/touch_target_min_size</item>
+        <item name="android:track">@drawable/switch_track</item>
+        <item name="track">@drawable/switch_track</item>
+        <item name="android:thumb">@drawable/switch_thumb</item>
+        <item name="thumbTint">@color/default_background</item>
+    </style>
+
+    <style name="DeskClock.SwitchPreferenceCompat" parent="@style/Preference.SwitchPreferenceCompat.Material">
+        <item name="iconSpaceReserved">false</item>
+        <item name="android:widgetLayout">@layout/widget_switch_compat</item>
+    </style>
+
+    <style name="TimerLabelTextAppearance" parent="SecondaryLabelTextAppearance">
+        <item name="android:textSize">32sp</item>
+    </style>
+
+    <style name="MaterialCardViewStyle">
+        <item name="android:layout_marginTop">8.0dip</item>
+        <item name="android:layout_marginStart">16.0dip</item>
+        <item name="android:layout_marginEnd">16.0dip</item>
+        <item name="elevation">0.0dip</item>
+    </style>
+
+    <style name="DayButtonStyle">
+        <item name="android:textSize">@dimen/day_button_font_size</item>
+        <item name="android:gravity">center</item>
+        <item name="android:background">@drawable/toggle_circle</item>
+        <item name="android:layout_width">@dimen/touch_target_min_size</item>
+        <item name="android:layout_height">@dimen/touch_target_min_size</item>
+        <item name="android:button">@null</item>
+    </style>
+
+    <style name="SnackBarStyle" parent="@style/Widget.MaterialComponents.Snackbar">
+        <item name="android:background">@drawable/popup_background</item>
+        <item name="android:layout_margin">@null</item>
+        <item name="android:layout_marginLeft">8.0dip</item>
+        <item name="android:layout_marginTop">8.0dip</item>
+        <item name="android:layout_marginRight">8.0dip</item>
+        <item name="android:layout_marginBottom">8dp</item>
+    </style>
+</resources>
