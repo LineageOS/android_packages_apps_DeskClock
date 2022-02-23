@@ -38,4 +38,5 @@
     <string name="stopwatch_channel">Stopwatch</string>
     <string name="timer_channel">Timer</string>
 
+    <string name="add_label">Add label</string>
 </resources>

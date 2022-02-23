@@ -384,8 +384,8 @@ public final class AlarmNotifications {
         PendingIntent snoozePendingIntent = PendingIntent.getService(service,
                 ALARM_FIRING_NOTIFICATION_ID, snoozeIntent,
                 PendingIntent.FLAG_UPDATE_CURRENT | PendingIntent.FLAG_IMMUTABLE);
-        notification.addAction(R.drawable.ic_snooze_24dp,
-                resources.getString(R.string.alarm_alert_snooze_text), snoozePendingIntent);
+        notification.addAction(0, resources.getString(R.string.alarm_alert_snooze_text),
+                snoozePendingIntent);
 
         // Setup Dismiss Action
         Intent dismissIntent = AlarmStateManager.createStateChangeIntent(service,
