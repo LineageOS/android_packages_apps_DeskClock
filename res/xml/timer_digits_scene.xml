@@ -1,0 +1,29 @@
+<?xml version="1.0" encoding="utf-8"?>
+<MotionScene xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:motion="http://schemas.android.com/apk/res-auto">
+    <ConstraintSet android:id="@+id/start" />
+    <ConstraintSet android:id="@+id/end" />
+    <Transition
+        motion:constraintSetEnd="@id/end"
+        motion:constraintSetStart="@id/start" />
+    <ViewTransition
+        android:id="@+id/button_press_animation"
+        motion:duration="250"
+        motion:motionInterpolator="@android:interpolator/fast_out_slow_in"
+        motion:motionTarget="timer_digit"
+        motion:onStateTransition="actionDownUp"
+        motion:viewTransitionMode="noState">
+        <KeyFrameSet>
+            <KeyAttribute motion:framePosition="0">
+                <CustomAttribute
+                    motion:attributeName="roundPercent"
+                    motion:customFloatValue="1.0" />
+            </KeyAttribute>
+            <KeyAttribute motion:framePosition="99">
+                <CustomAttribute
+                    motion:attributeName="roundPercent"
+                    motion:customFloatValue="0.5" />
+            </KeyAttribute>
+        </KeyFrameSet>
+    </ViewTransition>
+</MotionScene>
