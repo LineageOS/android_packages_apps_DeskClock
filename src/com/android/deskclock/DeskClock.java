@@ -22,23 +22,21 @@ import android.animation.AnimatorSet;
 import android.animation.ValueAnimator;
 import android.content.Intent;
 import android.content.pm.PackageManager;
-import android.graphics.drawable.Drawable;
 import android.os.Bundle;
 import android.view.KeyEvent;
 import android.view.Menu;
 import android.view.MenuItem;
 import android.view.View;
 import android.view.View.OnClickListener;
-import android.widget.Button;
 import android.widget.ImageView;
 import android.widget.TextView;
+
 import androidx.annotation.NonNull;
 import androidx.annotation.StringRes;
 import androidx.appcompat.app.ActionBar;
 import androidx.appcompat.widget.Toolbar;
 import androidx.fragment.app.Fragment;
 import androidx.viewpager.widget.ViewPager;
-import androidx.viewpager.widget.ViewPager.OnPageChangeListener;
 
 import com.android.deskclock.actionbarmenu.MenuItemControllerFactory;
 import com.android.deskclock.actionbarmenu.NightModeMenuItemController;
@@ -48,7 +46,6 @@ import com.android.deskclock.data.DataModel;
 import com.android.deskclock.data.DataModel.SilentSetting;
 import com.android.deskclock.data.OnSilentSettingsListener;
 import com.android.deskclock.events.Events;
-import com.android.deskclock.LogUtils;
 import com.android.deskclock.provider.Alarm;
 import com.android.deskclock.uidata.TabListener;
 import com.android.deskclock.uidata.UiDataModel;
@@ -57,9 +54,6 @@ import com.android.deskclock.widget.toast.SnackbarManager;
 import com.google.android.material.bottomnavigation.BottomNavigationView;
 import com.google.android.material.snackbar.Snackbar;
 
-import static androidx.viewpager.widget.ViewPager.SCROLL_STATE_DRAGGING;
-import static androidx.viewpager.widget.ViewPager.SCROLL_STATE_IDLE;
-import static androidx.viewpager.widget.ViewPager.SCROLL_STATE_SETTLING;
 import static android.text.format.DateUtils.SECOND_IN_MILLIS;
 import static com.android.deskclock.AnimatorUtils.getScaleAnimator;
 
@@ -108,10 +102,10 @@ public class DeskClock extends BaseActivity
     private ImageView mFab;
 
     /** The button left of the {@link #mFab} shared across all tabs in the user interface. */
-    private Button mLeftButton;
+    private ImageView mLeftButton;
 
     /** The button right of the {@link #mFab} shared across all tabs in the user interface. */
-    private Button mRightButton;
+    private ImageView mRightButton;
 
     /** The ViewPager that pages through the fragments representing the content of the tabs. */
     private ViewPager mFragmentTabPager;
@@ -170,8 +164,8 @@ public class DeskClock extends BaseActivity
 
         // Configure the buttons shared by the tabs.
         mFab = (ImageView) findViewById(R.id.fab);
-        mLeftButton = (Button) findViewById(R.id.left_button);
-        mRightButton = (Button) findViewById(R.id.right_button);
+        mLeftButton = (ImageView) findViewById(R.id.left_button);
+        mRightButton = (ImageView) findViewById(R.id.right_button);
 
         mFab.setOnClickListener(new OnClickListener() {
             @Override
