@@ -32,8 +32,6 @@
 
         <include layout="@layout/timer_setup_time" />
 
-        <include layout="@layout/timer_setup_divider" />
-
     </LinearLayout>
 
     <include

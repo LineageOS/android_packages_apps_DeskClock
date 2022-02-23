@@ -26,12 +26,13 @@ import android.graphics.Rect;
 import android.graphics.drawable.Animatable;
 import android.graphics.drawable.Drawable;
 import android.graphics.drawable.LayerDrawable;
-import androidx.core.graphics.drawable.DrawableCompat;
-import androidx.interpolator.view.animation.FastOutSlowInInterpolator;
 import android.util.Property;
 import android.view.View;
 import android.view.animation.Interpolator;
 import android.widget.ImageView;
+
+import androidx.core.graphics.drawable.DrawableCompat;
+import androidx.interpolator.view.animation.FastOutSlowInInterpolator;
 
 import java.lang.reflect.InvocationTargetException;
 import java.lang.reflect.Method;
@@ -242,11 +243,11 @@ public class AnimatorUtils {
     public static Animator getBoundsAnimator(View target, View from, View to) {
         // Fetch the content insets for the views. Content bounds are what matter, not total bounds.
         final Rect targetInsets = new Rect();
-        target.getBackground().getPadding(targetInsets);
+        getPadding(target, targetInsets);
         final Rect fromInsets = new Rect();
-        from.getBackground().getPadding(fromInsets);
+        getPadding(from, fromInsets);
         final Rect toInsets = new Rect();
-        to.getBackground().getPadding(toInsets);
+        getPadding(to, toInsets);
 
         // Before animating, the content bounds of target must match the content bounds of from.
         final int startLeft = from.getLeft() - fromInsets.left + targetInsets.left;
@@ -262,6 +263,14 @@ public class AnimatorUtils {
 
         return getBoundsAnimator(target, startLeft, startTop, startRight, startBottom, endLeft,
                 endTop, endRight, endBottom);
+    }
+
+    private static void getPadding(View view, Rect insets) {
+        if (view.getBackground() != null) {
+            view.getBackground().getPadding(insets);
+        } else {
+            ((View)view.getParent()).getBackground().getPadding(insets);
+        }
     }
 
     /**

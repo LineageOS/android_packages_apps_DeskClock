@@ -22,6 +22,7 @@ import android.os.SystemClock;
 import androidx.core.view.ViewCompat;
 import android.text.TextUtils;
 import android.util.AttributeSet;
+import android.view.View;
 import android.widget.Button;
 import android.widget.LinearLayout;
 import android.widget.TextView;
@@ -115,10 +116,13 @@ public class TimerItem extends LinearLayout {
 
         // Update some potentially expensive areas of the user interface only on state changes.
         if (timer.getState() != mLastState) {
+            mResetAddButton.setVisibility(View.VISIBLE);
             mLastState = timer.getState();
             final Context context = getContext();
             switch (mLastState) {
                 case RESET:
+                    mResetAddButton.setVisibility(View.GONE);
+                    break;
                 case PAUSED: {
                     mResetAddButton.setText(R.string.timer_reset);
                     mResetAddButton.setContentDescription(null);
