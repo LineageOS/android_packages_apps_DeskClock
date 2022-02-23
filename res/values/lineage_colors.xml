@@ -1,0 +1,29 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <!-- Material next state on color-->
+    <color name="settingslib_state_on_color">@color/accent_100</color>
+
+    <!-- Material next state off color-->
+    <color name="settingslib_state_off_color">@color/accent_100</color>
+
+    <!-- Material next thumb disable color-->
+    <color name="settingslib_thumb_disabled_color">@color/system_neutral2_100</color>
+
+    <!-- Material next thumb off color-->
+    <color name="settingslib_thumb_off_color">@color/system_neutral2_300</color>
+
+    <!-- Material next track on color-->
+    <color name="settingslib_track_on_color">@color/accent_600</color>
+
+    <!-- Material next track off color-->
+    <color name="settingslib_track_off_color">@color/system_neutral2_500</color>
+
+    <color name="system_neutral2_100">@android:color/system_neutral2_100</color>
+    <color name="system_neutral2_300">@android:color/system_neutral2_300</color>
+    <color name="system_neutral2_500">@android:color/system_neutral2_500</color>
+
+    <color name="accent_100">#FFEB40</color>
+    <color name="accent_600">#CBC694</color>
+
+    <color name="default_background_lighter">#262D84</color>
+</resources>
