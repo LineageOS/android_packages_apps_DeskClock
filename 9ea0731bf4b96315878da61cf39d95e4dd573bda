@@ -1,0 +1,21 @@
+{
+  "comments": [
+    {
+      "unresolved": false,
+      "key": {
+        "uuid": "ec9cdebd_5a45031c",
+        "filename": "/PATCHSET_LEVEL",
+        "patchSetId": 1
+      },
+      "lineNbr": 0,
+      "author": {
+        "id": 13028
+      },
+      "writtenOn": "2022-02-25T14:45:19Z",
+      "side": 1,
+      "message": "I am already doing this in https://review.lineageos.org/c/LineageOS/android_packages_apps_DeskClock/+/325332 as well",
+      "revId": "9ea0731bf4b96315878da61cf39d95e4dd573bda",
+      "serverId": "1ec6b3db-b2c1-4fa4-84a2-4c7efe89ba71"
+    }
+  ]
+}
