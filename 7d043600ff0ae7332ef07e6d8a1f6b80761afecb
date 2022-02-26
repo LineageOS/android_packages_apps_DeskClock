@@ -16,6 +16,24 @@
       "message": "https://review.lineageos.org/c/LineageOS/android_packages_apps_DeskClock/+/325332",
       "revId": "7d043600ff0ae7332ef07e6d8a1f6b80761afecb",
       "serverId": "1ec6b3db-b2c1-4fa4-84a2-4c7efe89ba71"
+    },
+    {
+      "unresolved": false,
+      "key": {
+        "uuid": "78104d7d_f4ec057c",
+        "filename": "/PATCHSET_LEVEL",
+        "patchSetId": 3
+      },
+      "lineNbr": 0,
+      "author": {
+        "id": 21651
+      },
+      "writtenOn": "2022-02-26T15:24:51Z",
+      "side": 1,
+      "message": "I don\u0027t see how that is relevant here. Could you elaborate the vote?",
+      "parentUuid": "c8f66dc5_1708f05d",
+      "revId": "7d043600ff0ae7332ef07e6d8a1f6b80761afecb",
+      "serverId": "1ec6b3db-b2c1-4fa4-84a2-4c7efe89ba71"
     }
   ]
 }
