@@ -1,0 +1,59 @@
+buildscript {
+    repositories {
+        google()
+        mavenCentral()
+    }
+
+    dependencies {
+        classpath 'com.android.tools.build:gradle:7.2.2'
+    }
+}
+
+allprojects {
+    repositories {
+        google()
+        mavenCentral()
+    }
+}
+
+apply plugin: 'com.android.application'
+
+android {
+    compileSdk 33
+
+    defaultConfig {
+        minSdkVersion 27
+        targetSdkVersion 33
+    }
+
+    sourceSets {
+        main {
+            res.srcDirs = ['res']
+            java.srcDirs = ['src']
+            assets.srcDirs = ['assets']
+            manifest.srcFile 'AndroidManifest.xml'
+        }
+    }
+
+    compileOptions {
+        sourceCompatibility JavaVersion.VERSION_1_8
+        targetCompatibility JavaVersion.VERSION_1_8
+    }
+
+    lint {
+        ignore 'ProtectedPermissions', 'ExtraTranslation', 'ImpliedQuantity', 'MissingQuantity', 'MissingTranslation'
+    }
+}
+
+dependencies {
+    compileOnly fileTree(dir: 'system_libs/', include: ['*.jar'])
+
+    implementation 'com.google.android.material:material:1.6.1'
+    implementation 'androidx.appcompat:appcompat:1.5.1'
+    implementation 'androidx.preference:preference:1.2.0'
+    implementation 'androidx.recyclerview:recyclerview:1.2.1'
+    implementation 'androidx.gridlayout:gridlayout:1.0.0'
+    implementation 'androidx.constraintlayout:constraintlayout:2.1.4'
+    implementation 'androidx.percentlayout:percentlayout:1.0.0'
+    implementation "androidx.lifecycle:lifecycle-viewmodel-ktx:2.5.1"
+}
