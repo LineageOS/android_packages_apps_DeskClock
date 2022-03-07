@@ -246,11 +246,7 @@ public final class TimerFragment extends DeskClockFragment {
                 return VISIBLE;
             }
         } else if (mCurrentView == mCreateTimerView) {
-            if (mCreateTimerView.hasValidInput()) {
-                return VISIBLE;
-            } else {
-                return INVISIBLE;
-            }
+            return VISIBLE;
         }
 
         return INVISIBLE;
