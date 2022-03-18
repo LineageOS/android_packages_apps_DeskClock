@@ -73,16 +73,6 @@ public class ScreensaverActivity extends BaseActivity {
         }
     };
 
-    /* Register ContentObserver to see alarm changes for pre-L */
-    private final ContentObserver mSettingsContentObserver = Utils.isPreL()
-        ? new ContentObserver(new Handler(Looper.myLooper())) {
-            @Override
-            public void onChange(boolean selfChange) {
-                Utils.refreshAlarm(ScreensaverActivity.this, mContentView);
-            }
-        }
-        : null;
-
     // Runs every midnight or when the time changes and refreshes the date.
     private final Runnable mMidnightUpdater = new Runnable() {
         @Override
@@ -144,16 +134,8 @@ public class ScreensaverActivity extends BaseActivity {
         filter.addAction(Intent.ACTION_POWER_CONNECTED);
         filter.addAction(Intent.ACTION_POWER_DISCONNECTED);
         filter.addAction(Intent.ACTION_USER_PRESENT);
-        if (Utils.isLOrLater()) {
-            filter.addAction(AlarmManager.ACTION_NEXT_ALARM_CLOCK_CHANGED);
-        }
+        filter.addAction(AlarmManager.ACTION_NEXT_ALARM_CLOCK_CHANGED);
         registerReceiver(mIntentReceiver, filter);
-
-        if (mSettingsContentObserver != null) {
-            @SuppressWarnings("deprecation")
-            final Uri uri = Settings.System.getUriFor(Settings.System.NEXT_ALARM_FORMATTED);
-            getContentResolver().registerContentObserver(uri, false, mSettingsContentObserver);
-        }
     }
 
     @Override
@@ -180,9 +162,6 @@ public class ScreensaverActivity extends BaseActivity {
 
     @Override
     public void onStop() {
-        if (mSettingsContentObserver != null) {
-            getContentResolver().unregisterContentObserver(mSettingsContentObserver);
-        }
         unregisterReceiver(mIntentReceiver);
         super.onStop();
     }
