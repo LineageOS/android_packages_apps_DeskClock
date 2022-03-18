@@ -55,9 +55,7 @@ public final class Controller {
             mContext = context.getApplicationContext();
             mEventController = new EventController();
             mVoiceController = new VoiceController();
-            if (Utils.isNMR1OrLater()) {
-                mShortcutController = new ShortcutController(mContext);
-            }
+            mShortcutController = new ShortcutController(mContext);
         }
     }
 
@@ -111,8 +109,6 @@ public final class Controller {
 
     public void updateShortcuts() {
         enforceMainLooper();
-        if (mShortcutController != null) {
-            mShortcutController.updateShortcuts();
-        }
+        mShortcutController.updateShortcuts();
     }
 }
