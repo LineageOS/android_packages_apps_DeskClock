@@ -15,7 +15,9 @@
  */
 package com.android.deskclock.alarms;
 
-import android.annotation.TargetApi;
+import static android.content.Context.ALARM_SERVICE;
+import static android.provider.Settings.System.NEXT_ALARM_FORMATTED;
+
 import android.app.AlarmManager;
 import android.app.AlarmManager.AlarmClockInfo;
 import android.app.PendingIntent;
@@ -28,9 +30,10 @@ import android.os.Build;
 import android.os.Handler;
 import android.os.PowerManager;
 import android.provider.Settings;
-import androidx.core.app.NotificationManagerCompat;
 import android.text.format.DateFormat;
 import android.widget.Toast;
+
+import androidx.core.app.NotificationManagerCompat;
 
 import com.android.deskclock.AlarmAlertWakeLock;
 import com.android.deskclock.AlarmClockFragment;
@@ -49,9 +52,6 @@ import java.util.Calendar;
 import java.util.Collections;
 import java.util.Comparator;
 import java.util.List;
-
-import static android.content.Context.ALARM_SERVICE;
-import static android.provider.Settings.System.NEXT_ALARM_FORMATTED;
 
 /**
  * This class handles all the state changes for alarm instances. You need to
@@ -182,11 +182,7 @@ public final class AlarmStateManager extends BroadcastReceiver {
             setPowerOffAlarm(context, nextAlarm);
         }
 
-        if (Utils.isPreL()) {
-            updateNextAlarmInSystemSettings(context, nextAlarm);
-        } else {
-            updateNextAlarmInAlarmManager(context, nextAlarm);
-        }
+        updateNextAlarmInAlarmManager(context, nextAlarm);
     }
 
     /**
@@ -210,35 +206,8 @@ public final class AlarmStateManager extends BroadcastReceiver {
     }
 
     /**
-     * Used in pre-L devices, where "next alarm" is stored in system settings.
-     */
-    @SuppressWarnings("deprecation")
-    @TargetApi(Build.VERSION_CODES.KITKAT)
-    private static void updateNextAlarmInSystemSettings(Context context, AlarmInstance nextAlarm) {
-        // Format the next alarm time if an alarm is scheduled.
-        String time = "";
-        if (nextAlarm != null) {
-            time = AlarmUtils.getFormattedTime(context, nextAlarm.getAlarmTime());
-        }
-
-        try {
-            // Write directly to NEXT_ALARM_FORMATTED in all pre-L versions
-            Settings.System.putString(context.getContentResolver(), NEXT_ALARM_FORMATTED, time);
-
-            LogUtils.i("Updated next alarm time to: \'" + time + '\'');
-
-            // Send broadcast message so pre-L AppWidgets will recognize an update.
-            context.sendBroadcast(new Intent(ACTION_ALARM_CHANGED));
-        } catch (SecurityException se) {
-            // The user has most likely revoked WRITE_SETTINGS.
-            LogUtils.e("Unable to update next alarm to: \'" + time + '\'', se);
-        }
-    }
-
-    /**
      * Used in L and later devices where "next alarm" is stored in the Alarm Manager.
      */
-    @TargetApi(Build.VERSION_CODES.LOLLIPOP)
     private static void updateNextAlarmInAlarmManager(Context context, AlarmInstance nextAlarm) {
         // Sets a surrogate alarm with alarm manager that provides the AlarmClockInfo for the
         // alarm that is going to fire next. The operation is constructed such that it is ignored
@@ -1048,12 +1017,9 @@ public final class AlarmStateManager extends BroadcastReceiver {
                     PendingIntent.FLAG_UPDATE_CURRENT | PendingIntent.FLAG_IMMUTABLE);
 
             final AlarmManager am = (AlarmManager) context.getSystemService(ALARM_SERVICE);
-            if (Utils.isMOrLater()) {
-                // Ensure the alarm fires even if the device is dozing.
-                am.setExactAndAllowWhileIdle(AlarmManager.RTC_WAKEUP, timeInMillis, pendingIntent);
-            } else {
-                am.setExact(AlarmManager.RTC_WAKEUP, timeInMillis, pendingIntent);
-            }
+            // Ensure the alarm fires even if the device is dozing.
+            am.setExactAndAllowWhileIdle(AlarmManager.RTC_WAKEUP, timeInMillis, pendingIntent);
+
         }
 
         @Override
