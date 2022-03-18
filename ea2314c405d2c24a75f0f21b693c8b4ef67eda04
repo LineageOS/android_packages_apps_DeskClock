@@ -16,6 +16,23 @@
       "message": "https://imgur.com/a/odHV95a",
       "revId": "ea2314c405d2c24a75f0f21b693c8b4ef67eda04",
       "serverId": "1ec6b3db-b2c1-4fa4-84a2-4c7efe89ba71"
+    },
+    {
+      "unresolved": true,
+      "key": {
+        "uuid": "751a96fd_a1915c6f",
+        "filename": "/PATCHSET_LEVEL",
+        "patchSetId": 21
+      },
+      "lineNbr": 0,
+      "author": {
+        "id": 6360
+      },
+      "writtenOn": "2022-03-18T22:13:42Z",
+      "side": 1,
+      "message": "error: packages/apps/DeskClock/Android.bp:18:1: module \"DeskClock\" variant \"android_common\": sdk_version: sdk_version must have a value when the module is located at vendor or product(only if PRODUCT_ENFO\nRCE_PRODUCT_PARTITION_INTERFACE is set).",
+      "revId": "ea2314c405d2c24a75f0f21b693c8b4ef67eda04",
+      "serverId": "1ec6b3db-b2c1-4fa4-84a2-4c7efe89ba71"
     }
   ]
 }
