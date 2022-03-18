@@ -71,9 +71,6 @@ public final class ClockFragment extends DeskClockFragment {
     // Updates the UI in response to changes to the scheduled alarm.
     private BroadcastReceiver mAlarmChangeReceiver;
 
-    // Detects changes to the next scheduled alarm pre-L.
-    private ContentObserver mAlarmObserver;
-
     private TextClock mDigitalClock;
     private AnalogClock mAnalogClock;
     private View mClockFrame;
@@ -93,8 +90,7 @@ public final class ClockFragment extends DeskClockFragment {
     public void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
 
-        mAlarmObserver = Utils.isPreL() ? new AlarmObserverPreL() : null;
-        mAlarmChangeReceiver = Utils.isLOrLater() ? new AlarmChangedBroadcastReceiver() : null;
+        mAlarmChangeReceiver = new AlarmChangedBroadcastReceiver();
     }
 
     @Override
@@ -168,13 +164,6 @@ public final class ClockFragment extends DeskClockFragment {
         }
 
         refreshAlarm();
-
-        // Alarm observer is null on L or later.
-        if (mAlarmObserver != null) {
-            @SuppressWarnings("deprecation")
-            final Uri uri = Settings.System.getUriFor(Settings.System.NEXT_ALARM_FORMATTED);
-            activity.getContentResolver().registerContentObserver(uri, false, mAlarmObserver);
-        }
     }
 
     @Override
@@ -184,9 +173,6 @@ public final class ClockFragment extends DeskClockFragment {
         final Activity activity = getActivity();
         if (mAlarmChangeReceiver != null) {
             activity.unregisterReceiver(mAlarmChangeReceiver);
-        }
-        if (mAlarmObserver != null) {
-            activity.getContentResolver().unregisterContentObserver(mAlarmObserver);
         }
     }
 

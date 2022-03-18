@@ -120,45 +120,12 @@ public class AnimatorUtils {
     @SuppressWarnings("unchecked")
     public static final TypeEvaluator<Integer> ARGB_EVALUATOR = new ArgbEvaluator();
 
-    private static Method sAnimateValue;
-    private static boolean sTryAnimateValue = true;
-
-    public static void setAnimatedFraction(ValueAnimator animator, float fraction) {
-        if (Utils.isLMR1OrLater()) {
-            animator.setCurrentFraction(fraction);
-            return;
-        }
-
-        if (sTryAnimateValue) {
-            // try to set the animated fraction directly so that it isn't affected by the
-            // internal animator scale or time (b/17938711)
-            try {
-                if (sAnimateValue == null) {
-                    sAnimateValue = ValueAnimator.class
-                            .getDeclaredMethod("animateValue", float.class);
-                    sAnimateValue.setAccessible(true);
-                }
-
-                sAnimateValue.invoke(animator, fraction);
-                return;
-            } catch (NoSuchMethodException | InvocationTargetException
-                    | IllegalAccessException e) {
-                // something went wrong, don't try that again
-                LogUtils.e("Unable to use animateValue directly", e);
-                sTryAnimateValue = false;
-            }
-        }
-
-        // if that doesn't work then just fall back to setting the current play time
-        animator.setCurrentPlayTime(Math.round(fraction * animator.getDuration()));
-    }
-
     public static void reverse(ValueAnimator... animators) {
         for (ValueAnimator animator : animators) {
             final float fraction = animator.getAnimatedFraction();
             if (fraction > 0.0f) {
                 animator.reverse();
-                setAnimatedFraction(animator, 1.0f - fraction);
+                animator.setCurrentFraction(1.0f - fraction);
             }
         }
     }

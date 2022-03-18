@@ -361,8 +361,7 @@ public final class StopwatchFragment extends DeskClockFragment {
         @SuppressLint("InlinedApi")
         @SuppressWarnings("deprecation")
         final Intent shareIntent = new Intent(Intent.ACTION_SEND)
-                .addFlags(Utils.isLOrLater() ? Intent.FLAG_ACTIVITY_NEW_DOCUMENT
-                        : Intent.FLAG_ACTIVITY_CLEAR_WHEN_TASK_RESET)
+                .addFlags(Intent.FLAG_ACTIVITY_NEW_DOCUMENT)
                 .putExtra(Intent.EXTRA_SUBJECT, subject)
                 .putExtra(Intent.EXTRA_TEXT, text)
                 .setType("text/plain");
