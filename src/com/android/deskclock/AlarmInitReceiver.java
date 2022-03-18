@@ -50,8 +50,7 @@ public class AlarmInitReceiver extends BroadcastReceiver {
      * the user is still locked, so that we can schedule alarms.
      */
     @SuppressLint("InlinedApi")
-    private static final String ACTION_BOOT_COMPLETED = Utils.isNOrLater()
-            ? Intent.ACTION_LOCKED_BOOT_COMPLETED : Intent.ACTION_BOOT_COMPLETED;
+    private static final String ACTION_BOOT_COMPLETED = Intent.ACTION_LOCKED_BOOT_COMPLETED;
 
     /**
      * This receiver handles a variety of actions:

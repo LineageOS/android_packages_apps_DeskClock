@@ -31,7 +31,7 @@ import com.android.deskclock.Utils;
 public final class EmptyViewController {
 
     private static final int ANIMATION_DURATION = 300;
-    private static final boolean USE_TRANSITION_FRAMEWORK = Utils.isLOrLater();
+    private static final boolean USE_TRANSITION_FRAMEWORK = true;
 
     private final Transition mEmptyViewTransition;
     private final ViewGroup mMainLayout;
