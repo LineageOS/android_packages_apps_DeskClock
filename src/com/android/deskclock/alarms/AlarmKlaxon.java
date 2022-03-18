@@ -16,7 +16,6 @@
 
 package com.android.deskclock.alarms;
 
-import android.annotation.TargetApi;
 import android.content.Context;
 import android.media.AudioAttributes;
 import android.os.Build;
@@ -61,22 +60,13 @@ final class AlarmKlaxon {
 
         if (instance.mVibrate) {
             final Vibrator vibrator = getVibrator(context);
-            if (Utils.isLOrLater()) {
-                vibrateLOrLater(vibrator);
-            } else {
-                vibrator.vibrate(VIBRATE_PATTERN, 0);
-            }
+            vibrator.vibrate(VIBRATE_PATTERN, 0, new AudioAttributes.Builder()
+                    .setUsage(AudioAttributes.USAGE_ALARM)
+                    .setContentType(AudioAttributes.CONTENT_TYPE_SONIFICATION)
+                    .build());
         }
 
         sStarted = true;
-    }
-
-    @TargetApi(Build.VERSION_CODES.LOLLIPOP)
-    private static void vibrateLOrLater(Vibrator vibrator) {
-        vibrator.vibrate(VIBRATE_PATTERN, 0, new AudioAttributes.Builder()
-                .setUsage(AudioAttributes.USAGE_ALARM)
-                .setContentType(AudioAttributes.CONTENT_TYPE_SONIFICATION)
-                .build());
     }
 
     private static Vibrator getVibrator(Context context) {

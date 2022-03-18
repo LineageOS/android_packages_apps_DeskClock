@@ -20,7 +20,6 @@ import static com.android.deskclock.NotificationUtils.ALARM_SNOOZE_NOTIFICATION_
 import static com.android.deskclock.NotificationUtils.ALARM_UPCOMING_NOTIFICATION_CHANNEL_ID;
 import static com.android.deskclock.NotificationUtils.FIRING_NOTIFICATION_CHANNEL_ID;
 
-import android.annotation.TargetApi;
 import android.app.Notification;
 import android.app.NotificationChannel;
 import android.app.NotificationManager;
@@ -31,6 +30,7 @@ import android.content.Intent;
 import android.content.res.Resources;
 import android.os.Build;
 import android.service.notification.StatusBarNotification;
+
 import androidx.core.app.NotificationCompat;
 import androidx.core.app.NotificationManagerCompat;
 import androidx.core.content.ContextCompat;
@@ -108,11 +108,8 @@ public final class AlarmNotifications {
                         .setPriority(NotificationCompat.PRIORITY_LOW)
                         .setCategory(NotificationCompat.CATEGORY_EVENT)
                         .setVisibility(NotificationCompat.VISIBILITY_PUBLIC)
-                        .setLocalOnly(true);
-
-        if (Utils.isNOrLater()) {
-            builder.setGroup(UPCOMING_GROUP_KEY);
-        }
+                        .setLocalOnly(true)
+                        .setGroup(UPCOMING_GROUP_KEY);
 
         final int id = instance.hashCode();
         if (lowPriority) {
@@ -145,7 +142,6 @@ public final class AlarmNotifications {
         updateUpcomingAlarmGroupNotification(context, -1, notification);
     }
 
-    @TargetApi(Build.VERSION_CODES.N)
     private static boolean isGroupSummary(Notification n) {
         return (n.flags & Notification.FLAG_GROUP_SUMMARY) == Notification.FLAG_GROUP_SUMMARY;
     }
@@ -163,7 +159,6 @@ public final class AlarmNotifications {
      * @param postedNotification The notification that was just posted
      * @return The first active notification for the group
      */
-    @TargetApi(Build.VERSION_CODES.N)
     private static Notification getFirstActiveNotification(Context context, String group,
             int canceledNotificationId, Notification postedNotification) {
         final NotificationManager nm =
@@ -184,7 +179,6 @@ public final class AlarmNotifications {
         return firstActiveNotification;
     }
 
-    @TargetApi(Build.VERSION_CODES.N)
     private static Notification getActiveGroupSummaryNotification(Context context, String group) {
         final NotificationManager nm =
                 (NotificationManager) context.getSystemService(Context.NOTIFICATION_SERVICE);
@@ -200,10 +194,6 @@ public final class AlarmNotifications {
 
     private static void updateUpcomingAlarmGroupNotification(Context context,
             int canceledNotificationId, Notification postedNotification) {
-        if (!Utils.isNOrLater()) {
-            return;
-        }
-
         final NotificationManagerCompat nm = NotificationManagerCompat.from(context);
         final Notification firstUpcoming = getFirstActiveNotification(context, UPCOMING_GROUP_KEY,
                 canceledNotificationId, postedNotification);
@@ -235,10 +225,6 @@ public final class AlarmNotifications {
 
     private static void updateMissedAlarmGroupNotification(Context context,
             int canceledNotificationId, Notification postedNotification) {
-        if (!Utils.isNOrLater()) {
-            return;
-        }
-
         final NotificationManagerCompat nm = NotificationManagerCompat.from(context);
         final Notification firstMissed = getFirstActiveNotification(context, MISSED_GROUP_KEY,
                 canceledNotificationId, postedNotification);
@@ -284,11 +270,8 @@ public final class AlarmNotifications {
                         .setPriority(NotificationCompat.PRIORITY_LOW)
                         .setCategory(NotificationCompat.CATEGORY_EVENT)
                         .setVisibility(NotificationCompat.VISIBILITY_PUBLIC)
-                        .setLocalOnly(true);
-
-        if (Utils.isNOrLater()) {
-            builder.setGroup(UPCOMING_GROUP_KEY);
-        }
+                        .setLocalOnly(true)
+                        .setGroup(UPCOMING_GROUP_KEY);
 
         // Setup up dismiss action
         Intent dismissIntent = AlarmStateManager.createStateChangeIntent(context,
@@ -329,11 +312,8 @@ public final class AlarmNotifications {
                         .setPriority(NotificationCompat.PRIORITY_HIGH)
                         .setCategory(NotificationCompat.CATEGORY_EVENT)
                         .setVisibility(NotificationCompat.VISIBILITY_PUBLIC)
-                        .setLocalOnly(true);
-
-        if (Utils.isNOrLater()) {
-            builder.setGroup(MISSED_GROUP_KEY);
-        }
+                        .setLocalOnly(true)
+                        .setGroup(MISSED_GROUP_KEY);
 
         final int id = instance.hashCode();
 

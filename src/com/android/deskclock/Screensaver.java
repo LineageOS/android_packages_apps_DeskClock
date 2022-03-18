@@ -50,15 +50,6 @@ public final class Screensaver extends DreamService {
     private TextClock mDigitalClock;
     private AnalogClock mAnalogClock;
 
-    /* Register ContentObserver to see alarm changes for pre-L */
-    private final ContentObserver mSettingsContentObserver =
-            Utils.isLOrLater() ? null : new ContentObserver(new Handler(Looper.myLooper())) {
-                @Override
-                public void onChange(boolean selfChange) {
-                    Utils.refreshAlarm(Screensaver.this, mContentView);
-                }
-            };
-
     // Runs every midnight or when the time changes and refreshes the date.
     private final Runnable mMidnightUpdater = new Runnable() {
         @Override
@@ -118,16 +109,8 @@ public final class Screensaver extends DreamService {
         setFullscreen(true);
 
         // Setup handlers for time reference changes and date updates.
-        if (Utils.isLOrLater()) {
-            registerReceiver(mAlarmChangedReceiver,
-                    new IntentFilter(AlarmManager.ACTION_NEXT_ALARM_CLOCK_CHANGED));
-        }
-
-        if (mSettingsContentObserver != null) {
-            @SuppressWarnings("deprecation")
-            final Uri uri = Settings.System.getUriFor(Settings.System.NEXT_ALARM_FORMATTED);
-            getContentResolver().registerContentObserver(uri, false, mSettingsContentObserver);
-        }
+        registerReceiver(mAlarmChangedReceiver,
+                new IntentFilter(AlarmManager.ACTION_NEXT_ALARM_CLOCK_CHANGED));
 
         Utils.updateDate(mDateFormat, mDateFormatForAccessibility, mContentView);
         Utils.refreshAlarm(this, mContentView);
@@ -141,17 +124,11 @@ public final class Screensaver extends DreamService {
         LOGGER.v("Screensaver detached from window");
         super.onDetachedFromWindow();
 
-        if (mSettingsContentObserver != null) {
-            getContentResolver().unregisterContentObserver(mSettingsContentObserver);
-        }
-
         UiDataModel.getUiDataModel().removePeriodicCallback(mMidnightUpdater);
         stopPositionUpdater();
 
         // Tear down handlers for time reference changes and date updates.
-        if (Utils.isLOrLater()) {
-            unregisterReceiver(mAlarmChangedReceiver);
-        }
+        unregisterReceiver(mAlarmChangedReceiver);
     }
 
     @Override
