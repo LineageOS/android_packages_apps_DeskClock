@@ -176,18 +176,10 @@ public class AlarmActivity extends BaseActivity
         // Get the volume/camera button behavior setting
         mVolumeBehavior = DataModel.getDataModel().getAlarmVolumeButtonBehavior();
 
-        if (Utils.isOOrLater()) {
-            setShowWhenLocked(true);
-            setTurnScreenOn(true);
-            getWindow().addFlags(WindowManager.LayoutParams.FLAG_KEEP_SCREEN_ON
-                    | WindowManager.LayoutParams.FLAG_ALLOW_LOCK_WHILE_SCREEN_ON);
-        } else {
-            getWindow().addFlags(WindowManager.LayoutParams.FLAG_SHOW_WHEN_LOCKED
-                    | WindowManager.LayoutParams.FLAG_DISMISS_KEYGUARD
-                    | WindowManager.LayoutParams.FLAG_KEEP_SCREEN_ON
-                    | WindowManager.LayoutParams.FLAG_TURN_SCREEN_ON
-                    | WindowManager.LayoutParams.FLAG_ALLOW_LOCK_WHILE_SCREEN_ON);
-        }
+        setShowWhenLocked(true);
+        setTurnScreenOn(true);
+        getWindow().addFlags(WindowManager.LayoutParams.FLAG_KEEP_SCREEN_ON
+                | WindowManager.LayoutParams.FLAG_ALLOW_LOCK_WHILE_SCREEN_ON);
 
         // Hide navigation bar to minimize accidental tap on Home key
         hideNavigationBar();
@@ -558,9 +550,9 @@ public class AlarmActivity extends BaseActivity
 
     private void setAnimatedFractions(float snoozeFraction, float dismissFraction) {
         final float alarmFraction = Math.max(snoozeFraction, dismissFraction);
-        AnimatorUtils.setAnimatedFraction(mAlarmAnimator, alarmFraction);
-        AnimatorUtils.setAnimatedFraction(mSnoozeAnimator, snoozeFraction);
-        AnimatorUtils.setAnimatedFraction(mDismissAnimator, dismissFraction);
+        mAlarmAnimator.setCurrentFraction(alarmFraction);
+        mSnoozeAnimator.setCurrentFraction(snoozeFraction);
+        mDismissAnimator.setCurrentFraction(dismissFraction);
     }
 
     private float getFraction(float x0, float x1, float x) {

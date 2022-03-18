@@ -16,7 +16,6 @@
 
 package com.android.deskclock.controller;
 
-import android.annotation.TargetApi;
 import android.content.ComponentName;
 import android.content.Context;
 import android.content.Intent;
@@ -46,7 +45,6 @@ import com.android.deskclock.uidata.UiDataModel;
 import java.util.Arrays;
 import java.util.Collections;
 
-@TargetApi(Build.VERSION_CODES.N_MR1)
 class ShortcutController {
 
     private final Context mContext;

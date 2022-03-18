@@ -16,10 +16,10 @@
 
 package com.android.deskclock.settings;
 
-import android.annotation.TargetApi;
 import android.os.Build;
 import android.os.Bundle;
 import android.view.MenuItem;
+
 import androidx.appcompat.app.AppCompatActivity;
 import androidx.preference.ListPreference;
 import androidx.preference.Preference;
@@ -61,13 +61,10 @@ public final class ScreensaverSettingsActivity extends AppCompatActivity {
             implements Preference.OnPreferenceChangeListener {
 
         @Override
-        @TargetApi(Build.VERSION_CODES.N)
         public void onCreate(Bundle savedInstanceState) {
             super.onCreate(savedInstanceState);
 
-            if (Utils.isNOrLater()) {
-                getPreferenceManager().setStorageDeviceProtected();
-            }
+            getPreferenceManager().setStorageDeviceProtected();
         }
 
         @Override
