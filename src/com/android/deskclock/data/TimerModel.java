@@ -838,11 +838,7 @@ final class TimerModel {
     }
 
     static void schedulePendingIntent(AlarmManager am, long triggerTime, PendingIntent pi) {
-        if (Utils.isMOrLater()) {
-            // Ensure the timer fires even if the device is dozing.
-            am.setExactAndAllowWhileIdle(ELAPSED_REALTIME_WAKEUP, triggerTime, pi);
-        } else {
-            am.setExact(ELAPSED_REALTIME_WAKEUP, triggerTime, pi);
-        }
+        // Ensure the timer fires even if the device is dozing.
+        am.setExactAndAllowWhileIdle(ELAPSED_REALTIME_WAKEUP, triggerTime, pi);
     }
 }

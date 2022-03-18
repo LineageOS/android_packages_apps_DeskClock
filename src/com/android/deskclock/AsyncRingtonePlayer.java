@@ -220,15 +220,9 @@ public final class AsyncRingtonePlayer {
         checkAsyncRingtonePlayerThread();
 
         if (mPlaybackDelegate == null) {
-            if (Utils.isMOrLater()) {
-                // Use the newer Ringtone-based playback delegate because it does not require
-                // any permissions to read from the SD card. (M+)
-                mPlaybackDelegate = new RingtonePlaybackDelegate();
-            } else {
-                // Fall back to the older MediaPlayer-based playback delegate because it is the only
-                // way to force the looping of the ringtone before M. (pre M)
-                mPlaybackDelegate = new MediaPlayerPlaybackDelegate();
-            }
+            // Use the newer Ringtone-based playback delegate because it does not require
+            // any permissions to read from the SD card. (M+)
+            mPlaybackDelegate = new RingtonePlaybackDelegate();
         }
 
         return mPlaybackDelegate;
@@ -345,12 +339,10 @@ public final class AsyncRingtonePlayer {
             }
 
             // Indicate the ringtone should be played via the alarm stream.
-            if (Utils.isLOrLater()) {
-                mMediaPlayer.setAudioAttributes(new AudioAttributes.Builder()
-                        .setUsage(AudioAttributes.USAGE_ALARM)
-                        .setContentType(AudioAttributes.CONTENT_TYPE_SONIFICATION)
-                        .build());
-            }
+            mMediaPlayer.setAudioAttributes(new AudioAttributes.Builder()
+                    .setUsage(AudioAttributes.USAGE_ALARM)
+                    .setContentType(AudioAttributes.CONTENT_TYPE_SONIFICATION)
+                    .build());
 
             // Check if we are in a call. If we are, use the in-call alarm resource at a low volume
             // to not disrupt the call.
@@ -541,12 +533,10 @@ public final class AsyncRingtonePlayer {
          */
         private boolean startPlayback(boolean inTelephoneCall) {
             // Indicate the ringtone should be played via the alarm stream.
-            if (Utils.isLOrLater()) {
-                mRingtone.setAudioAttributes(new AudioAttributes.Builder()
-                        .setUsage(AudioAttributes.USAGE_ALARM)
-                        .setContentType(AudioAttributes.CONTENT_TYPE_SONIFICATION)
-                        .build());
-            }
+            mRingtone.setAudioAttributes(new AudioAttributes.Builder()
+                    .setUsage(AudioAttributes.USAGE_ALARM)
+                    .setContentType(AudioAttributes.CONTENT_TYPE_SONIFICATION)
+                    .build());
 
             // Attempt to adjust the ringtone volume if the user is in a telephone call.
             boolean scheduleVolumeAdjustment = false;

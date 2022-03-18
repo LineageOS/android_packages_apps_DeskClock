@@ -16,7 +16,15 @@
 
 package com.android.deskclock.data;
 
-import android.annotation.TargetApi;
+import static android.app.NotificationManager.ACTION_INTERRUPTION_FILTER_CHANGED;
+import static android.app.NotificationManager.INTERRUPTION_FILTER_NONE;
+import static android.content.Context.AUDIO_SERVICE;
+import static android.content.Context.NOTIFICATION_SERVICE;
+import static android.media.AudioManager.STREAM_ALARM;
+import static android.media.RingtoneManager.TYPE_ALARM;
+import static android.provider.Settings.System.CONTENT_URI;
+import static android.provider.Settings.System.DEFAULT_ALARM_ALERT_URI;
+
 import android.app.NotificationManager;
 import android.content.BroadcastReceiver;
 import android.content.ContentResolver;
@@ -31,6 +39,7 @@ import android.os.AsyncTask;
 import android.os.Build;
 import android.os.Handler;
 import android.os.Looper;
+
 import androidx.core.app.NotificationManagerCompat;
 
 import com.android.deskclock.Utils;
@@ -38,15 +47,6 @@ import com.android.deskclock.data.DataModel.SilentSetting;
 
 import java.util.ArrayList;
 import java.util.List;
-
-import static android.app.NotificationManager.ACTION_INTERRUPTION_FILTER_CHANGED;
-import static android.app.NotificationManager.INTERRUPTION_FILTER_NONE;
-import static android.content.Context.AUDIO_SERVICE;
-import static android.content.Context.NOTIFICATION_SERVICE;
-import static android.media.AudioManager.STREAM_ALARM;
-import static android.media.RingtoneManager.TYPE_ALARM;
-import static android.provider.Settings.System.CONTENT_URI;
-import static android.provider.Settings.System.DEFAULT_ALARM_ALERT_URI;
 
 /**
  * This model fetches and stores reasons that alarms may be suppressed or silenced by system
@@ -93,10 +93,9 @@ final class SilentSettingsModel {
         final ContentObserver contentChangeWatcher = new ContentChangeWatcher();
         cr.registerContentObserver(VOLUME_URI, false, contentChangeWatcher);
         cr.registerContentObserver(DEFAULT_ALARM_ALERT_URI, false, contentChangeWatcher);
-        if (Utils.isMOrLater()) {
-            final IntentFilter filter = new IntentFilter(ACTION_INTERRUPTION_FILTER_CHANGED);
-            context.registerReceiver(new DoNotDisturbChangeReceiver(), filter);
-        }
+
+        final IntentFilter filter = new IntentFilter(ACTION_INTERRUPTION_FILTER_CHANGED);
+        context.registerReceiver(new DoNotDisturbChangeReceiver(), filter);
     }
 
     void addSilentSettingsListener(OnSilentSettingsListener listener) {
@@ -178,12 +177,7 @@ final class SilentSettingsModel {
             }
         }
 
-        @TargetApi(Build.VERSION_CODES.M)
         private boolean isDoNotDisturbBlockingAlarms() {
-            if (!Utils.isMOrLater()) {
-                return false;
-            }
-
             try {
                 final int interruptionFilter = mNotificationManager.getCurrentInterruptionFilter();
                 return interruptionFilter == INTERRUPTION_FILTER_NONE;

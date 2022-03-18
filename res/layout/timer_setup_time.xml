@@ -37,7 +37,6 @@
         android:singleLine="true"
         android:textColor="?android:attr/textColorPrimary"
         android:textSize="@dimen/timer_setup_digit_font_size"
-        tools:targetApi="21"
         tools:text="12h34m56s"/>
 
 </LinearLayout>

@@ -134,18 +134,16 @@ public final class DataModel {
             @Override
             public void onClick(View v) {
                 final Context context = v.getContext();
-                if (Utils.isLOrLater()) {
-                    try {
-                        // Attempt to open the notification settings for this app.
-                        context.startActivity(
-                                new Intent("android.settings.APP_NOTIFICATION_SETTINGS")
-                                .putExtra("app_package", context.getPackageName())
-                                .putExtra("app_uid", context.getApplicationInfo().uid)
-                                .addFlags(FLAG_ACTIVITY_NEW_TASK));
-                        return;
-                    } catch (Exception ignored) {
-                        // best attempt only; recovery code below
-                    }
+                try {
+                    // Attempt to open the notification settings for this app.
+                    context.startActivity(
+                            new Intent("android.settings.APP_NOTIFICATION_SETTINGS")
+                            .putExtra("app_package", context.getPackageName())
+                            .putExtra("app_uid", context.getApplicationInfo().uid)
+                            .addFlags(FLAG_ACTIVITY_NEW_TASK));
+                    return;
+                } catch (Exception ignored) {
+                    // best attempt only; recovery code below
                 }
 
                 // Fall back to opening the app settings page.

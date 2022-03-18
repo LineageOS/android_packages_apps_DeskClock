@@ -103,10 +103,6 @@ public class NotificationUtils {
     }
 
     public static void createChannel(Context context, String id) {
-        if (!Utils.isOOrLater()) {
-            return;
-        }
-
         if (!CHANNEL_PROPS.containsKey(id)) {
             Log.e(TAG, "Invalid channel requested: " + id);
             return;
@@ -145,10 +141,6 @@ public class NotificationUtils {
     }
 
     public static void updateNotificationChannels(Context context) {
-        if (!Utils.isOOrLater()) {
-            return;
-        }
-
         NotificationManagerCompat nm = NotificationManagerCompat.from(context);
 
         // These channels got a new behavior so we need to recreate them with new ids
