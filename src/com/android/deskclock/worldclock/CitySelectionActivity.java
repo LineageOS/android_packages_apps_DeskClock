@@ -447,7 +447,7 @@ public final class CitySelectionActivity extends BaseActivity {
                                 break;
                             case UTC_OFFSET:
                                 final TimeZone timezone = city.getTimeZone();
-                                sections.add(Utils.getGMTHourOffset(timezone, Utils.isPreL()));
+                                sections.add(Utils.getGMTHourOffset(timezone, false));
                                 break;
                         }
                         positions.add(position);
