@@ -50,6 +50,23 @@
       "message": "product_specific -\u003e system_ext_specific will resolve compile issues on all devices.\n\nhttps://github.com/crdroidandroid/android_packages_apps_DeskClock/commit/37140439420b76fddf654a8a4bf60b56450d1399",
       "revId": "ea2314c405d2c24a75f0f21b693c8b4ef67eda04",
       "serverId": "1ec6b3db-b2c1-4fa4-84a2-4c7efe89ba71"
+    },
+    {
+      "unresolved": true,
+      "key": {
+        "uuid": "b9ba1844_8b59030c",
+        "filename": "/PATCHSET_LEVEL",
+        "patchSetId": 21
+      },
+      "lineNbr": 0,
+      "author": {
+        "id": 6360
+      },
+      "writtenOn": "2022-03-21T20:16:03Z",
+      "side": 1,
+      "message": "Settings looks weird on light theme.\nPreview: https://i.ibb.co/27Bd6xs/photo-2022-03-22-01-43-17.jpg",
+      "revId": "ea2314c405d2c24a75f0f21b693c8b4ef67eda04",
+      "serverId": "1ec6b3db-b2c1-4fa4-84a2-4c7efe89ba71"
     }
   ]
 }
