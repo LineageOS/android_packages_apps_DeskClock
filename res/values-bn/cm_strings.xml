@@ -16,17 +16,13 @@
      limitations under the License.
 -->
 <resources xmlns:xliff="urn:oasis:names:tc:xliff:document:1.2">
-    <string name="flip_action_title">Hành động lật thiết bị</string>
-    <string name="shake_action_title">Hành động lắc thiết bị</string>
     <string-array name="action_setting_entries">
-        <item>Báo lại</item>
-        <item>Loại bỏ</item>
-        <item>Không có</item>
+        <item>স্নুজ</item>
+        <item>বাতিল</item>
+        <item>কিছু না</item>
     </string-array>
-    <string name="firing_alarms_timers_channel">Kích hoạt báo thức &amp; bộ đếm thời gian</string>
-    <string name="alarm_missed_channel">Báo thức bị lỡ</string>
-    <string name="alarm_snooze_channel">Báo thức báo lại</string>
-    <string name="alarm_upcoming_channel">Báo thức sắp tới</string>
-    <string name="stopwatch_channel">Đồng hồ bấm giờ</string>
-    <string name="timer_channel">Đồng hồ đếm giờ</string>
+    <string name="alarm_snooze_channel">স্নুজ করা অ্যালার্মগুলো</string>
+    <string name="alarm_upcoming_channel">আসন্ন অ্যালার্মগুলো</string>
+    <string name="stopwatch_channel">স্টপওয়াচ</string>
+    <string name="timer_channel">টাইমার</string>
 </resources>

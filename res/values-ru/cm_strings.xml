@@ -20,13 +20,13 @@
     <string name="shake_action_title">Действие при встряхивании устройства</string>
     <string-array name="action_setting_entries">
         <item>Отложить</item>
-        <item>Выключить</item>
+        <item>Отклонить</item>
         <item>Ничего</item>
     </string-array>
     <string name="firing_alarms_timers_channel">Важные сигналы и таймеры</string>
     <string name="alarm_missed_channel">Пропущенные будильники</string>
     <string name="alarm_snooze_channel">Отложенные будильники</string>
-    <string name="alarm_upcoming_channel">Следующие будильники</string>
+    <string name="alarm_upcoming_channel">Предстоящие будильники</string>
     <string name="stopwatch_channel">Секундомер</string>
     <string name="timer_channel">Таймер</string>
 </resources>
