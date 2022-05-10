@@ -29,4 +29,5 @@
     <string name="alarm_upcoming_channel">Anstehende Weckrufe</string>
     <string name="stopwatch_channel">Stoppuhr</string>
     <string name="timer_channel">Timer</string>
+    <string name="add_label">Beschriftung hinzufügen</string>
 </resources>

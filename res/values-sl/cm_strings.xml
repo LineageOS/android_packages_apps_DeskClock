@@ -29,4 +29,5 @@
     <string name="alarm_upcoming_channel">Prihajajoče budilke</string>
     <string name="stopwatch_channel">Štoparica</string>
     <string name="timer_channel">Odštevalnik</string>
+    <string name="add_label">Dodaj oznako</string>
 </resources>

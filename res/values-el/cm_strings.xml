@@ -29,4 +29,5 @@
     <string name="alarm_upcoming_channel">Επόμενα ξυπνητήρια</string>
     <string name="stopwatch_channel">Χρονόμετρο</string>
     <string name="timer_channel">Αντίστροφη μέτρηση</string>
+    <string name="add_label">Προσθήκη ετικέτας</string>
 </resources>

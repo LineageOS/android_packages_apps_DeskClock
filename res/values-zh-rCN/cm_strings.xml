@@ -29,4 +29,5 @@
     <string name="alarm_upcoming_channel">即将响铃的闹钟</string>
     <string name="stopwatch_channel">计时器</string>
     <string name="timer_channel">计时器</string>
+    <string name="add_label">添加标签</string>
 </resources>

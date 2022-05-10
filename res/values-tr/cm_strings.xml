@@ -29,4 +29,5 @@
     <string name="alarm_upcoming_channel">Yaklaşan alarmlar</string>
     <string name="stopwatch_channel">Kronometre</string>
     <string name="timer_channel">Zamanlayıcı</string>
+    <string name="add_label">Etiket ekle</string>
 </resources>

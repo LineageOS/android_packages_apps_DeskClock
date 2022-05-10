@@ -29,4 +29,5 @@
     <string name="alarm_upcoming_channel">Alarme viitoare</string>
     <string name="stopwatch_channel">Cronometru</string>
     <string name="timer_channel">Numărătoare inversă</string>
+    <string name="add_label">Adaugă o etichetă</string>
 </resources>
