@@ -153,7 +153,7 @@ public class CircleView extends View {
             mCirclePaint.setColor(color);
 
             // invalidate the current area
-            invalidate(mCenterX, mCenterY, mRadius);
+            invalidate();
         }
         return this;
     }
@@ -171,8 +171,7 @@ public class CircleView extends View {
             mCenterX = centerX;
 
             // invalidate the old/new areas
-            invalidate(oldCenterX, mCenterY, mRadius);
-            invalidate(centerX, mCenterY, mRadius);
+            invalidate();
         }
 
         // clear the horizontal gravity flags
@@ -194,8 +193,7 @@ public class CircleView extends View {
             mCenterY = centerY;
 
             // invalidate the old/new areas
-            invalidate(mCenterX, oldCenterY, mRadius);
-            invalidate(mCenterX, centerY, mRadius);
+            invalidate();
         }
 
         // clear the vertical gravity flags
@@ -223,10 +221,7 @@ public class CircleView extends View {
             mRadius = radius;
 
             // invalidate the old/new areas
-            invalidate(mCenterX, mCenterY, oldRadius);
-            if (radius > oldRadius) {
-                invalidate(mCenterX, mCenterY, radius);
-            }
+            invalidate();
         }
 
         // clear the fill gravity flags
@@ -237,15 +232,6 @@ public class CircleView extends View {
             mGravity &= ~Gravity.FILL_VERTICAL;
         }
 
-    }
-
-    /**
-     * Invalidates the rectangular area that circumscribes the circle defined by {@code centerX},
-     * {@code centerY}, and {@code radius}.
-     */
-    private void invalidate(float centerX, float centerY, float radius) {
-        invalidate((int) (centerX - radius - 0.5f), (int) (centerY - radius - 0.5f),
-                (int) (centerX + radius + 0.5f), (int) (centerY + radius + 0.5f));
     }
 
     /**
@@ -303,8 +289,7 @@ public class CircleView extends View {
         }
 
         if (oldCenterX != mCenterX || oldCenterY != mCenterY || oldRadius != mRadius) {
-            invalidate(oldCenterX, oldCenterY, oldRadius);
-            invalidate(mCenterX, mCenterY, mRadius);
+            invalidate();
         }
     }
 }
