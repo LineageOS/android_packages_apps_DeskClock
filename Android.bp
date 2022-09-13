@@ -34,14 +34,14 @@ android_app {
         "androidx-constraintlayout_constraintlayout"
     ],
     required: [
-        "com.android.deskclock_whitelist"
+        "com.android.deskclock_allowlist"
     ],
 }
 
 prebuilt_etc {
-    name: "com.android.deskclock_whitelist",
+    name: "com.android.deskclock_allowlist",
     product_specific: true,
     sub_dir: "sysconfig",
-    src: "com.android.deskclock_whitelist.xml",
+    src: "com.android.deskclock_allowlist.xml",
     filename_from_src: true,
 }
