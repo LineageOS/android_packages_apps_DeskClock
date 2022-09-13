@@ -20,6 +20,7 @@ import android.animation.Animator;
 import android.animation.AnimatorListenerAdapter;
 import android.animation.AnimatorSet;
 import android.animation.ValueAnimator;
+import android.app.NotificationManager;
 import android.content.Intent;
 import android.content.pm.PackageManager;
 import android.os.Bundle;
@@ -54,6 +55,7 @@ import com.android.deskclock.widget.toast.SnackbarManager;
 import com.google.android.material.bottomnavigation.BottomNavigationView;
 import com.google.android.material.snackbar.Snackbar;
 
+import static android.Manifest.permission.POST_NOTIFICATIONS;
 import static android.text.format.DateUtils.SECOND_IN_MILLIS;
 import static com.android.deskclock.AnimatorUtils.getScaleAnimator;
 
@@ -125,6 +127,7 @@ public class DeskClock extends BaseActivity
             "org.codeaurora.permission.POWER_OFF_ALARM";
 
     private static final int CODE_FOR_ALARM_PERMISSION = 1;
+    private static final int CODE_FOR_NOTIFICATION_PERMISSION = 2;
 
     @Override
     public void onNewIntent(Intent newIntent) {
@@ -140,6 +143,11 @@ public class DeskClock extends BaseActivity
 
         setContentView(R.layout.desk_clock);
         mSnackbarAnchor = findViewById(R.id.content);
+
+        NotificationManager notificationManager = getSystemService(NotificationManager.class);
+        if (!notificationManager.areNotificationsEnabled()) {
+            requestPermissions(new String[]{POST_NOTIFICATIONS}, CODE_FOR_NOTIFICATION_PERMISSION);
+        }
 
         checkPermissions();
 
@@ -439,6 +447,8 @@ public class DeskClock extends BaseActivity
                                            String permissions[], int[] grantResults) {
         if (requestCode == CODE_FOR_ALARM_PERMISSION){
             LogUtils.i("Power off alarm permission is granted.");
+        } else if (requestCode == CODE_FOR_NOTIFICATION_PERMISSION) {
+            LogUtils.i("Notification permission is granted");
         }
     }
 
