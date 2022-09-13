@@ -275,22 +275,6 @@ public final class ClockFragment extends DeskClockFragment {
     }
 
     /**
-     * Prior to L, a ContentObserver was used to monitor changes to the next scheduled alarm.
-     * In L and beyond this is accomplished via a system broadcast of
-     * {@link AlarmManager#ACTION_NEXT_ALARM_CLOCK_CHANGED}.
-     */
-    private final class AlarmObserverPreL extends ContentObserver {
-        private AlarmObserverPreL() {
-            super(new Handler());
-        }
-
-        @Override
-        public void onChange(boolean selfChange) {
-            refreshAlarm();
-        }
-    }
-
-    /**
      * Update the display of the scheduled alarm as it changes.
      */
     private final class AlarmChangedBroadcastReceiver extends BroadcastReceiver {
