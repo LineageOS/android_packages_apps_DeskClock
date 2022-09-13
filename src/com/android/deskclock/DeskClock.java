@@ -436,7 +436,7 @@ public class DeskClock extends BaseActivity
 
     @Override
     public void onRequestPermissionsResult(int requestCode,
-                                           String permissions[], int[] grantResults) {
+                                           String[] permissions, int[] grantResults) {
         if (requestCode == CODE_FOR_ALARM_PERMISSION){
             LogUtils.i("Power off alarm permission is granted.");
         }

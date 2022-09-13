@@ -17,6 +17,8 @@
 package com.android.deskclock.widget;
 
 import android.app.ActionBar;
+import android.graphics.BlendMode;
+import android.graphics.BlendModeColorFilter;
 import android.graphics.PorterDuff;
 import android.os.Bundle;
 import android.view.LayoutInflater;
@@ -71,8 +73,10 @@ public class CollapsingToolbarBaseActivity extends FragmentActivity {
             actionBar.setHomeButtonEnabled(true);
             actionBar.setDisplayShowTitleEnabled(true);
             // We need this to have an always light back arrow
-            toolbar.getNavigationIcon().setColorFilter(getColor(R.color.system_neutral1_50),
-                    PorterDuff.Mode.SRC_ATOP);
+            BlendModeColorFilter filter = new BlendModeColorFilter(
+                    getColor(R.color.system_neutral1_50),
+                    BlendMode.SRC_ATOP);
+            toolbar.getNavigationIcon().setColorFilter(filter);
         }
     }
 
