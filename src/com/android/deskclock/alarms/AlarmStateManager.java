@@ -110,9 +110,6 @@ public final class AlarmStateManager extends BroadcastReceiver {
     // Intent action for an AlarmManager alarm serving only to set the next alarm indicators
     private static final String INDICATOR_ACTION = "indicator";
 
-    // System intent action to notify AppWidget that we changed the alarm text.
-    public static final String ACTION_ALARM_CHANGED = "com.android.deskclock.ALARM_CHANGED";
-
     // Extra key to set the desired state change.
     public static final String ALARM_STATE_EXTRA = "intent.extra.alarm.state";
 
