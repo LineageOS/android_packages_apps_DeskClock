@@ -144,9 +144,7 @@ public class DigitalAppWidgetProvider extends AppWidgetProvider {
         final String action = intent.getAction();
         switch (action) {
             case ACTION_NEXT_ALARM_CLOCK_CHANGED:
-            case ACTION_DATE_CHANGED:
             case ACTION_LOCALE_CHANGED:
-            case ACTION_SCREEN_ON:
             case ACTION_TIME_CHANGED:
             case ACTION_TIMEZONE_CHANGED:
             case ACTION_ON_DAY_CHANGE:
