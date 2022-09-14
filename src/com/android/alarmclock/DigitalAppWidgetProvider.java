@@ -21,9 +21,11 @@ import android.app.AlarmManager;
 import android.app.PendingIntent;
 import android.appwidget.AppWidgetManager;
 import android.appwidget.AppWidgetProvider;
+import android.content.BroadcastReceiver;
 import android.content.ComponentName;
 import android.content.Context;
 import android.content.Intent;
+import android.content.IntentFilter;
 import android.content.res.Resources;
 import android.graphics.Bitmap;
 import android.net.Uri;
@@ -98,6 +100,8 @@ public class DigitalAppWidgetProvider extends AppWidgetProvider {
 
     private static final LogUtils.Logger LOGGER = new LogUtils.Logger("DigitalWidgetProvider");
 
+    private static boolean sReceiversRegistered;
+
     /**
      * Intent action used for refreshing a world city display when any of them changes days or when
      * the default TimeZone changes days. This affects the widget display because the day-of-week is
@@ -166,10 +170,22 @@ public class DigitalAppWidgetProvider extends AppWidgetProvider {
     @Override
     public void onUpdate(Context context, AppWidgetManager wm, int[] widgetIds) {
         super.onUpdate(context, wm, widgetIds);
+        registerReceivers(context, this);
 
         for (int widgetId : widgetIds) {
             relayoutWidget(context, wm, widgetId, wm.getAppWidgetOptions(widgetId));
         }
+    }
+
+    private static void registerReceivers(Context context, BroadcastReceiver receiver) {
+        if (sReceiversRegistered) return;
+
+        IntentFilter intentFilter = new IntentFilter();
+        intentFilter.addAction(ACTION_WORLD_CITIES_CHANGED);
+        intentFilter.addAction(ACTION_ON_DAY_CHANGE);
+        context.getApplicationContext().registerReceiver(receiver, intentFilter);
+
+        sReceiversRegistered = true;
     }
 
     /**
