@@ -16,6 +16,7 @@
 
 package com.android.deskclock;
 
+import android.Manifest;
 import android.animation.Animator;
 import android.animation.AnimatorListenerAdapter;
 import android.animation.AnimatorSet;
@@ -23,6 +24,7 @@ import android.animation.ValueAnimator;
 import android.app.AlertDialog;
 import android.content.Intent;
 import android.content.pm.PackageManager;
+import android.os.Build;
 import android.os.Bundle;
 import android.view.KeyEvent;
 import android.view.Menu;
@@ -131,6 +133,13 @@ public class DeskClock extends BaseActivity
     private static final int CODE_FOR_ALARM_PERMISSION = 1;
 
     private static final int INVALID_RES = -1;
+
+    private static final int[] PERMISSION_ERROR_MESSAGE_RES_IDS = {
+            0,
+            R.string.dialog_permissions_post_notifications,
+            R.string.dialog_permissions_read_phone_state,
+            R.string.dialog_permissions_notifications_and_phone,
+    };
 
     @Override
     public void onNewIntent(Intent newIntent) {
@@ -435,8 +444,14 @@ public class DeskClock extends BaseActivity
 
     private void checkPermissions() {
         final List<String> missingPermissions = new ArrayList<>();
-        if (!hasPermission(PERMISSION_POWER_OFF_ALARM)) {
+        if (!hasPowerOffPermission()) {
             missingPermissions.add(PERMISSION_POWER_OFF_ALARM);
+        }
+        if (!hasNotificationPermission()) {
+            missingPermissions.add(Manifest.permission.POST_NOTIFICATIONS);
+        }
+        if (!hasPhonePermission()) {
+            missingPermissions.add(Manifest.permission.READ_PHONE_STATE);
         }
 
         if (!missingPermissions.isEmpty()) {
@@ -449,15 +464,36 @@ public class DeskClock extends BaseActivity
         return checkSelfPermission(permission) == PackageManager.PERMISSION_GRANTED;
     }
 
+    private boolean hasPowerOffPermission() {
+        return hasPermission(PERMISSION_POWER_OFF_ALARM);
+    }
+
+    private boolean hasNotificationPermission() {
+        return hasPermission(Manifest.permission.POST_NOTIFICATIONS);
+    }
+
+    private boolean hasPhonePermission() {
+        return hasPermission(Manifest.permission.READ_PHONE_STATE);
+    }
+
+    private boolean hasEssentialPermissions() {
+        return hasNotificationPermission() && hasPhonePermission();
+    }
+
     @Override
     public void onRequestPermissionsResult(int requestCode, String[] permissions,
                                            int[] grantResults) {
         if (requestCode == CODE_FOR_ALARM_PERMISSION) {
-            if (hasPermission(PERMISSION_POWER_OFF_ALARM)) {
-                LogUtils.i("Power off alarm permission is granted.");
+            if (hasEssentialPermissions()) {
+                LogUtils.i("Essential permissions granted!");
+                if (hasPermission(PERMISSION_POWER_OFF_ALARM)) {
+                    LogUtils.i("Power off alarm permission is granted.");
+                } else {
+                    showRationale(PERMISSION_POWER_OFF_ALARM,
+                            R.string.dialog_permissions_power_off_alarm, INVALID_RES, false);
+                }
             } else {
-                showRationale(PERMISSION_POWER_OFF_ALARM,
-                        R.string.dialog_permissions_power_off_alarm, INVALID_RES, false);
+                essentialPermissionsDenied();
             }
         }
     }
@@ -468,6 +504,27 @@ public class DeskClock extends BaseActivity
             showPermissionRationale(messageRes, this::checkPermissions, finishWhenDenied);
         } else if (errorRes != INVALID_RES){
             showPermissionError(errorRes, finishWhenDenied);
+        }
+    }
+
+    private void essentialPermissionsDenied() {
+        if ((!shouldShowRequestPermissionRationale(Manifest.permission.POST_NOTIFICATIONS) &&
+                !hasNotificationPermission()) ||
+                !shouldShowRequestPermissionRationale(Manifest.permission.READ_PHONE_STATE)) {
+            showPermissionError(R.string.dialog_permissions_no_permission, true);
+        } else {
+            // Explain the user why the denied permission is needed
+            int error = 0;
+
+            if (!hasNotificationPermission()) {
+                error |= 1;
+            }
+            if (!hasPhonePermission()) {
+                error |= 1 << 1;
+            }
+
+            showPermissionRationale(PERMISSION_ERROR_MESSAGE_RES_IDS[error],
+                    this::checkPermissions, true);
         }
     }
 
@@ -482,9 +539,7 @@ public class DeskClock extends BaseActivity
                             requestAgain.run();
                         })
                 .setNegativeButton(R.string.dialog_permissions_dismiss, (dialog, position) -> {
-                    if (finishWhenDenied) {
-                        finish();
-                    }
+                    maybeFinish(finishWhenDenied);
                 })
                 .show();
     }
@@ -494,11 +549,16 @@ public class DeskClock extends BaseActivity
                 .setTitle(R.string.dialog_permissions_title)
                 .setMessage(messageRes)
                 .setPositiveButton(R.string.dialog_permissions_dismiss, (dialog, position) -> {
-                    if (finishWhenDenied) {
-                        finish();
-                    }
+                    maybeFinish(finishWhenDenied);
                 })
+                .setOnDismissListener(dialog -> { maybeFinish(finishWhenDenied); })
                 .show();
+    }
+
+    private void maybeFinish(boolean finish) {
+        if (finish) {
+            finish();
+        }
     }
 
     /**
