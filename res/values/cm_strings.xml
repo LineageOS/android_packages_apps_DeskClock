@@ -39,4 +39,13 @@
     <string name="timer_channel">Timer</string>
 
     <string name="add_label">Add label</string>
+
+    <!-- Permissions dialog title -->
+    <string name="dialog_permissions_title">Permissions</string>
+    <!-- Permissions dialog action: ask permissions access again -->
+    <string name="dialog_permissions_ask">Ask again</string>
+    <!-- Permissions dialog action: dismiss dialog -->
+    <string name="dialog_permissions_dismiss">Dismiss</string>
+    <!-- Permission dialog: ask for power off alarm permission -->
+    <string name="dialog_permissions_power_off_alarm">Without this permission your device won\'t be able to power on itself to fire an alarm</string>
 </resources>
