@@ -48,4 +48,8 @@
     <string name="dialog_permissions_dismiss">Dismiss</string>
     <!-- Permission dialog: ask for power off alarm permission -->
     <string name="dialog_permissions_power_off_alarm">Without this permission your device won\'t be able to power on itself to fire an alarm</string>
+    <!-- No permissions granted error -->
+    <string name="dialog_permissions_no_permission">Required permissions were denied, enable them from Settings app</string>
+    <!-- Permission dialog: ask for post notification permission -->
+    <string name="dialog_permission_post_notifications">This app relies on notifications. Without them it cannot be run!</string>
 </resources>

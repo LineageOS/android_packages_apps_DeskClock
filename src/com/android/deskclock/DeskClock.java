@@ -16,6 +16,7 @@
 
 package com.android.deskclock;
 
+import android.Manifest;
 import android.animation.Animator;
 import android.animation.AnimatorListenerAdapter;
 import android.animation.AnimatorSet;
@@ -23,6 +24,7 @@ import android.animation.ValueAnimator;
 import android.app.AlertDialog;
 import android.content.Intent;
 import android.content.pm.PackageManager;
+import android.os.Build;
 import android.os.Bundle;
 import android.view.KeyEvent;
 import android.view.Menu;
@@ -438,6 +440,11 @@ public class DeskClock extends BaseActivity
         if (!hasPermission(PERMISSION_POWER_OFF_ALARM)) {
             missingPermissions.add(PERMISSION_POWER_OFF_ALARM);
         }
+        if (Build.VERSION.SDK_INT >= Build.VERSION_CODES.TIRAMISU) {
+            if (!hasPermission(Manifest.permission.POST_NOTIFICATIONS)) {
+                missingPermissions.add(Manifest.permission.POST_NOTIFICATIONS);
+            }
+        }
 
         if (!missingPermissions.isEmpty()) {
             final String[] requestArray = missingPermissions.toArray(new String[0]);
@@ -458,6 +465,16 @@ public class DeskClock extends BaseActivity
             } else {
                 showRationale(PERMISSION_POWER_OFF_ALARM,
                         R.string.dialog_permissions_power_off_alarm, INVALID_RES, false);
+            }
+
+            if (Build.VERSION.SDK_INT >= Build.VERSION_CODES.TIRAMISU) {
+                if (hasPermission(Manifest.permission.POST_NOTIFICATIONS)) {
+                    LogUtils.i("Power off alarm permission is granted.");
+                } else {
+                    showRationale(Manifest.permission.POST_NOTIFICATIONS,
+                            R.string.dialog_permission_post_notifications,
+                            R.string.dialog_permissions_no_permission, true);
+                }
             }
         }
     }
