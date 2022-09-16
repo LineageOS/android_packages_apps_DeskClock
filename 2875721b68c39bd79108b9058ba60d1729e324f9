@@ -1,0 +1,27 @@
+{
+  "comments": [
+    {
+      "unresolved": true,
+      "key": {
+        "uuid": "45c50994_38ef984a",
+        "filename": "src/com/android/deskclock/DeskClock.java",
+        "patchSetId": 1
+      },
+      "lineNbr": 472,
+      "author": {
+        "id": 4550
+      },
+      "writtenOn": "2022-09-16T22:52:05Z",
+      "side": 1,
+      "message": "Wrong log",
+      "range": {
+        "startLine": 472,
+        "startChar": 32,
+        "endLine": 472,
+        "endChar": 70
+      },
+      "revId": "2875721b68c39bd79108b9058ba60d1729e324f9",
+      "serverId": "1ec6b3db-b2c1-4fa4-84a2-4c7efe89ba71"
+    }
+  ]
+}
