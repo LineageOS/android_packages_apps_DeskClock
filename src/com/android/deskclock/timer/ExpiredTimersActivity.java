@@ -91,9 +91,6 @@ public class ExpiredTimersActivity extends BaseActivity {
         KeyguardManager kgm = getSystemService(KeyguardManager.class);
         kgm.requestDismissKeyguard(this, null);
 
-        // Close dialogs and window shade, so this is fully visible
-        sendBroadcast(new Intent(Intent.ACTION_CLOSE_SYSTEM_DIALOGS));
-
         // Honor rotation on tablets; fix the orientation on phones.
         if (!getResources().getBoolean(R.bool.rotateAlarmAlert)) {
             setRequestedOrientation(ActivityInfo.SCREEN_ORIENTATION_NOSENSOR);
