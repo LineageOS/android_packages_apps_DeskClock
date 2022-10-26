@@ -184,9 +184,6 @@ public class AlarmActivity extends BaseActivity
         // Hide navigation bar to minimize accidental tap on Home key
         hideNavigationBar();
 
-        // Close dialogs and window shade, so this is fully visible
-        sendBroadcast(new Intent(Intent.ACTION_CLOSE_SYSTEM_DIALOGS));
-
         // Honor rotation on tablets; fix the orientation on phones.
         if (!getResources().getBoolean(R.bool.rotateAlarmAlert)) {
             setRequestedOrientation(ActivityInfo.SCREEN_ORIENTATION_NOSENSOR);
