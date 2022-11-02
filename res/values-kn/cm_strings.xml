@@ -23,4 +23,5 @@
         <item>ವಜಾಮಾಡು</item>
         <item>ಏನಿಲ್ಲ</item>
     </string-array>
+    <string name="dialog_permissions_dismiss">ವಜಾಮಾಡು</string>
 </resources>

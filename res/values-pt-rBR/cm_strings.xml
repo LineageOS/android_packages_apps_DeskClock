@@ -29,4 +29,5 @@
     <string name="stopwatch_channel">Cronômetro</string>
     <string name="timer_channel">Temporizador</string>
     <string name="add_label">Adicionar etiqueta</string>
+    <string name="dialog_permissions_dismiss">Ignorar</string>
 </resources>

@@ -21,4 +21,5 @@
         <item>Avvis</item>
         <item>Ingenting</item>
     </string-array>
+    <string name="dialog_permissions_dismiss">Avvis</string>
 </resources>

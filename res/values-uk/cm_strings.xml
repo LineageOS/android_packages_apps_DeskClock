@@ -29,4 +29,5 @@
     <string name="stopwatch_channel">Секундомір</string>
     <string name="timer_channel">Таймер</string>
     <string name="add_label">Додати мітку</string>
+    <string name="dialog_permissions_dismiss">Відхилити</string>
 </resources>

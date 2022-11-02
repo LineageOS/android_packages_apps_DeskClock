@@ -30,4 +30,5 @@
     <string name="stopwatch_channel">스톱워치</string>
     <string name="timer_channel">타이머</string>
     <string name="add_label">라벨 추가</string>
+    <string name="dialog_permissions_dismiss">알람 해제</string>
 </resources>

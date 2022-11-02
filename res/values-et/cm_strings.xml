@@ -30,4 +30,5 @@
     <string name="stopwatch_channel">Stopper</string>
     <string name="timer_channel">Taimer</string>
     <string name="add_label">Lisa silt</string>
+    <string name="dialog_permissions_dismiss">Tühista</string>
 </resources>

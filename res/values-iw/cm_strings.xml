@@ -26,4 +26,5 @@
     <string name="alarm_missed_channel">שעונים מעוררים שפוספסו</string>
     <string name="stopwatch_channel">שעון עצר</string>
     <string name="timer_channel">טיימר</string>
+    <string name="dialog_permissions_dismiss">דחה</string>
 </resources>

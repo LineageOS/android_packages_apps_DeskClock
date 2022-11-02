@@ -30,4 +30,13 @@
     <string name="stopwatch_channel">Kronometri</string>
     <string name="timer_channel">Kohëmatës</string>
     <string name="add_label">Shto etiketë</string>
+    <string name="dialog_permissions_title">Lejet</string>
+    <string name="dialog_permissions_ask">Pyet përsëri</string>
+    <string name="dialog_permissions_dismiss">Injoro</string>
+    <string name="dialog_permissions_settings">Cilësimet</string>
+    <string name="dialog_permissions_power_off_alarm">Pa këtë leje pajisja juaj nuk do të mund të ndizet vetë për të ndezur një alarm</string>
+    <string name="dialog_permissions_no_permission">Lejet e kërkuara u refuzuan, aktivizojini ato nga aplikacioni \"Cilësimet\".</string>
+    <string name="dialog_permissions_post_notifications">Ky aplikacion mbështetet në njoftimet. Pa to nuk mund të drejtohet!</string>
+    <string name="dialog_permissions_read_phone_state">Ky aplikacion duhet të kontrollojë nëse jeni në telefon përpara se të telefononi!</string>
+    <string name="dialog_permissions_notifications_and_phone">Ky aplikacion duhet të jetë në gjendje të postojë njoftime për alarmet, kohëmatësit dhe kronometrit dhe të kontrollojë nëse jeni në telefon përpara se të bini zile!</string>
 </resources>

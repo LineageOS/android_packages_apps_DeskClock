@@ -30,4 +30,10 @@
     <string name="stopwatch_channel">Cronómetru</string>
     <string name="timer_channel">Temporizador</string>
     <string name="add_label">Amestar una etiqueta</string>
+    <string name="dialog_permissions_title">Permisos</string>
+    <string name="dialog_permissions_ask">Volver pidir</string>
+    <string name="dialog_permissions_dismiss">Escartar</string>
+    <string name="dialog_permissions_settings">Axustes</string>
+    <string name="dialog_permissions_power_off_alarm">Ensin esti permisu el preséu nun va ser a prendese solu p\'activar l\'alarma</string>
+    <string name="dialog_permissions_post_notifications">Esta aplicación encóntase nos avisos. ¡Ensin ellos nun se pue executar!</string>
 </resources>

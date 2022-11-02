@@ -29,4 +29,5 @@
     <string name="alarm_upcoming_channel">Próximas alarmas</string>
     <string name="stopwatch_channel">Cronómetro</string>
     <string name="timer_channel">Temporizador</string>
+    <string name="dialog_permissions_dismiss">Rexeitar</string>
 </resources>

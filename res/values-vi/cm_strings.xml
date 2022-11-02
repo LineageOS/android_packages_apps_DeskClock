@@ -29,4 +29,5 @@
     <string name="alarm_upcoming_channel">Báo thức sắp tới</string>
     <string name="stopwatch_channel">Đồng hồ bấm giờ</string>
     <string name="timer_channel">Đồng hồ đếm giờ</string>
+    <string name="dialog_permissions_dismiss">Loại bỏ</string>
 </resources>

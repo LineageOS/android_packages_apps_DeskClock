@@ -29,4 +29,5 @@
     <string name="alarm_upcoming_channel">Предстоящи аларми</string>
     <string name="stopwatch_channel">Хронометър</string>
     <string name="timer_channel">Таймер</string>
+    <string name="dialog_permissions_dismiss">Отхвърли</string>
 </resources>

@@ -30,4 +30,13 @@
     <string name="stopwatch_channel">Saniyəölçən</string>
     <string name="timer_channel">Vaxtölçən</string>
     <string name="add_label">Etiket əlavə et</string>
+    <string name="dialog_permissions_title">İcazələr</string>
+    <string name="dialog_permissions_ask">Təkrar soruş</string>
+    <string name="dialog_permissions_dismiss">Rədd et</string>
+    <string name="dialog_permissions_settings">Tənzimləmələr</string>
+    <string name="dialog_permissions_power_off_alarm">Bu icazə olmadan cihazınız zəngli saatı çalmaq üçün öz-özünə açılmayacaq</string>
+    <string name="dialog_permissions_no_permission">Tələb edilən icazələr rədd edildi, Tənzimləmələr tətbiqindən icazələri fəallaşdırın.</string>
+    <string name="dialog_permissions_post_notifications">Bu tətbiq bildirişlərə əsaslanır. Bildirişlər olmadan işləyə bilməz!</string>
+    <string name="dialog_permissions_read_phone_state">Bu tətbiq, zəng çalmazdan əvvəl telefonda olub-olmadığınızı yoxlamalıdır!</string>
+    <string name="dialog_permissions_notifications_and_phone">Bu tətbiq, zəngli saat, taymer və vaxtölçən üçün bildiriş göndərə bilməsi və zəng çalmazdan əvvəl telefonda olub-olmadığınızı yoxlaya bilməsi lazımdır!</string>
 </resources>

@@ -21,4 +21,5 @@
         <item>Suref</item>
         <item>Ulac</item>
     </string-array>
+    <string name="dialog_permissions_dismiss">Suref</string>
 </resources>

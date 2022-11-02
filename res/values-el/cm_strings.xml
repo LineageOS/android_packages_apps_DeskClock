@@ -30,4 +30,13 @@
     <string name="stopwatch_channel">Χρονόμετρο</string>
     <string name="timer_channel">Αντίστροφη μέτρηση</string>
     <string name="add_label">Προσθήκη ετικέτας</string>
+    <string name="dialog_permissions_title">Δικαιώματα</string>
+    <string name="dialog_permissions_ask">Ερώτηση ξανά</string>
+    <string name="dialog_permissions_dismiss">Παράβλεψη</string>
+    <string name="dialog_permissions_settings">Ρυθμίσεις</string>
+    <string name="dialog_permissions_power_off_alarm">Χωρίς αυτήν την άδεια, η συσκευή σας δε θα μπορεί να ενεργοποιήσει τον εαυτό της για να ενεργοποιήσει το ξυπνητήρι</string>
+    <string name="dialog_permissions_no_permission">Τα απαραίτητα δικαιώματα απορρίφθηκαν, ενεργοποιήστε τα από τις Ρυθμίσεις</string>
+    <string name="dialog_permissions_post_notifications">Αυτή η εφαρμογή βασίζεται στις ειδοποιήσεις. Χωρίς αυτές δεν μπορεί να λειτουργήσει!</string>
+    <string name="dialog_permissions_read_phone_state">Αυτή η εφαρμογή πρέπει να ελέγχει αν μιλάτε στο τηλέφωνο πριν ενεργοποιήσει το ξυπνητήρι!</string>
+    <string name="dialog_permissions_notifications_and_phone">Αυτή η εφαρμογή πρέπει να είναι σε θέση να δημοσιεύσει ειδοποιήσεις για ξυπνητήρια, χρονόμετρα και αντίστροφη μέτρηση, και να ελέγχει αν μιλάτε στο τηλέφωνο πριν ενεργοποιήσει το ξυπνητήρι!</string>
 </resources>

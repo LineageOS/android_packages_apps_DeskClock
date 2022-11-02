@@ -29,4 +29,5 @@
     <string name="alarm_upcoming_channel">Larymau yn dod i fyny</string>
     <string name="stopwatch_channel">Stopwats</string>
     <string name="timer_channel">Amserydd</string>
+    <string name="dialog_permissions_dismiss">Diystyru</string>
 </resources>

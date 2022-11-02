@@ -29,4 +29,5 @@
     <string name="alarm_upcoming_channel">Oankommende alarms</string>
     <string name="stopwatch_channel">Stopwatch</string>
     <string name="timer_channel">Timer</string>
+    <string name="dialog_permissions_dismiss">Utskeakelje</string>
 </resources>

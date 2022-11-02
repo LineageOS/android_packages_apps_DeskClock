@@ -23,4 +23,5 @@
         <item>Odrzuć</item>
         <item>Nic nie rób</item>
     </string-array>
+    <string name="dialog_permissions_dismiss">Odrzuć</string>
 </resources>

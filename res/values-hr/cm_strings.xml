@@ -23,4 +23,5 @@
         <item>Odbaci</item>
         <item>Ništa</item>
     </string-array>
+    <string name="dialog_permissions_dismiss">Odbaci</string>
 </resources>

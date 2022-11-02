@@ -30,4 +30,13 @@
     <string name="stopwatch_channel">წამმზომი</string>
     <string name="timer_channel">უკუმთვლელი</string>
     <string name="add_label">ზედწარწერა</string>
+    <string name="dialog_permissions_title">ნებართვები</string>
+    <string name="dialog_permissions_ask">კვლავ შეკითხვა</string>
+    <string name="dialog_permissions_dismiss">აცილება</string>
+    <string name="dialog_permissions_settings">პარამეტრები</string>
+    <string name="dialog_permissions_power_off_alarm">ამ ნებართვის გარეშე მოწყობილობა ვერ ჩაირთვება განგაშის ასამოქმედებლად</string>
+    <string name="dialog_permissions_no_permission">მოთხოვნილი უფლებები უარყოფილია, დართეთ ნება პარამეტრებიდან</string>
+    <string name="dialog_permissions_post_notifications">აპი დამოკიდებულია შეტყობინებებზე. მათ გარეშე ვერ გაეშვება!</string>
+    <string name="dialog_permissions_read_phone_state">აპი საჭიროებს დამოწმებას, რომ ტელეფონთან იმყოფებით დარეკვამდე!</string>
+    <string name="dialog_permissions_notifications_and_phone">აპი საჭიროებს შეტყობინების შესაძლებლობას განგაშისთვის, წამმზომებისა და უკუმთვლელებისთვის, ამასთანავე, დამოწმების საშუალებას, რომ ტელეფონთან იმყოფებით დარეკვამდე!</string>
 </resources>

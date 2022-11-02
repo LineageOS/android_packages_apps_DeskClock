@@ -30,4 +30,5 @@
     <string name="stopwatch_channel">Stopperóra</string>
     <string name="timer_channel">Időzítő</string>
     <string name="add_label">Új címke</string>
+    <string name="dialog_permissions_dismiss">Elvetés</string>
 </resources>

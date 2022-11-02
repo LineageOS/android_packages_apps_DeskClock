@@ -29,4 +29,5 @@
     <string name="alarm_upcoming_channel">預定的鬧鐘</string>
     <string name="stopwatch_channel">碼錶</string>
     <string name="timer_channel">計時器</string>
+    <string name="dialog_permissions_dismiss">忽略</string>
 </resources>

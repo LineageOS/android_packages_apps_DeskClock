@@ -25,4 +25,5 @@
     </string-array>
     <string name="stopwatch_channel">จับเวลา</string>
     <string name="timer_channel">จับเวลา</string>
+    <string name="dialog_permissions_dismiss">ยกเลิก</string>
 </resources>

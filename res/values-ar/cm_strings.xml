@@ -29,4 +29,5 @@
     <string name="alarm_upcoming_channel">التنبيهات القادمة</string>
     <string name="stopwatch_channel">ساعة إيقاف</string>
     <string name="timer_channel">المؤقت</string>
+    <string name="dialog_permissions_dismiss">تجاهل</string>
 </resources>
