@@ -140,7 +140,6 @@ public class DeskClock extends BaseActivity
     private static final int[] PERMISSION_ERROR_MESSAGE_RES_IDS = {
             0,
             R.string.dialog_permissions_post_notifications,
-            R.string.dialog_permissions_read_phone_state,
             R.string.dialog_permissions_notifications_and_phone,
     };
 
@@ -453,9 +452,6 @@ public class DeskClock extends BaseActivity
         if (!hasNotificationPermission()) {
             missingPermissions.add(Manifest.permission.POST_NOTIFICATIONS);
         }
-        if (!hasPhonePermission()) {
-            missingPermissions.add(Manifest.permission.READ_PHONE_STATE);
-        }
 
         if (!missingPermissions.isEmpty()) {
             final String[] requestArray = missingPermissions.toArray(new String[0]);
@@ -475,12 +471,8 @@ public class DeskClock extends BaseActivity
         return hasPermission(Manifest.permission.POST_NOTIFICATIONS);
     }
 
-    private boolean hasPhonePermission() {
-        return hasPermission(Manifest.permission.READ_PHONE_STATE);
-    }
-
     private boolean hasEssentialPermissions() {
-        return hasNotificationPermission() && hasPhonePermission();
+        return hasNotificationPermission();
     }
 
     @Override
@@ -512,8 +504,7 @@ public class DeskClock extends BaseActivity
 
     private void essentialPermissionsDenied() {
         if ((!shouldShowRequestPermissionRationale(Manifest.permission.POST_NOTIFICATIONS) &&
-                !hasNotificationPermission()) ||
-                !shouldShowRequestPermissionRationale(Manifest.permission.READ_PHONE_STATE)) {
+                !hasNotificationPermission())) {
             showPermissionError(R.string.dialog_permissions_no_permission, true);
         } else {
             // Explain the user why the denied permission is needed
@@ -521,9 +512,6 @@ public class DeskClock extends BaseActivity
 
             if (!hasNotificationPermission()) {
                 error |= 1;
-            }
-            if (!hasPhonePermission()) {
-                error |= 1 << 1;
             }
 
             showPermissionRationale(PERMISSION_ERROR_MESSAGE_RES_IDS[error],

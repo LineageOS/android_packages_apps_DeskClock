@@ -27,8 +27,6 @@ import android.hardware.SensorEventListener;
 import android.hardware.SensorManager;
 import android.os.Binder;
 import android.os.IBinder;
-import android.telephony.PhoneStateListener;
-import android.telephony.TelephonyManager;
 
 import com.android.deskclock.AlarmAlertWakeLock;
 import com.android.deskclock.LogUtils;
@@ -81,9 +79,6 @@ public class AlarmService extends Service {
     /** Whether the service is currently bound to AlarmActivity */
     private boolean mIsBound = false;
 
-    /** Listener for changes in phone state. */
-    private final PhoneStateChangeListener mPhoneStateListener = new PhoneStateChangeListener();
-
     /** Whether the receiver is currently registered */
     private boolean mIsRegistered = false;
 
@@ -114,7 +109,6 @@ public class AlarmService extends Service {
         context.startService(intent);
     }
 
-    private TelephonyManager mTelephonyManager;
     private AlarmInstance mCurrentAlarm = null;
     private SensorManager mSensorManager;
     private int mFlipAction;
@@ -131,7 +125,6 @@ public class AlarmService extends Service {
 
         mCurrentAlarm = instance;
         AlarmNotifications.showAlarmNotification(this, mCurrentAlarm);
-        mTelephonyManager.listen(mPhoneStateListener.init(), PhoneStateListener.LISTEN_CALL_STATE);
         AlarmKlaxon.start(this, mCurrentAlarm);
         sendBroadcast(new Intent(ALARM_ALERT_ACTION));
         attachListeners();
@@ -147,7 +140,6 @@ public class AlarmService extends Service {
         LogUtils.v("AlarmService.stop with instance: %s", instanceId);
 
         AlarmKlaxon.stop(this);
-        mTelephonyManager.listen(mPhoneStateListener, PhoneStateListener.LISTEN_NONE);
         sendBroadcast(new Intent(ALARM_DONE_ACTION));
 
         stopForeground(true /* removeNotification */);
@@ -192,7 +184,6 @@ public class AlarmService extends Service {
     @Override
     public void onCreate() {
         super.onCreate();
-        mTelephonyManager = (TelephonyManager) getSystemService(Context.TELEPHONY_SERVICE);
 
         // Register the broadcast receiver
         final IntentFilter filter = new IntentFilter(ALARM_SNOOZE_ACTION);
@@ -263,28 +254,6 @@ public class AlarmService extends Service {
         if (mIsRegistered) {
             unregisterReceiver(mActionsReceiver);
             mIsRegistered = false;
-        }
-    }
-
-    private final class PhoneStateChangeListener extends PhoneStateListener {
-
-        private int mPhoneCallState;
-
-        PhoneStateChangeListener init() {
-            mPhoneCallState = -1;
-            return this;
-        }
-
-        @Override
-        public void onCallStateChanged(int state, String ignored) {
-            if (mPhoneCallState == -1) {
-                mPhoneCallState = state;
-            }
-
-            if (state != TelephonyManager.CALL_STATE_IDLE && state != mPhoneCallState) {
-                startService(AlarmStateManager.createStateChangeIntent(AlarmService.this,
-                        "AlarmService", mCurrentAlarm, AlarmInstance.MISSED_STATE));
-            }
         }
     }
 
