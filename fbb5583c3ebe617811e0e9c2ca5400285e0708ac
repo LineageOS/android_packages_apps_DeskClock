@@ -1,0 +1,21 @@
+{
+  "comments": [
+    {
+      "unresolved": true,
+      "key": {
+        "uuid": "f4142ed9_85ada5d3",
+        "filename": "res/values/cm_strings.xml",
+        "patchSetId": 2
+      },
+      "lineNbr": 58,
+      "author": {
+        "id": 2195
+      },
+      "writtenOn": "2022-12-08T20:45:08Z",
+      "side": 0,
+      "message": "I intentionally didn\u0027t delete translations. Should I?",
+      "revId": "fbb5583c3ebe617811e0e9c2ca5400285e0708ac",
+      "serverId": "1ec6b3db-b2c1-4fa4-84a2-4c7efe89ba71"
+    }
+  ]
+}
