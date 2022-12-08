@@ -13,7 +13,6 @@ import android.os.Handler;
 import android.os.HandlerThread;
 import android.os.Looper;
 import android.os.Message;
-import android.telephony.TelephonyManager;
 
 import java.io.IOException;
 import java.lang.reflect.Method;
@@ -158,22 +157,6 @@ public final class AsyncRingtonePlayer {
     }
 
     /**
-     * @return <code>true</code> iff the device is currently in a telephone call
-     */
-    private static boolean isInTelephoneCall(Context context) {
-        final TelephonyManager tm = (TelephonyManager)
-                context.getSystemService(Context.TELEPHONY_SERVICE);
-        return tm.getCallState() != TelephonyManager.CALL_STATE_IDLE;
-    }
-
-    /**
-     * @return Uri of the ringtone to play when the user is in a telephone call
-     */
-    private static Uri getInCallRingtoneUri(Context context) {
-        return Utils.getResourceUri(context, R.raw.alarm_expire);
-    }
-
-    /**
      * @return Uri of the ringtone to play when the chosen ringtone fails to play
      */
     private static Uri getFallbackRingtoneUri(Context context) {
@@ -280,8 +263,7 @@ public final class AsyncRingtonePlayer {
                 mAudioManager = (AudioManager) context.getSystemService(Context.AUDIO_SERVICE);
             }
 
-            final boolean inTelephoneCall = isInTelephoneCall(context);
-            Uri alarmNoise = inTelephoneCall ? getInCallRingtoneUri(context) : ringtoneUri;
+            Uri alarmNoise = ringtoneUri;
             // Fall back to the system default alarm if the database does not have an alarm stored.
             if (alarmNoise == null) {
                 alarmNoise = RingtoneManager.getDefaultUri(RingtoneManager.TYPE_ALARM);
@@ -473,11 +455,6 @@ public final class AsyncRingtonePlayer {
 
             if (mAudioManager == null) {
                 mAudioManager = (AudioManager) context.getSystemService(Context.AUDIO_SERVICE);
-            }
-
-            final boolean inTelephoneCall = isInTelephoneCall(context);
-            if (inTelephoneCall) {
-                ringtoneUri = getInCallRingtoneUri(context);
             }
 
             // Attempt to fetch the specified ringtone.
