@@ -29,5 +29,6 @@
     <string name="alarm_upcoming_channel">Nadcházející budíky</string>
     <string name="stopwatch_channel">Stopky</string>
     <string name="timer_channel">Časovač</string>
+    <string name="add_label">Přidat štítek</string>
     <string name="dialog_permissions_dismiss">Zamítnout</string>
 </resources>
