@@ -34,9 +34,6 @@ import android.widget.ImageView;
 import androidx.core.graphics.drawable.DrawableCompat;
 import androidx.interpolator.view.animation.FastOutSlowInInterpolator;
 
-import java.lang.reflect.InvocationTargetException;
-import java.lang.reflect.Method;
-
 public class AnimatorUtils {
 
     public static final Interpolator DECELERATE_ACCELERATE_INTERPOLATOR = new Interpolator() {

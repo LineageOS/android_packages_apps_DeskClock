@@ -15,8 +15,6 @@ import android.os.Looper;
 import android.os.Message;
 import android.telephony.TelephonyManager;
 
-import java.lang.reflect.Method;
-
 import static android.media.AudioManager.AUDIOFOCUS_GAIN_TRANSIENT;
 
 /**
@@ -252,31 +250,11 @@ public final class AsyncRingtonePlayer {
         /** The current ringtone. Only used by the ringtone thread. */
         private Ringtone mRingtone;
 
-        /** The method to adjust playback volume; cannot be null. */
-        private Method mSetVolumeMethod;
-
-        /** The method to adjust playback looping; cannot be null. */
-        private Method mSetLoopingMethod;
-
         /** The duration over which to increase the volume. */
         private long mCrescendoDuration = 0;
 
         /** The time at which the crescendo shall cease; 0 if no crescendo is present. */
         private long mCrescendoStopTime = 0;
-
-        private RingtonePlaybackDelegate() {
-            try {
-                mSetVolumeMethod = Ringtone.class.getDeclaredMethod("setVolume", float.class);
-            } catch (NoSuchMethodException nsme) {
-                LOGGER.e("Unable to locate method: Ringtone.setVolume(float).", nsme);
-            }
-
-            try {
-                mSetLoopingMethod = Ringtone.class.getDeclaredMethod("setLooping", boolean.class);
-            } catch (NoSuchMethodException nsme) {
-                LOGGER.e("Unable to locate method: Ringtone.setLooping(boolean).", nsme);
-            }
-        }
 
         /**
          * Starts the actual playback of the ringtone. Executes on ringtone-thread.
@@ -306,23 +284,7 @@ public final class AsyncRingtonePlayer {
                 mRingtone = RingtoneManager.getRingtone(context, ringtoneUri);
             }
 
-            // Attempt to enable looping the ringtone.
-            try {
-                mSetLoopingMethod.invoke(mRingtone, true);
-            } catch (Exception e) {
-                LOGGER.e("Unable to turn looping on for android.media.Ringtone", e);
-
-                // Fall back to the default ringtone if looping could not be enabled.
-                // (Default alarm ringtone most likely has looping tags set within the .ogg file)
-                mRingtone = null;
-            }
-
-            // If no ringtone exists at this point there isn't much recourse.
-            if (mRingtone == null) {
-                LOGGER.i("Unable to locate alarm ringtone, using internal fallback ringtone.");
-                ringtoneUri = getFallbackRingtoneUri(context);
-                mRingtone = RingtoneManager.getRingtone(context, ringtoneUri);
-            }
+            mRingtone.setLooping(true);
 
             try {
                 return startPlayback(inTelephoneCall);
@@ -382,11 +344,7 @@ public final class AsyncRingtonePlayer {
          *               corresponds to no attenuation being applied.
          */
         private void setRingtoneVolume(float volume) {
-            try {
-                mSetVolumeMethod.invoke(mRingtone, volume);
-            } catch (Exception e) {
-                LOGGER.e("Unable to set volume for android.media.Ringtone", e);
-            }
+            mRingtone.setVolume(volume);
         }
 
         /**
