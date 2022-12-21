@@ -3,17 +3,18 @@ package com.android.deskclock;
 import android.annotation.SuppressLint;
 import android.content.Context;
 import android.media.AudioAttributes;
+import android.media.AudioFocusRequest;
 import android.media.AudioManager;
 import android.media.MediaPlayer;
 import android.media.Ringtone;
 import android.media.RingtoneManager;
 import android.net.Uri;
+import android.os.Build;
 import android.os.Bundle;
 import android.os.Handler;
 import android.os.HandlerThread;
 import android.os.Looper;
 import android.os.Message;
-import android.telephony.TelephonyManager;
 
 import static android.media.AudioManager.AUDIOFOCUS_GAIN_TRANSIENT;
 
@@ -59,6 +60,8 @@ public final class AsyncRingtonePlayer {
 
     /** The context. */
     private final Context mContext;
+
+    private AudioFocusRequest mFocusRequest;
 
     public AsyncRingtonePlayer(Context context) {
         mContext = context;
@@ -150,10 +153,14 @@ public final class AsyncRingtonePlayer {
     /**
      * @return <code>true</code> iff the device is currently in a telephone call
      */
-    private static boolean isInTelephoneCall(Context context) {
-        final TelephonyManager tm = (TelephonyManager)
-                context.getSystemService(Context.TELEPHONY_SERVICE);
-        return tm.getCallState() != TelephonyManager.CALL_STATE_IDLE;
+    @android.support.annotation.RequiresApi(api = 33)
+    private static boolean isInTelephoneCall(AudioManager audioManager) {
+        final int audioMode = audioManager.getMode();
+            return audioMode == AudioManager.MODE_IN_COMMUNICATION ||
+                    audioMode == AudioManager.MODE_COMMUNICATION_REDIRECT ||
+                    audioMode == AudioManager.MODE_CALL_REDIRECT ||
+                    audioMode == AudioManager.MODE_CALL_SCREENING ||
+                    audioMode == AudioManager.MODE_IN_CALL;
     }
 
     /**
@@ -270,7 +277,7 @@ public final class AsyncRingtonePlayer {
                 mAudioManager = (AudioManager) context.getSystemService(Context.AUDIO_SERVICE);
             }
 
-            final boolean inTelephoneCall = isInTelephoneCall(context);
+            final boolean inTelephoneCall = isInTelephoneCall(mAudioManager);
             if (inTelephoneCall) {
                 ringtoneUri = getInCallRingtoneUri(context);
             }
@@ -312,10 +319,11 @@ public final class AsyncRingtonePlayer {
          */
         private boolean startPlayback(boolean inTelephoneCall) {
             // Indicate the ringtone should be played via the alarm stream.
-            mRingtone.setAudioAttributes(new AudioAttributes.Builder()
+            AudioAttributes audioAttributes = new AudioAttributes.Builder()
                     .setUsage(AudioAttributes.USAGE_ALARM)
                     .setContentType(AudioAttributes.CONTENT_TYPE_SONIFICATION)
-                    .build());
+                    .build();
+            mRingtone.setAudioAttributes(audioAttributes);
 
             // Attempt to adjust the ringtone volume if the user is in a telephone call.
             boolean scheduleVolumeAdjustment = false;
@@ -330,7 +338,10 @@ public final class AsyncRingtonePlayer {
                 scheduleVolumeAdjustment = true;
             }
 
-            mAudioManager.requestAudioFocus(null, STREAM_ALARM, AUDIOFOCUS_GAIN_TRANSIENT);
+            mFocusRequest = new AudioFocusRequest.Builder(AUDIOFOCUS_GAIN_TRANSIENT)
+                    .setAudioAttributes(audioAttributes)
+                    .build();
+            mAudioManager.requestAudioFocus(mFocusRequest);
 
             mRingtone.play();
 
@@ -367,7 +378,7 @@ public final class AsyncRingtonePlayer {
             mRingtone = null;
 
             if (mAudioManager != null) {
-                mAudioManager.abandonAudioFocus(null);
+                mAudioManager.abandonAudioFocusRequest(mFocusRequest);
             }
         }
 

@@ -54,8 +54,4 @@
     <string name="dialog_permissions_no_permission">Required permissions were denied, enable them from Settings app</string>
     <!-- Permission dialog: ask for post notification permission -->
     <string name="dialog_permissions_post_notifications">This app relies on notifications. Without them it cannot be run!</string>
-    <!-- Permission dialog: ask for read phone state permission -->
-    <string name="dialog_permissions_read_phone_state">This app needs to check if you\'re on the phone before ringing!</string>
-    <!-- Permission dialog: ask for read phone state permission -->
-    <string name="dialog_permissions_notifications_and_phone">This app needs to be able to post notifications for alarms, timers and stopwatches and check if you\'re on the phone before ringing!</string>
 </resources>
