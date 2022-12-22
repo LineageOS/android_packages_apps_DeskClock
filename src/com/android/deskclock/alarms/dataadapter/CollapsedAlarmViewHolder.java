@@ -99,6 +99,15 @@ public final class CollapsedAlarmViewHolder extends AlarmItemViewHolder {
         bindAnnotations(alarm);
     }
 
+    @Override
+    protected void onRecycleItemView() {
+        daysOfWeek.setVisibility(View.VISIBLE);
+        ellipsizeLayout.setVisibility(View.VISIBLE);
+        arrow.setVisibility(View.VISIBLE);
+        clock.setVisibility(View.VISIBLE);
+        onOff.setVisibility(View.VISIBLE);
+    }
+
     private void bindReadOnlyLabel(Context context, Alarm alarm) {
         if (alarm.label != null && alarm.label.length() != 0) {
             alarmLabel.setText(alarm.label);
