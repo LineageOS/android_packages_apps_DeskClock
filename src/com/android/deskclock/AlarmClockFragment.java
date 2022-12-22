@@ -180,6 +180,10 @@ public final class AlarmClockFragment extends DeskClockFragment implements
         itemAnimator.setChangeDuration(300L);
         itemAnimator.setMoveDuration(300L);
         mRecyclerView.setItemAnimator(itemAnimator);
+        mRecyclerView.getRecycledViewPool().setMaxRecycledViews(CollapsedAlarmViewHolder.VIEW_TYPE,
+                0);
+        mRecyclerView.getRecycledViewPool().setMaxRecycledViews(ExpandedAlarmViewHolder.VIEW_TYPE,
+                0);
         return v;
     }
 
