@@ -333,6 +333,14 @@ public final class ExpandedAlarmViewHolder extends AlarmItemViewHolder {
                 deleteAnimation, dismissAnimation, switchAnimator, clockAnimator, ellipseAnimator);
         animatorSet.addListener(new AnimatorListenerAdapter() {
             @Override
+            public void onAnimationStart(Animator animation) {
+                newHolder.clock.setVisibility(View.INVISIBLE);
+                newHolder.onOff.setVisibility(View.INVISIBLE);
+                newHolder.arrow.setVisibility(View.INVISIBLE);
+                newHolder.ellipsizeLayout.setVisibility(View.INVISIBLE);
+            }
+
+            @Override
             public void onAnimationEnd(Animator animation) {
                 super.onAnimationEnd(animation);
                 newHolder.clock.setVisibility(View.VISIBLE);
