@@ -148,12 +148,12 @@
             style="@style/Widget.Button.TimerSetupDigit"
             android:layout_width="0dp"
             android:layout_height="0dp"
-            android:visibility="invisible"
             app:layout_constraintDimensionRatio="1:1"
             app:layout_constraintStart_toStartOf="parent"
             app:layout_constraintEnd_toStartOf="@id/column_0_right"
             app:layout_constraintTop_toBottomOf="@id/row_2_bottom"
-            app:layout_constraintBottom_toBottomOf="parent"/>
+            app:layout_constraintBottom_toBottomOf="parent"
+            tools:text="00"/>
 
         <com.android.deskclock.widget.MotionButton
             android:id="@+id/timer_setup_digit_0"

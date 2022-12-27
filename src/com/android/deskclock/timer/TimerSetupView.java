@@ -108,6 +108,9 @@ public class TimerSetupView extends LinearLayout implements View.OnClickListener
             digitView.setText(uidm.getFormattedNumber(digit, 1));
             digitView.setOnClickListener(this);
         }
+        TextView doubleZero = findViewById(R.id.timer_setup_digit_00);
+        doubleZero.setText(uidm.getFormattedNumber(0, 2));
+        doubleZero.setOnClickListener(this);
 
         mDeleteView.setOnClickListener(this);
         mDeleteView.setOnLongClickListener(this);
@@ -143,6 +146,9 @@ public class TimerSetupView extends LinearLayout implements View.OnClickListener
     public void onClick(View view) {
         if (view == mDeleteView) {
             delete();
+        } else if (view.getId() == R.id.timer_setup_digit_00) {
+            append(0);
+            append(0);
         } else {
             append(getDigitForId(view.getId()));
         }
