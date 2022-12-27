@@ -79,7 +79,7 @@ public class TimerSetupView extends LinearLayout implements View.OnClickListener
                 FormattedTextUtils.formatText(minutesLabel, new RelativeSizeSpan(0.5f)),
                 FormattedTextUtils.formatText(secondsLabel, new RelativeSizeSpan(0.5f)));
 
-        LayoutInflater.from(context).inflate(R.layout.timer_setup_container, this);
+        LayoutInflater.from(context).inflate(R.layout.timer_setup_view, this);
     }
 
     @Override
