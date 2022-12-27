@@ -1,0 +1,16 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <style name="TimerSetupDigits">
+        <item name="layout_constraintBottom_toBottomOf">parent</item>
+        <item name="layout_constraintEnd_toEndOf">parent</item>
+        <item name="layout_constraintStart_toEndOf">@id/fold_vertical_end_edge</item>
+        <item name="layout_constraintTop_toTopOf">parent</item>
+    </style>
+
+    <style name="TimerSetupTime">
+        <item name="layout_constraintBottom_toBottomOf">@id/timer_setup_time_bottom</item>
+        <item name="layout_constraintEnd_toStartOf">@id/fold_vertical_start_edge</item>
+        <item name="layout_constraintStart_toStartOf">parent</item>
+        <item name="layout_constraintTop_toTopOf">@id/timer_setup_time_top</item>
+    </style>
+</resources>
