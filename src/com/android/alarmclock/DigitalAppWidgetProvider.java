@@ -310,13 +310,13 @@ public class DigitalAppWidgetProvider extends AppWidgetProvider {
 
         // Configure the date to display the current date string.
         final CharSequence dateFormat = getDateFormat(context);
-        final TextClock date = (TextClock) sizer.findViewById(R.id.date);
+        final TextClock date = sizer.findViewById(R.id.date);
         date.setFormat12Hour(dateFormat);
         date.setFormat24Hour(dateFormat);
 
         // Configure the next alarm views to display the next alarm time or be gone.
-        final TextView nextAlarmIcon = (TextView) sizer.findViewById(R.id.nextAlarmIcon);
-        final TextView nextAlarm = (TextView) sizer.findViewById(R.id.nextAlarm);
+        final TextView nextAlarmIcon = sizer.findViewById(R.id.nextAlarmIcon);
+        final TextView nextAlarm = sizer.findViewById(R.id.nextAlarm);
         if (TextUtils.isEmpty(nextAlarmTime)) {
             nextAlarm.setVisibility(GONE);
             nextAlarmIcon.setVisibility(GONE);
@@ -414,10 +414,10 @@ public class DigitalAppWidgetProvider extends AppWidgetProvider {
         final Sizes measuredSizes = template.newSize();
 
         // Configure the clock to display the widest time string.
-        final TextClock date = (TextClock) sizer.findViewById(R.id.date);
-        final TextClock clock = (TextClock) sizer.findViewById(R.id.clock);
-        final TextView nextAlarm = (TextView) sizer.findViewById(R.id.nextAlarm);
-        final TextView nextAlarmIcon = (TextView) sizer.findViewById(R.id.nextAlarmIcon);
+        final TextClock date = sizer.findViewById(R.id.date);
+        final TextClock clock = sizer.findViewById(R.id.clock);
+        final TextView nextAlarm = sizer.findViewById(R.id.nextAlarm);
+        final TextView nextAlarmIcon = sizer.findViewById(R.id.nextAlarmIcon);
 
         // Adjust the font sizes.
         measuredSizes.setClockFontSizePx(clockFontSize);

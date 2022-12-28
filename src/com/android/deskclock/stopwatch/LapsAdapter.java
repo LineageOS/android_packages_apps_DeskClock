@@ -350,9 +350,9 @@ class LapsAdapter extends RecyclerView.Adapter<LapsAdapter.LapItemHolder> {
         LapItemHolder(View itemView) {
             super(itemView);
 
-            lapTime = (TextView) itemView.findViewById(R.id.lap_time);
-            lapNumber = (TextView) itemView.findViewById(R.id.lap_number);
-            accumulatedTime = (TextView) itemView.findViewById(R.id.lap_total);
+            lapTime = itemView.findViewById(R.id.lap_time);
+            lapNumber = itemView.findViewById(R.id.lap_number);
+            accumulatedTime = itemView.findViewById(R.id.lap_total);
         }
     }
 }

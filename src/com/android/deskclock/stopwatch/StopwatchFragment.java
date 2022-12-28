@@ -126,8 +126,8 @@ public final class StopwatchFragment extends DeskClockFragment {
         mGradientItemDecoration = new GradientItemDecoration(getActivity());
 
         final View v = inflater.inflate(R.layout.stopwatch_fragment, container, false);
-        mTime = (StopwatchCircleView) v.findViewById(R.id.stopwatch_circle);
-        mLapsList = (RecyclerView) v.findViewById(R.id.laps_list);
+        mTime = v.findViewById(R.id.stopwatch_circle);
+        mLapsList = v.findViewById(R.id.laps_list);
         ((SimpleItemAnimator) mLapsList.getItemAnimator()).setSupportsChangeAnimations(false);
         mLapsList.setLayoutManager(mLapsLayoutManager);
 
@@ -144,8 +144,8 @@ public final class StopwatchFragment extends DeskClockFragment {
         mLapsList.setAdapter(mLapsAdapter);
 
         // Timer text serves as a virtual start/stop button.
-        mMainTimeText = (TextView) v.findViewById(R.id.stopwatch_time_text);
-        mHundredthsTimeText = (TextView) v.findViewById(R.id.stopwatch_hundredths_text);
+        mMainTimeText = v.findViewById(R.id.stopwatch_time_text);
+        mHundredthsTimeText = v.findViewById(R.id.stopwatch_hundredths_text);
         mStopwatchTextController = new StopwatchTextController(mMainTimeText, mHundredthsTimeText);
         mStopwatchWrapper = v.findViewById(R.id.stopwatch_time_wrapper);
 

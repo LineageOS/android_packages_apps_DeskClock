@@ -47,8 +47,8 @@ public class CircleButtonsLayout extends FrameLayout {
     protected void remeasureViews() {
         if (mLabel == null) {
             mCircleView = findViewById(R.id.timer_time);
-            mLabel = (TextView) findViewById(R.id.timer_label);
-            mResetAddButton = (Button) findViewById(R.id.reset_add);
+            mLabel = findViewById(R.id.timer_label);
+            mResetAddButton = findViewById(R.id.reset_add);
         }
 
         final int frameWidth = mCircleView.getMeasuredWidth();

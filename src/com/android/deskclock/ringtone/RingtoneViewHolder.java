@@ -55,8 +55,8 @@ final class RingtoneViewHolder extends ItemAdapter.ItemViewHolder<RingtoneHolder
         itemView.setOnClickListener(this);
 
         mSelectedView = itemView.findViewById(R.id.sound_image_selected);
-        mNameView = (TextView) itemView.findViewById(R.id.ringtone_name);
-        mImageView = (ImageView) itemView.findViewById(R.id.ringtone_image);
+        mNameView = itemView.findViewById(R.id.ringtone_name);
+        mImageView = itemView.findViewById(R.id.ringtone_image);
     }
 
     @Override
