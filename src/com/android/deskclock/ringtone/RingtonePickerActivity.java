@@ -44,6 +44,7 @@ import android.provider.MediaStore;
 import android.view.LayoutInflater;
 import android.view.MenuItem;
 
+import androidx.annotation.NonNull;
 import androidx.annotation.VisibleForTesting;
 import androidx.appcompat.app.AlertDialog;
 import androidx.recyclerview.widget.LinearLayoutManager;
@@ -181,7 +182,7 @@ public class RingtonePickerActivity extends CollapsingToolbarBaseActivity
 
         mRecyclerView.addOnScrollListener(new RecyclerView.OnScrollListener() {
             @Override
-            public void onScrollStateChanged(RecyclerView recyclerView, int newState) {
+            public void onScrollStateChanged(@NonNull RecyclerView recyclerView, int newState) {
                 if (mIndexOfRingtoneToRemove != RecyclerView.NO_POSITION) {
                     closeContextMenu();
                 }
@@ -241,7 +242,7 @@ public class RingtonePickerActivity extends CollapsingToolbarBaseActivity
     }
 
     @Override
-    protected void onSaveInstanceState(Bundle outState) {
+    protected void onSaveInstanceState(@NonNull Bundle outState) {
         super.onSaveInstanceState(outState);
 
         outState.putBoolean(STATE_KEY_PLAYING, mIsPlaying);
@@ -330,7 +331,7 @@ public class RingtonePickerActivity extends CollapsingToolbarBaseActivity
         return null;
     }
 
-    @VisibleForTesting(otherwise = VisibleForTesting.PRIVATE)
+    @VisibleForTesting
     RingtoneHolder getSelectedRingtoneHolder() {
         return getRingtoneHolder(mSelectedRingtoneUri);
     }

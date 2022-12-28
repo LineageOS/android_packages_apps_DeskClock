@@ -257,8 +257,9 @@ public class ItemAdapter<T extends ItemAdapter.ItemHolder>
         return mItemHolders.get(position).getItemViewType();
     }
 
+    @NonNull
     @Override
-    public ItemViewHolder onCreateViewHolder(ViewGroup parent, int viewType) {
+    public ItemViewHolder onCreateViewHolder(@NonNull ViewGroup parent, int viewType) {
         final ItemViewHolder.Factory factory = mFactoriesByViewType.get(viewType);
         if (factory != null) {
             return factory.createViewHolder(parent, viewType);

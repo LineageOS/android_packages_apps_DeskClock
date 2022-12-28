@@ -17,6 +17,8 @@
 package com.android.deskclock;
 
 import android.animation.ValueAnimator;
+
+import androidx.annotation.NonNull;
 import androidx.recyclerview.widget.RecyclerView;
 import android.view.View;
 import android.widget.AbsListView;
@@ -148,7 +150,7 @@ public final class DropShadowController {
 
         // RecyclerView scrolled.
         @Override
-        public void onScrolled(RecyclerView view, int dx, int dy) {
+        public void onScrolled(@NonNull RecyclerView view, int dx, int dy) {
             updateDropShadow(!Utils.isScrolledToTop(view));
         }
 

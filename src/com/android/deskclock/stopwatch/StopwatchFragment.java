@@ -359,7 +359,6 @@ public final class StopwatchFragment extends DeskClockFragment {
         final String text = mLapsAdapter.getShareText();
 
         @SuppressLint("InlinedApi")
-        @SuppressWarnings("deprecation")
         final Intent shareIntent = new Intent(Intent.ACTION_SEND)
                 .addFlags(Intent.FLAG_ACTIVITY_NEW_DOCUMENT)
                 .putExtra(Intent.EXTRA_SUBJECT, subject)
@@ -649,7 +648,7 @@ public final class StopwatchFragment extends DeskClockFragment {
     private final class ScrollPositionWatcher extends RecyclerView.OnScrollListener
             implements View.OnLayoutChangeListener {
         @Override
-        public void onScrolled(RecyclerView recyclerView, int dx, int dy) {
+        public void onScrolled(@NonNull RecyclerView recyclerView, int dx, int dy) {
             setTabScrolledToTop(Utils.isScrolledToTop(mLapsList));
         }
 
@@ -715,7 +714,7 @@ public final class StopwatchFragment extends DeskClockFragment {
         }
 
         @Override
-        public void onDrawOver(Canvas c, RecyclerView parent, RecyclerView.State state) {
+        public void onDrawOver(@NonNull Canvas c, @NonNull RecyclerView parent, @NonNull RecyclerView.State state) {
             super.onDrawOver(c, parent, state);
 
             final int w = parent.getWidth();

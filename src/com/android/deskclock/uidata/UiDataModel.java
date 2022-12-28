@@ -19,6 +19,8 @@ package com.android.deskclock.uidata;
 import android.content.Context;
 import android.content.SharedPreferences;
 import android.graphics.Typeface;
+
+import androidx.annotation.IdRes;
 import androidx.annotation.IntegerRes;
 import androidx.annotation.StringRes;
 
@@ -45,7 +47,7 @@ public final class UiDataModel {
         STOPWATCH(StopwatchFragment.class, R.id.page_stopwatch, R.string.menu_stopwatch);
 
         private final String mFragmentClassName;
-        private final @IntegerRes int mPageResId;
+        private final @IdRes int mPageResId;
         private final @StringRes int mLabelResId;
 
         Tab(Class fragmentClass, @IntegerRes int pageResId, @StringRes int labelResId) {
@@ -55,7 +57,7 @@ public final class UiDataModel {
         }
 
         public String getFragmentClassName() { return mFragmentClassName; }
-        public @IntegerRes int getPageResId() { return mPageResId; }
+        public @IdRes int getPageResId() { return mPageResId; }
         public @StringRes int getLabelResId() { return mLabelResId; }
     }
 

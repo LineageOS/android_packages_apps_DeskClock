@@ -227,7 +227,7 @@ public final class TimerFragment extends DeskClockFragment {
     }
 
     @Override
-    public void onSaveInstanceState(Bundle outState) {
+    public void onSaveInstanceState(@NonNull Bundle outState) {
         super.onSaveInstanceState(outState);
 
         // If the timer creation view is visible, store the input for later restoration.
