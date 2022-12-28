@@ -200,6 +200,7 @@ public class ItemAdapter<T extends ItemAdapter.ItemHolder>
      * @param itemHolder the item holder to add
      * @return this object, allowing calls to methods in this class to be chained
      */
+    @SuppressWarnings("unused")
     public ItemAdapter addItem(int position, @NonNull T itemHolder) {
         itemHolder.addOnItemChangedListener(mItemChangedNotifier);
         position = Math.min(position, mItemHolders.size());
@@ -257,8 +258,9 @@ public class ItemAdapter<T extends ItemAdapter.ItemHolder>
         return mItemHolders.get(position).getItemViewType();
     }
 
+    @NonNull
     @Override
-    public ItemViewHolder onCreateViewHolder(ViewGroup parent, int viewType) {
+    public ItemViewHolder onCreateViewHolder(@NonNull ViewGroup parent, int viewType) {
         final ItemViewHolder.Factory factory = mFactoriesByViewType.get(viewType);
         if (factory != null) {
             return factory.createViewHolder(parent, viewType);
@@ -365,6 +367,7 @@ public class ItemAdapter<T extends ItemAdapter.ItemHolder>
          * Invokes {@link OnItemChangedListener#onItemChanged(ItemHolder, Object)} for all
          * listeners added via {@link #addOnItemChangedListener(OnItemChangedListener)}.
          */
+        @SuppressWarnings("unused")
         public final void notifyItemChanged(Object payload) {
             for (OnItemChangedListener listener : mOnItemChangedListeners) {
                 listener.onItemChanged(this, payload);

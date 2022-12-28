@@ -18,6 +18,8 @@ package com.android.deskclock.worldclock;
 
 import android.content.Context;
 import android.os.Bundle;
+
+import androidx.annotation.NonNull;
 import androidx.appcompat.widget.SearchView;
 import android.text.TextUtils;
 import android.text.format.DateFormat;
@@ -134,7 +136,7 @@ public final class CitySelectionActivity extends BaseActivity {
     }
 
     @Override
-    public void onSaveInstanceState(Bundle bundle) {
+    public void onSaveInstanceState(@NonNull Bundle bundle) {
         super.onSaveInstanceState(bundle);
         mSearchMenuItemController.saveInstance(bundle);
     }

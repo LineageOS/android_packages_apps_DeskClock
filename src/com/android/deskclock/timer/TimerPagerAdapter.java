@@ -20,6 +20,8 @@ import android.annotation.SuppressLint;
 import android.util.ArrayMap;
 import android.view.View;
 import android.view.ViewGroup;
+
+import androidx.annotation.NonNull;
 import androidx.fragment.app.Fragment;
 import androidx.fragment.app.FragmentManager;
 import androidx.fragment.app.FragmentTransaction;
@@ -58,12 +60,12 @@ class TimerPagerAdapter extends PagerAdapter implements TimerListener {
     }
 
     @Override
-    public boolean isViewFromObject(View view, Object object) {
+    public boolean isViewFromObject(@NonNull View view, @NonNull Object object) {
         return ((Fragment) object).getView() == view;
     }
 
     @Override
-    public int getItemPosition(Object object) {
+    public int getItemPosition(@NonNull Object object) {
         final TimerItemFragment fragment = (TimerItemFragment) object;
         final Timer timer = fragment.getTimer();
 
@@ -71,9 +73,10 @@ class TimerPagerAdapter extends PagerAdapter implements TimerListener {
         return position == -1 ? POSITION_NONE : position;
     }
 
+    @NonNull
     @Override
     @SuppressLint("CommitTransaction")
-    public Fragment instantiateItem(ViewGroup container, int position) {
+    public Fragment instantiateItem(@NonNull ViewGroup container, int position) {
         if (mCurrentTransaction == null) {
             mCurrentTransaction = mFragmentManager.beginTransaction();
         }
@@ -104,7 +107,7 @@ class TimerPagerAdapter extends PagerAdapter implements TimerListener {
 
     @Override
     @SuppressLint("CommitTransaction")
-    public void destroyItem(ViewGroup container, int position, Object object) {
+    public void destroyItem(@NonNull ViewGroup container, int position, @NonNull Object object) {
         final TimerItemFragment fragment = (TimerItemFragment) object;
 
         if (mCurrentTransaction == null) {
@@ -116,7 +119,7 @@ class TimerPagerAdapter extends PagerAdapter implements TimerListener {
     }
 
     @Override
-    public void setPrimaryItem(ViewGroup container, int position, Object object) {
+    public void setPrimaryItem(@NonNull ViewGroup container, int position, @NonNull Object object) {
         final Fragment fragment = (Fragment) object;
         if (fragment != mCurrentPrimaryItem) {
             if (mCurrentPrimaryItem != null) {
@@ -132,7 +135,7 @@ class TimerPagerAdapter extends PagerAdapter implements TimerListener {
     }
 
     @Override
-    public void finishUpdate(ViewGroup container) {
+    public void finishUpdate(@NonNull ViewGroup container) {
         if (mCurrentTransaction != null) {
             mCurrentTransaction.commitAllowingStateLoss();
             mCurrentTransaction = null;

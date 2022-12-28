@@ -54,6 +54,7 @@ public class SimpleMenuPreference extends DropDownPreference {
         super(context, attrs, defStyleAttr, defStyleRes);
     }
 
+    @NonNull
     @Override
     protected ArrayAdapter createAdapter() {
         mAdapter = new SimpleMenuAdapter(getContext(), R.layout.simple_menu_dropdown_item);

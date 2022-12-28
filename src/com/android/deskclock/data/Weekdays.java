@@ -17,6 +17,8 @@
 package com.android.deskclock.data;
 
 import android.content.Context;
+
+import androidx.annotation.NonNull;
 import androidx.annotation.VisibleForTesting;
 import android.util.ArrayMap;
 
@@ -242,6 +244,7 @@ public final class Weekdays {
         return mBits;
     }
 
+    @NonNull
     @Override
     public String toString() {
         final StringBuilder builder = new StringBuilder(19);

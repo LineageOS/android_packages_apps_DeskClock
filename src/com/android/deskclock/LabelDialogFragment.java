@@ -117,6 +117,7 @@ public class LabelDialogFragment extends DialogFragment {
         }
     }
 
+    @NonNull
     @Override
     public Dialog onCreateDialog(Bundle savedInstanceState) {
         final Bundle args = getArguments() == null ? Bundle.EMPTY : getArguments();
