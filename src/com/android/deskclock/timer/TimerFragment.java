@@ -108,18 +108,18 @@ public final class TimerFragment extends DeskClockFragment {
         final View view = inflater.inflate(R.layout.timer_fragment, container, false);
 
         mAdapter = new TimerPagerAdapter(getParentFragmentManager());
-        mViewPager = (ViewPager) view.findViewById(R.id.vertical_view_pager);
+        mViewPager = view.findViewById(R.id.vertical_view_pager);
         mViewPager.setAdapter(mAdapter);
         mViewPager.addOnPageChangeListener(mTimerPageChangeListener);
 
         mTimersView = view.findViewById(R.id.timer_view);
-        mCreateTimerView = (TimerSetupView) view.findViewById(R.id.timer_setup);
+        mCreateTimerView = view.findViewById(R.id.timer_setup);
         mCreateTimerView.setFabContainer(this);
         mPageIndicators = new ImageView[] {
-                (ImageView) view.findViewById(R.id.page_indicator0),
-                (ImageView) view.findViewById(R.id.page_indicator1),
-                (ImageView) view.findViewById(R.id.page_indicator2),
-                (ImageView) view.findViewById(R.id.page_indicator3)
+                view.findViewById(R.id.page_indicator0),
+                view.findViewById(R.id.page_indicator1),
+                view.findViewById(R.id.page_indicator2),
+                view.findViewById(R.id.page_indicator3)
         };
 
         DataModel.getDataModel().addTimerListener(mAdapter);

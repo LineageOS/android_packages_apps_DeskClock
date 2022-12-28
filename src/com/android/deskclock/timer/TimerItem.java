@@ -74,10 +74,10 @@ public class TimerItem extends ConstraintLayout {
     @Override
     protected void onFinishInflate() {
         super.onFinishInflate();
-        mLabelView = (TextView) findViewById(R.id.timer_label);
-        mResetAddButton = (Button) findViewById(R.id.reset_add);
-        mCircleView = (TimerCircleView) findViewById(R.id.timer_time);
-        mTimerText = (TextView) findViewById(R.id.timer_time_text);
+        mLabelView = findViewById(R.id.timer_label);
+        mResetAddButton = findViewById(R.id.reset_add);
+        mCircleView = findViewById(R.id.timer_time);
+        mTimerText = findViewById(R.id.timer_time_text);
         mTimerTextController = new TimerTextController(mTimerText);
 
         final Context c = mTimerText.getContext();

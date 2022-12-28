@@ -160,7 +160,7 @@ public class DeskClock extends BaseActivity
         checkPermissions();
 
         // Configure the toolbar.
-        final Toolbar toolbar = (Toolbar) findViewById(R.id.toolbar);
+        final Toolbar toolbar = findViewById(R.id.toolbar);
         setSupportActionBar(toolbar);
 
         final ActionBar actionBar = getSupportActionBar();
@@ -179,9 +179,9 @@ public class DeskClock extends BaseActivity
         onCreateOptionsMenu(toolbar.getMenu());
 
         // Configure the buttons shared by the tabs.
-        mFab = (ImageView) findViewById(R.id.fab);
-        mLeftButton = (ImageView) findViewById(R.id.left_button);
-        mRightButton = (ImageView) findViewById(R.id.right_button);
+        mFab = findViewById(R.id.fab);
+        mLeftButton = findViewById(R.id.left_button);
+        mRightButton = findViewById(R.id.right_button);
 
         mFab.setOnClickListener(new OnClickListener() {
             @Override

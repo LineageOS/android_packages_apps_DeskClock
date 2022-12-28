@@ -105,7 +105,7 @@ public final class ClockFragment extends DeskClockFragment {
         mCityAdapter = new SelectedCitiesAdapter(getActivity(), mDateFormat,
                 mDateFormatForAccessibility);
 
-        mCityList = (RecyclerView) fragmentView.findViewById(R.id.cities);
+        mCityList = fragmentView.findViewById(R.id.cities);
         mCityList.setLayoutManager(new LinearLayoutManager(getActivity()));
         mCityList.setAdapter(mCityAdapter);
         mCityList.setItemAnimator(null);
@@ -122,8 +122,8 @@ public final class ClockFragment extends DeskClockFragment {
         // on as a header to the main listview.
         mClockFrame = fragmentView.findViewById(R.id.main_clock_left_pane);
         if (mClockFrame != null) {
-            mDigitalClock = (TextClock) mClockFrame.findViewById(R.id.digital_clock);
-            mAnalogClock = (AnalogClock) mClockFrame.findViewById(R.id.analog_clock);
+            mDigitalClock = mClockFrame.findViewById(R.id.digital_clock);
+            mAnalogClock = mClockFrame.findViewById(R.id.analog_clock);
             Utils.setClockIconTypeface(mClockFrame);
             Utils.updateDate(mDateFormat, mDateFormatForAccessibility, mClockFrame);
             Utils.setClockStyle(mDigitalClock, mAnalogClock);
@@ -391,7 +391,7 @@ public final class ClockFragment extends DeskClockFragment {
         }
 
         private List<City> getCities() {
-            return (List<City>) DataModel.getDataModel().getSelectedCities();
+            return DataModel.getDataModel().getSelectedCities();
         }
 
         private void refreshAlarm() {
@@ -415,10 +415,10 @@ public final class ClockFragment extends DeskClockFragment {
             private CityViewHolder(View itemView) {
                 super(itemView);
 
-                mName = (TextView) itemView.findViewById(R.id.city_name);
-                mDigitalClock = (TextClock) itemView.findViewById(R.id.digital_clock);
-                mAnalogClock = (AnalogClock) itemView.findViewById(R.id.analog_clock);
-                mHoursAhead = (TextView) itemView.findViewById(R.id.hours_ahead);
+                mName = itemView.findViewById(R.id.city_name);
+                mDigitalClock = itemView.findViewById(R.id.digital_clock);
+                mAnalogClock = itemView.findViewById(R.id.analog_clock);
+                mHoursAhead = itemView.findViewById(R.id.hours_ahead);
             }
 
             private void bind(Context context, City city, int position, boolean isPortrait) {
@@ -500,8 +500,8 @@ public final class ClockFragment extends DeskClockFragment {
             private MainClockViewHolder(View itemView) {
                 super(itemView);
 
-                mDigitalClock = (TextClock) itemView.findViewById(R.id.digital_clock);
-                mAnalogClock = (AnalogClock) itemView.findViewById(R.id.analog_clock);
+                mDigitalClock = itemView.findViewById(R.id.digital_clock);
+                mAnalogClock = itemView.findViewById(R.id.analog_clock);
                 Utils.setClockIconTypeface(itemView);
             }
 

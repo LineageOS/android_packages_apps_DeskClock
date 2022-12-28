@@ -71,11 +71,11 @@ public final class ExpandedAlarmViewHolder extends AlarmItemViewHolder {
 
         mHasVibrator = hasVibrator;
 
-        delete = (TextView) itemView.findViewById(R.id.delete);
-        vibrate = (CheckBox) itemView.findViewById(R.id.vibrate_onoff);
-        ringtone = (TextView) itemView.findViewById(R.id.choose_ringtone);
-        editLabel = (TextView) itemView.findViewById(R.id.edit_label);
-        repeatDays = (ConstraintLayout) itemView.findViewById(R.id.repeat_days);
+        delete = itemView.findViewById(R.id.delete);
+        vibrate = itemView.findViewById(R.id.vibrate_onoff);
+        ringtone = itemView.findViewById(R.id.choose_ringtone);
+        editLabel = itemView.findViewById(R.id.edit_label);
+        repeatDays = itemView.findViewById(R.id.repeat_days);
 
         final Context context = itemView.getContext();
         itemView.setBackground(new LayerDrawable(new Drawable[] {
