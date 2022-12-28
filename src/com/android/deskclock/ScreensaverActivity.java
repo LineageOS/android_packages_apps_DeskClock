@@ -101,8 +101,7 @@ public class ScreensaverActivity extends BaseActivity {
         mMainClockView = mContentView.findViewById(R.id.main_clock);
 
         final View digitalClock = mMainClockView.findViewById(R.id.digital_clock);
-        final AnalogClock analogClock =
-                (AnalogClock) mMainClockView.findViewById(R.id.analog_clock);
+        final AnalogClock analogClock = mMainClockView.findViewById(R.id.analog_clock);
 
         Utils.setClockIconTypeface(mMainClockView);
         Utils.setTimeFormat((TextClock) digitalClock, false);
