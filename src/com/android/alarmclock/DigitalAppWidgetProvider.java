@@ -529,6 +529,7 @@ public class DigitalAppWidgetProvider extends AppWidgetProvider {
             return new Sizes(mTargetWidthPx, mTargetHeightPx, mLargestClockFontSizePx);
         }
 
+        @NonNull
         @Override
         public String toString() {
             final StringBuilder builder = new StringBuilder(1000);

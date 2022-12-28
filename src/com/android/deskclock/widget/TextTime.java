@@ -46,9 +46,9 @@ public class TextTime extends TextView {
     /** UTC does not have DST rules and will not alter the {@link #mHour} and {@link #mMinute}. */
     private static final TimeZone UTC = TimeZone.getTimeZone("UTC");
 
-    @VisibleForTesting(otherwise = VisibleForTesting.PRIVATE)
+    @VisibleForTesting
     static final CharSequence DEFAULT_FORMAT_12_HOUR = "h:mm a";
-    @VisibleForTesting(otherwise = VisibleForTesting.PRIVATE)
+    @VisibleForTesting
     static final CharSequence DEFAULT_FORMAT_24_HOUR = "H:mm";
 
     private CharSequence mFormat12;
