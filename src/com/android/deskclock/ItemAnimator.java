@@ -289,7 +289,7 @@ public class ItemAnimator extends SimpleItemAnimator {
     }
 
     @Override
-    public void endAnimation(ViewHolder holder) {
+    public void endAnimation(@NonNull ViewHolder holder) {
         final Animator animator = mAnimators.get(holder);
 
         mAnimators.remove(holder);
@@ -337,6 +337,7 @@ public class ItemAnimator extends SimpleItemAnimator {
         return itemHolderInfo;
     }
 
+    @NonNull
     @Override
     public ItemHolderInfo obtainHolderInfo() {
         return new PayloadItemHolderInfo();

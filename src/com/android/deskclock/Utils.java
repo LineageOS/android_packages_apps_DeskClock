@@ -51,6 +51,7 @@ import android.widget.TextView;
 
 import androidx.annotation.AnyRes;
 import androidx.annotation.DrawableRes;
+import androidx.annotation.NonNull;
 import androidx.annotation.StringRes;
 import androidx.core.os.BuildCompat;
 import androidx.core.view.AccessibilityDelegateCompat;
@@ -552,7 +553,8 @@ public class Utils {
         }
 
         @Override
-        public void onInitializeAccessibilityNodeInfo(View host, AccessibilityNodeInfoCompat info) {
+        public void onInitializeAccessibilityNodeInfo(@NonNull View host,
+                                                      @NonNull AccessibilityNodeInfoCompat info) {
             super.onInitializeAccessibilityNodeInfo(host, info);
             if (mIsAlwaysAccessibilityVisible) {
                 info.setVisibleToUser(true);

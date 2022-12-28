@@ -17,6 +17,8 @@
 package com.android.deskclock.stopwatch;
 
 import android.content.Context;
+
+import androidx.annotation.NonNull;
 import androidx.annotation.VisibleForTesting;
 import androidx.recyclerview.widget.RecyclerView;
 import android.text.format.DateUtils;
@@ -78,14 +80,15 @@ class LapsAdapter extends RecyclerView.Adapter<LapsAdapter.LapItemHolder> {
         return currentLapCount + lapCount;
     }
 
+    @NonNull
     @Override
-    public LapItemHolder onCreateViewHolder(ViewGroup parent, int viewType) {
+    public LapItemHolder onCreateViewHolder(@NonNull ViewGroup parent, int viewType) {
         final View v = mInflater.inflate(R.layout.lap_view, parent, false /* attachToRoot */);
         return new LapItemHolder(v);
     }
 
     @Override
-    public void onBindViewHolder(LapItemHolder viewHolder, int position) {
+    public void onBindViewHolder(@NonNull LapItemHolder viewHolder, int position) {
         final long lapTime;
         final int lapNumber;
         final long totalTime;
