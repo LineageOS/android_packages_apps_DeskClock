@@ -264,8 +264,8 @@ public class Utils {
      * Clock views can call this to refresh their alarm to the next upcoming value.
      */
     public static void refreshAlarm(Context context, View clock) {
-        final TextView nextAlarmIconView = (TextView) clock.findViewById(R.id.nextAlarmIcon);
-        final TextView nextAlarmView = (TextView) clock.findViewById(R.id.nextAlarm);
+        final TextView nextAlarmIconView = clock.findViewById(R.id.nextAlarmIcon);
+        final TextView nextAlarmView = clock.findViewById(R.id.nextAlarm);
         if (nextAlarmView == null) {
             return;
         }
@@ -285,7 +285,7 @@ public class Utils {
     }
 
     public static void setClockIconTypeface(View clock) {
-        final TextView nextAlarmIconView = (TextView) clock.findViewById(R.id.nextAlarmIcon);
+        final TextView nextAlarmIconView = clock.findViewById(R.id.nextAlarmIcon);
         nextAlarmIconView.setTypeface(UiDataModel.getUiDataModel().getAlarmIconTypeface());
     }
 
@@ -293,7 +293,7 @@ public class Utils {
      * Clock views can call this to refresh their date.
      **/
     public static void updateDate(String dateSkeleton, String descriptionSkeleton, View clock) {
-        final TextView dateDisplay = (TextView) clock.findViewById(R.id.date);
+        final TextView dateDisplay = clock.findViewById(R.id.date);
         if (dateDisplay == null) {
             return;
         }

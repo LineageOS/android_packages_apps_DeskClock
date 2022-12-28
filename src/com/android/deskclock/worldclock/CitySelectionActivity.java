@@ -127,7 +127,7 @@ public final class CitySelectionActivity extends BaseActivity {
                 .addMenuItemController(new SettingsMenuItemController(this))
                 .addMenuItemController(MenuItemControllerFactory.getInstance()
                         .buildMenuItemControllers(this));
-        mCitiesList = (ListView) findViewById(R.id.cities_list);
+        mCitiesList = findViewById(R.id.cities_list);
         mCitiesList.setAdapter(mCitiesAdapter);
 
         updateFastScrolling();
@@ -349,10 +349,10 @@ public final class CitySelectionActivity extends BaseActivity {
                     // Inflate a new view if necessary.
                     if (view == null) {
                         view = mInflater.inflate(R.layout.city_list_item, parent, false);
-                        final TextView index = (TextView) view.findViewById(R.id.index);
-                        final TextView name = (TextView) view.findViewById(R.id.city_name);
-                        final TextView time = (TextView) view.findViewById(R.id.city_time);
-                        final CheckBox selected = (CheckBox) view.findViewById(R.id.city_onoff);
+                        final TextView index = view.findViewById(R.id.index);
+                        final TextView name = view.findViewById(R.id.city_name);
+                        final TextView time = view.findViewById(R.id.city_time);
+                        final CheckBox selected = view.findViewById(R.id.city_onoff);
                         view.setTag(new CityItemHolder(index, name, time, selected));
                     }
 
@@ -416,7 +416,7 @@ public final class CitySelectionActivity extends BaseActivity {
 
         @Override
         public void onClick(View v) {
-            final CheckBox b = (CheckBox) v.findViewById(R.id.city_onoff);
+            final CheckBox b = v.findViewById(R.id.city_onoff);
             b.setChecked(!b.isChecked());
         }
 
@@ -497,7 +497,7 @@ public final class CitySelectionActivity extends BaseActivity {
             mIs24HoursMode = DateFormat.is24HourFormat(mContext);
 
             // Refresh the user selections.
-            final List<City> selected = (List<City>) DataModel.getDataModel().getSelectedCities();
+            final List<City> selected = DataModel.getDataModel().getSelectedCities();
             mUserSelectedCities.clear();
             mUserSelectedCities.addAll(selected);
             mOriginalUserSelectionCount = selected.size();

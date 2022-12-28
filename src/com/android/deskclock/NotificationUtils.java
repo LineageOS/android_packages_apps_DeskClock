@@ -108,7 +108,7 @@ public class NotificationUtils {
             return;
         }
 
-        int[] properties = (int[]) CHANNEL_PROPS.get(id);
+        int[] properties = CHANNEL_PROPS.get(id);
         int nameId = properties[0];
         int importance = properties[1];
         NotificationChannel channel = new NotificationChannel(

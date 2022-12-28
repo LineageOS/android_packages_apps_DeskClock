@@ -89,9 +89,8 @@ public final class ScreensaverSettingsActivity extends AppCompatActivity {
         }
 
         private void refresh() {
-            final ListPreference clockStylePref = (ListPreference) findPreference(KEY_CLOCK_STYLE);
-            final CheckBoxPreference nightModePref =
-                    (CheckBoxPreference) findPreference(KEY_NIGHT_MODE);
+            final ListPreference clockStylePref = findPreference(KEY_CLOCK_STYLE);
+            final CheckBoxPreference nightModePref = findPreference(KEY_NIGHT_MODE);
 
             clockStylePref.setSummary(clockStylePref.getEntry());
             clockStylePref.setOnPreferenceChangeListener(this);

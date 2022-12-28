@@ -174,7 +174,7 @@ public class RingtonePickerActivity extends CollapsingToolbarBaseActivity
                 .withViewTypes(ringtoneFactory, listener, VIEW_TYPE_SYSTEM_SOUND)
                 .withViewTypes(ringtoneFactory, listener, VIEW_TYPE_CUSTOM_SOUND);
 
-        mRecyclerView = (RecyclerView) findViewById(R.id.ringtone_content);
+        mRecyclerView = findViewById(R.id.ringtone_content);
         mRecyclerView.setLayoutManager(new LinearLayoutManager(context));
         mRecyclerView.setAdapter(mRingtoneAdapter);
         mRecyclerView.setItemAnimator(null);

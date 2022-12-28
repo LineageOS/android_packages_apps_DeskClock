@@ -75,8 +75,8 @@ public class ExpiredTimersActivity extends BaseActivity {
 
         setContentView(R.layout.expired_timers_activity);
 
-        mExpiredTimersView = (ViewGroup) findViewById(R.id.expired_timers_list);
-        mExpiredTimersScrollView = (ViewGroup) findViewById(R.id.expired_timers_scroll);
+        mExpiredTimersView = findViewById(R.id.expired_timers_list);
+        mExpiredTimersScrollView = findViewById(R.id.expired_timers_scroll);
 
         findViewById(R.id.fab).setOnClickListener(new FabClickListener());
 
@@ -170,7 +170,7 @@ public class ExpiredTimersActivity extends BaseActivity {
         mExpiredTimersView.addView(timerItem);
 
         // Hide the label hint for expired timers.
-        final TextView labelView = (TextView) timerItem.findViewById(R.id.timer_label);
+        final TextView labelView = timerItem.findViewById(R.id.timer_label);
         labelView.setHint(null);
         labelView.setVisibility(TextUtils.isEmpty(timer.getLabel()) ? View.GONE : View.VISIBLE);
 
