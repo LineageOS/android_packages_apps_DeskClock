@@ -49,7 +49,7 @@ public final class CollapsedAlarmViewHolder extends AlarmItemViewHolder {
     private CollapsedAlarmViewHolder(View itemView) {
         super(itemView);
 
-        alarmLabel = (TextView) itemView.findViewById(R.id.label);
+        alarmLabel = itemView.findViewById(R.id.label);
 
         // Expand handler
         itemView.setOnClickListener(new View.OnClickListener() {
