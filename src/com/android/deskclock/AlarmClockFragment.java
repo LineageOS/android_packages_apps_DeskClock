@@ -255,7 +255,7 @@ public final class AlarmClockFragment extends DeskClockFragment implements
     }
 
     @Override
-    public void onSaveInstanceState(Bundle outState) {
+    public void onSaveInstanceState(@NonNull Bundle outState) {
         super.onSaveInstanceState(outState);
         mAlarmTimeClickHandler.saveInstance(outState);
         outState.putLong(KEY_EXPANDED_ID, mExpandedAlarmId);
@@ -272,13 +272,14 @@ public final class AlarmClockFragment extends DeskClockFragment implements
         mAlarmUpdateHandler.asyncUpdateAlarm(alarm, false, true);
     }
 
+    @NonNull
     @Override
     public Loader<Cursor> onCreateLoader(int id, Bundle args) {
         return Alarm.getAlarmsCursorLoader(getActivity());
     }
 
     @Override
-    public void onLoadFinished(Loader<Cursor> cursorLoader, Cursor data) {
+    public void onLoadFinished(@NonNull Loader<Cursor> cursorLoader, Cursor data) {
         final List<AlarmItemHolder> itemHolders = new ArrayList<>(data.getCount());
         for (data.moveToFirst(); !data.isAfterLast(); data.moveToNext()) {
             final Alarm alarm = new Alarm(data);
@@ -380,7 +381,7 @@ public final class AlarmClockFragment extends DeskClockFragment implements
     }
 
     @Override
-    public void onLoaderReset(Loader<Cursor> cursorLoader) {
+    public void onLoaderReset(@NonNull Loader<Cursor> cursorLoader) {
     }
 
     @Override
@@ -434,7 +435,7 @@ public final class AlarmClockFragment extends DeskClockFragment implements
     private final class ScrollPositionWatcher extends RecyclerView.OnScrollListener
             implements View.OnLayoutChangeListener {
         @Override
-        public void onScrolled(RecyclerView recyclerView, int dx, int dy) {
+        public void onScrolled(@NonNull RecyclerView recyclerView, int dx, int dy) {
             setTabScrolledToTop(Utils.isScrolledToTop(mRecyclerView));
         }
 

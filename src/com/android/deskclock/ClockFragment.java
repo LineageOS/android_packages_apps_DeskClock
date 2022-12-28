@@ -94,7 +94,7 @@ public final class ClockFragment extends DeskClockFragment {
     }
 
     @Override
-    public View onCreateView(LayoutInflater inflater, ViewGroup container, Bundle icicle) {
+    public View onCreateView(@NonNull LayoutInflater inflater, ViewGroup container, Bundle icicle) {
         super.onCreateView(inflater, container, icicle);
 
         final View fragmentView = inflater.inflate(R.layout.clock_fragment, container, false);
@@ -291,7 +291,7 @@ public final class ClockFragment extends DeskClockFragment {
     private final class ScrollPositionWatcher extends RecyclerView.OnScrollListener
             implements View.OnLayoutChangeListener {
         @Override
-        public void onScrolled(RecyclerView recyclerView, int dx, int dy) {
+        public void onScrolled(@NonNull RecyclerView recyclerView, int dx, int dy) {
             setTabScrolledToTop(Utils.isScrolledToTop(mCityList));
         }
 
@@ -339,8 +339,9 @@ public final class ClockFragment extends DeskClockFragment {
             return WORLD_CLOCK;
         }
 
+        @NonNull
         @Override
-        public RecyclerView.ViewHolder onCreateViewHolder(ViewGroup parent, int viewType) {
+        public RecyclerView.ViewHolder onCreateViewHolder(@NonNull ViewGroup parent, int viewType) {
             final View view = mInflater.inflate(viewType, parent, false);
             switch (viewType) {
                 case WORLD_CLOCK:
@@ -353,7 +354,7 @@ public final class ClockFragment extends DeskClockFragment {
         }
 
         @Override
-        public void onBindViewHolder(RecyclerView.ViewHolder holder, int position) {
+        public void onBindViewHolder(@NonNull RecyclerView.ViewHolder holder, int position) {
             final int viewType = getItemViewType(position);
             switch (viewType) {
                 case WORLD_CLOCK:

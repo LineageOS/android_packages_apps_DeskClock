@@ -17,6 +17,8 @@
 package com.android.deskclock;
 
 import android.content.Context;
+
+import androidx.annotation.NonNull;
 import androidx.annotation.Nullable;
 import androidx.recyclerview.widget.RecyclerView;
 import android.util.AttributeSet;
@@ -42,7 +44,7 @@ public class AlarmRecyclerView extends RecyclerView {
         super(context, attrs, defStyle);
         addOnItemTouchListener(new RecyclerView.SimpleOnItemTouchListener() {
             @Override
-            public boolean onInterceptTouchEvent(RecyclerView rv, MotionEvent e) {
+            public boolean onInterceptTouchEvent(@NonNull RecyclerView rv, @NonNull MotionEvent e) {
                 // Disable scrolling/user action to prevent choppy animations.
                 return rv.getItemAnimator().isRunning();
             }

@@ -23,6 +23,8 @@ import android.content.DialogInterface;
 import android.os.Bundle;
 import android.text.format.DateFormat;
 import android.widget.TimePicker;
+
+import androidx.annotation.NonNull;
 import androidx.appcompat.app.AlertDialog;
 import androidx.fragment.app.DialogFragment;
 import androidx.fragment.app.Fragment;
@@ -45,8 +47,8 @@ public class TimePickerDialogFragment extends DialogFragment {
     private static final String ARG_HOUR = TAG + "_hour";
     private static final String ARG_MINUTE = TAG + "_minute";
 
+    @NonNull
     @Override
-    @SuppressWarnings("deprecation")
     public Dialog onCreateDialog(Bundle savedInstanceState) {
         final OnTimeSetListener listener = ((OnTimeSetListener) getParentFragment());
 
