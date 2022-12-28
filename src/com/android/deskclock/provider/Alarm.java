@@ -26,6 +26,8 @@ import android.media.RingtoneManager;
 import android.net.Uri;
 import android.os.Parcel;
 import android.os.Parcelable;
+
+import androidx.annotation.NonNull;
 import android.os.ParcelUuid;
 import androidx.loader.content.CursorLoader;
 
@@ -464,6 +466,7 @@ public final class Alarm implements Parcelable, ClockContract.AlarmsColumns {
         return Long.valueOf(id).hashCode();
     }
 
+    @NonNull
     @Override
     public String toString() {
         return "Alarm{" +

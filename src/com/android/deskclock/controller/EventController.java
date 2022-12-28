@@ -31,6 +31,7 @@ class EventController {
         mEventTrackers.add(eventTracker);
     }
 
+    @SuppressWarnings("unused")
     void removeEventTracker(EventTracker eventTracker) {
         mEventTrackers.remove(eventTracker);
     }
