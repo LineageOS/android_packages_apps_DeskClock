@@ -14,31 +14,34 @@
      limitations under the License.
 -->
 
-<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+<LinearLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="wrap_content"
-    xmlns:tools="http://schemas.android.com/tools"
     android:gravity="center_horizontal"
     android:paddingBottom="14dp"
     android:layout_marginStart="24dp"
     android:layout_marginEnd="24dp"
     android:orientation="vertical">
 
-    <FrameLayout
-        android:layout_width="wrap_content"
-        android:layout_height="0dp"
-        android:layout_weight="1"
+    <androidx.constraintlayout.widget.ConstraintLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
         android:layout_gravity="start">
 
         <com.android.deskclock.AnalogClock
             android:id="@+id/analog_clock"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:layout_marginEnd="@dimen/analog_clock_margin"
-            android:layout_marginLeft="@dimen/analog_clock_margin"
-            android:layout_marginRight="@dimen/analog_clock_margin"
-            android:layout_marginStart="@dimen/analog_clock_margin"
-            android:layout_marginTop="@dimen/circle_margin_top" />
+            android:layout_marginTop="@dimen/circle_margin_top"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintDimensionRatio="1:1"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent"
+            app:layout_constraintWidth_percent="@dimen/analog_clock_width_percent"/>
 
         <com.android.deskclock.widget.AutoSizingTextClock
             android:id="@+id/digital_clock"
@@ -50,9 +53,17 @@
             android:paddingTop="@dimen/main_clock_digital_padding"
             android:singleLine="true"
             android:textSize="@dimen/main_clock_digital_font_size"
-            tools:text="01:23" />
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent"
+            tools:text="01:23"/>
 
-    </FrameLayout>
+    </androidx.constraintlayout.widget.ConstraintLayout>
 
-    <include layout="@layout/date_and_next_alarm_time" />
+    <include
+        layout="@layout/date_and_next_alarm_time"
+        android:id="@+id/date_and_next_alarm_time"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_gravity="start"/>
 </LinearLayout>
