@@ -19,7 +19,6 @@ package com.android.deskclock.timer;
 import android.content.Context;
 import android.content.res.Resources;
 import android.graphics.Canvas;
-import android.graphics.Color;
 import android.graphics.Paint;
 import android.graphics.RectF;
 import android.util.AttributeSet;
@@ -27,7 +26,6 @@ import android.view.View;
 
 import com.android.deskclock.R;
 import com.android.deskclock.ThemeUtils;
-import com.android.deskclock.Utils;
 import com.android.deskclock.data.Timer;
 
 /**

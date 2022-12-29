@@ -19,13 +19,11 @@ package com.android.deskclock.timer;
 import android.content.Context;
 import android.media.AudioAttributes;
 import android.net.Uri;
-import android.os.Build;
 import android.os.VibrationEffect;
 import android.os.Vibrator;
 
 import com.android.deskclock.AsyncRingtonePlayer;
 import com.android.deskclock.LogUtils;
-import com.android.deskclock.Utils;
 import com.android.deskclock.data.DataModel;
 
 /**

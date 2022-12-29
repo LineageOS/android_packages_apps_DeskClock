@@ -21,9 +21,6 @@ import android.app.VoiceInteractor;
 import android.app.VoiceInteractor.AbortVoiceRequest;
 import android.app.VoiceInteractor.CompleteVoiceRequest;
 import android.app.VoiceInteractor.Prompt;
-import android.os.Build;
-
-import com.android.deskclock.Utils;
 
 class VoiceController {
     /**
