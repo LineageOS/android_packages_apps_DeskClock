@@ -99,7 +99,7 @@ public class HandleApiCalls extends Activity {
                     handleDismissAlarm(intent);
                     break;
                 case AlarmClock.ACTION_SNOOZE_ALARM:
-                    handleSnoozeAlarm(intent);
+                    handleSnoozeAlarm();
                     break;
                 case AlarmClock.ACTION_DISMISS_TIMER:
                     handleDismissTimer(intent);
@@ -204,7 +204,7 @@ public class HandleApiCalls extends Activity {
                         AlarmSelectionActivity.class)
                         .setFlags(Intent.FLAG_ACTIVITY_NEW_TASK)
                         .putExtra(EXTRA_ACTION, ACTION_DISMISS)
-                        .putExtra(EXTRA_ALARMS, alarms.toArray(new Parcelable[alarms.size()]));
+                        .putExtra(EXTRA_ALARMS, alarms.toArray(new Parcelable[0]));
                 mContext.startActivity(pickSelectionIntent);
                 final String voiceMessage = mContext.getString(R.string.pick_alarm_to_dismiss);
                 Controller.getController().notifyVoiceSuccess(mActivity, voiceMessage);
@@ -224,7 +224,7 @@ public class HandleApiCalls extends Activity {
                         .setFlags(Intent.FLAG_ACTIVITY_NEW_TASK)
                         .putExtra(EXTRA_ACTION, ACTION_DISMISS)
                         .putExtra(EXTRA_ALARMS,
-                                matchingAlarms.toArray(new Parcelable[matchingAlarms.size()]));
+                                matchingAlarms.toArray(new Parcelable[0]));
                 mContext.startActivity(pickSelectionIntent);
                 final String voiceMessage = mContext.getString(R.string.pick_alarm_to_dismiss);
                 Controller.getController().notifyVoiceSuccess(mActivity, voiceMessage);
@@ -246,19 +246,17 @@ public class HandleApiCalls extends Activity {
         }
     }
 
-    private void handleSnoozeAlarm(Intent intent) {
-        new SnoozeAlarmAsync(intent, this).execute();
+    private void handleSnoozeAlarm() {
+        new SnoozeAlarmAsync(this).execute();
     }
 
     private static class SnoozeAlarmAsync extends AsyncTask<Void, Void, Void> {
 
         private final Context mContext;
-        private final Intent mIntent;
         private final Activity mActivity;
 
-        public SnoozeAlarmAsync(Intent intent, Activity activity) {
+        public SnoozeAlarmAsync(Activity activity) {
             mContext = activity.getApplicationContext();
-            mIntent = intent;
             mActivity = activity;
         }
 
@@ -348,7 +346,7 @@ public class HandleApiCalls extends Activity {
         setSelectionFromIntent(intent, hour, minutes, selection, argsList);
 
         // Try to locate an existing alarm using the intent data.
-        final String[] args = argsList.toArray(new String[argsList.size()]);
+        final String[] args = argsList.toArray(new String[0]);
         final List<Alarm> alarms = Alarm.getAlarms(cr, selection.toString(), args);
 
         final Alarm alarm;

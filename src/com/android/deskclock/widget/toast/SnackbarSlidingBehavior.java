@@ -16,12 +16,11 @@
 
 package com.android.deskclock.widget.toast;
 
-import android.content.Context;
 import androidx.annotation.Keep;
 import androidx.annotation.NonNull;
 import androidx.coordinatorlayout.widget.CoordinatorLayout;
 import com.google.android.material.snackbar.Snackbar;
-import android.util.AttributeSet;
+
 import android.view.View;
 
 /**
@@ -29,9 +28,6 @@ import android.view.View;
  */
 @Keep
 public final class SnackbarSlidingBehavior extends CoordinatorLayout.Behavior<View> {
-
-    public SnackbarSlidingBehavior(Context context, AttributeSet attrs) {
-    }
 
     @Override
     public boolean layoutDependsOn(@NonNull CoordinatorLayout parent, @NonNull View child,

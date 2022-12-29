@@ -135,35 +135,6 @@ public class CircleView extends View {
     }
 
     /**
-     * @return the current {@link Gravity} used to align/size the circle
-     */
-    public final int getGravity() {
-        return mGravity;
-    }
-
-    /**
-     * Describes how to align/size the circle relative to the view's bounds. Defaults to
-     * {@link Gravity#NO_GRAVITY}.
-     * <p/>
-     * Note: using {@link #setCenterX(float)}, {@link #setCenterY(float)}, or
-     * {@link #setRadius(float)} will automatically clear any conflicting gravity bits.
-     *
-     * @param gravity the {@link Gravity} flags to use
-     * @return this object, allowing calls to methods in this class to be chained
-     * @see R.styleable#CircleView_android_gravity
-     */
-    public CircleView setGravity(int gravity) {
-        if (mGravity != gravity) {
-            mGravity = gravity;
-
-            if (gravity != Gravity.NO_GRAVITY && isLayoutDirectionResolved()) {
-                applyGravity(gravity, getLayoutDirection());
-            }
-        }
-        return this;
-    }
-
-    /**
      * @return the ARGB color used to fill the circle
      */
     public final int getFillColor() {

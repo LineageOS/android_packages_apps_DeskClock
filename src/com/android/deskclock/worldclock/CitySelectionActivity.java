@@ -456,8 +456,8 @@ public final class CitySelectionActivity extends BaseActivity {
                     }
                 }
 
-                mSectionHeaders = sections.toArray(new String[sections.size()]);
-                mSectionHeaderPositions = positions.toArray(new Integer[positions.size()]);
+                mSectionHeaders = sections.toArray(new String[0]);
+                mSectionHeaderPositions = positions.toArray(new Integer[0]);
             }
             return mSectionHeaders;
         }

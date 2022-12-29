@@ -104,9 +104,8 @@ public class ItemAdapter<T extends ItemAdapter.ItemHolder>
      *
      * @return this object, allowing calls to methods in this class to be chained
      */
-    public ItemAdapter setHasStableIds() {
+    public void setHasStableIds() {
         setHasStableIds(true);
-        return this;
     }
 
     /**
@@ -143,9 +142,8 @@ public class ItemAdapter<T extends ItemAdapter.ItemHolder>
      * between new and old holders that have matching {@link ItemHolder#itemId} values.
      *
      * @param itemHolders the new list of item holders
-     * @return this object, allowing calls to methods in this class to be chained
      */
-    public ItemAdapter setItems(List<T> itemHolders) {
+    public void setItems(List<T> itemHolders) {
         final List<T> oldItemHolders = mItemHolders;
         if (oldItemHolders != itemHolders) {
             if (oldItemHolders != null) {
@@ -188,8 +186,6 @@ public class ItemAdapter<T extends ItemAdapter.ItemHolder>
             mItemHolders = itemHolders;
             notifyDataSetChanged();
         }
-
-        return this;
     }
 
     /**

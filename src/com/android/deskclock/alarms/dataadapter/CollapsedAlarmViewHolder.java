@@ -113,13 +113,6 @@ public final class CollapsedAlarmViewHolder extends AlarmItemViewHolder {
     }
 
     @Override
-    public Animator onAnimateChange(List<Object> payloads, int fromLeft, int fromTop, int fromRight,
-                                    int fromBottom, long duration) {
-        /* There are no possible partial animations for collapsed view holders. */
-        return null;
-    }
-
-    @Override
     public Animator onAnimateChange(final ViewHolder oldHolder, ViewHolder newHolder,
                                     long duration) {
         if (!(oldHolder instanceof AlarmItemViewHolder)

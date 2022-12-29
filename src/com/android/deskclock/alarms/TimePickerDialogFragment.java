@@ -73,7 +73,7 @@ public class TimePickerDialogFragment extends DialogFragment {
         }
 
         final FragmentManager manager = parentFragment.getChildFragmentManager();
-        if (manager == null || manager.isDestroyed()) {
+        if (manager.isDestroyed()) {
             return;
         }
 

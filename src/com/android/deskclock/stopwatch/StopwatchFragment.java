@@ -301,7 +301,7 @@ public final class StopwatchFragment extends DeskClockFragment {
     }
 
     @Override
-    public final int getFabTargetVisibility() {
+    public int getFabTargetVisibility() {
         return View.VISIBLE;
     }
 
@@ -574,7 +574,7 @@ public final class StopwatchFragment extends DeskClockFragment {
      */
     private final class TabWatcher implements TabListener {
         @Override
-        public void selectedTabChanged(Tab oldSelectedTab, Tab newSelectedTab) {
+        public void selectedTabChanged(Tab newSelectedTab) {
             adjustWakeLock();
         }
     }
@@ -709,7 +709,6 @@ public final class StopwatchFragment extends DeskClockFragment {
             updateGradientColors(ThemeUtils.resolveColor(context, android.R.attr.windowBackground));
 
             final Resources resources = context.getResources();
-            final float fabHeight = resources.getDimensionPixelSize(R.dimen.fab_container_height);
             mGradientHeight = resources.getDimensionPixelSize(R.dimen.fab_container_height);
         }
 

@@ -130,9 +130,6 @@ public final class AlarmStateManager extends BroadcastReceiver {
     // Buffer time in seconds to fire alarm instead of marking it missed.
     public static final int ALARM_FIRE_BUFFER = 15;
 
-    // A factory for the current time; can be mocked for testing purposes.
-    private static CurrentTimeFactory sCurrentTimeFactory;
-
     // Schedules alarm state transitions; can be mocked for testing purposes.
     private static StateChangeScheduler sStateChangeScheduler =
             new AlarmManagerStateChangeScheduler();
@@ -149,20 +146,7 @@ public final class AlarmStateManager extends BroadcastReceiver {
     private static final String TIME = "time";
 
     private static Calendar getCurrentTime() {
-        return sCurrentTimeFactory == null
-                ? DataModel.getDataModel().getCalendar()
-                : sCurrentTimeFactory.getCurrentTime();
-    }
-
-    static void setCurrentTimeFactory(CurrentTimeFactory currentTimeFactory) {
-        sCurrentTimeFactory = currentTimeFactory;
-    }
-
-    static void setStateChangeScheduler(StateChangeScheduler stateChangeScheduler) {
-        if (stateChangeScheduler == null) {
-            stateChangeScheduler = new AlarmManagerStateChangeScheduler();
-        }
-        sStateChangeScheduler = stateChangeScheduler;
+        return DataModel.getDataModel().getCalendar();
     }
 
     /**
@@ -737,24 +721,6 @@ public final class AlarmStateManager extends BroadcastReceiver {
         ContentResolver cr = context.getContentResolver();
         List<AlarmInstance> instances = AlarmInstance.getInstancesByAlarmId(cr, alarmId);
         for (AlarmInstance instance : instances) {
-            unregisterInstance(context, instance);
-            AlarmInstance.deleteInstance(context.getContentResolver(), instance.mId);
-        }
-        updateNextAlarm(context);
-    }
-
-    /**
-     * Delete and unregister all instances unless they are snoozed. This is used whenever an alarm
-     * is modified superficially (label, vibrate, or ringtone change).
-     */
-    public static void deleteNonSnoozeInstances(Context context, long alarmId) {
-        LogUtils.i("Deleting all non-snooze instances of alarm: " + alarmId);
-        ContentResolver cr = context.getContentResolver();
-        List<AlarmInstance> instances = AlarmInstance.getInstancesByAlarmId(cr, alarmId);
-        for (AlarmInstance instance : instances) {
-            if (instance.mAlarmState == AlarmInstance.SNOOZE_STATE) {
-                continue;
-            }
             unregisterInstance(context, instance);
             AlarmInstance.deleteInstance(context.getContentResolver(), instance.mId);
         }

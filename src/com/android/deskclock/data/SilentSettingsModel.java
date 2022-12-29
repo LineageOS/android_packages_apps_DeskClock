@@ -136,7 +136,7 @@ final class SilentSettingsModel {
             mSilentSetting = silentSetting;
 
             for (OnSilentSettingsListener listener : mListeners) {
-                listener.onSilentSettingsChange(oldReason, silentSetting);
+                listener.onSilentSettingsChange(silentSetting);
             }
         }
     }
