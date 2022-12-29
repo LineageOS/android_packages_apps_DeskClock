@@ -55,6 +55,7 @@ import com.android.deskclock.uidata.UiDataModel;
 import com.android.deskclock.widget.toast.SnackbarManager;
 
 import com.google.android.material.bottomnavigation.BottomNavigationView;
+import com.google.android.material.navigation.NavigationBarView;
 import com.google.android.material.snackbar.Snackbar;
 
 import static android.content.Intent.FLAG_ACTIVITY_NEW_TASK;
@@ -234,7 +235,7 @@ public class DeskClock extends BaseActivity
         mFragmentUtils = new FragmentUtils(this);
         // Mirror changes made to the selected tab into UiDataModel.
         mBottomNavigation = findViewById(R.id.bottom_view);
-        mBottomNavigation.setOnNavigationItemSelectedListener(mNavigationListener);
+        mBottomNavigation.setOnItemSelectedListener(mNavigationListener);
 
         // Honor changes to the selected tab from outside entities.
         UiDataModel.getUiDataModel().addTabListener(mTabChangeWatcher);
@@ -242,28 +243,21 @@ public class DeskClock extends BaseActivity
         mTitleView = findViewById(R.id.title_view);
     }
 
-    private BottomNavigationView.OnNavigationItemSelectedListener mNavigationListener
-            = new BottomNavigationView.OnNavigationItemSelectedListener() {
+    private final NavigationBarView.OnItemSelectedListener mNavigationListener
+            = new BottomNavigationView.OnItemSelectedListener() {
 
         @Override
         public boolean onNavigationItemSelected(@NonNull MenuItem item) {
             UiDataModel.Tab selectedTab = null;
-            switch (item.getItemId()) {
-                case R.id.page_alarm:
-                    selectedTab = UiDataModel.Tab.ALARMS;
-                    break;
-
-                case R.id.page_clock:
-                    selectedTab = UiDataModel.Tab.CLOCKS;
-                    break;
-
-                case R.id.page_timer:
-                    selectedTab = UiDataModel.Tab.TIMERS;
-                    break;
-
-                case R.id.page_stopwatch:
-                    selectedTab = UiDataModel.Tab.STOPWATCH;
-                    break;
+            int itemId = item.getItemId();
+            if (itemId == R.id.page_alarm) {
+                selectedTab = UiDataModel.Tab.ALARMS;
+            } else if (itemId == R.id.page_clock) {
+                selectedTab = UiDataModel.Tab.CLOCKS;
+            } else if (itemId == R.id.page_timer) {
+                selectedTab = UiDataModel.Tab.TIMERS;
+            } else if (itemId == R.id.page_stopwatch) {
+                selectedTab = UiDataModel.Tab.STOPWATCH;
             }
 
             if (selectedTab != null) {
@@ -370,44 +364,34 @@ public class DeskClock extends BaseActivity
     @Override
     public void updateFab(@UpdateFabFlag int updateType) {
         final DeskClockFragment f = getSelectedDeskClockFragment();
-
-        switch (updateType & FAB_ANIMATION_MASK) {
-            case FAB_SHRINK_AND_EXPAND:
-                mUpdateFabOnlyAnimation.start();
-                break;
-            case FAB_IMMEDIATE:
-                f.onUpdateFab(mFab);
-                break;
-            case FAB_MORPH:
-                f.onMorphFab(mFab);
-                break;
+        final int fabAnimationType = updateType & FAB_ANIMATION_MASK;
+        if (fabAnimationType == FAB_SHRINK_AND_EXPAND) {
+            mUpdateFabOnlyAnimation.start();
+        } else if (fabAnimationType == FAB_IMMEDIATE) {
+            f.onUpdateFab(mFab);
+        } else if (fabAnimationType == FAB_MORPH) {
+            f.onMorphFab(mFab);
         }
-        switch (updateType & FAB_REQUEST_FOCUS_MASK) {
-            case FAB_REQUEST_FOCUS:
-                mFab.requestFocus();
-                break;
+        final int fabRequestFocus = updateType & FAB_REQUEST_FOCUS_MASK;
+        if (fabRequestFocus == FAB_REQUEST_FOCUS) {
+            mFab.requestFocus();
         }
-        switch (updateType & BUTTONS_ANIMATION_MASK) {
-            case BUTTONS_IMMEDIATE:
-                f.onUpdateFabButtons(mLeftButton, mRightButton);
-                break;
-            case BUTTONS_SHRINK_AND_EXPAND:
-                mUpdateButtonsOnlyAnimation.start();
-                break;
+        final int buttonsAnimationType = updateType & BUTTONS_ANIMATION_MASK;
+        if (buttonsAnimationType == BUTTONS_IMMEDIATE) {
+            f.onUpdateFabButtons(mLeftButton, mRightButton);
+        } else if (buttonsAnimationType == BUTTONS_SHRINK_AND_EXPAND) {
+            mUpdateButtonsOnlyAnimation.start();
         }
-        switch (updateType & BUTTONS_DISABLE_MASK) {
-            case BUTTONS_DISABLE:
-                mLeftButton.setClickable(false);
-                mRightButton.setClickable(false);
-                break;
+        final int buttonsDisable = updateType & BUTTONS_DISABLE_MASK;
+        if (buttonsDisable == BUTTONS_DISABLE) {
+            mLeftButton.setClickable(false);
+            mRightButton.setClickable(false);
         }
-        switch (updateType & FAB_AND_BUTTONS_SHRINK_EXPAND_MASK) {
-            case FAB_AND_BUTTONS_SHRINK:
-                mHideAnimation.start();
-                break;
-            case FAB_AND_BUTTONS_EXPAND:
-                mShowAnimation.start();
-                break;
+        final int fabAndButtonsShrinkExpandType = updateType & FAB_AND_BUTTONS_SHRINK_EXPAND_MASK;
+        if (fabAndButtonsShrinkExpandType == FAB_AND_BUTTONS_SHRINK) {
+            mHideAnimation.start();
+        } else if (fabAndButtonsShrinkExpandType == FAB_AND_BUTTONS_EXPAND) {
+            mShowAnimation.start();
         }
     }
 
@@ -426,7 +410,9 @@ public class DeskClock extends BaseActivity
             missingPermissions.add(PERMISSION_POWER_OFF_ALARM);
         }
         if (!hasNotificationPermission()) {
-            missingPermissions.add(Manifest.permission.POST_NOTIFICATIONS);
+            if (Build.VERSION.SDK_INT >= 33) {
+                missingPermissions.add(Manifest.permission.POST_NOTIFICATIONS);
+            }
         }
 
         if (!missingPermissions.isEmpty()) {
@@ -444,7 +430,10 @@ public class DeskClock extends BaseActivity
     }
 
     private boolean hasNotificationPermission() {
-        return hasPermission(Manifest.permission.POST_NOTIFICATIONS);
+        if (Build.VERSION.SDK_INT >= 33) {
+            return hasPermission(Manifest.permission.POST_NOTIFICATIONS);
+        }
+        return true;
     }
 
     private boolean hasEssentialPermissions() {

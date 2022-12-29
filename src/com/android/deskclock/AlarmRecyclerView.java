@@ -46,7 +46,7 @@ public class AlarmRecyclerView extends RecyclerView {
             @Override
             public boolean onInterceptTouchEvent(@NonNull RecyclerView rv, @NonNull MotionEvent e) {
                 // Disable scrolling/user action to prevent choppy animations.
-                return rv.getItemAnimator().isRunning();
+                return rv.getItemAnimator() != null && rv.getItemAnimator().isRunning();
             }
         });
     }

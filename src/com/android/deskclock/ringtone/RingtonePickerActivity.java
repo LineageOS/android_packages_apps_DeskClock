@@ -92,9 +92,6 @@ public class RingtonePickerActivity extends CollapsingToolbarBaseActivity
     /** Key to an instance state value indicating if the selected ringtone is currently playing. */
     private static final String STATE_KEY_PLAYING = "extra_is_playing";
 
-    /** Displays a set of selectable ringtones. */
-    private RecyclerView mRecyclerView;
-
     /** Stores the set of ItemHolders that wrap the selectable ringtones. */
     private ItemAdapter<ItemAdapter.ItemHolder<Uri>> mRingtoneAdapter;
 
@@ -175,12 +172,13 @@ public class RingtonePickerActivity extends CollapsingToolbarBaseActivity
                 .withViewTypes(ringtoneFactory, listener, VIEW_TYPE_SYSTEM_SOUND)
                 .withViewTypes(ringtoneFactory, listener, VIEW_TYPE_CUSTOM_SOUND);
 
-        mRecyclerView = findViewById(R.id.ringtone_content);
-        mRecyclerView.setLayoutManager(new LinearLayoutManager(context));
-        mRecyclerView.setAdapter(mRingtoneAdapter);
-        mRecyclerView.setItemAnimator(null);
+        /* Displays a set of selectable ringtones. */
+        RecyclerView recyclerView = findViewById(R.id.ringtone_content);
+        recyclerView.setLayoutManager(new LinearLayoutManager(context));
+        recyclerView.setAdapter(mRingtoneAdapter);
+        recyclerView.setItemAnimator(null);
 
-        mRecyclerView.addOnScrollListener(new RecyclerView.OnScrollListener() {
+        recyclerView.addOnScrollListener(new RecyclerView.OnScrollListener() {
             @Override
             public void onScrollStateChanged(@NonNull RecyclerView recyclerView, int newState) {
                 if (mIndexOfRingtoneToRemove != RecyclerView.NO_POSITION) {
@@ -194,7 +192,7 @@ public class RingtonePickerActivity extends CollapsingToolbarBaseActivity
 
         getLoaderManager().initLoader(0 /* id */, null /* args */, this /* callback */);
 
-        registerForContextMenu(mRecyclerView);
+        registerForContextMenu(recyclerView);
     }
 
     @Override
@@ -249,6 +247,7 @@ public class RingtonePickerActivity extends CollapsingToolbarBaseActivity
         outState.putParcelable(EXTRA_RINGTONE_URI, mSelectedRingtoneUri);
     }
 
+    @NonNull
     @Override
     public Loader<List<ItemAdapter.ItemHolder<Uri>>> onCreateLoader(int id, Bundle args) {
         return new RingtoneLoader(getApplicationContext(), mDefaultRingtoneUri,
@@ -281,10 +280,11 @@ public class RingtonePickerActivity extends CollapsingToolbarBaseActivity
     }
 
     @Override
-    public void onLoaderReset(Loader<List<ItemAdapter.ItemHolder<Uri>>> loader) {}
+    public void onLoaderReset(@NonNull Loader<List<ItemAdapter.ItemHolder<Uri>>> loader) {}
 
     @Override
     protected void onActivityResult(int requestCode, int resultCode, Intent data) {
+        super.onActivityResult(requestCode, resultCode, data);
         if (resultCode != RESULT_OK) {
             return;
         }

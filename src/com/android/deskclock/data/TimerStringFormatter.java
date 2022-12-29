@@ -50,16 +50,14 @@ public class TimerStringFormatter {
                 if (roundedMinutes == 60) {
                     minutes = 0;
                     roundedHours += 1;
-                    hours = roundedHours;
                 } else {
                     minutes = roundedMinutes;
-                    hours = roundedHours;
                 }
             } else {
                 seconds = roundedSeconds;
                 minutes = roundedMinutes;
-                hours = roundedHours;
             }
+            hours = roundedHours;
         } else {
             // Already perfect precision, or we don't want to consider seconds at all.
             seconds = roundedSeconds;

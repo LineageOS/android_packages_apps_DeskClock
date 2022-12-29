@@ -16,6 +16,7 @@
 
 package com.android.deskclock;
 
+import android.app.Activity;
 import android.content.Context;
 import android.content.Intent;
 import android.database.Cursor;
@@ -158,7 +159,7 @@ public final class AlarmClockFragment extends DeskClockFragment implements
                         final RecyclerView.ViewHolder viewHolder =
                                 mRecyclerView.findViewHolderForItemId(mExpandedAlarmId);
                         if (viewHolder != null) {
-                            smoothScrollTo(viewHolder.getAdapterPosition());
+                            smoothScrollTo(viewHolder.getBindingAdapterPosition());
                         }
                     }
                 } else if (mExpandedAlarmId == holder.itemId) {
@@ -201,7 +202,11 @@ public final class AlarmClockFragment extends DeskClockFragment implements
         UiDataModel.getUiDataModel().addMidnightCallback(mMidnightUpdater);
 
         // Check if another app asked us to create a blank new alarm.
-        final Intent intent = getActivity().getIntent();
+        final Activity activity = getActivity();
+        if (activity == null) {
+            return;
+        }
+        final Intent intent = activity.getIntent();
         if (intent == null) {
             return;
         }
@@ -306,7 +311,8 @@ public final class AlarmClockFragment extends DeskClockFragment implements
             return;
         }
 
-        if (mRecyclerView.getItemAnimator().isRunning()) {
+        if (mRecyclerView.getItemAnimator() != null &&
+                mRecyclerView.getItemAnimator().isRunning()) {
             // RecyclerView is currently animating -> defer update.
             mRecyclerView.getItemAnimator().isRunning(() -> setAdapterItems(items, updateToken));
         } else if (mRecyclerView.isComputingLayout()) {
