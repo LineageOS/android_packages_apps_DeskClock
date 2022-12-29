@@ -55,6 +55,7 @@ import com.android.deskclock.uidata.UiDataModel;
 import com.android.deskclock.widget.toast.SnackbarManager;
 
 import com.google.android.material.bottomnavigation.BottomNavigationView;
+import com.google.android.material.navigation.NavigationBarView;
 import com.google.android.material.snackbar.Snackbar;
 
 import static android.content.Intent.FLAG_ACTIVITY_NEW_TASK;
@@ -234,7 +235,7 @@ public class DeskClock extends BaseActivity
         mFragmentUtils = new FragmentUtils(this);
         // Mirror changes made to the selected tab into UiDataModel.
         mBottomNavigation = findViewById(R.id.bottom_view);
-        mBottomNavigation.setOnNavigationItemSelectedListener(mNavigationListener);
+        mBottomNavigation.setOnItemSelectedListener(mNavigationListener);
 
         // Honor changes to the selected tab from outside entities.
         UiDataModel.getUiDataModel().addTabListener(mTabChangeWatcher);
@@ -242,28 +243,21 @@ public class DeskClock extends BaseActivity
         mTitleView = findViewById(R.id.title_view);
     }
 
-    private BottomNavigationView.OnNavigationItemSelectedListener mNavigationListener
-            = new BottomNavigationView.OnNavigationItemSelectedListener() {
+    private final NavigationBarView.OnItemSelectedListener mNavigationListener
+            = new BottomNavigationView.OnItemSelectedListener() {
 
         @Override
         public boolean onNavigationItemSelected(@NonNull MenuItem item) {
             UiDataModel.Tab selectedTab = null;
-            switch (item.getItemId()) {
-                case R.id.page_alarm:
-                    selectedTab = UiDataModel.Tab.ALARMS;
-                    break;
-
-                case R.id.page_clock:
-                    selectedTab = UiDataModel.Tab.CLOCKS;
-                    break;
-
-                case R.id.page_timer:
-                    selectedTab = UiDataModel.Tab.TIMERS;
-                    break;
-
-                case R.id.page_stopwatch:
-                    selectedTab = UiDataModel.Tab.STOPWATCH;
-                    break;
+            int itemId = item.getItemId();
+            if (itemId == R.id.page_alarm) {
+                selectedTab = UiDataModel.Tab.ALARMS;
+            } else if (itemId == R.id.page_clock) {
+                selectedTab = UiDataModel.Tab.CLOCKS;
+            } else if (itemId == R.id.page_timer) {
+                selectedTab = UiDataModel.Tab.TIMERS;
+            } else if (itemId == R.id.page_stopwatch) {
+                selectedTab = UiDataModel.Tab.STOPWATCH;
             }
 
             if (selectedTab != null) {
@@ -426,7 +420,9 @@ public class DeskClock extends BaseActivity
             missingPermissions.add(PERMISSION_POWER_OFF_ALARM);
         }
         if (!hasNotificationPermission()) {
-            missingPermissions.add(Manifest.permission.POST_NOTIFICATIONS);
+            if (Build.VERSION.SDK_INT >= 33) {
+                missingPermissions.add(Manifest.permission.POST_NOTIFICATIONS);
+            }
         }
 
         if (!missingPermissions.isEmpty()) {
@@ -444,7 +440,10 @@ public class DeskClock extends BaseActivity
     }
 
     private boolean hasNotificationPermission() {
-        return hasPermission(Manifest.permission.POST_NOTIFICATIONS);
+        if (Build.VERSION.SDK_INT >= 33) {
+            return hasPermission(Manifest.permission.POST_NOTIFICATIONS);
+        }
+        return true;
     }
 
     private boolean hasEssentialPermissions() {
