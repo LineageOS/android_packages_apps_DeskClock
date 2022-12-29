@@ -158,7 +158,7 @@ public final class AlarmClockFragment extends DeskClockFragment implements
                         final RecyclerView.ViewHolder viewHolder =
                                 mRecyclerView.findViewHolderForItemId(mExpandedAlarmId);
                         if (viewHolder != null) {
-                            smoothScrollTo(viewHolder.getAdapterPosition());
+                            smoothScrollTo(viewHolder.getBindingAdapterPosition());
                         }
                     }
                 } else if (mExpandedAlarmId == holder.itemId) {
@@ -306,7 +306,8 @@ public final class AlarmClockFragment extends DeskClockFragment implements
             return;
         }
 
-        if (mRecyclerView.getItemAnimator().isRunning()) {
+        if (mRecyclerView.getItemAnimator() != null &&
+                mRecyclerView.getItemAnimator().isRunning()) {
             // RecyclerView is currently animating -> defer update.
             mRecyclerView.getItemAnimator().isRunning(() -> setAdapterItems(items, updateToken));
         } else if (mRecyclerView.isComputingLayout()) {
