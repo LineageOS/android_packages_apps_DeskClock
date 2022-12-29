@@ -343,7 +343,7 @@ public final class Timer {
     /**
      * Orders timers by their IDs. Oldest timers are at the bottom. Newest timers are at the top.
      */
-    static Comparator<Timer> ID_COMPARATOR =
+    static final Comparator<Timer> ID_COMPARATOR =
             (timer1, timer2) -> Integer.compare(timer2.getId(), timer1.getId());
 
     /**
@@ -357,7 +357,7 @@ public final class Timer {
      *     <li>{@link State#RESET RESET} timers; ties broken by {@link #getLength()}</li>
      * </ol>
      */
-    static Comparator<Timer> EXPIRY_COMPARATOR = new Comparator<Timer>() {
+    static final Comparator<Timer> EXPIRY_COMPARATOR = new Comparator<Timer>() {
 
         private final List<State> stateExpiryOrder = Arrays.asList(MISSED, EXPIRED, RUNNING, PAUSED,
                 RESET);
