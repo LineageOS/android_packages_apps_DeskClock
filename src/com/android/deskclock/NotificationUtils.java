@@ -16,7 +16,6 @@
 
 package com.android.deskclock;
 
-import static androidx.core.app.NotificationManagerCompat.IMPORTANCE_DEFAULT;
 import static androidx.core.app.NotificationManagerCompat.IMPORTANCE_HIGH;
 import static androidx.core.app.NotificationManagerCompat.IMPORTANCE_LOW;
 
@@ -25,8 +24,6 @@ import android.content.Context;
 import android.util.ArraySet;
 import android.util.Log;
 import androidx.core.app.NotificationManagerCompat;
-
-import com.android.deskclock.Utils;
 
 import java.util.HashMap;
 import java.util.Map;

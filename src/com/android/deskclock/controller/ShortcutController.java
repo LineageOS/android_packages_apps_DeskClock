@@ -22,9 +22,9 @@ import android.content.Intent;
 import android.content.pm.ShortcutInfo;
 import android.content.pm.ShortcutManager;
 import android.graphics.drawable.Icon;
-import android.os.Build;
 import android.os.UserManager;
 import android.provider.AlarmClock;
+
 import androidx.annotation.StringRes;
 
 import com.android.deskclock.DeskClock;
