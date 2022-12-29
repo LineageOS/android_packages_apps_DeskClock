@@ -80,7 +80,7 @@
     <dimen name="analog_clock_size">294dp</dimen>
 
     <!-- Size of time zone analog clocks in world clock. -->
-    <dimen name="world_clock_analog_size">100dp</dimen>
+    <dimen name="world_clock_analog_size">80dp</dimen>
 
     <dimen name="min_analog_widget_size">110dp</dimen>
 
@@ -140,4 +140,6 @@
     <dimen name="alarm_clock_expanded_vertical_margin">8dp</dimen>
 
     <dimen name="settings_padding">4dp</dimen>
+
+    <dimen name="analog_clock_width_percent">0.5</dimen>
 </resources>
