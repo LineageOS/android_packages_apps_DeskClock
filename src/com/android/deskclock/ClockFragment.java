@@ -123,6 +123,7 @@ public final class ClockFragment extends DeskClockFragment {
             Utils.updateDate(mDateFormat, mDateFormatForAccessibility, mClockFrame);
             Utils.setClockStyle(mDigitalClock, mAnalogClock);
             Utils.setClockSecondsEnabled(mDigitalClock, mAnalogClock);
+            Utils.updateDateGravity(mClockFrame);
         }
 
         // Schedule a runnable to update the date every quarter hour.
@@ -150,6 +151,7 @@ public final class ClockFragment extends DeskClockFragment {
         if (mDigitalClock != null && mAnalogClock != null) {
             Utils.setClockStyle(mDigitalClock, mAnalogClock);
             Utils.setClockSecondsEnabled(mDigitalClock, mAnalogClock);
+            Utils.updateDateGravity(mClockFrame);
         }
 
         final View view = getView();
@@ -437,15 +439,6 @@ public final class ClockFragment extends DeskClockFragment {
                     mDigitalClock.setFormat24Hour(Utils.get24ModeFormat(false));
                 }
 
-                // Supply top and bottom padding dynamically.
-                final Resources res = context.getResources();
-                final int padding = res.getDimensionPixelSize(R.dimen.medium_space_top);
-                final int top = position == 0 && !isPortrait ? 0 : padding;
-                final int left = itemView.getPaddingLeft();
-                final int right = itemView.getPaddingRight();
-                final int bottom = itemView.getPaddingBottom();
-                itemView.setPadding(left, top, right, bottom);
-
                 // Bind the city name.
                 mName.setText(city.getName());
 
@@ -468,25 +461,15 @@ public final class ClockFragment extends DeskClockFragment {
                 final boolean displayMinutes = offsetDelta % DateUtils.HOUR_IN_MILLIS != 0;
                 final boolean isAhead = hoursDifferent > 0 || (hoursDifferent == 0
                         && minutesDifferent > 0);
-                if (!Utils.isLandscape(context)) {
-                    // Bind the number of hours ahead or behind, or hide if the time is the same.
-                    final boolean displayDifference = hoursDifferent != 0 || displayMinutes;
-                    mHoursAhead.setVisibility(displayDifference ? VISIBLE : GONE);
-                    final String timeString = Utils.createHoursDifferentString(
-                            context, displayMinutes, isAhead, hoursDifferent, minutesDifferent);
-                    mHoursAhead.setText(displayDayOfWeek ?
-                            (context.getString(isAhead ? R.string.world_hours_tomorrow
-                                    : R.string.world_hours_yesterday, timeString))
-                            : timeString);
-                } else {
-                    // Only tomorrow/yesterday should be shown in landscape view.
-                    mHoursAhead.setVisibility(displayDayOfWeek ? View.VISIBLE : View.GONE);
-                    if (displayDayOfWeek) {
-                        mHoursAhead.setText(context.getString(isAhead ? R.string.world_tomorrow
-                                : R.string.world_yesterday));
-                    }
-
-                }
+                // Bind the number of hours ahead or behind, or hide if the time is the same.
+                final boolean displayDifference = hoursDifferent != 0 || displayMinutes;
+                mHoursAhead.setVisibility(displayDifference ? VISIBLE : GONE);
+                final String timeString = Utils.createHoursDifferentString(
+                        context, displayMinutes, isAhead, hoursDifferent, minutesDifferent);
+                mHoursAhead.setText(displayDayOfWeek ?
+                        (context.getString(isAhead ? R.string.world_hours_tomorrow
+                                : R.string.world_hours_yesterday, timeString))
+                        : timeString);
             }
         }
 
@@ -510,6 +493,7 @@ public final class ClockFragment extends DeskClockFragment {
                 Utils.updateDate(dateFormat, dateFormatForAccessibility, itemView);
                 Utils.setClockStyle(mDigitalClock, mAnalogClock);
                 Utils.setClockSecondsEnabled(mDigitalClock, mAnalogClock);
+                Utils.updateDateGravity(itemView);
             }
         }
     }
