@@ -28,4 +28,7 @@
     <dimen name="bottom_text_spacing_analog">5dp</dimen>
 
     <dimen name="timer_setup_digit_font_size">56sp</dimen>
+
+    <dimen name="analog_clock_width_percent">0.4</dimen>
+
 </resources>

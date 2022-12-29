@@ -52,7 +52,9 @@ import android.text.style.RelativeSizeSpan;
 import android.text.style.StyleSpan;
 import android.text.style.TypefaceSpan;
 import android.util.ArraySet;
+import android.view.Gravity;
 import android.view.View;
+import android.widget.LinearLayout;
 import android.widget.TextClock;
 import android.widget.TextView;
 
@@ -296,6 +298,23 @@ public class Utils {
         dateDisplay.setText(new SimpleDateFormat(datePattern, l).format(now));
         dateDisplay.setVisibility(View.VISIBLE);
         dateDisplay.setContentDescription(new SimpleDateFormat(descriptionPattern, l).format(now));
+    }
+
+    public static void updateDateGravity(View clockFrame) {
+        View dateAndNextAlarm = clockFrame.findViewById(R.id.date_and_next_alarm_time);
+        LinearLayout.LayoutParams lp =
+                (LinearLayout.LayoutParams)dateAndNextAlarm.getLayoutParams();
+
+        final DataModel.ClockStyle clockStyle = DataModel.getDataModel().getClockStyle();
+        switch (clockStyle) {
+            case ANALOG:
+                lp.gravity = Gravity.CENTER;
+                break;
+            case DIGITAL:
+                lp.gravity = Gravity.START;
+                break;
+        }
+        dateAndNextAlarm.setLayoutParams(lp);
     }
 
     /***
