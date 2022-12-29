@@ -73,22 +73,15 @@ public abstract class AlarmItemViewHolder extends ItemAdapter.ItemViewHolder<Ala
         daysOfWeek = itemView.findViewById(R.id.days_of_week);
         preemptiveDismissButton = itemView.findViewById(R.id.preemptive_dismiss_button);
         ellipsizeLayout  = itemView.findViewById(R.id.ellipse_layout);
-        preemptiveDismissButton.setOnClickListener(new View.OnClickListener() {
-            @Override
-            public void onClick(View v) {
-                final AlarmInstance alarmInstance = getItemHolder().getAlarmInstance();
-                if (alarmInstance != null) {
-                    getItemHolder().getAlarmTimeClickHandler().dismissAlarmInstance(alarmInstance);
-                }
+        preemptiveDismissButton.setOnClickListener(v -> {
+            final AlarmInstance alarmInstance = getItemHolder().getAlarmInstance();
+            if (alarmInstance != null) {
+                getItemHolder().getAlarmTimeClickHandler().dismissAlarmInstance(alarmInstance);
             }
         });
-        onOff.setOnCheckedChangeListener(new CompoundButton.OnCheckedChangeListener() {
-            @Override
-            public void onCheckedChanged(CompoundButton compoundButton, boolean checked) {
+        onOff.setOnCheckedChangeListener((compoundButton, checked) ->
                 getItemHolder().getAlarmTimeClickHandler().setAlarmEnabled(
-                        getItemHolder().item, checked);
-            }
-        });
+                        getItemHolder().item, checked));
     }
 
     @Override

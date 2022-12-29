@@ -62,12 +62,7 @@ public class AlarmSelectionActivity extends ListActivity {
         setContentView(R.layout.selection_layout);
 
         final Button cancelButton = findViewById(R.id.cancel_button);
-        cancelButton.setOnClickListener(new View.OnClickListener() {
-            @Override
-            public void onClick(View v) {
-                finish();
-            }
-        });
+        cancelButton.setOnClickListener(v -> finish());
 
         final Intent intent = getIntent();
         final Parcelable[] alarmsFromIntent = intent.getParcelableArrayExtra(EXTRA_ALARMS);

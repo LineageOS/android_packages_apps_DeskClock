@@ -36,12 +36,8 @@ import androidx.interpolator.view.animation.FastOutSlowInInterpolator;
 
 public class AnimatorUtils {
 
-    public static final Interpolator DECELERATE_ACCELERATE_INTERPOLATOR = new Interpolator() {
-        @Override
-        public float getInterpolation(float x) {
-            return 0.5f + 4.0f * (x - 0.5f) * (x - 0.5f) * (x - 0.5f);
-        }
-    };
+    public static final Interpolator DECELERATE_ACCELERATE_INTERPOLATOR =
+            x -> 0.5f + 4.0f * (x - 0.5f) * (x - 0.5f) * (x - 0.5f);
 
     public static final Interpolator INTERPOLATOR_FAST_OUT_SLOW_IN =
             new FastOutSlowInInterpolator();
