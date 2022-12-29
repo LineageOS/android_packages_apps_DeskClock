@@ -73,7 +73,7 @@ public class NotificationUtils {
     private static final int ENABLE_LIGHTS = 0x02;
     private static final int ENABLE_VIBRATION = 0x04;
 
-    private static Map<String, int[]> CHANNEL_PROPS = new HashMap<String, int[]>();
+    private static final Map<String, int[]> CHANNEL_PROPS = new HashMap<>();
     static {
         CHANNEL_PROPS.put(ALARM_MISSED_NOTIFICATION_CHANNEL_ID, new int[]{
                 R.string.alarm_missed_channel,
