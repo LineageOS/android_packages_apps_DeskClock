@@ -34,9 +34,9 @@ public final class MockFabContainer implements FabContainer {
 
     private final DeskClockFragment deskClockFragment;
 
-    private ImageView fab;
-    private Button leftButton;
-    private Button rightButton;
+    private final ImageView fab;
+    private final ImageView leftButton;
+    private final ImageView rightButton;
 
     public MockFabContainer(DeskClockFragment fragment, Context context) {
         deskClockFragment = fragment;

@@ -102,9 +102,9 @@ public final class FragmentUtils {
 
     public void showFragment(UiDataModel.Tab tab) {
         hideAllFragments();
-        Fragment fragment = getDeskClockFragment(tab);
+        DeskClockFragment fragment = getDeskClockFragment(tab);
         mFragmentManager.beginTransaction().show(fragment).commit();
-        mCurrentPrimaryItem = (DeskClockFragment) fragment;
+        mCurrentPrimaryItem = fragment;
     }
 
     public DeskClockFragment getCurrentFragment() {

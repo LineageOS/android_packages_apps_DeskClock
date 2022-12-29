@@ -113,7 +113,6 @@ public final class MoveScreensaverRunnable implements Runnable {
             mActiveAnimator = getAlphaAnimator(mSaverView, 0f, 1f);
             mActiveAnimator.setDuration(FADE_TIME);
             mActiveAnimator.setInterpolator(mDeceleration);
-            mActiveAnimator.start();
         } else {
             // Select a new random position anywhere in mContentView that will fit mSaverView.
             final float newX = getRandomPoint(mContentView.getWidth() - mSaverView.getWidth());
@@ -144,8 +143,8 @@ public final class MoveScreensaverRunnable implements Runnable {
             final AnimatorSet all = new AnimatorSet();
             all.play(show).after(hide);
             mActiveAnimator = all;
-            mActiveAnimator.start();
         }
+        mActiveAnimator.start();
     }
 
     /**
