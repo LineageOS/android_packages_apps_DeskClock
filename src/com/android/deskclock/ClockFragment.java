@@ -157,6 +157,8 @@ public final class ClockFragment extends DeskClockFragment {
             // Center the main clock frame by hiding the world clocks when none are selected.
             mCityList.setVisibility(mCityAdapter.getItemCount() == 0 ? GONE : VISIBLE);
         }
+        // force refresh so clock style changes apply immediately
+        mCityAdapter.citiesChanged();
 
         refreshAlarm();
     }
