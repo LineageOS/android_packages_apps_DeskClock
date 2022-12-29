@@ -201,12 +201,9 @@ public final class AlarmUpdateHandler {
         final Alarm deletedAlarm = mDeletedAlarm;
         final Snackbar snackbar = Snackbar.make(mSnackbarAnchor,
                 mAppContext.getString(R.string.alarm_deleted), Snackbar.LENGTH_LONG)
-                .setAction(R.string.alarm_undo, new View.OnClickListener() {
-                    @Override
-                    public void onClick(View v) {
-                        mDeletedAlarm = null;
-                        asyncAddAlarm(deletedAlarm);
-                    }
+                .setAction(R.string.alarm_undo, v -> {
+                    mDeletedAlarm = null;
+                    asyncAddAlarm(deletedAlarm);
                 });
         SnackbarManager.show(snackbar);
     }

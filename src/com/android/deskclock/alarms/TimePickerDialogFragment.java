@@ -58,12 +58,9 @@ public class TimePickerDialogFragment extends DialogFragment {
         final int minute = args.getInt(ARG_MINUTE, now.get(Calendar.MINUTE));
 
         final Context context = getActivity();
-        return new TimePickerDialog(context, new TimePickerDialog.OnTimeSetListener() {
-            @Override
-            public void onTimeSet(TimePicker view, int hourOfDay, int minute) {
-                listener.onTimeSet(TimePickerDialogFragment.this, hourOfDay, minute);
-            }
-        }, hour, minute, DateFormat.is24HourFormat(context));
+        return new TimePickerDialog(context, (view, hourOfDay, minute1) ->
+                listener.onTimeSet(TimePickerDialogFragment.this, hourOfDay, minute1),
+                hour, minute, DateFormat.is24HourFormat(context));
     }
 
     public static void show(Fragment fragment) {

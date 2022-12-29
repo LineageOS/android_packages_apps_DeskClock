@@ -183,24 +183,11 @@ public class DeskClock extends BaseActivity
         mLeftButton = findViewById(R.id.left_button);
         mRightButton = findViewById(R.id.right_button);
 
-        mFab.setOnClickListener(new OnClickListener() {
-            @Override
-            public void onClick(View view) {
-                getSelectedDeskClockFragment().onFabClick(mFab);
-            }
-        });
-        mLeftButton.setOnClickListener(new OnClickListener() {
-            @Override
-            public void onClick(View view) {
-                getSelectedDeskClockFragment().onLeftButtonClick(mLeftButton);
-            }
-        });
-        mRightButton.setOnClickListener(new OnClickListener() {
-            @Override
-            public void onClick(View view) {
-                getSelectedDeskClockFragment().onRightButtonClick(mRightButton);
-            }
-        });
+        mFab.setOnClickListener(view -> getSelectedDeskClockFragment().onFabClick(mFab));
+        mLeftButton.setOnClickListener(view ->
+                getSelectedDeskClockFragment().onLeftButtonClick(mLeftButton));
+        mRightButton.setOnClickListener(view ->
+                getSelectedDeskClockFragment().onRightButtonClick(mRightButton));
 
         final long duration = UiDataModel.getUiDataModel().getShortAnimationDuration();
 
