@@ -40,7 +40,6 @@ import androidx.annotation.StringRes;
 import androidx.appcompat.app.ActionBar;
 import androidx.appcompat.widget.Toolbar;
 import androidx.fragment.app.Fragment;
-import androidx.viewpager.widget.ViewPager;
 
 import com.android.deskclock.actionbarmenu.MenuItemControllerFactory;
 import com.android.deskclock.actionbarmenu.NightModeMenuItemController;
@@ -73,9 +72,6 @@ import java.util.List;
 public class DeskClock extends BaseActivity
         implements FabContainer, LabelDialogFragment.AlarmLabelDialogHandler {
 
-    /** Models the interesting state of display the {@link #mFab} button may inhabit. */
-    private enum FabState { SHOWING, HIDE_ARMED, HIDING }
-
     /** Coordinates handling of context menu items. */
     private final OptionsMenuManager mOptionsMenuManager = new OptionsMenuManager();
 
@@ -104,9 +100,6 @@ public class DeskClock extends BaseActivity
     /** The view to which snackbar items are anchored. */
     private View mSnackbarAnchor;
 
-    /** The current display state of the {@link #mFab}. */
-    private FabState mFabState = FabState.SHOWING;
-
     /** The single floating-action button shared across all tabs in the user interface. */
     private ImageView mFab;
 
@@ -115,9 +108,6 @@ public class DeskClock extends BaseActivity
 
     /** The button right of the {@link #mFab} shared across all tabs in the user interface. */
     private ImageView mRightButton;
-
-    /** The ViewPager that pages through the fragments representing the content of the tabs. */
-    private ViewPager mFragmentTabPager;
 
     /** The view that displays the current tab's title */
     private TextView mTitleView;
@@ -541,8 +531,7 @@ public class DeskClock extends BaseActivity
     }
 
     /**
-     * Configure the {@link #mFragmentTabPager} and {@link #mBottomNavigation} to display
-     * UiDataModel's selected tab.
+     * Configure the {@link #mBottomNavigation} to display UiDataModel's selected tab.
      */
     private void updateCurrentTab() {
         // Fetch the selected tab from the source of truth: UiDataModel.
@@ -572,7 +561,7 @@ public class DeskClock extends BaseActivity
      */
     private final class SilentSettingChangeWatcher implements OnSilentSettingsListener {
         @Override
-        public void onSilentSettingsChange(SilentSetting before, SilentSetting after) {
+        public void onSilentSettingsChange(SilentSetting after) {
             if (mShowSilentSettingSnackbarRunnable != null) {
                 mSnackbarAnchor.removeCallbacks(mShowSilentSettingSnackbarRunnable);
                 mShowSilentSettingSnackbarRunnable = null;
@@ -617,8 +606,7 @@ public class DeskClock extends BaseActivity
      */
     private final class TabChangeWatcher implements TabListener {
         @Override
-        public void selectedTabChanged(UiDataModel.Tab oldSelectedTab,
-                UiDataModel.Tab newSelectedTab) {
+        public void selectedTabChanged(UiDataModel.Tab newSelectedTab) {
             // Update the view pager and tab layout to agree with the model.
             updateCurrentTab();
 

@@ -26,7 +26,6 @@ import android.widget.Button;
 import android.widget.ListView;
 
 import com.android.deskclock.provider.Alarm;
-import com.android.deskclock.widget.selector.AlarmSelection;
 import com.android.deskclock.widget.selector.AlarmSelectionAdapter;
 
 import java.util.ArrayList;
@@ -44,7 +43,7 @@ public class AlarmSelectionActivity extends ListActivity {
     public static final String EXTRA_ACTION = "com.android.deskclock.EXTRA_ACTION";
     public static final String EXTRA_ALARMS = "com.android.deskclock.EXTRA_ALARMS";
 
-    private final List<AlarmSelection> mSelections = new ArrayList<>();
+    private final List<Alarm> mSelections = new ArrayList<>();
 
     private int mAction;
 
@@ -73,10 +72,7 @@ public class AlarmSelectionActivity extends ListActivity {
         // so no need to check if alarmsFromIntent is empty
         for (Parcelable parcelable : alarmsFromIntent) {
             final Alarm alarm = (Alarm) parcelable;
-
-            // filling mSelections that go into the UI picker list
-            final String label = String.format(Locale.US, "%d %02d", alarm.hour, alarm.minutes);
-            mSelections.add(new AlarmSelection(label, alarm));
+            mSelections.add(alarm);
         }
 
         setListAdapter(new AlarmSelectionAdapter(this, R.layout.alarm_row, mSelections));
@@ -86,8 +82,7 @@ public class AlarmSelectionActivity extends ListActivity {
     public void onListItemClick(ListView l, View v, int position, long id) {
         super.onListItemClick(l, v, position, id);
         // id corresponds to mSelections id because the view adapter used mSelections
-        final AlarmSelection selection = mSelections.get((int) id);
-        final Alarm alarm = selection.getAlarm();
+        final Alarm alarm = mSelections.get((int) id);
         if (alarm != null) {
             new ProcessAlarmActionAsync(alarm, this, mAction).execute();
         }

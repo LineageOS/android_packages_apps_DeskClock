@@ -106,7 +106,7 @@ public abstract class AlarmItemViewHolder extends ItemAdapter.ItemViewHolder<Ala
         clock.setTypeface(oldTypeface, alarm.enabled ? Typeface.BOLD : Typeface.NORMAL);
     }
 
-    protected boolean bindPreemptiveDismissButton(Context context, Alarm alarm,
+    protected void bindPreemptiveDismissButton(Context context, Alarm alarm,
             AlarmInstance alarmInstance) {
         final boolean canBind = alarm.canPreemptivelyDismiss() && alarmInstance != null;
         if (canBind) {
@@ -121,7 +121,6 @@ public abstract class AlarmItemViewHolder extends ItemAdapter.ItemViewHolder<Ala
             preemptiveDismissButton.setVisibility(View.GONE);
             preemptiveDismissButton.setClickable(false);
         }
-        return canBind;
     }
 
     protected void bindRepeatText(Context context, Alarm alarm) {

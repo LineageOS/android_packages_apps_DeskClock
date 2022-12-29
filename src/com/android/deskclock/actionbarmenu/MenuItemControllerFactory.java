@@ -38,11 +38,6 @@ public final class MenuItemControllerFactory {
         mMenuItemProviders = new ArrayList<>();
     }
 
-    public MenuItemControllerFactory addMenuItemProvider(MenuItemProvider provider) {
-        mMenuItemProviders.add(provider);
-        return this;
-    }
-
     public MenuItemController[] buildMenuItemControllers(Activity activity) {
         final int providerSize = mMenuItemProviders.size();
         final MenuItemController[] controllers = new MenuItemController[providerSize];

@@ -132,11 +132,10 @@ final class SilentSettingsModel {
      */
     private void setSilentState(SilentSetting silentSetting) {
         if (mSilentSetting != silentSetting) {
-            final SilentSetting oldReason = mSilentSetting;
             mSilentSetting = silentSetting;
 
             for (OnSilentSettingsListener listener : mListeners) {
-                listener.onSilentSettingsChange(oldReason, silentSetting);
+                listener.onSilentSettingsChange(silentSetting);
             }
         }
     }

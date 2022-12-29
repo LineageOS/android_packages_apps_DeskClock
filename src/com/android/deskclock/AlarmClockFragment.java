@@ -409,7 +409,7 @@ public final class AlarmClockFragment extends DeskClockFragment implements
     }
 
     @Override
-    public void onTimeSet(TimePickerDialogFragment fragment, int hourOfDay, int minute) {
+    public void onTimeSet(int hourOfDay, int minute) {
         mAlarmTimeClickHandler.onTimeSet(hourOfDay, minute);
     }
 
