@@ -160,11 +160,6 @@ final class StopwatchModel {
             updateNotification();
         }
 
-        // Notify listeners of the new lap.
-        for (StopwatchListener stopwatchListener : mStopwatchListeners) {
-            stopwatchListener.lapAdded(lap);
-        }
-
         return lap;
     }
 

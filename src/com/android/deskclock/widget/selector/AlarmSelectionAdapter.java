@@ -33,9 +33,9 @@ import com.android.deskclock.widget.TextTime;
 import java.util.Calendar;
 import java.util.List;
 
-public class AlarmSelectionAdapter extends ArrayAdapter<AlarmSelection> {
+public class AlarmSelectionAdapter extends ArrayAdapter<Alarm> {
 
-    public AlarmSelectionAdapter(Context context, int id, List<AlarmSelection> alarms) {
+    public AlarmSelectionAdapter(Context context, int id, List<Alarm> alarms) {
         super(context, id, alarms);
     }
 
@@ -49,8 +49,7 @@ public class AlarmSelectionAdapter extends ArrayAdapter<AlarmSelection> {
             row = inflater.inflate(R.layout.alarm_row, parent, false);
         }
 
-        final AlarmSelection selection = getItem(position);
-        final Alarm alarm = selection.getAlarm();
+        final Alarm alarm = getItem(position);
 
         final TextTime alarmTime = row.findViewById(R.id.digital_clock);
         alarmTime.setTime(alarm.hour, alarm.minutes);

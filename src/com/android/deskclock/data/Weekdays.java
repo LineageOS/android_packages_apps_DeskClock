@@ -70,9 +70,6 @@ public final class Weekdays {
     /** All valid bits set. */
     private static final int ALL_DAYS = 0x7F;
 
-    /** An instance with all weekdays in the weekly repeat cycle. */
-    public static final Weekdays ALL = Weekdays.fromBits(ALL_DAYS);
-
     /** An instance with no weekdays in the weekly repeat cycle. */
     public static final Weekdays NONE = Weekdays.fromBits(0);
 

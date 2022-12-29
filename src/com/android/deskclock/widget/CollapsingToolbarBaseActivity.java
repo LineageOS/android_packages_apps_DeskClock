@@ -131,22 +131,6 @@ public class CollapsingToolbarBaseActivity extends FragmentActivity {
         return true;
     }
 
-    /**
-     * Returns an instance of collapsing toolbar.
-     */
-    @Nullable
-    public CollapsingToolbarLayout getCollapsingToolbarLayout() {
-        return mCollapsingToolbarLayout;
-    }
-
-    /**
-     * Return an instance of app bar.
-     */
-    @Nullable
-    public AppBarLayout getAppBarLayout() {
-        return mAppBarLayout;
-    }
-
     private void disableCollapsingToolbarLayoutScrollingBehavior() {
         if (mAppBarLayout == null) {
             return;

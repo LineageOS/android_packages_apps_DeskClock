@@ -99,11 +99,6 @@ public final class TimerService extends Service {
                 .putExtra(EXTRA_TIMER_ID, timerId);
     }
 
-    public static Intent createUpdateNotificationIntent(Context context) {
-        return new Intent(context, TimerService.class)
-                .setAction(ACTION_UPDATE_NOTIFICATION);
-    }
-
     @Override
     public IBinder onBind(Intent intent) {
         return null;
