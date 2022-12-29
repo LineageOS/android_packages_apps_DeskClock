@@ -64,9 +64,9 @@ public class AnalogClock extends FrameLayout {
     private final ImageView mHourHand;
     private final ImageView mMinuteHand;
     private final ImageView mSecondHand;
+    private final String mDescFormat;
 
     private Calendar mTime;
-    private String mDescFormat;
     private TimeZone mTimeZone;
     private boolean mEnableSeconds = true;
 

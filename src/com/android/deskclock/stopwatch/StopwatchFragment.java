@@ -604,7 +604,7 @@ public final class StopwatchFragment extends DeskClockFragment {
     /**
      * Checks if the user is pressing inside of the stopwatch circle.
      */
-    private final class CircleTouchListener implements View.OnTouchListener {
+    private static final class CircleTouchListener implements View.OnTouchListener {
         @Override
         public boolean onTouch(View view, MotionEvent event) {
             final int actionMasked = event.getActionMasked();
