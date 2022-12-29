@@ -146,7 +146,7 @@ public final class ClockFragment extends DeskClockFragment {
         mDateFormatForAccessibility = getString(R.string.full_wday_month_day_no_year);
 
         // Watch for system events that effect clock time or format.
-        if (mAlarmChangeReceiver != null) {
+        if (activity != null && mAlarmChangeReceiver != null) {
             final IntentFilter filter = new IntentFilter(ACTION_NEXT_ALARM_CLOCK_CHANGED);
             activity.registerReceiver(mAlarmChangeReceiver, filter);
         }
@@ -171,7 +171,7 @@ public final class ClockFragment extends DeskClockFragment {
         super.onPause();
 
         final Activity activity = getActivity();
-        if (mAlarmChangeReceiver != null) {
+        if (activity != null && mAlarmChangeReceiver != null) {
             activity.unregisterReceiver(mAlarmChangeReceiver);
         }
     }
