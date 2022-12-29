@@ -36,7 +36,7 @@ public final class TextSizeHelper {
     private final TextPaint mMeasurePaint = new TextPaint();
 
     // The maximum size the text is allowed to be (in pixels).
-    private float mMaxTextSize;
+    private final float mMaxTextSize;
 
     // The maximum width the text is allowed to be (in pixels).
     private int mWidthConstraint = MAX_VALUE;

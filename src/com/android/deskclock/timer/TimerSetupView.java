@@ -49,7 +49,7 @@ public class TimerSetupView extends LinearLayout implements View.OnClickListener
     private final int[] mInput = { 0, 0, 0, 0, 0, 0 };
 
     private int mInputPointer = -1;
-    private CharSequence mTimeTemplate;
+    private final CharSequence mTimeTemplate;
 
     private TextView mTimeView;
     private View mDeleteView;
