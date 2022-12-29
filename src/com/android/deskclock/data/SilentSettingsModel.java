@@ -36,13 +36,11 @@ import android.media.AudioManager;
 import android.media.RingtoneManager;
 import android.net.Uri;
 import android.os.AsyncTask;
-import android.os.Build;
 import android.os.Handler;
 import android.os.Looper;
 
 import androidx.core.app.NotificationManagerCompat;
 
-import com.android.deskclock.Utils;
 import com.android.deskclock.data.DataModel.SilentSetting;
 
 import java.util.ArrayList;
