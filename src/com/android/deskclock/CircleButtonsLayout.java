@@ -16,7 +16,8 @@ import android.widget.TextView;
  */
 public class CircleButtonsLayout extends FrameLayout {
 
-    private float mDiamOffset;
+    private final float mDiamOffset;
+
     private View mCircleView;
     private Button mResetAddButton;
     private TextView mLabel;

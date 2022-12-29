@@ -267,7 +267,7 @@ public class AlarmService extends Service {
 
         private boolean mStopped;
         private boolean mWasFaceUp;
-        private boolean[] mSamples = new boolean[SENSOR_SAMPLES];
+        private final boolean[] mSamples = new boolean[SENSOR_SAMPLES];
         private int mSampleIndex;
 
         @Override
@@ -333,7 +333,7 @@ public class AlarmService extends Service {
     private final SensorEventListener mShakeListener = new SensorEventListener() {
         private static final float SENSITIVITY = 16;
         private static final int BUFFER = 5;
-        private float[] gravity = new float[3];
+        private final float[] gravity = new float[3];
         private float average = 0;
         private int fill = 0;
 

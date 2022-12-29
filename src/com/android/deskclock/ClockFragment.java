@@ -202,7 +202,7 @@ public final class ClockFragment extends DeskClockFragment {
     }
 
     @Override
-    public final int getFabTargetVisibility() {
+    public int getFabTargetVisibility() {
         return View.VISIBLE;
     }
 
