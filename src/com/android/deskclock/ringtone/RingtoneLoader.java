@@ -16,12 +16,13 @@
 
 package com.android.deskclock.ringtone;
 
-import android.content.AsyncTaskLoader;
 import android.content.Context;
 import android.database.Cursor;
 import android.database.MatrixCursor;
 import android.media.RingtoneManager;
 import android.net.Uri;
+
+import androidx.loader.content.AsyncTaskLoader;
 
 import com.android.deskclock.ItemAdapter;
 import com.android.deskclock.LogUtils;
