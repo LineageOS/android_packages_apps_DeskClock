@@ -308,21 +308,10 @@ public final class AlarmClockFragment extends DeskClockFragment implements
 
         if (mRecyclerView.getItemAnimator().isRunning()) {
             // RecyclerView is currently animating -> defer update.
-            mRecyclerView.getItemAnimator().isRunning(
-                    new RecyclerView.ItemAnimator.ItemAnimatorFinishedListener() {
-                @Override
-                public void onAnimationsFinished() {
-                    setAdapterItems(items, updateToken);
-                }
-            });
+            mRecyclerView.getItemAnimator().isRunning(() -> setAdapterItems(items, updateToken));
         } else if (mRecyclerView.isComputingLayout()) {
             // RecyclerView is currently computing a layout -> defer update.
-            mRecyclerView.post(new Runnable() {
-                @Override
-                public void run() {
-                    setAdapterItems(items, updateToken);
-                }
-            });
+            mRecyclerView.post(() -> setAdapterItems(items, updateToken));
         } else {
             mCurrentUpdateToken = updateToken;
             mItemAdapter.setItems(items);
