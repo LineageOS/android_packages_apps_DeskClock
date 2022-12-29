@@ -31,7 +31,6 @@ import android.content.ContentUris;
 import android.content.Context;
 import android.content.Intent;
 import android.net.Uri;
-import android.os.AsyncTask;
 import android.os.Bundle;
 import android.os.Parcelable;
 import android.provider.AlarmClock;
@@ -55,6 +54,8 @@ import java.util.Calendar;
 import java.util.Date;
 import java.util.Iterator;
 import java.util.List;
+import java.util.concurrent.ExecutorService;
+import java.util.concurrent.Executors;
 
 /**
  * This activity is never visible. It processes all public intents defined by {@link AlarmClock}
@@ -165,7 +166,7 @@ public class HandleApiCalls extends Activity {
         Events.sendAlarmEvent(R.string.action_dismiss, R.string.label_intent);
     }
 
-    private static class DismissAlarmAsync extends AsyncTask<Void, Void, Void> {
+    private static class DismissAlarmAsync {
 
         private final Context mContext;
         private final Intent mIntent;
@@ -177,66 +178,69 @@ public class HandleApiCalls extends Activity {
             mActivity = activity;
         }
 
-        @Override
-        protected Void doInBackground(Void... parameters) {
-            final ContentResolver cr = mContext.getContentResolver();
-            final List<Alarm> alarms = getEnabledAlarms(mContext);
-            if (alarms.isEmpty()) {
-                final String reason = mContext.getString(R.string.no_scheduled_alarms);
-                Controller.getController().notifyVoiceFailure(mActivity, reason);
-                LOGGER.i("No scheduled alarms");
-                return null;
-            }
-
-            // remove Alarms in MISSED, DISMISSED, and PREDISMISSED states
-            for (Iterator<Alarm> i = alarms.iterator(); i.hasNext();) {
-                final AlarmInstance instance = AlarmInstance.getNextUpcomingInstanceByAlarmId(
-                        cr, i.next().id);
-                if (instance == null || instance.mAlarmState > FIRED_STATE) {
-                    i.remove();
+        protected void execute() {
+            ExecutorService executor = Executors.newSingleThreadExecutor();
+            executor.execute(() -> {
+                final ContentResolver cr = mContext.getContentResolver();
+                final List<Alarm> alarms = getEnabledAlarms(mContext);
+                if (alarms.isEmpty()) {
+                    final String reason = mContext.getString(R.string.no_scheduled_alarms);
+                    Controller.getController().notifyVoiceFailure(mActivity, reason);
+                    LOGGER.i("No scheduled alarms");
+                    return;
                 }
-            }
 
-            final String searchMode = mIntent.getStringExtra(AlarmClock.EXTRA_ALARM_SEARCH_MODE);
-            if (searchMode == null && alarms.size() > 1) {
-                // shows the UI where user picks which alarm they want to DISMISS
-                final Intent pickSelectionIntent = new Intent(mContext,
-                        AlarmSelectionActivity.class)
-                        .setFlags(Intent.FLAG_ACTIVITY_NEW_TASK)
-                        .putExtra(EXTRA_ACTION, ACTION_DISMISS)
-                        .putExtra(EXTRA_ALARMS, alarms.toArray(new Parcelable[0]));
-                mContext.startActivity(pickSelectionIntent);
-                final String voiceMessage = mContext.getString(R.string.pick_alarm_to_dismiss);
-                Controller.getController().notifyVoiceSuccess(mActivity, voiceMessage);
-                return null;
-            }
+                // remove Alarms in MISSED, DISMISSED, and PREDISMISSED states
+                for (Iterator<Alarm> i = alarms.iterator(); i.hasNext();) {
+                    final AlarmInstance instance = AlarmInstance.getNextUpcomingInstanceByAlarmId(
+                            cr, i.next().id);
+                    if (instance == null || instance.mAlarmState > FIRED_STATE) {
+                        i.remove();
+                    }
+                }
 
-            // fetch the alarms that are specified by the intent
-            final FetchMatchingAlarmsAction fmaa =
-                    new FetchMatchingAlarmsAction(mContext, alarms, mIntent, mActivity);
-            fmaa.run();
-            final List<Alarm> matchingAlarms = fmaa.getMatchingAlarms();
+                final String searchMode = mIntent.getStringExtra(
+                        AlarmClock.EXTRA_ALARM_SEARCH_MODE);
+                if (searchMode == null && alarms.size() > 1) {
+                    // shows the UI where user picks which alarm they want to DISMISS
+                    final Intent pickSelectionIntent = new Intent(mContext,
+                            AlarmSelectionActivity.class)
+                            .setFlags(Intent.FLAG_ACTIVITY_NEW_TASK)
+                            .putExtra(EXTRA_ACTION, ACTION_DISMISS)
+                            .putExtra(EXTRA_ALARMS, alarms.toArray(new Parcelable[0]));
+                    mContext.startActivity(pickSelectionIntent);
+                    final String voiceMessage = mContext.getString(R.string.pick_alarm_to_dismiss);
+                    Controller.getController().notifyVoiceSuccess(mActivity, voiceMessage);
+                    return;
+                }
 
-            // If there are multiple matching alarms and it wasn't expected
-            // disambiguate what the user meant
-            if (!AlarmClock.ALARM_SEARCH_MODE_ALL.equals(searchMode) && matchingAlarms.size() > 1) {
-              final Intent pickSelectionIntent = new Intent(mContext, AlarmSelectionActivity.class)
-                        .setFlags(Intent.FLAG_ACTIVITY_NEW_TASK)
-                        .putExtra(EXTRA_ACTION, ACTION_DISMISS)
-                        .putExtra(EXTRA_ALARMS,
-                                matchingAlarms.toArray(new Parcelable[0]));
-                mContext.startActivity(pickSelectionIntent);
-                final String voiceMessage = mContext.getString(R.string.pick_alarm_to_dismiss);
-                Controller.getController().notifyVoiceSuccess(mActivity, voiceMessage);
-                return null;
-            }
+                // fetch the alarms that are specified by the intent
+                final FetchMatchingAlarmsAction fmaa =
+                        new FetchMatchingAlarmsAction(mContext, alarms, mIntent, mActivity);
+                fmaa.run();
+                final List<Alarm> matchingAlarms = fmaa.getMatchingAlarms();
 
-            // Apply the action to the matching alarms
-            for (Alarm alarm : matchingAlarms) {
-                dismissAlarm(alarm, mActivity);
-                LOGGER.i("Alarm dismissed: " + alarm);
-            }
-            return null;
+                // If there are multiple matching alarms and it wasn't expected
+                // disambiguate what the user meant
+                if (!AlarmClock.ALARM_SEARCH_MODE_ALL.equals(searchMode) &&
+                        matchingAlarms.size() > 1) {
+                  final Intent pickSelectionIntent = new Intent(mContext,
+                          AlarmSelectionActivity.class)
+                          .setFlags(Intent.FLAG_ACTIVITY_NEW_TASK)
+                          .putExtra(EXTRA_ACTION, ACTION_DISMISS)
+                          .putExtra(EXTRA_ALARMS, matchingAlarms.toArray(new Parcelable[0]));
+                    mContext.startActivity(pickSelectionIntent);
+                    final String voiceMessage = mContext.getString(R.string.pick_alarm_to_dismiss);
+                    Controller.getController().notifyVoiceSuccess(mActivity, voiceMessage);
+                    return;
+                }
+
+                // Apply the action to the matching alarms
+                for (Alarm alarm : matchingAlarms) {
+                    dismissAlarm(alarm, mActivity);
+                    LOGGER.i("Alarm dismissed: " + alarm);
+                }
+            });
         }
 
         private static List<Alarm> getEnabledAlarms(Context context) {
@@ -247,36 +251,23 @@ public class HandleApiCalls extends Activity {
     }
 
     private void handleSnoozeAlarm() {
-        new SnoozeAlarmAsync(this).execute();
-    }
-
-    private static class SnoozeAlarmAsync extends AsyncTask<Void, Void, Void> {
-
-        private final Context mContext;
-        private final Activity mActivity;
-
-        public SnoozeAlarmAsync(Activity activity) {
-            mContext = activity.getApplicationContext();
-            mActivity = activity;
-        }
-
-        @Override
-        protected Void doInBackground(Void... parameters) {
-            final ContentResolver cr = mContext.getContentResolver();
+        ExecutorService executor = Executors.newSingleThreadExecutor();
+        executor.execute(() -> {
+            final Context context = getApplicationContext();
+            final ContentResolver cr = context.getContentResolver();
             final List<AlarmInstance> alarmInstances = AlarmInstance.getInstancesByState(
                     cr, FIRED_STATE);
             if (alarmInstances.isEmpty()) {
-                final String reason = mContext.getString(R.string.no_firing_alarms);
-                Controller.getController().notifyVoiceFailure(mActivity, reason);
+                final String reason = context.getString(R.string.no_firing_alarms);
+                Controller.getController().notifyVoiceFailure(this, reason);
                 LOGGER.i("No firing alarms");
-                return null;
+                return;
             }
 
             for (AlarmInstance firingAlarmInstance : alarmInstances) {
-                snoozeAlarm(firingAlarmInstance, mContext, mActivity);
+                snoozeAlarm(firingAlarmInstance, context, this);
             }
-            return null;
-        }
+        });
     }
 
     static void snoozeAlarm(AlarmInstance alarmInstance, Context context, Activity activity) {
