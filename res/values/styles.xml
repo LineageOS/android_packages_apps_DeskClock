@@ -35,6 +35,8 @@
     </style>
 
     <style name="widget_label" parent="label">
+        <item name="android:textAllCaps">true</item>
+        <item name="android:letterSpacing">0.15</item>
         <item name="android:shadowRadius">@dimen/widget_shadow_radius</item>
         <item name="android:shadowColor">@color/widget_shadow_color</item>
         <item name="android:shadowDx">@dimen/widget_shadow_dx</item>
@@ -57,6 +59,7 @@
     <style name="body">
         <item name="android:textSize">14sp</item>
         <item name="android:textColor">@color/white</item>
+        <item name="android:fontFamily">sans-serif-medium</item>
     </style>
 
     <style name="big_thin">
@@ -74,6 +77,7 @@
         <item name="android:shadowColor">@color/widget_shadow_color</item>
         <item name="android:shadowDx">@dimen/widget_shadow_dx</item>
         <item name="android:shadowDy">@dimen/widget_shadow_dy</item>
+        <item name="android:fontFamily">sans-serif-thin</item>
     </style>
 
     <style name="PrimaryLabelTextParentAppearance">
@@ -81,14 +85,19 @@
         <item name="android:textSize">@dimen/label_text_size</item>
     </style>
 
-    <style name="PrimaryLabelTextAppearance" parent="PrimaryLabelTextParentAppearance" />
+    <style name="PrimaryLabelTextAppearance" parent="PrimaryLabelTextParentAppearance">
+
+        <item name="android:fontFamily">sans-serif-medium</item>
+    </style>
 
     <style name="SecondaryLabelTextParentAppearance">
         <item name="android:textColor">@color/white_63p</item>
         <item name="android:textSize">@dimen/label_text_size</item>
     </style>
 
-    <style name="SecondaryLabelTextAppearance" parent="SecondaryLabelTextParentAppearance" />
+    <style name="SecondaryLabelTextAppearance" parent="SecondaryLabelTextParentAppearance">
+        <item name="android:fontFamily">sans-serif-medium</item>
+    </style>
 
     <style name="navText">
         <item name="android:textSize">12sp</item>

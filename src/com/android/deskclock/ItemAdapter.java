@@ -101,12 +101,9 @@ public class ItemAdapter<T extends ItemAdapter.ItemHolder>
 
     /**
      * Convenience for calling {@link #setHasStableIds(boolean)} with {@code true}.
-     *
-     * @return this object, allowing calls to methods in this class to be chained
      */
-    public ItemAdapter setHasStableIds() {
+    public void setHasStableIds() {
         setHasStableIds(true);
-        return this;
     }
 
     /**
@@ -143,9 +140,8 @@ public class ItemAdapter<T extends ItemAdapter.ItemHolder>
      * between new and old holders that have matching {@link ItemHolder#itemId} values.
      *
      * @param itemHolders the new list of item holders
-     * @return this object, allowing calls to methods in this class to be chained
      */
-    public ItemAdapter setItems(List<T> itemHolders) {
+    public void setItems(List<T> itemHolders) {
         final List<T> oldItemHolders = mItemHolders;
         if (oldItemHolders != itemHolders) {
             if (oldItemHolders != null) {
@@ -188,8 +184,6 @@ public class ItemAdapter<T extends ItemAdapter.ItemHolder>
             mItemHolders = itemHolders;
             notifyDataSetChanged();
         }
-
-        return this;
     }
 
     /**
@@ -215,16 +209,14 @@ public class ItemAdapter<T extends ItemAdapter.ItemHolder>
      * {@link #notifyItemRemoved} to update the UI.
      *
      * @param itemHolder the item holder to remove
-     * @return this object, allowing calls to methods in this class to be chained
      */
-    public ItemAdapter removeItem(@NonNull T itemHolder) {
+    public void removeItem(@NonNull T itemHolder) {
         final int index = mItemHolders.indexOf(itemHolder);
         if (index >= 0) {
             itemHolder = mItemHolders.remove(index);
             itemHolder.removeOnItemChangedListener(mItemChangedNotifier);
             notifyItemRemoved(index);
         }
-        return this;
     }
 
     /**
@@ -507,7 +499,7 @@ public class ItemAdapter<T extends ItemAdapter.ItemHolder>
              * @param viewType the unique id of the item view to create
              * @return a new initialized {@link ItemViewHolder}
              */
-            public ItemViewHolder<?> createViewHolder(ViewGroup parent, int viewType);
+            ItemViewHolder<?> createViewHolder(ViewGroup parent, int viewType);
         }
     }
 

@@ -137,10 +137,10 @@ public final class AsyncRingtonePlayer {
                         }
                         break;
                     case EVENT_STOP:
-                        getPlaybackDelegate().stop(mContext);
+                        getPlaybackDelegate().stop();
                         break;
                     case EVENT_VOLUME:
-                        if (getPlaybackDelegate().adjustVolume(mContext)) {
+                        if (getPlaybackDelegate().adjustVolume()) {
                             scheduleVolumeAdjustment();
                         }
                         break;
@@ -236,12 +236,12 @@ public final class AsyncRingtonePlayer {
         /**
          * Stop any ongoing ringtone playback.
          */
-        void stop(Context context);
+        void stop();
 
         /**
          * @return {@code true} iff another volume adjustment should be scheduled
          */
-        boolean adjustVolume(Context context);
+        boolean adjustVolume();
     }
 
     /**
@@ -360,7 +360,7 @@ public final class AsyncRingtonePlayer {
          * Stops the playback of the ringtone. Executes on the ringtone-thread.
          */
         @Override
-        public void stop(Context context) {
+        public void stop() {
             checkAsyncRingtonePlayerThread();
 
             LOGGER.i("Stop ringtone via android.media.Ringtone.");
@@ -384,7 +384,7 @@ public final class AsyncRingtonePlayer {
          * Adjusts the volume of the ringtone being played to create a crescendo effect.
          */
         @Override
-        public boolean adjustVolume(Context context) {
+        public boolean adjustVolume() {
             checkAsyncRingtonePlayerThread();
 
             // If ringtone is absent or not playing, ignore volume adjustment.

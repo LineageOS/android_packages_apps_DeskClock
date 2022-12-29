@@ -70,13 +70,6 @@ public abstract class DeskClockFragment extends Fragment implements FabContainer
     }
 
     /**
-     * @param color the newly installed app window color
-     */
-    protected void onAppColorChanged(@ColorInt int color) {
-        // Do nothing here, only in derived classes
-    }
-
-    /**
      * @param fabContainer the container that houses the fab and its left and right buttons
      */
     public final void setFabContainer(FabContainer fabContainer) {
