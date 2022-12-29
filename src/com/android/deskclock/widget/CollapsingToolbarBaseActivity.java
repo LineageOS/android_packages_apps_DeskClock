@@ -19,7 +19,6 @@ package com.android.deskclock.widget;
 import android.app.ActionBar;
 import android.graphics.BlendMode;
 import android.graphics.BlendModeColorFilter;
-import android.graphics.PorterDuff;
 import android.os.Bundle;
 import android.view.LayoutInflater;
 import android.view.View;

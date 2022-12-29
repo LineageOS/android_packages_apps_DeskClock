@@ -19,7 +19,6 @@ package com.android.deskclock;
 import android.app.Application;
 import android.content.Context;
 import android.content.SharedPreferences;
-import android.os.Build;
 import android.preference.PreferenceManager;
 
 import com.android.deskclock.controller.Controller;
