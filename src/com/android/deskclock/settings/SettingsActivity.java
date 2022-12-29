@@ -104,7 +104,8 @@ public final class SettingsActivity extends CollapsingToolbarBaseActivity {
         @Override
         public void onViewCreated(@NonNull View view, @Nullable Bundle savedInstanceState) {
             super.onViewCreated(view, savedInstanceState);
-            int paddingLeftRight = Math.round(getResources().getDimension(R.dimen.settings_padding) *
+            int paddingLeftRight = Math.round(
+                    getResources().getDimension(R.dimen.settings_padding) *
                     getResources().getDisplayMetrics().densityDpi / 160f);
             view.setPadding(paddingLeftRight, view.getPaddingTop(), paddingLeftRight,
                     view.getPaddingBottom());
@@ -302,8 +303,10 @@ public final class SettingsActivity extends CollapsingToolbarBaseActivity {
         }
 
         private void refreshListPreference(ListPreference preference) {
-            preference.setSummary(preference.getEntry());
-            preference.setOnPreferenceChangeListener(this);
+            if (preference != null) {
+                preference.setSummary(preference.getEntry());
+                preference.setOnPreferenceChangeListener(this);
+            }
         }
 
         private void updateAutoSnoozeSummary(ListPreference listPref, String delay) {

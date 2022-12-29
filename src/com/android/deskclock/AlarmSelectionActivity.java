@@ -29,6 +29,7 @@ import com.android.deskclock.provider.Alarm;
 import com.android.deskclock.widget.selector.AlarmSelection;
 import com.android.deskclock.widget.selector.AlarmSelectionAdapter;
 
+import java.lang.ref.WeakReference;
 import java.util.ArrayList;
 import java.util.List;
 import java.util.Locale;
@@ -97,12 +98,12 @@ public class AlarmSelectionActivity extends ListActivity {
     private static class ProcessAlarmActionAsync extends AsyncTask<Void, Void, Void> {
 
         private final Alarm mAlarm;
-        private final Activity mActivity;
+        private final WeakReference<Activity> mActivity;
         private final int mAction;
 
         public ProcessAlarmActionAsync(Alarm alarm, Activity activity, int action) {
             mAlarm = alarm;
-            mActivity = activity;
+            mActivity = new WeakReference<>(activity);
             mAction = action;
         }
 
@@ -110,7 +111,7 @@ public class AlarmSelectionActivity extends ListActivity {
         protected Void doInBackground(Void... parameters) {
             switch (mAction) {
                 case ACTION_DISMISS:
-                    HandleApiCalls.dismissAlarm(mAlarm, mActivity);
+                    HandleApiCalls.dismissAlarm(mAlarm, mActivity.get());
                     break;
                 case ACTION_INVALID:
                     LogUtils.i("Invalid action");
