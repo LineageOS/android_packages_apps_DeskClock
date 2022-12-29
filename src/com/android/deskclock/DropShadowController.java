@@ -27,7 +27,6 @@ import android.widget.ListView;
 import com.android.deskclock.data.DataModel;
 import com.android.deskclock.uidata.TabScrollListener;
 import com.android.deskclock.uidata.UiDataModel;
-import com.android.deskclock.uidata.UiDataModel.Tab;
 
 import static com.android.deskclock.AnimatorUtils.getAlphaAnimator;
 
@@ -165,7 +164,7 @@ public final class DropShadowController {
         }
 
         // UiDataModel reports scroll change.
-        public void selectedTabScrollToTopChanged(Tab selectedTab, boolean scrolledToTop) {
+        public void selectedTabScrollToTopChanged(boolean scrolledToTop) {
             updateDropShadow(!scrolledToTop);
         }
     }

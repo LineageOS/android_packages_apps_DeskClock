@@ -47,11 +47,11 @@ public class DeskClockBackupAgent extends BackupAgent {
 
     @Override
     public void onBackup(ParcelFileDescriptor oldState, BackupDataOutput data,
-            ParcelFileDescriptor newState) throws IOException { }
+            ParcelFileDescriptor newState) { }
 
     @Override
     public void onRestore(BackupDataInput data, int appVersionCode,
-            ParcelFileDescriptor newState) throws IOException { }
+            ParcelFileDescriptor newState) { }
 
     @Override
     public void onRestoreFile(@NonNull ParcelFileDescriptor data, long size, File destination,

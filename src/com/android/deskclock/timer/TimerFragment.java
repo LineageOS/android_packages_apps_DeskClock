@@ -272,9 +272,6 @@ public final class TimerFragment extends DeskClockFragment {
                     fab.setContentDescription(fab.getResources().getString(R.string.timer_stop));
                     break;
                 case RESET:
-                    fab.setImageResource(R.drawable.ic_pause_play);
-                    fab.setContentDescription(fab.getResources().getString(R.string.timer_start));
-                    break;
                 case PAUSED:
                     fab.setImageResource(R.drawable.ic_pause_play);
                     fab.setContentDescription(fab.getResources().getString(R.string.timer_start));

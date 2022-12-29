@@ -26,9 +26,4 @@ public interface StopwatchListener {
      * @param after the stopwatch state after the update
      */
     void stopwatchUpdated(Stopwatch before, Stopwatch after);
-
-    /**
-     * @param lap the lap that was added
-     */
-    void lapAdded(Lap lap);
 }

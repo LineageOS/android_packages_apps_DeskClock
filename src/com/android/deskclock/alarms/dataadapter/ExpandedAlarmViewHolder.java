@@ -84,7 +84,6 @@ public final class ExpandedAlarmViewHolder extends AlarmItemViewHolder {
         }));
 
         // Build button for each day.
-        final LayoutInflater inflater = LayoutInflater.from(context);
         final List<Integer> weekdays = DataModel.getDataModel().getWeekdayOrder().getCalendarDays();
         dayButtons = new CompoundButton[] {
                 itemView.findViewById(R.id.day_button_0),
@@ -212,13 +211,6 @@ public final class ExpandedAlarmViewHolder extends AlarmItemViewHolder {
     }
 
     @Override
-    public Animator onAnimateChange(List<Object> payloads, int fromLeft, int fromTop, int fromRight,
-                                    int fromBottom, long duration) {
-        /* There are no possible partial animations for expanded view holders. */
-        return null;
-    }
-
-    @Override
     public Animator onAnimateChange(final ViewHolder oldHolder, ViewHolder newHolder,
                                     long duration) {
         if (!(oldHolder instanceof AlarmItemViewHolder)
@@ -296,7 +288,6 @@ public final class ExpandedAlarmViewHolder extends AlarmItemViewHolder {
         startDelay += delayIncrement;
         if (daysVisible) {
             repeatDaysAnimation.setStartDelay(startDelay);
-            startDelay += delayIncrement;
         }
 
         final AnimatorSet animatorSet = new AnimatorSet();
@@ -325,9 +316,9 @@ public final class ExpandedAlarmViewHolder extends AlarmItemViewHolder {
     }
 
     private Animator createExpandingAnimator(AlarmItemViewHolder oldHolder, long duration) {
-        final View oldView = oldHolder.itemView;
         final View newView = itemView;
-        final Animator boundsAnimator = AnimatorUtils.getBoundsAnimator(newView, oldView, newView);
+        final Animator boundsAnimator = AnimatorUtils.getBoundsAnimator(newView, oldHolder.itemView,
+                newView);
         boundsAnimator.setDuration(duration);
         boundsAnimator.setInterpolator(AnimatorUtils.INTERPOLATOR_FAST_OUT_SLOW_IN);
 

@@ -59,7 +59,7 @@ public class TimePickerDialogFragment extends DialogFragment {
 
         final Context context = getActivity();
         return new TimePickerDialog(context, (view, hourOfDay, minute1) ->
-                listener.onTimeSet(TimePickerDialogFragment.this, hourOfDay, minute1),
+                listener.onTimeSet(hourOfDay, minute1),
                 hour, minute, DateFormat.is24HourFormat(context));
     }
 
@@ -73,7 +73,7 @@ public class TimePickerDialogFragment extends DialogFragment {
         }
 
         final FragmentManager manager = parentFragment.getChildFragmentManager();
-        if (manager == null || manager.isDestroyed()) {
+        if (manager.isDestroyed()) {
             return;
         }
 
@@ -110,11 +110,9 @@ public class TimePickerDialogFragment extends DialogFragment {
     public interface OnTimeSetListener {
         /**
          * Called when the user is done setting a new time and the dialog has closed.
-         *
-         * @param fragment  the fragment associated with this listener
          * @param hourOfDay the hour that was set
          * @param minute    the minute that was set
          */
-        void onTimeSet(TimePickerDialogFragment fragment, int hourOfDay, int minute);
+        void onTimeSet(int hourOfDay, int minute);
     }
 }

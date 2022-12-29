@@ -279,7 +279,7 @@ class ClockDatabaseHelper extends SQLiteOpenHelper {
         // insert an already used id?
         final SQLiteDatabase db = getWritableDatabase();
         db.beginTransaction();
-        long rowId = -1;
+        long rowId;
         try {
             // Check if we are trying to re-use an existing id.
             final Object value = values.get(ClockContract.AlarmsColumns._ID);

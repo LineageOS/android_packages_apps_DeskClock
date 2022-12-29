@@ -71,7 +71,7 @@ final class TimerDAO {
      */
     static List<Timer> getTimers(SharedPreferences prefs) {
         // Read the set of timer ids.
-        final Set<String> timerIds = prefs.getStringSet(TIMER_IDS, Collections.<String>emptySet());
+        final Set<String> timerIds = prefs.getStringSet(TIMER_IDS, Collections.emptySet());
         final List<Timer> timers = new ArrayList<>(timerIds.size());
 
         // Build a timer using the data associated with each timer id.
@@ -184,6 +184,6 @@ final class TimerDAO {
     }
 
     private static Set<String> getTimerIds(SharedPreferences prefs) {
-        return prefs.getStringSet(TIMER_IDS, Collections.<String>emptySet());
+        return prefs.getStringSet(TIMER_IDS, Collections.emptySet());
     }
 }

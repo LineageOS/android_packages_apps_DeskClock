@@ -368,7 +368,7 @@ public final class ClockFragment extends DeskClockFragment {
                                 + (mShowHomeClock ? 1 : 0);
                         city = getCities().get(position - positionAdjuster);
                     }
-                    ((CityViewHolder) holder).bind(mContext, city, position, mIsPortrait);
+                    ((CityViewHolder) holder).bind(mContext, city);
                     break;
                 case MAIN_CLOCK:
                     ((MainClockViewHolder) holder).bind(mContext, mDateFormat,
@@ -402,7 +402,7 @@ public final class ClockFragment extends DeskClockFragment {
         }
 
         @Override
-        public void citiesChanged(List<City> oldCities, List<City> newCities) {
+        public void citiesChanged() {
             notifyDataSetChanged();
         }
 
@@ -422,7 +422,7 @@ public final class ClockFragment extends DeskClockFragment {
                 mHoursAhead = itemView.findViewById(R.id.hours_ahead);
             }
 
-            private void bind(Context context, City city, int position, boolean isPortrait) {
+            private void bind(Context context, City city) {
                 final String cityTimeZoneId = city.getTimeZone().getID();
 
                 // Configure the digital clock or analog clock depending on the user preference.
