@@ -140,7 +140,7 @@ public final class AsyncRingtonePlayer {
                         getPlaybackDelegate().stop(mContext);
                         break;
                     case EVENT_VOLUME:
-                        if (getPlaybackDelegate().adjustVolume(mContext)) {
+                        if (getPlaybackDelegate().adjustVolume()) {
                             scheduleVolumeAdjustment();
                         }
                         break;
@@ -241,7 +241,7 @@ public final class AsyncRingtonePlayer {
         /**
          * @return {@code true} iff another volume adjustment should be scheduled
          */
-        boolean adjustVolume(Context context);
+        boolean adjustVolume();
     }
 
     /**
@@ -384,7 +384,7 @@ public final class AsyncRingtonePlayer {
          * Adjusts the volume of the ringtone being played to create a crescendo effect.
          */
         @Override
-        public boolean adjustVolume(Context context) {
+        public boolean adjustVolume() {
             checkAsyncRingtonePlayerThread();
 
             // If ringtone is absent or not playing, ignore volume adjustment.

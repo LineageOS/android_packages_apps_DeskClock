@@ -161,34 +161,9 @@ public class ItemAnimator extends SimpleItemAnimator {
         endAnimation(oldHolder);
         endAnimation(newHolder);
 
-        final long changeDuration = getChangeDuration();
-        List<Object> payloads = preInfo instanceof PayloadItemHolderInfo
-                ? ((PayloadItemHolderInfo) preInfo).getPayloads() : null;
-
         if (oldHolder == newHolder) {
-            final Animator animator = ((OnAnimateChangeListener) newHolder)
-                    .onAnimateChange(payloads, preInfo.left, preInfo.top, preInfo.right,
-                            preInfo.bottom, changeDuration);
-            if (animator == null) {
-                dispatchChangeFinished(newHolder, false);
-                return false;
-            }
-            animator.addListener(new AnimatorListenerAdapter() {
-                @Override
-                public void onAnimationStart(Animator animator) {
-                    dispatchChangeStarting(newHolder, false);
-                }
-
-                @Override
-                public void onAnimationEnd(Animator animator) {
-                    animator.removeAllListeners();
-                    mAnimators.remove(newHolder);
-                    dispatchChangeFinished(newHolder, false);
-                }
-            });
-            mChangeAnimatorsList.add(animator);
-            mAnimators.put(newHolder, animator);
-            return true;
+            dispatchChangeFinished(newHolder, false);
+            return false;
         } else if (!(oldHolder instanceof OnAnimateChangeListener) ||
                 !(newHolder instanceof OnAnimateChangeListener)) {
             // Both holders must implement OnAnimateChangeListener in order to animate.
@@ -197,6 +172,7 @@ public class ItemAnimator extends SimpleItemAnimator {
             return false;
         }
 
+        final long changeDuration = getChangeDuration();
         final Animator oldChangeAnimator = ((OnAnimateChangeListener) oldHolder)
                 .onAnimateChange(oldHolder, newHolder, changeDuration);
         if (oldChangeAnimator != null) {
@@ -366,7 +342,5 @@ public class ItemAnimator extends SimpleItemAnimator {
 
     public interface OnAnimateChangeListener {
         Animator onAnimateChange(ViewHolder oldHolder, ViewHolder newHolder, long duration);
-        Animator onAnimateChange(List<Object> payloads, int fromLeft, int fromTop, int fromRight,
-                int fromBottom, long duration);
     }
 }

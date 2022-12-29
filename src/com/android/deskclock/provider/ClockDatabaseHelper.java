@@ -37,10 +37,6 @@ import java.util.UUID;
  * some common functionality.
  */
 class ClockDatabaseHelper extends SQLiteOpenHelper {
-    /**
-     * Original Clock Database.
-     **/
-    private static final int VERSION_5 = 5;
 
     /**
      * Added alarm_instances table
@@ -53,11 +49,6 @@ class ClockDatabaseHelper extends SQLiteOpenHelper {
      * Added alarm settings to instance table.
      */
     private static final int VERSION_7 = 7;
-
-    /**
-     * Removed selected_cities table.
-     */
-    private static final int VERSION_8 = 8;
 
     /**
      * Added increasing alarm volume mode
@@ -279,7 +270,7 @@ class ClockDatabaseHelper extends SQLiteOpenHelper {
         // insert an already used id?
         final SQLiteDatabase db = getWritableDatabase();
         db.beginTransaction();
-        long rowId = -1;
+        long rowId;
         try {
             // Check if we are trying to re-use an existing id.
             final Object value = values.get(ClockContract.AlarmsColumns._ID);

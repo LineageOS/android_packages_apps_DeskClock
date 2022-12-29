@@ -30,10 +30,6 @@ public class AlarmSelection {
         mAlarm = alarm;
     }
 
-    public String getLabel() {
-        return mLabel;
-    }
-
     public Alarm getAlarm() {
         return mAlarm;
     }

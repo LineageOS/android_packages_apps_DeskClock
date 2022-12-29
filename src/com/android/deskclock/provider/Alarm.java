@@ -205,16 +205,6 @@ public final class Alarm implements Parcelable, ClockContract.AlarmsColumns {
 
         return null;
     }
-    /**
-     * Get alarm for the {@code contentUri}.
-     *
-     * @param cr provides access to the content model
-     * @param contentUri the {@link #getContentUri deeplink} for the desired alarm
-     * @return instance if found, null otherwise
-     */
-    public static Alarm getAlarm(ContentResolver cr, Uri contentUri) {
-        return getAlarm(cr, ContentUris.parseId(contentUri));
-    }
 
     /**
      * Get all alarms given conditions.
@@ -350,13 +340,6 @@ public final class Alarm implements Parcelable, ClockContract.AlarmsColumns {
         alert = p.readParcelable(null);
         deleteAfterUse = p.readInt() == 1;
         increasingVolume = p.readInt() == 1;
-    }
-
-    /**
-     * @return the deeplink that identifies this alarm
-     */
-    public Uri getContentUri() {
-        return getContentUri(id);
     }
 
     public String getLabelOrDefault(Context context) {
