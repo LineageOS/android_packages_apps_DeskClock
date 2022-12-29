@@ -381,6 +381,9 @@ public class DigitalAppWidgetProvider extends AppWidgetProvider {
             zones.add(city.getTimeZone());
         }
         final Date nextDay = Utils.getNextDay(new Date(), zones);
+        if (nextDay == null) {
+            return;
+        }
 
         // Schedule the next day-change callback; at least one city is displayed.
         final PendingIntent pi = PendingIntent.getBroadcast(context, 0, DAY_CHANGE_INTENT,

@@ -127,10 +127,7 @@ class TimerPagerAdapter extends PagerAdapter implements TimerListener {
             }
 
             mCurrentPrimaryItem = fragment;
-
-            if (mCurrentPrimaryItem != null) {
-                setItemVisible(mCurrentPrimaryItem, true);
-            }
+            setItemVisible(mCurrentPrimaryItem, true);
         }
     }
 

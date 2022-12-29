@@ -474,7 +474,7 @@ final class TimerModel {
     private List<Timer> getMutableTimers() {
         if (mTimers == null) {
             mTimers = TimerDAO.getTimers(mPrefs);
-            Collections.sort(mTimers, Timer.ID_COMPARATOR);
+            mTimers.sort(Timer.ID_COMPARATOR);
         }
 
         return mTimers;
@@ -489,7 +489,7 @@ final class TimerModel {
                     mExpiredTimers.add(timer);
                 }
             }
-            Collections.sort(mExpiredTimers, Timer.EXPIRY_COMPARATOR);
+            mExpiredTimers.sort(Timer.EXPIRY_COMPARATOR);
         }
 
         return mExpiredTimers;
@@ -504,7 +504,7 @@ final class TimerModel {
                     mMissedTimers.add(timer);
                 }
             }
-            Collections.sort(mMissedTimers, Timer.EXPIRY_COMPARATOR);
+            mMissedTimers.sort(Timer.EXPIRY_COMPARATOR);
         }
 
         return mMissedTimers;
@@ -750,7 +750,7 @@ final class TimerModel {
         }
 
         // Sort the unexpired timers to locate the next one scheduled to expire.
-        Collections.sort(unexpired, Timer.EXPIRY_COMPARATOR);
+        unexpired.sort(Timer.EXPIRY_COMPARATOR);
 
         // Otherwise build and post a notification reflecting the latest unexpired timers.
         final Notification notification =
@@ -828,11 +828,9 @@ final class TimerModel {
     private final class PreferenceListener implements OnSharedPreferenceChangeListener {
         @Override
         public void onSharedPreferenceChanged(SharedPreferences prefs, String key) {
-            switch (key) {
-                case SettingsActivity.KEY_TIMER_RINGTONE:
-                    mTimerRingtoneUri = null;
-                    mTimerRingtoneTitle = null;
-                    break;
+            if (SettingsActivity.KEY_TIMER_RINGTONE.equals(key)) {
+                mTimerRingtoneUri = null;
+                mTimerRingtoneTitle = null;
             }
         }
     }

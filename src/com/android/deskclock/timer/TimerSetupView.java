@@ -165,27 +165,26 @@ public class TimerSetupView extends LinearLayout implements View.OnClickListener
     }
 
     private int getDigitForId(@IdRes int id) {
-        switch (id) {
-            case R.id.timer_setup_digit_0:
-                return 0;
-            case R.id.timer_setup_digit_1:
-                return 1;
-            case R.id.timer_setup_digit_2:
-                return 2;
-            case R.id.timer_setup_digit_3:
-                return 3;
-            case R.id.timer_setup_digit_4:
-                return 4;
-            case R.id.timer_setup_digit_5:
-                return 5;
-            case R.id.timer_setup_digit_6:
-                return 6;
-            case R.id.timer_setup_digit_7:
-                return 7;
-            case R.id.timer_setup_digit_8:
-                return 8;
-            case R.id.timer_setup_digit_9:
-                return 9;
+        if (id == R.id.timer_setup_digit_0) {
+            return 0;
+        } else if (id == R.id.timer_setup_digit_1) {
+            return 1;
+        } else if (id == R.id.timer_setup_digit_2) {
+            return 2;
+        } else if (id == R.id.timer_setup_digit_3) {
+            return 3;
+        } else if (id == R.id.timer_setup_digit_4) {
+            return 4;
+        } else if (id == R.id.timer_setup_digit_5) {
+            return 5;
+        } else if (id == R.id.timer_setup_digit_6) {
+            return 6;
+        } else if (id == R.id.timer_setup_digit_7) {
+            return 7;
+        } else if (id == R.id.timer_setup_digit_8) {
+            return 8;
+        } else if (id == R.id.timer_setup_digit_9) {
+            return 9;
         }
         throw new IllegalArgumentException("Invalid id: " + id);
     }
