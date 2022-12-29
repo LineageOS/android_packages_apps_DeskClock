@@ -115,12 +115,9 @@ public class AlarmVolumePreference extends Preference {
                     RingtonePreviewKlaxon.start(
                             context, DataModel.getDataModel().getDefaultAlarmRingtoneUri());
                     mPreviewPlaying = true;
-                    seekBar.postDelayed(new Runnable() {
-                        @Override
-                        public void run() {
-                            RingtonePreviewKlaxon.stop(context);
-                            mPreviewPlaying = false;
-                        }
+                    seekBar.postDelayed(() -> {
+                        RingtonePreviewKlaxon.stop(context);
+                        mPreviewPlaying = false;
                     }, ALARM_PREVIEW_DURATION_MS);
                 }
             }

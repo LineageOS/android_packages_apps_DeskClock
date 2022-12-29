@@ -33,20 +33,10 @@ public interface Predicate<T> {
     /**
      * An implementation of the predicate interface that always returns true.
      */
-    Predicate TRUE = new Predicate() {
-        @Override
-        public boolean apply(Object o) {
-            return true;
-        }
-    };
+    Predicate TRUE = o -> true;
 
     /**
      * An implementation of the predicate interface that always returns false.
      */
-    Predicate FALSE = new Predicate() {
-        @Override
-        public boolean apply(Object o) {
-            return false;
-        }
-    };
+    Predicate FALSE = o -> false;
 }

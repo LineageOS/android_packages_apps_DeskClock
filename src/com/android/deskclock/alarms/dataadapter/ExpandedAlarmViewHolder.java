@@ -103,67 +103,39 @@ public final class ExpandedAlarmViewHolder extends AlarmItemViewHolder {
         }
 
         // Collapse handler
-        itemView.setOnClickListener(new View.OnClickListener() {
-            @Override
-            public void onClick(View v) {
-                Events.sendAlarmEvent(R.string.action_collapse_implied, R.string.label_deskclock);
-                getItemHolder().collapse();
-            }
+        itemView.setOnClickListener(v -> {
+            Events.sendAlarmEvent(R.string.action_collapse_implied, R.string.label_deskclock);
+            getItemHolder().collapse();
         });
-        arrow.setOnClickListener(new View.OnClickListener() {
-            @Override
-            public void onClick(View v) {
-                Events.sendAlarmEvent(R.string.action_collapse, R.string.label_deskclock);
-                getItemHolder().collapse();
-            }
+        arrow.setOnClickListener(v -> {
+            Events.sendAlarmEvent(R.string.action_collapse, R.string.label_deskclock);
+            getItemHolder().collapse();
         });
         // Edit time handler
-        clock.setOnClickListener(new View.OnClickListener() {
-            @Override
-            public void onClick(View v) {
-                getAlarmTimeClickHandler().onClockClicked(getItemHolder().item);
-            }
-        });
+        clock.setOnClickListener(v ->
+                getAlarmTimeClickHandler().onClockClicked(getItemHolder().item));
         // Edit label handler
-        editLabel.setOnClickListener(new View.OnClickListener() {
-            @Override
-            public void onClick(View view) {
-                getAlarmTimeClickHandler().onEditLabelClicked(getItemHolder().item);
-            }
-        });
+        editLabel.setOnClickListener(v ->
+                getAlarmTimeClickHandler().onEditLabelClicked(getItemHolder().item));
         // Vibrator checkbox handler
-        vibrate.setOnClickListener(new View.OnClickListener() {
-            @Override
-            public void onClick(View v) {
+        vibrate.setOnClickListener(v ->
                 getAlarmTimeClickHandler().setAlarmVibrationEnabled(getItemHolder().item,
-                        ((CheckBox) v).isChecked());
-            }
-        });
+                ((CheckBox) v).isChecked()));
         // Ringtone editor handler
-        ringtone.setOnClickListener(new View.OnClickListener() {
-            @Override
-            public void onClick(View view) {
-                getAlarmTimeClickHandler().onRingtoneClicked(context, getItemHolder().item);
-            }
-        });
+        ringtone.setOnClickListener(v ->
+                getAlarmTimeClickHandler().onRingtoneClicked(context, getItemHolder().item));
         // Delete alarm handler
-        delete.setOnClickListener(new View.OnClickListener() {
-            @Override
-            public void onClick(View v) {
-                getAlarmTimeClickHandler().onDeleteClicked(getItemHolder());
-                v.announceForAccessibility(context.getString(R.string.alarm_deleted));
-            }
+        delete.setOnClickListener(v -> {
+            getAlarmTimeClickHandler().onDeleteClicked(getItemHolder());
+            v.announceForAccessibility(context.getString(R.string.alarm_deleted));
         });
         // Day buttons handler
         for (int i = 0; i < dayButtons.length; i++) {
             final int buttonIndex = i;
-            dayButtons[i].setOnClickListener(new View.OnClickListener() {
-                @Override
-                public void onClick(View view) {
-                    final boolean isChecked = ((CompoundButton) view).isChecked();
-                    getAlarmTimeClickHandler().setDayOfWeekEnabled(getItemHolder().item,
-                            isChecked, buttonIndex);
-                }
+            dayButtons[i].setOnClickListener(view -> {
+                final boolean isChecked = ((CompoundButton) view).isChecked();
+                getAlarmTimeClickHandler().setDayOfWeekEnabled(getItemHolder().item,
+                        isChecked, buttonIndex);
             });
         }
 

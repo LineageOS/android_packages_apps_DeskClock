@@ -389,12 +389,8 @@ public final class Timer {
     /**
      * Orders timers by their IDs. Oldest timers are at the bottom. Newest timers are at the top.
      */
-    static Comparator<Timer> ID_COMPARATOR = new Comparator<Timer>() {
-        @Override
-        public int compare(Timer timer1, Timer timer2) {
-            return Integer.compare(timer2.getId(), timer1.getId());
-        }
-    };
+    static Comparator<Timer> ID_COMPARATOR =
+            (timer1, timer2) -> Integer.compare(timer2.getId(), timer1.getId());
 
     /**
      * Orders timers by their expected/actual expiration time. The general order is:
