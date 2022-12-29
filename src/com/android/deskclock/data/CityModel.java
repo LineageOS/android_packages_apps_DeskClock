@@ -108,7 +108,7 @@ final class CityModel {
             final List<City> selected = new ArrayList<>(getSelectedCities());
 
             // Sort the selected cities alphabetically by name.
-            Collections.sort(selected, new City.NameComparator());
+            selected.sort(new City.NameComparator());
 
             // Combine selected and unselected cities into a single list.
             final List<City> allCities = new ArrayList<>(getCityMap().size());
@@ -151,7 +151,7 @@ final class CityModel {
             }
 
             // Sort the unselected cities according by the user's preferred sort.
-            Collections.sort(unselected, getCitySortComparator());
+            unselected.sort(getCitySortComparator());
             mUnselectedCities = Collections.unmodifiableList(unselected);
         }
 
@@ -164,7 +164,7 @@ final class CityModel {
     List<City> getSelectedCities() {
         if (mSelectedCities == null) {
             final List<City> selectedCities = CityDAO.getSelectedCities(mPrefs, getCityMap());
-            Collections.sort(selectedCities, new City.UtcOffsetComparator());
+            selectedCities.sort(new City.UtcOffsetComparator());
             mSelectedCities = Collections.unmodifiableList(selectedCities);
         }
 

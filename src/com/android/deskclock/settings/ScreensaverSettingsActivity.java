@@ -46,12 +46,9 @@ public final class ScreensaverSettingsActivity extends AppCompatActivity {
 
     @Override
     public boolean onOptionsItemSelected (MenuItem item) {
-        switch (item.getItemId()) {
-            case android.R.id.home:
-                finish();
-                return true;
-            default:
-                break;
+        if (item.getItemId() == android.R.id.home) {
+            finish();
+            return true;
         }
         return super.onOptionsItemSelected(item);
     }
@@ -91,10 +88,11 @@ public final class ScreensaverSettingsActivity extends AppCompatActivity {
         private void refresh() {
             final ListPreference clockStylePref = findPreference(KEY_CLOCK_STYLE);
             final CheckBoxPreference nightModePref = findPreference(KEY_NIGHT_MODE);
-
-            clockStylePref.setSummary(clockStylePref.getEntry());
-            clockStylePref.setOnPreferenceChangeListener(this);
-            nightModePref.setChecked(DataModel.getDataModel().getScreensaverNightModeOn());
+            if (clockStylePref != null && nightModePref != null) {
+                clockStylePref.setSummary(clockStylePref.getEntry());
+                clockStylePref.setOnPreferenceChangeListener(this);
+                nightModePref.setChecked(DataModel.getDataModel().getScreensaverNightModeOn());
+            }
         }
     }
 }

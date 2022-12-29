@@ -20,6 +20,7 @@ import android.animation.Animator;
 import android.animation.AnimatorListenerAdapter;
 import android.animation.AnimatorSet;
 import android.animation.ObjectAnimator;
+import android.app.Activity;
 import android.content.Context;
 import android.content.Intent;
 import android.graphics.drawable.Drawable;
@@ -144,7 +145,7 @@ public final class TimerFragment extends DeskClockFragment {
         int showTimerId = -1;
 
         // Examine the intent of the parent activity to determine which view to display.
-        final Intent intent = getActivity().getIntent();
+        final Intent intent = getActivity() != null ? getActivity().getIntent() : null;
         if (intent != null) {
             // These extras are single-use; remove them after honoring them.
             createTimer = intent.getBooleanExtra(EXTRA_TIMER_SETUP, false);
@@ -193,7 +194,7 @@ public final class TimerFragment extends DeskClockFragment {
         super.onResume();
 
         // We may have received a new intent while paused.
-        final Intent intent = getActivity().getIntent();
+        final Intent intent = getActivity() != null ? getActivity().getIntent() : null;
         if (intent != null && intent.hasExtra(TimerService.EXTRA_TIMER_ID)) {
             // This extra is single-use; remove after honoring it.
             final int showTimerId = intent.getIntExtra(TimerService.EXTRA_TIMER_ID, -1);
