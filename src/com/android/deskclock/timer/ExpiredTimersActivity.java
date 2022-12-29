@@ -15,7 +15,6 @@
 package com.android.deskclock.timer;
 
 import android.app.KeyguardManager;
-import android.content.Intent;
 import android.content.pm.ActivityInfo;
 import android.os.Bundle;
 import android.os.SystemClock;

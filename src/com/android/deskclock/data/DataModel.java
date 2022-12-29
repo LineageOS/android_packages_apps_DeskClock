@@ -31,7 +31,6 @@ import androidx.annotation.StringRes;
 
 import com.android.deskclock.Predicate;
 import com.android.deskclock.R;
-import com.android.deskclock.Utils;
 import com.android.deskclock.timer.TimerService;
 
 import java.util.Calendar;
