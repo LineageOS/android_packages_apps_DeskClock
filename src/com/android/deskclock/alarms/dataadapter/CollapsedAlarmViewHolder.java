@@ -35,8 +35,6 @@ import com.android.deskclock.events.Events;
 import com.android.deskclock.provider.Alarm;
 import com.android.deskclock.provider.AlarmInstance;
 
-import java.util.List;
-
 /**
  * A ViewHolder containing views for an alarm item in collapsed stated.
  */

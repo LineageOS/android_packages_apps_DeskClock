@@ -20,7 +20,6 @@ import android.app.Activity;
 import android.content.ContentResolver;
 import android.content.Context;
 import android.content.Intent;
-import android.os.Looper;
 import android.provider.AlarmClock;
 
 import com.android.deskclock.alarms.AlarmStateManager;
