@@ -16,6 +16,7 @@
 
 package com.android.deskclock.alarms;
 
+import android.app.Activity;
 import android.content.Context;
 import android.content.Intent;
 import android.os.Bundle;
@@ -57,7 +58,9 @@ public final class AlarmTimeClickHandler {
     public AlarmTimeClickHandler(Fragment fragment, Bundle savedState,
             AlarmUpdateHandler alarmUpdateHandler, ScrollHandler smoothScrollController) {
         mFragment = fragment;
-        mContext = mFragment.getActivity().getApplicationContext();
+        mContext = mFragment.getActivity() != null
+                ? mFragment.getActivity().getApplicationContext()
+                : null;
         mAlarmUpdateHandler = alarmUpdateHandler;
         mScrollHandler = smoothScrollController;
         if (savedState != null) {

@@ -20,6 +20,7 @@ import android.content.Context;
 import android.os.Bundle;
 
 import androidx.annotation.NonNull;
+import androidx.appcompat.app.ActionBar;
 import androidx.appcompat.widget.SearchView;
 import android.text.TextUtils;
 import android.text.format.DateFormat;
@@ -107,8 +108,10 @@ public final class CitySelectionActivity extends BaseActivity {
         super.onCreate(savedInstanceState);
 
         setContentView(R.layout.cities_activity);
+        ActionBar actionBar = getSupportActionBar();
+        if (actionBar == null) return;
         mSearchMenuItemController =
-                new SearchMenuItemController(getSupportActionBar().getThemedContext(),
+                new SearchMenuItemController(actionBar.getThemedContext(),
                         new SearchView.OnQueryTextListener() {
                             @Override
                             public boolean onQueryTextSubmit(String query) {
