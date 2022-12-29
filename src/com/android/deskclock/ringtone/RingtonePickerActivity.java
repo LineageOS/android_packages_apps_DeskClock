@@ -414,13 +414,8 @@ public class RingtonePickerActivity extends CollapsingToolbarBaseActivity
             final Bundle arguments = getArguments();
             final Uri toRemove = arguments.getParcelable(ARG_RINGTONE_URI_TO_REMOVE);
 
-            final DialogInterface.OnClickListener okListener =
-                    new DialogInterface.OnClickListener() {
-                        @Override
-                        public void onClick(DialogInterface dialog, int which) {
-                            ((RingtonePickerActivity) getActivity()).removeCustomRingtone(toRemove);
-                        }
-                    };
+            final DialogInterface.OnClickListener okListener = (dialog, which) ->
+                    ((RingtonePickerActivity) getActivity()).removeCustomRingtone(toRemove);
 
             if (arguments.getBoolean(ARG_RINGTONE_HAS_PERMISSIONS)) {
                 return new AlertDialog.Builder(getActivity())

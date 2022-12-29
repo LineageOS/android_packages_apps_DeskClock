@@ -478,14 +478,11 @@ public final class AlarmStateManager extends BroadcastReceiver {
         // Display the snooze minutes in a toast.
         if (showToast) {
             final Handler mainHandler = new Handler(context.getMainLooper());
-            final Runnable myRunnable = new Runnable() {
-                @Override
-                public void run() {
-                    String displayTime = String.format(context.getResources().getQuantityText
-                            (R.plurals.alarm_alert_snooze_set, snoozeMinutes).toString(),
-                            snoozeMinutes);
-                    Toast.makeText(context, displayTime, Toast.LENGTH_LONG).show();
-                }
+            final Runnable myRunnable = () -> {
+                String displayTime = String.format(context.getResources().getQuantityText
+                        (R.plurals.alarm_alert_snooze_set, snoozeMinutes).toString(),
+                        snoozeMinutes);
+                Toast.makeText(context, displayTime, Toast.LENGTH_LONG).show();
             };
             mainHandler.post(myRunnable);
         }
@@ -780,12 +777,7 @@ public final class AlarmStateManager extends BroadcastReceiver {
         // instances).
         final List<AlarmInstance> instances = AlarmInstance.getInstances(
                 contentResolver, null /* selection */);
-        Collections.sort(instances, new Comparator<AlarmInstance>() {
-            @Override
-            public int compare(AlarmInstance lhs, AlarmInstance rhs) {
-                return rhs.getAlarmTime().compareTo(lhs.getAlarmTime());
-            }
-        });
+        instances.sort((lhs, rhs) -> rhs.getAlarmTime().compareTo(lhs.getAlarmTime()));
 
         for (AlarmInstance instance : instances) {
             final Alarm alarm = Alarm.getAlarm(contentResolver, instance.mAlarmId);
@@ -870,13 +862,10 @@ public final class AlarmStateManager extends BroadcastReceiver {
         final PendingResult result = goAsync();
         final PowerManager.WakeLock wl = AlarmAlertWakeLock.createPartialWakeLock(context);
         wl.acquire();
-        AsyncHandler.post(new Runnable() {
-            @Override
-            public void run() {
-                handleIntent(context, intent);
-                result.finish();
-                wl.release();
-            }
+        AsyncHandler.post(() -> {
+            handleIntent(context, intent);
+            result.finish();
+            wl.release();
         });
     }
 

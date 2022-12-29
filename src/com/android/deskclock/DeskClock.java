@@ -183,24 +183,11 @@ public class DeskClock extends BaseActivity
         mLeftButton = findViewById(R.id.left_button);
         mRightButton = findViewById(R.id.right_button);
 
-        mFab.setOnClickListener(new OnClickListener() {
-            @Override
-            public void onClick(View view) {
-                getSelectedDeskClockFragment().onFabClick(mFab);
-            }
-        });
-        mLeftButton.setOnClickListener(new OnClickListener() {
-            @Override
-            public void onClick(View view) {
-                getSelectedDeskClockFragment().onLeftButtonClick(mLeftButton);
-            }
-        });
-        mRightButton.setOnClickListener(new OnClickListener() {
-            @Override
-            public void onClick(View view) {
-                getSelectedDeskClockFragment().onRightButtonClick(mRightButton);
-            }
-        });
+        mFab.setOnClickListener(view -> getSelectedDeskClockFragment().onFabClick(mFab));
+        mLeftButton.setOnClickListener(view ->
+                getSelectedDeskClockFragment().onLeftButtonClick(mLeftButton));
+        mRightButton.setOnClickListener(view ->
+                getSelectedDeskClockFragment().onRightButtonClick(mRightButton));
 
         final long duration = UiDataModel.getUiDataModel().getShortAnimationDuration();
 
@@ -528,9 +515,8 @@ public class DeskClock extends BaseActivity
                             dialog.dismiss();
                             requestAgain.run();
                         })
-                .setNegativeButton(R.string.dialog_permissions_dismiss, (dialog, position) -> {
-                    maybeFinish(finishWhenDenied);
-                })
+                .setNegativeButton(R.string.dialog_permissions_dismiss, (dialog, position) ->
+                        maybeFinish(finishWhenDenied))
                 .show();
     }
 
@@ -538,15 +524,13 @@ public class DeskClock extends BaseActivity
         new AlertDialog.Builder(this)
                 .setTitle(R.string.dialog_permissions_title)
                 .setMessage(messageRes)
-                .setPositiveButton(R.string.dialog_permissions_settings, (dialog, position) -> {
-                    startActivity(new Intent(ACTION_APPLICATION_DETAILS_SETTINGS)
-                            .setData(Uri.fromParts("package", getPackageName(), null))
-                            .addFlags(FLAG_ACTIVITY_NEW_TASK));
-
-                })
+                .setPositiveButton(R.string.dialog_permissions_settings, (dialog, position) ->
+                        startActivity(new Intent(ACTION_APPLICATION_DETAILS_SETTINGS)
+                                .setData(Uri.fromParts("package", getPackageName(), null))
+                                .addFlags(FLAG_ACTIVITY_NEW_TASK)))
                 .setNegativeButton(R.string.dialog_permissions_dismiss, (dialog, position) ->
                         maybeFinish(finishWhenDenied))
-                .setOnDismissListener(dialog -> { maybeFinish(finishWhenDenied); })
+                .setOnDismissListener(dialog -> maybeFinish(finishWhenDenied))
                 .show();
     }
 
