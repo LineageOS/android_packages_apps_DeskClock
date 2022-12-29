@@ -23,7 +23,6 @@ import android.animation.ObjectAnimator;
 import android.animation.PropertyValuesHolder;
 import androidx.annotation.NonNull;
 import androidx.collection.ArrayMap;
-import androidx.recyclerview.widget.RecyclerView.State;
 import androidx.recyclerview.widget.RecyclerView.ViewHolder;
 import androidx.recyclerview.widget.SimpleItemAnimator;
 import android.view.View;

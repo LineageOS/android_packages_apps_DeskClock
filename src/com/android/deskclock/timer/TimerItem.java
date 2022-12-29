@@ -37,9 +37,6 @@ import com.android.deskclock.data.Timer;
 import static android.R.attr.state_activated;
 import static android.R.attr.state_pressed;
 
-import androidx.constraintlayout.widget.ConstraintLayout;
-import androidx.core.view.ViewCompat;
-
 /**
  * This view is a visual representation of a {@link Timer}.
  */

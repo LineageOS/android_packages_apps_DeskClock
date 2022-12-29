@@ -28,7 +28,6 @@ import android.os.Parcel;
 import android.os.Parcelable;
 
 import androidx.annotation.NonNull;
-import android.os.ParcelUuid;
 import androidx.loader.content.CursorLoader;
 
 import com.android.deskclock.R;
@@ -38,7 +37,6 @@ import com.android.deskclock.data.Weekdays;
 import java.util.Calendar;
 import java.util.LinkedList;
 import java.util.List;
-import java.util.UUID;
 
 public final class Alarm implements Parcelable, ClockContract.AlarmsColumns {
     /**

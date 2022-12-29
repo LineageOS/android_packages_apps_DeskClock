@@ -27,7 +27,6 @@ import android.view.View;
 
 import com.android.deskclock.R;
 import com.android.deskclock.ThemeUtils;
-import com.android.deskclock.Utils;
 import com.android.deskclock.data.DataModel;
 import com.android.deskclock.data.Lap;
 import com.android.deskclock.data.Stopwatch;

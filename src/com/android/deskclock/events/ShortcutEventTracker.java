@@ -18,7 +18,6 @@ package com.android.deskclock.events;
 
 import android.content.Context;
 import android.content.pm.ShortcutManager;
-import android.os.Build;
 import android.util.ArraySet;
 
 import androidx.annotation.StringRes;
