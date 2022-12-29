@@ -16,17 +16,18 @@
 
 package com.android.deskclock.uidata;
 
+import static android.view.View.LAYOUT_DIRECTION_RTL;
+import static com.android.deskclock.uidata.UiDataModel.Tab;
+
 import android.content.SharedPreferences;
 import android.text.TextUtils;
+
 import androidx.annotation.Keep;
 
 import java.util.ArrayList;
 import java.util.Arrays;
 import java.util.List;
 import java.util.Locale;
-
-import static android.view.View.LAYOUT_DIRECTION_RTL;
-import static com.android.deskclock.uidata.UiDataModel.Tab;
 
 /**
  * All tab data is accessed via this model.

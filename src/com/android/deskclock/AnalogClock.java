@@ -16,21 +16,22 @@
 
 package com.android.deskclock;
 
+import static android.text.format.DateUtils.SECOND_IN_MILLIS;
+
 import android.content.BroadcastReceiver;
 import android.content.Context;
 import android.content.Intent;
 import android.content.IntentFilter;
-import androidx.appcompat.widget.AppCompatImageView;
 import android.text.format.DateFormat;
 import android.util.AttributeSet;
 import android.widget.FrameLayout;
 import android.widget.ImageView;
 
+import androidx.appcompat.widget.AppCompatImageView;
+
 import java.text.SimpleDateFormat;
 import java.util.Calendar;
 import java.util.TimeZone;
-
-import static android.text.format.DateUtils.SECOND_IN_MILLIS;
 
 /**
  * This widget display an analog clock with two hands for hours and minutes.

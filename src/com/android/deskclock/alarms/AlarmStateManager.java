@@ -46,8 +46,6 @@ import com.android.deskclock.provider.Alarm;
 import com.android.deskclock.provider.AlarmInstance;
 
 import java.util.Calendar;
-import java.util.Collections;
-import java.util.Comparator;
 import java.util.List;
 
 /**

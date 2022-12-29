@@ -16,6 +16,14 @@
 
 package com.android.deskclock;
 
+import static android.app.PendingIntent.FLAG_IMMUTABLE;
+import static android.app.PendingIntent.FLAG_UPDATE_CURRENT;
+import static android.appwidget.AppWidgetManager.OPTION_APPWIDGET_HOST_CATEGORY;
+import static android.appwidget.AppWidgetProviderInfo.WIDGET_CATEGORY_KEYGUARD;
+import static android.content.res.Configuration.ORIENTATION_LANDSCAPE;
+import static android.content.res.Configuration.ORIENTATION_PORTRAIT;
+import static android.graphics.Bitmap.Config.ARGB_8888;
+
 import android.annotation.SuppressLint;
 import android.app.AlarmManager;
 import android.app.AlarmManager.AlarmClockInfo;
@@ -35,7 +43,6 @@ import android.net.Uri;
 import android.os.Build;
 import android.os.Bundle;
 import android.os.Looper;
-import android.provider.Settings;
 import android.text.Spannable;
 import android.text.SpannableString;
 import android.text.TextUtils;
@@ -53,7 +60,6 @@ import androidx.annotation.AnyRes;
 import androidx.annotation.DrawableRes;
 import androidx.annotation.NonNull;
 import androidx.annotation.StringRes;
-import androidx.core.os.BuildCompat;
 import androidx.core.view.AccessibilityDelegateCompat;
 import androidx.core.view.accessibility.AccessibilityNodeInfoCompat;
 import androidx.core.view.accessibility.AccessibilityNodeInfoCompat.AccessibilityActionCompat;
@@ -70,14 +76,6 @@ import java.util.Collection;
 import java.util.Date;
 import java.util.Locale;
 import java.util.TimeZone;
-
-import static android.app.PendingIntent.FLAG_UPDATE_CURRENT;
-import static android.app.PendingIntent.FLAG_IMMUTABLE;
-import static android.appwidget.AppWidgetManager.OPTION_APPWIDGET_HOST_CATEGORY;
-import static android.appwidget.AppWidgetProviderInfo.WIDGET_CATEGORY_KEYGUARD;
-import static android.content.res.Configuration.ORIENTATION_LANDSCAPE;
-import static android.content.res.Configuration.ORIENTATION_PORTRAIT;
-import static android.graphics.Bitmap.Config.ARGB_8888;
 
 public class Utils {
 

@@ -16,20 +16,6 @@
 
 package com.android.deskclock.uidata;
 
-import android.content.BroadcastReceiver;
-import android.content.Context;
-import android.content.Intent;
-import android.content.IntentFilter;
-import android.os.Handler;
-import android.os.Looper;
-import androidx.annotation.VisibleForTesting;
-
-import com.android.deskclock.LogUtils;
-
-import java.util.Calendar;
-import java.util.List;
-import java.util.concurrent.CopyOnWriteArrayList;
-
 import static android.content.Intent.ACTION_DATE_CHANGED;
 import static android.content.Intent.ACTION_TIMEZONE_CHANGED;
 import static android.content.Intent.ACTION_TIME_CHANGED;
@@ -41,6 +27,21 @@ import static java.util.Calendar.HOUR_OF_DAY;
 import static java.util.Calendar.MILLISECOND;
 import static java.util.Calendar.MINUTE;
 import static java.util.Calendar.SECOND;
+
+import android.content.BroadcastReceiver;
+import android.content.Context;
+import android.content.Intent;
+import android.content.IntentFilter;
+import android.os.Handler;
+import android.os.Looper;
+
+import androidx.annotation.VisibleForTesting;
+
+import com.android.deskclock.LogUtils;
+
+import java.util.Calendar;
+import java.util.List;
+import java.util.concurrent.CopyOnWriteArrayList;
 
 /**
  * All callbacks to be delivered at requested times on the main thread if the application is in the

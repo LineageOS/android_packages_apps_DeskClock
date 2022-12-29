@@ -22,9 +22,9 @@ import android.content.Intent;
 import android.content.pm.ShortcutInfo;
 import android.content.pm.ShortcutManager;
 import android.graphics.drawable.Icon;
-import android.os.Build;
 import android.os.UserManager;
 import android.provider.AlarmClock;
+
 import androidx.annotation.StringRes;
 
 import com.android.deskclock.DeskClock;
@@ -34,7 +34,6 @@ import com.android.deskclock.LogUtils;
 import com.android.deskclock.R;
 import com.android.deskclock.ScreensaverActivity;
 import com.android.deskclock.data.DataModel;
-import com.android.deskclock.data.Lap;
 import com.android.deskclock.data.Stopwatch;
 import com.android.deskclock.data.StopwatchListener;
 import com.android.deskclock.events.Events;

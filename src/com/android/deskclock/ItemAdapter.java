@@ -16,17 +16,18 @@
 
 package com.android.deskclock;
 
+import static androidx.recyclerview.widget.RecyclerView.NO_ID;
+
 import android.os.Bundle;
-import androidx.annotation.NonNull;
-import androidx.recyclerview.widget.RecyclerView;
 import android.util.SparseArray;
 import android.view.View;
 import android.view.ViewGroup;
 
+import androidx.annotation.NonNull;
+import androidx.recyclerview.widget.RecyclerView;
+
 import java.util.ArrayList;
 import java.util.List;
-
-import static androidx.recyclerview.widget.RecyclerView.NO_ID;
 
 /**
  * Base adapter class for displaying a collection of items. Provides functionality for handling

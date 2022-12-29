@@ -16,6 +16,8 @@
 
 package com.android.deskclock;
 
+import static com.android.deskclock.uidata.UiDataModel.Tab.ALARMS;
+
 import android.app.Activity;
 import android.content.Context;
 import android.content.Intent;
@@ -28,10 +30,11 @@ import android.view.View;
 import android.view.ViewGroup;
 import android.widget.ImageView;
 import android.widget.TextView;
+
 import androidx.annotation.NonNull;
 import androidx.loader.app.LoaderManager;
-import androidx.loader.content.Loader;
 import androidx.loader.content.CursorLoader;
+import androidx.loader.content.Loader;
 import androidx.recyclerview.widget.LinearLayoutManager;
 import androidx.recyclerview.widget.RecyclerView;
 
@@ -48,13 +51,10 @@ import com.android.deskclock.uidata.UiDataModel;
 import com.android.deskclock.widget.EmptyViewController;
 import com.android.deskclock.widget.toast.SnackbarManager;
 import com.android.deskclock.widget.toast.ToastManager;
-
 import com.google.android.material.snackbar.Snackbar;
 
 import java.util.ArrayList;
 import java.util.List;
-
-import static com.android.deskclock.uidata.UiDataModel.Tab.ALARMS;
 
 /**
  * A fragment that displays a list of alarm time and allows interaction with them.

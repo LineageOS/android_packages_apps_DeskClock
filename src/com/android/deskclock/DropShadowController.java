@@ -16,19 +16,19 @@
 
 package com.android.deskclock;
 
-import android.animation.ValueAnimator;
+import static com.android.deskclock.AnimatorUtils.getAlphaAnimator;
 
-import androidx.annotation.NonNull;
-import androidx.recyclerview.widget.RecyclerView;
+import android.animation.ValueAnimator;
 import android.view.View;
 import android.widget.AbsListView;
 import android.widget.ListView;
 
+import androidx.annotation.NonNull;
+import androidx.recyclerview.widget.RecyclerView;
+
 import com.android.deskclock.data.DataModel;
 import com.android.deskclock.uidata.TabScrollListener;
 import com.android.deskclock.uidata.UiDataModel;
-
-import static com.android.deskclock.AnimatorUtils.getAlphaAnimator;
 
 /**
  * This controller encapsulates the logic that watches a model for changes to scroll state and

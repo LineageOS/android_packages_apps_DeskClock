@@ -16,6 +16,16 @@
 
 package com.android.deskclock.data;
 
+import static android.content.Context.AUDIO_SERVICE;
+import static android.content.Intent.FLAG_ACTIVITY_NEW_TASK;
+import static android.media.AudioManager.FLAG_SHOW_UI;
+import static android.media.AudioManager.STREAM_ALARM;
+import static android.provider.Settings.ACTION_APPLICATION_DETAILS_SETTINGS;
+import static android.provider.Settings.ACTION_SOUND_SETTINGS;
+import static android.provider.Settings.EXTRA_APP_PACKAGE;
+import static com.android.deskclock.Utils.enforceMainLooper;
+import static com.android.deskclock.Utils.enforceNotMainLooper;
+
 import android.app.Service;
 import android.content.Context;
 import android.content.Intent;
@@ -31,23 +41,12 @@ import androidx.annotation.StringRes;
 
 import com.android.deskclock.Predicate;
 import com.android.deskclock.R;
-import com.android.deskclock.Utils;
 import com.android.deskclock.timer.TimerService;
 
 import java.util.Calendar;
 import java.util.Collection;
 import java.util.Comparator;
 import java.util.List;
-
-import static android.content.Context.AUDIO_SERVICE;
-import static android.content.Intent.FLAG_ACTIVITY_NEW_TASK;
-import static android.media.AudioManager.FLAG_SHOW_UI;
-import static android.media.AudioManager.STREAM_ALARM;
-import static android.provider.Settings.ACTION_APPLICATION_DETAILS_SETTINGS;
-import static android.provider.Settings.ACTION_SOUND_SETTINGS;
-import static android.provider.Settings.EXTRA_APP_PACKAGE;
-import static com.android.deskclock.Utils.enforceMainLooper;
-import static com.android.deskclock.Utils.enforceNotMainLooper;
 
 /**
  * All application-wide data is accessible through this singleton.

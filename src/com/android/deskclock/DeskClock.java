@@ -16,6 +16,11 @@
 
 package com.android.deskclock;
 
+import static android.content.Intent.FLAG_ACTIVITY_NEW_TASK;
+import static android.provider.Settings.ACTION_APPLICATION_DETAILS_SETTINGS;
+import static android.text.format.DateUtils.SECOND_IN_MILLIS;
+import static com.android.deskclock.AnimatorUtils.getScaleAnimator;
+
 import android.Manifest;
 import android.animation.Animator;
 import android.animation.AnimatorListenerAdapter;
@@ -31,7 +36,6 @@ import android.view.KeyEvent;
 import android.view.Menu;
 import android.view.MenuItem;
 import android.view.View;
-import android.view.View.OnClickListener;
 import android.widget.ImageView;
 import android.widget.TextView;
 
@@ -53,15 +57,9 @@ import com.android.deskclock.provider.Alarm;
 import com.android.deskclock.uidata.TabListener;
 import com.android.deskclock.uidata.UiDataModel;
 import com.android.deskclock.widget.toast.SnackbarManager;
-
 import com.google.android.material.bottomnavigation.BottomNavigationView;
 import com.google.android.material.navigation.NavigationBarView;
 import com.google.android.material.snackbar.Snackbar;
-
-import static android.content.Intent.FLAG_ACTIVITY_NEW_TASK;
-import static android.provider.Settings.ACTION_APPLICATION_DETAILS_SETTINGS;
-import static android.text.format.DateUtils.SECOND_IN_MILLIS;
-import static com.android.deskclock.AnimatorUtils.getScaleAnimator;
 
 import java.util.ArrayList;
 import java.util.List;

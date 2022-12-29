@@ -16,13 +16,13 @@
 
 package com.android.deskclock.widget;
 
+import static java.lang.Integer.MAX_VALUE;
+
 import android.text.Layout;
 import android.text.TextPaint;
 import android.util.TypedValue;
 import android.view.View;
 import android.widget.TextView;
-
-import static java.lang.Integer.MAX_VALUE;
 
 /**
  * A TextView which automatically re-sizes its text to fit within its boundaries.

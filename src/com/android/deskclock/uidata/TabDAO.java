@@ -16,9 +16,9 @@
 
 package com.android.deskclock.uidata;
 
-import android.content.SharedPreferences;
-
 import static com.android.deskclock.uidata.UiDataModel.Tab;
+
+import android.content.SharedPreferences;
 
 /**
  * This class encapsulates the storage of tab data in {@link SharedPreferences}.

@@ -16,6 +16,14 @@
 
 package com.android.deskclock.stopwatch;
 
+import static android.R.attr.state_activated;
+import static android.R.attr.state_pressed;
+import static android.graphics.drawable.GradientDrawable.Orientation.TOP_BOTTOM;
+import static android.view.View.GONE;
+import static android.view.View.INVISIBLE;
+import static android.view.View.VISIBLE;
+import static com.android.deskclock.uidata.UiDataModel.Tab.STOPWATCH;
+
 import android.annotation.SuppressLint;
 import android.app.Activity;
 import android.content.ActivityNotFoundException;
@@ -58,14 +66,6 @@ import com.android.deskclock.events.Events;
 import com.android.deskclock.uidata.TabListener;
 import com.android.deskclock.uidata.UiDataModel;
 import com.android.deskclock.uidata.UiDataModel.Tab;
-
-import static android.R.attr.state_activated;
-import static android.R.attr.state_pressed;
-import static android.graphics.drawable.GradientDrawable.Orientation.TOP_BOTTOM;
-import static android.view.View.GONE;
-import static android.view.View.INVISIBLE;
-import static android.view.View.VISIBLE;
-import static com.android.deskclock.uidata.UiDataModel.Tab.STOPWATCH;
 
 /**
  * Fragment that shows the stopwatch and recorded laps.

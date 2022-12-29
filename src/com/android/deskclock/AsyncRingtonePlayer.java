@@ -1,5 +1,7 @@
 package com.android.deskclock;
 
+import static android.media.AudioManager.AUDIOFOCUS_GAIN_TRANSIENT;
+
 import android.annotation.SuppressLint;
 import android.content.Context;
 import android.media.AudioAttributes;
@@ -14,8 +16,6 @@ import android.os.Handler;
 import android.os.HandlerThread;
 import android.os.Looper;
 import android.os.Message;
-
-import static android.media.AudioManager.AUDIOFOCUS_GAIN_TRANSIENT;
 
 /**
  * <p>This class controls playback of ringtones. Uses {@link Ringtone} in a

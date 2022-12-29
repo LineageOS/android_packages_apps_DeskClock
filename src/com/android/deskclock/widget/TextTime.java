@@ -16,6 +16,9 @@
 
 package com.android.deskclock.widget;
 
+import static java.util.Calendar.HOUR_OF_DAY;
+import static java.util.Calendar.MINUTE;
+
 import android.content.ContentResolver;
 import android.content.Context;
 import android.database.ContentObserver;
@@ -23,19 +26,17 @@ import android.net.Uri;
 import android.os.Handler;
 import android.os.Looper;
 import android.provider.Settings;
-import androidx.annotation.VisibleForTesting;
 import android.text.format.DateFormat;
 import android.util.AttributeSet;
 import android.widget.TextView;
+
+import androidx.annotation.VisibleForTesting;
 
 import com.android.deskclock.Utils;
 import com.android.deskclock.data.DataModel;
 
 import java.util.Calendar;
 import java.util.TimeZone;
-
-import static java.util.Calendar.HOUR_OF_DAY;
-import static java.util.Calendar.MINUTE;
 
 /**
  * Based on {@link android.widget.TextClock}, This widget displays a constant time of day using

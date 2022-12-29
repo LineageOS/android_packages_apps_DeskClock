@@ -16,31 +16,24 @@
 
 package com.android.deskclock.data;
 
+import static android.text.format.DateUtils.SECOND_IN_MILLIS;
 import static androidx.core.app.NotificationCompat.Action;
 import static androidx.core.app.NotificationCompat.Builder;
-import static android.text.format.DateUtils.MINUTE_IN_MILLIS;
-import static android.text.format.DateUtils.SECOND_IN_MILLIS;
-
 import static com.android.deskclock.NotificationUtils.FIRING_NOTIFICATION_CHANNEL_ID;
 import static com.android.deskclock.NotificationUtils.TIMER_MODEL_NOTIFICATION_CHANNEL_ID;
 
-import android.app.AlarmManager;
 import android.app.Notification;
 import android.app.PendingIntent;
 import android.content.Context;
 import android.content.Intent;
 import android.content.res.Resources;
-import android.os.Build;
 import android.os.SystemClock;
 import android.text.TextUtils;
 import android.widget.RemoteViews;
 
-import androidx.annotation.DrawableRes;
 import androidx.core.app.NotificationCompat;
-import androidx.core.app.NotificationManagerCompat;
 import androidx.core.content.ContextCompat;
 
-import com.android.deskclock.AlarmUtils;
 import com.android.deskclock.NotificationUtils;
 import com.android.deskclock.R;
 import com.android.deskclock.Utils;

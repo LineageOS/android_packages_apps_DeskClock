@@ -19,7 +19,6 @@ package com.android.deskclock.alarms;
 import android.content.ContentResolver;
 import android.content.Context;
 import android.os.AsyncTask;
-import com.google.android.material.snackbar.Snackbar;
 import android.text.format.DateFormat;
 import android.view.View;
 import android.view.ViewGroup;
@@ -30,6 +29,7 @@ import com.android.deskclock.events.Events;
 import com.android.deskclock.provider.Alarm;
 import com.android.deskclock.provider.AlarmInstance;
 import com.android.deskclock.widget.toast.SnackbarManager;
+import com.google.android.material.snackbar.Snackbar;
 
 import java.util.Calendar;
 import java.util.List;

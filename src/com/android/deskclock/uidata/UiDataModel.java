@@ -16,6 +16,8 @@
 
 package com.android.deskclock.uidata;
 
+import static com.android.deskclock.Utils.enforceMainLooper;
+
 import android.content.Context;
 import android.content.SharedPreferences;
 import android.graphics.Typeface;
@@ -31,8 +33,6 @@ import com.android.deskclock.stopwatch.StopwatchFragment;
 import com.android.deskclock.timer.TimerFragment;
 
 import java.util.Calendar;
-
-import static com.android.deskclock.Utils.enforceMainLooper;
 
 /**
  * All application-wide user interface data is accessible through this singleton.

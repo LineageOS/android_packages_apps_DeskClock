@@ -16,11 +16,11 @@
 
 package com.android.deskclock.timer;
 
+import static com.android.deskclock.FabContainer.FAB_REQUEST_FOCUS;
+import static com.android.deskclock.FabContainer.FAB_SHRINK_AND_EXPAND;
+
 import android.content.Context;
 import android.content.res.Resources;
-
-import androidx.annotation.IdRes;
-
 import android.text.BidiFormatter;
 import android.text.TextUtils;
 import android.text.format.DateUtils;
@@ -32,6 +32,8 @@ import android.view.View;
 import android.widget.LinearLayout;
 import android.widget.TextView;
 
+import androidx.annotation.IdRes;
+
 import com.android.deskclock.FabContainer;
 import com.android.deskclock.FormattedTextUtils;
 import com.android.deskclock.R;
@@ -39,9 +41,6 @@ import com.android.deskclock.uidata.UiDataModel;
 
 import java.io.Serializable;
 import java.util.Arrays;
-
-import static com.android.deskclock.FabContainer.FAB_REQUEST_FOCUS;
-import static com.android.deskclock.FabContainer.FAB_SHRINK_AND_EXPAND;
 
 public class TimerSetupView extends LinearLayout implements View.OnClickListener,
         View.OnLongClickListener {

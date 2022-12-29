@@ -15,6 +15,8 @@
  */
 package com.android.deskclock.actionbarmenu;
 
+import static android.view.Menu.NONE;
+
 import android.content.Context;
 import android.content.Intent;
 import android.view.Menu;
@@ -23,8 +25,6 @@ import android.view.MenuItem;
 import com.android.deskclock.R;
 import com.android.deskclock.ScreensaverActivity;
 import com.android.deskclock.events.Events;
-
-import static android.view.Menu.NONE;
 
 /**
  * {@link MenuItemController} for controlling night mode display.

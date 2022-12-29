@@ -16,17 +16,15 @@
 
 package com.android.deskclock;
 
+import static android.content.Intent.ACTION_BATTERY_CHANGED;
+import static android.os.BatteryManager.EXTRA_PLUGGED;
+
 import android.app.AlarmManager;
 import android.content.BroadcastReceiver;
 import android.content.Context;
 import android.content.Intent;
 import android.content.IntentFilter;
-import android.database.ContentObserver;
-import android.net.Uri;
 import android.os.Bundle;
-import android.os.Handler;
-import android.os.Looper;
-import android.provider.Settings;
 import android.view.View;
 import android.view.ViewTreeObserver.OnPreDrawListener;
 import android.view.Window;
@@ -35,9 +33,6 @@ import android.widget.TextClock;
 
 import com.android.deskclock.events.Events;
 import com.android.deskclock.uidata.UiDataModel;
-
-import static android.content.Intent.ACTION_BATTERY_CHANGED;
-import static android.os.BatteryManager.EXTRA_PLUGGED;
 
 public class ScreensaverActivity extends BaseActivity {
 

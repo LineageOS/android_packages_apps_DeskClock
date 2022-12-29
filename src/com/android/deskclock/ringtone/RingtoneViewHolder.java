@@ -16,8 +16,12 @@
 
 package com.android.deskclock.ringtone;
 
+import static android.view.View.GONE;
+import static android.view.View.OnClickListener;
+import static android.view.View.OnCreateContextMenuListener;
+import static android.view.View.VISIBLE;
+
 import android.graphics.PorterDuff;
-import androidx.core.content.ContextCompat;
 import android.view.ContextMenu;
 import android.view.LayoutInflater;
 import android.view.Menu;
@@ -26,16 +30,13 @@ import android.view.ViewGroup;
 import android.widget.ImageView;
 import android.widget.TextView;
 
+import androidx.core.content.ContextCompat;
+
 import com.android.deskclock.AnimatorUtils;
 import com.android.deskclock.ItemAdapter;
 import com.android.deskclock.R;
 import com.android.deskclock.ThemeUtils;
 import com.android.deskclock.Utils;
-
-import static android.view.View.GONE;
-import static android.view.View.OnClickListener;
-import static android.view.View.OnCreateContextMenuListener;
-import static android.view.View.VISIBLE;
 
 final class RingtoneViewHolder extends ItemAdapter.ItemViewHolder<RingtoneHolder>
         implements OnClickListener, OnCreateContextMenuListener {

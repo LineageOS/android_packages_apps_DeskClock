@@ -16,12 +16,13 @@
 
 package com.android.deskclock.widget.toast;
 
+import android.view.View;
+
 import androidx.annotation.Keep;
 import androidx.annotation.NonNull;
 import androidx.coordinatorlayout.widget.CoordinatorLayout;
-import com.google.android.material.snackbar.Snackbar;
 
-import android.view.View;
+import com.google.android.material.snackbar.Snackbar;
 
 /**
  * Custom {@link CoordinatorLayout.Behavior} that slides with the {@link Snackbar}.

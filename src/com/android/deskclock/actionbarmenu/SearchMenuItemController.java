@@ -16,20 +16,21 @@
 
 package com.android.deskclock.actionbarmenu;
 
+import static android.view.Menu.FIRST;
+import static android.view.Menu.NONE;
+
 import android.content.Context;
 import android.os.Bundle;
-import androidx.appcompat.widget.SearchView;
-import androidx.appcompat.widget.SearchView.OnQueryTextListener;
 import android.text.InputType;
 import android.view.Menu;
 import android.view.MenuItem;
 import android.view.View;
 import android.view.inputmethod.EditorInfo;
 
-import com.android.deskclock.R;
+import androidx.appcompat.widget.SearchView;
+import androidx.appcompat.widget.SearchView.OnQueryTextListener;
 
-import static android.view.Menu.FIRST;
-import static android.view.Menu.NONE;
+import com.android.deskclock.R;
 
 /**
  * {@link MenuItemController} for search menu.

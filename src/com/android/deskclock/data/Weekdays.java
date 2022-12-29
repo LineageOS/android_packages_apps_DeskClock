@@ -16,11 +16,20 @@
 
 package com.android.deskclock.data;
 
+import static java.util.Calendar.DAY_OF_WEEK;
+import static java.util.Calendar.FRIDAY;
+import static java.util.Calendar.MONDAY;
+import static java.util.Calendar.SATURDAY;
+import static java.util.Calendar.SUNDAY;
+import static java.util.Calendar.THURSDAY;
+import static java.util.Calendar.TUESDAY;
+import static java.util.Calendar.WEDNESDAY;
+
 import android.content.Context;
+import android.util.ArrayMap;
 
 import androidx.annotation.NonNull;
 import androidx.annotation.VisibleForTesting;
-import android.util.ArrayMap;
 
 import com.android.deskclock.R;
 
@@ -30,15 +39,6 @@ import java.util.Calendar;
 import java.util.Collections;
 import java.util.List;
 import java.util.Map;
-
-import static java.util.Calendar.DAY_OF_WEEK;
-import static java.util.Calendar.FRIDAY;
-import static java.util.Calendar.MONDAY;
-import static java.util.Calendar.SATURDAY;
-import static java.util.Calendar.SUNDAY;
-import static java.util.Calendar.THURSDAY;
-import static java.util.Calendar.TUESDAY;
-import static java.util.Calendar.WEDNESDAY;
 
 /**
  * This class is responsible for encoding a weekly repeat cycle in a {@link #getBits bitset}. It

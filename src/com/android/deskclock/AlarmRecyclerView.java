@@ -17,12 +17,12 @@
 package com.android.deskclock;
 
 import android.content.Context;
+import android.util.AttributeSet;
+import android.view.MotionEvent;
 
 import androidx.annotation.NonNull;
 import androidx.annotation.Nullable;
 import androidx.recyclerview.widget.RecyclerView;
-import android.util.AttributeSet;
-import android.view.MotionEvent;
 
 /**
  *  Thin wrapper around RecyclerView to prevent simultaneous layout passes, particularly during

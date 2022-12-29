@@ -16,10 +16,14 @@
 
 package com.android.deskclock.data;
 
+import static android.app.AlarmManager.ELAPSED_REALTIME_WAKEUP;
+import static android.text.format.DateUtils.MINUTE_IN_MILLIS;
+import static com.android.deskclock.data.Timer.State.EXPIRED;
+import static com.android.deskclock.data.Timer.State.RESET;
+
 import android.annotation.SuppressLint;
 import android.app.AlarmManager;
 import android.app.Notification;
-import android.app.NotificationChannel;
 import android.app.PendingIntent;
 import android.app.Service;
 import android.content.BroadcastReceiver;
@@ -29,14 +33,14 @@ import android.content.IntentFilter;
 import android.content.SharedPreferences;
 import android.content.SharedPreferences.OnSharedPreferenceChangeListener;
 import android.net.Uri;
+import android.util.ArraySet;
+
 import androidx.annotation.StringRes;
 import androidx.core.app.NotificationManagerCompat;
-import android.util.ArraySet;
 
 import com.android.deskclock.AlarmAlertWakeLock;
 import com.android.deskclock.LogUtils;
 import com.android.deskclock.R;
-import com.android.deskclock.Utils;
 import com.android.deskclock.events.Events;
 import com.android.deskclock.settings.SettingsActivity;
 import com.android.deskclock.timer.TimerKlaxon;
@@ -46,11 +50,6 @@ import java.util.ArrayList;
 import java.util.Collections;
 import java.util.List;
 import java.util.Set;
-
-import static android.app.AlarmManager.ELAPSED_REALTIME_WAKEUP;
-import static android.text.format.DateUtils.MINUTE_IN_MILLIS;
-import static com.android.deskclock.data.Timer.State.EXPIRED;
-import static com.android.deskclock.data.Timer.State.RESET;
 
 /**
  * All {@link Timer} data is accessed via this model.

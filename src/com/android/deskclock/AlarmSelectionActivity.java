@@ -31,7 +31,6 @@ import com.android.deskclock.widget.selector.AlarmSelectionAdapter;
 import java.lang.ref.WeakReference;
 import java.util.ArrayList;
 import java.util.List;
-import java.util.Locale;
 
 public class AlarmSelectionActivity extends ListActivity {
 

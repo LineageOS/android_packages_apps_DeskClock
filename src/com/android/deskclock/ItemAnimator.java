@@ -16,24 +16,24 @@
 
 package com.android.deskclock;
 
+import static android.view.View.TRANSLATION_X;
+import static android.view.View.TRANSLATION_Y;
+
 import android.animation.Animator;
 import android.animation.AnimatorListenerAdapter;
 import android.animation.AnimatorSet;
 import android.animation.ObjectAnimator;
 import android.animation.PropertyValuesHolder;
+import android.view.View;
+
 import androidx.annotation.NonNull;
 import androidx.collection.ArrayMap;
-import androidx.recyclerview.widget.RecyclerView.State;
 import androidx.recyclerview.widget.RecyclerView.ViewHolder;
 import androidx.recyclerview.widget.SimpleItemAnimator;
-import android.view.View;
 
 import java.util.ArrayList;
 import java.util.List;
 import java.util.Map;
-
-import static android.view.View.TRANSLATION_Y;
-import static android.view.View.TRANSLATION_X;
 
 public class ItemAnimator extends SimpleItemAnimator {
 

@@ -16,18 +16,20 @@
 
 package com.android.deskclock;
 
+import static android.app.AlarmManager.ACTION_NEXT_ALARM_CLOCK_CHANGED;
+import static android.view.View.GONE;
+import static android.view.View.INVISIBLE;
+import static android.view.View.VISIBLE;
+import static com.android.deskclock.uidata.UiDataModel.Tab.CLOCKS;
+import static java.util.Calendar.DAY_OF_WEEK;
+
 import android.app.Activity;
-import android.app.AlarmManager;
 import android.content.BroadcastReceiver;
 import android.content.Context;
 import android.content.Intent;
 import android.content.IntentFilter;
 import android.content.res.Resources;
-import android.database.ContentObserver;
-import android.net.Uri;
 import android.os.Bundle;
-import android.os.Handler;
-import android.provider.Settings;
 import android.text.format.DateUtils;
 import android.view.GestureDetector;
 import android.view.LayoutInflater;
@@ -52,13 +54,6 @@ import com.android.deskclock.worldclock.CitySelectionActivity;
 import java.util.Calendar;
 import java.util.List;
 import java.util.TimeZone;
-
-import static android.app.AlarmManager.ACTION_NEXT_ALARM_CLOCK_CHANGED;
-import static android.view.View.GONE;
-import static android.view.View.INVISIBLE;
-import static android.view.View.VISIBLE;
-import static com.android.deskclock.uidata.UiDataModel.Tab.CLOCKS;
-import static java.util.Calendar.DAY_OF_WEEK;
 
 /**
  * Fragment that shows the clock (analog or digital), the next alarm info and the world clock.

@@ -16,6 +16,9 @@
 
 package com.android.deskclock;
 
+import static com.android.deskclock.AnimatorUtils.getAlphaAnimator;
+import static com.android.deskclock.AnimatorUtils.getScaleAnimator;
+
 import android.animation.Animator;
 import android.animation.AnimatorListenerAdapter;
 import android.animation.AnimatorSet;
@@ -25,9 +28,6 @@ import android.view.animation.DecelerateInterpolator;
 import android.view.animation.Interpolator;
 
 import com.android.deskclock.uidata.UiDataModel;
-
-import static com.android.deskclock.AnimatorUtils.getAlphaAnimator;
-import static com.android.deskclock.AnimatorUtils.getScaleAnimator;
 
 /**
  * This runnable chooses a random initial position for {@link #mSaverView} within

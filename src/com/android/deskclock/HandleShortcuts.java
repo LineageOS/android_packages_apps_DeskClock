@@ -16,6 +16,8 @@
 
 package com.android.deskclock;
 
+import static com.android.deskclock.uidata.UiDataModel.Tab.STOPWATCH;
+
 import android.app.Activity;
 import android.content.Intent;
 import android.os.Bundle;
@@ -23,8 +25,6 @@ import android.os.Bundle;
 import com.android.deskclock.events.Events;
 import com.android.deskclock.stopwatch.StopwatchService;
 import com.android.deskclock.uidata.UiDataModel;
-
-import static com.android.deskclock.uidata.UiDataModel.Tab.STOPWATCH;
 
 public class HandleShortcuts extends Activity {
 

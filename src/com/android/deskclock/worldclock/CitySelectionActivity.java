@@ -16,12 +16,10 @@
 
 package com.android.deskclock.worldclock;
 
+import static android.view.Menu.NONE;
+
 import android.content.Context;
 import android.os.Bundle;
-
-import androidx.annotation.NonNull;
-import androidx.appcompat.app.ActionBar;
-import androidx.appcompat.widget.SearchView;
 import android.text.TextUtils;
 import android.text.format.DateFormat;
 import android.util.ArraySet;
@@ -37,6 +35,10 @@ import android.widget.CompoundButton;
 import android.widget.ListView;
 import android.widget.SectionIndexer;
 import android.widget.TextView;
+
+import androidx.annotation.NonNull;
+import androidx.appcompat.app.ActionBar;
+import androidx.appcompat.widget.SearchView;
 
 import com.android.deskclock.BaseActivity;
 import com.android.deskclock.DropShadowController;
@@ -60,8 +62,6 @@ import java.util.List;
 import java.util.Locale;
 import java.util.Set;
 import java.util.TimeZone;
-
-import static android.view.Menu.NONE;
 
 /**
  * This activity allows the user to alter the cities selected for display.

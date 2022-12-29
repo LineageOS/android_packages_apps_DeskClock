@@ -16,6 +16,8 @@
 
 package com.android.deskclock.data;
 
+import static com.android.deskclock.data.Timer.State.RESET;
+
 import android.content.SharedPreferences;
 
 import com.android.deskclock.data.Timer.State;
@@ -25,8 +27,6 @@ import java.util.Collections;
 import java.util.HashSet;
 import java.util.List;
 import java.util.Set;
-
-import static com.android.deskclock.data.Timer.State.RESET;
 
 /**
  * This class encapsulates the transfer of data between {@link Timer} domain objects and their

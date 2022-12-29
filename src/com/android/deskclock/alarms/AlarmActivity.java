@@ -15,6 +15,8 @@
  */
 package com.android.deskclock.alarms;
 
+import static android.accessibilityservice.AccessibilityServiceInfo.FEEDBACK_GENERIC;
+
 import android.accessibilityservice.AccessibilityServiceInfo;
 import android.animation.Animator;
 import android.animation.AnimatorListenerAdapter;
@@ -47,6 +49,7 @@ import android.view.accessibility.AccessibilityManager;
 import android.widget.ImageView;
 import android.widget.TextClock;
 import android.widget.TextView;
+
 import androidx.annotation.NonNull;
 import androidx.core.graphics.ColorUtils;
 import androidx.core.view.animation.PathInterpolatorCompat;
@@ -64,8 +67,6 @@ import com.android.deskclock.provider.AlarmInstance;
 import com.android.deskclock.widget.CircleView;
 
 import java.util.List;
-
-import static android.accessibilityservice.AccessibilityServiceInfo.FEEDBACK_GENERIC;
 
 public class AlarmActivity extends BaseActivity
         implements View.OnClickListener, View.OnTouchListener {

@@ -16,7 +16,6 @@
 
 package com.android.deskclock.provider;
 
-import android.content.ContentResolver;
 import android.content.ContentValues;
 import android.content.Context;
 import android.database.Cursor;
@@ -30,7 +29,6 @@ import com.android.deskclock.LogUtils;
 import com.android.deskclock.data.Weekdays;
 
 import java.util.Calendar;
-import java.util.UUID;
 
 /**
  * Helper class for opening the database from multiple providers.  Also provides
