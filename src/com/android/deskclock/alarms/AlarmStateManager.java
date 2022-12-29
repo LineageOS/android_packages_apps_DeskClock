@@ -131,7 +131,7 @@ public final class AlarmStateManager extends BroadcastReceiver {
     public static final int ALARM_FIRE_BUFFER = 15;
 
     // Schedules alarm state transitions; can be mocked for testing purposes.
-    private static StateChangeScheduler sStateChangeScheduler =
+    private static final StateChangeScheduler sStateChangeScheduler =
             new AlarmManagerStateChangeScheduler();
 
     private static final String ACTION_SET_POWEROFF_ALARM =
