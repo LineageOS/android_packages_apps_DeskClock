@@ -15,11 +15,11 @@
  */
 package com.android.deskclock;
 
-import android.app.Activity;
 import android.app.ListActivity;
 import android.content.Intent;
-import android.os.AsyncTask;
 import android.os.Bundle;
+import android.os.Handler;
+import android.os.Looper;
 import android.os.Parcelable;
 import android.view.View;
 import android.widget.Button;
@@ -29,10 +29,11 @@ import com.android.deskclock.provider.Alarm;
 import com.android.deskclock.widget.selector.AlarmSelection;
 import com.android.deskclock.widget.selector.AlarmSelectionAdapter;
 
-import java.lang.ref.WeakReference;
 import java.util.ArrayList;
 import java.util.List;
 import java.util.Locale;
+import java.util.concurrent.ExecutorService;
+import java.util.concurrent.Executors;
 
 public class AlarmSelectionActivity extends ListActivity {
 
@@ -90,33 +91,23 @@ public class AlarmSelectionActivity extends ListActivity {
         final AlarmSelection selection = mSelections.get((int) id);
         final Alarm alarm = selection.getAlarm();
         if (alarm != null) {
-            new ProcessAlarmActionAsync(alarm, this, mAction).execute();
+            processAlarmActionAsync(alarm);
         }
         finish();
     }
 
-    private static class ProcessAlarmActionAsync extends AsyncTask<Void, Void, Void> {
+    void processAlarmActionAsync(Alarm alarm) {
+        ExecutorService executor = Executors.newSingleThreadExecutor();
+        Handler handler = new Handler(Looper.getMainLooper());
 
-        private final Alarm mAlarm;
-        private final WeakReference<Activity> mActivity;
-        private final int mAction;
-
-        public ProcessAlarmActionAsync(Alarm alarm, Activity activity, int action) {
-            mAlarm = alarm;
-            mActivity = new WeakReference<>(activity);
-            mAction = action;
-        }
-
-        @Override
-        protected Void doInBackground(Void... parameters) {
+        executor.execute(() -> handler.post(() -> {
             switch (mAction) {
                 case ACTION_DISMISS:
-                    HandleApiCalls.dismissAlarm(mAlarm, mActivity.get());
+                    HandleApiCalls.dismissAlarm(alarm, this);
                     break;
                 case ACTION_INVALID:
                     LogUtils.i("Invalid action");
             }
-            return null;
-        }
+        }));
     }
 }
