@@ -46,24 +46,9 @@ public final class MockFabContainer implements FabContainer {
 
         updateFab(FabContainer.FAB_AND_BUTTONS_IMMEDIATE);
 
-        fab.setOnClickListener(new View.OnClickListener() {
-            @Override
-            public void onClick(View view) {
-                deskClockFragment.onFabClick(fab);
-            }
-        });
-        leftButton.setOnClickListener(new View.OnClickListener() {
-            @Override
-            public void onClick(View view) {
-                deskClockFragment.onLeftButtonClick(leftButton);
-            }
-        });
-        rightButton.setOnClickListener(new View.OnClickListener() {
-            @Override
-            public void onClick(View view) {
-                deskClockFragment.onRightButtonClick(rightButton);
-            }
-        });
+        fab.setOnClickListener(view -> deskClockFragment.onFabClick(fab));
+        leftButton.setOnClickListener(view -> deskClockFragment.onLeftButtonClick(leftButton));
+        rightButton.setOnClickListener(view -> deskClockFragment.onRightButtonClick(rightButton));
     }
 
     @Override

@@ -645,12 +645,7 @@ public class AlarmActivity extends BaseActivity
             @Override
             public void onAnimationEnd(Animator animator) {
                 mAlertView.announceForAccessibility(accessibilityText);
-                mHandler.postDelayed(new Runnable() {
-                    @Override
-                    public void run() {
-                        finish();
-                    }
-                }, ALERT_DISMISS_DELAY_MILLIS);
+                mHandler.postDelayed(() -> finish(), ALERT_DISMISS_DELAY_MILLIS);
             }
         });
 

@@ -52,35 +52,23 @@ public final class CollapsedAlarmViewHolder extends AlarmItemViewHolder {
         alarmLabel = itemView.findViewById(R.id.label);
 
         // Expand handler
-        itemView.setOnClickListener(new View.OnClickListener() {
-            @Override
-            public void onClick(View v) {
-                Events.sendAlarmEvent(R.string.action_expand_implied, R.string.label_deskclock);
-                getItemHolder().expand();
-            }
+        itemView.setOnClickListener(v -> {
+            Events.sendAlarmEvent(R.string.action_expand_implied, R.string.label_deskclock);
+            getItemHolder().expand();
         });
-        alarmLabel.setOnClickListener(new View.OnClickListener() {
-            @Override
-            public void onClick(View v) {
-                Events.sendAlarmEvent(R.string.action_expand_implied, R.string.label_deskclock);
-                getItemHolder().expand();
-            }
+        alarmLabel.setOnClickListener(v -> {
+            Events.sendAlarmEvent(R.string.action_expand_implied, R.string.label_deskclock);
+            getItemHolder().expand();
         });
-        arrow.setOnClickListener(new View.OnClickListener() {
-            @Override
-            public void onClick(View v) {
-                Events.sendAlarmEvent(R.string.action_expand, R.string.label_deskclock);
-                getItemHolder().expand();
-            }
+        arrow.setOnClickListener(v -> {
+            Events.sendAlarmEvent(R.string.action_expand, R.string.label_deskclock);
+            getItemHolder().expand();
         });
         // Edit time handler
-        clock.setOnClickListener(new View.OnClickListener() {
-            @Override
-            public void onClick(View v) {
-                getItemHolder().getAlarmTimeClickHandler().onClockClicked(getItemHolder().item);
-                Events.sendAlarmEvent(R.string.action_expand_implied, R.string.label_deskclock);
-                getItemHolder().expand();
-            }
+        clock.setOnClickListener(v -> {
+            getItemHolder().getAlarmTimeClickHandler().onClockClicked(getItemHolder().item);
+            Events.sendAlarmEvent(R.string.action_expand_implied, R.string.label_deskclock);
+            getItemHolder().expand();
         });
 
         itemView.setImportantForAccessibility(View.IMPORTANT_FOR_ACCESSIBILITY_NO);

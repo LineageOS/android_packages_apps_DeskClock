@@ -176,12 +176,9 @@ public class ExpiredTimersActivity extends BaseActivity {
 
         // Add logic to the "Add 1 Minute" button.
         final View addMinuteButton = timerItem.findViewById(R.id.reset_add);
-        addMinuteButton.setOnClickListener(new View.OnClickListener() {
-            @Override
-            public void onClick(View v) {
-                final Timer timer = DataModel.getDataModel().getTimer(timerId);
-                DataModel.getDataModel().addTimerMinute(timer);
-            }
+        addMinuteButton.setOnClickListener(v -> {
+            final Timer timer1 = DataModel.getDataModel().getTimer(timerId);
+            DataModel.getDataModel().addTimerMinute(timer1);
         });
 
         // If the first timer was just added, center it.
