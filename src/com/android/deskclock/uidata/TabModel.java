@@ -121,14 +121,14 @@ final class TabModel {
 
             // Notify of the tab change.
             for (TabListener tl : mTabListeners) {
-                tl.selectedTabChanged(oldSelectedTab, tab);
+                tl.selectedTabChanged(tab);
             }
 
             // Notify of the vertical scroll position change if there is one.
             final boolean tabScrolledToTop = isTabScrolledToTop(tab);
             if (isTabScrolledToTop(oldSelectedTab) != tabScrolledToTop) {
                 for (TabScrollListener tsl : mTabScrollListeners) {
-                    tsl.selectedTabScrollToTopChanged(tab, tabScrolledToTop);
+                    tsl.selectedTabScrollToTopChanged(tabScrolledToTop);
                 }
             }
         }
@@ -163,7 +163,7 @@ final class TabModel {
             mTabScrolledToTop[tab.ordinal()] = scrolledToTop;
             if (tab == getSelectedTab()) {
                 for (TabScrollListener tsl : mTabScrollListeners) {
-                    tsl.selectedTabScrollToTopChanged(tab, scrolledToTop);
+                    tsl.selectedTabScrollToTopChanged(scrolledToTop);
                 }
             }
         }

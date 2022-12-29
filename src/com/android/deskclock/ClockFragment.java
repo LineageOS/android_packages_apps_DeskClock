@@ -402,7 +402,7 @@ public final class ClockFragment extends DeskClockFragment {
         }
 
         @Override
-        public void citiesChanged(List<City> oldCities, List<City> newCities) {
+        public void citiesChanged() {
             notifyDataSetChanged();
         }
 

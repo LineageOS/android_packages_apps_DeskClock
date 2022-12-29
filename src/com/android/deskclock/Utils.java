@@ -160,17 +160,17 @@ public class Utils {
      * Set whether the digital or analog clock should be displayed in the application.
      * Returns the view to be displayed.
      */
-    public static View setClockStyle(View digitalClock, View analogClock) {
+    public static void setClockStyle(View digitalClock, View analogClock) {
         final DataModel.ClockStyle clockStyle = DataModel.getDataModel().getClockStyle();
         switch (clockStyle) {
             case ANALOG:
                 digitalClock.setVisibility(View.GONE);
                 analogClock.setVisibility(View.VISIBLE);
-                return analogClock;
+                return;
             case DIGITAL:
                 digitalClock.setVisibility(View.VISIBLE);
                 analogClock.setVisibility(View.GONE);
-                return digitalClock;
+                return;
         }
 
         throw new IllegalStateException("unexpected clock style: " + clockStyle);
@@ -180,17 +180,17 @@ public class Utils {
      * For screensavers to set whether the digital or analog clock should be displayed.
      * Returns the view to be displayed.
      */
-    public static View setScreensaverClockStyle(View digitalClock, View analogClock) {
+    public static void setScreensaverClockStyle(View digitalClock, View analogClock) {
         final DataModel.ClockStyle clockStyle = DataModel.getDataModel().getScreensaverClockStyle();
         switch (clockStyle) {
             case ANALOG:
                 digitalClock.setVisibility(View.GONE);
                 analogClock.setVisibility(View.VISIBLE);
-                return analogClock;
+                return;
             case DIGITAL:
                 digitalClock.setVisibility(View.VISIBLE);
                 analogClock.setVisibility(View.GONE);
-                return digitalClock;
+                return;
         }
 
         throw new IllegalStateException("unexpected clock style: " + clockStyle);

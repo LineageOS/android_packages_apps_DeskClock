@@ -184,7 +184,7 @@ final class CityModel {
         mUnselectedCities = null;
 
         // Broadcast the change to the selected cities for the benefit of widgets.
-        fireCitiesChanged(oldCities, getAllCities());
+        fireCitiesChanged(getAllCities());
     }
 
     /**
@@ -234,10 +234,10 @@ final class CityModel {
         throw new IllegalStateException("unexpected city sort: " + citySort);
     }
 
-    private void fireCitiesChanged(List<City> oldCities, List<City> newCities) {
+    private void fireCitiesChanged(List<City> newCities) {
         mContext.sendBroadcast(new Intent(DataModel.ACTION_WORLD_CITIES_CHANGED));
         for (CityListener cityListener : mCityListeners) {
-            cityListener.citiesChanged(oldCities, newCities);
+            cityListener.citiesChanged();
         }
     }
 
@@ -267,7 +267,7 @@ final class CityModel {
                     mHomeCity = null;
                 case SettingsActivity.KEY_AUTO_HOME_CLOCK:
                     final List<City> cities = getAllCities();
-                    fireCitiesChanged(cities, cities);
+                    fireCitiesChanged(cities);
                     break;
             }
         }
