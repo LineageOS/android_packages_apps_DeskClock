@@ -17,14 +17,14 @@
 package com.android.deskclock.settings;
 
 import android.content.Context;
-import androidx.annotation.NonNull;
-import androidx.core.content.ContextCompat;
-import androidx.preference.DropDownPreference;
 import android.util.AttributeSet;
 import android.view.View;
 import android.view.ViewGroup;
 import android.widget.ArrayAdapter;
 import android.widget.TextView;
+
+import androidx.annotation.NonNull;
+import androidx.preference.DropDownPreference;
 
 import com.android.deskclock.R;
 import com.android.deskclock.Utils;

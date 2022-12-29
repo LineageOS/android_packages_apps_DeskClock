@@ -19,7 +19,6 @@ package com.android.deskclock;
 import android.view.KeyEvent;
 import android.widget.ImageView;
 
-import androidx.annotation.ColorInt;
 import androidx.annotation.Keep;
 import androidx.annotation.NonNull;
 import androidx.fragment.app.Fragment;
