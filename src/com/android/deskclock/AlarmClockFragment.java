@@ -398,7 +398,7 @@ public final class AlarmClockFragment extends DeskClockFragment implements
     }
 
     @Override
-    public final int getFabTargetVisibility() {
+    public int getFabTargetVisibility() {
         return View.VISIBLE;
     }
 
