@@ -22,8 +22,10 @@ import static com.android.deskclock.FabContainer.FAB_SHRINK_AND_EXPAND;
 import android.content.Context;
 import android.content.res.Resources;
 import android.text.BidiFormatter;
+import android.text.SpannableString;
 import android.text.TextUtils;
 import android.text.format.DateUtils;
+import android.text.style.ForegroundColorSpan;
 import android.text.style.RelativeSizeSpan;
 import android.util.AttributeSet;
 import android.view.KeyEvent;
@@ -194,12 +196,21 @@ public class TimerSetupView extends LinearLayout implements View.OnClickListener
         final int hours = mInput[5] * 10 + mInput[4];
 
         final UiDataModel uidm = UiDataModel.getUiDataModel();
-        mTimeView.setText(TextUtils.expandTemplate(mTimeTemplate,
+        SpannableString text = new SpannableString(TextUtils.expandTemplate(mTimeTemplate,
                 uidm.getFormattedNumber(hours, 2),
                 uidm.getFormattedNumber(minutes, 2),
                 uidm.getFormattedNumber(seconds, 2)));
 
         final Resources r = getResources();
+        int endIdx = text.length();
+        int startIdx = seconds > 0 ? 8 : endIdx;
+        startIdx = minutes > 0 ? 4 : startIdx;
+        startIdx = hours > 0 ? 0 : startIdx;
+        if (startIdx != endIdx) {
+            final int highlightColor = r.getColor(R.color.accent_color, getContext().getTheme());
+            text.setSpan(new ForegroundColorSpan(highlightColor), startIdx, endIdx, 0);
+        }
+        mTimeView.setText(text);
         mTimeView.setContentDescription(r.getString(R.string.timer_setup_description,
                 r.getQuantityString(R.plurals.hours, hours, hours),
                 r.getQuantityString(R.plurals.minutes, minutes, minutes),
