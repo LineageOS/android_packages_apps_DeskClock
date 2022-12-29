@@ -1,0 +1,38 @@
+{
+  "comments": [
+    {
+      "unresolved": true,
+      "key": {
+        "uuid": "81754596_2bb76aa4",
+        "filename": "src/com/android/deskclock/AlarmSelectionActivity.java",
+        "patchSetId": 3
+      },
+      "lineNbr": 98,
+      "author": {
+        "id": 1063
+      },
+      "writtenOn": "2022-12-29T16:51:17Z",
+      "side": 1,
+      "message": "That way the code runs in the handler thread (main), not the executor thread. The `handler.post` part looks wrong to me.",
+      "revId": "1c4b45897936509545110a7ebd20e1b70d66061f",
+      "serverId": "1ec6b3db-b2c1-4fa4-84a2-4c7efe89ba71"
+    },
+    {
+      "unresolved": true,
+      "key": {
+        "uuid": "480c1890_8dae0e56",
+        "filename": "src/com/android/deskclock/HandleApiCalls.java",
+        "patchSetId": 3
+      },
+      "lineNbr": 187,
+      "author": {
+        "id": 1063
+      },
+      "writtenOn": "2022-12-29T16:51:17Z",
+      "side": 1,
+      "message": "Code runs in handler thread -\u003e wrong",
+      "revId": "1c4b45897936509545110a7ebd20e1b70d66061f",
+      "serverId": "1ec6b3db-b2c1-4fa4-84a2-4c7efe89ba71"
+    }
+  ]
+}
