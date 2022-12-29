@@ -17,7 +17,6 @@
 package com.android.deskclock.ringtone;
 
 import android.graphics.PorterDuff;
-import androidx.core.content.ContextCompat;
 import android.view.ContextMenu;
 import android.view.LayoutInflater;
 import android.view.Menu;
@@ -25,6 +24,8 @@ import android.view.View;
 import android.view.ViewGroup;
 import android.widget.ImageView;
 import android.widget.TextView;
+
+import androidx.core.content.ContextCompat;
 
 import com.android.deskclock.AnimatorUtils;
 import com.android.deskclock.ItemAdapter;

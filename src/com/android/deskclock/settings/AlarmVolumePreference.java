@@ -24,7 +24,6 @@ import android.app.NotificationManager;
 import android.content.Context;
 import android.database.ContentObserver;
 import android.media.AudioManager;
-import android.os.Build;
 import android.provider.Settings;
 import android.util.AttributeSet;
 import android.view.View;
@@ -36,7 +35,6 @@ import androidx.preference.PreferenceViewHolder;
 
 import com.android.deskclock.R;
 import com.android.deskclock.RingtonePreviewKlaxon;
-import com.android.deskclock.Utils;
 import com.android.deskclock.data.DataModel;
 
 public class AlarmVolumePreference extends Preference {

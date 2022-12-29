@@ -16,7 +16,6 @@
 
 package com.android.deskclock.settings;
 
-import android.os.Build;
 import android.os.Bundle;
 import android.view.MenuItem;
 
@@ -27,7 +26,6 @@ import androidx.preference.PreferenceFragmentCompat;
 import androidx.preference.CheckBoxPreference;
 
 import com.android.deskclock.R;
-import com.android.deskclock.Utils;
 import com.android.deskclock.data.DataModel;
 
 /**
