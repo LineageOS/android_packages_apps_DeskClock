@@ -123,12 +123,6 @@ public class AnimatorUtils {
         }
     }
 
-    public static void cancel(ValueAnimator... animators) {
-        for (ValueAnimator animator : animators) {
-            animator.cancel();
-        }
-    }
-
     public static ValueAnimator getScaleAnimator(View view, float... values) {
         return ObjectAnimator.ofPropertyValuesHolder(view,
                 PropertyValuesHolder.ofFloat(View.SCALE_X, values),

@@ -70,9 +70,6 @@ public class AlarmService extends Service {
     private static final int ALARM_SNOOZE = 1;
     private static final int ALARM_DISMISS = 2;
 
-    // default action for flip and shake
-    private static final String DEFAULT_ACTION = Integer.toString(ALARM_NO_ACTION);
-
     /** Binder given to AlarmActivity. */
     private final IBinder mBinder = new Binder();
 
@@ -258,7 +255,7 @@ public class AlarmService extends Service {
     }
 
     private interface ResettableSensorEventListener extends SensorEventListener {
-        public void reset();
+        void reset();
     }
 
     private final ResettableSensorEventListener mFlipListener =

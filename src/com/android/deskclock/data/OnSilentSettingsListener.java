@@ -21,5 +21,5 @@ package com.android.deskclock.data;
  * silence firing alarms.
  */
 public interface OnSilentSettingsListener {
-    void onSilentSettingsChange(DataModel.SilentSetting before, DataModel.SilentSetting after);
+    void onSilentSettingsChange(DataModel.SilentSetting after);
 }

@@ -72,14 +72,6 @@ public final class Controller {
     }
 
     /**
-     * @param eventTracker to be unregistered from tracking application events
-     */
-    public void removeEventTracker(EventTracker eventTracker) {
-        enforceMainLooper();
-        mEventController.removeEventTracker(eventTracker);
-    }
-
-    /**
      * Tracks an event. Events have a category, action and label. This method can be used to track
      * events such as button presses or other user interactions with your application.
      *

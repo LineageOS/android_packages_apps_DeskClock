@@ -172,9 +172,5 @@ class ShortcutController {
                 LogUtils.wtf(e);
             }
         }
-
-        @Override
-        public void lapAdded(Lap lap) {
-        }
     }
 }
