@@ -54,4 +54,7 @@
     <string name="dialog_permissions_no_permission">Required permissions were denied, enable them from Settings app</string>
     <!-- Permission dialog: ask for post notification permission -->
     <string name="dialog_permissions_post_notifications">This app relies on notifications. Without them it cannot be run!</string>
+
+    <string name="selected">Selected</string>
+    <string name="more_options">More options</string>
 </resources>
