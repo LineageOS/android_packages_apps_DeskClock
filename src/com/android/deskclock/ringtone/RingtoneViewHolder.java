@@ -18,16 +18,14 @@ package com.android.deskclock.ringtone;
 
 import static android.view.View.GONE;
 import static android.view.View.OnClickListener;
-import static android.view.View.OnCreateContextMenuListener;
 import static android.view.View.VISIBLE;
 
-import android.graphics.PorterDuff;
-import android.view.ContextMenu;
 import android.view.LayoutInflater;
-import android.view.Menu;
+import android.view.MenuItem;
 import android.view.View;
 import android.view.ViewGroup;
 import android.widget.ImageView;
+import android.widget.PopupMenu;
 import android.widget.TextView;
 
 import androidx.core.content.ContextCompat;
@@ -35,21 +33,21 @@ import androidx.core.content.ContextCompat;
 import com.android.deskclock.AnimatorUtils;
 import com.android.deskclock.ItemAdapter;
 import com.android.deskclock.R;
-import com.android.deskclock.ThemeUtils;
 import com.android.deskclock.Utils;
 
 final class RingtoneViewHolder extends ItemAdapter.ItemViewHolder<RingtoneHolder>
-        implements OnClickListener, OnCreateContextMenuListener {
+        implements OnClickListener, PopupMenu.OnMenuItemClickListener {
 
     static final int VIEW_TYPE_SYSTEM_SOUND = R.layout.ringtone_item_sound;
     static final int VIEW_TYPE_CUSTOM_SOUND = -R.layout.ringtone_item_sound;
     static final int CLICK_NORMAL = 0;
-    static final int CLICK_LONG_PRESS = -1;
+    static final int CLICK_REMOVE = -1;
     static final int CLICK_NO_PERMISSIONS = -2;
 
     private final View mSelectedView;
     private final TextView mNameView;
     private final ImageView mImageView;
+    private final ImageView mMenuView;
 
     private RingtoneViewHolder(View itemView) {
         super(itemView);
@@ -58,6 +56,7 @@ final class RingtoneViewHolder extends ItemAdapter.ItemViewHolder<RingtoneHolder
         mSelectedView = itemView.findViewById(R.id.sound_image_selected);
         mNameView = itemView.findViewById(R.id.ringtone_name);
         mImageView = itemView.findViewById(R.id.ringtone_image);
+        mMenuView = itemView.findViewById(R.id.music_actions);
     }
 
     @Override
@@ -71,12 +70,9 @@ final class RingtoneViewHolder extends ItemAdapter.ItemViewHolder<RingtoneHolder
         final int itemViewType = getItemViewType();
         if (itemViewType == VIEW_TYPE_CUSTOM_SOUND) {
             if (!itemHolder.hasPermissions()) {
-                mImageView.setImageResource(R.drawable.ic_ringtone_not_found);
-                final int colorAccent = ThemeUtils.resolveColor(itemView.getContext(),
-                        R.attr.colorAccent);
-                mImageView.setColorFilter(colorAccent, PorterDuff.Mode.SRC_ATOP);
+                mImageView.setImageResource(R.drawable.ic_error_red);
             } else {
-                mImageView.setImageResource(R.drawable.placeholder_album_artwork);
+                mImageView.setImageResource(R.drawable.ic_ringtone);
             }
         } else if (itemHolder.item == Utils.RINGTONE_SILENT) {
             mImageView.setImageResource(R.drawable.ic_ringtone_silent);
@@ -91,7 +87,13 @@ final class RingtoneViewHolder extends ItemAdapter.ItemViewHolder<RingtoneHolder
         itemView.setBackgroundColor(ContextCompat.getColor(itemView.getContext(), bgColorId));
 
         if (itemViewType == VIEW_TYPE_CUSTOM_SOUND) {
-            itemView.setOnCreateContextMenuListener(this);
+            mMenuView.setVisibility(VISIBLE);
+            mMenuView.setOnClickListener(v -> {
+                PopupMenu popupMenu = new PopupMenu(v.getContext(), v);
+                popupMenu.getMenuInflater().inflate(R.menu.ringtone_item_menu, popupMenu.getMenu());
+                popupMenu.setOnMenuItemClickListener(this);
+                popupMenu.show();
+            });
         }
     }
 
@@ -105,10 +107,12 @@ final class RingtoneViewHolder extends ItemAdapter.ItemViewHolder<RingtoneHolder
     }
 
     @Override
-    public void onCreateContextMenu(ContextMenu contextMenu, View view,
-            ContextMenu.ContextMenuInfo contextMenuInfo) {
-        notifyItemClicked(RingtoneViewHolder.CLICK_LONG_PRESS);
-        contextMenu.add(Menu.NONE, 0, Menu.NONE, R.string.remove_sound);
+    public boolean onMenuItemClick(MenuItem item) {
+        if (item.getItemId() == R.id.remove) {
+            notifyItemClicked(RingtoneViewHolder.CLICK_REMOVE);
+            return true;
+        }
+        return false;
     }
 
     public static class Factory implements ItemAdapter.ItemViewHolder.Factory {
