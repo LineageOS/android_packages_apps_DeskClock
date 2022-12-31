@@ -22,6 +22,30 @@
       },
       "revId": "888ea473abec0c87234a60c79aeb15fe676871e8",
       "serverId": "1ec6b3db-b2c1-4fa4-84a2-4c7efe89ba71"
+    },
+    {
+      "unresolved": false,
+      "key": {
+        "uuid": "b751a171_6dbf8e57",
+        "filename": "src/com/android/alarmclock/AnalogAppWidgetProvider.java",
+        "patchSetId": 2
+      },
+      "lineNbr": 69,
+      "author": {
+        "id": 4550
+      },
+      "writtenOn": "2022-12-31T12:45:25Z",
+      "side": 1,
+      "message": "Done",
+      "parentUuid": "7c2f43fa_7e8ad2e0",
+      "range": {
+        "startLine": 69,
+        "startChar": 16,
+        "endLine": 69,
+        "endChar": 20
+      },
+      "revId": "888ea473abec0c87234a60c79aeb15fe676871e8",
+      "serverId": "1ec6b3db-b2c1-4fa4-84a2-4c7efe89ba71"
     }
   ]
 }
