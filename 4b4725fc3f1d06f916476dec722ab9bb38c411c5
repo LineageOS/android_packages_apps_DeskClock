@@ -1,0 +1,21 @@
+{
+  "comments": [
+    {
+      "unresolved": true,
+      "key": {
+        "uuid": "4dc83844_eccd5b11",
+        "filename": "src/com/android/alarmclock/AnalogAppWidgetProvider.java",
+        "patchSetId": 1
+      },
+      "lineNbr": 68,
+      "author": {
+        "id": 10067
+      },
+      "writtenOn": "2022-12-31T10:36:23Z",
+      "side": 1,
+      "message": "\u003e100ch",
+      "revId": "4b4725fc3f1d06f916476dec722ab9bb38c411c5",
+      "serverId": "1ec6b3db-b2c1-4fa4-84a2-4c7efe89ba71"
+    }
+  ]
+}
