@@ -36,6 +36,7 @@ import com.android.deskclock.timer.TimerService;
 import java.util.Calendar;
 import java.util.Collection;
 import java.util.Comparator;
+import java.util.ArrayList;
 import java.util.List;
 
 import static android.content.Context.AUDIO_SERVICE;
@@ -770,7 +771,7 @@ public final class DataModel {
      */
     public List<Lap> getLaps() {
         enforceMainLooper();
-        return mStopwatchModel.getLaps();
+        return (mStopwatchModel != null) ? mStopwatchModel.getLaps() : new ArrayList<Lap>();
     }
 
     /**
