@@ -23,7 +23,6 @@ android_app {
         "androidx.lifecycle_lifecycle-common",
         "com.google.android.material_material",
         "androidx.lifecycle_lifecycle-runtime",
-        "androidx.percentlayout_percentlayout",
         "androidx.transition_transition",
         "androidx.core_core",
         "androidx.media_media",
