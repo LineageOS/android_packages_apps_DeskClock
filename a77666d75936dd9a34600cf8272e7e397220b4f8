@@ -1,0 +1,27 @@
+{
+  "comments": [
+    {
+      "unresolved": true,
+      "key": {
+        "uuid": "699ac645_8b0cc3e6",
+        "filename": "res/values/cm_strings.xml",
+        "patchSetId": 6
+      },
+      "lineNbr": 59,
+      "author": {
+        "id": 4550
+      },
+      "writtenOn": "2023-01-04T01:25:34Z",
+      "side": 1,
+      "message": "Can we add some comments here? It\u0027s not clear where the strigs are used on crowdin.",
+      "range": {
+        "startLine": 58,
+        "startChar": 0,
+        "endLine": 59,
+        "endChar": 53
+      },
+      "revId": "a77666d75936dd9a34600cf8272e7e397220b4f8",
+      "serverId": "1ec6b3db-b2c1-4fa4-84a2-4c7efe89ba71"
+    }
+  ]
+}
