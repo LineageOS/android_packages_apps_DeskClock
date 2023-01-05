@@ -164,7 +164,7 @@
     </style>
 
     <style name="TimerLabelTextAppearance" parent="SecondaryLabelTextAppearance">
-        <item name="android:textSize">32sp</item>
+        <item name="android:textSize">20sp</item>
     </style>
 
     <style name="MaterialCardViewStyle">

@@ -70,7 +70,7 @@ public final class StopwatchCircleView extends View {
         final Resources resources = context.getResources();
 
         mScreenDensity = resources.getDisplayMetrics().density;
-        mStrokeSize = resources.getDimension(R.dimen.circletimer_circle_size);
+        mStrokeSize = resources.getDimension(R.dimen.stopwatch_circle_size);
         mDotRadius = mStrokeSize / 2;
 
         mCompletedColor = ThemeUtils.resolveColor(context, R.attr.colorAccent);

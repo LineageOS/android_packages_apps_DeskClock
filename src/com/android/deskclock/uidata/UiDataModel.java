@@ -186,6 +186,14 @@ public final class UiDataModel {
     }
 
     /**
+     * @return the duration in milliseconds of medium animations
+     */
+    public long getMediumAnimationDuration() {
+        enforceMainLooper();
+        return mContext.getResources().getInteger(android.R.integer.config_mediumAnimTime);
+    }
+
+    /**
      * @return the duration in milliseconds of long animations
      */
     public long getLongAnimationDuration() {
