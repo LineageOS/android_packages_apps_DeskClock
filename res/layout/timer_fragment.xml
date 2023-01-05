@@ -24,56 +24,10 @@
         android:layout_width="match_parent"
         android:layout_height="match_parent">
 
-        <LinearLayout
+        <androidx.recyclerview.widget.RecyclerView
+            android:id="@+id/recycler_view"
             android:layout_width="match_parent"
-            android:layout_height="match_parent"
-            android:orientation="horizontal">
-
-            <LinearLayout
-                android:layout_width="0dp"
-                android:layout_height="match_parent"
-                android:layout_weight="96"
-                android:gravity="center_vertical|end"
-                android:orientation="vertical">
-
-                <ImageView
-                    android:id="@+id/page_indicator0"
-                    android:layout_width="wrap_content"
-                    android:layout_height="wrap_content"
-                    android:contentDescription="@null" />
-
-                <ImageView
-                    android:id="@+id/page_indicator1"
-                    android:layout_width="wrap_content"
-                    android:layout_height="wrap_content"
-                    android:contentDescription="@null" />
-
-                <ImageView
-                    android:id="@+id/page_indicator2"
-                    android:layout_width="wrap_content"
-                    android:layout_height="wrap_content"
-                    android:contentDescription="@null" />
-
-                <ImageView
-                    android:id="@+id/page_indicator3"
-                    android:layout_width="wrap_content"
-                    android:layout_height="wrap_content"
-                    android:contentDescription="@null" />
-
-            </LinearLayout>
-
-            <!-- Right gutter. -->
-            <Space
-                android:layout_width="0dp"
-                android:layout_height="match_parent"
-                android:layout_weight="@integer/gutter_width_percent" />
-
-        </LinearLayout>
-
-        <com.android.deskclock.VerticalViewPager
-            android:id="@+id/vertical_view_pager"
-            android:layout_width="match_parent"
-            android:layout_height="match_parent" />
+            android:layout_height="match_parent"/>
 
     </FrameLayout>
 
