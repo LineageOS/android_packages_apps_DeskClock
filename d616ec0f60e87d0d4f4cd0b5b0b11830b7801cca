@@ -1,0 +1,27 @@
+{
+  "comments": [
+    {
+      "unresolved": true,
+      "key": {
+        "uuid": "056f320e_ee2ed216",
+        "filename": "res/values/cm_strings.xml",
+        "patchSetId": 7
+      },
+      "lineNbr": 58,
+      "author": {
+        "id": 4550
+      },
+      "writtenOn": "2023-01-05T16:58:31Z",
+      "side": 1,
+      "message": "of",
+      "range": {
+        "startLine": 58,
+        "startChar": 21,
+        "endLine": 58,
+        "endChar": 23
+      },
+      "revId": "d616ec0f60e87d0d4f4cd0b5b0b11830b7801cca",
+      "serverId": "1ec6b3db-b2c1-4fa4-84a2-4c7efe89ba71"
+    }
+  ]
+}
