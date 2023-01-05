@@ -174,10 +174,24 @@ public class ExpiredTimersActivity extends BaseActivity {
         labelView.setVisibility(TextUtils.isEmpty(timer.getLabel()) ? View.GONE : View.VISIBLE);
 
         // Add logic to the "Add 1 Minute" button.
-        final View addMinuteButton = timerItem.findViewById(R.id.reset_add);
+        final View addMinuteButton = timerItem.findViewById(R.id.add_one_min);
         addMinuteButton.setOnClickListener(v -> {
             final Timer timer1 = DataModel.getDataModel().getTimer(timerId);
             DataModel.getDataModel().addTimerMinute(timer1);
+        });
+
+        // Add logic to hide the 'X' and reset button
+        final View closeButton = timerItem.findViewById(R.id.close);
+        closeButton.setVisibility(View.GONE);
+        final View resetButton = timerItem.findViewById(R.id.reset);
+        resetButton.setVisibility(View.GONE);
+
+        // Add logic to the "Stop" button
+        final View stopButton = timerItem.findViewById(R.id.play_pause);
+        stopButton.setOnClickListener(v -> {
+            final Timer timer1 = DataModel.getDataModel().getTimer(timerId);
+            DataModel.getDataModel().removeTimer(timer1);
+            removeTimer(timer1);
         });
 
         // If the first timer was just added, center it.
@@ -258,7 +272,7 @@ public class ExpiredTimersActivity extends BaseActivity {
             final long endTime = SystemClock.elapsedRealtime();
 
             // Try to maintain a consistent period of time between redraws.
-            final long delay = Math.max(0L, startTime + 20L - endTime);
+            final long delay = Math.max(0L, startTime + 100L - endTime);
             mExpiredTimersView.postDelayed(this, delay);
         }
     }
