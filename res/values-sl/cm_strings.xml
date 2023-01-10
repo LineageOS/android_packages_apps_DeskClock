@@ -37,6 +37,4 @@
     <string name="dialog_permissions_power_off_alarm">Brez tega dovoljenja, se vaša naprava ne bo zmožna samodejno vklopiti, da sproži budilko</string>
     <string name="dialog_permissions_no_permission">Zahtevana dovoljenja so bila zavrnjena,  omogočite jih v aplikaciji Nastavitve</string>
     <string name="dialog_permissions_post_notifications">Ta aplikacija se zanaša na obvestila. Brez njih ne mora delovati!</string>
-    <string name="dialog_permissions_read_phone_state">Ta aplikacija mora preveriti, če ste na telefonu pred zvonjenjem!</string>
-    <string name="dialog_permissions_notifications_and_phone">Ta aplikacija mora biti zmožna objavljati obvestila za budilke, časovnike in štoparice in preveriti, če ste na telefonu pred zvonjenjem!</string>
 </resources>

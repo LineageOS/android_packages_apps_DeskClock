@@ -29,6 +29,11 @@
     <string name="alarm_upcoming_channel">예정된 알람</string>
     <string name="stopwatch_channel">스톱워치</string>
     <string name="timer_channel">타이머</string>
-    <string name="add_label">라벨 추가</string>
+    <string name="dialog_permissions_title">권한</string>
+    <string name="dialog_permissions_ask">다시 묻기</string>
     <string name="dialog_permissions_dismiss">알람 해제</string>
+    <string name="dialog_permissions_settings">설정</string>
+    <string name="dialog_permissions_power_off_alarm">이 권한이 없으면 기기가 알람을 울리기 위해 자동으로 전원을 켤 수 없습니다.</string>
+    <string name="dialog_permissions_no_permission">필요한 권한이 거부되었습니다. 설정 앱에서 권한을 허용해 주세요.</string>
+    <string name="dialog_permissions_post_notifications">이 앱은 알림에 의존하는 앱입니다. 알림 권한이 없으면 정상적으로 작동하지 않습니다!</string>
 </resources>

@@ -37,6 +37,4 @@
     <string name="dialog_permissions_power_off_alarm">Zonder deze toestemming zal uw apparaat niet in staat zijn zichzelf aan te zetten om een alarm af te laten gaan</string>
     <string name="dialog_permissions_no_permission">Vereiste machtigingen zijn geweigerd, schakel ze in via Instellingen app</string>
     <string name="dialog_permissions_post_notifications">Deze app is afhankelijk van meldingen. Zonder deze kan de app niet worden uitgevoerd!</string>
-    <string name="dialog_permissions_read_phone_state">Deze app moet eerst controleren of je op je telefoon zit voordat je belt!</string>
-    <string name="dialog_permissions_notifications_and_phone">Deze app moet meldingen kunnen plaatsen voor alarmen, timers en stopwatches en controleren of je op de telefoon bent voordat je belt!</string>
 </resources>

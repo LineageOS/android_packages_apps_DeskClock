@@ -37,6 +37,4 @@
     <string name="dialog_permissions_power_off_alarm">Without this permission your device won\'t be able to power on itself to fire an alarm</string>
     <string name="dialog_permissions_no_permission">Required permissions were denied, enable them from Settings app</string>
     <string name="dialog_permissions_post_notifications">This app relies on notifications. Without them it cannot be run!</string>
-    <string name="dialog_permissions_read_phone_state">This app needs to check if you\'re on the phone before ringing!</string>
-    <string name="dialog_permissions_notifications_and_phone">This app needs to be able to post notifications for alarms, timers and stopwatches and check if you\'re on the phone before ringing!</string>
 </resources>

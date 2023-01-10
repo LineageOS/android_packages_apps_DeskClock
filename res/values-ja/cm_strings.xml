@@ -37,6 +37,4 @@
     <string name="dialog_permissions_power_off_alarm">この許可がないと、デバイスはアラームを鳴らすための自動電源オンができません</string>
     <string name="dialog_permissions_no_permission">必要な権限が拒否されました。設定アプリから許可してください</string>
     <string name="dialog_permissions_post_notifications">このアプリは通知に依存しています。通知がなければ実行できません</string>
-    <string name="dialog_permissions_read_phone_state">このアプリは、鳴らす前にデバイスの状態を確認する必要があります。</string>
-    <string name="dialog_permissions_notifications_and_phone">このアプリは、アラーム、タイマー、ストップウォッチの通知を表示し、鳴らす前にデバイスの状態を確認する必要があります</string>
 </resources>

@@ -37,6 +37,4 @@
     <string name="dialog_permissions_power_off_alarm">Sense aquest permís, el vostre dispositiu no es podrà engegar per activar una alarma</string>
     <string name="dialog_permissions_no_permission">S\'han denegat els permisos necessaris, activeu-los des de l\'aplicació Configuració</string>
     <string name="dialog_permissions_post_notifications">Aquesta aplicació es basa en les notificacions. Sense elles no es pot executar!</string>
-    <string name="dialog_permissions_read_phone_state">Aquesta aplicació necessita verificar si parleu per telèfon abans de sonar!</string>
-    <string name="dialog_permissions_notifications_and_phone">Aquesta aplicació ha de poder publicar notificacions d\'alarmes, temporitzadors i cronòmetres i verifica si parleu per telèfon abans de trucar!</string>
 </resources>

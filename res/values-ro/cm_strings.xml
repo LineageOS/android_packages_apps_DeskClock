@@ -37,6 +37,4 @@
     <string name="dialog_permissions_power_off_alarm">Fără această permisiune, dispozitivul nu va fi capabil să pornească singur pentru a suna alarma</string>
     <string name="dialog_permissions_no_permission">Permisiunile necesare au fost refuzate, activați-le din aplicația Setări</string>
     <string name="dialog_permissions_post_notifications">Această aplicație se bazează pe notificări. Fără ele nu poate fi rulată!</string>
-    <string name="dialog_permissions_read_phone_state">Această aplicație trebuie să verifice dacă sunteți pe telefon înainte de a suna!</string>
-    <string name="dialog_permissions_notifications_and_phone">Această aplicație trebuie să poată posta notificări pentru alarme, cronometre și numărători inverse și să verifice dacă sunteți pe telefon înainte de a suna!</string>
 </resources>

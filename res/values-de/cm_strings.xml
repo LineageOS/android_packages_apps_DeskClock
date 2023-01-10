@@ -37,6 +37,4 @@
     <string name="dialog_permissions_power_off_alarm">Ohne diese Berechtigung kann dein Gerät sich für einen Weckruf nicht selbst einschalten</string>
     <string name="dialog_permissions_no_permission">Erforderliche Berechtigungen nicht erteilt, bitte in den Einstellungen gewähren</string>
     <string name="dialog_permissions_post_notifications">Diese App ist auf Benachrichtigungen angewiesen. Andernfalls lässt sie sich nicht ausführen!</string>
-    <string name="dialog_permissions_read_phone_state">Diese App muss überprüfen, ob du gerade telefonierst, ehe ihr Weckruf beginnt!</string>
-    <string name="dialog_permissions_notifications_and_phone">Diese App braucht die Berechtigung, um Wecker-, Timer- und Stoppuhr-Benachrichtigungen zu senden und muss überprüfen, ob du gerade telefonierst, ehe ihr Weckruf beginnt!</string>
 </resources>

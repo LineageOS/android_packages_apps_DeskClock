@@ -37,6 +37,4 @@
     <string name="dialog_permissions_power_off_alarm">若没有此权限，您的设备将无法自行启动以触发警报。</string>
     <string name="dialog_permissions_no_permission">所需的权限被拒绝，请在“设置”应用中启用。</string>
     <string name="dialog_permissions_post_notifications">此应用依赖于通知，若没有它就无法运行！</string>
-    <string name="dialog_permissions_read_phone_state">在响铃前此应用需要检查您是否正在通话！</string>
-    <string name="dialog_permissions_notifications_and_phone">此应用需要为闹铃、计时器和秒表发布通知，并在响铃前检查您是否正在通话！</string>
 </resources>

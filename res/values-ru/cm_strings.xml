@@ -37,6 +37,4 @@
     <string name="dialog_permissions_power_off_alarm">Без этого разрешения ваше устройство не сможет включиться для срабатывания будильника.</string>
     <string name="dialog_permissions_no_permission">Требуемые разрешения были отклонены, включите их в настройках</string>
     <string name="dialog_permissions_post_notifications">Это приложение использует уведомления. Без них оно не может быть запущено!</string>
-    <string name="dialog_permissions_read_phone_state">Прежде чем звонить, это приложение должно проверить, разговариваете ли вы по телефону!</string>
-    <string name="dialog_permissions_notifications_and_phone">Это приложение должно иметь возможность отправлять уведомления о тревогах, таймерах и секундомерах и проверять, разговариваете ли вы по телефону, прежде чем звонить!</string>
 </resources>
