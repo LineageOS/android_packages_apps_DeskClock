@@ -70,7 +70,7 @@
 
         <androidx.constraintlayout.widget.ConstraintLayout
             android:id="@+id/fab_container"
-            android:layout_width="wrap_content"
+            android:layout_width="@dimen/fab_container_width"
             android:layout_height="match_parent"
             android:baselineAligned="false"
             android:orientation="vertical"
@@ -87,7 +87,8 @@
                 app:layout_constraintEnd_toEndOf="parent"
                 app:layout_constraintStart_toStartOf="parent"
                 app:layout_constraintTop_toBottomOf="@+id/fab"
-                app:layout_constraintVertical_bias="0.35" />
+                app:layout_constraintVertical_bias="0.35"
+                android:backgroundTint="@color/accent_color2" />
 
             <com.google.android.material.floatingactionbutton.FloatingActionButton
                 android:id="@+id/fab"
@@ -113,7 +114,8 @@
                 app:layout_constraintEnd_toEndOf="parent"
                 app:layout_constraintStart_toStartOf="parent"
                 app:layout_constraintTop_toTopOf="parent"
-                app:layout_constraintVertical_bias="0.65" />
+                app:layout_constraintVertical_bias="0.65"
+                android:backgroundTint="@color/accent_color2" />
 
         </androidx.constraintlayout.widget.ConstraintLayout>
 
