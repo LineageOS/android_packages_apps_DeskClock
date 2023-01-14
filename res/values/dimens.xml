@@ -131,6 +131,7 @@
     <dimen name="fab_height">88dp</dimen>
 
     <dimen name="fab_container_height">120dp</dimen>
+    <dimen name="fab_container_width">0dp</dimen>
     <dimen name="tab_content_bottom_padding">@dimen/fab_container_height</dimen>
 
     <dimen name="gutter_horizontal_padding">24.0dip</dimen>
