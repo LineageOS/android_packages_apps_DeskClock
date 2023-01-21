@@ -24,6 +24,30 @@
       "serverId": "1ec6b3db-b2c1-4fa4-84a2-4c7efe89ba71"
     },
     {
+      "unresolved": false,
+      "key": {
+        "uuid": "a96e2043_7d884825",
+        "filename": "src/com/android/alarmclock/DigitalAppWidgetProvider.java",
+        "patchSetId": 9
+      },
+      "lineNbr": 76,
+      "author": {
+        "id": 13028
+      },
+      "writtenOn": "2023-01-21T13:39:42Z",
+      "side": 1,
+      "message": "Done",
+      "parentUuid": "37b43664_b92d1f0a",
+      "range": {
+        "startLine": 59,
+        "startChar": 0,
+        "endLine": 76,
+        "endChar": 35
+      },
+      "revId": "3d954cade188890aa2868cbb71671cbd7f0c8f33",
+      "serverId": "1ec6b3db-b2c1-4fa4-84a2-4c7efe89ba71"
+    },
+    {
       "unresolved": true,
       "key": {
         "uuid": "7322254b_631b4b74",
@@ -37,6 +61,24 @@
       "writtenOn": "2023-01-21T12:55:24Z",
       "side": 1,
       "message": "Move static to the top",
+      "revId": "3d954cade188890aa2868cbb71671cbd7f0c8f33",
+      "serverId": "1ec6b3db-b2c1-4fa4-84a2-4c7efe89ba71"
+    },
+    {
+      "unresolved": false,
+      "key": {
+        "uuid": "065e1610_f87350ba",
+        "filename": "src/com/android/deskclock/AlarmClockFragment.java",
+        "patchSetId": 9
+      },
+      "lineNbr": 58,
+      "author": {
+        "id": 13028
+      },
+      "writtenOn": "2023-01-21T13:39:42Z",
+      "side": 1,
+      "message": "Done",
+      "parentUuid": "7322254b_631b4b74",
       "revId": "3d954cade188890aa2868cbb71671cbd7f0c8f33",
       "serverId": "1ec6b3db-b2c1-4fa4-84a2-4c7efe89ba71"
     },
@@ -58,6 +100,24 @@
       "serverId": "1ec6b3db-b2c1-4fa4-84a2-4c7efe89ba71"
     },
     {
+      "unresolved": false,
+      "key": {
+        "uuid": "d8d0153c_1b77e066",
+        "filename": "src/com/android/deskclock/ClockFragment.java",
+        "patchSetId": 9
+      },
+      "lineNbr": 55,
+      "author": {
+        "id": 13028
+      },
+      "writtenOn": "2023-01-21T13:39:42Z",
+      "side": 1,
+      "message": "Done",
+      "parentUuid": "5dc4a918_b3c13fcf",
+      "revId": "3d954cade188890aa2868cbb71671cbd7f0c8f33",
+      "serverId": "1ec6b3db-b2c1-4fa4-84a2-4c7efe89ba71"
+    },
+    {
       "unresolved": true,
       "key": {
         "uuid": "e9793cc7_c5b483f8",
@@ -71,6 +131,24 @@
       "writtenOn": "2023-01-21T12:55:24Z",
       "side": 1,
       "message": "Move static to the top",
+      "revId": "3d954cade188890aa2868cbb71671cbd7f0c8f33",
+      "serverId": "1ec6b3db-b2c1-4fa4-84a2-4c7efe89ba71"
+    },
+    {
+      "unresolved": false,
+      "key": {
+        "uuid": "e2a3bbe5_c3a74f0b",
+        "filename": "src/com/android/deskclock/DeskClock.java",
+        "patchSetId": 9
+      },
+      "lineNbr": 63,
+      "author": {
+        "id": 13028
+      },
+      "writtenOn": "2023-01-21T13:39:42Z",
+      "side": 1,
+      "message": "Done",
+      "parentUuid": "e9793cc7_c5b483f8",
       "revId": "3d954cade188890aa2868cbb71671cbd7f0c8f33",
       "serverId": "1ec6b3db-b2c1-4fa4-84a2-4c7efe89ba71"
     },
@@ -92,6 +170,24 @@
       "serverId": "1ec6b3db-b2c1-4fa4-84a2-4c7efe89ba71"
     },
     {
+      "unresolved": false,
+      "key": {
+        "uuid": "856611b5_df371807",
+        "filename": "src/com/android/deskclock/FragmentUtils.java",
+        "patchSetId": 9
+      },
+      "lineNbr": 20,
+      "author": {
+        "id": 13028
+      },
+      "writtenOn": "2023-01-21T13:39:42Z",
+      "side": 1,
+      "message": "Done",
+      "parentUuid": "415ee74d_2c3d0f25",
+      "revId": "3d954cade188890aa2868cbb71671cbd7f0c8f33",
+      "serverId": "1ec6b3db-b2c1-4fa4-84a2-4c7efe89ba71"
+    },
+    {
       "unresolved": true,
       "key": {
         "uuid": "ea3eafb8_92ed7f38",
@@ -105,6 +201,24 @@
       "writtenOn": "2023-01-21T12:55:24Z",
       "side": 1,
       "message": "Newline",
+      "revId": "3d954cade188890aa2868cbb71671cbd7f0c8f33",
+      "serverId": "1ec6b3db-b2c1-4fa4-84a2-4c7efe89ba71"
+    },
+    {
+      "unresolved": false,
+      "key": {
+        "uuid": "1db8e498_84d5e2e7",
+        "filename": "src/com/android/deskclock/ItemAnimator.java",
+        "patchSetId": 9
+      },
+      "lineNbr": 23,
+      "author": {
+        "id": 13028
+      },
+      "writtenOn": "2023-01-21T13:39:42Z",
+      "side": 1,
+      "message": "Done",
+      "parentUuid": "ea3eafb8_92ed7f38",
       "revId": "3d954cade188890aa2868cbb71671cbd7f0c8f33",
       "serverId": "1ec6b3db-b2c1-4fa4-84a2-4c7efe89ba71"
     },
@@ -126,6 +240,24 @@
       "serverId": "1ec6b3db-b2c1-4fa4-84a2-4c7efe89ba71"
     },
     {
+      "unresolved": false,
+      "key": {
+        "uuid": "d0b86518_e7959983",
+        "filename": "src/com/android/deskclock/ItemAnimator.java",
+        "patchSetId": 9
+      },
+      "lineNbr": 28,
+      "author": {
+        "id": 13028
+      },
+      "writtenOn": "2023-01-21T13:39:42Z",
+      "side": 1,
+      "message": "Done",
+      "parentUuid": "7efadc64_149faee0",
+      "revId": "3d954cade188890aa2868cbb71671cbd7f0c8f33",
+      "serverId": "1ec6b3db-b2c1-4fa4-84a2-4c7efe89ba71"
+    },
+    {
       "unresolved": true,
       "key": {
         "uuid": "4ee5568e_fa30c8eb",
@@ -139,6 +271,24 @@
       "writtenOn": "2023-01-21T12:55:24Z",
       "side": 1,
       "message": "Move static to the top",
+      "revId": "3d954cade188890aa2868cbb71671cbd7f0c8f33",
+      "serverId": "1ec6b3db-b2c1-4fa4-84a2-4c7efe89ba71"
+    },
+    {
+      "unresolved": false,
+      "key": {
+        "uuid": "e753aa41_b77024f6",
+        "filename": "src/com/android/deskclock/ItemAnimator.java",
+        "patchSetId": 9
+      },
+      "lineNbr": 35,
+      "author": {
+        "id": 13028
+      },
+      "writtenOn": "2023-01-21T13:39:42Z",
+      "side": 1,
+      "message": "Done",
+      "parentUuid": "4ee5568e_fa30c8eb",
       "revId": "3d954cade188890aa2868cbb71671cbd7f0c8f33",
       "serverId": "1ec6b3db-b2c1-4fa4-84a2-4c7efe89ba71"
     },
@@ -160,6 +310,24 @@
       "serverId": "1ec6b3db-b2c1-4fa4-84a2-4c7efe89ba71"
     },
     {
+      "unresolved": false,
+      "key": {
+        "uuid": "22a19c9f_a72cff7f",
+        "filename": "src/com/android/deskclock/LabelDialogFragment.java",
+        "patchSetId": 9
+      },
+      "lineNbr": 45,
+      "author": {
+        "id": 13028
+      },
+      "writtenOn": "2023-01-21T13:39:42Z",
+      "side": 1,
+      "message": "Done",
+      "parentUuid": "2a6e1f7a_7bb88fd2",
+      "revId": "3d954cade188890aa2868cbb71671cbd7f0c8f33",
+      "serverId": "1ec6b3db-b2c1-4fa4-84a2-4c7efe89ba71"
+    },
+    {
       "unresolved": true,
       "key": {
         "uuid": "9982b624_c23a8d00",
@@ -173,6 +341,24 @@
       "writtenOn": "2023-01-21T12:55:24Z",
       "side": 1,
       "message": "Newline",
+      "revId": "3d954cade188890aa2868cbb71671cbd7f0c8f33",
+      "serverId": "1ec6b3db-b2c1-4fa4-84a2-4c7efe89ba71"
+    },
+    {
+      "unresolved": false,
+      "key": {
+        "uuid": "01334938_f83e8166",
+        "filename": "src/com/android/deskclock/NotificationUtils.java",
+        "patchSetId": 9
+      },
+      "lineNbr": 25,
+      "author": {
+        "id": 13028
+      },
+      "writtenOn": "2023-01-21T13:39:42Z",
+      "side": 1,
+      "message": "Done",
+      "parentUuid": "9982b624_c23a8d00",
       "revId": "3d954cade188890aa2868cbb71671cbd7f0c8f33",
       "serverId": "1ec6b3db-b2c1-4fa4-84a2-4c7efe89ba71"
     },
@@ -194,6 +380,24 @@
       "serverId": "1ec6b3db-b2c1-4fa4-84a2-4c7efe89ba71"
     },
     {
+      "unresolved": false,
+      "key": {
+        "uuid": "0ca908c1_57460170",
+        "filename": "src/com/android/deskclock/ScreensaverActivity.java",
+        "patchSetId": 9
+      },
+      "lineNbr": 35,
+      "author": {
+        "id": 13028
+      },
+      "writtenOn": "2023-01-21T13:39:42Z",
+      "side": 1,
+      "message": "Done",
+      "parentUuid": "e184fb84_fd4a4000",
+      "revId": "3d954cade188890aa2868cbb71671cbd7f0c8f33",
+      "serverId": "1ec6b3db-b2c1-4fa4-84a2-4c7efe89ba71"
+    },
+    {
       "unresolved": true,
       "key": {
         "uuid": "7e4b85db_398215f4",
@@ -207,6 +411,24 @@
       "writtenOn": "2023-01-21T12:55:24Z",
       "side": 1,
       "message": "Move static to the top",
+      "revId": "3d954cade188890aa2868cbb71671cbd7f0c8f33",
+      "serverId": "1ec6b3db-b2c1-4fa4-84a2-4c7efe89ba71"
+    },
+    {
+      "unresolved": false,
+      "key": {
+        "uuid": "836b60fe_7a9b0965",
+        "filename": "src/com/android/deskclock/Utils.java",
+        "patchSetId": 9
+      },
+      "lineNbr": 78,
+      "author": {
+        "id": 13028
+      },
+      "writtenOn": "2023-01-21T13:39:42Z",
+      "side": 1,
+      "message": "Done",
+      "parentUuid": "7e4b85db_398215f4",
       "revId": "3d954cade188890aa2868cbb71671cbd7f0c8f33",
       "serverId": "1ec6b3db-b2c1-4fa4-84a2-4c7efe89ba71"
     },
@@ -228,6 +450,24 @@
       "serverId": "1ec6b3db-b2c1-4fa4-84a2-4c7efe89ba71"
     },
     {
+      "unresolved": false,
+      "key": {
+        "uuid": "59c1c891_6ed3eda9",
+        "filename": "src/com/android/deskclock/controller/Controller.java",
+        "patchSetId": 9
+      },
+      "lineNbr": 20,
+      "author": {
+        "id": 13028
+      },
+      "writtenOn": "2023-01-21T13:39:42Z",
+      "side": 1,
+      "message": "Done",
+      "parentUuid": "f4ed6002_3c6792d7",
+      "revId": "3d954cade188890aa2868cbb71671cbd7f0c8f33",
+      "serverId": "1ec6b3db-b2c1-4fa4-84a2-4c7efe89ba71"
+    },
+    {
       "unresolved": true,
       "key": {
         "uuid": "c4d7233d_ca5320b7",
@@ -245,6 +485,24 @@
       "serverId": "1ec6b3db-b2c1-4fa4-84a2-4c7efe89ba71"
     },
     {
+      "unresolved": false,
+      "key": {
+        "uuid": "792bfa18_370bdfb1",
+        "filename": "src/com/android/deskclock/controller/Controller.java",
+        "patchSetId": 9
+      },
+      "lineNbr": 25,
+      "author": {
+        "id": 13028
+      },
+      "writtenOn": "2023-01-21T13:39:42Z",
+      "side": 1,
+      "message": "Done",
+      "parentUuid": "c4d7233d_ca5320b7",
+      "revId": "3d954cade188890aa2868cbb71671cbd7f0c8f33",
+      "serverId": "1ec6b3db-b2c1-4fa4-84a2-4c7efe89ba71"
+    },
+    {
       "unresolved": true,
       "key": {
         "uuid": "1cd64ba1_70704c2d",
@@ -258,6 +516,24 @@
       "writtenOn": "2023-01-21T12:55:24Z",
       "side": 1,
       "message": "Move static to the top",
+      "revId": "3d954cade188890aa2868cbb71671cbd7f0c8f33",
+      "serverId": "1ec6b3db-b2c1-4fa4-84a2-4c7efe89ba71"
+    },
+    {
+      "unresolved": false,
+      "key": {
+        "uuid": "312f1558_57283dd1",
+        "filename": "src/com/android/deskclock/data/DataModel.java",
+        "patchSetId": 9
+      },
+      "lineNbr": 49,
+      "author": {
+        "id": 13028
+      },
+      "writtenOn": "2023-01-21T13:39:42Z",
+      "side": 1,
+      "message": "Done",
+      "parentUuid": "1cd64ba1_70704c2d",
       "revId": "3d954cade188890aa2868cbb71671cbd7f0c8f33",
       "serverId": "1ec6b3db-b2c1-4fa4-84a2-4c7efe89ba71"
     },
@@ -285,6 +561,30 @@
       "serverId": "1ec6b3db-b2c1-4fa4-84a2-4c7efe89ba71"
     },
     {
+      "unresolved": false,
+      "key": {
+        "uuid": "505cfe78_6645dd1b",
+        "filename": "src/com/android/deskclock/data/TimerModel.java",
+        "patchSetId": 9
+      },
+      "lineNbr": 34,
+      "author": {
+        "id": 13028
+      },
+      "writtenOn": "2023-01-21T13:39:42Z",
+      "side": 1,
+      "message": "Done",
+      "parentUuid": "dea00e1e_40cab403",
+      "range": {
+        "startLine": 34,
+        "startChar": 0,
+        "endLine": 34,
+        "endChar": 29
+      },
+      "revId": "3d954cade188890aa2868cbb71671cbd7f0c8f33",
+      "serverId": "1ec6b3db-b2c1-4fa4-84a2-4c7efe89ba71"
+    },
+    {
       "unresolved": true,
       "key": {
         "uuid": "e225aee3_bf8fd429",
@@ -298,6 +598,24 @@
       "writtenOn": "2023-01-21T12:55:24Z",
       "side": 1,
       "message": "Move static to the top",
+      "revId": "3d954cade188890aa2868cbb71671cbd7f0c8f33",
+      "serverId": "1ec6b3db-b2c1-4fa4-84a2-4c7efe89ba71"
+    },
+    {
+      "unresolved": false,
+      "key": {
+        "uuid": "05bd308f_cadc7980",
+        "filename": "src/com/android/deskclock/data/TimerModel.java",
+        "patchSetId": 9
+      },
+      "lineNbr": 52,
+      "author": {
+        "id": 13028
+      },
+      "writtenOn": "2023-01-21T13:39:42Z",
+      "side": 1,
+      "message": "Done",
+      "parentUuid": "e225aee3_bf8fd429",
       "revId": "3d954cade188890aa2868cbb71671cbd7f0c8f33",
       "serverId": "1ec6b3db-b2c1-4fa4-84a2-4c7efe89ba71"
     },
@@ -325,6 +643,30 @@
       "serverId": "1ec6b3db-b2c1-4fa4-84a2-4c7efe89ba71"
     },
     {
+      "unresolved": false,
+      "key": {
+        "uuid": "140aea80_7a45800a",
+        "filename": "src/com/android/deskclock/ringtone/RingtoneViewHolder.java",
+        "patchSetId": 9
+      },
+      "lineNbr": 39,
+      "author": {
+        "id": 13028
+      },
+      "writtenOn": "2023-01-21T13:39:42Z",
+      "side": 1,
+      "message": "Done",
+      "parentUuid": "dfd76da5_cc744c17",
+      "range": {
+        "startLine": 36,
+        "startChar": 0,
+        "endLine": 39,
+        "endChar": 40
+      },
+      "revId": "3d954cade188890aa2868cbb71671cbd7f0c8f33",
+      "serverId": "1ec6b3db-b2c1-4fa4-84a2-4c7efe89ba71"
+    },
+    {
       "unresolved": true,
       "key": {
         "uuid": "a1286598_e038339c",
@@ -338,6 +680,24 @@
       "writtenOn": "2023-01-21T12:55:24Z",
       "side": 1,
       "message": "Move static to the top",
+      "revId": "3d954cade188890aa2868cbb71671cbd7f0c8f33",
+      "serverId": "1ec6b3db-b2c1-4fa4-84a2-4c7efe89ba71"
+    },
+    {
+      "unresolved": false,
+      "key": {
+        "uuid": "eb2a11c6_97a735d8",
+        "filename": "src/com/android/deskclock/timer/TimerItem.java",
+        "patchSetId": 9
+      },
+      "lineNbr": 38,
+      "author": {
+        "id": 13028
+      },
+      "writtenOn": "2023-01-21T13:39:42Z",
+      "side": 1,
+      "message": "Done",
+      "parentUuid": "a1286598_e038339c",
       "revId": "3d954cade188890aa2868cbb71671cbd7f0c8f33",
       "serverId": "1ec6b3db-b2c1-4fa4-84a2-4c7efe89ba71"
     }
