@@ -1,0 +1,21 @@
+{
+  "comments": [
+    {
+      "unresolved": false,
+      "key": {
+        "uuid": "48c9db4a_087dd73a",
+        "filename": "/PATCHSET_LEVEL",
+        "patchSetId": 10
+      },
+      "lineNbr": 0,
+      "author": {
+        "id": 13028
+      },
+      "writtenOn": "2023-01-21T14:09:20Z",
+      "side": 1,
+      "message": "Went through ALL the java files and reordered / removed",
+      "revId": "04e8b7070f0f805926a0b891d7ff514b8c2bccb2",
+      "serverId": "1ec6b3db-b2c1-4fa4-84a2-4c7efe89ba71"
+    }
+  ]
+}
