@@ -1,0 +1,21 @@
+{
+  "comments": [
+    {
+      "unresolved": true,
+      "key": {
+        "uuid": "4d18745f_201d2b4a",
+        "filename": "res/menu/ringtone_item_menu.xml",
+        "patchSetId": 8
+      },
+      "lineNbr": 1,
+      "author": {
+        "id": 4550
+      },
+      "writtenOn": "2023-01-21T13:15:03Z",
+      "side": 1,
+      "message": "Copyright",
+      "revId": "a8f4b3597a8d1c8c08da9e76619c0fa55e38f06a",
+      "serverId": "1ec6b3db-b2c1-4fa4-84a2-4c7efe89ba71"
+    }
+  ]
+}
