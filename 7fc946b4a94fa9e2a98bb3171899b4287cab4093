@@ -18,6 +18,24 @@
       "serverId": "1ec6b3db-b2c1-4fa4-84a2-4c7efe89ba71"
     },
     {
+      "unresolved": false,
+      "key": {
+        "uuid": "e41962ed_2d4a598c",
+        "filename": "src/com/android/deskclock/provider/ClockDatabaseHelper.java",
+        "patchSetId": 7
+      },
+      "lineNbr": 43,
+      "author": {
+        "id": 13028
+      },
+      "writtenOn": "2023-01-21T13:38:56Z",
+      "side": 0,
+      "message": "Ack",
+      "parentUuid": "c27b335e_7f702c3f",
+      "revId": "7fc946b4a94fa9e2a98bb3171899b4287cab4093",
+      "serverId": "1ec6b3db-b2c1-4fa4-84a2-4c7efe89ba71"
+    },
+    {
       "unresolved": true,
       "key": {
         "uuid": "f8188a0b_620c2cdd",
@@ -31,6 +49,30 @@
       "writtenOn": "2023-01-21T12:26:49Z",
       "side": 0,
       "message": "Same",
+      "range": {
+        "startLine": 57,
+        "startChar": 0,
+        "endLine": 61,
+        "endChar": 0
+      },
+      "revId": "7fc946b4a94fa9e2a98bb3171899b4287cab4093",
+      "serverId": "1ec6b3db-b2c1-4fa4-84a2-4c7efe89ba71"
+    },
+    {
+      "unresolved": false,
+      "key": {
+        "uuid": "2d2e6fcd_247bdfaf",
+        "filename": "src/com/android/deskclock/provider/ClockDatabaseHelper.java",
+        "patchSetId": 7
+      },
+      "lineNbr": 61,
+      "author": {
+        "id": 13028
+      },
+      "writtenOn": "2023-01-21T13:38:56Z",
+      "side": 0,
+      "message": "Ack",
+      "parentUuid": "f8188a0b_620c2cdd",
       "range": {
         "startLine": 57,
         "startChar": 0,
