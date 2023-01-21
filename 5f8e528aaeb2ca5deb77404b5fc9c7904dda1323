@@ -1,0 +1,27 @@
+{
+  "comments": [
+    {
+      "unresolved": true,
+      "key": {
+        "uuid": "3029af00_ebca66a0",
+        "filename": "src/com/android/deskclock/alarms/TimePickerDialogFragment.java",
+        "patchSetId": 7
+      },
+      "lineNbr": 113,
+      "author": {
+        "id": 4550
+      },
+      "writtenOn": "2023-01-21T12:26:49Z",
+      "side": 1,
+      "message": "extra space",
+      "range": {
+        "startLine": 113,
+        "startChar": 11,
+        "endLine": 113,
+        "endChar": 12
+      },
+      "revId": "5f8e528aaeb2ca5deb77404b5fc9c7904dda1323",
+      "serverId": "1ec6b3db-b2c1-4fa4-84a2-4c7efe89ba71"
+    }
+  ]
+}

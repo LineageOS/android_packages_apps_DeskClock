@@ -1,0 +1,44 @@
+{
+  "comments": [
+    {
+      "unresolved": true,
+      "key": {
+        "uuid": "c27b335e_7f702c3f",
+        "filename": "src/com/android/deskclock/provider/ClockDatabaseHelper.java",
+        "patchSetId": 7
+      },
+      "lineNbr": 43,
+      "author": {
+        "id": 4550
+      },
+      "writtenOn": "2023-01-21T12:26:49Z",
+      "side": 0,
+      "message": "Might as well keep these just for reference, or just commented out",
+      "revId": "7fc946b4a94fa9e2a98bb3171899b4287cab4093",
+      "serverId": "1ec6b3db-b2c1-4fa4-84a2-4c7efe89ba71"
+    },
+    {
+      "unresolved": true,
+      "key": {
+        "uuid": "f8188a0b_620c2cdd",
+        "filename": "src/com/android/deskclock/provider/ClockDatabaseHelper.java",
+        "patchSetId": 7
+      },
+      "lineNbr": 61,
+      "author": {
+        "id": 4550
+      },
+      "writtenOn": "2023-01-21T12:26:49Z",
+      "side": 0,
+      "message": "Same",
+      "range": {
+        "startLine": 57,
+        "startChar": 0,
+        "endLine": 61,
+        "endChar": 0
+      },
+      "revId": "7fc946b4a94fa9e2a98bb3171899b4287cab4093",
+      "serverId": "1ec6b3db-b2c1-4fa4-84a2-4c7efe89ba71"
+    }
+  ]
+}
