@@ -18,6 +18,24 @@
       "serverId": "1ec6b3db-b2c1-4fa4-84a2-4c7efe89ba71"
     },
     {
+      "unresolved": false,
+      "key": {
+        "uuid": "83c5e22d_b3c6c65a",
+        "filename": "src/com/android/deskclock/timer/TimerFragment.java",
+        "patchSetId": 8
+      },
+      "lineNbr": 168,
+      "author": {
+        "id": 13028
+      },
+      "writtenOn": "2023-01-22T16:45:00Z",
+      "side": 1,
+      "message": "Done",
+      "parentUuid": "7963fa82_83f9c763",
+      "revId": "35bf3586e57ccc407b7f05aa007c00ee99bcba93",
+      "serverId": "1ec6b3db-b2c1-4fa4-84a2-4c7efe89ba71"
+    },
+    {
       "unresolved": true,
       "key": {
         "uuid": "906d8291_dc53584a",
@@ -35,6 +53,24 @@
       "serverId": "1ec6b3db-b2c1-4fa4-84a2-4c7efe89ba71"
     },
     {
+      "unresolved": false,
+      "key": {
+        "uuid": "fe8e55cc_e34855d7",
+        "filename": "src/com/android/deskclock/timer/TimerItem.java",
+        "patchSetId": 8
+      },
+      "lineNbr": 138,
+      "author": {
+        "id": 13028
+      },
+      "writtenOn": "2023-01-22T16:45:00Z",
+      "side": 1,
+      "message": "You are right. Missed to remove it finally",
+      "parentUuid": "906d8291_dc53584a",
+      "revId": "35bf3586e57ccc407b7f05aa007c00ee99bcba93",
+      "serverId": "1ec6b3db-b2c1-4fa4-84a2-4c7efe89ba71"
+    },
+    {
       "unresolved": true,
       "key": {
         "uuid": "de2aed7d_850c4c1d",
@@ -48,6 +84,24 @@
       "writtenOn": "2023-01-22T14:11:37Z",
       "side": 1,
       "message": "same",
+      "revId": "35bf3586e57ccc407b7f05aa007c00ee99bcba93",
+      "serverId": "1ec6b3db-b2c1-4fa4-84a2-4c7efe89ba71"
+    },
+    {
+      "unresolved": false,
+      "key": {
+        "uuid": "527d18c4_0bd7efc8",
+        "filename": "src/com/android/deskclock/timer/TimerItem.java",
+        "patchSetId": 8
+      },
+      "lineNbr": 147,
+      "author": {
+        "id": 13028
+      },
+      "writtenOn": "2023-01-22T16:45:00Z",
+      "side": 1,
+      "message": "Done",
+      "parentUuid": "de2aed7d_850c4c1d",
       "revId": "35bf3586e57ccc407b7f05aa007c00ee99bcba93",
       "serverId": "1ec6b3db-b2c1-4fa4-84a2-4c7efe89ba71"
     }
