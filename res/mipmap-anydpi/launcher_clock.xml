@@ -1,0 +1,116 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!--
+     SPDX-FileCopyrightText: 2023 The LineageOS Project
+     SPDX-License-Identifier: Apache-2.0
+-->
+<adaptive-icon
+    xmlns:android="http://schemas.android.com/apk/res/android" xmlns:aapt="http://schemas.android.com/aapt">
+    <background>
+        <!--
+        Base
+        -->
+        <vector android:height="108.0dp" android:width="108.0dp" android:viewportWidth="108.0" android:viewportHeight="108.0">
+            <path android:fillColor="#ff2A3232" android:pathData="M0,0h108v108h-108z" />
+        </vector>
+    </background>
+    <foreground>
+        <layer-list>
+            <item>
+                <!--
+                Hour hand
+                -->
+                <rotate android:fromDegrees="310.0" android:toDegrees="5310.0" android:pivotX="50.0%" android:pivotY="50.0%">
+                    <vector android:height="108.0dp" android:width="108.0dp" android:viewportWidth="108.0" android:viewportHeight="108.0">
+                        <path android:fillColor="@android:color/white" android:pathData="M54.0001 32C53.4338 32 52.9609 32.4318 52.9096 32.9959L51.2717 51.0123C51.2697 51.0348 51.2679 51.0572 51.2664 51.0796C51.319 51.0305 51.3731 50.9825 51.4289 50.9358C52.9967 49.6202 55.2776 49.7129 56.7338 51.0794C56.7323 51.0571 56.7306 51.0347 56.7285 51.0123L55.0907 32.9959C55.0394 32.4318 54.5665 32 54.0001 32Z" />
+                        <path android:fillColor="#FF98A7A7" android:pathData="M56 54C56 55.1046 55.1046 56 54 56C52.8954 56 52 55.1046 52 54C52 52.8954 52.8954 52 54 52C55.1046 52 56 52.8954 56 54Z" />
+                    </vector>
+                </rotate>
+            </item>
+            <item>
+                <!--
+                Minute hand
+                -->
+                <rotate android:fromDegrees="50.0" android:toDegrees="60050.0" android:pivotX="50.0%" android:pivotY="50.0%">
+                    <vector android:height="108.0dp" android:width="108.0dp" android:viewportWidth="108.0" android:viewportHeight="108.0">
+                        <path android:fillColor="@android:color/white" android:pathData="M54 25.9996C53.4365 25.9996 52.9689 26.435 52.9287 26.997L51.2137 51.0072C51.2106 51.0502 51.2085 51.093 51.2074 51.1356C52.6604 49.7155 54.9821 49.6022 56.5712 50.9356C56.648 51.0001 56.7218 51.0668 56.7925 51.1356C56.7914 51.093 56.7893 51.0502 56.7862 51.0072L55.0712 26.997C55.0311 26.435 54.5634 25.9996 54 25.9996Z" />
+                        <path android:fillColor="#FF98A7A7" android:pathData="M56 54C56 55.1046 55.1046 56 54 56C52.8954 56 52 55.1046 52 54C52 52.8954 52.8954 52 54 52C55.1046 52 56 52.8954 56 54Z" />
+                    </vector>
+                </rotate>
+            </item>
+            <item>
+                <!--
+                Second hand
+                -->
+                <rotate android:fromDegrees="180.0" android:toDegrees="6180.0" android:pivotX="50.0%" android:pivotY="50.0%">
+                    <vector android:height="108.0dp" android:width="108.0dp" android:viewportWidth="108.0" android:viewportHeight="108.0">
+                        <path android:strokeColor="#FFFFD250" android:strokeWidth="2" android:strokeLineCap="round" android:pathData="M54 29L54 54" />
+                        <path android:fillColor="#FFF09F38" android:pathData="M60 54C60 57.3137 57.3137 60 54 60C50.6863 60 48 57.3137 48 54C48 50.6863 50.6863 48 54 48C57.3137 48 60 50.6863 60 54Z" />
+                    </vector>
+                </rotate>
+            </item>
+            <item>
+                <!--
+                Finish
+                -->
+                <vector android:height="108.0dp" android:width="108.0dp" android:viewportWidth="108.0" android:viewportHeight="108.0">
+                    <path
+                        android:pathData="M28.54,28.54m-72,0a72,72 0,1 1,144 0a72,72 0,1 1,-144 0"
+                        android:fillAlpha="0.6">
+                        <aapt:attr name="android:fillColor">
+                            <gradient
+                                android:gradientRadius="72"
+                                android:centerX="28.54"
+                                android:centerY="28.54"
+                                android:type="radial">
+                                <item android:offset="0" android:color="#19FFFFFF"/>
+                                <item android:offset="1" android:color="#00FFFFFF"/>
+                            </gradient>
+                        </aapt:attr>
+                    </path>
+                </vector>
+            </item>
+        </layer-list>
+    </foreground>
+    <monochrome>
+        <layer-list>
+            <item>
+                <!--
+                Hour hand
+                -->
+                <rotate android:fromDegrees="310.0" android:toDegrees="5310.0" android:pivotX="50.0%" android:pivotY="50.0%">
+                    <vector android:height="108.0dp" android:width="108.0dp" android:viewportWidth="108.0" android:viewportHeight="108.0">
+                        <path android:fillColor="@android:color/white" android:pathData="M53.9998 35C53.4334 35 52.9605 35.4318 52.9092 35.9959L52.0718 45.2071C53.3459 44.9289 54.6633 44.9322 55.9278 45.2085L55.0903 35.9959C55.039 35.4318 54.5661 35 53.9998 35Z" />
+                    </vector>
+                </rotate>
+            </item>
+            <item>
+                <!--
+                Minute hand
+                -->
+                <rotate android:fromDegrees="50.0" android:toDegrees="60050.0" android:pivotX="50.0%" android:pivotY="50.0%">
+                    <vector android:height="108.0dp" android:width="108.0dp" android:viewportWidth="108.0" android:viewportHeight="108.0">
+                        <path android:fillColor="@android:color/white" android:pathData="M54.0002 29.0002C53.4368 29.0002 52.9691 29.4356 52.929 29.9976L51.8386 45.2629C53.2509 44.9147 54.7373 44.9103 56.1617 45.2615L55.0714 29.9976C55.0313 29.4356 54.5636 29.0002 54.0002 29.0002Z" />
+                    </vector>
+                </rotate>
+            </item>
+            <item>
+                <!--
+                Second hand
+                -->
+                <rotate android:fromDegrees="180.0" android:toDegrees="6180.0" android:pivotX="50.0%" android:pivotY="50.0%">
+                    <vector android:height="108.0dp" android:width="108.0dp" android:viewportWidth="108.0" android:viewportHeight="108.0">
+                        <path android:fillColor="@android:color/white" android:pathData="M53 45.0552C53.3283 45.0189 53.662 45.0002 54 45.0002C54.338 45.0002 54.6717 45.0189 55 45.0552L55 32.0002C55 31.448 54.5523 31.0002 54 31.0002C53.4477 31.0002 53 31.448 53 32.0002L53 45.0552Z" />
+                    </vector>
+                </rotate>
+            </item>
+            <item>
+                <!--
+                Center
+                -->
+                <vector android:height="108.0dp" android:width="108.0dp" android:viewportWidth="108.0" android:viewportHeight="108.0">
+                    <path android:fillColor="@android:color/white" android:pathData="M60 54C60 57.3137 57.3137 60 54 60C50.6863 60 48 57.3137 48 54C48 50.6863 50.6863 48 54 48C57.3137 48 60 50.6863 60 54Z" />
+                </vector>
+            </item>
+        </layer-list>
+    </monochrome>
+</adaptive-icon>

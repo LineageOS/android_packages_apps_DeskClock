@@ -50,6 +50,14 @@
         android:supportsRtl="true"
         android:theme="@style/Theme.DeskClock">
 
+        <meta-data android:name="com.android.launcher3.LEVEL_PER_TICK_ICON_ROUND" android:resource="@mipmap/launcher_clock" />
+        <meta-data android:name="com.android.launcher3.HOUR_LAYER_INDEX" android:value="0" />
+        <meta-data android:name="com.android.launcher3.MINUTE_LAYER_INDEX" android:value="1" />
+        <meta-data android:name="com.android.launcher3.SECOND_LAYER_INDEX" android:value="2" />
+        <meta-data android:name="com.android.launcher3.DEFAULT_HOUR" android:value="10" />
+        <meta-data android:name="com.android.launcher3.DEFAULT_MINUTE" android:value="10" />
+        <meta-data android:name="com.android.launcher3.DEFAULT_SECOND" android:value="30" />
+
         <!-- ============================================================== -->
         <!-- Main app components.                                           -->
         <!-- ============================================================== -->
