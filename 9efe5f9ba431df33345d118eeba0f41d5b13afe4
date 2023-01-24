@@ -1,0 +1,21 @@
+{
+  "comments": [
+    {
+      "unresolved": false,
+      "key": {
+        "uuid": "2d39870a_eee40795",
+        "filename": "/PATCHSET_LEVEL",
+        "patchSetId": 3
+      },
+      "lineNbr": 0,
+      "author": {
+        "id": 8649
+      },
+      "writtenOn": "2023-01-24T01:26:25Z",
+      "side": 1,
+      "message": "Note: This xml layout moves some vector layers from \u003cbackground\u003e to \u003cforeground\u003e compared to the static version, but is necessary to get them running with the operating code. This results in a slight change of appearance in adaptive icon visual effects but it does not break anything visually.",
+      "revId": "9efe5f9ba431df33345d118eeba0f41d5b13afe4",
+      "serverId": "1ec6b3db-b2c1-4fa4-84a2-4c7efe89ba71"
+    }
+  ]
+}
