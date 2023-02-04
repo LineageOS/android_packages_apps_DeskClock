@@ -285,7 +285,8 @@ public final class SettingsActivity extends CollapsingToolbarBaseActivity {
                 SensorManager sensorManager = (SensorManager)
                         getActivity().getSystemService(Context.SENSOR_SERVICE);
                 if (sensorManager.getDefaultSensor(Sensor.TYPE_ACCELEROMETER) == null) {
-                    preference.setValue("0"); // Turn it off
+                    preference.setValue("0");  // Turn it off
+                    preference.setVisible(false);
                 } else {
                     preference.setSummary(preference.getEntry());
                     preference.setOnPreferenceChangeListener(this);
