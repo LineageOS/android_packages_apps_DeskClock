@@ -42,8 +42,6 @@ import com.android.deskclock.data.Weekdays;
 import com.android.deskclock.ringtone.RingtonePickerActivity;
 import com.android.deskclock.widget.CollapsingToolbarBaseActivity;
 
-import java.util.List;
-
 /**
  * Settings for the Alarm Clock.
  */
@@ -286,8 +284,7 @@ public final class SettingsActivity extends CollapsingToolbarBaseActivity {
             if (preference != null) {
                 SensorManager sensorManager = (SensorManager)
                         getActivity().getSystemService(Context.SENSOR_SERVICE);
-                List<Sensor> sensorList = sensorManager.getSensorList(Sensor.TYPE_ACCELEROMETER);
-                if (sensorList.size() < 1) { // This will be true if no accelerometer sensor
+                if (sensorManager.getDefaultSensor(Sensor.TYPE_ACCELEROMETER) == null) {
                     preference.setValue("0"); // Turn it off
                 } else {
                     preference.setSummary(preference.getEntry());
