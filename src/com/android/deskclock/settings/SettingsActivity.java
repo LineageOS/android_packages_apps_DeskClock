@@ -275,28 +275,23 @@ public final class SettingsActivity extends CollapsingToolbarBaseActivity {
             timerRingtonePref.setOnPreferenceClickListener(this);
             timerRingtonePref.setSummary(DataModel.getDataModel().getTimerRingtoneTitle());
 
-            SensorManager sensorManager = (SensorManager)
-                    getActivity().getSystemService(Context.SENSOR_SERVICE);
-
             final SimpleMenuPreference flipActionPref = findPreference(KEY_FLIP_ACTION);
-            if (flipActionPref != null) {
-                List<Sensor> sensorList = sensorManager.getSensorList(Sensor.TYPE_ACCELEROMETER);
-                if (sensorList.size() < 1) { // This will be true if no accelerometer sensor
-                    flipActionPref.setValue("0"); // Turn it off
-                } else {
-                    flipActionPref.setSummary(flipActionPref.getEntry());
-                    flipActionPref.setOnPreferenceChangeListener(this);
-                }
-            }
+            setupFlipOrShakeAction(flipActionPref);
 
             final SimpleMenuPreference shakeActionPref = findPreference(KEY_SHAKE_ACTION);
-            if (shakeActionPref != null) {
+            setupFlipOrShakeAction(shakeActionPref);
+        }
+
+        private void setupFlipOrShakeAction(SimpleMenuPreference preference) {
+            if (preference != null) {
+                SensorManager sensorManager = (SensorManager)
+                        getActivity().getSystemService(Context.SENSOR_SERVICE);
                 List<Sensor> sensorList = sensorManager.getSensorList(Sensor.TYPE_ACCELEROMETER);
                 if (sensorList.size() < 1) { // This will be true if no accelerometer sensor
-                    shakeActionPref.setValue("0"); // Turn it off
+                    preference.setValue("0"); // Turn it off
                 } else {
-                    shakeActionPref.setSummary(shakeActionPref.getEntry());
-                    shakeActionPref.setOnPreferenceChangeListener(this);
+                    preference.setSummary(preference.getEntry());
+                    preference.setOnPreferenceChangeListener(this);
                 }
             }
         }
