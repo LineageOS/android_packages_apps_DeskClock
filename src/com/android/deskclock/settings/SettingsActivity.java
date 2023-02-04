@@ -280,8 +280,8 @@ public final class SettingsActivity extends CollapsingToolbarBaseActivity {
 
             final SimpleMenuPreference flipActionPref = findPreference(KEY_FLIP_ACTION);
             if (flipActionPref != null) {
-                List<Sensor> sensorList = sensorManager.getSensorList(Sensor.TYPE_ORIENTATION);
-                if (sensorList.size() < 1) { // This will be true if no orientation sensor
+                List<Sensor> sensorList = sensorManager.getSensorList(Sensor.TYPE_ACCELEROMETER);
+                if (sensorList.size() < 1) { // This will be true if no accelerometer sensor
                     flipActionPref.setValue("0"); // Turn it off
                 } else {
                     flipActionPref.setSummary(flipActionPref.getEntry());
