@@ -77,8 +77,6 @@ public class ExpiredTimersActivity extends BaseActivity {
         mExpiredTimersView = findViewById(R.id.expired_timers_list);
         mExpiredTimersScrollView = findViewById(R.id.expired_timers_scroll);
 
-        findViewById(R.id.fab).setOnClickListener(new FabClickListener());
-
         final View view = findViewById(R.id.expired_timers_activity);
         view.setSystemUiVisibility(View.SYSTEM_UI_FLAG_LOW_PROFILE);
 
@@ -274,19 +272,6 @@ public class ExpiredTimersActivity extends BaseActivity {
             // Try to maintain a consistent period of time between redraws.
             final long delay = Math.max(0L, startTime + 100L - endTime);
             mExpiredTimersView.postDelayed(this, delay);
-        }
-    }
-
-    /**
-     * Clicking the fab resets all expired timers.
-     */
-    private class FabClickListener implements View.OnClickListener {
-        @Override
-        public void onClick(View v) {
-            stopUpdatingTime();
-            DataModel.getDataModel().removeTimerListener(mTimerChangeWatcher);
-            DataModel.getDataModel().resetOrDeleteExpiredTimers(R.string.label_deskclock);
-            finish();
         }
     }
 
