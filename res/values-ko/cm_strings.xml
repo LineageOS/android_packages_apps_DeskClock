@@ -29,6 +29,7 @@
     <string name="alarm_upcoming_channel">예정된 알람</string>
     <string name="stopwatch_channel">스톱워치</string>
     <string name="timer_channel">타이머</string>
+    <string name="add_label">라벨 추가</string>
     <string name="dialog_permissions_title">권한</string>
     <string name="dialog_permissions_ask">다시 묻기</string>
     <string name="dialog_permissions_dismiss">알람 해제</string>
