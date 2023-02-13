@@ -30,5 +30,11 @@
     <string name="stopwatch_channel">Cronometro</string>
     <string name="timer_channel">Timer</string>
     <string name="add_label">Aggiungi etichetta</string>
+    <string name="dialog_permissions_title">Permessi</string>
+    <string name="dialog_permissions_ask">Chiedi di nuovo</string>
     <string name="dialog_permissions_dismiss">Spegni</string>
+    <string name="dialog_permissions_settings">Impostazioni</string>
+    <string name="dialog_permissions_power_off_alarm">Senza questo permesso il tuo dispositivo non sarà in grado di accendersi autonomamente per far suonare la sveglia</string>
+    <string name="dialog_permissions_no_permission">I permessi richiesti sono stati negati, abilitali dall\'app Impostazioni</string>
+    <string name="dialog_permissions_post_notifications">Questa app si basa sulle notifiche: senza di esse non può essere eseguita!</string>
 </resources>
