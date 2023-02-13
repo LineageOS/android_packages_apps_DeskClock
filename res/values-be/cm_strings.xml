@@ -16,18 +16,17 @@
      limitations under the License.
 -->
 <resources xmlns:xliff="urn:oasis:names:tc:xliff:document:1.2">
-    <string name="flip_action_title">Actie bij toestel omdraaien</string>
-    <string name="shake_action_title">Actie bij toestel schudden</string>
+    <string name="flip_action_title">Дзеянне пры павароце прылады</string>
+    <string name="shake_action_title">Дзеянне пры ўстрэсванні прылады</string>
     <string-array name="action_setting_entries">
-        <item>Snoozen</item>
-        <item>Uitschakelen</item>
-        <item>Geen</item>
+        <item>Адкласці</item>
+        <item>Адхіліць</item>
+        <item>Нічога</item>
     </string-array>
-    <string name="firing_alarms_timers_channel">Starten van alarmen &amp; timers</string>
-    <string name="alarm_missed_channel">Gemiste alarmen</string>
-    <string name="alarm_snooze_channel">Gesluierde alarmen</string>
-    <string name="alarm_upcoming_channel">Aankomende alarmen</string>
-    <string name="stopwatch_channel">Stopwatch</string>
-    <string name="timer_channel">Timer</string>
-    <string name="add_label">Voeg label toe</string>
+    <string name="firing_alarms_timers_channel">Запуск будзільнікаў і таймераў</string>
+    <string name="alarm_missed_channel">Прапушчаныя будзільнікі</string>
+    <string name="alarm_snooze_channel">Адкладзеныя будзільнікі</string>
+    <string name="alarm_upcoming_channel">Наступныя будзільнікі</string>
+    <string name="stopwatch_channel">Секундамер</string>
+    <string name="timer_channel">Таймер</string>
 </resources>
