@@ -143,20 +143,7 @@ public final class TimerService extends Service {
             // Perform the action on the timer.
             if (action != null) {
                 switch (action) {
-                    case ACTION_SHOW_TIMER: {
-                        Events.sendTimerEvent(R.string.action_show, label);
-
-                        // Change to the timers tab.
-                        UiDataModel.getUiDataModel().setSelectedTab(TIMERS);
-
-                        // Open DeskClock which is now positioned on the timers tab and show
-                        // the timer in question.
-                        final Intent showTimers = new Intent(this, DeskClock.class)
-                                .putExtra(EXTRA_TIMER_ID, timerId)
-                                .addFlags(Intent.FLAG_ACTIVITY_NEW_TASK);
-                        startActivity(showTimers);
-                        break;
-                    } case ACTION_START_TIMER: {
+                    case ACTION_START_TIMER: {
                         Events.sendTimerEvent(R.string.action_start, label);
                         DataModel.getDataModel().startTimer(this, timer);
                         break;

@@ -34,6 +34,7 @@ import android.widget.RemoteViews;
 import androidx.core.app.NotificationCompat;
 import androidx.core.content.ContextCompat;
 
+import com.android.deskclock.DeskClock;
 import com.android.deskclock.NotificationUtils;
 import com.android.deskclock.R;
 import com.android.deskclock.Utils;
@@ -48,9 +49,6 @@ import java.util.List;
  * Builds notifications to reflect the latest state of the timers.
  */
 class TimerNotificationBuilder {
-
-    private static final int REQUEST_CODE_UPCOMING = 0;
-    private static final int REQUEST_CODE_MISSING = 1;
 
     public Notification build(Context context, NotificationModel nm, List<Timer> unexpired) {
         final Timer timer = unexpired.get(0);
@@ -132,15 +130,12 @@ class TimerNotificationBuilder {
         }
 
         // Intent to load the app and show the timer when the notification is tapped.
-        final Intent showApp = new Intent(context, TimerService.class)
+        final Intent showApp = new Intent(context, DeskClock.class)
                 .setAction(TimerService.ACTION_SHOW_TIMER)
                 .putExtra(TimerService.EXTRA_TIMER_ID, timer.getId())
                 .putExtra(Events.EXTRA_EVENT_LABEL, R.string.label_notification);
 
-        final PendingIntent pendingShowApp =
-                PendingIntent.getService(context, REQUEST_CODE_UPCOMING, showApp,
-                        PendingIntent.FLAG_ONE_SHOT | PendingIntent.FLAG_UPDATE_CURRENT |
-                                PendingIntent.FLAG_IMMUTABLE);
+        final PendingIntent pendingShowApp = Utils.pendingActivityIntent(context, showApp);
 
         final Builder notification = new NotificationCompat.Builder(
                 context, TIMER_MODEL_NOTIFICATION_CHANNEL_ID)
@@ -281,15 +276,12 @@ class TimerNotificationBuilder {
         }
 
         // Intent to load the app and show the timer when the notification is tapped.
-        final Intent showApp = new Intent(context, TimerService.class)
+        final Intent showApp = new Intent(context, DeskClock.class)
                 .setAction(TimerService.ACTION_SHOW_TIMER)
                 .putExtra(TimerService.EXTRA_TIMER_ID, timer.getId())
                 .putExtra(Events.EXTRA_EVENT_LABEL, R.string.label_notification);
 
-        final PendingIntent pendingShowApp =
-                PendingIntent.getService(context, REQUEST_CODE_MISSING, showApp,
-                        PendingIntent.FLAG_ONE_SHOT | PendingIntent.FLAG_UPDATE_CURRENT |
-                                PendingIntent.FLAG_IMMUTABLE);
+        final PendingIntent pendingShowApp = Utils.pendingActivityIntent(context, showApp);
 
         final Builder notification = new NotificationCompat.Builder(
                 context, TIMER_MODEL_NOTIFICATION_CHANNEL_ID)
