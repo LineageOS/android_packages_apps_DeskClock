@@ -54,6 +54,7 @@ import com.android.deskclock.data.DataModel.SilentSetting;
 import com.android.deskclock.data.OnSilentSettingsListener;
 import com.android.deskclock.events.Events;
 import com.android.deskclock.provider.Alarm;
+import com.android.deskclock.timer.TimerService;
 import com.android.deskclock.uidata.TabListener;
 import com.android.deskclock.uidata.UiDataModel;
 import com.android.deskclock.widget.toast.SnackbarManager;
@@ -290,6 +291,16 @@ public class DeskClock extends BaseActivity
     @Override
     protected void onResume() {
         super.onResume();
+
+        final Intent intent = getIntent();
+        if (intent != null) {
+            final String action = intent.getAction();
+            if (action != null && action.equals(TimerService.ACTION_SHOW_TIMER)) {
+                int label = intent.getIntExtra(Events.EXTRA_EVENT_LABEL, R.string.label_intent);
+                Events.sendTimerEvent(R.string.action_show, label);
+                UiDataModel.getUiDataModel().setSelectedTab(UiDataModel.Tab.TIMERS);
+            }
+        }
 
         // ViewPager does not save state; this honors the selected tab in the user interface.
         updateCurrentTab();
