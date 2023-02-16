@@ -155,6 +155,20 @@ public final class ExpandedAlarmViewHolder extends AlarmItemViewHolder {
         bindPreemptiveDismissButton(context, alarm, alarmInstance);
         bindRepeatText(context, alarm);
         bindAnnotations(alarm);
+
+        // If this view is bound without coming from a CollapsedAlarmViewHolder (e.g.
+        // when calling expand() before this alarm was visible in it's collapsed state),
+        // the animation listeners won't do the showing and therefore lead to unwanted
+        // half-visible state
+        arrow.setVisibility(View.VISIBLE);
+        clock.setVisibility(View.VISIBLE);
+        onOff.setVisibility(View.VISIBLE);
+        ellipsizeLayout.setVisibility(View.VISIBLE);
+        ringtone.setAlpha(1f);
+        preemptiveDismissButton.setAlpha(1f);
+        vibrate.setAlpha(1f);
+        delete.setAlpha(1f);
+        setChangingViewsAlpha(1f);
     }
 
     private void bindRingtone(Context context, Alarm alarm) {
@@ -316,6 +330,16 @@ public final class ExpandedAlarmViewHolder extends AlarmItemViewHolder {
     }
 
     private Animator createExpandingAnimator(AlarmItemViewHolder oldHolder, long duration) {
+        arrow.setVisibility(View.INVISIBLE);
+        clock.setVisibility(View.INVISIBLE);
+        onOff.setVisibility(View.INVISIBLE);
+        ellipsizeLayout.setVisibility(View.INVISIBLE);
+        ringtone.setAlpha(0f);
+        preemptiveDismissButton.setAlpha(0f);
+        vibrate.setAlpha(0f);
+        delete.setAlpha(0f);
+        setChangingViewsAlpha(0f);
+
         final View newView = itemView;
         final Animator boundsAnimator = AnimatorUtils.getBoundsAnimator(newView, oldHolder.itemView,
                 newView);
