@@ -188,7 +188,7 @@ public class ExpiredTimersActivity extends BaseActivity {
         final View stopButton = timerItem.findViewById(R.id.play_pause);
         stopButton.setOnClickListener(v -> {
             final Timer timer1 = DataModel.getDataModel().getTimer(timerId);
-            DataModel.getDataModel().removeTimer(timer1);
+            DataModel.getDataModel().resetOrDeleteTimer(timer1, R.string.label_deskclock);
             removeTimer(timer1);
         });
 
