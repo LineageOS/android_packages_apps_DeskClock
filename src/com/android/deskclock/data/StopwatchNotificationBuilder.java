@@ -34,6 +34,7 @@ import androidx.core.app.NotificationCompat.Action;
 import androidx.core.app.NotificationCompat.Builder;
 import androidx.core.content.ContextCompat;
 
+import com.android.deskclock.DeskClock;
 import com.android.deskclock.NotificationUtils;
 import com.android.deskclock.R;
 import com.android.deskclock.Utils;
@@ -52,13 +53,11 @@ class StopwatchNotificationBuilder {
         @StringRes final int eventLabel = R.string.label_notification;
 
         // Intent to load the app when the notification is tapped.
-        final Intent showApp = new Intent(context, StopwatchService.class)
+        final Intent showApp = new Intent(context, DeskClock.class)
                 .setAction(StopwatchService.ACTION_SHOW_STOPWATCH)
                 .putExtra(Events.EXTRA_EVENT_LABEL, eventLabel);
 
-        final PendingIntent pendingShowApp = PendingIntent.getService(context, 0, showApp,
-                PendingIntent.FLAG_ONE_SHOT | PendingIntent.FLAG_UPDATE_CURRENT |
-                PendingIntent.FLAG_IMMUTABLE);
+        final PendingIntent pendingShowApp = Utils.pendingActivityIntent(context, showApp);
 
         // Compute some values required below.
         final boolean running = stopwatch.isRunning();

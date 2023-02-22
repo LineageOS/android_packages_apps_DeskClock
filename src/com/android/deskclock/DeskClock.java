@@ -54,6 +54,7 @@ import com.android.deskclock.data.DataModel.SilentSetting;
 import com.android.deskclock.data.OnSilentSettingsListener;
 import com.android.deskclock.events.Events;
 import com.android.deskclock.provider.Alarm;
+import com.android.deskclock.stopwatch.StopwatchService;
 import com.android.deskclock.timer.TimerService;
 import com.android.deskclock.uidata.TabListener;
 import com.android.deskclock.uidata.UiDataModel;
@@ -295,10 +296,18 @@ public class DeskClock extends BaseActivity
         final Intent intent = getIntent();
         if (intent != null) {
             final String action = intent.getAction();
-            if (action != null && action.equals(TimerService.ACTION_SHOW_TIMER)) {
+            if (action != null ) {
                 int label = intent.getIntExtra(Events.EXTRA_EVENT_LABEL, R.string.label_intent);
-                Events.sendTimerEvent(R.string.action_show, label);
-                UiDataModel.getUiDataModel().setSelectedTab(UiDataModel.Tab.TIMERS);
+                switch (action) {
+                    case TimerService.ACTION_SHOW_TIMER:
+                        Events.sendTimerEvent(R.string.action_show, label);
+                        UiDataModel.getUiDataModel().setSelectedTab(UiDataModel.Tab.TIMERS);
+                        break;
+                    case StopwatchService.ACTION_SHOW_STOPWATCH:
+                        Events.sendStopwatchEvent(R.string.action_show, label);
+                        UiDataModel.getUiDataModel().setSelectedTab(UiDataModel.Tab.STOPWATCH);
+                        break;
+                }
             }
         }
 
