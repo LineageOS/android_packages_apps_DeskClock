@@ -219,7 +219,9 @@ public class Utils {
      * @return a PendingIntent that will start an activity
      */
     public static PendingIntent pendingActivityIntent(Context context, Intent intent) {
-        return PendingIntent.getActivity(context, 0, intent, FLAG_UPDATE_CURRENT | FLAG_IMMUTABLE);
+        // explicitly set the flag here, as getActivity() documentation states we must do so
+        return PendingIntent.getActivity(context, 0, intent.addFlags(Intent.FLAG_ACTIVITY_NEW_TASK),
+                FLAG_UPDATE_CURRENT | FLAG_IMMUTABLE);
     }
 
     /**
