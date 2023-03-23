@@ -29,5 +29,14 @@
     <string name="alarm_upcoming_channel">Larymau yn dod i fyny</string>
     <string name="stopwatch_channel">Stopwats</string>
     <string name="timer_channel">Amserydd</string>
+    <string name="add_label">Ychwanegu label</string>
+    <string name="dialog_permissions_title">Caniatâd</string>
+    <string name="dialog_permissions_ask">Gofyn eto</string>
     <string name="dialog_permissions_dismiss">Diystyru</string>
+    <string name="dialog_permissions_settings">Gosodiadau</string>
+    <string name="dialog_permissions_power_off_alarm">Heb y caniatâd hwn ni fydd dy ddyfails yn gallu troi ei hun ymlaen i ganu larwm</string>
+    <string name="dialog_permissions_no_permission">Gwrthodwyd ganiatâd angenrheidiol. Gellir rhoi caniatâd o\'r ap Gosodiadau.</string>
+    <string name="dialog_permissions_post_notifications">Mae\'r ap hwn yn dibynnu ar hysbysiadau. Hebddynt, ni all redeg!</string>
+    <string name="selected">Dewiswyd</string>
+    <string name="more_options">Rhagor o ddewisiadau</string>
 </resources>

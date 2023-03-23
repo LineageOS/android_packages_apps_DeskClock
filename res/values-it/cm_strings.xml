@@ -37,4 +37,6 @@
     <string name="dialog_permissions_power_off_alarm">Senza questo permesso il tuo dispositivo non sarà in grado di accendersi autonomamente per far suonare la sveglia</string>
     <string name="dialog_permissions_no_permission">I permessi richiesti sono stati negati, abilitali dall\'app Impostazioni</string>
     <string name="dialog_permissions_post_notifications">Questa app si basa sulle notifiche: senza di esse non può essere eseguita!</string>
+    <string name="selected">Selezionato</string>
+    <string name="more_options">Altre opzioni</string>
 </resources>

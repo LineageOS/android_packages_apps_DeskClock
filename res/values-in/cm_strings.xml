@@ -32,4 +32,6 @@
     <string name="dialog_permissions_title">Perizinan</string>
     <string name="dialog_permissions_dismiss">Tutup</string>
     <string name="dialog_permissions_settings">Setelan</string>
+    <string name="selected">Dipilih</string>
+    <string name="more_options">Opsi lanjutan</string>
 </resources>
