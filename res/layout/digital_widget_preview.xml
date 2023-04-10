@@ -1,0 +1,60 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!--
+     SPDX-FileCopyrightText: 2023 The LineageOS Project
+     SPDX-License-Identifier: Apache-2.0
+-->
+
+<LinearLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@android:id/background"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:gravity="top|center_horizontal"
+    android:orientation="vertical"
+    android:background="@drawable/widget_background"
+    android:backgroundTint="?appWidgetBackgroundTint"
+    android:padding="@dimen/widget_padding"
+    android:paddingTop="@dimen/widget_padding"
+    android:paddingBottom="@dimen/widget_padding"
+    android:theme="@style/Theme.DeskClock.DigitalWidgetTransparentLightBg">
+
+    <TextClock
+        android:id="@+id/clock"
+        android:textAppearance="?appWidgetTextAppearancePrimary"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_gravity="center_horizontal|top"
+        android:ellipsize="none"
+        android:format12Hour="@string/lock_screen_12_hour_format"
+        android:format24Hour="@string/lock_screen_24_hour_format"
+        android:includeFontPadding="false"
+        android:singleLine="true"
+        android:textAlignment="center"
+        android:textSize="48sp"
+        tools:text="0123"
+        tools:textColor="@android:color/white"/>
+
+    <LinearLayout
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_gravity="center_horizontal|top"
+        android:layout_marginTop="-10dp">
+
+        <TextClock
+            android:id="@+id/date"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center"
+            android:ellipsize="none"
+            android:includeFontPadding="false"
+            android:singleLine="true"
+            android:textAppearance="?appWidgetTextAppearancePrimaryLabel"
+            android:format12Hour="@string/abbrev_wday_month_day_no_year_preview"
+            android:format24Hour="@string/abbrev_wday_month_day_no_year_preview"
+            tools:text="01. Jan, 2023"
+            tools:textColor="@android:color/white"
+            tools:textSize="@dimen/label_font_size"/>
+
+    </LinearLayout>
+</LinearLayout>

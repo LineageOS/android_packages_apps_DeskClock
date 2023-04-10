@@ -359,7 +359,7 @@ public class Utils {
         final Spannable sp = new SpannableString(pattern);
         sp.setSpan(new RelativeSizeSpan(amPmRatio), amPmPos, amPmPos + 1,
                 Spannable.SPAN_EXCLUSIVE_EXCLUSIVE);
-        sp.setSpan(new StyleSpan(Typeface.NORMAL), amPmPos, amPmPos + 1,
+        sp.setSpan(new StyleSpan(Typeface.BOLD), amPmPos, amPmPos + 1,
                 Spannable.SPAN_EXCLUSIVE_EXCLUSIVE);
         sp.setSpan(new TypefaceSpan("sans-serif"), amPmPos, amPmPos + 1,
                 Spannable.SPAN_EXCLUSIVE_EXCLUSIVE);

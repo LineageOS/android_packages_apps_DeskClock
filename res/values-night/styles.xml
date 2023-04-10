@@ -1,0 +1,15 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!--
+     SPDX-FileCopyrightText: 2023 The LineageOS Project
+     SPDX-License-Identifier: Apache-2.0
+-->
+<resources>
+    <style name="Theme.DeskClock.DigitalWidgetConfigurationTheme" parent="Theme.AppCompat.DayNight.NoActionBar">
+        <item name="appWidgetConfigBackground">#191C1C</item>
+        <item name="appWidgetConfigTitle">@android:color/system_neutral1_200</item>
+        <item name="appWidgetConfigSubtitle">@android:color/system_neutral2_200</item>
+        <item name="appWidgetConfigBorder">@android:color/system_neutral2_700</item>
+        <item name="appWidgetThemeTransparent">@style/Theme.DeskClock.DigitalWidgetTransparentDarkBg</item>
+        <item name="appWidgetThemeSolid">@style/Theme.DeskClock.DigitalWidgetDarkBg</item>
+    </style>
+</resources>

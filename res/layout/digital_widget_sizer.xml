@@ -1,5 +1,6 @@
 <?xml version="1.0" encoding="utf-8"?>
 <!-- Copyright (C) 2016 The Android Open Source Project
+     Copyright (C) 2023 The LineageOS Project
 
      Licensed under the Apache License, Version 2.0 (the "License");
      you may not use this file except in compliance with the License.
@@ -15,13 +16,16 @@
 -->
 <LinearLayout
     xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/widget_item"
     android:layout_width="wrap_content"
     android:layout_height="wrap_content"
-    android:orientation="vertical">
+    android:orientation="vertical"
+    android:theme="@style/Theme.DeskClock.DigitalWidgetTransparentDarkBg">
 
     <TextClock
         android:id="@+id/clock"
-        style="@style/widget_big"
+        android:textAppearance="?appWidgetTextAppearancePrimary"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:layout_gravity="center_horizontal|top"
@@ -29,29 +33,31 @@
         android:ellipsize="none"
         android:format12Hour="@string/lock_screen_12_hour_format"
         android:format24Hour="@string/lock_screen_24_hour_format"
-        android:singleLine="true" />
+        android:singleLine="true"
+        tools:text="01:23"/>
 
     <LinearLayout
+        android:id="@+id/bottom_view"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:layout_gravity="center_horizontal|top">
+        android:layout_gravity="center_horizontal|top"
+        android:layout_marginTop="-10dp">
 
         <TextClock
             android:id="@+id/date"
-            style="@style/widget_label"
+            android:textAppearance="?appWidgetTextAppearancePrimaryLabel"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:layout_gravity="center"
             android:includeFontPadding="false"
             android:ellipsize="none"
             android:singleLine="true"
-            android:textAllCaps="true"
-            android:textColor="@color/white" />
+            tools:text="Sa, Apr 14"/>
 
         <!-- This view is drawn to a Bitmap and sent to the widget as an icon. -->
         <TextView
             android:id="@+id/nextAlarmIcon"
-            style="@style/widget_label"
+            android:textAppearance="?appWidgetTextAppearancePrimaryLabel"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:layout_gravity="center"
@@ -59,19 +65,24 @@
             android:ellipsize="none"
             android:singleLine="true"
             android:text="@string/clock_emoji"
-            android:textColor="@color/white" />
+            android:textColor="?appWidgetLabelTint"
+            tools:text=""
+            tools:drawableStart="@drawable/ic_alarm"
+            tools:paddingStart="8dp"
+            tools:paddingEnd="8dp"/>
 
         <TextView
             android:id="@+id/nextAlarm"
-            style="@style/widget_label"
+            android:textAppearance="?appWidgetTextAppearancePrimaryLabel"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:layout_gravity="center"
             android:includeFontPadding="false"
             android:ellipsize="none"
             android:singleLine="true"
-            android:textAllCaps="true"
-            android:textColor="@color/white" />
+            android:textAllCaps="false"
+            android:textColor="@color/white"
+            tools:text="Mo, 07:30 AM"/>
 
     </LinearLayout>
 

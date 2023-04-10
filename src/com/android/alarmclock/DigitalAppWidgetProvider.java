@@ -24,6 +24,7 @@ import static android.appwidget.AppWidgetManager.OPTION_APPWIDGET_MAX_HEIGHT;
 import static android.appwidget.AppWidgetManager.OPTION_APPWIDGET_MAX_WIDTH;
 import static android.appwidget.AppWidgetManager.OPTION_APPWIDGET_MIN_HEIGHT;
 import static android.appwidget.AppWidgetManager.OPTION_APPWIDGET_MIN_WIDTH;
+import static android.content.Intent.ACTION_CONFIGURATION_CHANGED;
 import static android.content.Intent.ACTION_LOCALE_CHANGED;
 import static android.content.Intent.ACTION_TIMEZONE_CHANGED;
 import static android.content.Intent.ACTION_TIME_CHANGED;
@@ -46,7 +47,6 @@ import android.content.Context;
 import android.content.Intent;
 import android.content.IntentFilter;
 import android.content.res.Resources;
-import android.graphics.Bitmap;
 import android.net.Uri;
 import android.os.Bundle;
 import android.text.TextUtils;
@@ -54,6 +54,7 @@ import android.text.format.DateFormat;
 import android.util.ArraySet;
 import android.view.LayoutInflater;
 import android.view.View;
+import android.widget.LinearLayout;
 import android.widget.RemoteViews;
 import android.widget.TextClock;
 import android.widget.TextView;
@@ -148,6 +149,7 @@ public class DigitalAppWidgetProvider extends AppWidgetProvider {
             case ACTION_TIMEZONE_CHANGED:
             case ACTION_ON_DAY_CHANGE:
             case ACTION_WORLD_CITIES_CHANGED:
+            case ACTION_CONFIGURATION_CHANGED:
                 for (int widgetId : widgetIds) {
                     relayoutWidget(context, wm, widgetId, wm.getAppWidgetOptions(widgetId));
                 }
@@ -180,6 +182,7 @@ public class DigitalAppWidgetProvider extends AppWidgetProvider {
         IntentFilter intentFilter = new IntentFilter();
         intentFilter.addAction(ACTION_WORLD_CITIES_CHANGED);
         intentFilter.addAction(ACTION_ON_DAY_CHANGE);
+        intentFilter.addAction(ACTION_CONFIGURATION_CHANGED);
         context.getApplicationContext().registerReceiver(receiver, intentFilter);
 
         sReceiversRegistered = true;
@@ -210,6 +213,10 @@ public class DigitalAppWidgetProvider extends AppWidgetProvider {
         wm.notifyAppWidgetViewDataChanged(widgetId, R.id.world_city_list);
     }
 
+    public static void updateAppWidget(Context context, AppWidgetManager wm, int widgetId) {
+        relayoutWidget(context, wm, widgetId, wm.getAppWidgetOptions(widgetId));
+    }
+
     /**
      * Compute optimal font and icon sizes offscreen for the given orientation.
      */
@@ -217,13 +224,18 @@ public class DigitalAppWidgetProvider extends AppWidgetProvider {
             Bundle options, boolean portrait) {
         // Create a remote view for the digital clock.
         final String packageName = context.getPackageName();
-        final RemoteViews rv = new RemoteViews(packageName, R.layout.digital_widget);
+        int[] layoutIds = WidgetUtils.getWidgetLayouts(context, widgetId);
+        final RemoteViews rv = new RemoteViews(packageName, layoutIds[0]);
+        rv.setLightBackgroundLayoutId(layoutIds[1]);
+
+        rv.removeAllViews(R.id.themed_root);
+        rv.addView(R.id.themed_root, new RemoteViews(packageName, R.layout.digital_widget));
 
         // Tapping on the widget opens the app (if not on the lock screen).
         if (Utils.isWidgetClickable(wm, widgetId)) {
             final Intent openApp = new Intent(context, DeskClock.class);
             final PendingIntent pi = PendingIntent.getActivity(context, 0, openApp, FLAG_IMMUTABLE);
-            rv.setOnClickPendingIntent(R.id.digital_widget, pi);
+            rv.setOnClickPendingIntent(android.R.id.background, pi);
         }
 
         // Configure child views of the remote view.
@@ -267,10 +279,15 @@ public class DigitalAppWidgetProvider extends AppWidgetProvider {
         }
 
         // Apply the computed sizes to the remote views.
-        rv.setImageViewBitmap(R.id.nextAlarmIcon, sizes.mIconBitmap);
+        rv.setInt(R.id.nextAlarmIcon, "setMaxHeight", sizes.mFontSizePx);
+        rv.setViewPadding(R.id.nextAlarmIcon, sizes.mIconPaddingPx, 0, sizes.mIconPaddingPx, 0);
         rv.setTextViewTextSize(R.id.date, COMPLEX_UNIT_PX, sizes.mFontSizePx);
         rv.setTextViewTextSize(R.id.nextAlarm, COMPLEX_UNIT_PX, sizes.mFontSizePx);
         rv.setTextViewTextSize(R.id.clock, COMPLEX_UNIT_PX, sizes.mClockFontSizePx);
+        // Shift the bottom view up by half of the non-removable TextView padding
+        rv.setViewLayoutMargin(R.id.bottom_view, RemoteViews.MARGIN_TOP,
+                sizes.mBottomViewMarginTopPx, COMPLEX_UNIT_PX);
+        rv.setViewPadding(R.id.bottom_view, 0, 0, 0, sizes.mBottomViewPaddingBottomPx);
 
         final int smallestWorldCityListSizePx =
                 resources.getDimensionPixelSize(R.dimen.widget_min_world_city_list_size);
@@ -307,6 +324,8 @@ public class DigitalAppWidgetProvider extends AppWidgetProvider {
         @SuppressLint("InflateParams")
         final View sizer = inflater.inflate(R.layout.digital_widget_sizer, null /* root */);
 
+        int padding = context.getResources().getDimensionPixelSize(R.dimen.widget_padding);
+        sizer.findViewById(R.id.widget_item).setPadding(padding, padding, padding, padding);
         // Configure the date to display the current date string.
         final CharSequence dateFormat = getDateFormat(context);
         final TextClock date = sizer.findViewById(R.id.date);
@@ -420,6 +439,7 @@ public class DigitalAppWidgetProvider extends AppWidgetProvider {
         final TextClock clock = sizer.findViewById(R.id.clock);
         final TextView nextAlarm = sizer.findViewById(R.id.nextAlarm);
         final TextView nextAlarmIcon = sizer.findViewById(R.id.nextAlarmIcon);
+        final LinearLayout bottomView = sizer.findViewById(R.id.bottom_view);
 
         // Adjust the font sizes.
         measuredSizes.setClockFontSizePx(clockFontSize);
@@ -429,6 +449,17 @@ public class DigitalAppWidgetProvider extends AppWidgetProvider {
         nextAlarm.setTextSize(COMPLEX_UNIT_PX, measuredSizes.mFontSizePx);
         nextAlarmIcon.setTextSize(COMPLEX_UNIT_PX, measuredSizes.mIconFontSizePx);
         nextAlarmIcon.setPadding(measuredSizes.mIconPaddingPx, 0, measuredSizes.mIconPaddingPx, 0);
+        // We want to shift the date line up by half the invisible padding of the clock (which is
+        // 33% of the font size)
+        measuredSizes.setBottomViewMarginPx(-1 * (int)(measuredSizes.mClockFontSizePx * 0.33 / 2));
+        // We want the bottom padding of the date be equal to the top padding of the clock
+        measuredSizes.setBottomViewPaddingPx(
+                (int)(measuredSizes.mClockFontSizePx * 0.28 - measuredSizes.mFontSizePx * 0.33));
+        bottomView.setPadding(0, 0, 0, measuredSizes.getBottomViewPaddingPx());
+        LinearLayout.LayoutParams layoutParams = (LinearLayout.LayoutParams)
+                bottomView.getLayoutParams();
+        layoutParams.topMargin = measuredSizes.getBottomViewMarginTopPx();
+        bottomView.setLayoutParams(layoutParams);
 
         // Measure and layout the sizer.
         final int widthSize = View.MeasureSpec.getSize(measuredSizes.mTargetWidthPx);
@@ -443,11 +474,6 @@ public class DigitalAppWidgetProvider extends AppWidgetProvider {
         measuredSizes.mMeasuredHeightPx = sizer.getMeasuredHeight();
         measuredSizes.mMeasuredTextClockWidthPx = clock.getMeasuredWidth();
         measuredSizes.mMeasuredTextClockHeightPx = clock.getMeasuredHeight();
-
-        // If an alarm icon is required, generate one from the TextView with the special font.
-        if (nextAlarmIcon.getVisibility() == VISIBLE) {
-            measuredSizes.mIconBitmap = Utils.createBitmap(nextAlarmIcon);
-        }
 
         return measuredSizes;
     }
@@ -483,7 +509,6 @@ public class DigitalAppWidgetProvider extends AppWidgetProvider {
         private final int mTargetHeightPx;
         private final int mLargestClockFontSizePx;
         private final int mSmallestClockFontSizePx;
-        private Bitmap mIconBitmap;
 
         private int mMeasuredWidthPx;
         private int mMeasuredHeightPx;
@@ -499,6 +524,9 @@ public class DigitalAppWidgetProvider extends AppWidgetProvider {
         private int mIconFontSizePx;
         private int mIconPaddingPx;
 
+        private int mBottomViewMarginTopPx;
+        private int mBottomViewPaddingBottomPx;
+
         private Sizes(int targetWidthPx, int targetHeightPx, int largestClockFontSizePx) {
             mTargetWidthPx = targetWidthPx;
             mTargetHeightPx = targetHeightPx;
@@ -511,9 +539,19 @@ public class DigitalAppWidgetProvider extends AppWidgetProvider {
         private int getClockFontSizePx() { return mClockFontSizePx; }
         private void setClockFontSizePx(int clockFontSizePx) {
             mClockFontSizePx = clockFontSizePx;
-            mFontSizePx = max(1, round(clockFontSizePx / 7.5f));
+            mFontSizePx = max(1, round(clockFontSizePx / 5.5f));
             mIconFontSizePx = (int) (mFontSizePx * 1.4f);
             mIconPaddingPx = mFontSizePx / 3;
+        }
+
+        private int getBottomViewMarginTopPx() { return mBottomViewMarginTopPx; }
+        private void setBottomViewMarginPx(int bottomViewMarginPx) {
+            mBottomViewMarginTopPx = bottomViewMarginPx;
+        }
+
+        private int getBottomViewPaddingPx() { return mBottomViewPaddingBottomPx; }
+        private void setBottomViewPaddingPx(int bottomViewPaddingPx) {
+            mBottomViewPaddingBottomPx = bottomViewPaddingPx;
         }
 
         /**

@@ -86,22 +86,17 @@
     <dimen name="min_analog_widget_size">110dp</dimen>
 
     <!-- digital widget sizing information -->
-    <dimen name="min_digital_widget_width">206dp</dimen>
-    <dimen name="min_digital_widget_height">129dp</dimen>
+    <dimen name="min_digital_widget_width">202dp</dimen>
+    <dimen name="min_digital_widget_height">80dp</dimen>
     <dimen name="digital_widget_city_margin_bottom">10dp</dimen>
-    <dimen name="digital_widget_city_12_medium_font_size">32sp</dimen>
-    <dimen name="digital_widget_city_24_medium_font_size">40sp</dimen>
+    <dimen name="digital_widget_city_12_medium_font_size">24sp</dimen>
+    <dimen name="digital_widget_city_24_medium_font_size">36sp</dimen>
 
     <!-- The fixed size of the font for the city name / day of week in the city widget. -->
     <dimen name="city_widget_name_font_size">10dp</dimen>
     <!-- The maximum size of the font for the time in widgets. -->
     <dimen name="widget_max_clock_font_size">80dp</dimen>
     <dimen name="widget_min_world_city_list_size">80dp</dimen>
-
-    <!-- shadow styles for widget text with drop shadows -->
-    <item name="widget_shadow_radius" format="float" type="dimen">2.75</item>
-    <item name="widget_shadow_dx" format="float" type="dimen">2.0</item>
-    <item name="widget_shadow_dy" format="float" type="dimen">2.0</item>
 
     <!-- Divider height -->
     <dimen name="hairline_height">1dp</dimen>
@@ -144,4 +139,8 @@
     <dimen name="settings_padding">4dp</dimen>
 
     <dimen name="analog_clock_width_percent">0.5</dimen>
+
+    <dimen name="widget_background_corner_radius">80dp</dimen>
+    <dimen name="widget_configuration_background_corner_radius">12dp</dimen>
+    <dimen name="widget_padding">16dp</dimen>
 </resources>
