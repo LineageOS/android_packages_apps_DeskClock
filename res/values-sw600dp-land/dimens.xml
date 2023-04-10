@@ -24,5 +24,5 @@
     <dimen name="analog_clock_margin">48dp</dimen>
 
     <!-- The maximum size of the font for the time in widgets. -->
-    <dimen name="widget_max_clock_font_size">100dp</dimen>
+    <dimen name="widget_max_clock_font_size">90dp</dimen>
 </resources>

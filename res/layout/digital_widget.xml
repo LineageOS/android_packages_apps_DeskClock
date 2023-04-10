@@ -24,7 +24,7 @@
 
     <TextClock
         android:id="@+id/clock"
-        style="@style/widget_big_thin"
+        style="@style/widget_big"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:layout_gravity="center_horizontal|top"
@@ -32,8 +32,7 @@
         android:format12Hour="@string/lock_screen_12_hour_format"
         android:format24Hour="@string/lock_screen_24_hour_format"
         android:includeFontPadding="false"
-        android:singleLine="true"
-        android:textColor="@color/white" />
+        android:singleLine="true" />
 
     <LinearLayout
         android:layout_width="wrap_content"

@@ -16,5 +16,5 @@
 
 <resources>
     <!-- The maximum size of the font for the time in widgets. -->
-    <dimen name="widget_max_clock_font_size">96dp</dimen>
+    <dimen name="widget_max_clock_font_size">86dp</dimen>
 </resources>
