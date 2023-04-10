@@ -47,4 +47,17 @@
         <attr format="dimension" name="round"/>
         <attr format="float" name="roundPercent"/>
     </declare-styleable>
+
+    <attr name="appWidgetBackgroundTint" format="color" />
+    <attr name="appWidgetLabelTint" format="color" />
+    <attr name="appWidgetTextAppearancePrimary" format="reference" />
+    <attr name="appWidgetTextAppearancePrimaryLabel" format="reference" />
+    <attr name="appWidgetTextAppearanceSecondary" format="reference" />
+    <attr name="appWidgetTextAppearanceSecondaryLabel" format="reference" />
+    <attr name="appWidgetConfigBackground" format="color" />
+    <attr name="appWidgetConfigTitle" format="color" />
+    <attr name="appWidgetConfigSubtitle" format="color" />
+    <attr name="appWidgetConfigBorder" format="color" />
+    <attr name="appWidgetThemeTransparent" format="reference" />
+    <attr name="appWidgetThemeSolid" format="reference" />
 </resources>

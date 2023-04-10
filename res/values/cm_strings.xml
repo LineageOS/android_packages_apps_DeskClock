@@ -59,4 +59,11 @@
     <string name="selected">Selected</string>
     <!-- Description of the menu button which opens on custom ringtones -->
     <string name="more_options">More options</string>
+
+    <!-- Title of the widget layout choice activity -->
+    <string name="widget_choice_title">Choose your style</string>
+    <!-- Name of the transparent widget layout -->
+    <string name="widget_name_transparent">Unbacked</string>
+    <!-- Name of the solid widget layout -->
+    <string name="widget_name_solid">Backed</string>
 </resources>

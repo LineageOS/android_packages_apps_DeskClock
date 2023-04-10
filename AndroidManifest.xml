@@ -22,7 +22,7 @@
     <original-package android:name="com.android.alarmclock" />
     <original-package android:name="com.android.deskclock" />
 
-    <uses-sdk android:minSdkVersion="28" android:targetSdkVersion="33" />
+    <uses-sdk android:minSdkVersion="31" android:targetSdkVersion="33" />
 
     <uses-permission android:name="android.permission.RECEIVE_BOOT_COMPLETED" />
     <uses-permission android:name="android.permission.WAKE_LOCK" />
@@ -295,6 +295,7 @@
                 <action android:name="android.intent.action.TIMEZONE_CHANGED" />
                 <action android:name="com.android.deskclock.ON_DAY_CHANGE" />
                 <action android:name="com.android.deskclock.WORLD_CITIES_CHANGED" />
+                <action android:name="android.intent.action.CONFIGURATION_CHANGED" />
             </intent-filter>
             <meta-data
                 android:name="android.appwidget.provider"
@@ -305,5 +306,13 @@
             android:name="com.android.alarmclock.DigitalAppWidgetCityService"
             android:permission="android.permission.BIND_REMOTEVIEWS" />
 
+        <activity
+            android:name="com.android.alarmclock.DigitalAppWidgetConfigurationActivity"
+            android:theme="@style/Theme.DeskClock.DigitalWidgetConfigurationTheme"
+            android:exported="true">
+            <intent-filter>
+                <action android:name="android.appwidget.action.APPWIDGET_CONFIGURE"/>
+            </intent-filter>
+        </activity>
     </application>
 </manifest>

@@ -26,6 +26,11 @@ import com.android.deskclock.Utils;
 
 public final class WidgetUtils {
 
+    private static String PREFS_NAME = "com.android.alarmclock.widgets";
+    private static String PREF_PREFIX_KEY = "appwidget_";
+    private static String PREF_MODE_PREFIX = PREF_PREFIX_KEY + "solid_";
+
+
     private WidgetUtils() {}
 
     // Calculate the scale factor of the fonts in the widget
@@ -91,5 +96,28 @@ public final class WidgetUtils {
             return ratio;
         }
         return 1;
+    }
+
+    public static void saveWidgetMode(Context context, int appWidgetId, boolean isSolid) {
+        context.getSharedPreferences(PREFS_NAME, 0).edit()
+                .putBoolean(PREF_MODE_PREFIX + appWidgetId, isSolid)
+                .commit();
+    }
+
+    public static boolean getWidgetMode(Context context, int appWidgetId) {
+        return context.getSharedPreferences(PREFS_NAME, 0)
+                .getBoolean(PREF_MODE_PREFIX + appWidgetId, false);
+    }
+
+    public static int[] getWidgetLayouts(Context context, int appWidgetId) {
+        int[] layoutIds = new int[2];
+        if (getWidgetMode(context, appWidgetId)) {
+            layoutIds[0] = R.layout.digital_widget_darkbg_solid_theme_root;
+            layoutIds[1] = R.layout.digital_widget_lightbg_solid_theme_root;
+        } else {
+            layoutIds[0] = R.layout.digital_widget_darkbg_theme_root;
+            layoutIds[1] = R.layout.digital_widget_lightbg_theme_root;
+        }
+        return layoutIds;
     }
 }
