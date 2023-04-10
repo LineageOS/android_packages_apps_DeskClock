@@ -13,11 +13,24 @@
      See the License for the specific language governing permissions and
      limitations under the License.
 -->
-<LinearLayout
-    xmlns:android="http://schemas.android.com/apk/res/android"
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
     android:layout_width="wrap_content"
     android:layout_height="wrap_content"
+    xmlns:tools="http://schemas.android.com/tools"
     android:orientation="vertical">
+
+    <TextClock
+        android:id="@+id/date"
+        style="@style/widget_label"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_gravity="center"
+        android:includeFontPadding="false"
+        android:ellipsize="none"
+        android:singleLine="true"
+        android:textAllCaps="true"
+        android:textColor="@color/white"
+        android:layout_marginBottom="-10dp" />
 
     <TextClock
         android:id="@+id/clock"
@@ -34,19 +47,8 @@
     <LinearLayout
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:layout_gravity="center_horizontal|top">
-
-        <TextClock
-            android:id="@+id/date"
-            style="@style/widget_label"
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:layout_gravity="center"
-            android:includeFontPadding="false"
-            android:ellipsize="none"
-            android:singleLine="true"
-            android:textAllCaps="true"
-            android:textColor="@color/white" />
+        android:layout_gravity="center_horizontal|top"
+        android:layout_marginTop="-10dp">
 
         <!-- This view is drawn to a Bitmap and sent to the widget as an icon. -->
         <TextView
