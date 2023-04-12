@@ -243,6 +243,9 @@
     <!-- Label for digital clock gadget displayed in the widget picker. [CHAR LIMIT=18] -->
     <string name="digital_gadget">Digital clock</string>
 
+    <!-- Label for digital clock gadget displayed in the widget picker. [CHAR LIMIT=18] -->
+    <string name="lineage_gadget">Lineage clock</string>
+
     <!-- Settings activity name -->
     <!-- Label for the Settings activity displayed on-screen when that activity must be represented to the user. -->
     <string name="settings">Settings</string>
