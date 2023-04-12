@@ -301,6 +301,22 @@
                 android:resource="@xml/digital_appwidget" />
         </receiver>
 
+        <receiver
+            android:name="com.android.alarmclock.LineageAppWidgetProvider"
+            android:exported="true"
+            android:label="@string/lineage_gadget">
+            <intent-filter>
+                <action android:name="android.appwidget.action.APPWIDGET_UPDATE" />
+                <action android:name="android.app.action.NEXT_ALARM_CLOCK_CHANGED" />
+                <action android:name="android.intent.action.LOCALE_CHANGED" />
+                <action android:name="android.intent.action.TIME_SET" />
+                <action android:name="android.intent.action.TIMEZONE_CHANGED" />
+            </intent-filter>
+            <meta-data
+                android:name="android.appwidget.provider"
+                android:resource="@xml/lineage_appwidget" />
+        </receiver>
+
         <service
             android:name="com.android.alarmclock.DigitalAppWidgetCityService"
             android:permission="android.permission.BIND_REMOTEVIEWS" />

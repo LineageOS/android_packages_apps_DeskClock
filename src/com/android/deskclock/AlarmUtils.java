@@ -43,6 +43,10 @@ public class AlarmUtils {
         return (String) DateFormat.format(pattern, time);
     }
 
+    public static String getFormattedTime(Context context, Calendar time, String pattern) {
+        return (String) DateFormat.format(pattern, time);
+    }
+
     public static String getAlarmText(Context context, AlarmInstance instance,
             boolean includeLabel) {
         String alarmTimeStr = getFormattedTime(context, instance.getAlarmTime());

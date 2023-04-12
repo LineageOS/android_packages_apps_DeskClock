@@ -240,6 +240,22 @@ public class Utils {
         return null;
     }
 
+    /**
+     * @return The next alarm from {@link AlarmManager}
+     */
+    public static String getNextAlarmTime(Context context) {
+        final AlarmManager am = (AlarmManager) context.getSystemService(Context.ALARM_SERVICE);
+        final AlarmClockInfo info = getNextAlarmClock(am);
+        if (info != null) {
+            final long triggerTime = info.getTriggerTime();
+            final Calendar alarmTime = Calendar.getInstance();
+            alarmTime.setTimeInMillis(triggerTime);
+            return AlarmUtils.getFormattedTime(context, alarmTime, "HH:m");
+        }
+
+        return null;
+    }
+
     private static AlarmClockInfo getNextAlarmClock(AlarmManager am) {
         return am.getNextAlarmClock();
     }
