@@ -1,0 +1,21 @@
+{
+  "comments": [
+    {
+      "unresolved": false,
+      "key": {
+        "uuid": "3cf3d232_0c48e532",
+        "filename": "/PATCHSET_LEVEL",
+        "patchSetId": 2
+      },
+      "lineNbr": 0,
+      "author": {
+        "id": 13028
+      },
+      "writtenOn": "2023-04-17T00:39:30Z",
+      "side": 1,
+      "message": "will be replaced by smth else sooner or later. not going to force change the layout",
+      "revId": "b5ce48eee02f04390dcaae476c92fa39cde1820c",
+      "serverId": "1ec6b3db-b2c1-4fa4-84a2-4c7efe89ba71"
+    }
+  ]
+}
