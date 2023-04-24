@@ -16,18 +16,17 @@
      limitations under the License.
 -->
 <resources xmlns:xliff="urn:oasis:names:tc:xliff:document:1.2">
-    <string name="flip_action_title">Effaith troi\'r ddyfais drosodd</string>
-    <string name="shake_action_title">Effaith ysgwyd y ddyfais</string>
+    <string name="flip_action_title">Дзеянне пры павароце прылады</string>
+    <string name="shake_action_title">Дзеянне пры ўстрэсванні прылады</string>
     <string-array name="action_setting_entries">
-        <item>Hepian</item>
-        <item>Diystyru</item>
-        <item>Dim byd</item>
+        <item>Адкласці</item>
+        <item>Адхіліць</item>
+        <item>Нічога</item>
     </string-array>
-    <string name="firing_alarms_timers_channel">Tanio larymau ac amseryddion</string>
-    <string name="alarm_missed_channel">Larymau wedi\'u methu</string>
-    <string name="alarm_snooze_channel">Larymau wedi\'u hepian</string>
-    <string name="alarm_upcoming_channel">Larymau yn dod i fyny</string>
-    <string name="stopwatch_channel">Stopwats</string>
-    <string name="timer_channel">Amserydd</string>
-    <string name="add_label">Ychwanegu label</string>
+    <string name="firing_alarms_timers_channel">Запуск будзільнікаў і таймераў</string>
+    <string name="alarm_missed_channel">Прапушчаныя будзільнікі</string>
+    <string name="alarm_snooze_channel">Адкладзеныя будзільнікі</string>
+    <string name="alarm_upcoming_channel">Наступныя будзільнікі</string>
+    <string name="stopwatch_channel">Секундамер</string>
+    <string name="timer_channel">Таймер</string>
 </resources>
