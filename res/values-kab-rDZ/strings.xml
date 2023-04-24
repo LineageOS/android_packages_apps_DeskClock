@@ -1,0 +1,232 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!--
+  Copyright (C) 2016 The Android Open Source Project
+
+  Licensed under the Apache License, Version 2.0 (the "License");
+  you may not use this file except in compliance with the License.
+  You may obtain a copy of the License at
+
+      http://www.apache.org/licenses/LICENSE-2.0
+
+  Unless required by applicable law or agreed to in writing, software
+  distributed under the License is distributed on an "AS IS" BASIS,
+  WITHOUT WARRANTIES OR CONDITIONS OF ANY KIND, either express or implied.
+  See the License for the specific language governing permissions and
+  limitations under the License.
+  -->
+<resources xmlns:xliff="urn:oasis:names:tc:xliff:document:1.2" xmlns:tools="http://schemas.android.com/tools">
+    <string name="app_label">Tamrint</string>
+    <string name="label">Tabzimt</string>
+    <string name="default_label">Teṭentunt</string>
+    <string name="alarm_vibrate">Senhez</string>
+    <string name="alarm_repeat">Ales</string>
+    <string name="delete">Kkes</string>
+    <string name="add_new_sound">Rnu amaynut</string>
+    <string name="remove_sound">Kkes</string>
+    <string name="alarm_tomorrow">Azekka</string>
+    <string name="alarm_today">Ass-a</string>
+    <string name="alarm_alert_dismiss_text">Suref</string>
+    <string name="alarm_alert_snooze_text">Ales</string>
+    <string name="every_day">Yal ass</string>
+    <string name="day_concat">", "</string>
+    <string name="loading_widget">Asali\u2026</string>
+    <string name="settings">Iγewwaṛen</string>
+    <string name="auto_silence_never">Weṛǧin</string>
+    <string-array name="auto_silence_entries">
+        <item>1 n tisdat</item>
+        <item>5 n tisdatin</item>
+        <item>10 n tisdatin</item>
+        <item>15 n tisdatin</item>
+        <item>20 n tisdatin</item>
+        <item>25 minutes</item>
+        <item>Weṛǧin</item>
+    </string-array>
+    <string-array name="crescendo_entries">
+        <item>Insa</item>
+        <item>5 n tasinin</item>
+        <item>10 n tasinin</item>
+        <item>15 n tasinin</item>
+        <item>20 seconds</item>
+        <item>25 seconds</item>
+        <item>30 n tasinin</item>
+        <item>35 seconds</item>
+        <item>40 seconds</item>
+        <item>45 seconds</item>
+        <item>50 seconds</item>
+        <item>55 seconds</item>
+        <item>60 n tsinin</item>
+    </string-array>
+    <string-array name="snooze_duration_entries">
+        <item>1 n tisdat</item>
+        <item>2 n tisdatin</item>
+        <item>3 n tisdatin</item>
+        <item>4 n tisdatin</item>
+        <item>5 n tisdatin</item>
+        <item>6 n tisdatin</item>
+        <item>7 minutes</item>
+        <item>8 minutes</item>
+        <item>9 minutes</item>
+        <item>10 n tisdatin</item>
+        <item>11 minutes</item>
+        <item>12 n tisdatin</item>
+        <item>13 minutes</item>
+        <item>14 minutes</item>
+        <item>15 n tisdatin</item>
+        <item>16 minutes</item>
+        <item>17 minutes</item>
+        <item>18 minutes</item>
+        <item>19 minutes</item>
+        <item>20 n tisdatin</item>
+        <item>21 minutes</item>
+        <item>22 minutes</item>
+        <item>23 minutes</item>
+        <item>24 n tisdatin</item>
+        <item>25 minutes</item>
+        <item>26 minutes</item>
+        <item>27 minutes</item>
+        <item>28 minutes</item>
+        <item>29 minutes</item>
+        <item>30 n tisdatin</item>
+    </string-array>
+    <string-array name="week_start_entries">
+        <item>Sed</item>
+        <item>Acer (lḥedd)</item>
+        <item>Arim</item>
+    </string-array>
+    <string name="alarm_volume_title">Imesli n tsusliyin</string>
+    <string name="silent_ringtone_title">Ulac sut</string>
+    <string name="unknown_ringtone_title">Arussin</string>
+    <string name="unmute_alarm_volume">Rétablir le son</string>
+    <string name="change_setting_action">Senfel</string>
+    <string name="volume_button_setting_title">Tiqeffalin n imseli</string>
+    <string-array name="volume_button_setting_entries">
+        <item>Ales</item>
+        <item>Suref</item>
+        <item>Control volume</item>
+    </string-array>
+    <string name="label_description">Tabzimt</string>
+    <string name="ringtone_description">Aṭenṭen</string>
+    <string name="menu_alarm">Teṭentunt</string>
+    <string name="menu_clock">Tamrint</string>
+    <string name="button_cities">Timdinin</string>
+    <string name="menu_item_settings">Iγewwaṛen</string>
+    <string name="menu_item_help">Tallelt</string>
+    <string name="menu_item_sort_by_name">Smizzwer s yisem</string>
+    <string name="sw_resume_button">Kemmel</string>
+    <string name="sw_reset_button">Wennez</string>
+    <string name="sw_start_button">Bdu</string>
+    <string name="sw_pause_button">Steɛfu</string>
+    <string name="sw_share_button">Bḍu</string>
+    <string name="hours_label">s</string>
+    <string name="minutes_label">m</string>
+    <string name="seconds_label">s</string>
+    <string name="timer_start">Bdu</string>
+    <string name="timer_delete">Kkes</string>
+    <string name="timer_stop">Seḥbes</string>
+    <string name="timer_reset">Wennez</string>
+    <string name="timer_cancel">Sefsex</string>
+    <string name="timer_pause">Steɛfu</string>
+    <string name="home_label">Asebter agejdan</string>
+    <string name="cities_activity_title">Timdinin</string>
+    <string name="clock_settings">Tamrint</string>
+    <string name="clock_style">Aɣanib</string>
+    <string-array name="clock_style_entries">
+        <item>Analogique</item>
+        <item>Digital</item>
+    </string-array>
+    <string-array name="timezone_labels" tools:ignore="Typos">
+        <item>"Marshall Islands"</item>
+        <item>"Midway Island"</item>
+        <item>"Haway"</item>
+        <item>"Alaska"</item>
+        <item>"Pacific Time"</item>
+        <item>"Tijuana"</item>
+        <item>"Arizuna"</item>
+        <item>"Etat de Chihuahua"</item>
+        <item>"Mountain Time"</item>
+        <item>"Marikan Talemmast"</item>
+        <item>"Central Time"</item>
+        <item>"Mexico"</item>
+        <item>"Saskatcwan"</item>
+        <item>"Bogotá"</item>
+        <item>"Eastern Time"</item>
+        <item>"Venezuela"</item>
+        <item>"Atlantic Time (Barbados)"</item>
+        <item>"Atlantic Time (Canada)"</item>
+        <item>"Manaos"</item>
+        <item>"Santiago du Chili"</item>
+        <item>"Nyufawndland"</item>
+        <item>"Brasilia"</item>
+        <item>"Buenos Aires"</item>
+        <item>"Greenland"</item>
+        <item>"Montévidéo"</item>
+        <item>"Mid-Atlantic"</item>
+        <item>"Açores"</item>
+        <item>"Cape Verde Islands"</item>
+        <item>"Casablanca"</item>
+        <item>"London, Dublin"</item>
+        <item>"Amsterdam, Berlin"</item>
+        <item>"Belgrade"</item>
+        <item>"Bruxelles"</item>
+        <item>"Sarajevo"</item>
+        <item>"Windhoek"</item>
+        <item>"W. Africa Time"</item>
+        <item>"Amman, Jordan"</item>
+        <item>"Athens, Istanbul"</item>
+        <item>"Beirut, Lebanon"</item>
+        <item>"Le Caire"</item>
+        <item>"Helsinki"</item>
+        <item>"Jérusalem"</item>
+        <item>"Minsk"</item>
+        <item>"Harare"</item>
+        <item>"Bagdad"</item>
+        <item>"Moscou"</item>
+        <item>"Kuwayt"</item>
+        <item>"Nayrubi"</item>
+        <item>"Tahṛan"</item>
+        <item>"Bakou"</item>
+        <item>"Tbilissi"</item>
+        <item>"Yerevan (Erevan)"</item>
+        <item>"Dubay"</item>
+        <item>"Kabul"</item>
+        <item>"Islamabad, Karachi"</item>
+        <item>"Ural'sk"</item>
+        <item>"Iekaterinbourg"</item>
+        <item>"Calcutta"</item>
+        <item>"Sri Lanka"</item>
+        <item>"Katmandou"</item>
+        <item>"Astana"</item>
+        <item>"Yangon"</item>
+        <item>"Krasnoïarsk"</item>
+        <item>"Bangkok"</item>
+        <item>"Beijing"</item>
+        <item>"Hong Kong"</item>
+        <item>"Irkoutsk"</item>
+        <item>"Kuala Lumpur"</item>
+        <item>"Perth"</item>
+        <item>"Taipei"</item>
+        <item>"Séoul"</item>
+        <item>"Tokyo, Osaka"</item>
+        <item>"Iakoutsk"</item>
+        <item>"Adélaïde"</item>
+        <item>"Darwin"</item>
+        <item>"Brisbane"</item>
+        <item>"Hobart"</item>
+        <item>"Sydney, Canberra"</item>
+        <item>"Vladivostok"</item>
+        <item>"Guam"</item>
+        <item>"Magadan"</item>
+        <item>"Ukland"</item>
+        <item>"Fidji"</item>
+        <item>"Tonga"</item>
+        <item>"Jakarta"</item>
+    </string-array>
+    <string name="shortcut_start_stopwatch_short">Bdu</string>
+    <string name="shortcut_pause_stopwatch_short">Steɛfu</string>
+    <string name="alarm_settings">Tisɣaltin</string>
+    <string name="swn_paused">Yettraǧu</string>
+    <string name="night_mode_title">Askar n yiḍ</string>
+    <string name="alarm_undo">ssefsu</string>
+    <string name="world_tomorrow">Azekka</string>
+    <string name="world_yesterday">Iḍelli</string>
+</resources>

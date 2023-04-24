@@ -23,4 +23,7 @@
         <item>דחה</item>
         <item>שום דבר</item>
     </string-array>
+    <string name="alarm_missed_channel">שעונים מעוררים שפוספסו</string>
+    <string name="stopwatch_channel">שעון עצר</string>
+    <string name="timer_channel">טיימר</string>
 </resources>
