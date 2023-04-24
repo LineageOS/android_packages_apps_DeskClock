@@ -36,7 +36,7 @@
     <string name="alarm_alert_dismiss_text">Gwrthod</string>
     <string name="alarm_missed_title">Larwm wedi\'i methu</string>
     <string name="alarm_missed_text"><xliff:g id="alarm_time">%1$s</xliff:g> - <xliff:g id="alarm_label">%2$s</xliff:g></string>
-    <string name="alarm_alert_snoozed_text">Yn caniatáu hepian</string>
+    <string name="alarm_alert_snoozed_text">Larwm wedi\'i oedi</string>
     <plurals name="alarm_alert_snooze_duration">
         <item quantity="zero"><xliff:g id="number" example="7">%d</xliff:g> mun</item>
         <item quantity="one">1 mun</item>
@@ -46,16 +46,16 @@
         <item quantity="other"><xliff:g id="number" example="7">%d</xliff:g> mun</item>
     </plurals>
     <string name="alarm_alert_off_text">Larwm i ffwrdd</string>
-    <string name="alarm_alert_snooze_text">Hepian</string>
+    <string name="alarm_alert_snooze_text">Oedi</string>
     <plurals name="alarm_alert_snooze_set">
-        <item quantity="zero">Yn caniatáu hepian am <xliff:g id="minutes">%d</xliff:g> munudau.</item>
-        <item quantity="one">Yn caniatáu hepian am 1 munud.</item>
-        <item quantity="two">Yn caniatáu hepian am <xliff:g id="minutes">%d</xliff:g> funud.</item>
-        <item quantity="few">Yn caniatáu hepian am <xliff:g id="minutes">%d</xliff:g> munud.</item>
-        <item quantity="many">Yn caniatáu hepian am <xliff:g id="minutes">%d</xliff:g> munud.</item>
-        <item quantity="other">Yn caniatáu hepian am <xliff:g id="minutes">%d</xliff:g> munud.</item>
+        <item quantity="zero">Ar oediad am <xliff:g id="minutes">%d</xliff:g> munudau.</item>
+        <item quantity="one">Ar oediad am 1 munud.</item>
+        <item quantity="two">Ar oediad am <xliff:g id="minutes">%d</xliff:g> funud.</item>
+        <item quantity="few">Ar oediad am <xliff:g id="minutes">%d</xliff:g> munud.</item>
+        <item quantity="many">Ar oediad am <xliff:g id="minutes">%d</xliff:g> munud.</item>
+        <item quantity="other">Ar oediad am <xliff:g id="minutes">%d</xliff:g> munud.</item>
     </plurals>
-    <string name="alarm_alert_snooze_until">Yn hepian nes <xliff:g id="time">%s</xliff:g></string>
+    <string name="alarm_alert_snooze_until">Ar oediad nes <xliff:g id="time">%s</xliff:g></string>
     <string name="alarm_alert_predismiss_title">Larwm yn dod i fyny</string>
     <string name="missed_alarm_has_been_deleted">Mae dy larwm wedi\'i fethu wedi ei dileu</string>
     <string name="timer_notifications_less_min">Llai na funud i fynd</string>
@@ -135,7 +135,7 @@
     <string name="analog_gadget">Cloc analog</string>
     <string name="digital_gadget">Cloc digidol</string>
     <string name="settings">Gosodiadau</string>
-    <string name="snooze_duration_title">Hyd hepian</string>
+    <string name="snooze_duration_title">Cyfnod oediad</string>
     <string name="crescendo_duration_title">Cynyddu\'r sain yn raddol</string>
     <string name="auto_silence_title">Distawrwydd ar ôl</string>
     <plurals name="auto_silence_summary">
@@ -220,7 +220,7 @@
     <string name="alarms_blocked_by_dnd">Mae\'r ddyfais wedi\'i gosod i ddistawrwydd llwyr</string>
     <string name="volume_button_setting_title">Botymau uchder sain</string>
     <string-array name="volume_button_setting_entries">
-        <item>Hepian</item>
+        <item>Oedi</item>
         <item>Diystyru</item>
         <item>Rheoli uchder sain</item>
     </string-array>
@@ -277,16 +277,16 @@
     <string name="minutes_seconds"><xliff:g id="minutes" example="3">%1$d</xliff:g>:<xliff:g id="seconds" example="44">%2$02d</xliff:g></string>
     <string name="seconds"><xliff:g id="seconds" example="44">%d</xliff:g></string>
     <string-array name="sw_share_strings" translatable="true">
-        <item>Dy amseroedd di</item>
-        <item>Dy amseroedd di</item>
+        <item>Ti fel cath i gythrel.</item>
+        <item>Mwynha ffrwyth dy lafur</item>
         <item>Mae Android yn gyflym, ond nid mor gyflym ag wyt ti!</item>
+        <item>Ffiw, roedd hyny\'n sydyn.</item>
         <item>Dy amseroedd di</item>
-        <item>Dy amseroedd di</item>
-        <item>Dy amseroedd di</item>
-        <item>Dy amseroedd di</item>
-        <item>Dy amseroedd di</item>
-        <item>Dy amseroedd di</item>
-        <item>Dy amseroedd di</item>
+        <item>Ti yn tanio ar bob silindr.</item>
+        <item>Yn gynt na mellten.</item>
+        <item>Ti fel roced.</item>
+        <item>Cyntaf i\'r felin...</item>
+        <item>Mae gwynt yn dy ddwrn.</item>
     </string-array>
     <string name="home_label">Cartref</string>
     <string name="cities_activity_title">Dinasoedd</string>
@@ -406,8 +406,8 @@
     <string name="stopwatch_service_desc">Mae\'n prosesu gweithredoedd o hysbysiadau stopwats.</string>
     <string name="swn_paused">Wedi seibio</string>
     <string name="description_direction_right">Llusga i\'r dde i\'w ddiystyru</string>
-    <string name="description_direction_left">Llusga i\'r chwith i hepian</string>
-    <string name="description_direction_both">Llusga i\'r chwith i hepian neu i\'r dde i ddiystyru</string>
+    <string name="description_direction_left">Llusga i\'r chwith i\'w oedi</string>
+    <string name="description_direction_both">Llusga i\'r chwith i oedi neu i\'r dde i ddiffodd y larwm</string>
     <string name="timer_settings">Amseryddion</string>
     <string name="timer_vibrate_title">Dirgryniad amserydd</string>
     <string name="timer_paused">Amserydd wedi ei rewi</string>
@@ -458,5 +458,5 @@
     <string name="dismiss_alarm">Diystyru\'r larwm</string>
     <string name="pick_alarm_to_dismiss">Dewis pa larwm i\'w ddiystyru</string>
     <string name="no_firing_alarms">Dim larymau yn canu</string>
-    <string name="alarm_is_snoozed"><xliff:g id="alarm_time" example="14:20">%s</xliff:g> larwm yn caniatáu hepian am 10 munud</string>
+    <string name="alarm_is_snoozed">Larwm <xliff:g id="alarm_time" example="14:20">%s</xliff:g> ar oediad am 10 munud</string>
 </resources>

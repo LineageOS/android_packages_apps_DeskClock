@@ -23,4 +23,10 @@
         <item>Loại bỏ</item>
         <item>Không có</item>
     </string-array>
+    <string name="firing_alarms_timers_channel">Kích hoạt báo thức &amp; bộ đếm thời gian</string>
+    <string name="alarm_missed_channel">Báo thức bị lỡ</string>
+    <string name="alarm_snooze_channel">Báo thức báo lại</string>
+    <string name="alarm_upcoming_channel">Báo thức sắp tới</string>
+    <string name="stopwatch_channel">Đồng hồ bấm giờ</string>
+    <string name="timer_channel">Đồng hồ đếm giờ</string>
 </resources>
