@@ -1069,4 +1069,9 @@
     -->
     <string name="alarm_is_snoozed"><xliff:g id="alarm_time" example="14:20">%s</xliff:g> alarm snoozed for 10 minutes</string>
 
+    <!-- String that represents if the snooze and dismiss buttons need to be swapped.
+    [CHAR LIMIT=NONE]
+    -->
+    <string name="swap_buttons"><![CDATA[Swap Snooze & Dismiss buttons]]></string>
+
 </resources>

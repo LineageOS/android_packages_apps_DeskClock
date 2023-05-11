@@ -120,6 +120,12 @@
             android:title="@string/shake_action_title"
             app:iconSpaceReserved="false"  />
 
+        <SwitchPreferenceCompat
+            android:defaultValue="false"
+            android:key="swap_buttons"
+            android:title="@string/swap_buttons"
+            app:iconSpaceReserved="false"  />
+
         <com.android.deskclock.settings.SimpleMenuPreference
             android:dialogTitle="@string/week_start_title"
             android:entries="@array/week_start_entries"

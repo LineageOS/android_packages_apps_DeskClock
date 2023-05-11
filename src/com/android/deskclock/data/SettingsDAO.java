@@ -312,6 +312,20 @@ final class SettingsDAO {
     }
 
     /**
+     * @return whether snooze & dismiss buttons need to be swapped. false by default.
+     */
+    static boolean getButtonSwap(SharedPreferences prefs) {
+        return prefs.getBoolean(SettingsActivity.KEY_ALARM_SWAP_BUTTONS, false);
+    }
+
+    /**
+     * @param enabled whether snooze & dismiss buttons need to be swapped.
+     */
+    static void setButtonSwap(SharedPreferences prefs, boolean enabled) {
+        prefs.edit().putBoolean(SettingsActivity.KEY_ALARM_SWAP_BUTTONS, enabled).apply();
+    }
+
+    /**
      * @param currentTime timezone offsets created relative to this time
      * @return a description of the time zones available for selection
      */

@@ -48,6 +48,7 @@ import com.android.deskclock.widget.CollapsingToolbarBaseActivity;
 public final class SettingsActivity extends CollapsingToolbarBaseActivity {
 
     public static final String KEY_ALARM_SNOOZE = "snooze_duration";
+    public static final String KEY_ALARM_SWAP_BUTTONS = "swap_buttons";
     public static final String KEY_ALARM_CRESCENDO = "alarm_crescendo_duration";
     public static final String KEY_TIMER_CRESCENDO = "timer_crescendo_duration";
     public static final String KEY_TIMER_RINGTONE = "timer_ringtone";
@@ -160,6 +161,10 @@ public final class SettingsActivity extends CollapsingToolbarBaseActivity {
                     break;
                 case KEY_TIMER_RINGTONE:
                     pref.setSummary(DataModel.getDataModel().getTimerRingtoneTitle());
+                    break;
+                case KEY_ALARM_SWAP_BUTTONS:
+                    final TwoStatePreference swapButtonsPref = (TwoStatePreference) pref;
+                    DataModel.getDataModel().setButtonSwap(swapButtonsPref.isChecked());
                     break;
             }
             // Set result so DeskClock knows to refresh itself

@@ -422,4 +422,5 @@
     <string name="pick_alarm_to_dismiss" msgid="5408769235866082896">"Pick which alarm to dismiss"</string>
     <string name="no_firing_alarms" msgid="4986161963178722289">"No firing alarms"</string>
     <string name="alarm_is_snoozed" msgid="7044644119744928846">"<xliff:g id="ALARM_TIME">%s</xliff:g> alarm snoozed for 10 minutes"</string>
+    <string name="swap_buttons"><![CDATA[Swap Snooze & Dismiss buttons]]></string>
 </resources>

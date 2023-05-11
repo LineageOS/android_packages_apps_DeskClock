@@ -679,6 +679,22 @@ public final class DataModel {
     }
 
     /**
+     * @return whether the snooze and dismiss buttons are swapped.
+     */
+    public boolean getButtonSwap() {
+        enforceMainLooper();
+        return mAlarmModel.getButtonSwap();
+    }
+
+    /**
+     * @param enabled whether the snooze and dismiss buttons are swapped.
+     */
+    public void setButtonSwap(boolean enabled) {
+        enforceMainLooper();
+        mAlarmModel.setButtonSwap(enabled);
+    }
+
+    /**
      * @return the duration, in milliseconds, of the crescendo to apply to alarm ringtone playback;
      *      {@code 0} implies no crescendo should be applied
      */

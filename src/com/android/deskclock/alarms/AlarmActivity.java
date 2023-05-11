@@ -53,6 +53,7 @@ import android.widget.TextView;
 import androidx.annotation.NonNull;
 import androidx.core.graphics.ColorUtils;
 import androidx.core.view.animation.PathInterpolatorCompat;
+import androidx.gridlayout.widget.GridLayout;
 
 import com.android.deskclock.AnimatorUtils;
 import com.android.deskclock.BaseActivity;
@@ -135,6 +136,8 @@ public class AlarmActivity extends BaseActivity
     /** Whether the AlarmService is currently bound */
     private boolean mServiceBound;
 
+    private boolean mSwapButtons;
+
     private AccessibilityManager mAccessibilityManager;
 
     private ViewGroup mAlertView;
@@ -190,6 +193,9 @@ public class AlarmActivity extends BaseActivity
             setRequestedOrientation(ActivityInfo.SCREEN_ORIENTATION_NOSENSOR);
         }
 
+        // Swap the Snooze and Dismiss buttons if enabled
+        mSwapButtons = DataModel.getDataModel().getButtonSwap();
+
         mAccessibilityManager = (AccessibilityManager) getSystemService(ACCESSIBILITY_SERVICE);
 
         setContentView(R.layout.alarm_activity);
@@ -210,6 +216,17 @@ public class AlarmActivity extends BaseActivity
 
         titleView.setText(mAlarmInstance.getLabelOrDefault(this));
         Utils.setTimeFormat(digitalClock, false);
+
+        if (mSwapButtons) {
+            mSnoozeButton.setLayoutParams(new GridLayout.LayoutParams(
+                    GridLayout.spec(2, GridLayout.CENTER),
+                    GridLayout.spec(2, GridLayout.CENTER)
+            ));
+            mDismissButton.setLayoutParams(new GridLayout.LayoutParams(
+                    GridLayout.spec(2, GridLayout.CENTER),
+                    GridLayout.spec(0, GridLayout.CENTER)
+            ));
+        }
 
         mCurrentHourColor = ThemeUtils.resolveColor(this, android.R.attr.windowBackground);
         getWindow().setBackgroundDrawable(new ColorDrawable(mCurrentHourColor));

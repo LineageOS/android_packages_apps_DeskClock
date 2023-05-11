@@ -180,4 +180,12 @@ final class SettingsModel {
     TimeZones getTimeZones() {
         return SettingsDAO.getTimeZones(mContext, mTimeModel.currentTimeMillis());
     }
+
+    boolean getButtonSwap() {
+        return SettingsDAO.getButtonSwap(mPrefs);
+    }
+
+    void setButtonSwap(boolean enabled) {
+        SettingsDAO.setButtonSwap(mPrefs, enabled);
+    }
 }

@@ -88,6 +88,20 @@ final class AlarmModel {
     }
 
     /**
+     * @return {@code true} if the snooze & dismiss buttons need to be swapped
+     */
+    boolean getButtonSwap() {
+        return mSettingsModel.getButtonSwap();
+    }
+
+    /**
+     * @param enabled {@code true} if the snooze & dismiss buttons need to be swapped
+     */
+    void setButtonSwap(boolean enabled) {
+        mSettingsModel.setButtonSwap(enabled);
+    }
+
+    /**
      * This receiver is notified when system settings change. Cached information built on
      * those system settings must be cleared.
      */
