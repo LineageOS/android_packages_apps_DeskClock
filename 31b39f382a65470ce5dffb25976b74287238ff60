@@ -1,0 +1,21 @@
+{
+  "comments": [
+    {
+      "unresolved": false,
+      "key": {
+        "uuid": "c1e202c7_fafdf71a",
+        "filename": "/PATCHSET_LEVEL",
+        "patchSetId": 1
+      },
+      "lineNbr": 0,
+      "author": {
+        "id": 17945
+      },
+      "writtenOn": "2023-05-12T00:15:23Z",
+      "side": 1,
+      "message": "This is opt-in..\n\nhttps://ibb.co/55Nhx0K\n\nIt has become a habit to dismiss things like notifications by swiping right.\nThe side-effect of this is when I am sleeping and my alarm rings, I just swipe right without thinking which dismisses the alarm and I get $****ed\n\nThis patch makes it optional for people like me (or just for me) to snooze instead of dismissing.",
+      "revId": "31b39f382a65470ce5dffb25976b74287238ff60",
+      "serverId": "1ec6b3db-b2c1-4fa4-84a2-4c7efe89ba71"
+    }
+  ]
+}
