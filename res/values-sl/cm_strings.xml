@@ -39,4 +39,7 @@
     <string name="dialog_permissions_post_notifications">Ta aplikacija se zanaša na obvestila. Brez njih ne mora delovati!</string>
     <string name="selected">Izbrano</string>
     <string name="more_options">Več možnosti</string>
+    <string name="widget_choice_title">Izberite vaš slog</string>
+    <string name="widget_name_transparent">Prosojno</string>
+    <string name="widget_name_solid">Zapolnjeno</string>
 </resources>

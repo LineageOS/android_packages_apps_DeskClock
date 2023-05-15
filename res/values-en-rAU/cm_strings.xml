@@ -39,4 +39,7 @@
     <string name="dialog_permissions_post_notifications">This app relies on notifications. Without them it cannot be run!</string>
     <string name="selected">Selected</string>
     <string name="more_options">More options</string>
+    <string name="widget_choice_title">Choose your style</string>
+    <string name="widget_name_transparent">Unbacked</string>
+    <string name="widget_name_solid">Backed</string>
 </resources>

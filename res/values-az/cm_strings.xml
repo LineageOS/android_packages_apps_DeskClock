@@ -39,4 +39,7 @@
     <string name="dialog_permissions_post_notifications">Bu tətbiq bildirişlərə əsaslanır. Bildirişlər olmadan işləyə bilməz!</string>
     <string name="selected">Seçildi</string>
     <string name="more_options">Daha çox seçim</string>
+    <string name="widget_choice_title">Stilinizi seçin</string>
+    <string name="widget_name_transparent">Dəstəksiz</string>
+    <string name="widget_name_solid">Dəstəkli</string>
 </resources>

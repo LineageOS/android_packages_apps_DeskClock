@@ -39,4 +39,7 @@
     <string name="dialog_permissions_post_notifications">Cheste aplicazion e fâs cont su lis notifichis. Cence di chês nol pues zirâ!</string>
     <string name="selected">Selezionât</string>
     <string name="more_options">Altris opzions</string>
+    <string name="widget_choice_title">Sielç il to stîl</string>
+    <string name="widget_name_transparent">Fonts trasparent</string>
+    <string name="widget_name_solid">Fonts tinte unide</string>
 </resources>

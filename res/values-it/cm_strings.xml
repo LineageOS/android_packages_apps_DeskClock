@@ -39,4 +39,7 @@
     <string name="dialog_permissions_post_notifications">Questa app si basa sulle notifiche: senza di esse non può essere eseguita!</string>
     <string name="selected">Selezionato</string>
     <string name="more_options">Altre opzioni</string>
+    <string name="widget_choice_title">Scegli uno stile</string>
+    <string name="widget_name_transparent">Sfondo trasparente</string>
+    <string name="widget_name_solid">Sfondo a tinta unita</string>
 </resources>

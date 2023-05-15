@@ -39,4 +39,7 @@
     <string name="dialog_permissions_post_notifications">Deze app is afhankelijk van meldingen. Zonder deze kan de app niet worden uitgevoerd!</string>
     <string name="selected">Geselecteerd</string>
     <string name="more_options">Meer opties</string>
+    <string name="widget_choice_title">Kies uw stijl</string>
+    <string name="widget_name_transparent">Niet-ondersteund</string>
+    <string name="widget_name_solid">Ondersteund</string>
 </resources>

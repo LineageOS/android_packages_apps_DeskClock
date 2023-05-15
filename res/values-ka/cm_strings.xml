@@ -39,4 +39,7 @@
     <string name="dialog_permissions_post_notifications">აპი დამოკიდებულია შეტყობინებებზე. მათ გარეშე ვერ გაეშვება!</string>
     <string name="selected">შერჩეული</string>
     <string name="more_options">სხვა პარამეტრები</string>
+    <string name="widget_choice_title">აირჩიეთ თქვენი სტილი</string>
+    <string name="widget_name_transparent">გამჭვირვალე</string>
+    <string name="widget_name_solid">გაუმჭვირვალე</string>
 </resources>

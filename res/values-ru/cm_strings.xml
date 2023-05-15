@@ -39,4 +39,7 @@
     <string name="dialog_permissions_post_notifications">Это приложение использует уведомления. Без них оно не может быть запущено!</string>
     <string name="selected">Выбрано</string>
     <string name="more_options">Дополнительные опции</string>
+    <string name="widget_choice_title">Выберите свой стиль</string>
+    <string name="widget_name_transparent">Без фона</string>
+    <string name="widget_name_solid">С фоном</string>
 </resources>

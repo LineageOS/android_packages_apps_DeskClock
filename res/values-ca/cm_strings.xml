@@ -39,4 +39,7 @@
     <string name="dialog_permissions_post_notifications">Aquesta aplicació es basa en les notificacions. Sense elles no es pot executar!</string>
     <string name="selected">Seleccionat</string>
     <string name="more_options">Més opcions</string>
+    <string name="widget_choice_title">Trieu el vostre estil</string>
+    <string name="widget_name_transparent">Sense fons</string>
+    <string name="widget_name_solid">Amb fons</string>
 </resources>

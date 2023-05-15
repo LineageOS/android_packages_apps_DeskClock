@@ -39,4 +39,7 @@
     <string name="dialog_permissions_post_notifications">Ứng dụng này dựa vào thông báo. Không có chúng nó không thể chạy được!</string>
     <string name="selected">Đã chọn</string>
     <string name="more_options">Tuỳ chọn khác</string>
+    <string name="widget_choice_title">Chọn phong cách của bạn</string>
+    <string name="widget_name_transparent">Không được hỗ trợ</string>
+    <string name="widget_name_solid">Được hỗ trợ</string>
 </resources>
