@@ -26,9 +26,9 @@ import com.android.deskclock.Utils;
 
 public final class WidgetUtils {
 
-    private static String PREFS_NAME = "com.android.alarmclock.widgets";
-    private static String PREF_PREFIX_KEY = "appwidget_";
-    private static String PREF_MODE_PREFIX = PREF_PREFIX_KEY + "solid_";
+    private static final String PREFS_NAME = "com.android.alarmclock.widgets";
+    private static final String PREF_PREFIX_KEY = "appwidget_";
+    private static final String PREF_MODE_PREFIX = PREF_PREFIX_KEY + "solid_";
 
 
     private WidgetUtils() {}

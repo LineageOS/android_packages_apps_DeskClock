@@ -16,17 +16,14 @@
 
 package com.android.deskclock.timer;
 
-import android.annotation.SuppressLint;
 import android.content.Context;
 import android.util.ArrayMap;
-import android.util.Log;
 import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
 
 import androidx.annotation.NonNull;
 import androidx.recyclerview.widget.RecyclerView;
-import androidx.recyclerview.widget.RecyclerView.ViewHolder;
 
 import com.android.deskclock.data.DataModel;
 import com.android.deskclock.data.Timer;
@@ -64,7 +61,7 @@ class TimerAdapter extends RecyclerView.Adapter implements TimerListener {
     }
 
     @Override
-    public void onBindViewHolder(RecyclerView.ViewHolder itemViewHolder, int position) {
+    public void onBindViewHolder(@NonNull RecyclerView.ViewHolder itemViewHolder, int position) {
         TimerViewHolder holder = (TimerViewHolder) itemViewHolder;
         mHolders.put(getTimer(position).getId(), holder);
         holder.onBind(getTimer(position).getId());

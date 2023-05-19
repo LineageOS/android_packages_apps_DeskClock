@@ -32,9 +32,6 @@
     <!-- Setting labels on Set alarm screen: Vibration on or off -->
     <string name="alarm_vibrate">Vibrate</string>
 
-    <!-- Setting labels on Set alarm screen: Repeat -->
-    <string name="alarm_repeat">Repeat</string>
-
     <!-- Setting labels on Set alarm screen: Delete [CHAR LIMIT=15] -->
     <string name="delete">Delete</string>
 
@@ -483,8 +480,6 @@
     <string name="button_cities">Cities</string>
     <!-- Menu item on most screens to get to more settings -->
     <string name="menu_item_settings">Settings</string>
-    <!-- Menu item on most screens to get to the help information -->
-    <string name="menu_item_help">Help</string>
     <!-- Menu item on clock screen to enter screen saver. -->
     <string name="menu_item_night_mode">Screen saver</string>
     <!-- Menu item on Cities screen to sort by GMT offset -->
@@ -897,12 +892,8 @@
     <string name="timer_paused">Timer paused</string>
     <!-- Notification title when multiple timers are paused. [CHAR LIMIT = 30] -->
     <string name="timers_stopped"><xliff:g id="number" example="7">%d</xliff:g> timers paused</string>
-    <!-- Notification text when multiple timers are paused. -->
-    <string name="all_timers_stopped_notif">Tap to see your timers</string>
     <!-- Notification title when at least one timer, of those in use, is counting down. -->
     <string name="timers_in_use"><xliff:g id="number" example="7">%d</xliff:g> timers</string>
-    <!-- Notification text when at least one timer, of those in use, is counting down. -->
-    <string name="next_timer_notif">Next timer: <xliff:g id="time_remaining" example="2 minutes remaining">%s</xliff:g></string>
 
     <!-- screensaver settings strings -->
     <!-- Title for the screen saver settings activity. -->
@@ -938,9 +929,6 @@
     <!-- Number of hours the world city is behind the current city [CHAR LIMIT=NONE] -->
     <string name="world_hours_yesterday">Yesterday, <xliff:g id="time" example="4 hours behind">%1$s</xliff:g></string>
     <!-- The time in a world city is the day after the time in the current city (used in landscape) [CHAR LIMIT=NONE] -->
-    <string name="world_tomorrow">Tomorrow</string>
-    <!-- The time in a world city is the day before the time in the current city (used in landscape) [CHAR LIMIT=NONE] -->
-    <string name="world_yesterday">Yesterday</string>
 
     <!-- Description of field showing the next alarm time in the clock page, for accessibility. -->
     <string name="next_alarm_description">Next alarm: <xliff:g id="alarm_time" example="Wed 8:00am">%s</xliff:g></string>

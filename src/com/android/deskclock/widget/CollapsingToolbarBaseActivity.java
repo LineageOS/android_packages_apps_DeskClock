@@ -33,7 +33,6 @@ import androidx.fragment.app.FragmentActivity;
 import com.android.deskclock.R;
 import com.google.android.material.appbar.AppBarLayout;
 import com.google.android.material.appbar.CollapsingToolbarLayout;
-import com.google.android.material.resources.TextAppearanceConfig;
 
 /**
  * A base Activity that has a collapsing toolbar layout is used for the activities intending to
@@ -51,8 +50,6 @@ public class CollapsingToolbarBaseActivity extends FragmentActivity {
     @Override
     protected void onCreate(@Nullable Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
-        // Force loading font synchronously for collapsing toolbar layout
-        TextAppearanceConfig.setShouldLoadFontSynchronously(true);
         super.setContentView(R.layout.collapsing_toolbar_base_layout);
         mCollapsingToolbarLayout = findViewById(R.id.collapsing_toolbar);
         mAppBarLayout = findViewById(R.id.app_bar);

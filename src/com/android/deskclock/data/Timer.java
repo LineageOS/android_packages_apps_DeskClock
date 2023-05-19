@@ -357,7 +357,7 @@ public final class Timer {
      *     <li>{@link State#RESET RESET} timers; ties broken by {@link #getLength()}</li>
      * </ol>
      */
-    static final Comparator<Timer> EXPIRY_COMPARATOR = new Comparator<Timer>() {
+    static final Comparator<Timer> EXPIRY_COMPARATOR = new Comparator<>() {
 
         private final List<State> stateExpiryOrder = Arrays.asList(MISSED, EXPIRED, RUNNING, PAUSED,
                 RESET);

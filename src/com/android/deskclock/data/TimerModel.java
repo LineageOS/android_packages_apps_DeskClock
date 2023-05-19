@@ -294,7 +294,7 @@ final class TimerModel {
      * @param eventLabelId the label of the timer event to send; 0 if no event should be sent
      * @return the reset {@code timer} or {@code null} if the timer was deleted
      */
-    Timer resetTimer(Timer timer, boolean allowDelete, @StringRes int eventLabelId) {
+    void resetTimer(Timer timer, boolean allowDelete, @StringRes int eventLabelId) {
         final Timer result = doResetOrDeleteTimer(timer, allowDelete, eventLabelId);
 
         // Update the notification after updating the timer data.
@@ -306,7 +306,7 @@ final class TimerModel {
             updateNotification();
         }
 
-        return result;
+        return;
     }
 
     /**

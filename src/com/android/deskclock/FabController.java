@@ -42,6 +42,7 @@ public interface FabController {
      *
      * @param fab the fab component on which the click occurred
      */
+    @SuppressWarnings("unused")
     void onFabClick(@NonNull ImageView fab);
 
     /**
@@ -56,6 +57,7 @@ public interface FabController {
      *
      * @param right the button to the right of the fab component
      */
+    @SuppressWarnings("unused")
     void onRightButtonClick(@NonNull ImageView right);
 
     /**

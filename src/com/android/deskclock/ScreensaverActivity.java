@@ -28,8 +28,11 @@ import android.os.Bundle;
 import android.view.View;
 import android.view.ViewTreeObserver.OnPreDrawListener;
 import android.view.Window;
+import android.view.WindowInsets;
 import android.view.WindowManager;
 import android.widget.TextClock;
+
+import androidx.annotation.NonNull;
 
 import com.android.deskclock.events.Events;
 import com.android.deskclock.uidata.UiDataModel;
@@ -84,6 +87,8 @@ public class ScreensaverActivity extends BaseActivity {
 
     private MoveScreensaverRunnable mPositionUpdater;
 
+    private boolean mAlreadyActive;
+
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
@@ -109,7 +114,7 @@ public class ScreensaverActivity extends BaseActivity {
                 | View.SYSTEM_UI_FLAG_FULLSCREEN
                 | View.SYSTEM_UI_FLAG_HIDE_NAVIGATION
                 | View.SYSTEM_UI_FLAG_LAYOUT_FULLSCREEN);
-        mContentView.setOnSystemUiVisibilityChangeListener(new InteractionListener());
+        mContentView.setOnApplyWindowInsetsListener(new InteractionListener());
 
         mPositionUpdater = new MoveScreensaverRunnable(mContentView, mMainClockView);
 
@@ -219,14 +224,19 @@ public class ScreensaverActivity extends BaseActivity {
         }
     }
 
-    private final class InteractionListener implements View.OnSystemUiVisibilityChangeListener {
+    private final class InteractionListener implements View.OnApplyWindowInsetsListener {
+        @NonNull
         @Override
-        public void onSystemUiVisibilityChange(int visibility) {
-            // When the user interacts with the screen, the navigation bar reappears
-            if ((visibility & View.SYSTEM_UI_FLAG_HIDE_NAVIGATION) == 0) {
-                // We want the screen saver to exit upon user interaction.
-                finish();
+        public WindowInsets onApplyWindowInsets(@NonNull View v, @NonNull WindowInsets insets) {
+            if (insets.isVisible(WindowInsets.Type.navigationBars())) {
+                if (mAlreadyActive) {
+                    mAlreadyActive = false;
+                    finish();
+                } else {
+                    mAlreadyActive = true;
+                }
             }
+            return insets;
         }
     }
 }
