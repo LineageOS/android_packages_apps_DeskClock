@@ -18,7 +18,6 @@
 <resources>
 
     <color name="black">#FF000000</color>
-    <color name="black_87p">#DE000000</color>
     <color name="black_54p">#8A000000</color>
 
     <color name="white">#FFFFFFFF</color>
@@ -29,14 +28,7 @@
 
     <color name="transparent">#00000000</color>
 
-    <color name="hairline">#28FFFFFF</color>
-
-    <color name="clock_gray">#B3FFFFFF</color>
-
     <color name="default_background">@android:color/system_neutral1_900</color>
-
-    <!-- shadowColor for widget text -->
-    <color name="widget_shadow_color">#000000</color>
 
     <color name="accent_color">@android:color/system_accent3_200</color>
     <color name="accent_color2">@android:color/system_accent2_200</color>
@@ -58,7 +50,6 @@
     <!-- Material next track off color-->
     <color name="track_off_color">@color/system_neutral2_500</color>
 
-    <color name="system_neutral2_100">@android:color/system_neutral2_100</color>
     <color name="system_neutral2_300">@android:color/system_neutral2_300</color>
     <color name="system_neutral2_500">@android:color/system_neutral2_500</color>
     <color name="system_neutral2_700">@android:color/system_neutral2_700</color>
@@ -66,9 +57,6 @@
     <color name="system_neutral1_50">@android:color/system_neutral1_50</color>
 
     <color name="accent_100">@android:color/system_accent3_100</color>
-    <color name="accent_200">@android:color/system_accent3_200</color>
-    <color name="accent_600">@android:color/system_accent3_600</color>
-    <color name="accent_900">@android:color/system_accent3_900</color>
 
     <color name="widget_text_color">@android:color/system_accent1_100</color>
     <color name="widget_text_color_dark">@android:color/system_accent1_700</color>

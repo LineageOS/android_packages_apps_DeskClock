@@ -59,7 +59,7 @@
         android:layout_width="wrap_content"
         android:layout_height="@dimen/touch_target_min_size"
         android:background="?selectableItemBackgroundBorderless"
-        android:contentDescription="@string/collapse_alarm"
+        android:contentDescription="@string/expand_alarm"
         android:focusable="true"
         android:padding="@dimen/checkbox_start_padding"
         android:scaleType="center"

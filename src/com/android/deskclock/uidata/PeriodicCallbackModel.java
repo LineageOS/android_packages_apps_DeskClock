@@ -93,6 +93,7 @@ final class PeriodicCallbackModel {
     /**
      * @param runnable to be called every hour
      */
+    @SuppressWarnings("unused")
     void addHourCallback(Runnable runnable) {
         // Callbacks *can* occur early so pad in an extra 100ms on the hour callback to ensure
         // the sampled wallclock time reflects the subsequent hour.

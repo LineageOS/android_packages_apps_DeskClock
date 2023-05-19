@@ -145,8 +145,8 @@ final class SilentSettingsModel {
      * making noise, a description of the setting is reported to this model on the main thread.
      */
     private final class CheckSilenceSettingsTask {
-        ExecutorService mExecutor = Executors.newSingleThreadExecutor();
-        Handler mHandler = new Handler(Looper.getMainLooper());
+        final ExecutorService mExecutor = Executors.newSingleThreadExecutor();
+        final Handler mHandler = new Handler(Looper.getMainLooper());
 
         private void execute() {
             mExecutor.execute(() -> {

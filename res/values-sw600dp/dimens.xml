@@ -29,24 +29,19 @@
     <dimen name="main_clock_font_size">125sp</dimen>
     <dimen name="big_font_size">115sp</dimen>
     <dimen name="label_font_size">18sp</dimen>
-    <dimen name="alarm_label_size">18sp</dimen>
     <dimen name="day_button_font_size">20sp</dimen>
     <dimen name="alarm_info_font_size">48sp</dimen>
     <dimen name="no_alarm_font_size">20sp</dimen>
 
-    <dimen name="backspace_icon_size">32dp</dimen>
     <dimen name="no_alarms_size">180dp</dimen>
     <dimen name="fab_alarm_size">80dp</dimen>
 
     <dimen name="body_font_padding">8dp</dimen>
 
-    <dimen name="medium_space_top">46dp</dimen>
-
     <dimen name="label_margin_big">8dp</dimen>
 
     <!-- Size of margin for circles. -->
     <dimen name="circle_margin_top">48dp</dimen>
-    <dimen name="analog_clock_margin">96dp</dimen>
 
     <!-- Size of analog clock in world clock. -->
     <dimen name="world_clock_analog_size">200dp</dimen>

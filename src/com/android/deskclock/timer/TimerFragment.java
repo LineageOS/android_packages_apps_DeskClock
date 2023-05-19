@@ -54,12 +54,10 @@ import com.android.deskclock.Utils;
 import com.android.deskclock.data.DataModel;
 import com.android.deskclock.data.Timer;
 import com.android.deskclock.data.TimerListener;
-import com.android.deskclock.data.TimerStringFormatter;
 import com.android.deskclock.events.Events;
 import com.android.deskclock.uidata.UiDataModel;
 
 import java.io.Serializable;
-import java.util.Arrays;
 
 /**
  * Displays a vertical list of timers in all states.
@@ -105,7 +103,6 @@ public final class TimerFragment extends DeskClockFragment {
             Bundle savedInstanceState) {
         final View view = inflater.inflate(R.layout.timer_fragment, container, false);
 
-        Context context = view.getContext();
         mTimerClickHandler = new TimerClickHandler(this);
         mAdapter = new TimerAdapter(mTimerClickHandler);
         mRecyclerView = view.findViewById(R.id.recycler_view);
@@ -501,10 +498,7 @@ public final class TimerFragment extends DeskClockFragment {
         }
 
         int orientation = res.getConfiguration().orientation;
-        boolean isLandscape = false;
-        if (orientation == Configuration.ORIENTATION_LANDSCAPE) {
-            isLandscape = true;
-        }
+        boolean isLandscape = orientation == Configuration.ORIENTATION_LANDSCAPE;
         return new LinearLayoutManager(context, isLandscape
                 ? LinearLayoutManager.HORIZONTAL : LinearLayoutManager.VERTICAL, false);
     }

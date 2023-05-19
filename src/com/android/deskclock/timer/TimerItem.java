@@ -30,12 +30,10 @@ import android.widget.ImageButton;
 import android.widget.TextView;
 
 import androidx.constraintlayout.widget.ConstraintLayout;
-import androidx.core.view.ViewCompat;
 
 import com.android.deskclock.R;
 import com.android.deskclock.ThemeUtils;
 import com.android.deskclock.TimerTextController;
-import com.android.deskclock.Utils.ClickAccessibilityDelegate;
 import com.android.deskclock.data.Timer;
 
 /**

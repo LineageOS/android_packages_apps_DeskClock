@@ -16,6 +16,4 @@
 
 <resources>
     <bool name="rotateAlarmAlert">false</bool>
-    <bool name="showTabLabel">false</bool>
-    <bool name="showTabHorizontally">false</bool>
 </resources>

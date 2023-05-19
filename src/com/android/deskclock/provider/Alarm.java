@@ -259,7 +259,7 @@ public final class Alarm implements Parcelable, ClockContract.AlarmsColumns {
         return deletedRows == 1;
     }
 
-    public static final Parcelable.Creator<Alarm> CREATOR = new Parcelable.Creator<Alarm>() {
+    public static final Parcelable.Creator<Alarm> CREATOR = new Parcelable.Creator<>() {
         public Alarm createFromParcel(Parcel p) {
             return new Alarm(p);
         }

@@ -63,6 +63,7 @@ public final class DropShadowController {
      * @param hairlineView at the bottom of the tab bar to be hidden or shown when the drop shadow
      *                     is displayed or hidden, respectively.
      */
+    @SuppressWarnings("unused")
     public DropShadowController(View dropShadowView, UiDataModel uiDataModel, View hairlineView) {
         this(dropShadowView);
         mUiDataModel = uiDataModel;
@@ -86,6 +87,7 @@ public final class DropShadowController {
      * @param dropShadowView to be hidden/shown as {@code recyclerView} reports scrolling changes
      * @param recyclerView a scrollable view that dictates the visibility of {@code dropShadowView}
      */
+    @SuppressWarnings("unused")
     public DropShadowController(View dropShadowView, RecyclerView recyclerView) {
         this(dropShadowView);
         mRecyclerView = recyclerView;

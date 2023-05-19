@@ -21,6 +21,7 @@ import static android.view.View.VISIBLE;
 import static com.android.deskclock.NotificationUtils.STOPWATCH_NOTIFICATION_CHANNEL_ID;
 
 import android.app.Notification;
+import android.app.NotificationManager;
 import android.app.PendingIntent;
 import android.content.Context;
 import android.content.Intent;
@@ -132,7 +133,7 @@ class StopwatchNotificationBuilder {
                         .setCustomContentView(content)
                         .setContentIntent(pendingShowApp)
                         .setAutoCancel(stopwatch.isPaused())
-                        .setPriority(Notification.PRIORITY_LOW)
+                        .setPriority(NotificationManager.IMPORTANCE_LOW)
                         .setSmallIcon(R.drawable.stat_notify_stopwatch)
                         .setStyle(new NotificationCompat.DecoratedCustomViewStyle())
                         .setColor(ContextCompat.getColor(context, R.color.default_background))

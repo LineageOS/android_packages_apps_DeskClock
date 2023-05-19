@@ -32,7 +32,6 @@
     <!-- Analog clock size in the the screen saver -->
     <dimen name="bottom_text_size">16sp</dimen>
 
-    <dimen name="alarm_text_font_size">16sp</dimen>
     <dimen name="circletimer_circle_size">6dp</dimen>
     <dimen name="stopwatch_circle_size">12dp</dimen>
     <dimen name="max_timer_circle_size">240dp</dimen>
@@ -61,14 +60,11 @@
 
     <dimen name="body_font_padding">4dp</dimen>
 
-    <dimen name="alarm_label_size">14sp</dimen>
     <dimen name="alarm_icon_padding">6dp</dimen>
 
-    <dimen name="backspace_icon_size">24dp</dimen>
     <dimen name="no_alarms_size">90dp</dimen>
     <dimen name="fab_alarm_size">56dp</dimen>
 
-    <dimen name="medium_space_top">22dp</dimen>
     <dimen name="style_label_space">4dip</dimen>
 
     <dimen name="label_margin_big">4dp</dimen>
@@ -77,7 +73,6 @@
 
     <!-- Size of margin for circles. -->
     <dimen name="circle_margin_top">16dp</dimen>
-    <dimen name="analog_clock_margin">60dp</dimen>
     <dimen name="analog_clock_size">294dp</dimen>
 
     <!-- Size of time zone analog clocks in world clock. -->
@@ -98,12 +93,6 @@
     <dimen name="widget_max_clock_font_size">80dp</dimen>
     <dimen name="widget_min_world_city_list_size">80dp</dimen>
 
-    <!-- Divider height -->
-    <dimen name="hairline_height">1dp</dimen>
-
-    <!-- Divider side padding -->
-    <dimen name="hairline_side_padding">6dp</dimen>
-
     <!-- The minimum height/width of any touch target -->
     <dimen name="touch_target_min_size">48dp</dimen>
 
@@ -115,9 +104,6 @@
 
     <!-- Padding between checkbox and text. -->
     <dimen name="checkbox_start_padding">12dp</dimen>
-
-    <!-- Floating action button elevation. -->
-    <dimen name="fab_elevation">8dp</dimen>
 
     <!-- Floating action button margin -->
     <dimen name="fab_margin">16dp</dimen>
