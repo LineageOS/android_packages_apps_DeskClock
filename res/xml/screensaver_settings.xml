@@ -14,6 +14,7 @@
 
 <PreferenceScreen
     xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
     android:title="@string/app_label">
 
     <ListPreference
@@ -22,12 +23,14 @@
         android:entries="@array/clock_style_entries"
         android:entryValues="@array/clock_style_values"
         android:key="screensaver_clock_style"
-        android:title="@string/clock_style" />
+        android:title="@string/clock_style"
+        app:iconSpaceReserved="false" />
 
     <CheckBoxPreference
         android:defaultValue="true"
         android:key="screensaver_night_mode"
         android:summary="@string/night_mode_summary"
-        android:title="@string/night_mode_title" />
+        android:title="@string/night_mode_title"
+        app:iconSpaceReserved="false" />
 
 </PreferenceScreen>
