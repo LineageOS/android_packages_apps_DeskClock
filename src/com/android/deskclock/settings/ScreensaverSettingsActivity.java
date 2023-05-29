@@ -87,7 +87,10 @@ public final class ScreensaverSettingsActivity extends AppCompatActivity {
             final ListPreference clockStylePref = findPreference(KEY_CLOCK_STYLE);
             final CheckBoxPreference nightModePref = findPreference(KEY_NIGHT_MODE);
             if (clockStylePref != null && nightModePref != null) {
-                clockStylePref.setSummary(clockStylePref.getEntry());
+                final int index = clockStylePref.findIndexOfValue(DataModel.getDataModel().
+                        getScreensaverClockStyle().toString().toLowerCase());
+                clockStylePref.setValueIndex(index);
+                clockStylePref.setSummary(clockStylePref.getEntries()[index]);
                 clockStylePref.setOnPreferenceChangeListener(this);
                 nightModePref.setChecked(DataModel.getDataModel().getScreensaverNightModeOn());
             }
