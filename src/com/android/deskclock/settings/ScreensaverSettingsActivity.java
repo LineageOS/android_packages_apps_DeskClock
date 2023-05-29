@@ -19,7 +19,6 @@ package com.android.deskclock.settings;
 import android.os.Bundle;
 import android.view.MenuItem;
 
-import androidx.appcompat.app.AppCompatActivity;
 import androidx.preference.CheckBoxPreference;
 import androidx.preference.ListPreference;
 import androidx.preference.Preference;
@@ -27,19 +26,27 @@ import androidx.preference.PreferenceFragmentCompat;
 
 import com.android.deskclock.R;
 import com.android.deskclock.data.DataModel;
+import com.android.deskclock.widget.CollapsingToolbarBaseActivity;
 
 /**
  * Settings for Clock screen saver
  */
-public final class ScreensaverSettingsActivity extends AppCompatActivity {
+public final class ScreensaverSettingsActivity extends CollapsingToolbarBaseActivity {
 
     public static final String KEY_CLOCK_STYLE = "screensaver_clock_style";
     public static final String KEY_NIGHT_MODE = "screensaver_night_mode";
+    private static final String PREFS_FRAGMENT_TAG = "prefs_fragment";
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
-        setContentView(R.layout.screensaver_settings);
+
+        if (savedInstanceState == null) {
+            getSupportFragmentManager().beginTransaction()
+                    .replace(R.id.content_frame, new PrefsFragment(), PREFS_FRAGMENT_TAG)
+                    .disallowAddToBackStack()
+                    .commit();
+        }
     }
 
     @Override
