@@ -23,4 +23,10 @@
         <item>Odrzuć</item>
         <item>Nic nie rób</item>
     </string-array>
+    <string name="firing_alarms_timers_channel">Uruchamianie alarmów i minutników</string>
+    <string name="alarm_missed_channel">Pominięte alarmy</string>
+    <string name="alarm_snooze_channel">Odłożone alarmy</string>
+    <string name="alarm_upcoming_channel">Nadchodzące alarmy</string>
+    <string name="stopwatch_channel">Stoper</string>
+    <string name="timer_channel">Minutnik</string>
 </resources>
