@@ -23,5 +23,23 @@
         <item>Odrzuć</item>
         <item>Nic nie rób</item>
     </string-array>
+    <string name="firing_alarms_timers_channel">Uruchamianie alarmów i minutników</string>
+    <string name="alarm_missed_channel">Pominięte alarmy</string>
+    <string name="alarm_snooze_channel">Odłożone alarmy</string>
+    <string name="alarm_upcoming_channel">Nadchodzące alarmy</string>
+    <string name="stopwatch_channel">Stoper</string>
+    <string name="timer_channel">Minutnik</string>
+    <string name="add_label">Dodaj etykietę</string>
+    <string name="dialog_permissions_title">Uprawnienia</string>
+    <string name="dialog_permissions_ask">Zapytaj ponownie</string>
     <string name="dialog_permissions_dismiss">Odrzuć</string>
+    <string name="dialog_permissions_settings">Ustawienia</string>
+    <string name="dialog_permissions_power_off_alarm">Bez tego uprawnienia twoje urządzenie nie będzie mogło samo się włączyć, aby wyzwolić alarm</string>
+    <string name="dialog_permissions_no_permission">Odmówiono wymaganych uprawnień, włącz je w Ustawieniach systemu</string>
+    <string name="dialog_permissions_post_notifications">Ta aplikacja opiera się na powiadomieniach. Bez nich nie może być uruchomiona!</string>
+    <string name="selected">Wybrano</string>
+    <string name="more_options">Więcej opcji</string>
+    <string name="widget_choice_title">Wybierz swój styl</string>
+    <string name="widget_name_transparent">Przezroczysty</string>
+    <string name="widget_name_solid">Z tłem</string>
 </resources>

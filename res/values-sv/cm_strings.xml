@@ -21,5 +21,9 @@
         <item>Avvisa</item>
         <item>Ingenting</item>
     </string-array>
+    <string name="alarm_missed_channel">Missade alarm</string>
+    <string name="alarm_upcoming_channel">Kommande alarm</string>
+    <string name="stopwatch_channel">Stoppur</string>
+    <string name="timer_channel">Timer</string>
     <string name="dialog_permissions_dismiss">Avvisa</string>
 </resources>

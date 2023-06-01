@@ -39,4 +39,7 @@
     <string name="dialog_permissions_post_notifications">Ky aplikacion mbështetet në njoftimet. Pa to nuk mund të drejtohet!</string>
     <string name="selected">Zgjedhur</string>
     <string name="more_options">Më shumë opsione</string>
+    <string name="widget_choice_title">Zgjidhni stilin tuaj</string>
+    <string name="widget_name_transparent">I pambështetur</string>
+    <string name="widget_name_solid">Mbështetur</string>
 </resources>
