@@ -16,13 +16,15 @@
      limitations under the License.
 -->
 <resources xmlns:xliff="urn:oasis:names:tc:xliff:document:1.2">
+    <string name="flip_action_title">Aðgerð við að fletta tæki</string>
+    <string name="shake_action_title">Aðgerð við að hrista tæki</string>
     <string-array name="action_setting_entries">
-        <item>Pausa</item>
-        <item>Avvisa</item>
-        <item>Ingenting</item>
+        <item>Blunda</item>
+        <item>Hafna</item>
+        <item>Ekkert</item>
     </string-array>
-    <string name="alarm_missed_channel">Missade alarm</string>
-    <string name="alarm_upcoming_channel">Kommande alarm</string>
-    <string name="stopwatch_channel">Stoppur</string>
-    <string name="timer_channel">Timer</string>
+    <string name="alarm_upcoming_channel">Næstu vekjarar</string>
+    <string name="stopwatch_channel">Skeiðklukka</string>
+    <string name="timer_channel">Niðurteljari</string>
+    <string name="add_label">Bæta við merkingu</string>
 </resources>
