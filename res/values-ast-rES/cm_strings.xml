@@ -23,7 +23,7 @@
         <item>Escartar</item>
         <item>Nada</item>
     </string-array>
-    <string name="firing_alarms_timers_channel">Activación d\'alarmes y de temporizadores</string>
+    <string name="firing_alarms_timers_channel">Activación d\'alarmes ya de temporizadores</string>
     <string name="alarm_missed_channel">Alarmes perdíes</string>
     <string name="alarm_snooze_channel">Alarmes aplazaes</string>
     <string name="alarm_upcoming_channel">Alarmes próximes</string>
