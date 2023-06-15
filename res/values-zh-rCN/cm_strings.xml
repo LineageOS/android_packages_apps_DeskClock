@@ -39,4 +39,7 @@
     <string name="dialog_permissions_post_notifications">此应用依赖于通知，若没有它就无法运行！</string>
     <string name="selected">已选择</string>
     <string name="more_options">更多选项</string>
+    <string name="widget_choice_title">选择您喜欢的外观</string>
+    <string name="widget_name_transparent">透明</string>
+    <string name="widget_name_solid">纯色</string>
 </resources>

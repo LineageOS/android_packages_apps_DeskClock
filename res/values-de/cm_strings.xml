@@ -41,4 +41,5 @@
     <string name="more_options">Weitere Optionen</string>
     <string name="widget_choice_title">Wähle deinen Stil</string>
     <string name="widget_name_transparent">Transparent</string>
+    <string name="widget_name_solid">Hintergrund</string>
 </resources>
