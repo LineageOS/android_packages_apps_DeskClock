@@ -29,5 +29,7 @@
     <string name="alarm_upcoming_channel">Наступныя будзільнікі</string>
     <string name="stopwatch_channel">Секундамер</string>
     <string name="timer_channel">Таймер</string>
+    <string name="add_label">Дадаць метку</string>
     <string name="dialog_permissions_dismiss">Адхіліць</string>
+    <string name="widget_name_solid">З фонам</string>
 </resources>

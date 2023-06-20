@@ -16,14 +16,29 @@
      limitations under the License.
 -->
 <resources xmlns:xliff="urn:oasis:names:tc:xliff:document:1.2">
+    <string name="flip_action_title">Åtgärd som utförs när enheten vänds</string>
+    <string name="shake_action_title">Åtgärd som utförs när enheten skakas</string>
     <string-array name="action_setting_entries">
         <item>Pausa</item>
         <item>Avvisa</item>
         <item>Ingenting</item>
     </string-array>
+    <string name="firing_alarms_timers_channel">Ringande alarm och tidur</string>
     <string name="alarm_missed_channel">Missade alarm</string>
+    <string name="alarm_snooze_channel">Snoozade alarm</string>
     <string name="alarm_upcoming_channel">Kommande alarm</string>
     <string name="stopwatch_channel">Stoppur</string>
     <string name="timer_channel">Timer</string>
+    <string name="dialog_permissions_title">Behörigheter</string>
+    <string name="dialog_permissions_ask">Fråga igen</string>
     <string name="dialog_permissions_dismiss">Avvisa</string>
+    <string name="dialog_permissions_settings">Inställningar</string>
+    <string name="dialog_permissions_power_off_alarm">Utan detta tillstånd kommer din enhet inte att kunna starta sig själv för att sätta igång ett alarm</string>
+    <string name="dialog_permissions_no_permission">Nödvändiga behörigheter nekades, aktivera dem i Inställningar</string>
+    <string name="dialog_permissions_post_notifications">Denna app förlitar sig på aviseringar. Utan dem kan den inte köras!</string>
+    <string name="selected">Markerad</string>
+    <string name="more_options">Fler alternativ</string>
+    <string name="widget_choice_title">Välj din stil</string>
+    <string name="widget_name_transparent">Utan bakgrund</string>
+    <string name="widget_name_solid">Med bakgrund</string>
 </resources>

@@ -37,4 +37,9 @@
     <string name="dialog_permissions_power_off_alarm">이 권한이 없으면 기기가 알람을 울리기 위해 자동으로 전원을 켤 수 없습니다.</string>
     <string name="dialog_permissions_no_permission">필요한 권한이 거부되었습니다. 설정 앱에서 권한을 허용해 주세요.</string>
     <string name="dialog_permissions_post_notifications">이 앱은 알림에 의존하는 앱입니다. 알림 권한이 없으면 정상적으로 작동하지 않습니다!</string>
+    <string name="selected">선택됨</string>
+    <string name="more_options">기타 옵션</string>
+    <string name="widget_choice_title">스타일 선택</string>
+    <string name="widget_name_transparent">투명</string>
+    <string name="widget_name_solid">배경 있음</string>
 </resources>
