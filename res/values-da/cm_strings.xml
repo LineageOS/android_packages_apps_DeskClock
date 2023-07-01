@@ -16,6 +16,7 @@
      limitations under the License.
 -->
 <resources xmlns:xliff="urn:oasis:names:tc:xliff:document:1.2">
+    <string name="flip_action_title">Handling ved vip med enheden</string>
     <string name="shake_action_title">Handling ved ryst med enheden</string>
     <string-array name="action_setting_entries">
         <item>Udsæt</item>
@@ -25,5 +26,16 @@
     <string name="stopwatch_channel">Stopur</string>
     <string name="timer_channel">Timer</string>
     <string name="add_label">Tilføj etiket</string>
+    <string name="dialog_permissions_title">Tilladelser</string>
+    <string name="dialog_permissions_ask">Spørg igen</string>
     <string name="dialog_permissions_dismiss">Afvis</string>
+    <string name="dialog_permissions_settings">Indstillinger</string>
+    <string name="dialog_permissions_power_off_alarm">Uden denne tilladelse vil din enhed ikke være i stand til at tænde sig selv for at affyre en alarm</string>
+    <string name="dialog_permissions_no_permission">Nødvendige tilladelser blev nægtet, aktivér dem fra Indstillinger appen</string>
+    <string name="dialog_permissions_post_notifications">Denne app er afhængig af meddelelser. Uden dem kan den ikke køres!</string>
+    <string name="selected">Valgt</string>
+    <string name="more_options">Flere valgmuligheder</string>
+    <string name="widget_choice_title">Vælg din stil</string>
+    <string name="widget_name_transparent">Uunderstøttet</string>
+    <string name="widget_name_solid">Understøttet</string>
 </resources>
