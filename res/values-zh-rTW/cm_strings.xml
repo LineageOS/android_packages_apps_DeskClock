@@ -29,5 +29,17 @@
     <string name="alarm_upcoming_channel">預定的鬧鐘</string>
     <string name="stopwatch_channel">碼錶</string>
     <string name="timer_channel">計時器</string>
+    <string name="add_label">新增標籤</string>
+    <string name="dialog_permissions_title">權限</string>
+    <string name="dialog_permissions_ask">再次詢問</string>
     <string name="dialog_permissions_dismiss">忽略</string>
+    <string name="dialog_permissions_settings">設定</string>
+    <string name="dialog_permissions_power_off_alarm">若沒有此權限，您的裝置將無法在關機狀態下使用鬧鐘</string>
+    <string name="dialog_permissions_no_permission">必要權限遭拒，請在「設定」中啟用</string>
+    <string name="dialog_permissions_post_notifications">這個應用程式的執行依賴於通知！</string>
+    <string name="selected">已選取</string>
+    <string name="more_options">更多選項</string>
+    <string name="widget_choice_title">選擇您的樣式</string>
+    <string name="widget_name_transparent">無背景</string>
+    <string name="widget_name_solid">有背景</string>
 </resources>
