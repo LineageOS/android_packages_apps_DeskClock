@@ -31,8 +31,10 @@
     <string name="dialog_permissions_ask">Spyrja aftur</string>
     <string name="dialog_permissions_dismiss">Hafna</string>
     <string name="dialog_permissions_settings">Stillingar</string>
-    <string name="dialog_permissions_no_permission">Nauðsynlegum heimildum varhafnað, virkjaðu þær í stillingaforritinu</string>
+    <string name="dialog_permissions_power_off_alarm">Án þessarar heimildar mun tækið þitt ekki geta kveikt á sér til að virkja áminningu</string>
+    <string name="dialog_permissions_no_permission">Nauðsynlegum heimildum var hafnað, virkjaðu þær í stillingaforritinu</string>
+    <string name="dialog_permissions_post_notifications">Þetta forrit reiðir sig á tilkynningar. Án þeirra getur það ekki keyrt!</string>
     <string name="selected">Valið</string>
     <string name="more_options">Fleiri valkostir</string>
-    <string name="widget_choice_title">Veldu þinn stílChoose your style</string>
+    <string name="widget_choice_title">Veldu þinn stíl</string>
 </resources>
