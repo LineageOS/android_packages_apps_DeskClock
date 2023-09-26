@@ -136,8 +136,8 @@ public final class Screensaver extends DreamService {
 
     private void setClockStyle() {
         Utils.setScreensaverClockStyle(mDigitalClock, mAnalogClock);
-        final boolean dimNightMode = DataModel.getDataModel().getScreensaverNightModeOn();
-        Utils.dimClockView(dimNightMode, mMainClockView);
+        boolean dimNightMode = DataModel.getDataModel().getScreensaverNightModeOn();
+        dimNightMode = Utils.dimClockView(dimNightMode, mMainClockView);
         setScreenBright(!dimNightMode);
     }
 
