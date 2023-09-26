@@ -26,11 +26,69 @@
         android:title="@string/clock_style"
         app:iconSpaceReserved="false" />
 
-    <CheckBoxPreference
-        android:defaultValue="true"
-        android:key="screensaver_night_mode"
-        android:summary="@string/night_mode_summary"
-        android:title="@string/night_mode_title"
+    <ListPreference
+        android:defaultValue="@string/default_clock_color"
+        android:entries="@array/clock_color_entries"
+        android:entryValues="@array/clock_color_values"
+        android:key="screensaver_clock_color"
+        android:title="Color"
         app:iconSpaceReserved="false" />
+
+    <SwitchPreferenceCompat
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:defaultValue="@bool/default_clock_bold_text"
+        android:key="screensaver_bold_text"
+        android:summary="@string/bold_text_summary"
+        android:title="@string/bold_text_title"
+        app:iconSpaceReserved="false" />
+
+    <SwitchPreferenceCompat
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:defaultValue="@bool/default_clock_show_ampm"
+        android:key="screensaver_show_ampm"
+        android:summary="@string/show_ampm_summary"
+        android:title="@string/show_ampm_title"
+        app:iconSpaceReserved="false" />
+
+    <PreferenceCategory
+        android:title="@string/night_mode_title"
+        app:iconSpaceReserved="false" >
+
+        <SwitchPreferenceCompat
+            android:defaultValue="@bool/default_clock_night_mode"
+            android:key="screensaver_night_mode"
+            android:summary="@string/night_mode_summary"
+            android:title="@string/night_mode_enabled_title"
+            app:iconSpaceReserved="false" />
+
+        <SwitchPreferenceCompat
+            android:defaultValue="@bool/default_clock_night_mode_dnd"
+            android:key="screensaver_clock_night_mode_dnd"
+            android:summary="@string/night_mode_dnd_summary"
+            android:title="@string/night_mode_dnd_title"
+            android:dependency="screensaver_night_mode"
+            android:iconSpaceReserved="false" />
+
+        <ListPreference
+            android:defaultValue="@string/default_clock_color"
+            android:entries="@array/clock_color_entries"
+            android:entryValues="@array/clock_color_values"
+            android:key="screensaver_clock_night_mode_color"
+            android:title="Color"
+            android:dependency="screensaver_night_mode"
+            app:iconSpaceReserved="false" />
+
+        <SeekBarPreference
+            android:defaultValue="@string/default_clock_night_mode_brightness"
+            android:key="screensaver_clock_night_mode_brightness"
+            android:title="@string/night_mode_brightness_text_title"
+            android:dependency="screensaver_night_mode"
+            android:min="0"
+            android:max="100"
+            app:iconSpaceReserved="false" />
+
+    </PreferenceCategory>
 
 </PreferenceScreen>

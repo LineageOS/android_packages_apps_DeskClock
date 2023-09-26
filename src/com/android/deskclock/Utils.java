@@ -26,6 +26,7 @@ import static android.content.res.Configuration.ORIENTATION_PORTRAIT;
 import android.annotation.SuppressLint;
 import android.app.AlarmManager;
 import android.app.AlarmManager.AlarmClockInfo;
+import android.app.NotificationManager;
 import android.app.PendingIntent;
 import android.appwidget.AppWidgetManager;
 import android.content.ContentResolver;
@@ -186,15 +187,50 @@ public class Utils {
     }
 
     /**
-     * For screensavers to dim the lights if necessary.
+     * For screensavers to dim the lights and change the clock color if necessary.
      */
-    public static void dimClockView(boolean dim, View clockView) {
+    public static boolean dimClockView(boolean dim, View clockView) {
+        String colorFilter = getClockColorFilter(dim, clockView);
         Paint paint = new Paint();
         paint.setColor(Color.WHITE);
-        paint.setColorFilter(new PorterDuffColorFilter(
-                (dim ? 0x40FFFFFF : 0xC0FFFFFF),
+        paint.setColorFilter(new PorterDuffColorFilter(Color.parseColor(colorFilter),
                 PorterDuff.Mode.MULTIPLY));
         clockView.setLayerType(View.LAYER_TYPE_HARDWARE, paint);
+        return dim;
+    }
+
+    /**
+     * Calculate the color filter to use to dim/color the screensaver display.
+     */
+    public static String getClockColorFilter(boolean dim, View clockView) {
+        boolean nightModeDND = DataModel.getDataModel().getScreensaverNightModeDNDOn();
+
+        if (nightModeDND) {
+            NotificationManager mNotificationManager = (NotificationManager) clockView.getContext()
+                    .getSystemService(Context.NOTIFICATION_SERVICE);
+            int filterState = mNotificationManager.getCurrentInterruptionFilter();
+
+            // 0 = INTERRUPTION_FILTER_UNKNOWN
+            // 1 = INTERRUPTION_FILTER_ALL (all notifications pass)
+            // 2 = INTERRUPTION_FILTER_PRIORITY
+            // 3 = INTERRUPTION_FILTER_NONE (no notification passes)
+            // 4 = INTERRUPTION_FILTER_ALARMS
+            dim = filterState > 1 ? true : false;
+        }
+
+        final int brightnessPercentage = DataModel.getDataModel()
+                .getScreensaverNightModeBrightness();
+        String colorFilter = DataModel.getDataModel().getScreensaverClockColor();
+        if (dim) {
+            // The alpha channel should range from 16 (10 hex) to 192 (C0 hex).
+            String alpha = String.format("%02X", 16 + (128 * brightnessPercentage / 100));
+            colorFilter = DataModel.getDataModel().getScreensaverClockNightModeColor();
+            colorFilter = "#" + alpha + colorFilter;
+        } else {
+            colorFilter = "#C0" + colorFilter;
+        }
+
+        return colorFilter;
     }
 
     /**
@@ -326,7 +362,33 @@ public class Utils {
     public static void setTimeFormat(TextClock clock, boolean includeSeconds) {
         if (clock != null) {
             // Get the best format for 12 hours mode according to the locale
-            clock.setFormat12Hour(get12ModeFormat(0.4f /* amPmRatio */, includeSeconds));
+            clock.setFormat12Hour(get12ModeFormat(0.4f /* amPmRatio */, includeSeconds, true,
+                    true));
+            // Get the best format for 24 hours mode according to the locale
+            clock.setFormat24Hour(get24ModeFormat(includeSeconds));
+        }
+    }
+
+    /***
+     * Formats the time in the TextClock for the screensaver according to the Locale with a special
+     * formatting treatment for the am/pm label.
+     *
+     * @param clock          TextClock to format
+     * @param includeSeconds whether or not to include seconds in the clock's time
+     */
+    public static void setScreensaverTimeFormat(TextClock clock, boolean includeSeconds) {
+        if (clock != null) {
+            final Boolean boldText = DataModel.getDataModel().getScreensaverBoldTextOn();
+            final Boolean showAmPm = DataModel.getDataModel().getScreensaverShowAmPmOn();
+            // Get the best format for 12 hours mode according to the locale
+            CharSequence pattern = get12ModeFormat(0.4f /* amPmRatio */, includeSeconds, boldText,
+                    showAmPm);
+            final Spannable sp = new SpannableString(pattern);
+            if (boldText) {
+                sp.setSpan(new StyleSpan(Typeface.BOLD), 0, pattern.length(),
+                    Spannable.SPAN_EXCLUSIVE_EXCLUSIVE);
+            }
+            clock.setFormat12Hour(sp);
             // Get the best format for 24 hours mode according to the locale
             clock.setFormat24Hour(get24ModeFormat(includeSeconds));
         }
@@ -339,9 +401,22 @@ public class Utils {
      * @return format string for 12 hours mode time, not including seconds
      */
     public static CharSequence get12ModeFormat(float amPmRatio, boolean includeSeconds) {
+        return get12ModeFormat(amPmRatio, includeSeconds, true, true);
+    }
+
+    /**
+     * @param amPmRatio      a value between 0 and 1 that is the ratio of the relative size of the
+     *                       am/pm string to the time string
+     * @param includeSeconds whether or not to include seconds in the time string
+     * @param amPmBolded     whether or not to bold the AM/PM
+     * @param amPmDisplayed  whether or not to show the AM/PM
+     * @return format string for 12 hours mode time, not including seconds
+     */
+    public static CharSequence get12ModeFormat(float amPmRatio, boolean includeSeconds,
+            boolean amPmBolded, boolean amPmDisplayed) {
         String pattern = DateFormat.getBestDateTimePattern(Locale.getDefault(),
                 includeSeconds ? "hmsa" : "hma");
-        if (amPmRatio <= 0) {
+        if (amPmRatio <= 0 || amPmDisplayed == false) {
             pattern = pattern.replaceAll("a", "").trim();
         }
 
@@ -356,8 +431,8 @@ public class Utils {
         final Spannable sp = new SpannableString(pattern);
         sp.setSpan(new RelativeSizeSpan(amPmRatio), amPmPos, amPmPos + 1,
                 Spannable.SPAN_EXCLUSIVE_EXCLUSIVE);
-        sp.setSpan(new StyleSpan(Typeface.BOLD), amPmPos, amPmPos + 1,
-                Spannable.SPAN_EXCLUSIVE_EXCLUSIVE);
+        sp.setSpan(new StyleSpan(amPmBolded ? Typeface.BOLD : Typeface.NORMAL), amPmPos,
+                amPmPos + 1, Spannable.SPAN_EXCLUSIVE_EXCLUSIVE);
         sp.setSpan(new TypefaceSpan("sans-serif"), amPmPos, amPmPos + 1,
                 Spannable.SPAN_EXCLUSIVE_EXCLUSIVE);
 
