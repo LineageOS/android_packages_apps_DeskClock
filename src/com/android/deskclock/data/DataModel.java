@@ -945,6 +945,38 @@ public final class DataModel {
     }
 
     /**
+     * @return the color of clock to display in the clock application
+     */
+    public String getScreensaverClockColor() {
+        enforceMainLooper();
+        return mSettingsModel.getScreensaverClockColor();
+    }
+
+    /**
+     * @return the night mode color of clock to display in the clock application
+     */
+    public String getScreensaverClockNightModeColor() {
+        enforceMainLooper();
+        return mSettingsModel.getScreensaverClockNightModeColor();
+    }
+
+    /**
+     * @return the night mode color of clock to display in the clock application
+     */
+    public Boolean getScreensaverNightModeDndOn() {
+        enforceMainLooper();
+        return mSettingsModel.getScreensaverNightModeDndOn();
+    }
+
+    /**
+     * @return the night mode brightness of clock to display in the clock application
+     */
+    public int getScreensaverNightModeBrightness() {
+        enforceMainLooper();
+        return mSettingsModel.getScreensaverNightModeBrightness();
+    }
+
+    /**
      * @return the style of clock to display in the clock application
      */
     public boolean getDisplayClockSeconds() {
@@ -974,6 +1006,22 @@ public final class DataModel {
     public boolean getScreensaverNightModeOn() {
         enforceMainLooper();
         return mSettingsModel.getScreensaverNightModeOn();
+    }
+
+    /**
+     * @return {@code true} if the screen saver should show AM/PM in 12 hour mode
+     */
+    public boolean getScreensaverShowAmPmOn() {
+        enforceMainLooper();
+        return mSettingsModel.getScreensaverShowAmPmOn();
+    }
+
+    /**
+     * @return {@code true} if the screen saver should show the time in bold in 12 hour mode
+     */
+    public boolean getScreensaverBoldTextOn() {
+        enforceMainLooper();
+        return mSettingsModel.getScreensaverBoldTextOn();
     }
 
     /**
