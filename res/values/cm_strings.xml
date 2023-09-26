@@ -66,4 +66,9 @@
     <string name="widget_name_transparent">Unbacked</string>
     <!-- Name of the solid widget layout -->
     <string name="widget_name_solid">Backed</string>
+
+    <!-- Clock brightness percentage for screensaver settings page, aka 0% to 100%.
+         Make sure to use a double percent sign as this string will be used in String.format()
+     -->
+    <string name="clock_brightness_percentage">%s%%</string>
 </resources>
