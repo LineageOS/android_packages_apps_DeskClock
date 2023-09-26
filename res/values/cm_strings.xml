@@ -1,7 +1,7 @@
 <?xml version="1.0" encoding="utf-8"?>
 <!--
      Copyright (C) 2012-2016 The CyanogenMod Project
-     Copyright (C) 2017-2018 The LineageOS Project
+     Copyright (C) 2017-2024 The LineageOS Project
 
      Licensed under the Apache License, Version 2.0 (the "License");
      you may not use this file except in compliance with the License.
@@ -66,4 +66,43 @@
     <string name="widget_name_transparent">Unbacked</string>
     <!-- Name of the solid widget layout -->
     <string name="widget_name_solid">Backed</string>
+
+    <!-- Clock brightness percentage for screensaver settings page, aka 0% to 100%.
+         Make sure to use a double percent sign as this string will be used in String.format()
+     -->
+    <string name="clock_brightness_percentage">%s%%</string>
+
+    <!-- Title for switch to enable very dim display diminuation during screen saver -->
+    <string name="night_mode_enabled_title">Enabled</string>
+    <!-- Title for switch to pick Night Mode follows Do Not Disturb state -->
+    <string name="night_mode_dnd_title">Follow DND state</string>
+    <!-- Describes night mode follows do not disturb state -->
+    <string name="night_mode_dnd_summary">Night mode follows Do Not Disturb state</string>
+    <!-- Title for swtich to pick if the AM/PM is displayed on a 12 hour text clock -->
+    <string name="show_ampm_title">Show AM/PM</string>
+    <!-- Describes if the AM/PM on the screensaver is displayed on a 12 hour text clock -->
+    <string name="show_ampm_summary">If the AM/PM descriptor is displayed in the digital clock</string>
+    <!-- Title for switch to pick if the clock text is displayed in bold -->
+    <string name="bold_text_title">Bold clock text</string>
+    <!-- Describes if the text on the screensaver is displayed in bold -->
+    <string name="bold_text_summary">If the digital clock text should be in bold</string>
+    <!-- Title for slider to pick if the brightness of the clock in night mode -->
+    <string name="night_mode_brightness_text_title">Brightness</string>
+
+    <!-- Title for screen saver clock color -->
+    <string name="clock_color_title">Color</string>
+    <!-- Color choices for screensaver -->
+    <string-array name="clock_color_entries">
+        <item>White</item>
+        <item>Red</item>
+        <item>Green</item>
+        <item>Blue</item>
+    </string-array>
+
+    <string-array name="clock_color_values" translatable="false">
+        <item>FFFFFF</item>
+        <item>FF0000</item>
+        <item>00FF00</item>
+        <item>0000FF</item>
+    </string-array>
 </resources>
