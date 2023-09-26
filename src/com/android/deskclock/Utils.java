@@ -326,7 +326,23 @@ public class Utils {
     public static void setTimeFormat(TextClock clock, boolean includeSeconds) {
         if (clock != null) {
             // Get the best format for 12 hours mode according to the locale
-            clock.setFormat12Hour(get12ModeFormat(0.4f /* amPmRatio */, includeSeconds));
+            clock.setFormat12Hour(get12ModeFormat(0.4f /* amPmRatio */, includeSeconds, true));
+            // Get the best format for 24 hours mode according to the locale
+            clock.setFormat24Hour(get24ModeFormat(includeSeconds));
+        }
+    }
+
+    /***
+     * Formats the time in the TextClock for the screensaver according to the Locale with a special
+     * formatting treatment for the am/pm label.
+     *
+     * @param clock          TextClock to format
+     * @param includeSeconds whether or not to include seconds in the clock's time
+     */
+    public static void setScreensaverTimeFormat(TextClock clock, boolean includeSeconds) {
+        if (clock != null) {
+            // Get the best format for 12 hours mode according to the locale
+            clock.setFormat12Hour(get12ModeFormat(0.4f /* amPmRatio */, includeSeconds, false));
             // Get the best format for 24 hours mode according to the locale
             clock.setFormat24Hour(get24ModeFormat(includeSeconds));
         }
@@ -339,6 +355,18 @@ public class Utils {
      * @return format string for 12 hours mode time, not including seconds
      */
     public static CharSequence get12ModeFormat(float amPmRatio, boolean includeSeconds) {
+        return get12ModeFormat(amPmRatio, includeSeconds, true);
+    }
+
+    /**
+     * @param amPmRatio      a value between 0 and 1 that is the ratio of the relative size of the
+     *                       am/pm string to the time string
+     * @param includeSeconds whether or not to include seconds in the time string
+     * @param amPmBolded     whether or not to bold the AM/PM
+     * @return format string for 12 hours mode time, not including seconds
+     */
+    public static CharSequence get12ModeFormat(float amPmRatio, boolean includeSeconds,
+            boolean amPmBolded) {
         String pattern = DateFormat.getBestDateTimePattern(Locale.getDefault(),
                 includeSeconds ? "hmsa" : "hma");
         if (amPmRatio <= 0) {
@@ -356,8 +384,8 @@ public class Utils {
         final Spannable sp = new SpannableString(pattern);
         sp.setSpan(new RelativeSizeSpan(amPmRatio), amPmPos, amPmPos + 1,
                 Spannable.SPAN_EXCLUSIVE_EXCLUSIVE);
-        sp.setSpan(new StyleSpan(Typeface.BOLD), amPmPos, amPmPos + 1,
-                Spannable.SPAN_EXCLUSIVE_EXCLUSIVE);
+        sp.setSpan(new StyleSpan(amPmBolded ? Typeface.BOLD : Typeface.NORMAL), amPmPos,
+                amPmPos + 1, Spannable.SPAN_EXCLUSIVE_EXCLUSIVE);
         sp.setSpan(new TypefaceSpan("sans-serif"), amPmPos, amPmPos + 1,
                 Spannable.SPAN_EXCLUSIVE_EXCLUSIVE);
 
