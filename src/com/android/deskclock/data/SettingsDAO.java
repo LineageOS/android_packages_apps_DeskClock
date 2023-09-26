@@ -140,6 +140,13 @@ final class SettingsDAO {
     }
 
     /**
+     * @return a value indicating what color the digital clock is in the screensaver in Night Mode
+     */
+    static String getClockNightModeColor(Context context, SharedPreferences prefs) {
+        return getClockColor(context, prefs, ScreensaverSettingsActivity.KEY_NIGHT_MODE_COLOR);
+    }
+
+    /**
      * @return a value indicating whether analog or digital clocks are displayed in the app
      */
     static boolean getDisplayClockSeconds(SharedPreferences prefs) {
@@ -173,10 +180,45 @@ final class SettingsDAO {
     }
 
     /**
+     * @return a value indicating what color to use for the digital clock display on the screensaver
+     */
+    static String getScreensaverClockColor(Context context, SharedPreferences prefs) {
+        return getClockColor(context, prefs, ScreensaverSettingsActivity.KEY_CLOCK_COLOR);
+    }
+
+    /**
      * @return {@code true} if the screen saver should be dimmed for lower contrast at night
      */
     static boolean getScreensaverNightModeOn(SharedPreferences prefs) {
         return prefs.getBoolean(ScreensaverSettingsActivity.KEY_NIGHT_MODE, false);
+    }
+
+    /**
+     * @return {@code true} if the screen saver should be dimmed for lower contrast at night
+     */
+    static boolean getScreensaverNightModeDNDOn(SharedPreferences prefs) {
+        return prefs.getBoolean(ScreensaverSettingsActivity.KEY_NIGHT_MODE_DND, false);
+    }
+
+    /**
+     * @return {@code int} the screen saver brightness level at night
+     */
+    static int getScreensaverNightModeBrightness(SharedPreferences prefs) {
+        return prefs.getInt(ScreensaverSettingsActivity.KEY_NIGHT_MODE_BRIGHTNESS, 40);
+    }
+
+    /**
+     * @return {@code true} if the screen saver should show AM/PM in 12 hour mode
+     */
+    static boolean getScreensaverShowAmPmOn(SharedPreferences prefs) {
+        return prefs.getBoolean(ScreensaverSettingsActivity.KEY_SHOW_AMPM, true);
+    }
+
+    /**
+     * @return {@code true} if the screen saver should show the clock in bold
+     */
+    static boolean getScreensaverBoldTextOn(SharedPreferences prefs) {
+        return prefs.getBoolean(ScreensaverSettingsActivity.KEY_BOLD_TEXT, false);
     }
 
     /**
@@ -366,6 +408,14 @@ final class SettingsDAO {
         // Use hardcoded locale to perform toUpperCase, because in some languages toUpperCase adds
         // accent to character, which breaks the enum conversion.
         return ClockStyle.valueOf(clockStyle.toUpperCase(Locale.US));
+    }
+
+    private static String getClockColor(Context context, SharedPreferences prefs, String key) {
+        final String defaultColor = context.getString(R.string.default_clock_color);
+        final String clockColor = prefs.getString(key, defaultColor);
+        // Use hardcoded locale to perform toUpperCase, because in some languages toUpperCase adds
+        // accent to character, which breaks the enum conversion.
+        return clockColor.toUpperCase(Locale.US);
     }
 
     /**

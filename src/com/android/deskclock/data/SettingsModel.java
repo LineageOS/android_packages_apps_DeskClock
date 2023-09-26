@@ -88,8 +88,32 @@ final class SettingsModel {
         return SettingsDAO.getScreensaverClockStyle(mContext, mPrefs);
     }
 
+    String getScreensaverClockColor() {
+        return SettingsDAO.getScreensaverClockColor(mContext, mPrefs);
+    }
+
+    String getScreensaverClockNightModeColor() {
+        return SettingsDAO.getClockNightModeColor(mContext, mPrefs);
+    }
+
+    boolean getScreensaverNightModeDndOn() {
+        return SettingsDAO.getScreensaverNightModeDNDOn(mPrefs);
+    }
+
+    int getScreensaverNightModeBrightness() {
+        return SettingsDAO.getScreensaverNightModeBrightness(mPrefs);
+    }
+
     boolean getScreensaverNightModeOn() {
         return SettingsDAO.getScreensaverNightModeOn(mPrefs);
+    }
+
+    boolean getScreensaverShowAmPmOn() {
+        return SettingsDAO.getScreensaverShowAmPmOn(mPrefs);
+    }
+
+    boolean getScreensaverBoldTextOn() {
+        return SettingsDAO.getScreensaverBoldTextOn(mPrefs);
     }
 
     boolean getShowHomeClock() {
