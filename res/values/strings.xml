@@ -898,10 +898,41 @@
     <!-- screensaver settings strings -->
     <!-- Title for the screen saver settings activity. -->
     <string name="screensaver_settings">Screen saver settings</string>
-    <!-- Title for check box to pick intensity of display diminuation during screen saver -->
+    <!-- Title for Night Mode preferences group -->
     <string name="night_mode_title">Night mode</string>
-    <!-- Describes intensity of display diminuation during screen saver -->
+    <!-- Title for switch to enable very dim display diminuation during screen saver -->
+    <string name="night_mode_enabled_title">Enabled</string>
+    <!-- Describes intensity of display diminuation during screen saver night mode -->
     <string name="night_mode_summary">Very dim display (for dark rooms)</string>
+    <!-- Title for switch to pick Night Mode follows Do Not Disturb state -->
+    <string name="night_mode_dnd_title">Follow DND state</string>
+    <!-- Describes night mode follows do not disturb state -->
+    <string name="night_mode_dnd_summary">Night mode follows Do Not Distrub state</string>
+    <!-- Title for swtich to pick if the AM/PM is displayed on a 12 hour text clock -->
+    <string name="show_ampm_title">Show AM/PM</string>
+    <!-- Describes if the AM/PM on the screensaver is displayed on a 12 hour text clock -->
+    <string name="show_ampm_summary">If the AM/PM descriptor is displayed in the digital clock</string>
+    <!-- Title for switch to pick if the clock text is displayed in bold -->
+    <string name="bold_text_title">Bold clock text</string>
+    <!-- Describes if the text on the screensaver is displayed in bold -->
+    <string name="bold_text_summary">If the digital clock text should be in bold</string>
+    <!-- Title for slider to pick if the brightness of the clock in night mode -->
+    <string name="night_mode_brightness_text_title">Brightness</string>
+
+    <!-- Color choices for screensaver -->
+    <string-array name="clock_color_entries" translatable="true">
+        <item>White</item>
+        <item>Red</item>
+        <item>Green</item>
+        <item>Blue</item>
+    </string-array>
+
+    <string-array name="clock_color_values" translatable="false">
+        <item>FFFFFF</item>
+        <item>FF0000</item>
+        <item>00FF00</item>
+        <item>0000FF</item>
+    </string-array>
 
     <!-- Description of the down caret in the alarm alert screen to expand the alarm content to edit perspective. [CHAR LIMIT=NONE] -->
     <string name="expand_alarm">Expand alarm</string>

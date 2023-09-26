@@ -27,6 +27,7 @@ import android.view.animation.AccelerateInterpolator;
 import android.view.animation.DecelerateInterpolator;
 import android.view.animation.Interpolator;
 
+import com.android.deskclock.data.DataModel;
 import com.android.deskclock.uidata.UiDataModel;
 
 /**
@@ -39,6 +40,11 @@ public final class MoveScreensaverRunnable implements Runnable {
 
     /** The duration over which the fade in/out animations occur. */
     private static final long FADE_TIME = 3000L;
+
+    /** The duration (in ms) to delay the start of the fade in animation to allow Do Not Disturb
+     * mode to activate.
+     */
+    private static final int START_DELAY = 5;
 
     /** Accelerate the hide animation. */
     private final Interpolator mAcceleration = new AccelerateInterpolator();
@@ -128,6 +134,8 @@ public final class MoveScreensaverRunnable implements Runnable {
             // Fade in and grow the saver view after altering its position.
             final AnimatorSet show = new AnimatorSet();
             show.setDuration(FADE_TIME);
+            // Add a slight delay to allow DND mode to engage for the call to Utils.dimClockView().
+            show.setStartDelay(START_DELAY);
             show.setInterpolator(mDeceleration);
             show.play(getAlphaAnimator(mSaverView, 0f, 1f))
                     .with(getScaleAnimator(mSaverView, 0.85f, 1f));
@@ -136,6 +144,9 @@ public final class MoveScreensaverRunnable implements Runnable {
                 public void onAnimationStart(Animator animation) {
                     mSaverView.setX(newX);
                     mSaverView.setY(newY);
+                    // Re-dim the display in case DnD has been enabled and we're following it.
+                    Utils.dimClockView(DataModel.getDataModel().getScreensaverNightModeOn(),
+                            mSaverView);
                 }
             });
 
