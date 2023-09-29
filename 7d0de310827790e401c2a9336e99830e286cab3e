@@ -1,0 +1,21 @@
+{
+  "comments": [
+    {
+      "unresolved": false,
+      "key": {
+        "uuid": "136eeb0a_9e296080",
+        "filename": "/PATCHSET_LEVEL",
+        "patchSetId": 2
+      },
+      "lineNbr": 0,
+      "author": {
+        "id": 31604
+      },
+      "writtenOn": "2023-09-29T23:58:33Z",
+      "side": 1,
+      "message": "Note that this is not a complete fix yet, as the alarms don\u0027t get re-scheduled (how did I miss that?). I\u0027ll try to fix it later. Tracking issue: https://gitlab.com/CalyxOS/calyxos/-/issues/1841",
+      "revId": "7d0de310827790e401c2a9336e99830e286cab3e",
+      "serverId": "1ec6b3db-b2c1-4fa4-84a2-4c7efe89ba71"
+    }
+  ]
+}
