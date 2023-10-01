@@ -30,5 +30,16 @@
     <string name="stopwatch_channel">Stopky</string>
     <string name="timer_channel">Časovač</string>
     <string name="add_label">Přidat štítek</string>
+    <string name="dialog_permissions_title">Oprávnění</string>
+    <string name="dialog_permissions_ask">Vždy se ptát</string>
     <string name="dialog_permissions_dismiss">Zamítnout</string>
+    <string name="dialog_permissions_settings">Nastavení</string>
+    <string name="dialog_permissions_power_off_alarm">Bez tohoto oprávnění se vaše zařízení nebude moct zapnout, aby aktivovalo budík</string>
+    <string name="dialog_permissions_no_permission">Požadovaná oprávnění byla zamítnuta, povolte je v aplikaci Nastavení</string>
+    <string name="dialog_permissions_post_notifications">Tato aplikace spoléhá na oznámení. Bez nich nemůže být spuštěna!</string>
+    <string name="selected">Zvoleno</string>
+    <string name="more_options">Víc možností</string>
+    <string name="widget_choice_title">Vyberte si svůj styl</string>
+    <string name="widget_name_transparent">Bez pozadí</string>
+    <string name="widget_name_solid">S pozadím </string>
 </resources>
