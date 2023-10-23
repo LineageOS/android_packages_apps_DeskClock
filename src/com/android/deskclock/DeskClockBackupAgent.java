@@ -83,8 +83,9 @@ public class DeskClockBackupAgent extends BackupAgent {
         // TODO: migrate restored database and preferences over into
         // the device-encrypted storage area
 
-        // Indicate a data restore has been completed.
-        DataModel.getDataModel().setRestoreBackupFinished(true);
+        // We are executing in a "minimalist" state in which DataModel.getDataModel() unexpectedly
+        // returns null, so we must call setRestoreBackupFinished in AlarmInitReceiver's handling
+        // of ACTION_COMPLETE_RESTORE instead.
 
         // Create an Intent to send into DeskClock indicating restore is complete.
         final PendingIntent restoreIntent = PendingIntent.getBroadcast(this, 0,
