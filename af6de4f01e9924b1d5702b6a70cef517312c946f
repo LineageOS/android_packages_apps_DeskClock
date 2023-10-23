@@ -1,0 +1,21 @@
+{
+  "comments": [
+    {
+      "unresolved": true,
+      "key": {
+        "uuid": "b3c66f11_3eb239f2",
+        "filename": "/PATCHSET_LEVEL",
+        "patchSetId": 1
+      },
+      "lineNbr": 0,
+      "author": {
+        "id": 31604
+      },
+      "writtenOn": "2023-10-23T18:05:09Z",
+      "side": 1,
+      "message": "Technically I have only tried this in CalyxOS and on Android 14, but I see no reason it wouldn\u0027t work in 13, too.",
+      "revId": "af6de4f01e9924b1d5702b6a70cef517312c946f",
+      "serverId": "1ec6b3db-b2c1-4fa4-84a2-4c7efe89ba71"
+    }
+  ]
+}
