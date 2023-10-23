@@ -16,6 +16,8 @@
 
 package com.android.deskclock;
 
+import static com.android.deskclock.DeskClockBackupAgent.ACTION_COMPLETE_RESTORE;
+
 import android.annotation.SuppressLint;
 import android.content.BroadcastReceiver;
 import android.content.ContentResolver;
@@ -74,6 +76,12 @@ public class AlarmInitReceiver extends BroadcastReceiver {
 
         // We need to increment the global id out of the async task to prevent race conditions
         DataModel.getDataModel().updateGlobalIntentId();
+
+        if (ACTION_COMPLETE_RESTORE.equals(action)) {
+            // Our "minimalist" state in DeskClockBackupAgent's onRestoreFinished prevents
+            // accessing the data model from there, so we set this here.
+            DataModel.getDataModel().setRestoreBackupFinished(true);
+        }
 
         // Updates stopwatch and timer data after a device reboot so they are as accurate as
         // possible.
