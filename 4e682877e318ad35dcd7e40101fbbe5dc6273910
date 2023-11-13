@@ -22,6 +22,30 @@
       },
       "revId": "4e682877e318ad35dcd7e40101fbbe5dc6273910",
       "serverId": "1ec6b3db-b2c1-4fa4-84a2-4c7efe89ba71"
+    },
+    {
+      "unresolved": false,
+      "key": {
+        "uuid": "6dfbda03_cc1ab342",
+        "filename": "src/com/android/deskclock/Utils.java",
+        "patchSetId": 4
+      },
+      "lineNbr": 368,
+      "author": {
+        "id": 25889
+      },
+      "writtenOn": "2023-11-13T21:50:14Z",
+      "side": 1,
+      "message": "Fixed.",
+      "parentUuid": "792e153b_21695cd0",
+      "range": {
+        "startLine": 368,
+        "startChar": 87,
+        "endLine": 368,
+        "endChar": 88
+      },
+      "revId": "4e682877e318ad35dcd7e40101fbbe5dc6273910",
+      "serverId": "1ec6b3db-b2c1-4fa4-84a2-4c7efe89ba71"
     }
   ]
 }
