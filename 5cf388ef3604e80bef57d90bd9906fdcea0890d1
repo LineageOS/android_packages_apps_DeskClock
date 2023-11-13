@@ -22,6 +22,30 @@
       },
       "revId": "5cf388ef3604e80bef57d90bd9906fdcea0890d1",
       "serverId": "1ec6b3db-b2c1-4fa4-84a2-4c7efe89ba71"
+    },
+    {
+      "unresolved": false,
+      "key": {
+        "uuid": "80a19354_e7ee7956",
+        "filename": "/COMMIT_MSG",
+        "patchSetId": 3
+      },
+      "lineNbr": 9,
+      "author": {
+        "id": 25889
+      },
+      "writtenOn": "2023-11-13T21:42:18Z",
+      "side": 1,
+      "message": "Thanks, added full change id.",
+      "parentUuid": "06188dd5_9d907763",
+      "range": {
+        "startLine": 9,
+        "startChar": 29,
+        "endLine": 9,
+        "endChar": 36
+      },
+      "revId": "5cf388ef3604e80bef57d90bd9906fdcea0890d1",
+      "serverId": "1ec6b3db-b2c1-4fa4-84a2-4c7efe89ba71"
     }
   ]
 }
