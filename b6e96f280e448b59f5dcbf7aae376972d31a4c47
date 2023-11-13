@@ -18,6 +18,24 @@
       "serverId": "1ec6b3db-b2c1-4fa4-84a2-4c7efe89ba71"
     },
     {
+      "unresolved": false,
+      "key": {
+        "uuid": "c60b22b4_c469fd9c",
+        "filename": "src/com/android/deskclock/Utils.java",
+        "patchSetId": 2
+      },
+      "lineNbr": 358,
+      "author": {
+        "id": 25889
+      },
+      "writtenOn": "2023-11-13T20:41:40Z",
+      "side": 1,
+      "message": "Done",
+      "parentUuid": "505ae256_055a4b99",
+      "revId": "b6e96f280e448b59f5dcbf7aae376972d31a4c47",
+      "serverId": "1ec6b3db-b2c1-4fa4-84a2-4c7efe89ba71"
+    },
+    {
       "unresolved": true,
       "key": {
         "uuid": "585ac503_54e4eb8d",
@@ -31,6 +49,24 @@
       "writtenOn": "2023-11-13T20:26:01Z",
       "side": 1,
       "message": "line length",
+      "revId": "b6e96f280e448b59f5dcbf7aae376972d31a4c47",
+      "serverId": "1ec6b3db-b2c1-4fa4-84a2-4c7efe89ba71"
+    },
+    {
+      "unresolved": false,
+      "key": {
+        "uuid": "35cb1a58_a068cb1f",
+        "filename": "src/com/android/deskclock/Utils.java",
+        "patchSetId": 2
+      },
+      "lineNbr": 368,
+      "author": {
+        "id": 25889
+      },
+      "writtenOn": "2023-11-13T20:41:40Z",
+      "side": 1,
+      "message": "Done",
+      "parentUuid": "585ac503_54e4eb8d",
       "revId": "b6e96f280e448b59f5dcbf7aae376972d31a4c47",
       "serverId": "1ec6b3db-b2c1-4fa4-84a2-4c7efe89ba71"
     }
