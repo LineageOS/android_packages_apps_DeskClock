@@ -1,0 +1,27 @@
+{
+  "comments": [
+    {
+      "unresolved": true,
+      "key": {
+        "uuid": "06188dd5_9d907763",
+        "filename": "/COMMIT_MSG",
+        "patchSetId": 3
+      },
+      "lineNbr": 9,
+      "author": {
+        "id": 13648
+      },
+      "writtenOn": "2023-11-13T21:18:02Z",
+      "side": 1,
+      "message": "This is nothing, by the way. You either put here the full change-Id (which Gerrit auto resolves) or the commit sha1sum (which Github resolves).",
+      "range": {
+        "startLine": 9,
+        "startChar": 29,
+        "endLine": 9,
+        "endChar": 36
+      },
+      "revId": "5cf388ef3604e80bef57d90bd9906fdcea0890d1",
+      "serverId": "1ec6b3db-b2c1-4fa4-84a2-4c7efe89ba71"
+    }
+  ]
+}
