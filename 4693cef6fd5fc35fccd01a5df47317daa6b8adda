@@ -1,0 +1,208 @@
+{
+  "comments": [
+    {
+      "unresolved": true,
+      "key": {
+        "uuid": "27baa9d5_032b3003",
+        "filename": "res/xml/screensaver_info.xml",
+        "patchSetId": 2
+      },
+      "lineNbr": 4,
+      "author": {
+        "id": 13028
+      },
+      "writtenOn": "2023-11-13T20:55:40Z",
+      "side": 1,
+      "message": "shouldn\u0027t be in this patch, right? (https://review.lineageos.org/c/LineageOS/android_packages_apps_DeskClock/+/367141)",
+      "revId": "4693cef6fd5fc35fccd01a5df47317daa6b8adda",
+      "serverId": "1ec6b3db-b2c1-4fa4-84a2-4c7efe89ba71"
+    },
+    {
+      "unresolved": true,
+      "key": {
+        "uuid": "bde6abb6_102a3d20",
+        "filename": "src/com/android/deskclock/MoveScreensaverRunnable.java",
+        "patchSetId": 2
+      },
+      "lineNbr": 143,
+      "author": {
+        "id": 13028
+      },
+      "writtenOn": "2023-11-13T20:55:40Z",
+      "side": 1,
+      "message": "line length",
+      "revId": "4693cef6fd5fc35fccd01a5df47317daa6b8adda",
+      "serverId": "1ec6b3db-b2c1-4fa4-84a2-4c7efe89ba71"
+    },
+    {
+      "unresolved": true,
+      "key": {
+        "uuid": "22879e25_eea79c9a",
+        "filename": "src/com/android/deskclock/Utils.java",
+        "patchSetId": 2
+      },
+      "lineNbr": 196,
+      "author": {
+        "id": 13028
+      },
+      "writtenOn": "2023-11-13T20:55:40Z",
+      "side": 1,
+      "message": "line length",
+      "revId": "4693cef6fd5fc35fccd01a5df47317daa6b8adda",
+      "serverId": "1ec6b3db-b2c1-4fa4-84a2-4c7efe89ba71"
+    },
+    {
+      "unresolved": true,
+      "key": {
+        "uuid": "8e40e5ce_40543b17",
+        "filename": "src/com/android/deskclock/Utils.java",
+        "patchSetId": 2
+      },
+      "lineNbr": 208,
+      "author": {
+        "id": 13028
+      },
+      "writtenOn": "2023-11-13T20:55:40Z",
+      "side": 1,
+      "message": "line length",
+      "revId": "4693cef6fd5fc35fccd01a5df47317daa6b8adda",
+      "serverId": "1ec6b3db-b2c1-4fa4-84a2-4c7efe89ba71"
+    },
+    {
+      "unresolved": true,
+      "key": {
+        "uuid": "928c6523_918f01c6",
+        "filename": "src/com/android/deskclock/Utils.java",
+        "patchSetId": 2
+      },
+      "lineNbr": 219,
+      "author": {
+        "id": 13028
+      },
+      "writtenOn": "2023-11-13T20:55:40Z",
+      "side": 1,
+      "message": "line length",
+      "revId": "4693cef6fd5fc35fccd01a5df47317daa6b8adda",
+      "serverId": "1ec6b3db-b2c1-4fa4-84a2-4c7efe89ba71"
+    },
+    {
+      "unresolved": true,
+      "key": {
+        "uuid": "163d560a_e7b198ff",
+        "filename": "src/com/android/deskclock/Utils.java",
+        "patchSetId": 2
+      },
+      "lineNbr": 362,
+      "author": {
+        "id": 13028
+      },
+      "writtenOn": "2023-11-13T20:55:40Z",
+      "side": 1,
+      "message": ".",
+      "revId": "4693cef6fd5fc35fccd01a5df47317daa6b8adda",
+      "serverId": "1ec6b3db-b2c1-4fa4-84a2-4c7efe89ba71"
+    },
+    {
+      "unresolved": true,
+      "key": {
+        "uuid": "70b9b252_29fd6b68",
+        "filename": "src/com/android/deskclock/Utils.java",
+        "patchSetId": 2
+      },
+      "lineNbr": 380,
+      "author": {
+        "id": 13028
+      },
+      "writtenOn": "2023-11-13T20:55:40Z",
+      "side": 1,
+      "message": ".",
+      "revId": "4693cef6fd5fc35fccd01a5df47317daa6b8adda",
+      "serverId": "1ec6b3db-b2c1-4fa4-84a2-4c7efe89ba71"
+    },
+    {
+      "unresolved": true,
+      "key": {
+        "uuid": "6d04ccd6_10bb3aaa",
+        "filename": "src/com/android/deskclock/Utils.java",
+        "patchSetId": 2
+      },
+      "lineNbr": 430,
+      "author": {
+        "id": 13028
+      },
+      "writtenOn": "2023-11-13T20:55:40Z",
+      "side": 1,
+      "message": "spaces instead of tabs",
+      "revId": "4693cef6fd5fc35fccd01a5df47317daa6b8adda",
+      "serverId": "1ec6b3db-b2c1-4fa4-84a2-4c7efe89ba71"
+    },
+    {
+      "unresolved": true,
+      "key": {
+        "uuid": "6dc91160_3ee84d54",
+        "filename": "src/com/android/deskclock/settings/ScreensaverSettingsActivity.java",
+        "patchSetId": 2
+      },
+      "lineNbr": 42,
+      "author": {
+        "id": 13028
+      },
+      "writtenOn": "2023-11-13T20:55:40Z",
+      "side": 1,
+      "message": "line length",
+      "revId": "4693cef6fd5fc35fccd01a5df47317daa6b8adda",
+      "serverId": "1ec6b3db-b2c1-4fa4-84a2-4c7efe89ba71"
+    },
+    {
+      "unresolved": true,
+      "key": {
+        "uuid": "80a9ce32_ff651c64",
+        "filename": "src/com/android/deskclock/settings/ScreensaverSettingsActivity.java",
+        "patchSetId": 2
+      },
+      "lineNbr": 97,
+      "author": {
+        "id": 13028
+      },
+      "writtenOn": "2023-11-13T20:55:40Z",
+      "side": 1,
+      "message": "should be \"else if\" or maybe better convert whole thing into switch-case",
+      "revId": "4693cef6fd5fc35fccd01a5df47317daa6b8adda",
+      "serverId": "1ec6b3db-b2c1-4fa4-84a2-4c7efe89ba71"
+    },
+    {
+      "unresolved": true,
+      "key": {
+        "uuid": "723c4162_ddbc8dfe",
+        "filename": "src/com/android/deskclock/settings/ScreensaverSettingsActivity.java",
+        "patchSetId": 2
+      },
+      "lineNbr": 97,
+      "author": {
+        "id": 13028
+      },
+      "writtenOn": "2023-11-13T20:55:40Z",
+      "side": 1,
+      "message": ".",
+      "revId": "4693cef6fd5fc35fccd01a5df47317daa6b8adda",
+      "serverId": "1ec6b3db-b2c1-4fa4-84a2-4c7efe89ba71"
+    },
+    {
+      "unresolved": true,
+      "key": {
+        "uuid": "e29e1141_76655769",
+        "filename": "src/com/android/deskclock/settings/ScreensaverSettingsActivity.java",
+        "patchSetId": 2
+      },
+      "lineNbr": 144,
+      "author": {
+        "id": 13028
+      },
+      "writtenOn": "2023-11-13T20:55:40Z",
+      "side": 1,
+      "message": "line length",
+      "revId": "4693cef6fd5fc35fccd01a5df47317daa6b8adda",
+      "serverId": "1ec6b3db-b2c1-4fa4-84a2-4c7efe89ba71"
+    }
+  ]
+}
