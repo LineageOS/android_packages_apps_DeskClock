@@ -1,0 +1,38 @@
+{
+  "comments": [
+    {
+      "unresolved": true,
+      "key": {
+        "uuid": "505ae256_055a4b99",
+        "filename": "src/com/android/deskclock/Utils.java",
+        "patchSetId": 2
+      },
+      "lineNbr": 358,
+      "author": {
+        "id": 13028
+      },
+      "writtenOn": "2023-11-13T20:26:01Z",
+      "side": 1,
+      "message": "no space after opening ( needed",
+      "revId": "b6e96f280e448b59f5dcbf7aae376972d31a4c47",
+      "serverId": "1ec6b3db-b2c1-4fa4-84a2-4c7efe89ba71"
+    },
+    {
+      "unresolved": true,
+      "key": {
+        "uuid": "585ac503_54e4eb8d",
+        "filename": "src/com/android/deskclock/Utils.java",
+        "patchSetId": 2
+      },
+      "lineNbr": 368,
+      "author": {
+        "id": 13028
+      },
+      "writtenOn": "2023-11-13T20:26:01Z",
+      "side": 1,
+      "message": "line length",
+      "revId": "b6e96f280e448b59f5dcbf7aae376972d31a4c47",
+      "serverId": "1ec6b3db-b2c1-4fa4-84a2-4c7efe89ba71"
+    }
+  ]
+}
