@@ -36,6 +36,24 @@
       "serverId": "1ec6b3db-b2c1-4fa4-84a2-4c7efe89ba71"
     },
     {
+      "unresolved": false,
+      "key": {
+        "uuid": "8f45c703_3eecb854",
+        "filename": "res/xml/screensaver_info.xml",
+        "patchSetId": 2
+      },
+      "lineNbr": 4,
+      "author": {
+        "id": 25889
+      },
+      "writtenOn": "2023-11-13T21:43:15Z",
+      "side": 1,
+      "message": "Done",
+      "parentUuid": "5b150917_005d84ea",
+      "revId": "4693cef6fd5fc35fccd01a5df47317daa6b8adda",
+      "serverId": "1ec6b3db-b2c1-4fa4-84a2-4c7efe89ba71"
+    },
+    {
       "unresolved": true,
       "key": {
         "uuid": "bde6abb6_102a3d20",
@@ -382,6 +400,24 @@
       "side": 1,
       "message": "Done",
       "parentUuid": "723c4162_ddbc8dfe",
+      "revId": "4693cef6fd5fc35fccd01a5df47317daa6b8adda",
+      "serverId": "1ec6b3db-b2c1-4fa4-84a2-4c7efe89ba71"
+    },
+    {
+      "unresolved": false,
+      "key": {
+        "uuid": "c2dc1df2_a762c048",
+        "filename": "src/com/android/deskclock/settings/ScreensaverSettingsActivity.java",
+        "patchSetId": 2
+      },
+      "lineNbr": 97,
+      "author": {
+        "id": 25889
+      },
+      "writtenOn": "2023-11-13T21:43:15Z",
+      "side": 1,
+      "message": "Done",
+      "parentUuid": "497e4b35_5c7ca797",
       "revId": "4693cef6fd5fc35fccd01a5df47317daa6b8adda",
       "serverId": "1ec6b3db-b2c1-4fa4-84a2-4c7efe89ba71"
     },
