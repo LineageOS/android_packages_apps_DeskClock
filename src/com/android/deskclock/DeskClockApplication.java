@@ -19,12 +19,15 @@ package com.android.deskclock;
 import android.app.Application;
 import android.content.Context;
 import android.content.SharedPreferences;
+import android.net.Uri;
 import android.preference.PreferenceManager;
 
 import com.android.deskclock.controller.Controller;
 import com.android.deskclock.data.DataModel;
 import com.android.deskclock.events.LogEventTracker;
 import com.android.deskclock.uidata.UiDataModel;
+
+import java.io.File;
 
 public class DeskClockApplication extends Application {
 
@@ -45,16 +48,17 @@ public class DeskClockApplication extends Application {
      * Returns the default {@link SharedPreferences} instance from the underlying storage context.
      */
     private static SharedPreferences getDefaultSharedPreferences(Context context) {
-        final Context storageContext;
-
+        final Context storageContext = context.createDeviceProtectedStorageContext();
+        final String name = PreferenceManager.getDefaultSharedPreferencesName(context);
+        final String prefsFilename = storageContext.getDataDir() + "/shared_prefs/" + name + ".xml";
+        final File prefs = new File(Uri.parse(prefsFilename).getPath());
         // All N devices have split storage areas. Migrate the existing preferences into the new
         // device encrypted storage area if that has not yet occurred.
-        final String name = PreferenceManager.getDefaultSharedPreferencesName(context);
-        storageContext = context.createDeviceProtectedStorageContext();
-        if (!storageContext.moveSharedPreferencesFrom(context, name)) {
-            LogUtils.wtf("Failed to migrate shared preferences");
+        if (!prefs.exists())  {
+            if (!storageContext.moveSharedPreferencesFrom(context, name)) {
+                LogUtils.wtf("Failed to migrate shared preferences");
+            }
         }
-
         return PreferenceManager.getDefaultSharedPreferences(storageContext);
     }
 }
