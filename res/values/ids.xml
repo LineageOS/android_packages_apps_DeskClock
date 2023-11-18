@@ -21,4 +21,5 @@
     <item name="menu_item_sort" type="id" />
     <item name="menu_item_night_mode" type="id" />
     <item name="menu_item_settings" type="id" />
+    <item name="menu_item_ss_settings" type="id" />
 </resources>
