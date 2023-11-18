@@ -1,0 +1,55 @@
+{
+  "comments": [
+    {
+      "unresolved": true,
+      "key": {
+        "uuid": "9cc845d8_df15b284",
+        "filename": "src/com/android/deskclock/actionbarmenu/ScreensaverSettingsMenuItemController.java",
+        "patchSetId": 3
+      },
+      "lineNbr": 2,
+      "author": {
+        "id": 13028
+      },
+      "writtenOn": "2023-11-18T22:10:37Z",
+      "side": 1,
+      "message": "why aosp copyright?",
+      "revId": "dbfb93d946d37cdd8a7eb40ca14ede09d43649bd",
+      "serverId": "1ec6b3db-b2c1-4fa4-84a2-4c7efe89ba71"
+    },
+    {
+      "unresolved": true,
+      "key": {
+        "uuid": "8b26d02b_ace83b57",
+        "filename": "src/com/android/deskclock/actionbarmenu/ScreensaverSettingsMenuItemController.java",
+        "patchSetId": 3
+      },
+      "lineNbr": 63,
+      "author": {
+        "id": 13028
+      },
+      "writtenOn": "2023-11-18T22:10:37Z",
+      "side": 1,
+      "message": "line length",
+      "revId": "dbfb93d946d37cdd8a7eb40ca14ede09d43649bd",
+      "serverId": "1ec6b3db-b2c1-4fa4-84a2-4c7efe89ba71"
+    },
+    {
+      "unresolved": true,
+      "key": {
+        "uuid": "da79035c_0a36967c",
+        "filename": "src/com/android/deskclock/actionbarmenu/ScreensaverSettingsMenuItemController.java",
+        "patchSetId": 3
+      },
+      "lineNbr": 64,
+      "author": {
+        "id": 13028
+      },
+      "writtenOn": "2023-11-18T22:10:37Z",
+      "side": 1,
+      "message": "tried using activityresultcontract instead?",
+      "revId": "dbfb93d946d37cdd8a7eb40ca14ede09d43649bd",
+      "serverId": "1ec6b3db-b2c1-4fa4-84a2-4c7efe89ba71"
+    }
+  ]
+}
