@@ -479,9 +479,11 @@
     <!-- Describes the purpose of the button which provides a list of cities for the world clock settings -->
     <string name="button_cities">Cities</string>
     <!-- Menu item on most screens to get to more settings -->
-    <string name="menu_item_settings">Settings</string>
+    <string name="menu_item_settings">Clock settings</string>
+    <!-- Menu item on most screens to get to screen saver settings -->
+    <string name="menu_item_ss_settings">Screen saver settings</string>
     <!-- Menu item on clock screen to enter screen saver. -->
-    <string name="menu_item_night_mode">Screen saver</string>
+    <string name="menu_item_night_mode">Start screen saver</string>
     <!-- Menu item on Cities screen to sort by GMT offset -->
     <string name="menu_item_sort_by_gmt_offset">Sort by time</string>
     <!-- Menu item on Cities screen to sort by alphabetical order -->
