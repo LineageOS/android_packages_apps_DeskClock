@@ -20,6 +20,24 @@
     {
       "unresolved": true,
       "key": {
+        "uuid": "91e35518_54bbbe49",
+        "filename": "src/com/android/deskclock/actionbarmenu/ScreensaverSettingsMenuItemController.java",
+        "patchSetId": 3
+      },
+      "lineNbr": 2,
+      "author": {
+        "id": 25889
+      },
+      "writtenOn": "2023-11-18T23:27:55Z",
+      "side": 1,
+      "message": "It\u0027s a copy of SettingsMenuItemController.java file, with just the change to the intent/menu.add code.",
+      "parentUuid": "9cc845d8_df15b284",
+      "revId": "dbfb93d946d37cdd8a7eb40ca14ede09d43649bd",
+      "serverId": "1ec6b3db-b2c1-4fa4-84a2-4c7efe89ba71"
+    },
+    {
+      "unresolved": true,
+      "key": {
         "uuid": "8b26d02b_ace83b57",
         "filename": "src/com/android/deskclock/actionbarmenu/ScreensaverSettingsMenuItemController.java",
         "patchSetId": 3
@@ -31,6 +49,24 @@
       "writtenOn": "2023-11-18T22:10:37Z",
       "side": 1,
       "message": "line length",
+      "revId": "dbfb93d946d37cdd8a7eb40ca14ede09d43649bd",
+      "serverId": "1ec6b3db-b2c1-4fa4-84a2-4c7efe89ba71"
+    },
+    {
+      "unresolved": false,
+      "key": {
+        "uuid": "a6c75878_56596a01",
+        "filename": "src/com/android/deskclock/actionbarmenu/ScreensaverSettingsMenuItemController.java",
+        "patchSetId": 3
+      },
+      "lineNbr": 63,
+      "author": {
+        "id": 25889
+      },
+      "writtenOn": "2023-11-18T23:27:55Z",
+      "side": 1,
+      "message": "Done",
+      "parentUuid": "8b26d02b_ace83b57",
       "revId": "dbfb93d946d37cdd8a7eb40ca14ede09d43649bd",
       "serverId": "1ec6b3db-b2c1-4fa4-84a2-4c7efe89ba71"
     },
@@ -48,6 +84,24 @@
       "writtenOn": "2023-11-18T22:10:37Z",
       "side": 1,
       "message": "tried using activityresultcontract instead?",
+      "revId": "dbfb93d946d37cdd8a7eb40ca14ede09d43649bd",
+      "serverId": "1ec6b3db-b2c1-4fa4-84a2-4c7efe89ba71"
+    },
+    {
+      "unresolved": true,
+      "key": {
+        "uuid": "5ad1232c_b94bf95f",
+        "filename": "src/com/android/deskclock/actionbarmenu/ScreensaverSettingsMenuItemController.java",
+        "patchSetId": 3
+      },
+      "lineNbr": 64,
+      "author": {
+        "id": 25889
+      },
+      "writtenOn": "2023-11-18T23:27:55Z",
+      "side": 1,
+      "message": "I just used what was in the SettingsMenuItemController.java, I figured it was better to remain consistent with existing code than introduce new.",
+      "parentUuid": "da79035c_0a36967c",
       "revId": "dbfb93d946d37cdd8a7eb40ca14ede09d43649bd",
       "serverId": "1ec6b3db-b2c1-4fa4-84a2-4c7efe89ba71"
     }
