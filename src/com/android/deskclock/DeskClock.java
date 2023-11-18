@@ -48,6 +48,7 @@ import androidx.fragment.app.Fragment;
 import com.android.deskclock.actionbarmenu.MenuItemControllerFactory;
 import com.android.deskclock.actionbarmenu.NightModeMenuItemController;
 import com.android.deskclock.actionbarmenu.OptionsMenuManager;
+import com.android.deskclock.actionbarmenu.ScreensaverSettingsMenuItemController;
 import com.android.deskclock.actionbarmenu.SettingsMenuItemController;
 import com.android.deskclock.data.DataModel;
 import com.android.deskclock.data.DataModel.SilentSetting;
@@ -161,7 +162,9 @@ public class DeskClock extends BaseActivity
 
         // Configure the menu item controllers add behavior to the toolbar.
         mOptionsMenuManager.addMenuItemController(
-                new NightModeMenuItemController(this), new SettingsMenuItemController(this));
+                new NightModeMenuItemController(this),
+                new ScreensaverSettingsMenuItemController(this),
+                new SettingsMenuItemController(this));
         mOptionsMenuManager.addMenuItemController(
                 MenuItemControllerFactory.getInstance().buildMenuItemControllers(this));
 
