@@ -1,0 +1,21 @@
+{
+  "comments": [
+    {
+      "unresolved": false,
+      "key": {
+        "uuid": "333551b1_a63f092b",
+        "filename": "/PATCHSET_LEVEL",
+        "patchSetId": 4
+      },
+      "lineNbr": 0,
+      "author": {
+        "id": 13028
+      },
+      "writtenOn": "2023-11-19T13:59:45Z",
+      "side": 1,
+      "message": "Tbh I think this should be moved to the Settings, not be a menu item on its own",
+      "revId": "0a379177949ad66e7799eccf316f2564805bd07f",
+      "serverId": "1ec6b3db-b2c1-4fa4-84a2-4c7efe89ba71"
+    }
+  ]
+}
