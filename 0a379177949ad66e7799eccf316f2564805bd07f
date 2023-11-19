@@ -16,6 +16,24 @@
       "message": "Tbh I think this should be moved to the Settings, not be a menu item on its own",
       "revId": "0a379177949ad66e7799eccf316f2564805bd07f",
       "serverId": "1ec6b3db-b2c1-4fa4-84a2-4c7efe89ba71"
+    },
+    {
+      "unresolved": true,
+      "key": {
+        "uuid": "ffe3a83c_76e4b4df",
+        "filename": "/PATCHSET_LEVEL",
+        "patchSetId": 4
+      },
+      "lineNbr": 0,
+      "author": {
+        "id": 25889
+      },
+      "writtenOn": "2023-11-19T18:47:19Z",
+      "side": 1,
+      "message": "Would that include moving the start screen saver to the settings menu as well or just leave the menu as is with the two items?\n\nPersonally I would think if the screen saver settings should be in the settings page then s preview button should probably be as well, leaving just \"Settings\" in the menu.\n\nI do think having to go into settings to then hit another button to get to screen saver settings seems a an extra unnecessary step, but I don\u0027t feel that strongly one way or the other.",
+      "parentUuid": "333551b1_a63f092b",
+      "revId": "0a379177949ad66e7799eccf316f2564805bd07f",
+      "serverId": "1ec6b3db-b2c1-4fa4-84a2-4c7efe89ba71"
     }
   ]
 }
