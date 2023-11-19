@@ -16,6 +16,24 @@
       "message": "This one conflicts with the \"Fix AM/PM\" patch - can you chain them properly please and resolve the conflicts?",
       "revId": "7e7bb04b38d567fef1007ddcebdbe887d76dfc07",
       "serverId": "1ec6b3db-b2c1-4fa4-84a2-4c7efe89ba71"
+    },
+    {
+      "unresolved": true,
+      "key": {
+        "uuid": "8962875f_a2e0ff70",
+        "filename": "/PATCHSET_LEVEL",
+        "patchSetId": 5
+      },
+      "lineNbr": 0,
+      "author": {
+        "id": 25889
+      },
+      "writtenOn": "2023-11-19T18:42:00Z",
+      "side": 1,
+      "message": "Since this is the \"Fix AM/PM\" patch I assume you mean it conflicts with the \"Add screensaver display options\" patch, in which case, that patch contains everything this one does.  If the other patch is going to be merged, then this patch could be abandoned.",
+      "parentUuid": "394e2f15_67662aad",
+      "revId": "7e7bb04b38d567fef1007ddcebdbe887d76dfc07",
+      "serverId": "1ec6b3db-b2c1-4fa4-84a2-4c7efe89ba71"
     }
   ]
 }
