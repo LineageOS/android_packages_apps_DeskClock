@@ -1,0 +1,21 @@
+{
+  "comments": [
+    {
+      "unresolved": false,
+      "key": {
+        "uuid": "394e2f15_67662aad",
+        "filename": "/PATCHSET_LEVEL",
+        "patchSetId": 5
+      },
+      "lineNbr": 0,
+      "author": {
+        "id": 13028
+      },
+      "writtenOn": "2023-11-19T14:09:37Z",
+      "side": 1,
+      "message": "This one conflicts with the \"Fix AM/PM\" patch - can you chain them properly please and resolve the conflicts?",
+      "revId": "7e7bb04b38d567fef1007ddcebdbe887d76dfc07",
+      "serverId": "1ec6b3db-b2c1-4fa4-84a2-4c7efe89ba71"
+    }
+  ]
+}
