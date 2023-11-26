@@ -105,4 +105,19 @@
         <item>00FF00</item>
         <item>0000FF</item>
     </string-array>
+
+    <!-- Header in the preferences settings for the section pertaining to screen saver -->
+    <string name="screensaver_settings_title">Screen saver</string>
+    <!-- Label for the screen saver preview in settings -->
+    <string name="screensaver_preview">Preview</string>
+    <!-- Summary for the screen saver preview in settings -->
+    <string name="screensaver_preview_summary">Starts the screen saver immediately</string>
+    <!-- Label for the screen saver settings in settings -->
+    <string name="screensaver_change_settings">Settings</string>
+    <!-- Summary for the screen saver settings in settings -->
+    <string name="screensaver_change_settings_summary">Opens Clock\'s screen saver settings</string>
+    <!-- Label for the screen saver settings in settings -->
+    <string name="screensaver_daydream_settings">Select/enable screen saver</string>
+    <!-- Summary for the screen saver settings in settings -->
+    <string name="screensaver_daydream_settings_summary">Opens the main screen saver settings</string>
 </resources>
