@@ -16,6 +16,74 @@
       "message": "Alternative implementation to I7501602b773e62c3e0f18c066d9ce75b99e39287.",
       "revId": "ffd3c19159b0b388425685264ec36760fb9d73e2",
       "serverId": "1ec6b3db-b2c1-4fa4-84a2-4c7efe89ba71"
+    },
+    {
+      "unresolved": true,
+      "key": {
+        "uuid": "58416c5f_bac038c3",
+        "filename": "res/values/strings.xml",
+        "patchSetId": 1
+      },
+      "lineNbr": 869,
+      "author": {
+        "id": 13028
+      },
+      "writtenOn": "2023-11-26T22:12:34Z",
+      "side": 1,
+      "message": "typo: immediat**e**ly",
+      "revId": "ffd3c19159b0b388425685264ec36760fb9d73e2",
+      "serverId": "1ec6b3db-b2c1-4fa4-84a2-4c7efe89ba71"
+    },
+    {
+      "unresolved": true,
+      "key": {
+        "uuid": "23db717e_5db259cc",
+        "filename": "res/values/strings.xml",
+        "patchSetId": 1
+      },
+      "lineNbr": 877,
+      "author": {
+        "id": 13028
+      },
+      "writtenOn": "2023-11-26T22:12:34Z",
+      "side": 1,
+      "message": "no need for \"LineageOS\" here",
+      "revId": "ffd3c19159b0b388425685264ec36760fb9d73e2",
+      "serverId": "1ec6b3db-b2c1-4fa4-84a2-4c7efe89ba71"
+    },
+    {
+      "unresolved": true,
+      "key": {
+        "uuid": "9213f49d_0d2ed51b",
+        "filename": "src/com/android/deskclock/settings/SettingsActivity.java",
+        "patchSetId": 1
+      },
+      "lineNbr": 185,
+      "author": {
+        "id": 13028
+      },
+      "writtenOn": "2023-11-26T22:12:34Z",
+      "side": 1,
+      "message": "typo in \"dialog\"",
+      "revId": "ffd3c19159b0b388425685264ec36760fb9d73e2",
+      "serverId": "1ec6b3db-b2c1-4fa4-84a2-4c7efe89ba71"
+    },
+    {
+      "unresolved": true,
+      "key": {
+        "uuid": "33a009b8_2604af1a",
+        "filename": "src/com/android/deskclock/settings/SettingsActivity.java",
+        "patchSetId": 1
+      },
+      "lineNbr": 285,
+      "author": {
+        "id": 13028
+      },
+      "writtenOn": "2023-11-26T22:12:34Z",
+      "side": 1,
+      "message": "settings, plural?",
+      "revId": "ffd3c19159b0b388425685264ec36760fb9d73e2",
+      "serverId": "1ec6b3db-b2c1-4fa4-84a2-4c7efe89ba71"
     }
   ]
 }
