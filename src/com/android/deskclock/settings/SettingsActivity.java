@@ -35,10 +35,12 @@ import androidx.preference.PreferenceFragmentCompat;
 import androidx.preference.TwoStatePreference;
 
 import com.android.deskclock.R;
+import com.android.deskclock.ScreensaverActivity;
 import com.android.deskclock.Utils;
 import com.android.deskclock.data.DataModel;
 import com.android.deskclock.data.TimeZones;
 import com.android.deskclock.data.Weekdays;
+import com.android.deskclock.events.Events;
 import com.android.deskclock.ringtone.RingtonePickerActivity;
 import com.android.deskclock.widget.CollapsingToolbarBaseActivity;
 
@@ -58,6 +60,9 @@ public final class SettingsActivity extends CollapsingToolbarBaseActivity {
     public static final String KEY_HOME_TZ = "home_time_zone";
     public static final String KEY_AUTO_HOME_CLOCK = "automatic_home_clock";
     public static final String KEY_DATE_TIME = "date_time";
+    public static final String KEY_SS_SETTINGS = "screensaver_settings";
+    public static final String KEY_SS_PREVIEW = "screensaver_preview";
+    public static final String KEY_SS_DAYDREAM_SETTINGS = "screensaver_daydream_settings";
     public static final String KEY_VOLUME_BUTTONS = "volume_button_setting";
     public static final String KEY_WEEK_START = "week_start";
     public static final String KEY_FLIP_ACTION = "flip_action";
@@ -69,6 +74,7 @@ public final class SettingsActivity extends CollapsingToolbarBaseActivity {
 
     public static final String PREFS_FRAGMENT_TAG = "prefs_fragment";
     public static final String PREFERENCE_DIALOG_FRAGMENT_TAG = "preference_dialog";
+    public static final int REQUEST_CHANGE_SETTINGS = 1;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -175,6 +181,23 @@ public final class SettingsActivity extends CollapsingToolbarBaseActivity {
             }
 
             switch (pref.getKey()) {
+                case KEY_SS_DAYDREAM_SETTINGS:
+                    final Intent dialoSSMainSettingsIntent = new Intent(
+                            Settings.ACTION_DREAM_SETTINGS);
+                    dialoSSMainSettingsIntent.addFlags(Intent.FLAG_ACTIVITY_NEW_TASK);
+                    startActivity(dialoSSMainSettingsIntent);
+                    return true;
+                case KEY_SS_PREVIEW:
+                    context.startActivity(new Intent(context, ScreensaverActivity.class)
+                            .setFlags(Intent.FLAG_ACTIVITY_NEW_TASK)
+                            .putExtra(Events.EXTRA_EVENT_LABEL, R.string.label_deskclock));
+                    return true;
+                case KEY_SS_SETTINGS:
+                    final Intent dialogSSSettingsIntent = new Intent(context,
+                            ScreensaverSettingsActivity.class);
+                    dialogSSSettingsIntent.addFlags(Intent.FLAG_ACTIVITY_NEW_TASK);
+                    startActivity(dialogSSSettingsIntent);
+                    return true;
                 case KEY_DATE_TIME:
                     final Intent dialogIntent = new Intent(Settings.ACTION_DATE_SETTINGS);
                     dialogIntent.addFlags(Intent.FLAG_ACTIVITY_NEW_TASK);
@@ -258,6 +281,15 @@ public final class SettingsActivity extends CollapsingToolbarBaseActivity {
 
             final Preference dateAndTimeSetting = findPreference(KEY_DATE_TIME);
             dateAndTimeSetting.setOnPreferenceClickListener(this);
+
+            final Preference screensaverSetting = findPreference(KEY_SS_SETTINGS);
+            screensaverSetting.setOnPreferenceClickListener(this);
+
+            final Preference screensaverMainSettings = findPreference(KEY_SS_DAYDREAM_SETTINGS);
+            screensaverMainSettings.setOnPreferenceClickListener(this);
+
+            final Preference screensaverPreview = findPreference(KEY_SS_PREVIEW);
+            screensaverPreview.setOnPreferenceClickListener(this);
 
             final SimpleMenuPreference weekStartPref = findPreference(KEY_WEEK_START);
             // Set the default value programmatically
