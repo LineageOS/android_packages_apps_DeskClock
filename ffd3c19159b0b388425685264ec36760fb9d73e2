@@ -1,0 +1,21 @@
+{
+  "comments": [
+    {
+      "unresolved": false,
+      "key": {
+        "uuid": "a2873b0b_6b85ef79",
+        "filename": "/PATCHSET_LEVEL",
+        "patchSetId": 1
+      },
+      "lineNbr": 0,
+      "author": {
+        "id": 25889
+      },
+      "writtenOn": "2023-11-26T02:33:49Z",
+      "side": 1,
+      "message": "Alternative implementation to I7501602b773e62c3e0f18c066d9ce75b99e39287.",
+      "revId": "ffd3c19159b0b388425685264ec36760fb9d73e2",
+      "serverId": "1ec6b3db-b2c1-4fa4-84a2-4c7efe89ba71"
+    }
+  ]
+}
