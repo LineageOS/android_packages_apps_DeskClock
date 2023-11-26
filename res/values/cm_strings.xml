@@ -66,4 +66,19 @@
     <string name="widget_name_transparent">Unbacked</string>
     <!-- Name of the solid widget layout -->
     <string name="widget_name_solid">Backed</string>
+
+    <!-- Header in the preferences settings for the section pertaining to screen saver -->
+    <string name="screensaver_settings_title">Screen saver</string>
+    <!-- Label for the screen saver preview in settings -->
+    <string name="screensaver_preview">Preview</string>
+    <!-- Summary for the screen saver preview in settings -->
+    <string name="screensaver_preview_summary">Starts the screen saver immediatly</string>
+    <!-- Label for the screen saver settings in settings -->
+    <string name="screensaver_change_settings">Settings</string>
+    <!-- Summary for the screen saver settings in settings -->
+    <string name="screensaver_change_settings_summary">Opens clock\'s screen saver settings</string>
+    <!-- Label for the screen saver settings in settings -->
+    <string name="screensaver_daydream_settings">Select/enable screen saver</string>
+    <!-- Summary for the screen saver settings in settings -->
+    <string name="screensaver_daydream_settings_summary">Opens the main LineageOS screen saver settings</string>
 </resources>
