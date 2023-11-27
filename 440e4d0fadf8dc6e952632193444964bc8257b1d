@@ -1,0 +1,21 @@
+{
+  "comments": [
+    {
+      "unresolved": true,
+      "key": {
+        "uuid": "c835c624_b3e78cff",
+        "filename": "src/com/android/deskclock/settings/SettingsActivity.java",
+        "patchSetId": 2
+      },
+      "lineNbr": 77,
+      "author": {
+        "id": 10067
+      },
+      "writtenOn": "2023-11-27T09:05:05Z",
+      "side": 1,
+      "message": "unused?",
+      "revId": "440e4d0fadf8dc6e952632193444964bc8257b1d",
+      "serverId": "1ec6b3db-b2c1-4fa4-84a2-4c7efe89ba71"
+    }
+  ]
+}
