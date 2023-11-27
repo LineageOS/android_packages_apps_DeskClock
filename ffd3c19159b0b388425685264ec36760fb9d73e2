@@ -35,6 +35,24 @@
       "serverId": "1ec6b3db-b2c1-4fa4-84a2-4c7efe89ba71"
     },
     {
+      "unresolved": false,
+      "key": {
+        "uuid": "c2ca36ac_6facc9b6",
+        "filename": "res/values/strings.xml",
+        "patchSetId": 1
+      },
+      "lineNbr": 869,
+      "author": {
+        "id": 25889
+      },
+      "writtenOn": "2023-11-27T04:13:48Z",
+      "side": 1,
+      "message": "Done",
+      "parentUuid": "58416c5f_bac038c3",
+      "revId": "ffd3c19159b0b388425685264ec36760fb9d73e2",
+      "serverId": "1ec6b3db-b2c1-4fa4-84a2-4c7efe89ba71"
+    },
+    {
       "unresolved": true,
       "key": {
         "uuid": "23db717e_5db259cc",
@@ -48,6 +66,24 @@
       "writtenOn": "2023-11-26T22:12:34Z",
       "side": 1,
       "message": "no need for \"LineageOS\" here",
+      "revId": "ffd3c19159b0b388425685264ec36760fb9d73e2",
+      "serverId": "1ec6b3db-b2c1-4fa4-84a2-4c7efe89ba71"
+    },
+    {
+      "unresolved": false,
+      "key": {
+        "uuid": "b3fcd4dd_e0ac67f9",
+        "filename": "res/values/strings.xml",
+        "patchSetId": 1
+      },
+      "lineNbr": 877,
+      "author": {
+        "id": 25889
+      },
+      "writtenOn": "2023-11-27T04:13:48Z",
+      "side": 1,
+      "message": "Done",
+      "parentUuid": "23db717e_5db259cc",
       "revId": "ffd3c19159b0b388425685264ec36760fb9d73e2",
       "serverId": "1ec6b3db-b2c1-4fa4-84a2-4c7efe89ba71"
     },
@@ -69,6 +105,24 @@
       "serverId": "1ec6b3db-b2c1-4fa4-84a2-4c7efe89ba71"
     },
     {
+      "unresolved": false,
+      "key": {
+        "uuid": "4793ce1c_ae7b7db8",
+        "filename": "src/com/android/deskclock/settings/SettingsActivity.java",
+        "patchSetId": 1
+      },
+      "lineNbr": 185,
+      "author": {
+        "id": 25889
+      },
+      "writtenOn": "2023-11-27T04:13:48Z",
+      "side": 1,
+      "message": "Done",
+      "parentUuid": "9213f49d_0d2ed51b",
+      "revId": "ffd3c19159b0b388425685264ec36760fb9d73e2",
+      "serverId": "1ec6b3db-b2c1-4fa4-84a2-4c7efe89ba71"
+    },
+    {
       "unresolved": true,
       "key": {
         "uuid": "33a009b8_2604af1a",
@@ -82,6 +136,24 @@
       "writtenOn": "2023-11-26T22:12:34Z",
       "side": 1,
       "message": "settings, plural?",
+      "revId": "ffd3c19159b0b388425685264ec36760fb9d73e2",
+      "serverId": "1ec6b3db-b2c1-4fa4-84a2-4c7efe89ba71"
+    },
+    {
+      "unresolved": false,
+      "key": {
+        "uuid": "d7dcd653_0875fc13",
+        "filename": "src/com/android/deskclock/settings/SettingsActivity.java",
+        "patchSetId": 1
+      },
+      "lineNbr": 285,
+      "author": {
+        "id": 25889
+      },
+      "writtenOn": "2023-11-27T04:13:48Z",
+      "side": 1,
+      "message": "Done",
+      "parentUuid": "33a009b8_2604af1a",
       "revId": "ffd3c19159b0b388425685264ec36760fb9d73e2",
       "serverId": "1ec6b3db-b2c1-4fa4-84a2-4c7efe89ba71"
     }
