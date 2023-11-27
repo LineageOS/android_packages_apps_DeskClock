@@ -18,6 +18,24 @@
       "serverId": "1ec6b3db-b2c1-4fa4-84a2-4c7efe89ba71"
     },
     {
+      "unresolved": false,
+      "key": {
+        "uuid": "909b260a_550c2960",
+        "filename": "res/values/strings.xml",
+        "patchSetId": 2
+      },
+      "lineNbr": 864,
+      "author": {
+        "id": 25889
+      },
+      "writtenOn": "2023-11-27T15:38:37Z",
+      "side": 1,
+      "message": "Done",
+      "parentUuid": "57e33567_23ccb1b5",
+      "revId": "440e4d0fadf8dc6e952632193444964bc8257b1d",
+      "serverId": "1ec6b3db-b2c1-4fa4-84a2-4c7efe89ba71"
+    },
+    {
       "unresolved": true,
       "key": {
         "uuid": "c835c624_b3e78cff",
@@ -31,6 +49,24 @@
       "writtenOn": "2023-11-27T09:05:05Z",
       "side": 1,
       "message": "unused?",
+      "revId": "440e4d0fadf8dc6e952632193444964bc8257b1d",
+      "serverId": "1ec6b3db-b2c1-4fa4-84a2-4c7efe89ba71"
+    },
+    {
+      "unresolved": false,
+      "key": {
+        "uuid": "87fbea09_51be2a87",
+        "filename": "src/com/android/deskclock/settings/SettingsActivity.java",
+        "patchSetId": 2
+      },
+      "lineNbr": 77,
+      "author": {
+        "id": 25889
+      },
+      "writtenOn": "2023-11-27T15:38:37Z",
+      "side": 1,
+      "message": "Yes, left over from a previous version of the intent call for the screen saver settings.  Removed.",
+      "parentUuid": "c835c624_b3e78cff",
       "revId": "440e4d0fadf8dc6e952632193444964bc8257b1d",
       "serverId": "1ec6b3db-b2c1-4fa4-84a2-4c7efe89ba71"
     }
