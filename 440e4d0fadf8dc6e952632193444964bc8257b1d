@@ -3,6 +3,23 @@
     {
       "unresolved": true,
       "key": {
+        "uuid": "57e33567_23ccb1b5",
+        "filename": "res/values/strings.xml",
+        "patchSetId": 2
+      },
+      "lineNbr": 864,
+      "author": {
+        "id": 10067
+      },
+      "writtenOn": "2023-11-27T09:05:43Z",
+      "side": 1,
+      "message": "move to res/values/cm_strings.xml.",
+      "revId": "440e4d0fadf8dc6e952632193444964bc8257b1d",
+      "serverId": "1ec6b3db-b2c1-4fa4-84a2-4c7efe89ba71"
+    },
+    {
+      "unresolved": true,
+      "key": {
         "uuid": "c835c624_b3e78cff",
         "filename": "src/com/android/deskclock/settings/SettingsActivity.java",
         "patchSetId": 2
