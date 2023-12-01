@@ -19,11 +19,11 @@ allprojects {
 apply plugin: 'com.android.application'
 
 android {
-    compileSdk 33
+    compileSdk 34
 
     defaultConfig {
         minSdkVersion 27
-        targetSdkVersion 33
+        targetSdkVersion 34
     }
 
     sourceSets {
