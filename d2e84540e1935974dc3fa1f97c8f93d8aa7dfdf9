@@ -1,0 +1,220 @@
+{
+  "comments": [
+    {
+      "unresolved": true,
+      "key": {
+        "uuid": "53430eb8_2839dbae",
+        "filename": "src/com/android/deskclock/MoveScreensaverRunnable.java",
+        "patchSetId": 6
+      },
+      "lineNbr": 133,
+      "author": {
+        "id": 13028
+      },
+      "writtenOn": "2023-12-08T15:59:56Z",
+      "side": 1,
+      "message": "magic number \"5\" - should be a static final, like FADE_TIME above that",
+      "revId": "d2e84540e1935974dc3fa1f97c8f93d8aa7dfdf9",
+      "serverId": "1ec6b3db-b2c1-4fa4-84a2-4c7efe89ba71"
+    },
+    {
+      "unresolved": true,
+      "key": {
+        "uuid": "5b2d124f_9baa8275",
+        "filename": "src/com/android/deskclock/Screensaver.java",
+        "patchSetId": 6
+      },
+      "lineNbr": 140,
+      "author": {
+        "id": 13028
+      },
+      "writtenOn": "2023-12-08T15:59:56Z",
+      "side": 1,
+      "message": "the changes to these two lines don\u0027t make sense - Utils.dimClockView always returns the same value passed into it",
+      "revId": "d2e84540e1935974dc3fa1f97c8f93d8aa7dfdf9",
+      "serverId": "1ec6b3db-b2c1-4fa4-84a2-4c7efe89ba71"
+    },
+    {
+      "unresolved": true,
+      "key": {
+        "uuid": "64a993e7_87c80afd",
+        "filename": "src/com/android/deskclock/Utils.java",
+        "patchSetId": 6
+      },
+      "lineNbr": 218,
+      "author": {
+        "id": 13028
+      },
+      "writtenOn": "2023-12-08T15:59:56Z",
+      "side": 1,
+      "message": "dim \u003d filterState \u003e 1;",
+      "revId": "d2e84540e1935974dc3fa1f97c8f93d8aa7dfdf9",
+      "serverId": "1ec6b3db-b2c1-4fa4-84a2-4c7efe89ba71"
+    },
+    {
+      "unresolved": true,
+      "key": {
+        "uuid": "09bb0a70_cc4278b9",
+        "filename": "src/com/android/deskclock/Utils.java",
+        "patchSetId": 6
+      },
+      "lineNbr": 226,
+      "author": {
+        "id": 13028
+      },
+      "writtenOn": "2023-12-08T15:59:56Z",
+      "side": 1,
+      "message": "I am not sure if I am missing something here but 16 + (128 * 100 / 100) \u003d\u003d 144 dez (90 hex), not \"C0\"?",
+      "range": {
+        "startLine": 225,
+        "startChar": 12,
+        "endLine": 226,
+        "endChar": 90
+      },
+      "revId": "d2e84540e1935974dc3fa1f97c8f93d8aa7dfdf9",
+      "serverId": "1ec6b3db-b2c1-4fa4-84a2-4c7efe89ba71"
+    },
+    {
+      "unresolved": true,
+      "key": {
+        "uuid": "3affd410_44ac566a",
+        "filename": "src/com/android/deskclock/data/DataModel.java",
+        "patchSetId": 6
+      },
+      "lineNbr": 966,
+      "author": {
+        "id": 13028
+      },
+      "writtenOn": "2023-12-08T15:59:56Z",
+      "side": 1,
+      "message": "getScreensaverNightModeDNDOn -\u003e getScreensaverNightModeDndOn",
+      "revId": "d2e84540e1935974dc3fa1f97c8f93d8aa7dfdf9",
+      "serverId": "1ec6b3db-b2c1-4fa4-84a2-4c7efe89ba71"
+    },
+    {
+      "unresolved": true,
+      "key": {
+        "uuid": "afa4038f_5eb271b4",
+        "filename": "src/com/android/deskclock/data/SettingsDAO.java",
+        "patchSetId": 6
+      },
+      "lineNbr": 145,
+      "author": {
+        "id": 13028
+      },
+      "writtenOn": "2023-12-08T15:59:56Z",
+      "side": 1,
+      "message": "method is unused",
+      "revId": "d2e84540e1935974dc3fa1f97c8f93d8aa7dfdf9",
+      "serverId": "1ec6b3db-b2c1-4fa4-84a2-4c7efe89ba71"
+    },
+    {
+      "unresolved": true,
+      "key": {
+        "uuid": "2b8f2216_a8e45174",
+        "filename": "src/com/android/deskclock/data/SettingsDAO.java",
+        "patchSetId": 6
+      },
+      "lineNbr": 159,
+      "author": {
+        "id": 13028
+      },
+      "writtenOn": "2023-12-08T15:59:56Z",
+      "side": 1,
+      "message": "method is unused",
+      "revId": "d2e84540e1935974dc3fa1f97c8f93d8aa7dfdf9",
+      "serverId": "1ec6b3db-b2c1-4fa4-84a2-4c7efe89ba71"
+    },
+    {
+      "unresolved": true,
+      "key": {
+        "uuid": "e7defda8_a3146b3e",
+        "filename": "src/com/android/deskclock/data/SettingsDAO.java",
+        "patchSetId": 6
+      },
+      "lineNbr": 433,
+      "author": {
+        "id": 13028
+      },
+      "writtenOn": "2023-12-08T15:59:56Z",
+      "side": 1,
+      "message": "valueOf-call is unneccessary",
+      "range": {
+        "startLine": 433,
+        "startChar": 15,
+        "endLine": 433,
+        "endChar": 33
+      },
+      "revId": "d2e84540e1935974dc3fa1f97c8f93d8aa7dfdf9",
+      "serverId": "1ec6b3db-b2c1-4fa4-84a2-4c7efe89ba71"
+    },
+    {
+      "unresolved": true,
+      "key": {
+        "uuid": "cd9f30f7_4f2adb4d",
+        "filename": "src/com/android/deskclock/data/SettingsModel.java",
+        "patchSetId": 6
+      },
+      "lineNbr": 99,
+      "author": {
+        "id": 13028
+      },
+      "writtenOn": "2023-12-08T15:59:56Z",
+      "side": 1,
+      "message": "https://google.github.io/styleguide/javaguide.html#s5.3-camel-case - getScreensaverNightModeDNDOn -\u003e getScreensaverNightModeDndOn",
+      "revId": "d2e84540e1935974dc3fa1f97c8f93d8aa7dfdf9",
+      "serverId": "1ec6b3db-b2c1-4fa4-84a2-4c7efe89ba71"
+    },
+    {
+      "unresolved": true,
+      "key": {
+        "uuid": "8f40a566_63b0c844",
+        "filename": "src/com/android/deskclock/data/SettingsModel.java",
+        "patchSetId": 6
+      },
+      "lineNbr": 105,
+      "author": {
+        "id": 13028
+      },
+      "writtenOn": "2023-12-08T15:59:56Z",
+      "side": 1,
+      "message": "missing empty line before next method",
+      "revId": "d2e84540e1935974dc3fa1f97c8f93d8aa7dfdf9",
+      "serverId": "1ec6b3db-b2c1-4fa4-84a2-4c7efe89ba71"
+    },
+    {
+      "unresolved": true,
+      "key": {
+        "uuid": "7e289f7a_1c4d00c6",
+        "filename": "src/com/android/deskclock/data/SettingsModel.java",
+        "patchSetId": 6
+      },
+      "lineNbr": 110,
+      "author": {
+        "id": 13028
+      },
+      "writtenOn": "2023-12-08T15:59:56Z",
+      "side": 1,
+      "message": "no one-line methods, like you did with the others",
+      "revId": "d2e84540e1935974dc3fa1f97c8f93d8aa7dfdf9",
+      "serverId": "1ec6b3db-b2c1-4fa4-84a2-4c7efe89ba71"
+    },
+    {
+      "unresolved": true,
+      "key": {
+        "uuid": "7fc3feca_b197a612",
+        "filename": "src/com/android/deskclock/data/SettingsModel.java",
+        "patchSetId": 6
+      },
+      "lineNbr": 112,
+      "author": {
+        "id": 13028
+      },
+      "writtenOn": "2023-12-08T15:59:56Z",
+      "side": 1,
+      "message": "same",
+      "revId": "d2e84540e1935974dc3fa1f97c8f93d8aa7dfdf9",
+      "serverId": "1ec6b3db-b2c1-4fa4-84a2-4c7efe89ba71"
+    }
+  ]
+}
