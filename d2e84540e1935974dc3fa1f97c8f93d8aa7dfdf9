@@ -18,6 +18,24 @@
       "serverId": "1ec6b3db-b2c1-4fa4-84a2-4c7efe89ba71"
     },
     {
+      "unresolved": false,
+      "key": {
+        "uuid": "6017f82e_026163ff",
+        "filename": "src/com/android/deskclock/MoveScreensaverRunnable.java",
+        "patchSetId": 6
+      },
+      "lineNbr": 133,
+      "author": {
+        "id": 25889
+      },
+      "writtenOn": "2023-12-09T20:44:01Z",
+      "side": 1,
+      "message": "Done",
+      "parentUuid": "53430eb8_2839dbae",
+      "revId": "d2e84540e1935974dc3fa1f97c8f93d8aa7dfdf9",
+      "serverId": "1ec6b3db-b2c1-4fa4-84a2-4c7efe89ba71"
+    },
+    {
       "unresolved": true,
       "key": {
         "uuid": "5b2d124f_9baa8275",
@@ -35,6 +53,24 @@
       "serverId": "1ec6b3db-b2c1-4fa4-84a2-4c7efe89ba71"
     },
     {
+      "unresolved": false,
+      "key": {
+        "uuid": "73ed617e_1ae884ec",
+        "filename": "src/com/android/deskclock/Screensaver.java",
+        "patchSetId": 6
+      },
+      "lineNbr": 140,
+      "author": {
+        "id": 25889
+      },
+      "writtenOn": "2023-12-09T20:44:01Z",
+      "side": 1,
+      "message": "Left over from a previous version of the patch that needed to be able to update the dimNightMode, removed from this version.",
+      "parentUuid": "5b2d124f_9baa8275",
+      "revId": "d2e84540e1935974dc3fa1f97c8f93d8aa7dfdf9",
+      "serverId": "1ec6b3db-b2c1-4fa4-84a2-4c7efe89ba71"
+    },
+    {
       "unresolved": true,
       "key": {
         "uuid": "64a993e7_87c80afd",
@@ -48,6 +84,24 @@
       "writtenOn": "2023-12-08T15:59:56Z",
       "side": 1,
       "message": "dim \u003d filterState \u003e 1;",
+      "revId": "d2e84540e1935974dc3fa1f97c8f93d8aa7dfdf9",
+      "serverId": "1ec6b3db-b2c1-4fa4-84a2-4c7efe89ba71"
+    },
+    {
+      "unresolved": false,
+      "key": {
+        "uuid": "52b97f32_e6ef8181",
+        "filename": "src/com/android/deskclock/Utils.java",
+        "patchSetId": 6
+      },
+      "lineNbr": 218,
+      "author": {
+        "id": 25889
+      },
+      "writtenOn": "2023-12-09T20:44:01Z",
+      "side": 1,
+      "message": "Done",
+      "parentUuid": "64a993e7_87c80afd",
       "revId": "d2e84540e1935974dc3fa1f97c8f93d8aa7dfdf9",
       "serverId": "1ec6b3db-b2c1-4fa4-84a2-4c7efe89ba71"
     },
@@ -75,6 +129,30 @@
       "serverId": "1ec6b3db-b2c1-4fa4-84a2-4c7efe89ba71"
     },
     {
+      "unresolved": false,
+      "key": {
+        "uuid": "80005fe7_5837afb8",
+        "filename": "src/com/android/deskclock/Utils.java",
+        "patchSetId": 6
+      },
+      "lineNbr": 226,
+      "author": {
+        "id": 25889
+      },
+      "writtenOn": "2023-12-09T20:44:01Z",
+      "side": 1,
+      "message": "Just a mistake on my part, the 128 should be 176 (aka 192-16), fixed.",
+      "parentUuid": "09bb0a70_cc4278b9",
+      "range": {
+        "startLine": 225,
+        "startChar": 12,
+        "endLine": 226,
+        "endChar": 90
+      },
+      "revId": "d2e84540e1935974dc3fa1f97c8f93d8aa7dfdf9",
+      "serverId": "1ec6b3db-b2c1-4fa4-84a2-4c7efe89ba71"
+    },
+    {
       "unresolved": true,
       "key": {
         "uuid": "3affd410_44ac566a",
@@ -88,6 +166,24 @@
       "writtenOn": "2023-12-08T15:59:56Z",
       "side": 1,
       "message": "getScreensaverNightModeDNDOn -\u003e getScreensaverNightModeDndOn",
+      "revId": "d2e84540e1935974dc3fa1f97c8f93d8aa7dfdf9",
+      "serverId": "1ec6b3db-b2c1-4fa4-84a2-4c7efe89ba71"
+    },
+    {
+      "unresolved": false,
+      "key": {
+        "uuid": "3aeb12a1_cdff70ef",
+        "filename": "src/com/android/deskclock/data/DataModel.java",
+        "patchSetId": 6
+      },
+      "lineNbr": 966,
+      "author": {
+        "id": 25889
+      },
+      "writtenOn": "2023-12-09T20:44:01Z",
+      "side": 1,
+      "message": "Done",
+      "parentUuid": "3affd410_44ac566a",
       "revId": "d2e84540e1935974dc3fa1f97c8f93d8aa7dfdf9",
       "serverId": "1ec6b3db-b2c1-4fa4-84a2-4c7efe89ba71"
     },
@@ -109,6 +205,24 @@
       "serverId": "1ec6b3db-b2c1-4fa4-84a2-4c7efe89ba71"
     },
     {
+      "unresolved": false,
+      "key": {
+        "uuid": "65137727_08438e1b",
+        "filename": "src/com/android/deskclock/data/SettingsDAO.java",
+        "patchSetId": 6
+      },
+      "lineNbr": 145,
+      "author": {
+        "id": 25889
+      },
+      "writtenOn": "2023-12-09T20:44:01Z",
+      "side": 1,
+      "message": "Removed.",
+      "parentUuid": "afa4038f_5eb271b4",
+      "revId": "d2e84540e1935974dc3fa1f97c8f93d8aa7dfdf9",
+      "serverId": "1ec6b3db-b2c1-4fa4-84a2-4c7efe89ba71"
+    },
+    {
       "unresolved": true,
       "key": {
         "uuid": "2b8f2216_a8e45174",
@@ -122,6 +236,24 @@
       "writtenOn": "2023-12-08T15:59:56Z",
       "side": 1,
       "message": "method is unused",
+      "revId": "d2e84540e1935974dc3fa1f97c8f93d8aa7dfdf9",
+      "serverId": "1ec6b3db-b2c1-4fa4-84a2-4c7efe89ba71"
+    },
+    {
+      "unresolved": false,
+      "key": {
+        "uuid": "9f75a30c_bda4164f",
+        "filename": "src/com/android/deskclock/data/SettingsDAO.java",
+        "patchSetId": 6
+      },
+      "lineNbr": 159,
+      "author": {
+        "id": 25889
+      },
+      "writtenOn": "2023-12-09T20:44:01Z",
+      "side": 1,
+      "message": "Removed.",
+      "parentUuid": "2b8f2216_a8e45174",
       "revId": "d2e84540e1935974dc3fa1f97c8f93d8aa7dfdf9",
       "serverId": "1ec6b3db-b2c1-4fa4-84a2-4c7efe89ba71"
     },
@@ -149,6 +281,30 @@
       "serverId": "1ec6b3db-b2c1-4fa4-84a2-4c7efe89ba71"
     },
     {
+      "unresolved": false,
+      "key": {
+        "uuid": "04284361_4884cc8a",
+        "filename": "src/com/android/deskclock/data/SettingsDAO.java",
+        "patchSetId": 6
+      },
+      "lineNbr": 433,
+      "author": {
+        "id": 25889
+      },
+      "writtenOn": "2023-12-09T20:44:01Z",
+      "side": 1,
+      "message": "Removed.",
+      "parentUuid": "e7defda8_a3146b3e",
+      "range": {
+        "startLine": 433,
+        "startChar": 15,
+        "endLine": 433,
+        "endChar": 33
+      },
+      "revId": "d2e84540e1935974dc3fa1f97c8f93d8aa7dfdf9",
+      "serverId": "1ec6b3db-b2c1-4fa4-84a2-4c7efe89ba71"
+    },
+    {
       "unresolved": true,
       "key": {
         "uuid": "cd9f30f7_4f2adb4d",
@@ -162,6 +318,24 @@
       "writtenOn": "2023-12-08T15:59:56Z",
       "side": 1,
       "message": "https://google.github.io/styleguide/javaguide.html#s5.3-camel-case - getScreensaverNightModeDNDOn -\u003e getScreensaverNightModeDndOn",
+      "revId": "d2e84540e1935974dc3fa1f97c8f93d8aa7dfdf9",
+      "serverId": "1ec6b3db-b2c1-4fa4-84a2-4c7efe89ba71"
+    },
+    {
+      "unresolved": false,
+      "key": {
+        "uuid": "34bf7528_c9b5d87d",
+        "filename": "src/com/android/deskclock/data/SettingsModel.java",
+        "patchSetId": 6
+      },
+      "lineNbr": 99,
+      "author": {
+        "id": 25889
+      },
+      "writtenOn": "2023-12-09T20:44:01Z",
+      "side": 1,
+      "message": "Done",
+      "parentUuid": "cd9f30f7_4f2adb4d",
       "revId": "d2e84540e1935974dc3fa1f97c8f93d8aa7dfdf9",
       "serverId": "1ec6b3db-b2c1-4fa4-84a2-4c7efe89ba71"
     },
@@ -183,6 +357,24 @@
       "serverId": "1ec6b3db-b2c1-4fa4-84a2-4c7efe89ba71"
     },
     {
+      "unresolved": false,
+      "key": {
+        "uuid": "e2a4b7d8_d6e1ec60",
+        "filename": "src/com/android/deskclock/data/SettingsModel.java",
+        "patchSetId": 6
+      },
+      "lineNbr": 105,
+      "author": {
+        "id": 25889
+      },
+      "writtenOn": "2023-12-09T20:44:01Z",
+      "side": 1,
+      "message": "Added.",
+      "parentUuid": "8f40a566_63b0c844",
+      "revId": "d2e84540e1935974dc3fa1f97c8f93d8aa7dfdf9",
+      "serverId": "1ec6b3db-b2c1-4fa4-84a2-4c7efe89ba71"
+    },
+    {
       "unresolved": true,
       "key": {
         "uuid": "7e289f7a_1c4d00c6",
@@ -200,6 +392,24 @@
       "serverId": "1ec6b3db-b2c1-4fa4-84a2-4c7efe89ba71"
     },
     {
+      "unresolved": false,
+      "key": {
+        "uuid": "b0e5b2dd_1ea55125",
+        "filename": "src/com/android/deskclock/data/SettingsModel.java",
+        "patchSetId": 6
+      },
+      "lineNbr": 110,
+      "author": {
+        "id": 25889
+      },
+      "writtenOn": "2023-12-09T20:44:01Z",
+      "side": 1,
+      "message": "Done",
+      "parentUuid": "7e289f7a_1c4d00c6",
+      "revId": "d2e84540e1935974dc3fa1f97c8f93d8aa7dfdf9",
+      "serverId": "1ec6b3db-b2c1-4fa4-84a2-4c7efe89ba71"
+    },
+    {
       "unresolved": true,
       "key": {
         "uuid": "7fc3feca_b197a612",
@@ -213,6 +423,24 @@
       "writtenOn": "2023-12-08T15:59:56Z",
       "side": 1,
       "message": "same",
+      "revId": "d2e84540e1935974dc3fa1f97c8f93d8aa7dfdf9",
+      "serverId": "1ec6b3db-b2c1-4fa4-84a2-4c7efe89ba71"
+    },
+    {
+      "unresolved": false,
+      "key": {
+        "uuid": "86b9acc8_b877713b",
+        "filename": "src/com/android/deskclock/data/SettingsModel.java",
+        "patchSetId": 6
+      },
+      "lineNbr": 112,
+      "author": {
+        "id": 25889
+      },
+      "writtenOn": "2023-12-09T20:44:01Z",
+      "side": 1,
+      "message": "Done",
+      "parentUuid": "7fc3feca_b197a612",
       "revId": "d2e84540e1935974dc3fa1f97c8f93d8aa7dfdf9",
       "serverId": "1ec6b3db-b2c1-4fa4-84a2-4c7efe89ba71"
     }
