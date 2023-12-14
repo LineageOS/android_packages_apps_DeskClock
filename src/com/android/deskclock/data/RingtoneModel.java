@@ -78,7 +78,8 @@ final class RingtoneModel {
 
         // Clear caches affected by locale when locale changes.
         final IntentFilter localeBroadcastFilter = new IntentFilter(Intent.ACTION_LOCALE_CHANGED);
-        mContext.registerReceiver(mLocaleChangedReceiver, localeBroadcastFilter);
+        mContext.registerReceiver(mLocaleChangedReceiver, localeBroadcastFilter,
+                Context.RECEIVER_NOT_EXPORTED);
     }
 
     void addCustomRingtone(Uri uri, String title) {

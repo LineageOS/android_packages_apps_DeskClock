@@ -70,7 +70,8 @@ final class StopwatchModel {
 
         // Update stopwatch notification when locale changes.
         final IntentFilter localeBroadcastFilter = new IntentFilter(Intent.ACTION_LOCALE_CHANGED);
-        mContext.registerReceiver(mLocaleChangedReceiver, localeBroadcastFilter);
+        mContext.registerReceiver(mLocaleChangedReceiver, localeBroadcastFilter,
+                Context.RECEIVER_NOT_EXPORTED);
     }
 
     /**

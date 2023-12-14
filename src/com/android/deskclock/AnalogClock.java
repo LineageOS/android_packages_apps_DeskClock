@@ -116,7 +116,7 @@ public class AnalogClock extends FrameLayout {
         filter.addAction(Intent.ACTION_TIME_TICK);
         filter.addAction(Intent.ACTION_TIME_CHANGED);
         filter.addAction(Intent.ACTION_TIMEZONE_CHANGED);
-        getContext().registerReceiver(mIntentReceiver, filter);
+        getContext().registerReceiver(mIntentReceiver, filter, Context.RECEIVER_NOT_EXPORTED);
 
         // Refresh the calendar instance since the time zone may have changed while the receiver
         // wasn't registered.

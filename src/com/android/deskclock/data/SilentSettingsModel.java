@@ -94,7 +94,8 @@ final class SilentSettingsModel {
         cr.registerContentObserver(DEFAULT_ALARM_ALERT_URI, false, contentChangeWatcher);
 
         final IntentFilter filter = new IntentFilter(ACTION_INTERRUPTION_FILTER_CHANGED);
-        context.registerReceiver(new DoNotDisturbChangeReceiver(), filter);
+        context.registerReceiver(new DoNotDisturbChangeReceiver(), filter,
+                Context.RECEIVER_NOT_EXPORTED);
     }
 
     void addSilentSettingsListener(OnSilentSettingsListener listener) {
