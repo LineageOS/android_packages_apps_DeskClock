@@ -1,0 +1,21 @@
+{
+  "comments": [
+    {
+      "unresolved": false,
+      "key": {
+        "uuid": "f014a06e_9092c02e",
+        "filename": "/PATCHSET_LEVEL",
+        "patchSetId": 1
+      },
+      "lineNbr": 0,
+      "author": {
+        "id": 6360
+      },
+      "writtenOn": "2023-12-14T09:49:25Z",
+      "side": 1,
+      "message": "Need changes for SDK 34.\n\nhttps://github.com/crdroidandroid/android_packages_apps_DeskClock/commit/1d20659afba8782156f6d100271a9831e562c873",
+      "revId": "16122544c29676fc75bbe7345627ced0ccc3badf",
+      "serverId": "1ec6b3db-b2c1-4fa4-84a2-4c7efe89ba71"
+    }
+  ]
+}
