@@ -56,7 +56,7 @@ final class FormattedStringModel {
     FormattedStringModel(Context context) {
         // Clear caches affected by locale when locale changes.
         final IntentFilter localeBroadcastFilter = new IntentFilter(Intent.ACTION_LOCALE_CHANGED);
-        context.registerReceiver(mLocaleChangedReceiver, localeBroadcastFilter);
+        context.registerReceiver(mLocaleChangedReceiver, localeBroadcastFilter, Context.RECEIVER_NOT_EXPORTED);
     }
 
     /**

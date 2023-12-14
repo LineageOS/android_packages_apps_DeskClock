@@ -70,7 +70,7 @@ final class PeriodicCallbackModel {
         timeChangedBroadcastFilter.addAction(ACTION_TIME_CHANGED);
         timeChangedBroadcastFilter.addAction(ACTION_DATE_CHANGED);
         timeChangedBroadcastFilter.addAction(ACTION_TIMEZONE_CHANGED);
-        context.registerReceiver(mTimeChangedReceiver, timeChangedBroadcastFilter);
+        context.registerReceiver(mTimeChangedReceiver, timeChangedBroadcastFilter, Context.RECEIVER_NOT_EXPORTED);
     }
 
     /**

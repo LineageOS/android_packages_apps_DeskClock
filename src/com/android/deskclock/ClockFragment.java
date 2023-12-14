@@ -143,7 +143,7 @@ public final class ClockFragment extends DeskClockFragment {
         // Watch for system events that effect clock time or format.
         if (activity != null && mAlarmChangeReceiver != null) {
             final IntentFilter filter = new IntentFilter(ACTION_NEXT_ALARM_CLOCK_CHANGED);
-            activity.registerReceiver(mAlarmChangeReceiver, filter);
+            activity.registerReceiver(mAlarmChangeReceiver, filter, Context.RECEIVER_NOT_EXPORTED);
         }
 
         // Resume can be invoked after changing the clock style or seconds display.

@@ -105,7 +105,8 @@ public final class Screensaver extends DreamService {
 
         // Setup handlers for time reference changes and date updates.
         registerReceiver(mAlarmChangedReceiver,
-                new IntentFilter(AlarmManager.ACTION_NEXT_ALARM_CLOCK_CHANGED));
+                new IntentFilter(AlarmManager.ACTION_NEXT_ALARM_CLOCK_CHANGED),
+                Context.RECEIVER_NOT_EXPORTED);
 
         Utils.updateDate(mDateFormat, mDateFormatForAccessibility, mContentView);
         Utils.refreshAlarm(this, mContentView);
