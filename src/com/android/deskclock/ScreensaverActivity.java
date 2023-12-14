@@ -134,7 +134,7 @@ public class ScreensaverActivity extends BaseActivity {
         filter.addAction(Intent.ACTION_POWER_DISCONNECTED);
         filter.addAction(Intent.ACTION_USER_PRESENT);
         filter.addAction(AlarmManager.ACTION_NEXT_ALARM_CLOCK_CHANGED);
-        registerReceiver(mIntentReceiver, filter);
+        registerReceiver(mIntentReceiver, filter, Context.RECEIVER_NOT_EXPORTED);
     }
 
     @Override
@@ -147,7 +147,8 @@ public class ScreensaverActivity extends BaseActivity {
         startPositionUpdater();
         UiDataModel.getUiDataModel().addMidnightCallback(mMidnightUpdater);
 
-        final Intent intent = registerReceiver(null, new IntentFilter(ACTION_BATTERY_CHANGED));
+        final Intent intent = registerReceiver(null, new IntentFilter(ACTION_BATTERY_CHANGED),
+                Context.RECEIVER_NOT_EXPORTED);
         final boolean pluggedIn = intent != null && intent.getIntExtra(EXTRA_PLUGGED, 0) != 0;
         updateWakeLock(pluggedIn);
     }
