@@ -1,0 +1,21 @@
+{
+  "comments": [
+    {
+      "unresolved": false,
+      "key": {
+        "uuid": "7e203ccd_8144aeaf",
+        "filename": "/PATCHSET_LEVEL",
+        "patchSetId": 1
+      },
+      "lineNbr": 0,
+      "author": {
+        "id": 33360
+      },
+      "writtenOn": "2024-01-19T22:06:51Z",
+      "side": 1,
+      "message": "Hello, it is me again :3\n\nI am not sure if you have ever been to Costa Rica. They have nice nature, but they lack a timezone entry in LineageOS\u0027s Desk Clock app. It seems like the the capital city, San José, was overlooked or replaced by the city of San Jose, California (?). \n\nIf my understanding is correct, this feature implementation would require two separated changes:\n1. The new TZ requires a new entry to cities.xml just underneath \"C230\", and shifting down everything else. This is done as part of 380245.\n\n2. Go go trough the auto-translation and proofreading process in Crowdin. Then import then merge the translation .xml files. This is pending, naturally.\n\nMy hope is that, if this change is accepted , hopefully the follow up change will n not be so demanding, as the only difference from the name is now a tilde, which  not many languages even support.\n\nPlease let me hear your thoughts.",
+      "revId": "973d3491b2095a9c5914f212d4d2518f553aa3ec",
+      "serverId": "1ec6b3db-b2c1-4fa4-84a2-4c7efe89ba71"
+    }
+  ]
+}
