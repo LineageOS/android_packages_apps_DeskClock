@@ -1,0 +1,21 @@
+{
+  "comments": [
+    {
+      "unresolved": false,
+      "key": {
+        "uuid": "4242da42_486b3995",
+        "filename": "/PATCHSET_LEVEL",
+        "patchSetId": 2
+      },
+      "lineNbr": 0,
+      "author": {
+        "id": 33360
+      },
+      "writtenOn": "2024-01-20T18:19:48Z",
+      "side": 1,
+      "message": "UPDATE: I have simplified the change (1.) by inserting the new city at the bottom of the list. \n\nIt minimizes the code changes down to 3 lines, which should make every translation change far simpler and review straight forward.\n\nAbout ordering, it seems like I originally was wrong to assume the ordering is done by the index, rather than alphabetically.",
+      "revId": "6677b8ade098b84f084c6fca8e42fd637c4cc603",
+      "serverId": "1ec6b3db-b2c1-4fa4-84a2-4c7efe89ba71"
+    }
+  ]
+}
