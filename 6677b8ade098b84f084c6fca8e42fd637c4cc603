@@ -16,6 +16,23 @@
       "message": "UPDATE: I have simplified the change (1.) by inserting the new city at the bottom of the list. \n\nIt minimizes the code changes down to 3 lines, which should make every translation change far simpler and review straight forward.\n\nAbout ordering, it seems like I originally was wrong to assume the ordering is done by the index, rather than alphabetically.",
       "revId": "6677b8ade098b84f084c6fca8e42fd637c4cc603",
       "serverId": "1ec6b3db-b2c1-4fa4-84a2-4c7efe89ba71"
+    },
+    {
+      "unresolved": false,
+      "key": {
+        "uuid": "074d0508_63a3d12f",
+        "filename": "/PATCHSET_LEVEL",
+        "patchSetId": 2
+      },
+      "lineNbr": 0,
+      "author": {
+        "id": 25889
+      },
+      "writtenOn": "2024-01-21T17:00:22Z",
+      "side": 1,
+      "message": "Would it make sense to add California/Costa Rica in brackets after the city name to make the two near identical entries more distinguished?  \n\ni.e. \"San Jose (California)\" and \"San José (Costa Rica)\".",
+      "revId": "6677b8ade098b84f084c6fca8e42fd637c4cc603",
+      "serverId": "1ec6b3db-b2c1-4fa4-84a2-4c7efe89ba71"
     }
   ]
 }
