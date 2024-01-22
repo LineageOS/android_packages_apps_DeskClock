@@ -33,6 +33,23 @@
       "message": "Would it make sense to add California/Costa Rica in brackets after the city name to make the two near identical entries more distinguished?  \n\ni.e. \"San Jose (California)\" and \"San José (Costa Rica)\".",
       "revId": "6677b8ade098b84f084c6fca8e42fd637c4cc603",
       "serverId": "1ec6b3db-b2c1-4fa4-84a2-4c7efe89ba71"
+    },
+    {
+      "unresolved": false,
+      "key": {
+        "uuid": "929a43d8_6b8f6130",
+        "filename": "/PATCHSET_LEVEL",
+        "patchSetId": 2
+      },
+      "lineNbr": 0,
+      "author": {
+        "id": 33360
+      },
+      "writtenOn": "2024-01-22T20:22:17Z",
+      "side": 1,
+      "message": "Hi Greg,\n\nAs you may know, stock Android does something similar to what you suggest, more detailed actually. When one searches for \"San Jos\", a list of 4 results come up:\n+-----------------------------------------------+\n|San Jose, CA, USA 12:02 PM                     |\n|San José Province, San José, Costa... 2:02 PM  |\n|...                                            |\n+-----------------------------------------------+\n\nI am a bit scared of suggesting something like that as part of Change 380245 because might be a bit weird that only two entries in the list have the additional context info. Naturally, the context info could also be added to the remaining cities in the list, but I just do not have the oversight to know whether or not that would fly with the senior contributers.",
+      "revId": "6677b8ade098b84f084c6fca8e42fd637c4cc603",
+      "serverId": "1ec6b3db-b2c1-4fa4-84a2-4c7efe89ba71"
     }
   ]
 }
