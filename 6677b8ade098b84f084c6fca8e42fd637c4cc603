@@ -50,6 +50,24 @@
       "message": "Hi Greg,\n\nAs you may know, stock Android does something similar to what you suggest, more detailed actually. When one searches for \"San Jos\", a list of 4 results come up:\n+-----------------------------------------------+\n|San Jose, CA, USA 12:02 PM                     |\n|San José Province, San José, Costa... 2:02 PM  |\n|...                                            |\n+-----------------------------------------------+\n\nI am a bit scared of suggesting something like that as part of Change 380245 because might be a bit weird that only two entries in the list have the additional context info. Naturally, the context info could also be added to the remaining cities in the list, but I just do not have the oversight to know whether or not that would fly with the senior contributers.",
       "revId": "6677b8ade098b84f084c6fca8e42fd637c4cc603",
       "serverId": "1ec6b3db-b2c1-4fa4-84a2-4c7efe89ba71"
+    },
+    {
+      "unresolved": true,
+      "key": {
+        "uuid": "12dc27e1_47f0b1df",
+        "filename": "/PATCHSET_LEVEL",
+        "patchSetId": 2
+      },
+      "lineNbr": 0,
+      "author": {
+        "id": 25889
+      },
+      "writtenOn": "2024-01-22T21:46:20Z",
+      "side": 1,
+      "message": "I don\u0027t think it\u0027s a big deal as they are the only entries that are ambiguous to begin with. \n\nI do think there is an argument to be made that the timezone info should be included on a second line in the list to distinguish the entries that way instead.\n\nIt looks to be a relatively simple change to add the timezone info on a second line, in city_list_item.xml it\u0027s a change from true to false on the singleLine attribute, and then in City.java, create a getNameAndTimeZone() function to return both something like:\n\n    return mName + \"\\n(\" + mTimeZone.getID() + \")\";\n    \nThen just update CitySelectionActivity.java to use the new function instead of the old (the old one is still used in other places, so we should leave it alone).",
+      "parentUuid": "929a43d8_6b8f6130",
+      "revId": "6677b8ade098b84f084c6fca8e42fd637c4cc603",
+      "serverId": "1ec6b3db-b2c1-4fa4-84a2-4c7efe89ba71"
     }
   ]
 }
