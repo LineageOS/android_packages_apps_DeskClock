@@ -103,6 +103,24 @@
       "message": "Greg, I looked into your suggestion about adding a new public method to programmatically concatenate the city name with the time zone info, so that users have it easier to tell apart entries with similar names.\nAlthough you are right that implementing this would be easy, I believe it would cause mixture of languages in the text displayed on the Desk Cloak app. For example, if my phone is in Korean, and I am scrolling down the list of world clocks, looking for San José,  I will eventually come across something like:\n+---------------------+\n산호세 \n(America/Los_Angeles)\n......................\n산호세 \n(America/Costa_Rica)\n+---------------------+\n\nI am not sure such a mix of languages in the displays aligns with what the community would like to see. \n\nIf language consistency is as important as I presume it to be, then the only quick solution would be to add the Country name directly into cities.xml and all the translations.\n\nFor reference, stock android only hard codes time zones for USA cities. All other city names and time zones are queried from a remote endpoint upon user search. That would be cool feature to reproduce, but then again, scope is way bigger that what this change is supposed to be about.",
       "revId": "6677b8ade098b84f084c6fca8e42fd637c4cc603",
       "serverId": "1ec6b3db-b2c1-4fa4-84a2-4c7efe89ba71"
+    },
+    {
+      "unresolved": true,
+      "key": {
+        "uuid": "12a2bf06_f50f8c66",
+        "filename": "/PATCHSET_LEVEL",
+        "patchSetId": 2
+      },
+      "lineNbr": 0,
+      "author": {
+        "id": 25889
+      },
+      "writtenOn": "2024-01-26T20:27:24Z",
+      "side": 1,
+      "message": "I don\u0027t thing the mixed language thing is an issue, time zones are always in English so aren\u0027t translated anyway 🤷",
+      "parentUuid": "5b64cf3a_a29ddcca",
+      "revId": "6677b8ade098b84f084c6fca8e42fd637c4cc603",
+      "serverId": "1ec6b3db-b2c1-4fa4-84a2-4c7efe89ba71"
     }
   ]
 }
