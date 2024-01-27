@@ -121,6 +121,23 @@
       "parentUuid": "5b64cf3a_a29ddcca",
       "revId": "6677b8ade098b84f084c6fca8e42fd637c4cc603",
       "serverId": "1ec6b3db-b2c1-4fa4-84a2-4c7efe89ba71"
+    },
+    {
+      "unresolved": false,
+      "key": {
+        "uuid": "047c5d33_5cb50e94",
+        "filename": "/PATCHSET_LEVEL",
+        "patchSetId": 2
+      },
+      "lineNbr": 0,
+      "author": {
+        "id": 33360
+      },
+      "writtenOn": "2024-01-27T23:00:54Z",
+      "side": 1,
+      "message": "TLDR: Unfortunately, for the additional dynamic display name to make sense, a full revision of the initial time zones would be needed.\n\nGreg, I implemented and tested your suggestion, locally. However, after loading up the app I realized the scope of the feature keeps growing beyond what I initially set out to do 😞\n\nFor example, there are 17 cities in cities.xml for which the time zone is \"America/New_York\". These include Ottawa, the capital of Canada, and Washington D.C., the capital of United States. These are all in UTC-5 time, so technically it makes sense that @jplemieux assigned them all to the same time zone. But this also means that, by including \"mTimeZone.getID()\" in the displayed name of the entries in the world clock, I would be exposing some hard-coded values that are misleading, geographically speaking... Ottawa is naturally not in New York.\n\nI would be willing to tackle such a feature, but as a follow up change, if you and any other dev supports it.  What do you think?",
+      "revId": "6677b8ade098b84f084c6fca8e42fd637c4cc603",
+      "serverId": "1ec6b3db-b2c1-4fa4-84a2-4c7efe89ba71"
     }
   ]
 }
