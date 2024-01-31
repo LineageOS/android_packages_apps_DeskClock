@@ -1,0 +1,21 @@
+{
+  "comments": [
+    {
+      "unresolved": false,
+      "key": {
+        "uuid": "0df55f88_ad5bbb03",
+        "filename": "/PATCHSET_LEVEL",
+        "patchSetId": 2
+      },
+      "lineNbr": 0,
+      "author": {
+        "id": 29669
+      },
+      "writtenOn": "2024-01-31T05:46:42Z",
+      "side": 1,
+      "message": "Is it possible to make DeskClock as close to pixel clock app? The work on LatinIME was impressive. I have a reference commit for this. It makes look more like pixel than old aosp style. Even the widgets are pixel style.\n\nReference commits :\n\nhttps://github.com/RisingTechOSS/android_packages_apps_DeskClock/commit/c880fe00d10d3797405cfde35fa5df38c9b52b5f\n\nhttps://github.com/RisingTechOSS/android_packages_apps_DeskClock/commit/70ee45e9c9262c119928a28a29fc44ee7f76ad6e\n\nhttps://github.com/RisingTechOSS/android_packages_apps_DeskClock/commit/d77569951c2bb2333987ae093911800869b5591f\n\nhttps://github.com/RisingTechOSS/android_packages_apps_DeskClock/commit/f828949de02d5c032bb38d3408b5d73c79a71f1a",
+      "revId": "c3763b44a17438294e6fa713876013d6084585e5",
+      "serverId": "1ec6b3db-b2c1-4fa4-84a2-4c7efe89ba71"
+    }
+  ]
+}
