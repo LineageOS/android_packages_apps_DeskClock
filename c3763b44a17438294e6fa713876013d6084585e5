@@ -16,6 +16,24 @@
       "message": "Is it possible to make DeskClock as close to pixel clock app? The work on LatinIME was impressive. I have a reference commit for this. It makes look more like pixel than old aosp style. Even the widgets are pixel style.\n\nReference commits :\n\nhttps://github.com/RisingTechOSS/android_packages_apps_DeskClock/commit/c880fe00d10d3797405cfde35fa5df38c9b52b5f\n\nhttps://github.com/RisingTechOSS/android_packages_apps_DeskClock/commit/70ee45e9c9262c119928a28a29fc44ee7f76ad6e\n\nhttps://github.com/RisingTechOSS/android_packages_apps_DeskClock/commit/d77569951c2bb2333987ae093911800869b5591f\n\nhttps://github.com/RisingTechOSS/android_packages_apps_DeskClock/commit/f828949de02d5c032bb38d3408b5d73c79a71f1a",
       "revId": "c3763b44a17438294e6fa713876013d6084585e5",
       "serverId": "1ec6b3db-b2c1-4fa4-84a2-4c7efe89ba71"
+    },
+    {
+      "unresolved": false,
+      "key": {
+        "uuid": "64c8ff7d_e5746afd",
+        "filename": "/PATCHSET_LEVEL",
+        "patchSetId": 2
+      },
+      "lineNbr": 0,
+      "author": {
+        "id": 16185
+      },
+      "writtenOn": "2024-01-31T05:49:25Z",
+      "side": 1,
+      "message": "you\u0027re welcome to pick, adapt, and push these to gerrit for review.\n\nnot sure it\u0027ll be accepted in full in that form but worth review probably.",
+      "parentUuid": "0df55f88_ad5bbb03",
+      "revId": "c3763b44a17438294e6fa713876013d6084585e5",
+      "serverId": "1ec6b3db-b2c1-4fa4-84a2-4c7efe89ba71"
     }
   ]
 }
