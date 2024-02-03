@@ -16,6 +16,24 @@
       "message": "this also needs to be done in the other case (if selectInitialPosition) or otherwise the screensaver is not applying the settings (tint, dim) until it moves first. Wasn\u0027t sure why you didn\u0027t do it that way\n\nAlso, why is this delayed here (when the screensaver moves the first time) by 5ms, where DND is already set? and why 5ms?",
       "revId": "f8f6554d8062d0f7e0d34b05e1ae0ac5ff0bf70f",
       "serverId": "1ec6b3db-b2c1-4fa4-84a2-4c7efe89ba71"
+    },
+    {
+      "unresolved": false,
+      "key": {
+        "uuid": "74a1a018_a2b044f5",
+        "filename": "src/com/android/deskclock/MoveScreensaverRunnable.java",
+        "patchSetId": 8
+      },
+      "lineNbr": 148,
+      "author": {
+        "id": 13028
+      },
+      "writtenOn": "2024-02-03T16:19:47Z",
+      "side": 1,
+      "message": "Done",
+      "parentUuid": "c9cff6fc_b11e24dc",
+      "revId": "f8f6554d8062d0f7e0d34b05e1ae0ac5ff0bf70f",
+      "serverId": "1ec6b3db-b2c1-4fa4-84a2-4c7efe89ba71"
     }
   ]
 }
