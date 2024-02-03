@@ -34,6 +34,24 @@
       "parentUuid": "c9cff6fc_b11e24dc",
       "revId": "f8f6554d8062d0f7e0d34b05e1ae0ac5ff0bf70f",
       "serverId": "1ec6b3db-b2c1-4fa4-84a2-4c7efe89ba71"
+    },
+    {
+      "unresolved": false,
+      "key": {
+        "uuid": "5c9ef21e_61fe2ba9",
+        "filename": "src/com/android/deskclock/MoveScreensaverRunnable.java",
+        "patchSetId": 8
+      },
+      "lineNbr": 148,
+      "author": {
+        "id": 25889
+      },
+      "writtenOn": "2024-02-03T16:20:13Z",
+      "side": 1,
+      "message": "Done",
+      "parentUuid": "c9cff6fc_b11e24dc",
+      "revId": "f8f6554d8062d0f7e0d34b05e1ae0ac5ff0bf70f",
+      "serverId": "1ec6b3db-b2c1-4fa4-84a2-4c7efe89ba71"
     }
   ]
 }
