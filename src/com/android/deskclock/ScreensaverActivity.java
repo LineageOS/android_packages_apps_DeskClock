@@ -105,7 +105,7 @@ public class ScreensaverActivity extends BaseActivity {
 
         Utils.setClockIconTypeface(mMainClockView);
         Utils.setScreensaverTimeFormat((TextClock) digitalClock, false);
-        Utils.setClockStyle(digitalClock, analogClock);
+        Utils.setScreensaverClockStyle(digitalClock, analogClock);
         Utils.dimClockView(true, mMainClockView);
         analogClock.enableSeconds(false);
 
