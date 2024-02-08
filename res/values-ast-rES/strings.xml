@@ -1,0 +1,185 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!--
+  Copyright (C) 2016 The Android Open Source Project
+
+  Licensed under the Apache License, Version 2.0 (the "License");
+  you may not use this file except in compliance with the License.
+  You may obtain a copy of the License at
+
+      http://www.apache.org/licenses/LICENSE-2.0
+
+  Unless required by applicable law or agreed to in writing, software
+  distributed under the License is distributed on an "AS IS" BASIS,
+  WITHOUT WARRANTIES OR CONDITIONS OF ANY KIND, either express or implied.
+  See the License for the specific language governing permissions and
+  limitations under the License.
+  -->
+<resources xmlns:xliff="urn:oasis:names:tc:xliff:document:1.2" xmlns:tools="http://schemas.android.com/tools">
+    <string name="timer_sound">Soníu del temporizador</string>
+    <string name="alarm_missed_text"><xliff:g id="alarm_time">%1$s</xliff:g> - <xliff:g id="alarm_label">%2$s</xliff:g></string>
+    <string name="day_concat">", "</string>
+    <string name="loading_widget">Cargando\u2026</string>
+    <string-array name="crescendo_entries">
+        <item>Off</item>
+        <item>5 segundos</item>
+        <item>10 segundos</item>
+        <item>15 segundos</item>
+        <item>20 segundos</item>
+        <item>25 segundos</item>
+        <item>30 segundos</item>
+        <item>35 segundos</item>
+        <item>40 segundos</item>
+        <item>45 segundos</item>
+        <item>50 segundos</item>
+        <item>55 segundos</item>
+        <item>60 segundos</item>
+    </string-array>
+    <string-array name="snooze_duration_entries">
+        <item>1 minutu</item>
+        <item>2 minutos</item>
+        <item>3 minutos</item>
+        <item>4 minutos</item>
+        <item>5 minutos</item>
+        <item>6 minutos</item>
+        <item>7 minutos</item>
+        <item>8 minutos</item>
+        <item>9 minutos</item>
+        <item>10 minutos</item>
+        <item>11 minutos</item>
+        <item>12 minutos</item>
+        <item>13 minutos</item>
+        <item>14 minutos</item>
+        <item>15 minutos</item>
+        <item>16 minutos</item>
+        <item>17 minutos</item>
+        <item>18 minutos</item>
+        <item>19 minutos</item>
+        <item>20 minutos</item>
+        <item>21 minutos</item>
+        <item>22 minutos</item>
+        <item>23 minutes</item>
+        <item>24 minutos</item>
+        <item>25 minutos</item>
+        <item>26 minutes</item>
+        <item>27 minutes</item>
+        <item>28 minutes</item>
+        <item>29 minutes</item>
+        <item>30 minutos</item>
+    </string-array>
+    <string-array name="week_start_entries">
+        <item>Sábadu</item>
+        <item>Domingu</item>
+        <item>Llunes</item>
+    </string-array>
+    <string name="button_cities">Ciudaes</string>
+    <string name="menu_item_settings">Axustes</string>
+    <string name="hours_minutes_seconds"><xliff:g id="hours" example="2">%1$d</xliff:g>:<xliff:g id="minutes" example="3">%2$02d</xliff:g>:<xliff:g id="seconds" example="44">%3$02d</xliff:g></string>
+    <string name="minutes_seconds"><xliff:g id="minutes" example="3">%1$d</xliff:g>:<xliff:g id="seconds" example="44">%2$02d</xliff:g></string>
+    <string-array name="sw_share_strings" translatable="true">
+        <item>Naide cuerre más que tu.</item>
+        <item>Esfruta de los frutos del to trabayu.</item>
+        <item>Sábese que los Androides son rápidos, ¡mas non tanto como tu!</item>
+        <item>¡Uf!</item>
+        <item>713|\/||*05 1337.</item>
+        <item>¡Qué velocidá más prodixosa!</item>
+        <item>Vamos volver saltar nel tiempu.</item>
+        <item>Namás un saltu a la esquierda.</item>
+        <item>Cuerres más que la lluz.</item>
+        <item>Velocidá fotónica</item>
+    </string-array>
+    <string name="cities_activity_title">Ciudaes</string>
+    <string name="clock_settings">Reló</string>
+    <string name="clock_style">Estilu</string>
+    <string-array name="timezone_labels" tools:ignore="Typos">
+        <item>"Marshall Islands"</item>
+        <item>"Midway Island"</item>
+        <item>"Hawaii"</item>
+        <item>"Alaska"</item>
+        <item>"Pacific Time"</item>
+        <item>"Tijuana"</item>
+        <item>"Arizona"</item>
+        <item>"Chihuahua"</item>
+        <item>"Mountain Time"</item>
+        <item>"Central America"</item>
+        <item>"Central Time"</item>
+        <item>"Ciudá de Méxicu"</item>
+        <item>"Saskatchewan"</item>
+        <item>"Bogotá"</item>
+        <item>"Eastern Time"</item>
+        <item>"Venezuela"</item>
+        <item>"Atlantic Time (Barbados)"</item>
+        <item>"Atlantic Time (Canada)"</item>
+        <item>"Manaus"</item>
+        <item>"Santiago"</item>
+        <item>"Newfoundland"</item>
+        <item>"Brasilia"</item>
+        <item>"Buenos Aires"</item>
+        <item>"Groenlandia"</item>
+        <item>"Montevidéu"</item>
+        <item>"Mid-Atlantic"</item>
+        <item>"Azores"</item>
+        <item>"Cape Verde Islands"</item>
+        <item>"Casablanca"</item>
+        <item>"London, Dublin"</item>
+        <item>"Amsterdam, Berlin"</item>
+        <item>"Belgráu"</item>
+        <item>"Bruxeles"</item>
+        <item>"Sarayevu"</item>
+        <item>"Windhoek"</item>
+        <item>"W. Africa Time"</item>
+        <item>"Amman, Jordan"</item>
+        <item>"Athens, Istanbul"</item>
+        <item>"Beirut, Lebanon"</item>
+        <item>"Cairo"</item>
+        <item>"Ḥélsinki"</item>
+        <item>"Xerusalén"</item>
+        <item>"Minsk"</item>
+        <item>"Ḥarare"</item>
+        <item>"Bagdad"</item>
+        <item>"Moscú"</item>
+        <item>"Kuwait"</item>
+        <item>"Nairobi"</item>
+        <item>"Teḥrán"</item>
+        <item>"Bakú"</item>
+        <item>"Tblisi"</item>
+        <item>"Yereván"</item>
+        <item>"Dubai"</item>
+        <item>"Kabul"</item>
+        <item>"Islamabad, Karachi"</item>
+        <item>"Ural'sk"</item>
+        <item>"Yekaterinburg"</item>
+        <item>"Kolkata"</item>
+        <item>"Sri Lanka"</item>
+        <item>"Katmandú"</item>
+        <item>"Astaná"</item>
+        <item>"Yangon"</item>
+        <item>"Krasnoyarsk"</item>
+        <item>"Bangkok"</item>
+        <item>"Beixín"</item>
+        <item>"Ḥong Kong"</item>
+        <item>"Irkutsk"</item>
+        <item>"Kuala Lumpur"</item>
+        <item>"Perth"</item>
+        <item>"Taipéi"</item>
+        <item>"Seúl"</item>
+        <item>"Tokyo, Osaka"</item>
+        <item>"Yakutsk"</item>
+        <item>"Adelaide"</item>
+        <item>"Darwin"</item>
+        <item>"Brisbane"</item>
+        <item>"Hobart"</item>
+        <item>"Sydney, Canberra"</item>
+        <item>"Vladivostok"</item>
+        <item>"Guam"</item>
+        <item>"Magadan"</item>
+        <item>"Auckland"</item>
+        <item>"Fiji"</item>
+        <item>"Tonga"</item>
+        <item>"Xakarta"</item>
+    </string-array>
+    <string name="shortcut_new_alarm_short">Alarma nueva</string>
+    <string name="shortcut_start_stopwatch_long">Aniciar el cronómetru</string>
+    <string name="night_mode_title">Mou nocherniegu</string>
+    <string name="world_tomorrow">Mañana</string>
+    <string name="world_yesterday">Ayeri</string>
+</resources>

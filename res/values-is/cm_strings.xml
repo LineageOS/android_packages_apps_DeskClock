@@ -16,17 +16,14 @@
      limitations under the License.
 -->
 <resources xmlns:xliff="urn:oasis:names:tc:xliff:document:1.2">
-    <string name="flip_action_title">Acción al voltear el dispositivo</string>
-    <string name="shake_action_title">Acción al agitar el dispositivo</string>
+    <string name="flip_action_title">Aðgerð við að fletta tæki</string>
+    <string name="shake_action_title">Aðgerð við að hrista tæki</string>
     <string-array name="action_setting_entries">
-        <item>Repetir alarma</item>
-        <item>Descartar</item>
-        <item>Nada</item>
+        <item>Blunda</item>
+        <item>Hafna</item>
+        <item>Ekkert</item>
     </string-array>
-    <string name="firing_alarms_timers_channel">Activar alarmas y temporizadores</string>
-    <string name="alarm_missed_channel">Alarmas perdidas</string>
-    <string name="alarm_snooze_channel">Alarmas pospuestas</string>
-    <string name="alarm_upcoming_channel">Próximas alarmas</string>
-    <string name="stopwatch_channel">Cronómetro</string>
-    <string name="timer_channel">Temporizador</string>
+    <string name="alarm_upcoming_channel">Næstu vekjarar</string>
+    <string name="stopwatch_channel">Skeiðklukka</string>
+    <string name="timer_channel">Niðurteljari</string>
 </resources>
