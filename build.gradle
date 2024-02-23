@@ -5,7 +5,7 @@ buildscript {
     }
 
     dependencies {
-        classpath 'com.android.tools.build:gradle:7.4.0'
+        classpath 'com.android.tools.build:gradle:8.2.2'
     }
 }
 
@@ -19,6 +19,7 @@ allprojects {
 apply plugin: 'com.android.application'
 
 android {
+    namespace 'com.android.deskclock'
     compileSdk 34
 
     defaultConfig {
@@ -39,6 +40,9 @@ android {
         }
     }
 
+    buildFeatures {
+        buildConfig true
+    }
     compileOptions {
         sourceCompatibility JavaVersion.VERSION_11
         targetCompatibility JavaVersion.VERSION_11
