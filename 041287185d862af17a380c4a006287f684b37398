@@ -1,0 +1,38 @@
+{
+  "comments": [
+    {
+      "unresolved": true,
+      "key": {
+        "uuid": "dffcb6d2_72cb19ca",
+        "filename": "src/com/android/deskclock/uidata/FormattedStringModel.java",
+        "patchSetId": 2
+      },
+      "lineNbr": 59,
+      "author": {
+        "id": 13028
+      },
+      "writtenOn": "2024-02-24T10:31:06Z",
+      "side": 1,
+      "message": "line length",
+      "revId": "041287185d862af17a380c4a006287f684b37398",
+      "serverId": "1ec6b3db-b2c1-4fa4-84a2-4c7efe89ba71"
+    },
+    {
+      "unresolved": true,
+      "key": {
+        "uuid": "72d46bf0_11304390",
+        "filename": "src/com/android/deskclock/uidata/PeriodicCallbackModel.java",
+        "patchSetId": 2
+      },
+      "lineNbr": 73,
+      "author": {
+        "id": 13028
+      },
+      "writtenOn": "2024-02-24T10:31:06Z",
+      "side": 1,
+      "message": "line length",
+      "revId": "041287185d862af17a380c4a006287f684b37398",
+      "serverId": "1ec6b3db-b2c1-4fa4-84a2-4c7efe89ba71"
+    }
+  ]
+}
