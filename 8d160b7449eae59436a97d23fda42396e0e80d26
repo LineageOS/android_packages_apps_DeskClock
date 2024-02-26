@@ -1,0 +1,21 @@
+{
+  "comments": [
+    {
+      "unresolved": true,
+      "key": {
+        "uuid": "80232f97_3d2005ba",
+        "filename": "src/com/android/deskclock/settings/ScreensaverSettingsActivity.java",
+        "patchSetId": 10
+      },
+      "lineNbr": 160,
+      "author": {
+        "id": 11883
+      },
+      "writtenOn": "2024-02-26T19:53:04Z",
+      "side": 1,
+      "message": "I have no idea if that\u0027s ever the case, but maybe in RTL languages the percentage is in a different order, this should be a translatable string",
+      "revId": "8d160b7449eae59436a97d23fda42396e0e80d26",
+      "serverId": "1ec6b3db-b2c1-4fa4-84a2-4c7efe89ba71"
+    }
+  ]
+}
