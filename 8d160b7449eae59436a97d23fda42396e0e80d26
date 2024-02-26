@@ -16,6 +16,24 @@
       "message": "I have no idea if that\u0027s ever the case, but maybe in RTL languages the percentage is in a different order, this should be a translatable string",
       "revId": "8d160b7449eae59436a97d23fda42396e0e80d26",
       "serverId": "1ec6b3db-b2c1-4fa4-84a2-4c7efe89ba71"
+    },
+    {
+      "unresolved": false,
+      "key": {
+        "uuid": "64be878f_a33527d0",
+        "filename": "src/com/android/deskclock/settings/ScreensaverSettingsActivity.java",
+        "patchSetId": 10
+      },
+      "lineNbr": 160,
+      "author": {
+        "id": 25889
+      },
+      "writtenOn": "2024-02-26T21:45:36Z",
+      "side": 1,
+      "message": "Fixed, as well as the occurrence in the section above.",
+      "parentUuid": "80232f97_3d2005ba",
+      "revId": "8d160b7449eae59436a97d23fda42396e0e80d26",
+      "serverId": "1ec6b3db-b2c1-4fa4-84a2-4c7efe89ba71"
     }
   ]
 }
