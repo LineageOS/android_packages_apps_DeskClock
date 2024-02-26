@@ -16,6 +16,24 @@
       "message": "you should instead use getResources().get strong(r.string...., newValue)\nand use the proper string formatter in the resource",
       "revId": "93466f9e6a7d8a3d2ff6366cab4726959a2cbfbe",
       "serverId": "1ec6b3db-b2c1-4fa4-84a2-4c7efe89ba71"
+    },
+    {
+      "unresolved": false,
+      "key": {
+        "uuid": "0fbdbc07_6c453395",
+        "filename": "src/com/android/deskclock/settings/ScreensaverSettingsActivity.java",
+        "patchSetId": 11
+      },
+      "lineNbr": 111,
+      "author": {
+        "id": 25889
+      },
+      "writtenOn": "2024-02-26T22:06:22Z",
+      "side": 1,
+      "message": "Done.",
+      "parentUuid": "fc6cd9d1_bdd25150",
+      "revId": "93466f9e6a7d8a3d2ff6366cab4726959a2cbfbe",
+      "serverId": "1ec6b3db-b2c1-4fa4-84a2-4c7efe89ba71"
     }
   ]
 }
