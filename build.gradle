@@ -1,22 +1,6 @@
-buildscript {
-    repositories {
-        google()
-        mavenCentral()
-    }
-
-    dependencies {
-        classpath 'com.android.tools.build:gradle:8.2.2'
-    }
+plugins {
+    id("com.android.application") version "8.1.2" apply true
 }
-
-allprojects {
-    repositories {
-        google()
-        mavenCentral()
-    }
-}
-
-apply plugin: 'com.android.application'
 
 android {
     namespace 'com.android.deskclock'
