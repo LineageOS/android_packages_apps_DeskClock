@@ -33,7 +33,7 @@ android {
     }
 
     lint {
-        ignore 'ProtectedPermissions', 'ExtraTranslation', 'ImpliedQuantity', 'MissingQuantity', 'MissingTranslation'
+        lintConfig = file("lint.xml")
     }
 }
 
