@@ -1,0 +1,21 @@
+{
+  "comments": [
+    {
+      "unresolved": true,
+      "key": {
+        "uuid": "3a497ad6_5d059685",
+        "filename": "src/com/android/deskclock/settings/ScreensaverSettingsActivity.java",
+        "patchSetId": 12
+      },
+      "lineNbr": 163,
+      "author": {
+        "id": 13028
+      },
+      "writtenOn": "2024-03-03T20:56:08Z",
+      "side": 1,
+      "message": "extraneous space before closing )",
+      "revId": "10e5c9778dd9ea6bf6bd1efe561e762c4bc56465",
+      "serverId": "1ec6b3db-b2c1-4fa4-84a2-4c7efe89ba71"
+    }
+  ]
+}
