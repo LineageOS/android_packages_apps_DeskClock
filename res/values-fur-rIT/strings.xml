@@ -64,14 +64,14 @@
     <string name="timer_remaining_single">al reste</string>
     <string name="timer_remaining_multiple">a restin</string>
     <string-array name="alarm_set">
-        <item>Svee metude a mancul di 1 minût di cumò.</item>
-        <item>Svee metude a <xliff:g id="DAYS" example="2 days">%1$s</xliff:g> di cumò.</item>
-        <item>Svee metude a <xliff:g id="HOURS" example="2 hours">%2$s</xliff:g> di cumò.</item>
-        <item>Svee metude a <xliff:g id="DAYS" example="2 days">%1$s</xliff:g> e <xliff:g id="HOURS" example="2 hours">%2$s</xliff:g> di cumò.</item>
-        <item>Svee metude a <xliff:g id="MINUTES" example="2 minutes">%3$s</xliff:g> di cumò.</item>
-        <item>Svee metude a <xliff:g id="DAYS" example="2 days">%1$s</xliff:g> e <xliff:g id="MINUTES" example="2 minutes">%3$s</xliff:g> di cumò.</item>
-        <item>Svee metude a <xliff:g id="HOURS" example="2 hours">%2$s</xliff:g> e <xliff:g id="MINUTES" example="2 minutes">%3$s</xliff:g> di cumò.</item>
-        <item>Svee metude a <xliff:g id="DAYS" example="2 days">%1$s</xliff:g>, <xliff:g id="HOURS" example="2 hours">%2$s</xliff:g> e <xliff:g id="MINUTES" example="2 minutes">%3$s</xliff:g> di cumò.</item>
+        <item>Svee ca di mancul di 1 minût.</item>
+        <item>Svee ca di <xliff:g id="DAYS" example="2 days">%1$s</xliff:g>.</item>
+        <item>Svee ca di <xliff:g id="HOURS" example="2 hours">%2$s</xliff:g>.</item>
+        <item>Svee ca di <xliff:g id="DAYS" example="2 days">%1$s</xliff:g> e <xliff:g id="HOURS" example="2 hours">%2$s</xliff:g>.</item>
+        <item>Svee ca di <xliff:g id="MINUTES" example="2 minutes">%3$s</xliff:g>.</item>
+        <item>Svee ca di <xliff:g id="DAYS" example="2 days">%1$s</xliff:g> e <xliff:g id="MINUTES" example="2 minutes">%3$s</xliff:g>.</item>
+        <item>Svee ca di <xliff:g id="HOURS" example="2 hours">%2$s</xliff:g> e <xliff:g id="MINUTES" example="2 minutes">%3$s</xliff:g>.</item>
+        <item>Svee ca di <xliff:g id="DAYS" example="2 days">%1$s</xliff:g>, <xliff:g id="HOURS" example="2 hours">%2$s</xliff:g> e <xliff:g id="MINUTES" example="2 minutes">%3$s</xliff:g>.</item>
     </string-array>
     <plurals name="days">
         <item quantity="one">1 dì</item>
