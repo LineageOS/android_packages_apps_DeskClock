@@ -39,4 +39,5 @@
     <string name="dialog_permissions_post_notifications">Mae\'r ap hwn yn dibynnu ar hysbysiadau. Hebddynt, ni all redeg!</string>
     <string name="selected">Dewiswyd</string>
     <string name="more_options">Rhagor o ddewisiadau</string>
+    <string name="widget_choice_title">Dewis dy arddull</string>
 </resources>
