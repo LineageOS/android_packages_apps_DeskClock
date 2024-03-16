@@ -16,8 +16,16 @@
      limitations under the License.
 -->
 <resources xmlns:xliff="urn:oasis:names:tc:xliff:document:1.2">
+    <string name="flip_action_title">ডিভাইস উল্টালে যা করবে</string>
+    <string-array name="action_setting_entries">
+        <item>স্নুজ</item>
+        <item>বাতিল</item>
+        <item>কিছু না</item>
+    </string-array>
+    <string name="alarm_snooze_channel">স্নুজ করা অ্যালার্মগুলো</string>
     <string name="alarm_upcoming_channel">আসন্ন অ্যালার্মগুলো</string>
     <string name="stopwatch_channel">স্টপওয়াচ</string>
     <string name="timer_channel">টাইমার</string>
     <string name="add_label">লেবেল যুক্ত করো</string>
+    <string name="dialog_permissions_dismiss">বাতিল</string>
 </resources>
