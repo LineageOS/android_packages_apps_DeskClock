@@ -30,6 +30,7 @@
     <string name="timer_channel">Timer</string>
     <string name="add_label">Tambah label</string>
     <string name="dialog_permissions_title">Perizinan</string>
+    <string name="dialog_permissions_ask">Minta izin lagi</string>
     <string name="dialog_permissions_dismiss">Tutup</string>
     <string name="dialog_permissions_settings">Setelan</string>
     <string name="selected">Dipilih</string>
