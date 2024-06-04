@@ -36,7 +36,6 @@
         <item name="colorPrimaryDark">#00000000</item>
         <item name="imageButtonStyle">@style/Widget.ImageButton</item>
 
-        <item name="android:switchStyle">@style/DeskClock.Switch</item>
         <item name="alertDialogTheme">@style/AlertDialogTheme</item>
         <item name="snackbarStyle">@style/SnackBarStyle</item>
         <item name="actionBarSize">64dp</item>
@@ -46,13 +45,7 @@
         <item name="colorPrimary">@color/default_background</item>
         <item name="elevationOverlayColor">?attr/colorPrimary</item>
         <item name="colorControlActivated">?attr/colorAccent</item>
-        <item name="android:switchStyle">@style/DeskClock.Switch</item>
-        <item name="preferenceTheme">@style/Theme.DeskClock.Settings.PreferenceTheme</item>
         <item name="android:dropDownSpinnerStyle">@style/DeskClock.Settings.DropDownSpinnerStyle</item>
-    </style>
-
-    <style name="Theme.DeskClock.Settings.PreferenceTheme" parent="@style/PreferenceThemeOverlay">
-        <item name="switchPreferenceCompatStyle">@style/DeskClock.SwitchPreferenceCompat</item>
     </style>
 
     <style name="Theme.DeskClock.CitySelection">
