@@ -29,5 +29,8 @@
     <string name="alarm_upcoming_channel">Tulevat hälytykset</string>
     <string name="stopwatch_channel">Sekuntikello</string>
     <string name="timer_channel">Ajastin</string>
+    <string name="dialog_permissions_title">Käyttöoikeudet</string>
+    <string name="dialog_permissions_ask">Kysy uudelleen</string>
     <string name="dialog_permissions_dismiss">Hylkää</string>
+    <string name="dialog_permissions_settings">Asetukset</string>
 </resources>
