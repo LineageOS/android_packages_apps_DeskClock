@@ -16,8 +16,23 @@
      limitations under the License.
 -->
 <resources xmlns:xliff="urn:oasis:names:tc:xliff:document:1.2">
+    <string name="flip_action_title">Gníomh smeach an ghléis</string>
+    <string name="shake_action_title">Gníomh croith gléas</string>
+    <string-array name="action_setting_entries">
+        <item>Cur ar suan</item>
+        <item>Díbhe</item>
+        <item>Tada</item>
+    </string-array>
+    <string name="firing_alarms_timers_channel">Aláraim lámhaigh &amp; amadóirí</string>
+    <string name="alarm_missed_channel">Aláraim caillte</string>
+    <string name="alarm_snooze_channel">Aláraim ar suan</string>
+    <string name="alarm_upcoming_channel">Aláraim atá le teacht</string>
+    <string name="stopwatch_channel">Stopuaireadóir</string>
+    <string name="timer_channel">Uaineadóir</string>
+    <string name="add_label">Cuir lipéad leis</string>
     <string name="dialog_permissions_title">Ceadanna</string>
     <string name="dialog_permissions_ask">Iarr arís</string>
+    <string name="dialog_permissions_dismiss">Díbhe</string>
     <string name="dialog_permissions_settings">Socruithe</string>
     <string name="dialog_permissions_power_off_alarm">Gan an cead seo ní bheidh do ghléas in ann cumhacht a chur air féin chun aláram a lasadh</string>
     <string name="dialog_permissions_no_permission">Diúltaíodh ceadanna riachtanacha, cumasaigh iad ón aip Socruithe</string>
