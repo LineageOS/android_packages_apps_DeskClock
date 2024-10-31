@@ -9,7 +9,9 @@ android_app {
     sdk_version: "current",
     overrides: ["AlarmClock"],
     optimize: {
+        optimize: true,
         proguard_flags_files: ["proguard.flags"],
+        shrink_resources: true,
     },
     srcs: [
         "src/**/*.java",
