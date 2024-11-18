@@ -1,0 +1,44 @@
+{
+  "comments": [
+    {
+      "unresolved": false,
+      "key": {
+        "uuid": "7e54b07f_f4b638df",
+        "filename": "/PATCHSET_LEVEL",
+        "patchSetId": 15
+      },
+      "lineNbr": 0,
+      "author": {
+        "id": 4550
+      },
+      "writtenOn": "2024-11-18T09:49:29Z",
+      "side": 1,
+      "message": "Strings should be in cm_strings.xml, don\u0027t modify the AOSP file",
+      "revId": "f345d3380b2228af204168120430078b7bec68ed",
+      "serverId": "1ec6b3db-b2c1-4fa4-84a2-4c7efe89ba71"
+    },
+    {
+      "unresolved": true,
+      "key": {
+        "uuid": "e02d88b7_5de89056",
+        "filename": "res/values/strings.xml",
+        "patchSetId": 15
+      },
+      "lineNbr": 923,
+      "author": {
+        "id": 4550
+      },
+      "writtenOn": "2024-11-18T09:49:29Z",
+      "side": 1,
+      "message": "Remove translatable\u003d\"true\"",
+      "range": {
+        "startLine": 923,
+        "startChar": 45,
+        "endLine": 923,
+        "endChar": 64
+      },
+      "revId": "f345d3380b2228af204168120430078b7bec68ed",
+      "serverId": "1ec6b3db-b2c1-4fa4-84a2-4c7efe89ba71"
+    }
+  ]
+}
