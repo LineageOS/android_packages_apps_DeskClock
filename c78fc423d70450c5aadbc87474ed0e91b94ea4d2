@@ -34,6 +34,24 @@
       "parentUuid": "0f3e065f_351777a4",
       "revId": "c78fc423d70450c5aadbc87474ed0e91b94ea4d2",
       "serverId": "1ec6b3db-b2c1-4fa4-84a2-4c7efe89ba71"
+    },
+    {
+      "unresolved": false,
+      "key": {
+        "uuid": "d8f5a378_7ab4f65a",
+        "filename": "/PATCHSET_LEVEL",
+        "patchSetId": 3
+      },
+      "lineNbr": 0,
+      "author": {
+        "id": 9760
+      },
+      "writtenOn": "2024-11-18T13:27:03Z",
+      "side": 1,
+      "message": "And how did I not see it myself... 😊",
+      "parentUuid": "6760e472_de3622ce",
+      "revId": "c78fc423d70450c5aadbc87474ed0e91b94ea4d2",
+      "serverId": "1ec6b3db-b2c1-4fa4-84a2-4c7efe89ba71"
     }
   ]
 }
