@@ -1,0 +1,21 @@
+{
+  "comments": [
+    {
+      "unresolved": false,
+      "key": {
+        "uuid": "ede38570_5496c79d",
+        "filename": "/PATCHSET_LEVEL",
+        "patchSetId": 1
+      },
+      "lineNbr": 0,
+      "author": {
+        "id": 4550
+      },
+      "writtenOn": "2024-11-18T09:49:54Z",
+      "side": 1,
+      "message": "Strings should be in cm_strings.xml, don\u0027t modify the AOSP file",
+      "revId": "7d7ab056104de6a4fb8dd5378cd7788260fd3003",
+      "serverId": "1ec6b3db-b2c1-4fa4-84a2-4c7efe89ba71"
+    }
+  ]
+}
