@@ -1,4 +1,22 @@
 {
-  "comments": [],
+  "comments": [
+    {
+      "unresolved": false,
+      "key": {
+        "uuid": "139462a9_620c72a7",
+        "filename": "/PATCHSET_LEVEL",
+        "patchSetId": 4
+      },
+      "lineNbr": 0,
+      "author": {
+        "id": 34397
+      },
+      "writtenOn": "2024-11-20T13:21:37Z",
+      "side": 1,
+      "message": "problemas con servicios de google play",
+      "revId": "6803bb26de832cad9de44860f6bbfa52cd9de137",
+      "serverId": "1ec6b3db-b2c1-4fa4-84a2-4c7efe89ba71"
+    }
+  ],
   "submitRequirementResults": []
 }
