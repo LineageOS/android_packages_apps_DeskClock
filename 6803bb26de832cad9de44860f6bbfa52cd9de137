@@ -16,6 +16,24 @@
       "message": "problemas con servicios de google play",
       "revId": "6803bb26de832cad9de44860f6bbfa52cd9de137",
       "serverId": "1ec6b3db-b2c1-4fa4-84a2-4c7efe89ba71"
+    },
+    {
+      "unresolved": false,
+      "key": {
+        "uuid": "ad1eee3d_ce1c97c2",
+        "filename": "/PATCHSET_LEVEL",
+        "patchSetId": 4
+      },
+      "lineNbr": 0,
+      "author": {
+        "id": 13028
+      },
+      "writtenOn": "2024-11-20T14:58:55Z",
+      "side": 1,
+      "message": "a) this project uses english, should be obvious\nb) this is a patch for deskclock and thus has nothing to do with google play\nc) this is not an issue tracker, you are in the completely wrong place (and even if you were, \"a problem\" is very specific...)",
+      "parentUuid": "139462a9_620c72a7",
+      "revId": "6803bb26de832cad9de44860f6bbfa52cd9de137",
+      "serverId": "1ec6b3db-b2c1-4fa4-84a2-4c7efe89ba71"
     }
   ],
   "submitRequirementResults": []
