@@ -1,0 +1,45 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!--
+     Copyright (C) 2012-2016 The CyanogenMod Project
+     Copyright (C) 2017-2018 The LineageOS Project
+
+     Licensed under the Apache License, Version 2.0 (the "License");
+     you may not use this file except in compliance with the License.
+     You may obtain a copy of the License at
+
+          http://www.apache.org/licenses/LICENSE-2.0
+
+     Unless required by applicable law or agreed to in writing, software
+     distributed under the License is distributed on an "AS IS" BASIS,
+     WITHOUT WARRANTIES OR CONDITIONS OF ANY KIND, either express or implied.
+     See the License for the specific language governing permissions and
+     limitations under the License.
+-->
+<resources xmlns:xliff="urn:oasis:names:tc:xliff:document:1.2">
+    <string name="flip_action_title">கருவி புரட்டு செயல்</string>
+    <string name="shake_action_title">கருவி உலுக்கு செயல்</string>
+    <string-array name="action_setting_entries">
+        <item>ஒத்திவைக்க</item>
+        <item>விலக்குக</item>
+        <item>இன்மை</item>
+    </string-array>
+    <string name="firing_alarms_timers_channel">தீ அலறிமணியும், நேரங்கணிப்பியும்</string>
+    <string name="alarm_missed_channel">தவறிய அலறிமணி</string>
+    <string name="alarm_snooze_channel">ஒத்திவைத்த அலறிமணி</string>
+    <string name="alarm_upcoming_channel">வரப்போகும் அலறிமணி</string>
+    <string name="stopwatch_channel">நொடிக்கணக்கி</string>
+    <string name="timer_channel">நேரங்கணிப்பி</string>
+    <string name="add_label">குறிப்பியைச் சேர்க்க</string>
+    <string name="dialog_permissions_title">அனுமதிகள்</string>
+    <string name="dialog_permissions_ask">மறுபடி கேட்க</string>
+    <string name="dialog_permissions_dismiss">விலக்குக</string>
+    <string name="dialog_permissions_settings">அமைப்புகள்</string>
+    <string name="dialog_permissions_power_off_alarm">இவ்வனுமதி இல்லாமல் உங்கள் கருவி தானாக ஆற்றலை இயங்கி அலறிமணியை இயக்க முடியாது</string>
+    <string name="dialog_permissions_no_permission">தேவைப்படும் அனுமதிகள் மறுக்கப்பட்டுள்ளன, அமைப்புகள் பயன்பாட்டிலிருந்து அவற்றை இயல்விக்க</string>
+    <string name="dialog_permissions_post_notifications">இப்பயன்பாடு அறிவிப்புகளைச் சார்ந்துள்ளது. அவையின்றி இஃது இயங்க முடியாது!</string>
+    <string name="selected">தேர்ந்தெடுக்கப்பட்டது</string>
+    <string name="more_options">கூடுதல் விருப்பத்தெரிவு</string>
+    <string name="widget_choice_title">உங்கள் பாணியைத் தேர்வுசெய்க</string>
+    <string name="widget_name_transparent">பின்னணியின்றி</string>
+    <string name="widget_name_solid">பின்னணியுடன்</string>
+</resources>
