@@ -77,13 +77,13 @@ import java.util.List;
  * This state behaves like the LOW_NOTIFICATION_STATE, but doesn't allow the user to hide it.
  * This state is in charge of triggering a FIRED_STATE or DISMISS_STATE.
  *
- * SNOOZED_STATE:
- * The SNOOZED_STATE behaves like a HIGH_NOTIFICATION_STATE, but with a different message. It
+ * SNOOZE_STATE:
+ * The SNOOZE_STATE behaves like a HIGH_NOTIFICATION_STATE, but with a different message. It
  * also increments the alarm time in the instance to reflect the new snooze time.
  *
  * FIRED_STATE:
  * The FIRED_STATE is used when the alarm is firing. It will start the AlarmService, and wait
- * until the user interacts with the alarm via SNOOZED_STATE or DISMISS_STATE change. If the user
+ * until the user interacts with the alarm via SNOOZE_STATE or DISMISS_STATE change. If the user
  * doesn't then it might be change to MISSED_STATE if auto-silenced was enabled.
  *
  * MISSED_STATE:

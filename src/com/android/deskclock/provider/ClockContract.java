@@ -194,7 +194,7 @@ public final class ClockContract {
          *
          * Can transitions to:
          * DISMISSED_STATE
-         * SNOOZED_STATE
+         * SNOOZE_STATE
          * MISSED_STATE
          */
         int FIRED_STATE = 5;
