@@ -136,7 +136,7 @@ public class AlarmInitReceiver extends BroadcastReceiver {
                             Calendar c = Calendar.getInstance();
                             c.setTimeInMillis(snoozeTime);
                             alarmInstance.setAlarmTime(c);
-                            alarmInstance.mAlarmState = AlarmInstance.SNOOZE_STATE;
+                            alarmInstance.mAlarmState = AlarmInstance.SNOOZED_STATE;
                             AlarmInstance.updateInstance(cr, alarmInstance);
                         }
                     }

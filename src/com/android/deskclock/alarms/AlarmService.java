@@ -397,7 +397,7 @@ public class AlarmService extends Service {
                 // Setup Snooze Action
                 startService(AlarmStateManager.createStateChangeIntent(this,
                         AlarmStateManager.ALARM_SNOOZE_TAG, mCurrentAlarm,
-                        AlarmInstance.SNOOZE_STATE));
+                        AlarmInstance.SNOOZED_STATE));
                 break;
             case ALARM_DISMISS:
                 // Setup Dismiss Action

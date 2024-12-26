@@ -21,7 +21,7 @@ import static com.android.deskclock.AlarmSelectionActivity.ACTION_DISMISS;
 import static com.android.deskclock.AlarmSelectionActivity.EXTRA_ACTION;
 import static com.android.deskclock.AlarmSelectionActivity.EXTRA_ALARMS;
 import static com.android.deskclock.provider.AlarmInstance.FIRED_STATE;
-import static com.android.deskclock.provider.AlarmInstance.SNOOZE_STATE;
+import static com.android.deskclock.provider.AlarmInstance.SNOOZED_STATE;
 import static com.android.deskclock.uidata.UiDataModel.Tab.ALARMS;
 import static com.android.deskclock.uidata.UiDataModel.Tab.TIMERS;
 
@@ -145,7 +145,7 @@ public class HandleApiCalls extends Activity {
         final Date alarmTime = instance.getAlarmTime().getTime();
         final String time = DateFormat.getTimeFormat(context).format(alarmTime);
 
-        if (instance.mAlarmState == FIRED_STATE || instance.mAlarmState == SNOOZE_STATE) {
+        if (instance.mAlarmState == FIRED_STATE || instance.mAlarmState == SNOOZED_STATE) {
             // Always dismiss alarms that are fired or snoozed.
             AlarmStateManager.deleteInstanceAndUpdateParent(context, instance);
         } else if (Utils.isAlarmWithin24Hours(instance)) {

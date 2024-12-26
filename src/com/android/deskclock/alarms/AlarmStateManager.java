@@ -428,7 +428,7 @@ public final class AlarmStateManager extends BroadcastReceiver {
     }
 
     /**
-     * This will set the alarm instance to the SNOOZE_STATE and update
+     * This will set the alarm instance to the SNOOZED_STATE and update
      * the application notifications and schedule any state changes that need
      * to occur in the future.
      *
@@ -449,7 +449,7 @@ public final class AlarmStateManager extends BroadcastReceiver {
         LogUtils.i("Setting snoozed state to instance " + instance.mId + " for "
                 + AlarmUtils.getFormattedTime(context, newAlarmTime));
         instance.setAlarmTime(newAlarmTime);
-        instance.mAlarmState = AlarmInstance.SNOOZE_STATE;
+        instance.mAlarmState = AlarmInstance.SNOOZED_STATE;
         AlarmInstance.updateInstance(context.getContentResolver(), instance);
 
         // Setup instance notification and scheduling timers
@@ -681,7 +681,7 @@ public final class AlarmStateManager extends BroadcastReceiver {
             } else {
                 setMissedState(context, instance);
             }
-        } else if (instance.mAlarmState == AlarmInstance.SNOOZE_STATE) {
+        } else if (instance.mAlarmState == AlarmInstance.SNOOZED_STATE) {
             // We only want to display snooze notification and not update the time,
             // so handle showing the notification directly
             AlarmNotifications.showSnoozeNotification(context, instance);
@@ -800,7 +800,7 @@ public final class AlarmStateManager extends BroadcastReceiver {
             case AlarmInstance.FIRED_STATE:
                 setFiredState(context, instance);
                 break;
-            case AlarmInstance.SNOOZE_STATE:
+            case AlarmInstance.SNOOZED_STATE:
                 setSnoozeState(context, instance, true /* showToast */);
                 break;
             case AlarmInstance.MISSED_STATE:

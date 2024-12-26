@@ -231,7 +231,7 @@ public final class Alarm implements Parcelable, ClockContract.AlarmsColumns {
     }
 
     public static boolean isTomorrow(Alarm alarm, Calendar now) {
-        if (alarm.instanceState == AlarmInstance.SNOOZE_STATE) {
+        if (alarm.instanceState == AlarmInstance.SNOOZED_STATE) {
             return false;
         }
 
@@ -344,11 +344,11 @@ public final class Alarm implements Parcelable, ClockContract.AlarmsColumns {
     }
 
     /**
-     * Whether the alarm is in a state to show preemptive dismiss. Valid states are SNOOZE_STATE
+     * Whether the alarm is in a state to show preemptive dismiss. Valid states are SNOOZED_STATE
      * HIGH_NOTIFICATION, LOW_NOTIFICATION, and HIDE_NOTIFICATION.
      */
     public boolean canPreemptivelyDismiss() {
-        return instanceState == AlarmInstance.SNOOZE_STATE
+        return instanceState == AlarmInstance.SNOOZED_STATE
                 || instanceState == AlarmInstance.HIGH_NOTIFICATION_STATE
                 || instanceState == AlarmInstance.LOW_NOTIFICATION_STATE
                 || instanceState == AlarmInstance.HIDE_NOTIFICATION_STATE;

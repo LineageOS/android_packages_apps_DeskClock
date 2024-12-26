@@ -356,7 +356,7 @@ public final class AlarmNotifications {
 
         // Setup Snooze Action
         Intent snoozeIntent = AlarmStateManager.createStateChangeIntent(service,
-                AlarmStateManager.ALARM_SNOOZE_TAG, instance, AlarmInstance.SNOOZE_STATE);
+                AlarmStateManager.ALARM_SNOOZE_TAG, instance, AlarmInstance.SNOOZED_STATE);
         snoozeIntent.putExtra(AlarmStateManager.FROM_NOTIFICATION_EXTRA, true);
         PendingIntent snoozePendingIntent = PendingIntent.getService(service,
                 ALARM_FIRING_NOTIFICATION_ID, snoozeIntent,
@@ -420,7 +420,7 @@ public final class AlarmNotifications {
             case AlarmInstance.HIGH_NOTIFICATION_STATE:
                 showUpcomingNotification(context, instance, false);
                 break;
-            case AlarmInstance.SNOOZE_STATE:
+            case AlarmInstance.SNOOZED_STATE:
                 showSnoozeNotification(context, instance);
                 break;
             case AlarmInstance.MISSED_STATE:

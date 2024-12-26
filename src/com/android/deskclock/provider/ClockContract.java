@@ -187,7 +187,7 @@ public final class ClockContract {
          * DISMISSED_STATE
          * FIRED_STATE
          */
-        int SNOOZE_STATE = 4;
+        int SNOOZED_STATE = 4;
 
         /**
          * Alarm state when alarm is being fired.
