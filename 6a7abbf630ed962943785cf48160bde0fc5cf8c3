@@ -16,6 +16,24 @@
       "message": "4 instances of SNOOZED_STATE vs 12 of SNOOZE_STATE. I\u0027d rather change the \"most of the documentation\" (4 cases) to SNOOZE_STATE",
       "revId": "6a7abbf630ed962943785cf48160bde0fc5cf8c3",
       "serverId": "1ec6b3db-b2c1-4fa4-84a2-4c7efe89ba71"
+    },
+    {
+      "unresolved": false,
+      "key": {
+        "uuid": "1ce3eee7_893d54f5",
+        "filename": "/PATCHSET_LEVEL",
+        "patchSetId": 1
+      },
+      "lineNbr": 0,
+      "author": {
+        "id": 34582
+      },
+      "writtenOn": "2024-12-27T00:54:37Z",
+      "side": 1,
+      "message": "OK, I can update it. I was keeping it \"past tense\" to be consistent with the other states (FIRED, MISSED, DISMISSED, PREDISMISSED).",
+      "parentUuid": "e8f86027_82d3c743",
+      "revId": "6a7abbf630ed962943785cf48160bde0fc5cf8c3",
+      "serverId": "1ec6b3db-b2c1-4fa4-84a2-4c7efe89ba71"
     }
   ]
 }
