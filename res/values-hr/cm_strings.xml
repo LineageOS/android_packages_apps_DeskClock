@@ -24,4 +24,6 @@
         <item>Ništa</item>
     </string-array>
     <string name="dialog_permissions_dismiss">Odbaci</string>
+    <string name="clock_brightness_percentage">%s%%</string>
+    <string name="night_mode_enabled_title">Omogućeno</string>
 </resources>

@@ -43,11 +43,26 @@
     <string name="widget_name_transparent">Без фона</string>
     <string name="widget_name_solid">С фоном</string>
     <string name="clock_brightness_percentage">%s%%</string>
+    <string name="night_mode_enabled_title">Включен</string>
+    <string name="night_mode_dnd_title">Следовать \"Не беспокоить\"</string>
+    <string name="night_mode_dnd_summary">Ночной режим следует за режимом \"Не беспокоить\"</string>
+    <string name="show_ampm_title">Показывать AM/PM</string>
+    <string name="show_ampm_summary">Если на цифровых часах хотите видеть AM/PM</string>
+    <string name="bold_text_title">Жирный текст часов</string>
+    <string name="bold_text_summary">Если текст цифровых часов должен быть жирным</string>
+    <string name="night_mode_brightness_text_title">Яркость</string>
+    <string name="clock_color_title">Цвет</string>
     <string-array name="clock_color_entries">
         <item>Белый</item>
         <item>Красный</item>
         <item>Зеленый</item>
         <item>Синий</item>
     </string-array>
+    <string name="screensaver_settings_title">Заставка</string>
+    <string name="screensaver_preview">Предварительный просмотр</string>
+    <string name="screensaver_preview_summary">Немедленно запускает заставку</string>
     <string name="screensaver_change_settings">Настройки</string>
+    <string name="screensaver_change_settings_summary">Открыть настройки заставки часов</string>
+    <string name="screensaver_daydream_settings">Выбрать/включить заставку</string>
+    <string name="screensaver_daydream_settings_summary">Открыть основные настройки заставки</string>
 </resources>

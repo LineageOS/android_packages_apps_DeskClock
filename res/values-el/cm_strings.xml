@@ -42,5 +42,18 @@
     <string name="widget_choice_title">Επιλέξτε το στυλ σας</string>
     <string name="widget_name_transparent">Χωρίς φόντο</string>
     <string name="widget_name_solid">Με φόντο</string>
+    <string name="clock_brightness_percentage">%s%%</string>
+    <string name="show_ampm_title">Εμφάνιση ΠΜ/ΜΜ</string>
+    <string name="bold_text_title">Έντονο κείμενο ρολογιού</string>
+    <string name="night_mode_brightness_text_title">Φωτεινότητα</string>
+    <string name="clock_color_title">Χρώμα</string>
+    <string-array name="clock_color_entries">
+        <item>Λευκό</item>
+        <item>Κόκκινο</item>
+        <item>Πράσινο</item>
+        <item>Μπλε</item>
+    </string-array>
+    <string name="screensaver_settings_title">Προφύλαξη οθόνης</string>
+    <string name="screensaver_preview">Προεπισκόπιση</string>
     <string name="screensaver_change_settings">Ρυθμίσεις</string>
 </resources>

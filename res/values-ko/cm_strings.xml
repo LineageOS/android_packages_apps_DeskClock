@@ -42,5 +42,27 @@
     <string name="widget_choice_title">스타일 선택</string>
     <string name="widget_name_transparent">투명</string>
     <string name="widget_name_solid">배경 있음</string>
+    <string name="clock_brightness_percentage">%s%%</string>
+    <string name="night_mode_enabled_title">켜짐</string>
+    <string name="night_mode_dnd_title">방해 금지 모드에 따르기</string>
+    <string name="night_mode_dnd_summary">방해 금지 모드의 상태에 따라 야간 모드를 켭니다.</string>
+    <string name="show_ampm_title">오전/오후 표시</string>
+    <string name="show_ampm_summary">디지털 시계에 오전/오후 표시</string>
+    <string name="bold_text_title">시계 텍스트 굵게</string>
+    <string name="bold_text_summary">디지털 시계의 텍스트를 굵게 표시</string>
+    <string name="night_mode_brightness_text_title">밝기</string>
+    <string name="clock_color_title">색상</string>
+    <string-array name="clock_color_entries">
+        <item>흰색</item>
+        <item>빨간색</item>
+        <item>초록색</item>
+        <item>파란색</item>
+    </string-array>
+    <string name="screensaver_settings_title">화면 보호기</string>
+    <string name="screensaver_preview">미리보기</string>
+    <string name="screensaver_preview_summary">지금 화면 보호기 시작</string>
     <string name="screensaver_change_settings">설정</string>
+    <string name="screensaver_change_settings_summary">시계의 화면 보호기 설정을 엽니다.</string>
+    <string name="screensaver_daydream_settings">화면 보호기 선택/켜기</string>
+    <string name="screensaver_daydream_settings_summary">화면 보호기 메인 설정을 엽니다.</string>
 </resources>

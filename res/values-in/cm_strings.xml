@@ -35,5 +35,12 @@
     <string name="dialog_permissions_settings">Setelan</string>
     <string name="selected">Dipilih</string>
     <string name="more_options">Opsi lanjutan</string>
+    <string-array name="clock_color_entries">
+        <item>White</item>
+        <item>Red</item>
+        <item>Hijau</item>
+        <item>Biru</item>
+    </string-array>
+    <string name="screensaver_preview">Pratinjau</string>
     <string name="screensaver_change_settings">Setelan</string>
 </resources>
