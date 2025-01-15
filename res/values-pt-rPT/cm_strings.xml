@@ -39,5 +39,30 @@
     <string name="dialog_permissions_post_notifications">Esta aplicação depende de notificações. Sem elas, não pode ser executada!</string>
     <string name="selected">Selecionado</string>
     <string name="more_options">Mais opções</string>
+    <string name="widget_choice_title">Escolha o seu estilo</string>
+    <string name="widget_name_transparent">Sem fundo</string>
+    <string name="widget_name_solid">Com fundo</string>
+    <string name="clock_brightness_percentage">%s%%</string>
+    <string name="night_mode_enabled_title">Ativado</string>
+    <string name="night_mode_dnd_title">Seguir o estado do modo Não incomodar</string>
+    <string name="night_mode_dnd_summary">O modo noturno segue o estado do modo Não incomodar</string>
+    <string name="show_ampm_title">Mostrar AM/PM</string>
+    <string name="show_ampm_summary">Se o descritor AM/PM deve ser mostrado no relógio digital</string>
+    <string name="bold_text_title">Texto do relógio em negrito</string>
+    <string name="bold_text_summary">Se o texto do relógio digital deve estar em negrito</string>
+    <string name="night_mode_brightness_text_title">Brilho</string>
+    <string name="clock_color_title">Cor</string>
+    <string-array name="clock_color_entries">
+        <item>Branco</item>
+        <item>Vermelho</item>
+        <item>Verde</item>
+        <item>Azul</item>
+    </string-array>
+    <string name="screensaver_settings_title">Protetor de ecrã</string>
+    <string name="screensaver_preview">Pré-visualizar</string>
+    <string name="screensaver_preview_summary">Inicia o protetor de ecrã imediatamente</string>
     <string name="screensaver_change_settings">Definições</string>
+    <string name="screensaver_change_settings_summary">Abre as definições do protetor de ecrã Relógio</string>
+    <string name="screensaver_daydream_settings">Selecionar/ativar protetor de ecrã</string>
+    <string name="screensaver_daydream_settings_summary">Abre as definições principais do protetor de ecrã</string>
 </resources>

@@ -42,5 +42,27 @@
     <string name="widget_choice_title">スタイルを選択</string>
     <string name="widget_name_transparent">背景なし</string>
     <string name="widget_name_solid">背景あり</string>
+    <string name="clock_brightness_percentage">%s%%</string>
+    <string name="night_mode_enabled_title">有効</string>
+    <string name="night_mode_dnd_title">DND の状態にあわせる</string>
+    <string name="night_mode_dnd_summary">DND の状態に応じてナイトモードを変更します</string>
+    <string name="show_ampm_title">午前/午後の表示</string>
+    <string name="show_ampm_summary">デジタル時計にAM/PM記述子がある場合</string>
+    <string name="bold_text_title">時計のテキストを太字にする</string>
+    <string name="bold_text_summary">デジタル時計テキストが太字である必要がある場合</string>
+    <string name="night_mode_brightness_text_title">明るさ</string>
+    <string name="clock_color_title">色</string>
+    <string-array name="clock_color_entries">
+        <item>白</item>
+        <item>赤</item>
+        <item>緑</item>
+        <item>青</item>
+    </string-array>
+    <string name="screensaver_settings_title">スクリーンセーバー</string>
+    <string name="screensaver_preview">プレビュー</string>
+    <string name="screensaver_preview_summary">すぐにスクリーンセーバーを起動します</string>
     <string name="screensaver_change_settings">設定</string>
+    <string name="screensaver_change_settings_summary">時計のスクリーンセーバー設定を開きます</string>
+    <string name="screensaver_daydream_settings">スクリーンセーバーの選択/有効化</string>
+    <string name="screensaver_daydream_settings_summary">メインスクリーンセーバーの設定を開きます</string>
 </resources>

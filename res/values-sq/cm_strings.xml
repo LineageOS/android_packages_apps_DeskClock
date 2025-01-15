@@ -42,5 +42,26 @@
     <string name="widget_choice_title">Zgjidhni stilin tuaj</string>
     <string name="widget_name_transparent">I pambështetur</string>
     <string name="widget_name_solid">Mbështetur</string>
+    <string name="night_mode_enabled_title">E aktivizuar</string>
+    <string name="night_mode_dnd_title">Ndiqni statusin DND</string>
+    <string name="night_mode_dnd_summary">Modaliteti i natës ndjek statusin \"Mos shqetëso\".</string>
+    <string name="show_ampm_title">Shfaq AM/PM</string>
+    <string name="show_ampm_summary">Nëse përshkruesi AM/PM shfaqet në orën dixhitale</string>
+    <string name="bold_text_title">Teksti i orës me ngjyrë të theksuar</string>
+    <string name="bold_text_summary">Nëse teksti i orës dixhitale duhet të jetë me shkronja të theksuara</string>
+    <string name="night_mode_brightness_text_title">Ndriçimi</string>
+    <string name="clock_color_title">Ngjyra</string>
+    <string-array name="clock_color_entries">
+        <item>E bardhë</item>
+        <item>E kuqe</item>
+        <item>E gjelbër</item>
+        <item>Blu</item>
+    </string-array>
+    <string name="screensaver_settings_title">Mbrojtësi i ekranit</string>
+    <string name="screensaver_preview">Shih paraprakisht</string>
+    <string name="screensaver_preview_summary">Nis menjëherë ruajtësin e ekranit</string>
     <string name="screensaver_change_settings">Cilësimet</string>
+    <string name="screensaver_change_settings_summary">Hap cilësimet e ruajtësit të ekranit të orës</string>
+    <string name="screensaver_daydream_settings">Zgjidh/aktivizo mbrojtësin e ekranit</string>
+    <string name="screensaver_daydream_settings_summary">Hap cilësimet kryesore të mbrojtësit të ekranit</string>
 </resources>
