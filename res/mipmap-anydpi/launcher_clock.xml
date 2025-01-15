@@ -19,7 +19,7 @@
                 <!--
                 Hour hand
                 -->
-                <rotate android:fromDegrees="310.0" android:toDegrees="5310.0" android:pivotX="50.0%" android:pivotY="50.0%">
+                <rotate android:fromDegrees="300.0" android:toDegrees="5300.0" android:pivotX="50.0%" android:pivotY="50.0%">
                     <vector android:height="108.0dp" android:width="108.0dp" android:viewportWidth="108.0" android:viewportHeight="108.0">
                         <path android:fillColor="@android:color/white" android:pathData="M54.0001 32C53.4338 32 52.9609 32.4318 52.9096 32.9959L51.2717 51.0123C51.2697 51.0348 51.2679 51.0572 51.2664 51.0796C51.319 51.0305 51.3731 50.9825 51.4289 50.9358C52.9967 49.6202 55.2776 49.7129 56.7338 51.0794C56.7323 51.0571 56.7306 51.0347 56.7285 51.0123L55.0907 32.9959C55.0394 32.4318 54.5665 32 54.0001 32Z" />
                         <path android:fillColor="#FF98A7A7" android:pathData="M56 54C56 55.1046 55.1046 56 54 56C52.8954 56 52 55.1046 52 54C52 52.8954 52.8954 52 54 52C55.1046 52 56 52.8954 56 54Z" />
@@ -30,7 +30,7 @@
                 <!--
                 Minute hand
                 -->
-                <rotate android:fromDegrees="50.0" android:toDegrees="60050.0" android:pivotX="50.0%" android:pivotY="50.0%">
+                <rotate android:fromDegrees="60.0" android:toDegrees="60060.0" android:pivotX="50.0%" android:pivotY="50.0%">
                     <vector android:height="108.0dp" android:width="108.0dp" android:viewportWidth="108.0" android:viewportHeight="108.0">
                         <path android:fillColor="@android:color/white" android:pathData="M54 25.9996C53.4365 25.9996 52.9689 26.435 52.9287 26.997L51.2137 51.0072C51.2106 51.0502 51.2085 51.093 51.2074 51.1356C52.6604 49.7155 54.9821 49.6022 56.5712 50.9356C56.648 51.0001 56.7218 51.0668 56.7925 51.1356C56.7914 51.093 56.7893 51.0502 56.7862 51.0072L55.0712 26.997C55.0311 26.435 54.5634 25.9996 54 25.9996Z" />
                         <path android:fillColor="#FF98A7A7" android:pathData="M56 54C56 55.1046 55.1046 56 54 56C52.8954 56 52 55.1046 52 54C52 52.8954 52.8954 52 54 52C55.1046 52 56 52.8954 56 54Z" />
