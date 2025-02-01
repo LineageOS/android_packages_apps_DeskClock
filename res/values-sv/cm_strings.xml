@@ -29,6 +29,7 @@
     <string name="alarm_upcoming_channel">Kommande alarm</string>
     <string name="stopwatch_channel">Stoppur</string>
     <string name="timer_channel">Timer</string>
+    <string name="add_label">Lägg till etikett</string>
     <string name="dialog_permissions_title">Behörigheter</string>
     <string name="dialog_permissions_ask">Fråga igen</string>
     <string name="dialog_permissions_dismiss">Avvisa</string>

@@ -42,6 +42,7 @@
     <string name="widget_choice_title">Zgjidhni stilin tuaj</string>
     <string name="widget_name_transparent">I pambështetur</string>
     <string name="widget_name_solid">Mbështetur</string>
+    <string name="clock_brightness_percentage">%s%%</string>
     <string name="night_mode_enabled_title">E aktivizuar</string>
     <string name="night_mode_dnd_title">Ndiqni statusin DND</string>
     <string name="night_mode_dnd_summary">Modaliteti i natës ndjek statusin \"Mos shqetëso\".</string>

@@ -42,5 +42,21 @@
     <string name="widget_choice_title">Wähle deinen Stil</string>
     <string name="widget_name_transparent">Transparent</string>
     <string name="widget_name_solid">Hintergrund</string>
+    <string name="night_mode_enabled_title">Aktiviert</string>
+    <string name="show_ampm_title">AM/PM anzeigen</string>
+    <string name="night_mode_brightness_text_title">Helligkeit</string>
+    <string name="clock_color_title">Farbe</string>
+    <string-array name="clock_color_entries">
+        <item>Weiß</item>
+        <item>Rot</item>
+        <item>Grün</item>
+        <item>Blau</item>
+    </string-array>
+    <string name="screensaver_settings_title">Bildschirmschoner</string>
+    <string name="screensaver_preview">Vorschau</string>
+    <string name="screensaver_preview_summary">Bildschirmschoner sofort starten</string>
     <string name="screensaver_change_settings">Einstellungen</string>
+    <string name="screensaver_change_settings_summary">Einstellungen für den Bildschirmschoner der Uhr öffnen</string>
+    <string name="screensaver_daydream_settings">Bildschirmschoner auswählen/aktivieren</string>
+    <string name="screensaver_daydream_settings_summary">Haupteinstellungen für den Bildschirmschoner öffnen</string>
 </resources>

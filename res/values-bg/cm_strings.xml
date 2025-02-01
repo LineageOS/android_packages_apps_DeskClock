@@ -29,5 +29,40 @@
     <string name="alarm_upcoming_channel">Предстоящи аларми</string>
     <string name="stopwatch_channel">Хронометър</string>
     <string name="timer_channel">Таймер</string>
+    <string name="add_label">Добавяне на етикет</string>
+    <string name="dialog_permissions_title">Права</string>
+    <string name="dialog_permissions_ask">Попитай отново</string>
     <string name="dialog_permissions_dismiss">Отхвърли</string>
+    <string name="dialog_permissions_settings">Настройки</string>
+    <string name="dialog_permissions_power_off_alarm">Ако не позволите това, Вашето устройство няма да може да се \"събуди\" и да активира аларма</string>
+    <string name="dialog_permissions_no_permission">Изискваните разрешения бяха отказани. Активирайте ги от Настройки</string>
+    <string name="dialog_permissions_post_notifications">Тази програма използва съобщения и не може да работи без тях! </string>
+    <string name="selected">Избрани</string>
+    <string name="more_options">Още опции</string>
+    <string name="widget_choice_title">Избери твоя стил</string>
+    <string name="widget_name_transparent">Прозрачен</string>
+    <string name="widget_name_solid">Плътен</string>
+    <string name="clock_brightness_percentage">%s%%</string>
+    <string name="night_mode_enabled_title">Включен</string>
+    <string name="night_mode_dnd_title">Следвай статус \'Не безпокойте\'</string>
+    <string name="night_mode_dnd_summary">Нощен режим следва статус \'Не безпокойте\'</string>
+    <string name="show_ampm_title">Покажи AM/PM</string>
+    <string name="show_ampm_summary">Ако AM/PM означението е на показ в дигиталния часовник</string>
+    <string name="bold_text_title">Удебелен шрифт на часовника</string>
+    <string name="bold_text_summary">Ако шрифтът на дигиталния часовник трябва да е удебелен</string>
+    <string name="night_mode_brightness_text_title">Яркост</string>
+    <string name="clock_color_title">Цвят</string>
+    <string-array name="clock_color_entries">
+        <item>Бяло</item>
+        <item>Червено</item>
+        <item>Зелено</item>
+        <item>Синьо</item>
+    </string-array>
+    <string name="screensaver_settings_title">Скрийнсейвър</string>
+    <string name="screensaver_preview">Преглед</string>
+    <string name="screensaver_preview_summary">Веднага включва скрийнсейвъра</string>
+    <string name="screensaver_change_settings">Настройки</string>
+    <string name="screensaver_change_settings_summary">Отваря настройките за скрийнсейвъра на Часовник</string>
+    <string name="screensaver_daydream_settings">Избери/включи скрийнсейвър</string>
+    <string name="screensaver_daydream_settings_summary">Отваря главните скрийнсейвър настройки</string>
 </resources>

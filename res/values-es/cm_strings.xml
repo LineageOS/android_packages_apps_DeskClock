@@ -45,7 +45,7 @@
     <string name="clock_brightness_percentage">%s%%</string>
     <string name="night_mode_enabled_title">Activado</string>
     <string name="night_mode_dnd_title">No molestar</string>
-    <string name="night_mode_dnd_summary">El modo nocturno sigue al estado No molestar</string>
+    <string name="night_mode_dnd_summary">El modo Nocturno sigue al estado No molestar</string>
     <string name="show_ampm_title">Mostrar AM/PM</string>
     <string name="show_ampm_summary">Si el descriptor AM/PM se muestra en el reloj digital</string>
     <string name="bold_text_title">Texto de reloj en negrita</string>
@@ -62,7 +62,7 @@
     <string name="screensaver_preview">Vista previa</string>
     <string name="screensaver_preview_summary">Inicia el salvapantallas inmediatamente</string>
     <string name="screensaver_change_settings">Ajustes</string>
-    <string name="screensaver_change_settings_summary">Abre la configuración del protector de pantalla del Reloj</string>
+    <string name="screensaver_change_settings_summary">Abre la configuración del reloj del salvapantallas</string>
     <string name="screensaver_daydream_settings">Seleccionar/activar salvapantallas</string>
     <string name="screensaver_daydream_settings_summary">Abre la configuración principal del salvapantallas</string>
 </resources>
