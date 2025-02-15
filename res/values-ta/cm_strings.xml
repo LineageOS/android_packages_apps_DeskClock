@@ -19,11 +19,11 @@
     <string name="flip_action_title">கருவி புரட்டு செயல்</string>
     <string name="shake_action_title">கருவி உலுக்கு செயல்</string>
     <string-array name="action_setting_entries">
-        <item>ஒத்திவைக்க</item>
+        <item>ஒத்திவைப்பு</item>
         <item>விலக்குக</item>
         <item>இன்மை</item>
     </string-array>
-    <string name="firing_alarms_timers_channel">தீ அலறிமணியும், நேரங்கணிப்பியும்</string>
+    <string name="firing_alarms_timers_channel">அலறிமணியும், நேரங்கணிப்பியும் தொடங்குதல்</string>
     <string name="alarm_missed_channel">தவறிய அலறிமணி</string>
     <string name="alarm_snooze_channel">ஒத்திவைத்த அலறிமணி</string>
     <string name="alarm_upcoming_channel">வரப்போகும் அலறிமணி</string>
