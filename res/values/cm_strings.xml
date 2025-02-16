@@ -1,7 +1,7 @@
 <?xml version="1.0" encoding="utf-8"?>
 <!--
      Copyright (C) 2012-2016 The CyanogenMod Project
-     Copyright (C) 2017-2024 The LineageOS Project
+     Copyright (C) 2017-2025 The LineageOS Project
 
      Licensed under the Apache License, Version 2.0 (the "License");
      you may not use this file except in compliance with the License.
@@ -78,14 +78,10 @@
     <string name="night_mode_dnd_title">Follow DND state</string>
     <!-- Describes night mode follows do not disturb state -->
     <string name="night_mode_dnd_summary">Night mode follows Do Not Disturb state</string>
-    <!-- Title for swtich to pick if the AM/PM is displayed on a 12 hour text clock -->
-    <string name="show_ampm_title">Show AM/PM</string>
-    <!-- Describes if the AM/PM on the screensaver is displayed on a 12 hour text clock -->
-    <string name="show_ampm_summary">If the AM/PM descriptor is displayed in the digital clock</string>
+    <!-- Title for the switch to pick if the AM/PM is displayed on a 12 hour text clock -->
+    <string name="show_ampm_title">Show AM/PM indicator</string>
     <!-- Title for switch to pick if the clock text is displayed in bold -->
     <string name="bold_text_title">Bold clock text</string>
-    <!-- Describes if the text on the screensaver is displayed in bold -->
-    <string name="bold_text_summary">If the digital clock text should be in bold</string>
     <!-- Title for slider to pick if the brightness of the clock in night mode -->
     <string name="night_mode_brightness_text_title">Brightness</string>
 
