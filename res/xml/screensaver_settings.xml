@@ -18,7 +18,7 @@
     xmlns:app="http://schemas.android.com/apk/res-auto"
     android:title="@string/app_label">
 
-    <ListPreference
+    <com.android.deskclock.settings.SimpleMenuPreference
         android:defaultValue="@string/default_clock_style"
         android:dialogTitle="@string/clock_style"
         android:entries="@array/clock_style_entries"
@@ -27,7 +27,7 @@
         android:title="@string/clock_style"
         app:iconSpaceReserved="false" />
 
-    <ListPreference
+    <com.android.deskclock.settings.SimpleMenuPreference
         android:defaultValue="@string/default_clock_color"
         android:entries="@array/clock_color_entries"
         android:entryValues="@array/clock_color_values"
@@ -70,7 +70,7 @@
             android:dependency="screensaver_night_mode"
             app:iconSpaceReserved="false" />
 
-        <ListPreference
+        <com.android.deskclock.settings.SimpleMenuPreference
             android:defaultValue="@string/default_clock_color"
             android:entries="@array/clock_color_entries"
             android:entryValues="@array/clock_color_values"
