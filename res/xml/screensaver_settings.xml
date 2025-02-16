@@ -1,5 +1,6 @@
 <?xml version="1.0" encoding="utf-8"?>
 <!-- Copyright (C) 2012 The Android Open Source Project
+     Copyright (C) 2023-2025 The LineageOS Project
 
      Licensed under the Apache License, Version 2.0 (the "License");
      you may not use this file except in compliance with the License.
@@ -39,7 +40,6 @@
         android:layout_height="wrap_content"
         android:defaultValue="@bool/default_clock_bold_text"
         android:key="screensaver_bold_text"
-        android:summary="@string/bold_text_summary"
         android:title="@string/bold_text_title"
         app:iconSpaceReserved="false" />
 
@@ -48,7 +48,6 @@
         android:layout_height="wrap_content"
         android:defaultValue="@bool/default_clock_show_ampm"
         android:key="screensaver_show_ampm"
-        android:summary="@string/show_ampm_summary"
         android:title="@string/show_ampm_title"
         app:iconSpaceReserved="false" />
 
