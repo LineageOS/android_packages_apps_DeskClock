@@ -18,6 +18,7 @@
 package com.android.deskclock.settings;
 
 import android.os.Bundle;
+import android.text.format.DateFormat;
 import android.view.MenuItem;
 
 import androidx.preference.ListPreference;
@@ -45,6 +46,7 @@ public final class ScreensaverSettingsActivity extends CollapsingToolbarBaseActi
     public static final String KEY_SHOW_AMPM = "screensaver_show_ampm";
     public static final String KEY_BOLD_TEXT = "screensaver_bold_text";
     private static final String PREFS_FRAGMENT_TAG = "prefs_fragment";
+    private static final String CLOCK_STYLE_DIGITAL = "digital";
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -97,6 +99,8 @@ public final class ScreensaverSettingsActivity extends CollapsingToolbarBaseActi
                     final ListPreference clockStylePref = (ListPreference) pref;
                     final int clockStyleindex = clockStylePref.findIndexOfValue((String) newValue);
                     clockStylePref.setSummary(clockStylePref.getEntries()[clockStyleindex]);
+                    setVisibility(clockStylePref.getEntryValues()[clockStyleindex].equals(
+                            CLOCK_STYLE_DIGITAL));
                     break;
                 case KEY_NIGHT_MODE_COLOR:
                 case KEY_CLOCK_COLOR:
@@ -153,6 +157,7 @@ public final class ScreensaverSettingsActivity extends CollapsingToolbarBaseActi
             }
             if (showAmPmPref != null) {
                 showAmPmPref.setChecked(DataModel.getDataModel().getScreensaverShowAmPmOn());
+                showAmPmPref.setEnabled(!DateFormat.is24HourFormat(getContext()));
             }
             if (boldTextPref != null) {
                 boldTextPref.setChecked(DataModel.getDataModel().getScreensaverBoldTextOn());
@@ -165,6 +170,19 @@ public final class ScreensaverSettingsActivity extends CollapsingToolbarBaseActi
                 nightModeBrightness.setSummary(progress);
                 nightModeBrightness.setOnPreferenceChangeListener(this);
                 nightModeBrightness.setUpdatesContinuously(true);
+            }
+            setVisibility(DataModel.getDataModel().getScreensaverClockStyle() ==
+                    DataModel.ClockStyle.DIGITAL);
+        }
+
+        private void setVisibility(boolean isDigitalClock) {
+            final SwitchPreferenceCompat showAmPmPref = findPreference(KEY_SHOW_AMPM);
+            final SwitchPreferenceCompat boldTextPref = findPreference(KEY_BOLD_TEXT);
+            if (showAmPmPref != null) {
+                showAmPmPref.setVisible(isDigitalClock);
+            }
+            if (boldTextPref != null) {
+                boldTextPref.setVisible(isDigitalClock);
             }
         }
     }
