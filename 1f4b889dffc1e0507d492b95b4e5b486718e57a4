@@ -1,0 +1,27 @@
+{
+  "comments": [
+    {
+      "unresolved": true,
+      "key": {
+        "uuid": "32191cc3_425bef54",
+        "filename": "res/values/cm_strings.xml",
+        "patchSetId": 1
+      },
+      "lineNbr": 82,
+      "author": {
+        "id": 4550
+      },
+      "writtenOn": "2025-02-16T16:14:58Z",
+      "side": 1,
+      "message": "I\u0027d just make this \n```suggestion\n    \u003cstring name\u003d\"show_ampm_title\"\u003eShow AM/PM indicator\u003c/string\u003e\n```\nand remove the summary (also remove the bold text one)",
+      "range": {
+        "startLine": 82,
+        "startChar": 35,
+        "endLine": 82,
+        "endChar": 45
+      },
+      "revId": "1f4b889dffc1e0507d492b95b4e5b486718e57a4",
+      "serverId": "1ec6b3db-b2c1-4fa4-84a2-4c7efe89ba71"
+    }
+  ]
+}
