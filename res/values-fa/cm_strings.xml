@@ -16,18 +16,18 @@
      limitations under the License.
 -->
 <resources xmlns:xliff="urn:oasis:names:tc:xliff:document:1.2">
-    <string name="flip_action_title">设备翻转行为</string>
-    <string name="shake_action_title">设备摇晃行为</string>
+    <string name="flip_action_title">عملکرد چرخاندن گوشی</string>
+    <string name="shake_action_title">عملکرد تکان دادن گوشی</string>
     <string-array name="action_setting_entries">
-        <item>稍后提醒</item>
-        <item>忽略</item>
-        <item>无</item>
+        <item>چرت کوتاه</item>
+        <item>رد کردن</item>
+        <item>هیچ چیز</item>
     </string-array>
-    <string name="firing_alarms_timers_channel">触发闹钟和计时器</string>
-    <string name="alarm_missed_channel">错过的闹钟</string>
-    <string name="alarm_snooze_channel">暂停的闹钟</string>
-    <string name="alarm_upcoming_channel">即将响铃的闹钟</string>
-    <string name="stopwatch_channel">计时器</string>
-    <string name="timer_channel">计时器</string>
-    <string name="add_label">添加标签</string>
+    <string name="firing_alarms_timers_channel">هشدارهای آتش &amp; تایمر</string>
+    <string name="alarm_missed_channel">هشدارهای از دست رفته</string>
+    <string name="alarm_snooze_channel">هشدارهای موقتا متوقف شده</string>
+    <string name="alarm_upcoming_channel">هشدارهای آینده</string>
+    <string name="stopwatch_channel">کرونومتر</string>
+    <string name="timer_channel">زمان‌سنج</string>
+    <string name="add_label">افزودن برچسب</string>
 </resources>

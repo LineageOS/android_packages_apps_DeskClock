@@ -23,6 +23,7 @@
         <item>Hafna</item>
         <item>Ekkert</item>
     </string-array>
+    <string name="firing_alarms_timers_channel">Ræsitímar og niðurteljarar</string>
     <string name="alarm_upcoming_channel">Næstu vekjarar</string>
     <string name="stopwatch_channel">Skeiðklukka</string>
     <string name="timer_channel">Niðurteljari</string>
