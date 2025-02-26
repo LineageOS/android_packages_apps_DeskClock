@@ -1,0 +1,21 @@
+{
+  "comments": [
+    {
+      "unresolved": false,
+      "key": {
+        "uuid": "fdc42000_f35d1eee",
+        "filename": "/PATCHSET_LEVEL",
+        "patchSetId": 1
+      },
+      "lineNbr": 0,
+      "author": {
+        "id": 34879
+      },
+      "writtenOn": "2025-02-26T21:35:52Z",
+      "side": 1,
+      "message": "I only noticed this issue while working on https://review.lineageos.org/c/LineageOS/android_packages_apps_DeskClock/+/420189 , since it seems this makes the crash more likely. However, it can already be reproduced prior to the other commit.",
+      "revId": "7d1cd832b803208dce492f83645cb032c190aaa0",
+      "serverId": "1ec6b3db-b2c1-4fa4-84a2-4c7efe89ba71"
+    }
+  ]
+}
