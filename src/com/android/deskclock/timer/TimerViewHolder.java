@@ -56,7 +56,6 @@ public class TimerViewHolder extends RecyclerView.ViewHolder {
 
     public void onBind(int timerId) {
         mTimerId = timerId;
-        updateTime();
     }
 
     private void setLayoutParams(View view) {

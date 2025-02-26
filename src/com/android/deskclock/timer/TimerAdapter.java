@@ -41,9 +41,11 @@ class TimerAdapter extends RecyclerView.Adapter implements TimerListener {
     /** Maps each timer id to the corresponding {@link TimerViewHolder} that draws it. */
     private final Map<Integer, TimerViewHolder> mHolders = new ArrayMap<>();
     private final TimerClickHandler mTimerClickHandler;
+    private final TimerBindHandler mTimerBindHandler;
 
-    public TimerAdapter(TimerClickHandler timerClickHandler) {
+    public TimerAdapter(TimerClickHandler timerClickHandler, TimerBindHandler timerBindHandler) {
         mTimerClickHandler = timerClickHandler;
+        mTimerBindHandler = timerBindHandler;
     }
 
     @Override
@@ -65,6 +67,7 @@ class TimerAdapter extends RecyclerView.Adapter implements TimerListener {
         TimerViewHolder holder = (TimerViewHolder) itemViewHolder;
         mHolders.put(getTimer(position).getId(), holder);
         holder.onBind(getTimer(position).getId());
+        mTimerBindHandler.onBindTimer();
     }
 
     @Override

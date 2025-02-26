@@ -80,6 +80,7 @@ public final class TimerFragment extends DeskClockFragment {
     private View mCurrentView;
     private RecyclerView mRecyclerView;
     private TimerClickHandler mTimerClickHandler;
+    private TimerBindHandler mTimerBindHandler;
 
     private Serializable mTimerSetupState;
 
@@ -104,7 +105,8 @@ public final class TimerFragment extends DeskClockFragment {
         final View view = inflater.inflate(R.layout.timer_fragment, container, false);
 
         mTimerClickHandler = new TimerClickHandler(this);
-        mAdapter = new TimerAdapter(mTimerClickHandler);
+        mTimerBindHandler = new TimerBindHandler(this);
+        mAdapter = new TimerAdapter(mTimerClickHandler, mTimerBindHandler);
         mRecyclerView = view.findViewById(R.id.recycler_view);
         mRecyclerView.setAdapter(mAdapter);
         mRecyclerView.setLayoutManager(getLayoutManager(view.getContext()));
@@ -318,6 +320,10 @@ public final class TimerFragment extends DeskClockFragment {
         return super.onKeyDown(keyCode, event);
     }
 
+    public void onBindTimer() {
+      startUpdatingTime();
+    }
+
     /**
      * Display the view that creates a new timer.
      */
@@ -468,7 +474,7 @@ public final class TimerFragment extends DeskClockFragment {
 
     private Timer getTimer() {
         if (mAdapter == null) {
-            TimerAdapter adapter = new TimerAdapter(mTimerClickHandler);
+            TimerAdapter adapter = new TimerAdapter(mTimerClickHandler, mTimerBindHandler);
             return adapter.getItemCount() == 0 ? null : adapter.getTimer(0);
         }
 
