@@ -1,7 +1,7 @@
 <?xml version="1.0" encoding="utf-8"?>
 <!--
      Copyright (C) 2012-2016 The CyanogenMod Project
-     Copyright (C) 2017-2024 The LineageOS Project
+     Copyright (C) 2017-2025 The LineageOS Project
 
      Licensed under the Apache License, Version 2.0 (the "License");
      you may not use this file except in compliance with the License.
@@ -42,5 +42,7 @@
     <string name="widget_choice_title">Choisissez votre style</string>
     <string name="widget_name_transparent">Sans fond</string>
     <string name="widget_name_solid">Avec fond</string>
+    <string name="clock_brightness_percentage">%s%%</string>
+    <string name="night_mode_enabled_title">Activé</string>
     <string name="screensaver_change_settings">Paramètres</string>
 </resources>

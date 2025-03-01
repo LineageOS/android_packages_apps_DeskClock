@@ -1,7 +1,7 @@
 <?xml version="1.0" encoding="utf-8"?>
 <!--
      Copyright (C) 2012-2016 The CyanogenMod Project
-     Copyright (C) 2017-2024 The LineageOS Project
+     Copyright (C) 2017-2025 The LineageOS Project
 
      Licensed under the Apache License, Version 2.0 (the "License");
      you may not use this file except in compliance with the License.
@@ -46,10 +46,8 @@
     <string name="night_mode_enabled_title">Включен</string>
     <string name="night_mode_dnd_title">Следовать \"Не беспокоить\"</string>
     <string name="night_mode_dnd_summary">Ночной режим следует за режимом \"Не беспокоить\"</string>
-    <string name="show_ampm_title">Показывать AM/PM</string>
-    <string name="show_ampm_summary">Если на цифровых часах хотите видеть AM/PM</string>
+    <string name="show_ampm_title">Показывать индикатор AM/PM</string>
     <string name="bold_text_title">Жирный текст часов</string>
-    <string name="bold_text_summary">Если текст цифровых часов должен быть жирным</string>
     <string name="night_mode_brightness_text_title">Яркость</string>
     <string name="clock_color_title">Цвет</string>
     <string-array name="clock_color_entries">
