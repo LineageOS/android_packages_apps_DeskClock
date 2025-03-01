@@ -1,7 +1,7 @@
 <?xml version="1.0" encoding="utf-8"?>
 <!--
      Copyright (C) 2012-2016 The CyanogenMod Project
-     Copyright (C) 2017-2024 The LineageOS Project
+     Copyright (C) 2017-2025 The LineageOS Project
 
      Licensed under the Apache License, Version 2.0 (the "License");
      you may not use this file except in compliance with the License.
@@ -46,10 +46,8 @@
     <string name="night_mode_enabled_title">Cumasaithe</string>
     <string name="night_mode_dnd_title">Lean staid DND</string>
     <string name="night_mode_dnd_summary">Leanann modh oíche Ná Cuir Isteach ar an stát</string>
-    <string name="show_ampm_title">Taispeáin AM/PM</string>
-    <string name="show_ampm_summary">Má tá an tuairisceoir AM/PM ar taispeáint sa chlog digiteach</string>
+    <string name="show_ampm_title">Taispeáin AM/PM táscaire</string>
     <string name="bold_text_title">Téacs trom clog</string>
-    <string name="bold_text_summary">Má ba chóir go mbeadh an téacs clog digiteach i gcló trom</string>
     <string name="night_mode_brightness_text_title">Gile</string>
     <string name="clock_color_title">Dath</string>
     <string-array name="clock_color_entries">
