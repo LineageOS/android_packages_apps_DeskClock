@@ -1,7 +1,7 @@
 <?xml version="1.0" encoding="utf-8"?>
 <!--
      Copyright (C) 2012-2016 The CyanogenMod Project
-     Copyright (C) 2017-2024 The LineageOS Project
+     Copyright (C) 2017-2025 The LineageOS Project
 
      Licensed under the Apache License, Version 2.0 (the "License");
      you may not use this file except in compliance with the License.
@@ -43,7 +43,10 @@
     <string name="widget_name_transparent">Χωρίς φόντο</string>
     <string name="widget_name_solid">Με φόντο</string>
     <string name="clock_brightness_percentage">%s%%</string>
-    <string name="show_ampm_title">Εμφάνιση ΠΜ/ΜΜ</string>
+    <string name="night_mode_enabled_title">Ενεργή</string>
+    <string name="night_mode_dnd_title">Ακολουθήστε την κατάσταση \"Μην ενοχλείτε\"</string>
+    <string name="night_mode_dnd_summary">Η νυχτερινή λειτουργία ακολουθεί την κατάσταση \"Μην ενοχλείτε\"</string>
+    <string name="show_ampm_title">Εμφάνιση ένδειξης ΠΜ/ΜΜ</string>
     <string name="bold_text_title">Έντονο κείμενο ρολογιού</string>
     <string name="night_mode_brightness_text_title">Φωτεινότητα</string>
     <string name="clock_color_title">Χρώμα</string>
@@ -55,5 +58,9 @@
     </string-array>
     <string name="screensaver_settings_title">Προφύλαξη οθόνης</string>
     <string name="screensaver_preview">Προεπισκόπιση</string>
+    <string name="screensaver_preview_summary">Άμεση εκκίνηση της προφύλαξης οθόνης</string>
     <string name="screensaver_change_settings">Ρυθμίσεις</string>
+    <string name="screensaver_change_settings_summary">Άνοιγμα των ρυθμίσεων προφύλαξης οθόνης του Ρολογιού</string>
+    <string name="screensaver_daydream_settings">Επιλογή/ενεργοποίηση προφύλαξης οθόνης</string>
+    <string name="screensaver_daydream_settings_summary">Άνοιγμα των κύριων ρυθμίσεων προφύλαξης οθόνης</string>
 </resources>

@@ -1,7 +1,7 @@
 <?xml version="1.0" encoding="utf-8"?>
 <!--
      Copyright (C) 2012-2016 The CyanogenMod Project
-     Copyright (C) 2017-2024 The LineageOS Project
+     Copyright (C) 2017-2025 The LineageOS Project
 
      Licensed under the Apache License, Version 2.0 (the "License");
      you may not use this file except in compliance with the License.
@@ -46,10 +46,8 @@
     <string name="night_mode_enabled_title">Attiva</string>
     <string name="night_mode_dnd_title">Segui modalità Non disturbare</string>
     <string name="night_mode_dnd_summary">La modalità notturna segue la modalità Non disturbare</string>
-    <string name="show_ampm_title">Mostra AM/PM</string>
-    <string name="show_ampm_summary">Abilita la visualizzazione di AM/PM nell\'orologio digitale</string>
+    <string name="show_ampm_title">Mostra l\'indicatore AM/PM</string>
     <string name="bold_text_title">Testo orologio in grassetto</string>
-    <string name="bold_text_summary">Abilita la visualizzazione in grassetto del testo dell\'orologio digitale</string>
     <string name="night_mode_brightness_text_title">Luminosità</string>
     <string name="clock_color_title">Colore</string>
     <string-array name="clock_color_entries">
