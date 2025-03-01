@@ -1,7 +1,7 @@
 <?xml version="1.0" encoding="utf-8"?>
 <!--
      Copyright (C) 2012-2016 The CyanogenMod Project
-     Copyright (C) 2017-2024 The LineageOS Project
+     Copyright (C) 2017-2025 The LineageOS Project
 
      Licensed under the Apache License, Version 2.0 (the "License");
      you may not use this file except in compliance with the License.
@@ -46,10 +46,8 @@
     <string name="night_mode_enabled_title">Đã bật</string>
     <string name="night_mode_dnd_title">Theo trạng thái Không làm phiền</string>
     <string name="night_mode_dnd_summary">Chế độ tối theo sau trạng thái Không làm phiền</string>
-    <string name="show_ampm_title">Hiện AM/PM</string>
-    <string name="show_ampm_summary">Hiển thị AM/PM trên đồng hồ kỹ thuật số</string>
+    <string name="show_ampm_title">Hiện chế độ giờ SA/CH</string>
     <string name="bold_text_title">In đậm văn bản đồng hồ</string>
-    <string name="bold_text_summary">In đậm văn bản trên đồng hồ kỹ thuật số</string>
     <string name="night_mode_brightness_text_title">Độ sáng</string>
     <string name="clock_color_title">Màu sắc</string>
     <string-array name="clock_color_entries">
