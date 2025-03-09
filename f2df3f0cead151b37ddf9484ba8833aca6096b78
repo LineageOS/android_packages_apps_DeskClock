@@ -1,0 +1,21 @@
+{
+  "comments": [
+    {
+      "unresolved": false,
+      "key": {
+        "uuid": "ff97d891_14dbdb0b",
+        "filename": "/PATCHSET_LEVEL",
+        "patchSetId": 2
+      },
+      "lineNbr": 0,
+      "author": {
+        "id": 34879
+      },
+      "writtenOn": "2025-03-09T15:31:38Z",
+      "side": 1,
+      "message": "I have linked the commit message to an issue, shortened it (instructions for reproduction can be found in the issue), and made its style more similar to other commits for this app.",
+      "revId": "f2df3f0cead151b37ddf9484ba8833aca6096b78",
+      "serverId": "1ec6b3db-b2c1-4fa4-84a2-4c7efe89ba71"
+    }
+  ]
+}
