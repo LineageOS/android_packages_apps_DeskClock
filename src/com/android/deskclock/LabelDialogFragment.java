@@ -151,7 +151,7 @@ public class LabelDialogFragment extends DialogFragment {
         mLabelBox.setSingleLine();
         mLabelBox.setInputType(InputType.TYPE_CLASS_TEXT | InputType.TYPE_TEXT_FLAG_CAP_SENTENCES);
         mLabelBox.setText(label);
-        mLabelBox.selectAll();
+        mLabelBox.setSelectAllOnFocus(true);
 
         // The line at the bottom of EditText is part of its background therefore the padding
         // must be added to its container.
