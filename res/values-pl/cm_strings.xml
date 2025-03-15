@@ -46,7 +46,7 @@
     <string name="night_mode_enabled_title">Włączono</string>
     <string name="night_mode_dnd_title">Zgodnie z trybem Nie przeszkadzać</string>
     <string name="night_mode_dnd_summary">Tryb nocny jest zgodny ze stanem trybu Nie przeszkadzać</string>
-    <string name="show_ampm_title">Pokaż wskaźnik AM/PM</string>
+    <string name="show_ampm_title">Pokazuj wskaźnik AM/PM</string>
     <string name="bold_text_title">Pogrubiony tekst zegara</string>
     <string name="night_mode_brightness_text_title">Jasność</string>
     <string name="clock_color_title">Kolor</string>
