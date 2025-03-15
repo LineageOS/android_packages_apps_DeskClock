@@ -23,10 +23,10 @@
         <item>Ignorar</item>
         <item>Não fazer nada</item>
     </string-array>
-    <string name="firing_alarms_timers_channel">Alarmes e temporizadores disparando</string>
+    <string name="firing_alarms_timers_channel">Disparo de alarmes e temporizadores</string>
     <string name="alarm_missed_channel">Alarmes perdidos</string>
     <string name="alarm_snooze_channel">Alarmes adiados</string>
-    <string name="alarm_upcoming_channel">Próximos alarmes</string>
+    <string name="alarm_upcoming_channel">Alarmes próximos</string>
     <string name="stopwatch_channel">Cronômetro</string>
     <string name="timer_channel">Temporizador</string>
     <string name="add_label">Adicionar etiqueta</string>
@@ -34,14 +34,14 @@
     <string name="dialog_permissions_ask">Perguntar novamente</string>
     <string name="dialog_permissions_dismiss">Ignorar</string>
     <string name="dialog_permissions_settings">Configurações</string>
-    <string name="dialog_permissions_power_off_alarm">Sem essa permissão seu dispositivo não será acordado automaticamente para disparar alarmes</string>
+    <string name="dialog_permissions_power_off_alarm">Sem esta permissão, seu dispositivo não conseguirá ser iniciado automaticamente para disparar alarmes</string>
     <string name="dialog_permissions_no_permission">As permissões necessárias foram negadas. Ative-as nas Configurações</string>
     <string name="dialog_permissions_post_notifications">Este app necessita de acesso às notificações. Sem isso ele não poderá ser executado!</string>
     <string name="selected">Selecionado</string>
     <string name="more_options">Mais opções</string>
     <string name="widget_choice_title">Escolha seu estilo</string>
-    <string name="widget_name_transparent">Sem plano de fundo</string>
-    <string name="widget_name_solid">Com plano de fundo</string>
+    <string name="widget_name_transparent">Sem fundo</string>
+    <string name="widget_name_solid">Com fundo</string>
     <string name="clock_brightness_percentage">%s%%</string>
     <string name="night_mode_enabled_title">Ativado</string>
     <string name="night_mode_dnd_title">Seguir o estado do Não Perturbe</string>
