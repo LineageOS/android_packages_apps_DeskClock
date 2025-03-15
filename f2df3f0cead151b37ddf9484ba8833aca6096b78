@@ -16,6 +16,23 @@
       "message": "I have linked the commit message to an issue, shortened it (instructions for reproduction can be found in the issue), and made its style more similar to other commits for this app.",
       "revId": "f2df3f0cead151b37ddf9484ba8833aca6096b78",
       "serverId": "1ec6b3db-b2c1-4fa4-84a2-4c7efe89ba71"
+    },
+    {
+      "unresolved": false,
+      "key": {
+        "uuid": "2d6a6733_177e857d",
+        "filename": "/PATCHSET_LEVEL",
+        "patchSetId": 2
+      },
+      "lineNbr": 0,
+      "author": {
+        "id": 13028
+      },
+      "writtenOn": "2025-03-15T17:18:35Z",
+      "side": 1,
+      "message": "Just so I mentioned it: another repro without the other issue involved is:\nadd many timers, start the top one (like your repro)\nstop and reset top one, scroll all the way down and up again\ndelete top timer, create new -\u003e app closes",
+      "revId": "f2df3f0cead151b37ddf9484ba8833aca6096b78",
+      "serverId": "1ec6b3db-b2c1-4fa4-84a2-4c7efe89ba71"
     }
   ]
 }
