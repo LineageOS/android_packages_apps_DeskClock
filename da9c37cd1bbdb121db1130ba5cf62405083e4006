@@ -1,0 +1,21 @@
+{
+  "comments": [
+    {
+      "unresolved": false,
+      "key": {
+        "uuid": "965ed666_60ab1f8f",
+        "filename": "/PATCHSET_LEVEL",
+        "patchSetId": 1
+      },
+      "lineNbr": 0,
+      "author": {
+        "id": 34879
+      },
+      "writtenOn": "2025-03-22T10:02:37Z",
+      "side": 1,
+      "message": "This change tries to match the intention of the original `selectAll()`, but maybe it would be even more convenient to directly set the focus on the label box (with all text selected or the cursor just at the end?) and let the keyboard pop up, right away?",
+      "revId": "da9c37cd1bbdb121db1130ba5cf62405083e4006",
+      "serverId": "1ec6b3db-b2c1-4fa4-84a2-4c7efe89ba71"
+    }
+  ]
+}
