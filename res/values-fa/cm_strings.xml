@@ -23,7 +23,7 @@
         <item>رد کردن</item>
         <item>هیچ چیز</item>
     </string-array>
-    <string name="firing_alarms_timers_channel">هشدارهای آتش &amp; تایمر</string>
+    <string name="firing_alarms_timers_channel">هشدارهای آتش و زمان‌سنج</string>
     <string name="alarm_missed_channel">هشدارهای از دست رفته</string>
     <string name="alarm_snooze_channel">هشدارهای موقتا متوقف شده</string>
     <string name="alarm_upcoming_channel">هشدارهای آینده</string>

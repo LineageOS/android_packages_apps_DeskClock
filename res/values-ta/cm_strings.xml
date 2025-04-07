@@ -46,6 +46,7 @@
     <string name="night_mode_enabled_title">இயக்கப்பட்டது</string>
     <string name="night_mode_dnd_title">DND நிலையைப் பின்பற்றுக</string>
     <string name="night_mode_dnd_summary">இரவுப் பயன்முறை தொல்லை செய்யா நிலையைப் பின்பற்றுகிறது</string>
+    <string name="show_ampm_title">AM/PM குறிகாட்டியைக் காட்டுக</string>
     <string name="bold_text_title">தடித்த மணினி உரை</string>
     <string name="night_mode_brightness_text_title">ஒளிர்வு</string>
     <string name="clock_color_title">நிறம்</string>
