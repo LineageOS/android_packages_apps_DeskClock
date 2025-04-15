@@ -44,5 +44,18 @@
     <string name="widget_name_solid">Avec fond</string>
     <string name="clock_brightness_percentage">%s%%</string>
     <string name="night_mode_enabled_title">Activé</string>
+    <string name="show_ampm_title">Afficher l\'indicateur AM/PM</string>
+    <string name="bold_text_title">Texte de l\'horloge en gras</string>
+    <string name="night_mode_brightness_text_title">Luminosité</string>
+    <string name="clock_color_title">Couleur</string>
+    <string-array name="clock_color_entries">
+        <item>Blanc</item>
+        <item>Rouge</item>
+        <item>Vert</item>
+        <item>Bleu</item>
+    </string-array>
+    <string name="screensaver_settings_title">Écran de veille</string>
+    <string name="screensaver_preview">Aperçu</string>
+    <string name="screensaver_preview_summary">Démarre immédiatement l\'écran de veille</string>
     <string name="screensaver_change_settings">Paramètres</string>
 </resources>
