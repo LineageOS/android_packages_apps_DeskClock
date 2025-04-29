@@ -42,5 +42,25 @@
     <string name="widget_choice_title">Stilinizi seçin</string>
     <string name="widget_name_transparent">Desteksiz</string>
     <string name="widget_name_solid">Destekli</string>
+    <string name="clock_brightness_percentage">%%%s</string>
+    <string name="night_mode_enabled_title">Etkin</string>
+    <string name="night_mode_dnd_title">Rahatsız Etme Modunu takip et</string>
+    <string name="night_mode_dnd_summary">Gece modu, Rahatsız Etme Modunu takip ediyor</string>
+    <string name="show_ampm_title">ÖÖ/ÖS bildirimini göster</string>
+    <string name="bold_text_title">Saat metni kalın</string>
+    <string name="night_mode_brightness_text_title">Parlaklık</string>
+    <string name="clock_color_title">Renk</string>
+    <string-array name="clock_color_entries">
+        <item>Beyaz</item>
+        <item>Kırmızı</item>
+        <item>Yeşil</item>
+        <item>Mavi</item>
+    </string-array>
+    <string name="screensaver_settings_title">Ekran koruyucu</string>
+    <string name="screensaver_preview">Ön İzleme</string>
+    <string name="screensaver_preview_summary">Ekran koruyucu hemen başlar</string>
     <string name="screensaver_change_settings">Ayarlar</string>
+    <string name="screensaver_change_settings_summary">Saatin ekran koruyucu ayarı açılır</string>
+    <string name="screensaver_daydream_settings">Ekran koruyucuyu seçip etkinleştir</string>
+    <string name="screensaver_daydream_settings_summary">Ana ekran koruyucu ayarı açılır</string>
 </resources>
