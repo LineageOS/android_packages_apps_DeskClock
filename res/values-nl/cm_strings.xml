@@ -59,7 +59,6 @@
     <string name="screensaver_preview">Voorbeeld</string>
     <string name="screensaver_preview_summary">Start de schermbeveiliging onmiddellijk</string>
     <string name="screensaver_change_settings">Instellingen</string>
-    <string name="screensaver_change_settings_summary"/>
     <string name="screensaver_daydream_settings">Kies/schakel schermbeveiliging in</string>
     <string name="screensaver_daydream_settings_summary">Opent hoofdscherm beveiligingsinstellingen</string>
 </resources>
