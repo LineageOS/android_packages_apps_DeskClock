@@ -42,5 +42,25 @@
     <string name="widget_choice_title">選擇您的樣式</string>
     <string name="widget_name_transparent">無背景</string>
     <string name="widget_name_solid">有背景</string>
+    <string name="clock_brightness_percentage">%s%%</string>
+    <string name="night_mode_enabled_title">已啟用</string>
+    <string name="night_mode_dnd_title">同步 DND 狀態</string>
+    <string name="night_mode_dnd_summary">就寢模式同步零打擾模式狀態</string>
+    <string name="show_ampm_title">顯示上午/下午指示符號</string>
+    <string name="bold_text_title">粗體文字</string>
+    <string name="night_mode_brightness_text_title">亮度</string>
+    <string name="clock_color_title">顏色</string>
+    <string-array name="clock_color_entries">
+        <item>白色</item>
+        <item>紅色</item>
+        <item>綠色</item>
+        <item>藍色</item>
+    </string-array>
+    <string name="screensaver_settings_title">螢幕保護程式</string>
+    <string name="screensaver_preview">預覽</string>
+    <string name="screensaver_preview_summary">立即開啟螢幕保護程式</string>
     <string name="screensaver_change_settings">設定</string>
+    <string name="screensaver_change_settings_summary">開啟螢幕保護程式的時間設定</string>
+    <string name="screensaver_daydream_settings">選擇/啟用螢幕保護程式</string>
+    <string name="screensaver_daydream_settings_summary">開啟螢幕保護程式設定</string>
 </resources>
