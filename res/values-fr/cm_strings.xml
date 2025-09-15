@@ -58,4 +58,7 @@
     <string name="screensaver_preview">Aperçu</string>
     <string name="screensaver_preview_summary">Démarre immédiatement l\'écran de veille</string>
     <string name="screensaver_change_settings">Paramètres</string>
+    <string name="screensaver_change_settings_summary">Ouvre les paramètres de l\'écran de veille de l\'horloge</string>
+    <string name="screensaver_daydream_settings">Sélectionner/activer l\'écran de veille</string>
+    <string name="screensaver_daydream_settings_summary">Ouvre les paramètres de l\'écran de veille principal</string>
 </resources>
