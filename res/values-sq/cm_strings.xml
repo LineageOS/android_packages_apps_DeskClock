@@ -46,6 +46,7 @@
     <string name="night_mode_enabled_title">E aktivizuar</string>
     <string name="night_mode_dnd_title">Ndiqni statusin DND</string>
     <string name="night_mode_dnd_summary">Modaliteti i natës ndjek statusin \"Mos shqetëso\".</string>
+    <string name="show_ampm_title">Shfaq treguesin AM/PM</string>
     <string name="bold_text_title">Teksti i orës me ngjyrë të theksuar</string>
     <string name="night_mode_brightness_text_title">Ndriçimi</string>
     <string name="clock_color_title">Ngjyra</string>
