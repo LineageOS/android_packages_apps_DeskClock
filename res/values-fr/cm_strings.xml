@@ -44,6 +44,8 @@
     <string name="widget_name_solid">Avec fond</string>
     <string name="clock_brightness_percentage">%s%%</string>
     <string name="night_mode_enabled_title">Activé</string>
+    <string name="night_mode_dnd_title">Suivre l\'état \"Ne pas déranger\"</string>
+    <string name="night_mode_dnd_summary">Le mode nuit suit l\'état \"Ne pas déranger\"</string>
     <string name="show_ampm_title">Afficher l\'indicateur AM/PM</string>
     <string name="bold_text_title">Texte de l\'horloge en gras</string>
     <string name="night_mode_brightness_text_title">Luminosité</string>
