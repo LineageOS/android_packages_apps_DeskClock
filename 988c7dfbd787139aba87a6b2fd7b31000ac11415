@@ -1,0 +1,21 @@
+{
+  "comments": [
+    {
+      "unresolved": false,
+      "key": {
+        "uuid": "3984d96b_a01872a4",
+        "filename": "/PATCHSET_LEVEL",
+        "patchSetId": 4
+      },
+      "lineNbr": 0,
+      "author": {
+        "id": 10067
+      },
+      "writtenOn": "2025-12-16T08:34:48Z",
+      "side": 1,
+      "message": "can you take it all the way and just update gradle, gradlew, agp to the latest versions so that it builds on java 25 without some cryptic error messages?",
+      "revId": "988c7dfbd787139aba87a6b2fd7b31000ac11415",
+      "serverId": "1ec6b3db-b2c1-4fa4-84a2-4c7efe89ba71"
+    }
+  ]
+}
