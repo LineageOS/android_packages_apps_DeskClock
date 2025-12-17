@@ -52,6 +52,24 @@
       "parentUuid": "d5bca8ae_e4830a34",
       "revId": "988c7dfbd787139aba87a6b2fd7b31000ac11415",
       "serverId": "1ec6b3db-b2c1-4fa4-84a2-4c7efe89ba71"
+    },
+    {
+      "unresolved": false,
+      "key": {
+        "uuid": "28f03e29_34bf8565",
+        "filename": "/PATCHSET_LEVEL",
+        "patchSetId": 4
+      },
+      "lineNbr": 0,
+      "author": {
+        "id": 25889
+      },
+      "writtenOn": "2025-12-17T00:47:51Z",
+      "side": 1,
+      "message": "Unfortunately that doesn\u0027t solve the issues, I did some more digging and it looks like it\u0027s the test cases that are broken.\n\nFrom what I can tell AGP 8.4 and above actually pay attention to the broken test cases, so they throw an error and fail if you run them, which Android Studio does by default of course.\n\nSome of the classes that the test cases use were removed with this commit: \n\n13fec09161a1ad11a1b31e33b9e7830961172aae\n\nBack in 2023 with a refactoring of the timer code.\n\nSimply by deleting the tests folder I can upgrade to AGP 8.13.1 without issue (not saying that\u0027s a solution obviously though 😉).\n\nI think the problem with the test cases is that they\u0027re looking for the old timer UI elements that were replaced in the above commit, so it shouldn\u0027t be too hard to adapt them to the new UI... maybe 😉\n\nI\u0027ll do some more work on it over the next couple of days.",
+      "parentUuid": "44138e8f_c064cb19",
+      "revId": "988c7dfbd787139aba87a6b2fd7b31000ac11415",
+      "serverId": "1ec6b3db-b2c1-4fa4-84a2-4c7efe89ba71"
     }
   ]
 }
