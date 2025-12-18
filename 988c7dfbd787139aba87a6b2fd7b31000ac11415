@@ -160,6 +160,24 @@
       "parentUuid": "c26293d5_1dc65f32",
       "revId": "988c7dfbd787139aba87a6b2fd7b31000ac11415",
       "serverId": "1ec6b3db-b2c1-4fa4-84a2-4c7efe89ba71"
+    },
+    {
+      "unresolved": false,
+      "key": {
+        "uuid": "1cafd1b6_077e71a1",
+        "filename": "/PATCHSET_LEVEL",
+        "patchSetId": 4
+      },
+      "lineNbr": 0,
+      "author": {
+        "id": 25889
+      },
+      "writtenOn": "2025-12-18T21:13:27Z",
+      "side": 1,
+      "message": "I reverted back to AGP 8.3 just to take a look and it seems that on the UnitTest assembly it considered them \"up to date\" and doesn\u0027t re-recompile them (even if you do a project clean), where as 8.4 does do the compile, so probably a bug fix in 8.4 🤷",
+      "parentUuid": "303c6e64_e4036aa7",
+      "revId": "988c7dfbd787139aba87a6b2fd7b31000ac11415",
+      "serverId": "1ec6b3db-b2c1-4fa4-84a2-4c7efe89ba71"
     }
   ]
 }
