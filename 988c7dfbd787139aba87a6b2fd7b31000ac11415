@@ -124,6 +124,24 @@
       "parentUuid": "3be689e3_113f6557",
       "revId": "988c7dfbd787139aba87a6b2fd7b31000ac11415",
       "serverId": "1ec6b3db-b2c1-4fa4-84a2-4c7efe89ba71"
+    },
+    {
+      "unresolved": false,
+      "key": {
+        "uuid": "c26293d5_1dc65f32",
+        "filename": "/PATCHSET_LEVEL",
+        "patchSetId": 4
+      },
+      "lineNbr": 0,
+      "author": {
+        "id": 25889
+      },
+      "writtenOn": "2025-12-18T03:44:48Z",
+      "side": 1,
+      "message": "I also noticed that your patchset 4 seems to replace the gradlew script with an older one?  Not sure if that was intentional.",
+      "parentUuid": "5b1a3f70_00d60436",
+      "revId": "988c7dfbd787139aba87a6b2fd7b31000ac11415",
+      "serverId": "1ec6b3db-b2c1-4fa4-84a2-4c7efe89ba71"
     }
   ]
 }
