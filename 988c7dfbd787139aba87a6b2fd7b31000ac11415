@@ -106,6 +106,24 @@
       "parentUuid": "a20afc9e_ced9193b",
       "revId": "988c7dfbd787139aba87a6b2fd7b31000ac11415",
       "serverId": "1ec6b3db-b2c1-4fa4-84a2-4c7efe89ba71"
+    },
+    {
+      "unresolved": false,
+      "key": {
+        "uuid": "5b1a3f70_00d60436",
+        "filename": "/PATCHSET_LEVEL",
+        "patchSetId": 4
+      },
+      "lineNbr": 0,
+      "author": {
+        "id": 25889
+      },
+      "writtenOn": "2025-12-18T03:43:26Z",
+      "side": 1,
+      "message": "Yes, if you specify the DeskClock module it will build fine (it only runs the assembleDebug command), but if you use the normal build command (aka ctrl-f9) it fails as that builds assembleDebug, assembleDebugAndroidTest, and assembleDebugUnitTest (for me at least) and of course the test cases are broken so the compile fails.\n\nI don\u0027t think it\u0027s a big deal now that I understand what\u0027s going on and there is an easy workaround until the unit tests get updated.",
+      "parentUuid": "3be689e3_113f6557",
+      "revId": "988c7dfbd787139aba87a6b2fd7b31000ac11415",
+      "serverId": "1ec6b3db-b2c1-4fa4-84a2-4c7efe89ba71"
     }
   ]
 }
