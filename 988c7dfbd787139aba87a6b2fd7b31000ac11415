@@ -142,6 +142,24 @@
       "parentUuid": "5b1a3f70_00d60436",
       "revId": "988c7dfbd787139aba87a6b2fd7b31000ac11415",
       "serverId": "1ec6b3db-b2c1-4fa4-84a2-4c7efe89ba71"
+    },
+    {
+      "unresolved": false,
+      "key": {
+        "uuid": "303c6e64_e4036aa7",
+        "filename": "/PATCHSET_LEVEL",
+        "patchSetId": 4
+      },
+      "lineNbr": 0,
+      "author": {
+        "id": 10067
+      },
+      "writtenOn": "2025-12-18T07:46:37Z",
+      "side": 1,
+      "message": "\u003eYes, if you specify the DeskClock module it will build fine (it only runs the assembleDebug command), but if you use the normal build command (aka ctrl-f9) it fails as that builds assembleDebug, assembleDebugAndroidTest, and assembleDebugUnitTest (for me at least) and of course the test cases are broken so the compile fails.\n\nthen no idea how supposedly upgrading AGP alone to a specific version would make them compile, it makes no sense.\n\n\u003eI also noticed that your patchset 4 seems to replace the gradlew script with an older one? Not sure if that was intentional.\n\nit\u0027s a newer one, that\u0027s the one you get after running ./gradlew wrapper.",
+      "parentUuid": "c26293d5_1dc65f32",
+      "revId": "988c7dfbd787139aba87a6b2fd7b31000ac11415",
+      "serverId": "1ec6b3db-b2c1-4fa4-84a2-4c7efe89ba71"
     }
   ]
 }
