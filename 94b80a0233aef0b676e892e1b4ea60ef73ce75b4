@@ -34,6 +34,24 @@
       "parentUuid": "4381c6bb_44af6020",
       "revId": "94b80a0233aef0b676e892e1b4ea60ef73ce75b4",
       "serverId": "1ec6b3db-b2c1-4fa4-84a2-4c7efe89ba71"
+    },
+    {
+      "unresolved": false,
+      "key": {
+        "uuid": "b07e52a7_fc5596a0",
+        "filename": "/PATCHSET_LEVEL",
+        "patchSetId": 1
+      },
+      "lineNbr": 0,
+      "author": {
+        "id": 10067
+      },
+      "writtenOn": "2025-12-19T16:26:37Z",
+      "side": 1,
+      "message": "gradle build isn\u0027t used for AOSP build ever, but gradle build should use same versions as AOSP, just to reduce potential differences between the two.",
+      "parentUuid": "133194e4_4f0a3005",
+      "revId": "94b80a0233aef0b676e892e1b4ea60ef73ce75b4",
+      "serverId": "1ec6b3db-b2c1-4fa4-84a2-4c7efe89ba71"
     }
   ]
 }
