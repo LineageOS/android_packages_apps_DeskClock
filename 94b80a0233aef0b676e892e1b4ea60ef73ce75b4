@@ -16,6 +16,24 @@
       "message": "these would ideally be in sync with AOSP rather than latest",
       "revId": "94b80a0233aef0b676e892e1b4ea60ef73ce75b4",
       "serverId": "1ec6b3db-b2c1-4fa4-84a2-4c7efe89ba71"
+    },
+    {
+      "unresolved": false,
+      "key": {
+        "uuid": "133194e4_4f0a3005",
+        "filename": "/PATCHSET_LEVEL",
+        "patchSetId": 1
+      },
+      "lineNbr": 0,
+      "author": {
+        "id": 25889
+      },
+      "writtenOn": "2025-12-19T16:22:49Z",
+      "side": 1,
+      "message": "You mean AOSP DeskClock?  Because that was converted to Kotlin a few years ago and isn\u0027t using gradle anymore as far as I can tell.",
+      "parentUuid": "4381c6bb_44af6020",
+      "revId": "94b80a0233aef0b676e892e1b4ea60ef73ce75b4",
+      "serverId": "1ec6b3db-b2c1-4fa4-84a2-4c7efe89ba71"
     }
   ]
 }
