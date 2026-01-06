@@ -341,39 +341,34 @@ public final class ClockFragment extends DeskClockFragment {
         @Override
         public RecyclerView.ViewHolder onCreateViewHolder(@NonNull ViewGroup parent, int viewType) {
             final View view = mInflater.inflate(viewType, parent, false);
-            switch (viewType) {
-                case WORLD_CLOCK:
-                    return new CityViewHolder(view);
-                case MAIN_CLOCK:
-                    return new MainClockViewHolder(view);
-                default:
-                    throw new IllegalArgumentException("View type not recognized");
+            if (viewType == WORLD_CLOCK) {
+                return new CityViewHolder(view);
+            } else if (viewType == MAIN_CLOCK) {
+                return new MainClockViewHolder(view);
+            } else {
+                throw new IllegalArgumentException("View type not recognized");
             }
         }
 
         @Override
         public void onBindViewHolder(@NonNull RecyclerView.ViewHolder holder, int position) {
             final int viewType = getItemViewType(position);
-            switch (viewType) {
-                case WORLD_CLOCK:
-                    // Retrieve the city to bind.
-                    final City city;
-                    // If showing home clock, put it at the top
-                    if (mShowHomeClock && position == (mIsPortrait ? 1 : 0)) {
-                        city = getHomeCity();
-                    } else {
-                        final int positionAdjuster = (mIsPortrait ? 1 : 0)
-                                + (mShowHomeClock ? 1 : 0);
-                        city = getCities().get(position - positionAdjuster);
-                    }
-                    ((CityViewHolder) holder).bind(mContext, city);
-                    break;
-                case MAIN_CLOCK:
-                    ((MainClockViewHolder) holder).bind(mContext, mDateFormat,
-                            mDateFormatForAccessibility);
-                    break;
-                default:
-                    throw new IllegalArgumentException("Unexpected view type: " + viewType);
+            if (viewType == WORLD_CLOCK) {
+                // Retrieve the city to bind.
+                final City city;
+                // If showing home clock, put it at the top
+                if (mShowHomeClock && position == (mIsPortrait ? 1 : 0)) {
+                    city = getHomeCity();
+                } else {
+                    final int positionAdjuster = (mIsPortrait ? 1 : 0) + (mShowHomeClock ? 1 : 0);
+                    city = getCities().get(position - positionAdjuster);
+                }
+                ((CityViewHolder) holder).bind(mContext, city);
+            } else if (viewType == MAIN_CLOCK) {
+                ((MainClockViewHolder) holder).bind(mContext, mDateFormat,
+                        mDateFormatForAccessibility);
+            } else {
+                throw new IllegalArgumentException("Unexpected view type: " + viewType);
             }
         }
 
