@@ -7,8 +7,19 @@ android {
     compileSdk 34
 
     defaultConfig {
+        applicationId "com.android.deskclock"
         minSdkVersion 27
         targetSdkVersion 34
+    }
+
+    buildTypes {
+        debug {
+            applicationIdSuffix ".dev"
+        }
+        release {
+            minifyEnabled true
+            proguardFiles 'proguard.flags'
+        }
     }
 
     sourceSets {
