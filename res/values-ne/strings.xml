@@ -21,7 +21,6 @@
     <string name="label" msgid="162189613902857319">"लेबल"</string>
     <string name="default_label" msgid="5590025289805630372">"अलार्म"</string>
     <string name="alarm_vibrate" msgid="3476686921490362230">"भाइब्रेट गराउनुहोस्"</string>
-    <string name="alarm_repeat" msgid="7242985466344233206">"दोहोर्याउनुहोस्"</string>
     <string name="delete" msgid="5732434972457000541">"मेटाउनुहोस्"</string>
     <string name="default_alarm_ringtone_title" msgid="2916376768509623643">"पूर्वनिर्धारित अलार्म ध्वनि"</string>
     <string name="alarm_sound" msgid="8754499591391638405">"अलार्मको ध्वनि"</string>
@@ -61,8 +60,6 @@
     <string name="timer_notifications_hours_seconds" msgid="8168090805113197804">"<xliff:g id="HOURS">%1$s</xliff:g> <xliff:g id="SECONDS"> %4$s</xliff:g><xliff:g id="REMAINING"> %3$s</xliff:g>"</string>
     <string name="timer_notifications_hours_minutes_seconds" msgid="4666176878038730417">"<xliff:g id="HOURS">%1$s</xliff:g><xliff:g id="MINUTES"> %2$s</xliff:g><xliff:g id="SECONDS"> %4$s</xliff:g><xliff:g id="REMAINING"> %3$s</xliff:g>"</string>
     <string name="timer_accessibility_one_minute_added" msgid="6096646178998456004">"टाइमरमा एक मिनेट थपियो, <xliff:g id="TIME">%1$s</xliff:g>"</string>
-    <string name="timer_accessibility_stopped" msgid="2753501043114605474">"टाइमर रोकियो, <xliff:g id="TIME">%1$s</xliff:g>"</string>
-    <string name="timer_accessibility_started" msgid="8503877052873671219">"टाइमर चलिरहेको छ, <xliff:g id="TIME">%1$s</xliff:g>"</string>
     <string name="timer_remaining_single" msgid="6782851171906765864">"बाँकी"</string>
     <string name="timer_remaining_multiple" msgid="6052775962092160851">"बाँकी"</string>
   <string-array name="alarm_set">
@@ -199,8 +196,6 @@
     <string name="button_alarms" msgid="3907838219512538763">"अलार्म थप्नुहोस्"</string>
     <string name="button_cities" msgid="4555761857494501363">"शहरहरू"</string>
     <string name="menu_item_settings" msgid="1413723516369078665">"सेटिङहरू"</string>
-    <string name="menu_item_help" msgid="4570953476186849841">"मद्दत"</string>
-    <string name="menu_item_night_mode" msgid="2930695838866189483">"स्क्रिन सेभर"</string>
     <string name="menu_item_sort_by_gmt_offset" msgid="3120860422682721706">"समय अनुसार क्रमबद्ध गर्नुहोस्"</string>
     <string name="menu_item_sort_by_name" msgid="1762931290495104106">"नामबाट क्रमबद्ध गर्नुहोस्"</string>
     <string name="selected_cities_label" msgid="3607479399424246605">"छानिएका शहरहरू"</string>
@@ -379,9 +374,7 @@
     <string name="timer_vibrate_title" msgid="7788920024785587518">"टाइमर भाइब्रेट"</string>
     <string name="timer_paused" msgid="5941160896040771462">"टाइमर रोकियो"</string>
     <string name="timers_stopped" msgid="3186191253226005149">"<xliff:g id="NUMBER">%d</xliff:g> टाइमरहरू रोकिए"</string>
-    <string name="all_timers_stopped_notif" msgid="883027111895833440">"आफ्नो टाइमरहरू हेर्न ट्याप गर्नुहोस्"</string>
     <string name="timers_in_use" msgid="5570729467344408506">"<xliff:g id="NUMBER">%d</xliff:g> घडीहरू"</string>
-    <string name="next_timer_notif" msgid="6136454740115613653">"अर्को घडी: <xliff:g id="TIME_REMAINING">%s</xliff:g>"</string>
     <string name="screensaver_settings" msgid="1780742944194267226">"स्क्रिन सेभरसम्बन्धी सेटिङहरू"</string>
     <string name="night_mode_title" msgid="5983813889469616299">"रात्रि मोड"</string>
     <string name="night_mode_summary" msgid="1017350187324162631">"ज्यादै मधुरो प्रदर्शन (अध्याँरा कोठाहरूका लागि)"</string>
@@ -396,8 +389,6 @@
     <string name="world_hours_minutes_behind" msgid="8978567362140923698">"<xliff:g id="HOURS">%1$s</xliff:g> <xliff:g id="MINUTES">%2$s</xliff:g> पछि"</string>
     <string name="world_hours_tomorrow" msgid="2504465609269004794">"भोलि, <xliff:g id="TIME">%1$s</xliff:g>"</string>
     <string name="world_hours_yesterday" msgid="4425086322610882745">"हिजो, <xliff:g id="TIME">%1$s</xliff:g>"</string>
-    <string name="world_tomorrow" msgid="7633067935455580920">"भोलि"</string>
-    <string name="world_yesterday" msgid="5430990920477833164">"हिजो"</string>
     <string name="next_alarm_description" msgid="2650244835760747046">"अर्को अलार्म: <xliff:g id="ALARM_TIME">%s</xliff:g>"</string>
     <string name="no_alarms" msgid="6429431324842022917">"आलार्महरू छैनन्"</string>
     <string name="invalid_time" msgid="2782334750243998633">"अमान्य समय <xliff:g id="INVALID_HOUR">%1$d</xliff:g> : <xliff:g id="INVALID_MINUTES">%2$d</xliff:g><xliff:g id="INVALID_AMPM">%3$s</xliff:g>"</string>
