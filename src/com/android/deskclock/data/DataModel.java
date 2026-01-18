@@ -39,6 +39,7 @@ import android.view.View;
 import androidx.annotation.Keep;
 import androidx.annotation.StringRes;
 
+import com.android.deskclock.BuildConfig;
 import com.android.deskclock.Predicate;
 import com.android.deskclock.R;
 import com.android.deskclock.timer.TimerService;
@@ -153,7 +154,7 @@ public final class DataModel {
     }
 
     public static final String ACTION_WORLD_CITIES_CHANGED =
-            "com.android.deskclock.WORLD_CITIES_CHANGED";
+            BuildConfig.APPLICATION_ID + ".WORLD_CITIES_CHANGED";
 
     /** The single instance of this data model that exists for the life of the application. */
     private static final DataModel sDataModel = new DataModel();
