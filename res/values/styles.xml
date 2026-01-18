@@ -22,10 +22,6 @@
         <item name="android:textColor">@color/white_63p</item>
     </style>
 
-    <style name="label">
-        <item name="android:textSize">@dimen/label_font_size</item>
-    </style>
-
     <style name="display_time">
         <item name="android:textSize">56sp</item>
         <item name="android:textColor">@color/white</item>

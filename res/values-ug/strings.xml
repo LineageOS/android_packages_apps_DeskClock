@@ -19,7 +19,6 @@
     <string name="label">بەلگە</string>
     <string name="default_label">قوڭغۇراق</string>
     <string name="alarm_vibrate">تىترەت</string>
-    <string name="alarm_repeat">قايتىلا</string>
     <string name="delete">ئۆچۈر</string>
     <string name="alarm_alert_dismiss_text">تاقا</string>
     <string name="alarm_missed_title">ئۆتكۈزۈۋەتكەن قوڭغۇراق</string>
@@ -103,7 +102,6 @@
     <string name="menu_stopwatch">دەقىقە سائەت</string>
     <string name="button_cities">شەھەرلەر</string>
     <string name="menu_item_settings">تەڭشەكلەر</string>
-    <string name="menu_item_help">ياردەم</string>
     <string name="menu_item_sort_by_gmt_offset">ۋاقىت بويىچە تەرتىپلە</string>
     <string name="menu_item_sort_by_name">ئات بويىچە تەرتىپلە</string>
     <string name="selected_cities_label">تاللانغان شەھەرلەر</string>
@@ -240,7 +238,6 @@
     </string-array>
     <string name="shortcut_start_stopwatch_short">باشلا</string>
     <string name="timers_in_use"><xliff:g id="NUMBER">%d</xliff:g> ۋاقىت خاتىرىلىگۈچ</string>
-    <string name="next_timer_notif">كېيىنكى ۋاقىت خاتىرىلىگۈچ: <xliff:g id="TIME_REMAINING">%s</xliff:g></string>
     <string name="night_mode_title">كېچە ھالىتى</string>
     <string name="night_mode_summary">ئېكران يورۇقلۇقىنى بەك تۆۋەن تەڭشەيدۇ (قاراڭغۇ ئۆيگە ماس كېلىدۇ)</string>
     <string name="expand_alarm">قوڭغۇراقنى ياي</string>
