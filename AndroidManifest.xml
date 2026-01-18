@@ -166,7 +166,7 @@
 
         <provider
             android:name=".provider.ClockProvider"
-            android:authorities="com.android.deskclock"
+            android:authorities="${applicationId}"
             android:directBootAware="true"
             android:exported="false" />
 
@@ -281,7 +281,7 @@
 
             <meta-data
                 android:name="android.appwidget.oldName"
-                android:value="com.android.deskclock.AnalogAppWidgetProvider" />
+                android:value="${applicationId}.AnalogAppWidgetProvider" />
             <meta-data
                 android:name="android.appwidget.provider"
                 android:resource="@xml/analog_appwidget" />
@@ -297,8 +297,8 @@
                 <action android:name="android.intent.action.LOCALE_CHANGED" />
                 <action android:name="android.intent.action.TIME_SET" />
                 <action android:name="android.intent.action.TIMEZONE_CHANGED" />
-                <action android:name="com.android.deskclock.ON_DAY_CHANGE" />
-                <action android:name="com.android.deskclock.WORLD_CITIES_CHANGED" />
+                <action android:name="${applicationId}.ON_DAY_CHANGE" />
+                <action android:name="${applicationId}.WORLD_CITIES_CHANGED" />
                 <action android:name="android.intent.action.CONFIGURATION_CHANGED" />
             </intent-filter>
             <meta-data
