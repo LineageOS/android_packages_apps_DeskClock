@@ -55,11 +55,6 @@
         <item name="windowNoTitle">false</item>
     </style>
 
-    <style name="ThemeOverlay.Control.Accent" parent="ThemeOverlay.AppCompat">
-        <!-- Attributes from androidx.appcompat.appcompat -->
-        <item name="colorControlActivated">?attr/colorAccent</item>
-    </style>
-
     <style name="ThemeOverlay.Popup" parent="Widget.AppCompat.PopupMenu">
         <item name="android:background">@drawable/popup_background</item>
         <item name="android:colorBackground">@color/transparent</item>
