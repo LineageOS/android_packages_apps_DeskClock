@@ -16,6 +16,23 @@
       "message": "Builds and everything works",
       "revId": "0d363b88a17a0750b71b2900a206742c2829a9e8",
       "serverId": "1ec6b3db-b2c1-4fa4-84a2-4c7efe89ba71"
+    },
+    {
+      "unresolved": true,
+      "key": {
+        "uuid": "5cad9413_4e2897a5",
+        "filename": "/PATCHSET_LEVEL",
+        "patchSetId": 1
+      },
+      "lineNbr": 0,
+      "author": {
+        "id": 13028
+      },
+      "writtenOn": "2026-01-19T09:22:41Z",
+      "side": 1,
+      "message": "Dont remove translations - translation import does that",
+      "revId": "0d363b88a17a0750b71b2900a206742c2829a9e8",
+      "serverId": "1ec6b3db-b2c1-4fa4-84a2-4c7efe89ba71"
     }
   ]
 }
