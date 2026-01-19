@@ -33,6 +33,24 @@
       "message": "Dont remove translations - translation import does that",
       "revId": "0d363b88a17a0750b71b2900a206742c2829a9e8",
       "serverId": "1ec6b3db-b2c1-4fa4-84a2-4c7efe89ba71"
+    },
+    {
+      "unresolved": true,
+      "key": {
+        "uuid": "017b4419_2d190301",
+        "filename": "/PATCHSET_LEVEL",
+        "patchSetId": 1
+      },
+      "lineNbr": 0,
+      "author": {
+        "id": 35350
+      },
+      "writtenOn": "2026-01-19T17:01:56Z",
+      "side": 1,
+      "message": "Doesn\u0027t that only apply to Lineage translations? These ones are from AOSP and appear to have been there for a while (past other translation imports).",
+      "parentUuid": "5cad9413_4e2897a5",
+      "revId": "0d363b88a17a0750b71b2900a206742c2829a9e8",
+      "serverId": "1ec6b3db-b2c1-4fa4-84a2-4c7efe89ba71"
     }
   ]
 }
