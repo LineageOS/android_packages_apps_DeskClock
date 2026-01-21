@@ -39,6 +39,7 @@ import androidx.annotation.IdRes;
 import com.android.deskclock.FabContainer;
 import com.android.deskclock.FormattedTextUtils;
 import com.android.deskclock.R;
+import com.android.deskclock.ThemeUtils;
 import com.android.deskclock.uidata.UiDataModel;
 
 import java.io.Serializable;
@@ -207,7 +208,10 @@ public class TimerSetupView extends LinearLayout implements View.OnClickListener
         startIdx = minutes > 0 ? 4 : startIdx;
         startIdx = hours > 0 ? 0 : startIdx;
         if (startIdx != endIdx) {
-            final int highlightColor = r.getColor(R.color.accent_color, getContext().getTheme());
+            int highlightColor = ThemeUtils.resolveColor(
+                    mTimeView.getContext(),
+                    R.attr.colorPrimary
+            );
             text.setSpan(new ForegroundColorSpan(highlightColor), startIdx, endIdx, 0);
         }
         mTimeView.setText(text);

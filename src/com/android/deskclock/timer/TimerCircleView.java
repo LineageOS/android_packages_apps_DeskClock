@@ -63,8 +63,8 @@ public final class TimerCircleView extends View {
         mStrokeSize = resources.getDimension(R.dimen.circletimer_circle_size);
         mDotRadius = mStrokeSize / 2;
 
-        mRemainderColor = ThemeUtils.resolveColor(context, R.attr.colorAccent);
-        mCompletedColor = resources.getColor(R.color.secondary_color, context.getTheme());
+        mRemainderColor = ThemeUtils.resolveColor(context, R.attr.colorPrimary);
+        mCompletedColor = ThemeUtils.resolveColor(context, android.R.attr.colorBackground);
 
         mPaint.setAntiAlias(true);
         mPaint.setStyle(Paint.Style.STROKE);
