@@ -10,7 +10,7 @@
             <size
                 android:width="24dp"
                 android:height="24dp" />
-            <solid android:color="@color/system_neutral2_700" />
+            <solid android:color="?attr/colorOutline" />
         </shape>
     </item>
     <item>
