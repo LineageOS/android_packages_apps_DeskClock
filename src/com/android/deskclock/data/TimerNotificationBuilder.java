@@ -37,6 +37,7 @@ import androidx.core.content.ContextCompat;
 import com.android.deskclock.DeskClock;
 import com.android.deskclock.NotificationUtils;
 import com.android.deskclock.R;
+import com.android.deskclock.ThemeUtils;
 import com.android.deskclock.Utils;
 import com.android.deskclock.events.Events;
 import com.android.deskclock.timer.ExpiredTimersActivity;
@@ -150,7 +151,7 @@ class TimerNotificationBuilder {
                         .setSortKey(nm.getTimerNotificationSortKey())
                         .setVisibility(NotificationCompat.VISIBILITY_PUBLIC)
                         .setStyle(new NotificationCompat.DecoratedCustomViewStyle())
-                        .setColor(ContextCompat.getColor(context, R.color.default_background))
+                        .setColor(ThemeUtils.resolveColor(context, R.attr.colorSurface))
                         .setCustomContentView(buildChronometer(pname, base, running, stateText))
                         .setGroup(nm.getTimerNotificationGroupKey());
 
@@ -223,7 +224,7 @@ class TimerNotificationBuilder {
                         .setSmallIcon(R.drawable.stat_notify_timer)
                         .setFullScreenIntent(pendingFullScreen, true)
                         .setStyle(new NotificationCompat.DecoratedCustomViewStyle())
-                        .setColor(ContextCompat.getColor(context, R.color.default_background))
+                        .setColor(ThemeUtils.resolveColor(context, R.attr.colorSurface))
                         .setCustomContentView(buildChronometer(pname, base, true, stateText));
 
         for (Action action : actions) {
@@ -296,7 +297,7 @@ class TimerNotificationBuilder {
                         .setSortKey(nm.getTimerNotificationMissedSortKey())
                         .setStyle(new NotificationCompat.DecoratedCustomViewStyle())
                         .addAction(action)
-                        .setColor(ContextCompat.getColor(context, R.color.default_background))
+                        .setColor(ThemeUtils.resolveColor(context, R.attr.colorSurface))
                         .setCustomContentView(buildChronometer(pname, base, true, stateText))
                         .setGroup(nm.getTimerNotificationGroupKey());
 
