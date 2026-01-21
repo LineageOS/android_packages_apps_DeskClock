@@ -38,6 +38,7 @@ import androidx.core.content.ContextCompat;
 import com.android.deskclock.DeskClock;
 import com.android.deskclock.NotificationUtils;
 import com.android.deskclock.R;
+import com.android.deskclock.ThemeUtils;
 import com.android.deskclock.Utils;
 import com.android.deskclock.events.Events;
 import com.android.deskclock.stopwatch.StopwatchService;
@@ -136,7 +137,7 @@ class StopwatchNotificationBuilder {
                         .setPriority(NotificationManager.IMPORTANCE_LOW)
                         .setSmallIcon(R.drawable.stat_notify_stopwatch)
                         .setStyle(new NotificationCompat.DecoratedCustomViewStyle())
-                        .setColor(ContextCompat.getColor(context, R.color.default_background))
+                        .setColor(ThemeUtils.resolveColor(context, R.attr.colorSurface))
                         .setGroup(nm.getStopwatchNotificationGroupKey());
 
         for (Action action : actions) {

@@ -35,6 +35,7 @@ import com.android.deskclock.provider.Alarm;
 import com.android.deskclock.provider.AlarmInstance;
 import com.android.deskclock.widget.EllipsizeLayout;
 import com.android.deskclock.widget.TextTime;
+import com.google.android.material.button.MaterialButton;
 
 import java.util.Calendar;
 
@@ -57,7 +58,7 @@ public abstract class AlarmItemViewHolder extends ItemAdapter.ItemViewHolder<Ala
 
     public final TextTime clock;
     public final CompoundButton onOff;
-    public final ImageView arrow;
+    public final MaterialButton arrow;
     public final TextView preemptiveDismissButton;
     public final TextView daysOfWeek;
     public final EllipsizeLayout ellipsizeLayout;
