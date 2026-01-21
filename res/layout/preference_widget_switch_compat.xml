@@ -21,4 +21,4 @@
     android:layout_height="wrap_content"
     android:clickable="false"
     android:focusable="false"
-    android:theme="@style/Theme.Material3.DynamicColors.DayNight" />
+    android:theme="@style/Theme.DeskClock.MaterialSwitch" />

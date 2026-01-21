@@ -15,10 +15,8 @@
   limitations under the License.
 -->
 <resources>
-    <style name="Theme.CollapsingToolbar.Settings" parent="@style/Theme.MaterialComponents.DayNight.DarkActionBar">
-        <item name="elevationOverlayEnabled">true</item>
-        <item name="elevationOverlayColor">?colorPrimary</item>
-        <item name="colorPrimary">@color/default_background</item>
-        <item name="colorAccent">@color/accent_color</item>
+    <style name="Theme.CollapsingToolbar.Settings" parent="Theme.Material3Expressive.DynamicColors.Dark.NoActionBar">
+        <item name="colorPrimary">?attr/colorSurface</item>
+        <item name="colorSecondary">?attr/colorPrimary</item>
     </style>
 </resources>
