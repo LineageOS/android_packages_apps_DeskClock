@@ -90,7 +90,7 @@
             app:layout_constraintEnd_toEndOf="parent"
             app:layout_constraintStart_toStartOf="parent"
             app:layout_constraintTop_toBottomOf="@+id/timer_time_text"
-            app:tint="@color/accent_color" />
+            app:tint="?attr/colorPrimary" />
 
     </androidx.constraintlayout.widget.ConstraintLayout>
 
@@ -133,7 +133,7 @@
         android:maxLines="1"
         android:padding="16dp"
         android:background="@drawable/bg_material_button"
-        android:backgroundTint="@color/accent_color2"
+        android:backgroundTint="?attr/colorSecondary"
         android:src="@drawable/ic_play_pause"
         android:scaleType="centerInside"
         app:layout_constraintStart_toStartOf="@id/add_one_min"

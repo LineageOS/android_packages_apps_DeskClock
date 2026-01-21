@@ -22,7 +22,7 @@
         android:bottom="8dp">
         <shape android:shape="oval" >
             <size android:height="20dp" android:width="20dp" />
-            <solid android:color="@color/system_neutral2_500" />
+            <solid android:color="?attr/colorOutline" />
         </shape>
     </item>
     <item>
