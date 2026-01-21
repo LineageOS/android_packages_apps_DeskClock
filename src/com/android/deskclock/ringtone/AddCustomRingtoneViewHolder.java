@@ -25,6 +25,8 @@ import android.widget.TextView;
 
 import com.android.deskclock.ItemAdapter.ItemViewHolder;
 import com.android.deskclock.R;
+import com.android.deskclock.ThemeUtils;
+import com.google.android.material.color.MaterialColors;
 
 final class AddCustomRingtoneViewHolder extends ItemViewHolder<AddCustomRingtoneHolder>
         implements View.OnClickListener {
@@ -47,7 +49,13 @@ final class AddCustomRingtoneViewHolder extends ItemViewHolder<AddCustomRingtone
         imageView.setImageResource(R.drawable.ic_add_24dp);
         imageView.setBackgroundResource(R.drawable.bg_circle_white);
         imageView.setBackgroundTintList(
-                ColorStateList.valueOf(itemView.getContext().getColor(R.color.accent_color)));
+                ColorStateList.valueOf(
+                        ThemeUtils.resolveColor(
+                                imageView.getContext(),
+                                R.attr.colorPrimary
+                        )
+                )
+        );
     }
 
     @Override
