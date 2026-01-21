@@ -34,6 +34,7 @@ import com.android.deskclock.AnimatorUtils;
 import com.android.deskclock.ItemAdapter;
 import com.android.deskclock.R;
 import com.android.deskclock.Utils;
+import com.google.android.material.button.MaterialButton;
 
 final class RingtoneViewHolder extends ItemAdapter.ItemViewHolder<RingtoneHolder>
         implements OnClickListener, PopupMenu.OnMenuItemClickListener {
@@ -47,7 +48,7 @@ final class RingtoneViewHolder extends ItemAdapter.ItemViewHolder<RingtoneHolder
     private final View mSelectedView;
     private final TextView mNameView;
     private final ImageView mImageView;
-    private final ImageView mMenuView;
+    private final MaterialButton mMenuView;
 
     private RingtoneViewHolder(View itemView) {
         super(itemView);

@@ -26,7 +26,6 @@ import android.text.TextUtils;
 import android.util.AttributeSet;
 import android.view.View;
 import android.widget.Button;
-import android.widget.ImageButton;
 import android.widget.TextView;
 
 import androidx.constraintlayout.widget.ConstraintLayout;
@@ -35,6 +34,8 @@ import com.android.deskclock.R;
 import com.android.deskclock.ThemeUtils;
 import com.android.deskclock.TimerTextController;
 import com.android.deskclock.data.Timer;
+
+import com.google.android.material.button.MaterialButton;
 
 /**
  * This view is a visual representation of a {@link Timer}.
@@ -51,7 +52,7 @@ public class TimerItem extends ConstraintLayout {
     private TimerCircleView mCircleView;
 
     /** A button that resets the timer. */
-    private ImageButton mResetButton;
+    private MaterialButton mResetButton;
 
     /** A button that adds a minute to the timer. */
     private Button mAddButton;
@@ -60,7 +61,7 @@ public class TimerItem extends ConstraintLayout {
     private TextView mLabelView;
 
     /** A button to start / stop the timer */
-    private ImageButton mPlayPauseButton;
+    private MaterialButton mPlayPauseButton;
 
     /** The last state of the timer that was rendered; used to avoid expensive operations. */
     private Timer.State mLastState;
@@ -130,20 +131,20 @@ public class TimerItem extends ConstraintLayout {
                     mResetButton.setVisibility(View.GONE);
                     mResetButton.setContentDescription(null);
                     mAddButton.setVisibility(View.INVISIBLE);
-                    mPlayPauseButton.setImageResource(R.drawable.ic_pause_play);
+                    mPlayPauseButton.setIconResource(R.drawable.ic_pause_play);
                     break;
                 case PAUSED: {
-                    mPlayPauseButton.setImageResource(R.drawable.ic_pause_play);
+                    mPlayPauseButton.setIconResource(R.drawable.ic_pause_play);
                     break;
                 }
                 case RUNNING: {
-                    mPlayPauseButton.setImageResource(R.drawable.ic_play_pause);
+                    mPlayPauseButton.setIconResource(R.drawable.ic_play_pause);
                     break;
                 }
                 case EXPIRED:
                 case MISSED: {
                     mResetButton.setVisibility(View.GONE);
-                    mPlayPauseButton.setImageResource(R.drawable.ic_stop_play);
+                    mPlayPauseButton.setIconResource(R.drawable.ic_stop_play);
                     break;
                 }
             }
