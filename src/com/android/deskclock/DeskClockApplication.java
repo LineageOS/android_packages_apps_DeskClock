@@ -26,6 +26,7 @@ import com.android.deskclock.controller.Controller;
 import com.android.deskclock.data.DataModel;
 import com.android.deskclock.events.LogEventTracker;
 import com.android.deskclock.uidata.UiDataModel;
+import com.google.android.material.color.DynamicColors;
 
 public class DeskClockApplication extends Application {
 
@@ -40,6 +41,7 @@ public class DeskClockApplication extends Application {
         UiDataModel.getUiDataModel().init(applicationContext, prefs);
         Controller.getController().setContext(applicationContext);
         Controller.getController().addEventTracker(new LogEventTracker(applicationContext));
+        DynamicColors.applyToActivitiesIfAvailable(this);
     }
 
     /**

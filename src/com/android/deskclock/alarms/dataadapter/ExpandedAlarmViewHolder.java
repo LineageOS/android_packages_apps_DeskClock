@@ -363,9 +363,6 @@ public final class ExpandedAlarmViewHolder extends AlarmItemViewHolder {
                 .setDuration(longDuration);
         final Animator deleteAnimation = ObjectAnimator.ofFloat(delete, View.ALPHA, 1f)
                 .setDuration(longDuration);
-        final Animator arrowAnimation = ObjectAnimator.ofFloat(arrow, View.TRANSLATION_Y, 0f)
-                .setDuration(duration);
-        arrowAnimation.setInterpolator(AnimatorUtils.INTERPOLATOR_FAST_OUT_SLOW_IN);
 
         // Set the stagger delays; delay the first by the amount of time it takes for the collapse
         // to complete, then stagger the expansion with the remaining time.
@@ -392,13 +389,7 @@ public final class ExpandedAlarmViewHolder extends AlarmItemViewHolder {
         final AnimatorSet animatorSet = new AnimatorSet();
         animatorSet.playTogether(backgroundAnimator, boundsAnimator,
                 repeatDaysAnimation, vibrateAnimation, ringtoneAnimation, editLabelAnimation,
-                deleteAnimation, dismissAnimation, arrowAnimation);
-        animatorSet.addListener(new AnimatorListenerAdapter() {
-            @Override
-            public void onAnimationStart(Animator animator) {
-                AnimatorUtils.startDrawableAnimation(arrow);
-            }
-        });
+                deleteAnimation, dismissAnimation);
         return animatorSet;
     }
 

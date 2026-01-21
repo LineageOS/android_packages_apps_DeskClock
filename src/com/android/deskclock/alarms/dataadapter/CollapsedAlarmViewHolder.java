@@ -179,18 +179,8 @@ public final class CollapsedAlarmViewHolder extends AlarmItemViewHolder {
                         newView).setDuration(duration);
         boundsAnimator.setInterpolator(AnimatorUtils.INTERPOLATOR_FAST_OUT_SLOW_IN);
 
-        final Animator arrowAnimation = ObjectAnimator.ofFloat(arrow, View.TRANSLATION_Y, 0f)
-                .setDuration(duration);
-        arrowAnimation.setInterpolator(AnimatorUtils.INTERPOLATOR_FAST_OUT_SLOW_IN);
-
         final AnimatorSet animatorSet = new AnimatorSet();
-        animatorSet.playTogether(alphaAnimatorSet, boundsAnimator, arrowAnimation);
-        animatorSet.addListener(new AnimatorListenerAdapter() {
-            @Override
-            public void onAnimationStart(Animator animator) {
-                AnimatorUtils.startDrawableAnimation(arrow);
-            }
-        });
+        animatorSet.playTogether(alphaAnimatorSet, boundsAnimator);
         return animatorSet;
     }
 
