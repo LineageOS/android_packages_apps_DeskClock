@@ -18,11 +18,11 @@
     <style name="CollapsingToolbarTitle.Collapsed" parent="@android:style/TextAppearance.DeviceDefault.Widget.ActionBar.Title">
         <item name="android:fontFamily">@*android:string/config_headlineFontFamily</item>
         <item name="android:textSize">20dp</item>
-        <item name="android:textColor">@android:color/system_neutral1_50</item>
+        <item name="android:textColor">?attr/colorOnSurface</item>
     </style>
 
     <style name="CollapsingToolbarTitle.Expanded" parent="CollapsingToolbarTitle.Collapsed">
         <item name="android:textSize">36dp</item>
-        <item name="android:textColor">@android:color/system_neutral1_50</item>
+        <item name="android:textColor">?attr/colorOnSurface</item>
     </style>
 </resources>
