@@ -17,32 +17,35 @@
 
 <resources>
 
-    <style name="Theme.DeskClock" parent="Theme.AppCompat.NoActionBar">
+    <style name="Theme.DeskClock" parent="Theme.Material3Expressive.DynamicColors.Dark.NoActionBar">
         <item name="android:colorBackgroundFloating">?attr/colorBackgroundFloating</item>
-        <item name="android:navigationBarColor">@color/secondary_color</item>
-        <item name="popupTheme">@style/ThemeOverlay.Popup</item>
+        <item name="android:navigationBarColor">?attr/colorSurfaceVariant</item>
+        <item name="popupMenuBackground">@drawable/popup_background</item>
+        <item name="floatingActionButtonStyle">@style/Widget.DeskClock.FloatingActionButton</item>
 
         <item name="android:timePickerStyle">@style/Widget.TimePicker</item>
-        <item name="android:windowBackground">@color/default_background</item>
+        <item name="android:windowBackground">?attr/colorSurface</item>
         <item name="android:windowContentOverlay">@null</item>
 
-        <item name="colorAccent">@color/accent_color</item>
-        <item name="android:colorSecondary">@color/secondary_color</item>
-        <item name="android:colorForeground">@android:color/system_neutral1_50</item>
-        <item name="colorSurface">@android:color/system_neutral1_500</item>
-        <item name="colorBackgroundFloating">@android:color/system_neutral1_500</item>
-        <item name="colorControlActivated">@android:color/white</item>
-        <item name="colorControlNormal">?android:attr/textColorPrimary</item>
-        <item name="colorPrimaryDark">#00000000</item>
-        <item name="imageButtonStyle">@style/Widget.ImageButton</item>
+        <item name="android:colorForeground">?attr/colorOnSurface</item>
+        <item name="colorBackgroundFloating">?attr/colorSurface</item>
+        <item name="colorControlActivated">?attr/colorPrimary</item>
+        <item name="colorControlNormal">?attr/colorOnSurfaceVariant</item>
+        <item name="colorPrimaryDark">?android:attr/colorBackground</item>
 
         <item name="alertDialogTheme">@style/AlertDialogTheme</item>
         <item name="snackbarStyle">@style/SnackBarStyle</item>
+        <item name="snackbarButtonStyle">@style/SnackBarButtonStyle</item>
+        <item name="snackbarTextViewStyle">@style/SnackBarTextStyle</item>
         <item name="actionBarSize">64dp</item>
     </style>
 
+    <style name="Theme.DeskClock.Splash">
+
+    </style>
+
     <style name="Theme.DeskClock.Settings">
-        <item name="colorPrimary">@color/default_background</item>
+        <item name="colorPrimary">?attr/colorSurface</item>
         <item name="elevationOverlayColor">?attr/colorPrimary</item>
         <item name="colorControlActivated">?attr/colorAccent</item>
         <item name="android:dropDownSpinnerStyle">@style/DeskClock.Settings.DropDownSpinnerStyle</item>
@@ -55,8 +58,15 @@
         <item name="windowNoTitle">false</item>
     </style>
 
-    <style name="ThemeOverlay.Popup" parent="Widget.AppCompat.PopupMenu">
-        <item name="android:background">@drawable/popup_background</item>
-        <item name="android:colorBackground">@color/transparent</item>
+    <style name="Widget.DeskClock.FloatingActionButton"
+        parent="Widget.Material3Expressive.FloatingActionButton">
+        <item name="shapeAppearanceOverlay">
+            @style/ShapeAppearance.Material3.Corner.Full
+        </item>
+    </style>
+
+    <style name="Theme.DeskClock.MaterialSwitch" parent="Widget.Material3.CompoundButton.MaterialSwitch">
+        <item name="thumbIcon">@drawable/switch_thumb_icon</item>
+        <item name="thumbIconTint">@color/switch_thumb_icon</item>
     </style>
 </resources>

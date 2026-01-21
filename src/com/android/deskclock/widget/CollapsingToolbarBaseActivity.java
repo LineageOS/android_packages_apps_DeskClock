@@ -31,6 +31,7 @@ import androidx.coordinatorlayout.widget.CoordinatorLayout;
 import androidx.fragment.app.FragmentActivity;
 
 import com.android.deskclock.R;
+import com.android.deskclock.ThemeUtils;
 import com.google.android.material.appbar.AppBarLayout;
 import com.google.android.material.appbar.CollapsingToolbarLayout;
 
@@ -69,8 +70,12 @@ public class CollapsingToolbarBaseActivity extends FragmentActivity {
             actionBar.setDisplayShowTitleEnabled(true);
             // We need this to have an always light back arrow
             BlendModeColorFilter filter = new BlendModeColorFilter(
-                    getColor(R.color.system_neutral1_50),
-                    BlendMode.SRC_ATOP);
+                    ThemeUtils.resolveColor(
+                            this,
+                            R.attr.colorOnSurface
+                    ),
+                    BlendMode.SRC_ATOP
+            );
             toolbar.getNavigationIcon().setColorFilter(filter);
         }
     }
