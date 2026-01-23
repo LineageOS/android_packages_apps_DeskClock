@@ -1,0 +1,21 @@
+{
+  "comments": [
+    {
+      "unresolved": false,
+      "key": {
+        "uuid": "78933bc8_2262ef42",
+        "filename": "/PATCHSET_LEVEL",
+        "patchSetId": 2
+      },
+      "lineNbr": 0,
+      "author": {
+        "id": 35350
+      },
+      "writtenOn": "2026-01-23T19:15:16Z",
+      "side": 1,
+      "message": "Apparently, the switch layout was being used to style settings. Sorry about that, should be good to go now.",
+      "revId": "b6042c801598c7702ddcee50653c24f6df0ec6cf",
+      "serverId": "1ec6b3db-b2c1-4fa4-84a2-4c7efe89ba71"
+    }
+  ]
+}
