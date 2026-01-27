@@ -1,0 +1,38 @@
+{
+  "comments": [
+    {
+      "unresolved": false,
+      "key": {
+        "uuid": "05169c51_e9064317",
+        "filename": "/PATCHSET_LEVEL",
+        "patchSetId": 1
+      },
+      "lineNbr": 0,
+      "author": {
+        "id": 11883
+      },
+      "writtenOn": "2026-01-27T21:20:01Z",
+      "side": 1,
+      "message": "Can you move this chain after the M3 one?",
+      "revId": "c2aed5acfb7a9f529cdeafc40489634c69b30533",
+      "serverId": "1ec6b3db-b2c1-4fa4-84a2-4c7efe89ba71"
+    },
+    {
+      "unresolved": true,
+      "key": {
+        "uuid": "469ae91b_037ed123",
+        "filename": "AndroidManifest.xml",
+        "patchSetId": 1
+      },
+      "lineNbr": 17,
+      "author": {
+        "id": 11883
+      },
+      "writtenOn": "2026-01-27T21:20:01Z",
+      "side": 1,
+      "message": "I think you still need this for AOSP builds, can you check?",
+      "revId": "c2aed5acfb7a9f529cdeafc40489634c69b30533",
+      "serverId": "1ec6b3db-b2c1-4fa4-84a2-4c7efe89ba71"
+    }
+  ]
+}
