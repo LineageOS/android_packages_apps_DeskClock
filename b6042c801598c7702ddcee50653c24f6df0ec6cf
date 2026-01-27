@@ -16,6 +16,23 @@
       "message": "Apparently, the switch layout was being used to style settings. Sorry about that, should be good to go now.",
       "revId": "b6042c801598c7702ddcee50653c24f6df0ec6cf",
       "serverId": "1ec6b3db-b2c1-4fa4-84a2-4c7efe89ba71"
+    },
+    {
+      "unresolved": false,
+      "key": {
+        "uuid": "371e0c96_4c155b55",
+        "filename": "/PATCHSET_LEVEL",
+        "patchSetId": 2
+      },
+      "lineNbr": 0,
+      "author": {
+        "id": 11883
+      },
+      "writtenOn": "2026-01-27T21:21:13Z",
+      "side": 1,
+      "message": "@baddaemon87@gmail.com is this fine now?\nI don\u0027t really remember how to handle translations in those cases",
+      "revId": "b6042c801598c7702ddcee50653c24f6df0ec6cf",
+      "serverId": "1ec6b3db-b2c1-4fa4-84a2-4c7efe89ba71"
     }
   ]
 }
