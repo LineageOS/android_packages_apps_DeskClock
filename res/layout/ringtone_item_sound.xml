@@ -81,23 +81,19 @@
         app:tintMode="src_in"
         tools:visibility="visible" />
 
-    <ImageView
+
+    <com.google.android.material.button.MaterialButton
+        style="?attr/materialIconButtonStyle"
         android:id="@+id/music_actions"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:layout_alignParentEnd="true"
-        android:layout_centerVertical="true"
         android:contentDescription="@string/more_options"
-        android:foreground="?selectableItemBackgroundBorderless"
-        android:minWidth="@dimen/touch_target_min_size"
-        android:minHeight="@dimen/touch_target_min_size"
-        android:scaleType="center"
-        android:scaleX="0.75"
-        android:scaleY="0.75"
-        android:src="@drawable/ic_more"
         android:visibility="gone"
+        app:icon="@drawable/ic_more"
+        app:iconTint="?colorOnSurface"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toStartOf="@id/end_guide_very_thin"
         app:layout_constraintTop_toTopOf="parent"
         tools:visibility="visible" />
+
 </androidx.constraintlayout.widget.ConstraintLayout>

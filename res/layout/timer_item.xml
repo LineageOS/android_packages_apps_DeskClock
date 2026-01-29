@@ -46,17 +46,16 @@
         app:layout_constraintTop_toTopOf="parent"
         tools:text="@string/label" />
 
-    <ImageButton
+    <com.google.android.material.button.MaterialButton
+        style="?attr/materialIconButtonStyle"
         android:id="@+id/close"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:minWidth="@dimen/touch_target_min_size"
-        android:minHeight="@dimen/touch_target_min_size"
-        android:src="@drawable/ic_close_circle"
-        android:scaleType="centerInside"
+        android:contentDescription="@string/timer_delete"
+        app:icon="@drawable/ic_close_circle"
+        app:iconTint="@null"
         app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintTop_toTopOf="parent"
-        android:contentDescription="@string/timer_delete" />
+        app:layout_constraintTop_toTopOf="parent" />
 
     <com.android.deskclock.CircleButtonsLayout
         android:id="@+id/circle_container"
@@ -90,18 +89,15 @@
             android:importantForAccessibility="no"
             tools:text="01:23"/>
 
-        <ImageButton
+        <com.google.android.material.button.MaterialButton
+            style="?attr/materialIconButtonStyle"
             android:id="@+id/reset"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:layout_gravity="bottom|center_horizontal"
             android:contentDescription="@string/timer_reset"
-            android:gravity="center"
-            android:scaleType="centerInside"
-            android:src="@drawable/ic_reset"
-            android:minWidth="@dimen/touch_target_min_size"
-            android:minHeight="@dimen/touch_target_min_size"
-            app:tint="?attr/colorPrimary" />
+            app:icon="@drawable/ic_reset"
+            app:iconTint="?attr/colorPrimary" />
 
     </com.android.deskclock.CircleButtonsLayout>
 
@@ -138,7 +134,7 @@
         app:layout_constraintBottom_toTopOf="@id/play_pause"
         app:layout_constraintEnd_toEndOf="@id/add_one_min"/>
 
-    <ImageButton
+    <com.google.android.material.button.MaterialButton
         android:id="@+id/play_pause"
         android:layout_width="0dp"
         android:layout_height="wrap_content"
@@ -147,11 +143,13 @@
         android:padding="24dp"
         android:background="@drawable/bg_material_button"
         android:backgroundTint="?attr/colorSecondary"
-        android:src="@drawable/ic_play_pause"
-        android:scaleType="centerInside"
+        app:icon="@drawable/ic_play_pause"
+        app:iconTint="?colorOnPrimary"
+        app:iconGravity="textStart"
+        app:iconPadding="0dp"
+        app:iconSize="24dp"
         app:layout_constraintStart_toStartOf="@id/add_one_min"
         app:layout_constraintEnd_toEndOf="@id/add_one_min"
-        app:layout_constraintBottom_toBottomOf="parent"
-        app:tint="?android:textColorPrimaryInverse" />
+        app:layout_constraintBottom_toBottomOf="parent" />
 
 </com.android.deskclock.timer.TimerItem>

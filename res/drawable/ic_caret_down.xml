@@ -15,17 +15,17 @@
      limitations under the License.
 -->
 <layer-list xmlns:android="http://schemas.android.com/apk/res/android">
-    <item
-        android:top="8dp"
-        android:left="8dp"
-        android:right="8dp"
-        android:bottom="8dp">
+    <item>
         <shape android:shape="oval" >
             <size android:height="20dp" android:width="20dp" />
             <solid android:color="?attr/colorOutline" />
         </shape>
     </item>
-    <item>
+    <item
+        android:top="-6dp"
+        android:bottom="-6dp"
+        android:left="-6dp"
+        android:right="-6dp">
         <vector
             android:name="caret_toclose"
             android:width="24dp"
