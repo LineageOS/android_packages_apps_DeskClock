@@ -100,10 +100,6 @@
         <item name="autoSizeTextType">uniform</item>
     </style>
 
-    <style name="Widget.ImageButton" parent="Widget.AppCompat.ImageButton">
-        <item name="android:background">?attr/selectableItemBackgroundBorderless</item>
-    </style>
-
     <style name="Widget.TimePicker" parent="android:Widget.Material.TimePicker">
         <item name="android:background">?attr/colorSurface</item>
         <item name="android:headerBackground">?attr/colorSurfaceVariant</item>

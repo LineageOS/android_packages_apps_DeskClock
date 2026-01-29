@@ -36,14 +36,14 @@
         app:layout_constraintTop_toTopOf="parent"
         tools:text="@string/label"/>
 
-    <ImageButton
+    <com.google.android.material.button.MaterialButton
+        style="?attr/materialIconButtonStyle"
         android:id="@+id/close"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:minWidth="@dimen/touch_target_min_size"
-        android:minHeight="@dimen/touch_target_min_size"
-        android:src="@drawable/ic_close_circle"
-        android:scaleType="centerInside"
+        android:contentDescription="@string/timer_delete"
+        app:icon="@drawable/ic_close_circle"
+        app:iconTint="@null"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintTop_toTopOf="parent" />
 
@@ -75,22 +75,21 @@
             app:layout_constraintTop_toTopOf="parent"
             tools:text="01:23" />
 
-        <ImageButton
+        <com.google.android.material.button.MaterialButton
+            style="?attr/materialIconButtonStyle"
             android:id="@+id/reset"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:layout_gravity="center_horizontal"
             android:contentDescription="@string/timer_reset"
-            android:gravity="bottom"
             android:minWidth="@dimen/touch_target_min_size"
             android:minHeight="@dimen/touch_target_min_size"
-            android:scaleType="centerInside"
-            android:src="@drawable/ic_reset"
             app:layout_constraintBottom_toBottomOf="parent"
             app:layout_constraintEnd_toEndOf="parent"
             app:layout_constraintStart_toStartOf="parent"
             app:layout_constraintTop_toBottomOf="@+id/timer_time_text"
-            app:tint="?attr/colorPrimary" />
+            app:icon="@drawable/ic_reset"
+            app:iconTint="?attr/colorPrimary" />
 
     </androidx.constraintlayout.widget.ConstraintLayout>
 
@@ -103,7 +102,7 @@
         app:layout_constraintStart_toEndOf="@id/time_container"
         app:layout_constraintEnd_toEndOf="@id/add_one_min"/>
 
-    <Button
+    <com.google.android.material.button.MaterialButton
         android:id="@+id/add_one_min"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
@@ -111,7 +110,6 @@
         android:maxLines="1"
         android:padding="16dp"
         android:text="@string/timer_add_minute"
-        android:background="@drawable/bg_material_button"
         android:textSize="20sp"
         android:fontFamily="sans-serif-medium"
         app:layout_constraintEnd_toEndOf="parent"
@@ -125,20 +123,20 @@
         app:layout_constraintStart_toStartOf="@id/add_one_min"
         app:layout_constraintEnd_toEndOf="@id/add_one_min"/>
 
-    <ImageButton
+    <com.google.android.material.button.MaterialButton
         android:id="@+id/play_pause"
         android:layout_width="0dp"
         android:layout_height="wrap_content"
         android:contentDescription="@string/timer_start"
-        android:maxLines="1"
         android:padding="16dp"
-        android:background="@drawable/bg_material_button"
         android:backgroundTint="?attr/colorSecondary"
-        android:src="@drawable/ic_play_pause"
-        android:scaleType="centerInside"
+        app:icon="@drawable/ic_play_pause"
+        app:iconTint="?colorOnPrimary"
+        app:iconGravity="textStart"
+        app:iconPadding="0dp"
+        app:iconSize="24dp"
         app:layout_constraintStart_toStartOf="@id/add_one_min"
         app:layout_constraintEnd_toEndOf="@id/add_one_min"
-        app:layout_constraintBottom_toBottomOf="parent"
-        app:tint="?android:textColorPrimaryInverse" />
+        app:layout_constraintBottom_toBottomOf="parent" />
 
 </com.android.deskclock.timer.TimerItem>

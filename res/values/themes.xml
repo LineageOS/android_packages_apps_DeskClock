@@ -32,7 +32,6 @@
         <item name="colorControlActivated">?attr/colorPrimary</item>
         <item name="colorControlNormal">?attr/colorOnSurfaceVariant</item>
         <item name="colorPrimaryDark">?android:attr/colorBackground</item>
-        <item name="imageButtonStyle">@style/Widget.ImageButton</item>
 
         <item name="alertDialogTheme">@style/AlertDialogTheme</item>
         <item name="snackbarStyle">@style/SnackBarStyle</item>
