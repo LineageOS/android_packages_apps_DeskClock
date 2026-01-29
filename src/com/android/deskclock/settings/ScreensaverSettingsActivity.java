@@ -143,7 +143,7 @@ public final class ScreensaverSettingsActivity extends CollapsingToolbarBaseActi
                 final int indexColor = nightModeColorPref.findIndexOfValue(DataModel.getDataModel().
                         getScreensaverClockNightModeColor());
                 nightModeColorPref.setValueIndex(indexColor);
-                nightModeColorPref.setSummary(clockColorPref.getEntries()[indexColor]);
+                nightModeColorPref.setSummary(nightModeColorPref.getEntries()[indexColor]);
                 nightModeColorPref.setOnPreferenceChangeListener(this);
             }
             if (nightModePref != null) {
