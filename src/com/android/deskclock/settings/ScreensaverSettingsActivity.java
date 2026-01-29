@@ -30,6 +30,8 @@ import com.android.deskclock.R;
 import com.android.deskclock.data.DataModel;
 import com.android.deskclock.widget.CollapsingToolbarBaseActivity;
 
+import java.util.Locale;
+
 /**
  * Settings for Clock screen saver
  */
@@ -127,7 +129,7 @@ public final class ScreensaverSettingsActivity extends CollapsingToolbarBaseActi
             final SeekBarPreference nightModeBrightness = findPreference(KEY_NIGHT_MODE_BRIGHTNESS);
             if (clockStylePref != null) {
                 final int index = clockStylePref.findIndexOfValue(DataModel.getDataModel().
-                        getScreensaverClockStyle().toString().toLowerCase());
+                        getScreensaverClockStyle().toString().toLowerCase(Locale.US));
                 clockStylePref.setValueIndex(index);
                 clockStylePref.setSummary(clockStylePref.getEntries()[index]);
                 clockStylePref.setOnPreferenceChangeListener(this);
