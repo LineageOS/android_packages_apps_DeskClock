@@ -85,19 +85,25 @@
         <item name="displayOptions">homeAsUp</item>
     </style>
 
-    <style name="Widget.Button.TimerSetupDigit" parent="Widget.AppCompat.Button.Borderless">
-        <item name="android:foreground">?attr/selectableItemBackgroundBorderless</item>
-        <item name="android:background">@drawable/digit_background</item>
-        <item name="android:fontFamily">sans-serif</item>
-        <item name="android:gravity">center</item>
-        <item name="android:includeFontPadding">false</item>
-        <item name="android:textColor">?android:attr/textColorPrimary</item>
+    <style name="Widget.Button.TimerSetupDigit" parent="Widget.Material3.Button.TonalButton">
+        <item name="shapeAppearanceOverlay">@style/Widget.Button.TimerSetupDigit.CircleOverlay</item>
+        <item name="android:insetTop">0dp</item>
+        <item name="android:insetBottom">0dp</item>
+        <item name="android:insetLeft">0dp</item>
+        <item name="android:insetRight">0dp</item>
         <item name="android:textSize">36sp</item>
         <item name="android:layout_margin">2.0dip</item>
+        <item name="android:padding">0dp</item>
         <item name="layout_constraintDimensionRatio">1:1</item>
-        <item name="roundPercent">1.0</item>
         <item name="autoSizeMaxTextSize">36sp</item>
         <item name="autoSizeTextType">uniform</item>
+        <item name="backgroundTint">?attr/colorSurfaceVariant</item>
+        <item name="android:textColor">?attr/colorOnSurface</item>
+    </style>
+
+    <style name="Widget.Button.TimerSetupDigit.CircleOverlay">
+        <item name="cornerFamily">rounded</item>
+        <item name="cornerSize">50%</item>
     </style>
 
     <style name="Widget.TimePicker" parent="android:Widget.Material.TimePicker">
