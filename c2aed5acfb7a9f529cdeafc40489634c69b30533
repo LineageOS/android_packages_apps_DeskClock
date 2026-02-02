@@ -51,6 +51,24 @@
       "message": "I think you still need this for AOSP builds, can you check?",
       "revId": "c2aed5acfb7a9f529cdeafc40489634c69b30533",
       "serverId": "1ec6b3db-b2c1-4fa4-84a2-4c7efe89ba71"
+    },
+    {
+      "unresolved": true,
+      "key": {
+        "uuid": "b0de7939_16d3c17c",
+        "filename": "AndroidManifest.xml",
+        "patchSetId": 1
+      },
+      "lineNbr": 17,
+      "author": {
+        "id": 35350
+      },
+      "writtenOn": "2026-02-02T02:20:07Z",
+      "side": 1,
+      "message": "Yeah it seems to be needed, added it back in",
+      "parentUuid": "469ae91b_037ed123",
+      "revId": "c2aed5acfb7a9f529cdeafc40489634c69b30533",
+      "serverId": "1ec6b3db-b2c1-4fa4-84a2-4c7efe89ba71"
     }
   ]
 }
