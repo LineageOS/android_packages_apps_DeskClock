@@ -17,7 +17,7 @@
 
 <resources>
 
-    <style name="Theme.DeskClock" parent="Theme.Material3.DayNight.NoActionBar">
+    <style name="Theme.DeskClock" parent="Theme.Material3Expressive.DayNight.NoActionBar">
         <item name="android:colorBackgroundFloating">?attr/colorBackgroundFloating</item>
         <item name="android:navigationBarColor">?attr/colorSurfaceVariant</item>
         <item name="popupMenuBackground">@drawable/popup_background</item>
@@ -55,9 +55,14 @@
     </style>
 
     <style name="Widget.DeskClock.FloatingActionButton"
-        parent="Widget.MaterialComponents.FloatingActionButton">
+        parent="Widget.Material3Expressive.FloatingActionButton">
         <item name="shapeAppearanceOverlay">
             @style/ShapeAppearance.Material3.Corner.Full
         </item>
+    </style>
+
+    <style name="Theme.DeskClock.MaterialSwitch" parent="Widget.Material3.CompoundButton.MaterialSwitch">
+        <item name="thumbIcon">@drawable/switch_thumb_icon</item>
+        <item name="thumbIconTint">@color/switch_thumb_icon</item>
     </style>
 </resources>

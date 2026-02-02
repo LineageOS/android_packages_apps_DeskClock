@@ -61,7 +61,7 @@
     </style>
 
     <style name="SecondaryLabelTextParentAppearance">
-        <item name="android:textColor">@color/white_63p</item>
+        <item name="android:textColor">?attr/colorSecondary</item>
         <item name="android:textSize">@dimen/label_text_size</item>
     </style>
 
@@ -85,7 +85,7 @@
         <item name="displayOptions">homeAsUp</item>
     </style>
 
-    <style name="Widget.Button.TimerSetupDigit" parent="Widget.Material3.Button.TonalButton">
+    <style name="Widget.Button.TimerSetupDigit" parent="Widget.Material3Expressive.Button.TonalButton">
         <item name="shapeAppearanceOverlay">@style/Widget.Button.TimerSetupDigit.CircleOverlay</item>
         <item name="android:insetTop">0dp</item>
         <item name="android:insetBottom">0dp</item>
@@ -142,7 +142,7 @@
         <item name="android:button">@null</item>
     </style>
 
-    <style name="SnackBarStyle" parent="Widget.Material3.Snackbar">
+    <style name="SnackBarStyle" parent="@style/Widget.Material3.Snackbar">
         <item name="backgroundTint">?attr/colorSurfaceVariant</item>
         <item name="android:layout_margin">@null</item>
         <item name="android:layout_marginLeft">8.0dip</item>
@@ -151,7 +151,7 @@
         <item name="android:layout_marginBottom">8dp</item>
     </style>
 
-    <style name="SnackBarButtonStyle" parent="@style/Widget.Material3.Button.TextButton.Snackbar">
+    <style name="SnackBarButtonStyle" parent="@style/Widget.Material3Expressive.Button.TextButton.Snackbar">
         <item name="android:textColor">?attr/colorPrimary</item>
     </style>
 
@@ -177,7 +177,7 @@
         <item name="layout_constraintTop_toBottomOf">@id/timer_setup_time</item>
     </style>
 
-    <style name="Theme.DeskClock.DigitalWidgetTransparentDarkBg" parent="Theme.Material3.DayNight">
+    <style name="Theme.DeskClock.DigitalWidgetTransparentDarkBg" parent="Theme.Material3Expressive.DayNight">
         <item name="appWidgetBackgroundTint">@android:color/transparent</item>
         <item name="appWidgetLabelTint">@color/widget_label_color</item>
         <item name="appWidgetTextAppearancePrimary">@style/TextAppearance.DigitalAppWidget.TextClockPrimary.TransparentDarkBg</item>
@@ -186,7 +186,7 @@
         <item name="appWidgetTextAppearanceSecondaryLabel">@style/TextAppearance.DigitalAppWidget.WorldClock.Label.TransparentDarkBg</item>
     </style>
 
-    <style name="Theme.DeskClock.DigitalWidgetTransparentLightBg" parent="Theme.Material3.DayNight">
+    <style name="Theme.DeskClock.DigitalWidgetTransparentLightBg" parent="Theme.Material3Expressive.DayNight">
         <item name="appWidgetBackgroundTint">@android:color/transparent</item>
         <item name="appWidgetLabelTint">@color/widget_label_color_dark</item>
         <item name="appWidgetTextAppearancePrimary">@style/TextAppearance.DigitalAppWidget.TextClockPrimary.TransparentLightBg</item>
@@ -195,7 +195,7 @@
         <item name="appWidgetTextAppearanceSecondaryLabel">@style/TextAppearance.DigitalAppWidget.WorldClock.Label.TransparentLightBg</item>
     </style>
 
-    <style name="Theme.DeskClock.DigitalWidgetDarkBg" parent="Theme.Material3.DayNight">
+    <style name="Theme.DeskClock.DigitalWidgetDarkBg" parent="Theme.Material3Expressive.DayNight">
         <item name="appWidgetBackgroundTint">@android:color/system_accent2_800</item>
         <item name="appWidgetLabelTint">?attr/colorPrimary</item>
         <item name="appWidgetTextAppearancePrimary">@style/TextAppearance.DigitalAppWidget.TextClockPrimary.DarkBg</item>
@@ -204,7 +204,7 @@
         <item name="appWidgetTextAppearanceSecondaryLabel">@style/TextAppearance.DigitalAppWidget.WorldClock.Label.DarkBg</item>
     </style>
 
-    <style name="Theme.DeskClock.DigitalWidgetLightBg" parent="Theme.Material3.DayNight">
+    <style name="Theme.DeskClock.DigitalWidgetLightBg" parent="Theme.Material3Expressive.DayNight">
         <item name="appWidgetBackgroundTint">@android:color/system_accent2_100</item>
         <item name="appWidgetLabelTint">?attr/colorPrimary</item>
         <item name="appWidgetTextAppearancePrimary">@style/TextAppearance.DigitalAppWidget.TextClockPrimary.LightBg</item>

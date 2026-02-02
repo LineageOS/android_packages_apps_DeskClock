@@ -68,7 +68,7 @@
             android:layout_height="wrap_content"
             android:orientation="vertical">
 
-            <SeekBar
+            <com.google.android.material.slider.Slider
                 android:id="@+id/seekbar"
                 android:layout_gravity="center_vertical"
                 android:paddingStart="12dp"

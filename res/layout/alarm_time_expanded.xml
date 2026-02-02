@@ -70,7 +70,7 @@
 
     <com.google.android.material.materialswitch.MaterialSwitch
         android:id="@+id/onoff"
-        android:theme="@style/Theme.Material3.DynamicColors.DayNight"
+        android:theme="@style/Theme.DeskClock.MaterialSwitch"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:layout_marginEnd="6.0dip"

@@ -15,7 +15,7 @@
   limitations under the License.
 -->
 <resources>
-    <style name="Theme.CollapsingToolbar.Settings" parent="Theme.Material3.DayNight.NoActionBar">
+    <style name="Theme.CollapsingToolbar.Settings" parent="Theme.Material3Expressive.DayNight.NoActionBar">
         <item name="colorPrimary">?attr/colorSurface</item>
         <item name="colorSecondary">?attr/colorPrimary</item>
     </style>
