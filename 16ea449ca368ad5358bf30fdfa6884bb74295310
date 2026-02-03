@@ -1,0 +1,55 @@
+{
+  "comments": [
+    {
+      "unresolved": true,
+      "key": {
+        "uuid": "014f91fe_5024b9f4",
+        "filename": "res/drawable/ic_backspace.xml",
+        "patchSetId": 3
+      },
+      "lineNbr": 1,
+      "author": {
+        "id": 4550
+      },
+      "writtenOn": "2026-02-03T21:44:08Z",
+      "side": 1,
+      "message": "No copyright \u0026 xml version header?",
+      "revId": "16ea449ca368ad5358bf30fdfa6884bb74295310",
+      "serverId": "1ec6b3db-b2c1-4fa4-84a2-4c7efe89ba71"
+    },
+    {
+      "unresolved": true,
+      "key": {
+        "uuid": "71fc4967_a2f38230",
+        "filename": "res/layout/ringtone_item_sound.xml",
+        "patchSetId": 3
+      },
+      "lineNbr": 84,
+      "author": {
+        "id": 4550
+      },
+      "writtenOn": "2026-02-03T21:44:08Z",
+      "side": 1,
+      "message": "Remove extra empty line",
+      "revId": "16ea449ca368ad5358bf30fdfa6884bb74295310",
+      "serverId": "1ec6b3db-b2c1-4fa4-84a2-4c7efe89ba71"
+    },
+    {
+      "unresolved": true,
+      "key": {
+        "uuid": "99a38363_e88b7d2f",
+        "filename": "src/com/android/deskclock/alarms/AlarmNotifications.java",
+        "patchSetId": 3
+      },
+      "lineNbr": 348,
+      "author": {
+        "id": 4550
+      },
+      "writtenOn": "2026-02-03T21:44:08Z",
+      "side": 1,
+      "message": "100 chars",
+      "revId": "16ea449ca368ad5358bf30fdfa6884bb74295310",
+      "serverId": "1ec6b3db-b2c1-4fa4-84a2-4c7efe89ba71"
+    }
+  ]
+}
