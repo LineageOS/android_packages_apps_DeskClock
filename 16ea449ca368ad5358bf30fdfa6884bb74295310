@@ -18,6 +18,24 @@
       "serverId": "1ec6b3db-b2c1-4fa4-84a2-4c7efe89ba71"
     },
     {
+      "unresolved": false,
+      "key": {
+        "uuid": "7fbe4b0a_5e73ae4c",
+        "filename": "res/drawable/ic_backspace.xml",
+        "patchSetId": 3
+      },
+      "lineNbr": 1,
+      "author": {
+        "id": 11883
+      },
+      "writtenOn": "2026-02-03T21:49:20Z",
+      "side": 1,
+      "message": "Done",
+      "parentUuid": "014f91fe_5024b9f4",
+      "revId": "16ea449ca368ad5358bf30fdfa6884bb74295310",
+      "serverId": "1ec6b3db-b2c1-4fa4-84a2-4c7efe89ba71"
+    },
+    {
       "unresolved": true,
       "key": {
         "uuid": "71fc4967_a2f38230",
@@ -35,6 +53,24 @@
       "serverId": "1ec6b3db-b2c1-4fa4-84a2-4c7efe89ba71"
     },
     {
+      "unresolved": false,
+      "key": {
+        "uuid": "5f645377_ccc318dc",
+        "filename": "res/layout/ringtone_item_sound.xml",
+        "patchSetId": 3
+      },
+      "lineNbr": 84,
+      "author": {
+        "id": 11883
+      },
+      "writtenOn": "2026-02-03T21:49:20Z",
+      "side": 1,
+      "message": "Done",
+      "parentUuid": "71fc4967_a2f38230",
+      "revId": "16ea449ca368ad5358bf30fdfa6884bb74295310",
+      "serverId": "1ec6b3db-b2c1-4fa4-84a2-4c7efe89ba71"
+    },
+    {
       "unresolved": true,
       "key": {
         "uuid": "99a38363_e88b7d2f",
@@ -48,6 +84,24 @@
       "writtenOn": "2026-02-03T21:44:08Z",
       "side": 1,
       "message": "100 chars",
+      "revId": "16ea449ca368ad5358bf30fdfa6884bb74295310",
+      "serverId": "1ec6b3db-b2c1-4fa4-84a2-4c7efe89ba71"
+    },
+    {
+      "unresolved": true,
+      "key": {
+        "uuid": "78ec7b38_0bb3dcbb",
+        "filename": "src/com/android/deskclock/alarms/AlarmNotifications.java",
+        "patchSetId": 3
+      },
+      "lineNbr": 348,
+      "author": {
+        "id": 11883
+      },
+      "writtenOn": "2026-02-03T21:49:20Z",
+      "side": 1,
+      "message": "@inhishonor@protonmail.com can\u0027t we use service directly here?",
+      "parentUuid": "99a38363_e88b7d2f",
       "revId": "16ea449ca368ad5358bf30fdfa6884bb74295310",
       "serverId": "1ec6b3db-b2c1-4fa4-84a2-4c7efe89ba71"
     }
