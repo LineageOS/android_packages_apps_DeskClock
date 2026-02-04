@@ -16,6 +16,24 @@
       "message": "Widget has the wrong color",
       "revId": "f5003fb630162513177119f85cad627cf4224651",
       "serverId": "1ec6b3db-b2c1-4fa4-84a2-4c7efe89ba71"
+    },
+    {
+      "unresolved": false,
+      "key": {
+        "uuid": "18e3b938_c89d907b",
+        "filename": "/PATCHSET_LEVEL",
+        "patchSetId": 5
+      },
+      "lineNbr": 0,
+      "author": {
+        "id": 35350
+      },
+      "writtenOn": "2026-02-04T23:14:04Z",
+      "side": 1,
+      "message": "Fixed, and dark mode is now forced",
+      "parentUuid": "59d04720_c6add887",
+      "revId": "f5003fb630162513177119f85cad627cf4224651",
+      "serverId": "1ec6b3db-b2c1-4fa4-84a2-4c7efe89ba71"
     }
   ]
 }
