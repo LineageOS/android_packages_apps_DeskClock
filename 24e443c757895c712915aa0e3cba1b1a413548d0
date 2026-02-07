@@ -22,6 +22,30 @@
       },
       "revId": "24e443c757895c712915aa0e3cba1b1a413548d0",
       "serverId": "1ec6b3db-b2c1-4fa4-84a2-4c7efe89ba71"
+    },
+    {
+      "unresolved": false,
+      "key": {
+        "uuid": "acc327d9_a1a43f1c",
+        "filename": "res/drawable/ic_settings.xml",
+        "patchSetId": 1
+      },
+      "lineNbr": 9,
+      "author": {
+        "id": 11883
+      },
+      "writtenOn": "2026-02-07T21:21:53Z",
+      "side": 1,
+      "message": "Done",
+      "parentUuid": "b3f49c87_00c234d4",
+      "range": {
+        "startLine": 9,
+        "startChar": 0,
+        "endLine": 9,
+        "endChar": 26
+      },
+      "revId": "24e443c757895c712915aa0e3cba1b1a413548d0",
+      "serverId": "1ec6b3db-b2c1-4fa4-84a2-4c7efe89ba71"
     }
   ]
 }
