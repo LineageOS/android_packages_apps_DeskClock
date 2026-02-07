@@ -159,7 +159,7 @@ public class DeskClock extends BaseActivity
         }
 
         // Configure the menu item controllers add behavior to the toolbar.
-        mOptionsMenuManager.addMenuItemController(new SettingsMenuItemController(this));
+        mOptionsMenuManager.addMenuItemController(new SettingsMenuItemController(this, true));
 
         // Inflate the menu during creation to avoid a double layout pass. Otherwise, the menu
         // inflation occurs *after* the initial draw and a second layout pass adds in the menu.
