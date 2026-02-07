@@ -15,7 +15,7 @@
   limitations under the License.
 -->
 <resources>
-    <style name="Theme.CollapsingToolbar.Settings" parent="Theme.Material3Expressive.DynamicColors.Dark.NoActionBar">
+    <style name="Theme.Toolbar.Settings" parent="Theme.Material3Expressive.DynamicColors.Dark.NoActionBar">
         <item name="colorPrimary">?attr/colorSurface</item>
         <item name="colorSecondary">?attr/colorPrimary</item>
     </style>

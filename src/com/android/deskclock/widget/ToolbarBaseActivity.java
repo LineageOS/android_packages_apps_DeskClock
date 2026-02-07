@@ -25,39 +25,21 @@ import android.view.View;
 import android.view.ViewGroup;
 import android.widget.Toolbar;
 
-import androidx.annotation.NonNull;
 import androidx.annotation.Nullable;
-import androidx.coordinatorlayout.widget.CoordinatorLayout;
 import androidx.fragment.app.FragmentActivity;
 
 import com.android.deskclock.R;
 import com.android.deskclock.ThemeUtils;
-import com.google.android.material.appbar.AppBarLayout;
-import com.google.android.material.appbar.CollapsingToolbarLayout;
 
 /**
- * A base Activity that has a collapsing toolbar layout is used for the activities intending to
- * enable the collapsing toolbar function.
+ * A base Activity that has a toolbar layout
  */
-public class CollapsingToolbarBaseActivity extends FragmentActivity {
-
-    private static final float TOOLBAR_LINE_SPACING_MULTIPLIER = 1.1f;
-
-    @Nullable
-    private CollapsingToolbarLayout mCollapsingToolbarLayout;
-    @Nullable
-    private AppBarLayout mAppBarLayout;
+public class ToolbarBaseActivity extends FragmentActivity {
 
     @Override
     protected void onCreate(@Nullable Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
-        super.setContentView(R.layout.collapsing_toolbar_base_layout);
-        mCollapsingToolbarLayout = findViewById(R.id.collapsing_toolbar);
-        mAppBarLayout = findViewById(R.id.app_bar);
-        if (mCollapsingToolbarLayout != null) {
-            mCollapsingToolbarLayout.setLineSpacingMultiplier(TOOLBAR_LINE_SPACING_MULTIPLIER);
-        }
-        disableCollapsingToolbarLayoutScrollingBehavior();
+        super.setContentView(R.layout.toolbar_base_layout);
 
         final Toolbar toolbar = findViewById(R.id.action_bar);
         setActionBar(toolbar);
@@ -106,45 +88,10 @@ public class CollapsingToolbarBaseActivity extends FragmentActivity {
     }
 
     @Override
-    public void setTitle(CharSequence title) {
-        if (mCollapsingToolbarLayout != null) {
-            mCollapsingToolbarLayout.setTitle(title);
-        } else {
-            super.setTitle(title);
-        }
-    }
-
-    @Override
-    public void setTitle(int titleId) {
-        if (mCollapsingToolbarLayout != null) {
-            mCollapsingToolbarLayout.setTitle(getText(titleId));
-        } else {
-            super.setTitle(titleId);
-        }
-    }
-
-    @Override
     public boolean onNavigateUp() {
         if (!super.onNavigateUp()) {
             finishAfterTransition();
         }
         return true;
-    }
-
-    private void disableCollapsingToolbarLayoutScrollingBehavior() {
-        if (mAppBarLayout == null) {
-            return;
-        }
-        final CoordinatorLayout.LayoutParams params =
-                (CoordinatorLayout.LayoutParams) mAppBarLayout.getLayoutParams();
-        final AppBarLayout.Behavior behavior = new AppBarLayout.Behavior();
-        behavior.setDragCallback(
-                new AppBarLayout.Behavior.DragCallback() {
-                    @Override
-                    public boolean canDrag(@NonNull AppBarLayout appBarLayout) {
-                        return false;
-                    }
-                });
-        params.setBehavior(behavior);
     }
 }
