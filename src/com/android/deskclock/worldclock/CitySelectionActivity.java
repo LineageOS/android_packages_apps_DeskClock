@@ -128,7 +128,7 @@ public final class CitySelectionActivity extends BaseActivity {
         mOptionsMenuManager.addMenuItemController(new NavUpMenuItemController(this))
                 .addMenuItemController(mSearchMenuItemController)
                 .addMenuItemController(new SortOrderMenuItemController())
-                .addMenuItemController(new SettingsMenuItemController(this));
+                .addMenuItemController(new SettingsMenuItemController(this, false));
         mCitiesList = findViewById(R.id.cities_list);
         mCitiesList.setAdapter(mCitiesAdapter);
 
