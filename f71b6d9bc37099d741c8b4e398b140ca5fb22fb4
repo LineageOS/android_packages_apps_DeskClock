@@ -33,6 +33,23 @@
       "message": "https://i.postimg.cc/hGMSDv8g/Snimok-ekrana-ot-2026-02-07-23-22-06.png",
       "revId": "f71b6d9bc37099d741c8b4e398b140ca5fb22fb4",
       "serverId": "1ec6b3db-b2c1-4fa4-84a2-4c7efe89ba71"
+    },
+    {
+      "unresolved": false,
+      "key": {
+        "uuid": "db129355_aac16ddf",
+        "filename": "/PATCHSET_LEVEL",
+        "patchSetId": 9
+      },
+      "lineNbr": 0,
+      "author": {
+        "id": 7128
+      },
+      "writtenOn": "2026-02-07T21:26:51Z",
+      "side": 1,
+      "message": "Nvm . I\u0027m blind xD",
+      "revId": "f71b6d9bc37099d741c8b4e398b140ca5fb22fb4",
+      "serverId": "1ec6b3db-b2c1-4fa4-84a2-4c7efe89ba71"
     }
   ]
 }
