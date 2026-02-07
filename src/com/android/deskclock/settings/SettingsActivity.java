@@ -43,12 +43,12 @@ import com.android.deskclock.data.TimeZones;
 import com.android.deskclock.data.Weekdays;
 import com.android.deskclock.events.Events;
 import com.android.deskclock.ringtone.RingtonePickerActivity;
-import com.android.deskclock.widget.CollapsingToolbarBaseActivity;
+import com.android.deskclock.widget.ToolbarBaseActivity;
 
 /**
  * Settings for the Alarm Clock.
  */
-public final class SettingsActivity extends CollapsingToolbarBaseActivity {
+public final class SettingsActivity extends ToolbarBaseActivity {
 
     public static final String KEY_ALARM_SNOOZE = "snooze_duration";
     public static final String KEY_ALARM_CRESCENDO = "alarm_crescendo_duration";

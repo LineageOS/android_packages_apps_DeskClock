@@ -58,7 +58,7 @@ import com.android.deskclock.RingtonePreviewKlaxon;
 import com.android.deskclock.alarms.AlarmUpdateHandler;
 import com.android.deskclock.data.DataModel;
 import com.android.deskclock.provider.Alarm;
-import com.android.deskclock.widget.CollapsingToolbarBaseActivity;
+import com.android.deskclock.widget.ToolbarBaseActivity;
 
 import java.util.List;
 import java.util.concurrent.ExecutorService;
@@ -73,7 +73,7 @@ import java.util.concurrent.Executors;
  *     <li>user-selected audio files available as ringtones</li>
  * </ul>
  */
-public class RingtonePickerActivity extends CollapsingToolbarBaseActivity
+public class RingtonePickerActivity extends ToolbarBaseActivity
         implements LoaderManager.LoaderCallbacks<List<ItemAdapter.ItemHolder<Uri>>> {
 
     /** Key to an extra that defines resource id to the title of this activity. */

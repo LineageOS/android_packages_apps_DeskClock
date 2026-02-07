@@ -28,14 +28,14 @@ import androidx.preference.SwitchPreferenceCompat;
 
 import com.android.deskclock.R;
 import com.android.deskclock.data.DataModel;
-import com.android.deskclock.widget.CollapsingToolbarBaseActivity;
+import com.android.deskclock.widget.ToolbarBaseActivity;
 
 import java.util.Locale;
 
 /**
  * Settings for Clock screen saver
  */
-public final class ScreensaverSettingsActivity extends CollapsingToolbarBaseActivity {
+public final class ScreensaverSettingsActivity extends ToolbarBaseActivity {
 
     public static final String KEY_CLOCK_STYLE = "screensaver_clock_style";
     public static final String KEY_CLOCK_COLOR = "screensaver_clock_color";
