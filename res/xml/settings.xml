@@ -22,7 +22,7 @@
         android:title="@string/clock_settings"
         app:iconSpaceReserved="false">
 
-        <com.android.deskclock.settings.SimpleMenuPreference
+        <ListPreference
             android:defaultValue="@string/default_clock_style"
             android:dialogTitle="@string/clock_style"
             android:entries="@array/clock_style_entries"
@@ -117,7 +117,7 @@
             android:title="@string/crescendo_duration_title"
             app:iconSpaceReserved="false"  />
 
-        <com.android.deskclock.settings.SimpleMenuPreference
+        <ListPreference
             android:defaultValue="0"
             android:dialogTitle="@string/volume_button_setting_title"
             android:entries="@array/volume_button_setting_entries"
@@ -126,7 +126,7 @@
             android:title="@string/volume_button_setting_title"
             app:iconSpaceReserved="false"  />
 
-        <com.android.deskclock.settings.SimpleMenuPreference
+        <ListPreference
             android:defaultValue="0"
             android:dialogTitle="@string/flip_action_title"
             android:entries="@array/action_setting_entries"
@@ -135,7 +135,7 @@
             android:title="@string/flip_action_title"
             app:iconSpaceReserved="false"  />
 
-        <com.android.deskclock.settings.SimpleMenuPreference
+        <ListPreference
             android:defaultValue="0"
             android:dialogTitle="@string/shake_action_title"
             android:entries="@array/action_setting_entries"
@@ -144,7 +144,7 @@
             android:title="@string/shake_action_title"
             app:iconSpaceReserved="false"  />
 
-        <com.android.deskclock.settings.SimpleMenuPreference
+        <ListPreference
             android:dialogTitle="@string/week_start_title"
             android:entries="@array/week_start_entries"
             android:entryValues="@array/week_start_values"

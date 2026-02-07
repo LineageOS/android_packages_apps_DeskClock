@@ -21,6 +21,7 @@ import android.os.Bundle;
 import android.text.format.DateFormat;
 import android.view.MenuItem;
 
+import androidx.preference.ListPreference;
 import androidx.preference.Preference;
 import androidx.preference.PreferenceFragmentCompat;
 import androidx.preference.SeekBarPreference;
@@ -97,14 +98,14 @@ public final class ScreensaverSettingsActivity extends ToolbarBaseActivity {
         public boolean onPreferenceChange(Preference pref, Object newValue) {
             switch (pref.getKey()) {
                 case KEY_CLOCK_STYLE:
-                    final SimpleMenuPreference clockStylePref = (SimpleMenuPreference) pref;
+                    final ListPreference clockStylePref = (ListPreference) pref;
                     final int clockStyleindex = clockStylePref.findIndexOfValue((String) newValue);
                     clockStylePref.setSummary(clockStylePref.getEntries()[clockStyleindex]);
                     setVisibility(newValue.equals(CLOCK_STYLE_DIGITAL));
                     break;
                 case KEY_NIGHT_MODE_COLOR:
                 case KEY_CLOCK_COLOR:
-                    final SimpleMenuPreference clockColorPref = (SimpleMenuPreference) pref;
+                    final ListPreference clockColorPref = (ListPreference) pref;
                     final int clockColorindex = clockColorPref.findIndexOfValue((String) newValue);
                     clockColorPref.setSummary(clockColorPref.getEntries()[clockColorindex]);
                     break;
@@ -119,9 +120,9 @@ public final class ScreensaverSettingsActivity extends ToolbarBaseActivity {
         }
 
         private void refresh() {
-            final SimpleMenuPreference clockStylePref = findPreference(KEY_CLOCK_STYLE);
-            final SimpleMenuPreference clockColorPref = findPreference(KEY_CLOCK_COLOR);
-            final SimpleMenuPreference nightModeColorPref = findPreference(KEY_NIGHT_MODE_COLOR);
+            final ListPreference clockStylePref = findPreference(KEY_CLOCK_STYLE);
+            final ListPreference clockColorPref = findPreference(KEY_CLOCK_COLOR);
+            final ListPreference nightModeColorPref = findPreference(KEY_NIGHT_MODE_COLOR);
             final SwitchPreferenceCompat nightModePref = findPreference(KEY_NIGHT_MODE);
             final SwitchPreferenceCompat nightModeDndPref = findPreference(KEY_NIGHT_MODE_DND);
             final SwitchPreferenceCompat showAmPmPref = findPreference(KEY_SHOW_AMPM);
