@@ -36,9 +36,11 @@ public final class SettingsMenuItemController implements MenuItemController {
     private static final int SETTING_MENU_RES_ID = R.id.menu_item_settings;
 
     private final Activity mActivity;
+    private final boolean mShowIcon;
 
-    public SettingsMenuItemController(Activity activity) {
+    public SettingsMenuItemController(Activity activity, boolean showIcon) {
         mActivity = activity;
+        mShowIcon = showIcon;
     }
 
     @Override
@@ -48,8 +50,14 @@ public final class SettingsMenuItemController implements MenuItemController {
 
     @Override
     public void onCreateOptionsItem(Menu menu) {
-        menu.add(NONE, SETTING_MENU_RES_ID, NONE, R.string.menu_item_settings)
-                .setShowAsAction(MenuItem.SHOW_AS_ACTION_NEVER);
+        if (mShowIcon) {
+            menu.add(NONE, SETTING_MENU_RES_ID, NONE, R.string.menu_item_settings)
+                    .setIcon(R.drawable.ic_settings)
+                    .setShowAsAction(MenuItem.SHOW_AS_ACTION_IF_ROOM);
+        } else {
+            menu.add(NONE, SETTING_MENU_RES_ID, NONE, R.string.menu_item_settings)
+                    .setShowAsAction(MenuItem.SHOW_AS_ACTION_NEVER);
+        }
     }
 
     @Override
