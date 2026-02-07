@@ -135,18 +135,14 @@ public final class SettingsActivity extends ToolbarBaseActivity {
                 case KEY_HOME_TZ:
                 case KEY_ALARM_SNOOZE:
                 case KEY_TIMER_CRESCENDO:
-                    final ListPreference preference = (ListPreference) pref;
-                    final int index = preference.findIndexOfValue((String) newValue);
-                    preference.setSummary(preference.getEntries()[index]);
-                    break;
                 case KEY_CLOCK_STYLE:
                 case KEY_WEEK_START:
                 case KEY_VOLUME_BUTTONS:
                 case KEY_FLIP_ACTION:
                 case KEY_SHAKE_ACTION:
-                    final SimpleMenuPreference simpleMenuPreference = (SimpleMenuPreference) pref;
-                    final int i = simpleMenuPreference.findIndexOfValue((String) newValue);
-                    pref.setSummary(simpleMenuPreference.getEntries()[i]);
+                    final ListPreference listPreference = (ListPreference) pref;
+                    final int index = listPreference.findIndexOfValue((String) newValue);
+                    listPreference.setSummary(listPreference.getEntries()[index]);
                     break;
                 case KEY_CLOCK_DISPLAY_SECONDS:
                     DataModel.getDataModel().setDisplayClockSeconds((boolean) newValue);
@@ -255,11 +251,11 @@ public final class SettingsActivity extends ToolbarBaseActivity {
             updateAutoSnoozeSummary(autoSilencePref, delay);
             autoSilencePref.setOnPreferenceChangeListener(this);
 
-            final SimpleMenuPreference clockStylePref = findPreference(KEY_CLOCK_STYLE);
+            final ListPreference clockStylePref = findPreference(KEY_CLOCK_STYLE);
             clockStylePref.setSummary(clockStylePref.getEntry());
             clockStylePref.setOnPreferenceChangeListener(this);
 
-            final SimpleMenuPreference volumeButtonsPref = findPreference(KEY_VOLUME_BUTTONS);
+            final ListPreference volumeButtonsPref = findPreference(KEY_VOLUME_BUTTONS);
             volumeButtonsPref.setSummary(volumeButtonsPref.getEntry());
             volumeButtonsPref.setOnPreferenceChangeListener(this);
 
@@ -292,7 +288,7 @@ public final class SettingsActivity extends ToolbarBaseActivity {
             final Preference screensaverPreview = findPreference(KEY_SCREENSAVER_PREVIEW);
             screensaverPreview.setOnPreferenceClickListener(this);
 
-            final SimpleMenuPreference weekStartPref = findPreference(KEY_WEEK_START);
+            final ListPreference weekStartPref = findPreference(KEY_WEEK_START);
             // Set the default value programmatically
             final Weekdays.Order weekdayOrder = DataModel.getDataModel().getWeekdayOrder();
             final Integer firstDay = weekdayOrder.getCalendarDays().get(0);
@@ -306,14 +302,14 @@ public final class SettingsActivity extends ToolbarBaseActivity {
             timerRingtonePref.setOnPreferenceClickListener(this);
             timerRingtonePref.setSummary(DataModel.getDataModel().getTimerRingtoneTitle());
 
-            final SimpleMenuPreference flipActionPref = findPreference(KEY_FLIP_ACTION);
+            final ListPreference flipActionPref = findPreference(KEY_FLIP_ACTION);
             setupFlipOrShakeAction(flipActionPref);
 
-            final SimpleMenuPreference shakeActionPref = findPreference(KEY_SHAKE_ACTION);
+            final ListPreference shakeActionPref = findPreference(KEY_SHAKE_ACTION);
             setupFlipOrShakeAction(shakeActionPref);
         }
 
-        private void setupFlipOrShakeAction(SimpleMenuPreference preference) {
+        private void setupFlipOrShakeAction(ListPreference preference) {
             if (preference != null) {
                 SensorManager sensorManager = (SensorManager)
                         getActivity().getSystemService(Context.SENSOR_SERVICE);
