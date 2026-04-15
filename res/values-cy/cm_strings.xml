@@ -40,5 +40,13 @@
     <string name="selected">Dewiswyd</string>
     <string name="more_options">Rhagor o ddewisiadau</string>
     <string name="widget_choice_title">Dewis dy arddull</string>
+    <string name="bold_text_title">Testun cloc trwm</string>
+    <string name="night_mode_brightness_text_title">Disgleirdeb</string>
+    <string-array name="clock_color_entries">
+        <item>White</item>
+        <item>Red</item>
+        <item>Green</item>
+        <item>Glas</item>
+    </string-array>
     <string name="screensaver_change_settings">Gosodiadau</string>
 </resources>
