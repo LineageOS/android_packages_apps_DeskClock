@@ -16,8 +16,8 @@
 
 package com.android.deskclock;
 
+import static androidx.core.app.NotificationManagerCompat.IMPORTANCE_DEFAULT;
 import static androidx.core.app.NotificationManagerCompat.IMPORTANCE_HIGH;
-import static androidx.core.app.NotificationManagerCompat.IMPORTANCE_LOW;
 
 import android.app.NotificationChannel;
 import android.content.Context;
@@ -79,11 +79,11 @@ public class NotificationUtils {
         });
         CHANNEL_PROPS.put(ALARM_SNOOZE_NOTIFICATION_CHANNEL_ID, new int[]{
                 R.string.alarm_snooze_channel,
-                IMPORTANCE_LOW
+                IMPORTANCE_DEFAULT
         });
         CHANNEL_PROPS.put(ALARM_UPCOMING_NOTIFICATION_CHANNEL_ID, new int[]{
                 R.string.alarm_upcoming_channel,
-                IMPORTANCE_LOW
+                IMPORTANCE_DEFAULT
         });
         CHANNEL_PROPS.put(FIRING_NOTIFICATION_CHANNEL_ID, new int[]{
                 R.string.firing_alarms_timers_channel,
@@ -92,11 +92,11 @@ public class NotificationUtils {
         });
         CHANNEL_PROPS.put(STOPWATCH_NOTIFICATION_CHANNEL_ID, new int[]{
                 R.string.stopwatch_channel,
-                IMPORTANCE_LOW
+                IMPORTANCE_DEFAULT
         });
         CHANNEL_PROPS.put(TIMER_MODEL_NOTIFICATION_CHANNEL_ID, new int[]{
                 R.string.timer_channel,
-                IMPORTANCE_LOW
+                IMPORTANCE_DEFAULT
         });
     }
 
