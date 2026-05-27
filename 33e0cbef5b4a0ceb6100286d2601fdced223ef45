@@ -1,0 +1,21 @@
+{
+  "comments": [
+    {
+      "unresolved": false,
+      "key": {
+        "uuid": "6d2577a8_a7826736",
+        "filename": "/PATCHSET_LEVEL",
+        "patchSetId": 1
+      },
+      "lineNbr": 0,
+      "author": {
+        "id": 13028
+      },
+      "writtenOn": "2026-05-27T22:03:09Z",
+      "side": 1,
+      "message": "Importance on existing channels can only be lowered, not increased. Would need to create different channels (deleting and creating same wont work)",
+      "revId": "33e0cbef5b4a0ceb6100286d2601fdced223ef45",
+      "serverId": "1ec6b3db-b2c1-4fa4-84a2-4c7efe89ba71"
+    }
+  ]
+}
