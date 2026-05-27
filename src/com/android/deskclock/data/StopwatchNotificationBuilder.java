@@ -134,7 +134,7 @@ class StopwatchNotificationBuilder {
                         .setCustomContentView(content)
                         .setContentIntent(pendingShowApp)
                         .setAutoCancel(stopwatch.isPaused())
-                        .setPriority(NotificationManager.IMPORTANCE_LOW)
+                        .setPriority(NotificationManager.IMPORTANCE_DEFAULT)
                         .setSmallIcon(R.drawable.stat_notify_stopwatch)
                         .setStyle(new NotificationCompat.DecoratedCustomViewStyle())
                         .setColor(ThemeUtils.resolveColor(context, R.attr.colorSurface))
