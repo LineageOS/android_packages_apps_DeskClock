@@ -15,7 +15,8 @@ runs:
       shell: bash
       run: ./gradlew assembleDebug
 
-    - uses: actions/upload-artifact@v6
+    - uses: actions/upload-artifact@v7
       with:
         name: DeskClock-debug.apk
         path: build/outputs/apk/debug/DeskClock-debug.apk
+        archive: false
