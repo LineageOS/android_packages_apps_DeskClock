@@ -43,24 +43,24 @@
     <string name="widget_name_transparent">பின்னணியின்றி</string>
     <string name="widget_name_solid">பின்னணியுடன்</string>
     <string name="clock_brightness_percentage">%s%%</string>
-    <string name="night_mode_enabled_title">இயக்கப்பட்டது</string>
-    <string name="night_mode_dnd_title">DND நிலையைப் பின்பற்றுக</string>
-    <string name="night_mode_dnd_summary">இரவுப் பயன்முறை தொல்லை செய்யா நிலையைப் பின்பற்றுகிறது</string>
-    <string name="show_ampm_title">AM/PM குறிகாட்டியைக் காட்டுக</string>
-    <string name="bold_text_title">தடித்த மணினி உரை</string>
+    <string name="night_mode_enabled_title">இயங்குவது</string>
+    <string name="night_mode_dnd_title">DND நிலைதொடர்</string>
+    <string name="night_mode_dnd_summary">இரவுப்பயன்முறை அமைதிநிலை தொடரும்</string>
+    <string name="show_ampm_title">AM/PM குறிகாட்டி தோன்று</string>
+    <string name="bold_text_title">தடித்த மணினியுரை</string>
     <string name="night_mode_brightness_text_title">ஒளிர்வு</string>
     <string name="clock_color_title">நிறம்</string>
     <string-array name="clock_color_entries">
-        <item>வெள்ளை</item>
-        <item>சிவப்பு</item>
-        <item>பச்சை</item>
+        <item>வெண்மை</item>
+        <item>செம்மை</item>
+        <item>பசுமை</item>
         <item>நீலம்</item>
     </string-array>
-    <string name="screensaver_settings_title">திரைகாப்பி</string>
-    <string name="screensaver_preview">முன்தோற்றம்</string>
-    <string name="screensaver_preview_summary">திரைகாப்பியை உடனடியாகத் தொடங்கும்</string>
+    <string name="screensaver_settings_title">திரைக்காப்பு</string>
+    <string name="screensaver_preview">முன்காண்</string>
+    <string name="screensaver_preview_summary">திரைக்காப்புடன் தொடங்கும்</string>
     <string name="screensaver_change_settings">அமைப்புகள்</string>
-    <string name="screensaver_change_settings_summary">மணினித் திரைகாப்பி அமைப்புகளைத் திறக்கும்</string>
-    <string name="screensaver_daydream_settings">திரைகாப்பியைத் தேர்ந்தெடுக்க/செயற்படுத்துக</string>
-    <string name="screensaver_daydream_settings_summary">முதன்மை திரைகாப்பி அமைப்புகளைத் திறக்கும்</string>
+    <string name="screensaver_change_settings_summary">மணினித்திரைக்காப்பு அமைப்பு திறக்கும்</string>
+    <string name="screensaver_daydream_settings">திரைக்காப்பு தேர்ந்தெடுக்கவோ இயக்கவோ</string>
+    <string name="screensaver_daydream_settings_summary">முதன்மைத்திரைக்காப்பு அமைப்பு திறக்கும்</string>
 </resources>
