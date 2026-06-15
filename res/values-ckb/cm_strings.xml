@@ -23,19 +23,19 @@
         <item>بێدەنگکردن</item>
         <item>هیچ</item>
     </string-array>
-    <string name="firing_alarms_timers_channel">زەنگی ئاگادارکردنەوە و تایمەر</string>
+    <string name="firing_alarms_timers_channel">زەنگی ئاگادارکردنەوە و کاتپێو</string>
     <string name="alarm_missed_channel">زەنگی لەدەستچوو</string>
     <string name="alarm_snooze_channel">زەنگی دواخراو</string>
     <string name="alarm_upcoming_channel">زەنگەکانی داهاتوو</string>
     <string name="stopwatch_channel">ژمێرەری کات (Stopwatch)</string>
     <string name="timer_channel">کاتپێو</string>
     <string name="add_label">زیادکردنی ناونیشان</string>
-    <string name="dialog_permissions_title">مۆڵەتەکان</string>
+    <string name="dialog_permissions_title">ڕێپێدانەکان</string>
     <string name="dialog_permissions_ask">دووبارە بپرسەرەوە</string>
     <string name="dialog_permissions_dismiss">لادان</string>
     <string name="dialog_permissions_settings">ڕێکخستنەکان</string>
-    <string name="dialog_permissions_power_off_alarm">بەبێ ئەم مۆڵەتە، ئامێرەکەت ناتوانێت خۆی هەڵبکات بۆ لێدانی زەنگی ئاگادارکردنەوە</string>
-    <string name="dialog_permissions_no_permission">مۆڵەتە داواکراوەکان ڕەت کرانەوە، لە ڕێگەی ڕێکخستنەکانەوە چالاکیان بکە</string>
+    <string name="dialog_permissions_power_off_alarm">بەبێ ئەم ڕێپێدانە، ئامێرەکەت ناتوانێت خۆی هەڵبکات بۆ لێدانی زەنگی ئاگادارکردنەوە</string>
+    <string name="dialog_permissions_no_permission">ڕێپێدانە داواکراوەکان ڕەت کرانەوە، لە ڕێگەی ڕێکخستنەکانەوە چالاکیان بکە</string>
     <string name="dialog_permissions_post_notifications">ئەم بەرنامە پشت بە ئاگادارکردنەوەکان دەبەستێت. بەبێ ئەوان کار ناکات!</string>
     <string name="selected">هەڵبژێردراو</string>
     <string name="more_options">هەڵبژاردنی زیاتر</string>
