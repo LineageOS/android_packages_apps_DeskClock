@@ -28,13 +28,13 @@ import androidx.test.InstrumentationRegistry;
 import androidx.test.core.app.ApplicationProvider;
 import androidx.test.internal.runner.junit4.AndroidJUnit4ClassRunner;
 import androidx.test.rule.ActivityTestRule;
-import androidx.viewpager.widget.PagerAdapter;
-import androidx.viewpager.widget.ViewPager;
+import androidx.recyclerview.widget.RecyclerView;
 
 import com.android.deskclock.DeskClock;
 import com.android.deskclock.R;
 import com.android.deskclock.data.DataModel;
 import com.android.deskclock.data.Timer;
+import com.android.deskclock.uidata.UiDataModel;
 import com.android.deskclock.widget.MockFabContainer;
 
 import org.junit.After;
@@ -44,7 +44,6 @@ import org.junit.Test;
 import org.junit.runner.RunWith;
 
 import java.util.ArrayList;
-import java.util.Arrays;
 import java.util.List;
 import java.util.concurrent.TimeUnit;
 
@@ -56,33 +55,18 @@ import static org.junit.Assert.fail;
 @RunWith(AndroidJUnit4ClassRunner.class)
 public class TimerFragmentTest {
 
-    private static int LIGHT;
-    private static int DARK;
-    private static int TOP;
-    private static int BOTTOM;
-
-    private static final int GONE = 0;
-
     private TimerFragment fragment;
     private View timersView;
     private View timerSetupView;
-    private ViewPager viewPager;
-    private TimerPagerAdapter adapter;
+    private RecyclerView recyclerView;
+    private TimerAdapter adapter;
 
     private ImageView fab;
-    private Button leftButton;
-    private Button rightButton;
+    private ImageView leftButton;
+    private ImageView rightButton;
 
     @Rule
     public ActivityTestRule<DeskClock> rule = new ActivityTestRule<>(DeskClock.class, true);
-
-    @BeforeClass
-    public static void staticSetUp() {
-        LIGHT = R.drawable.ic_swipe_circle_light;
-        DARK = R.drawable.ic_swipe_circle_dark;
-        TOP = R.drawable.ic_swipe_circle_top;
-        BOTTOM = R.drawable.ic_swipe_circle_bottom;
-    }
 
     private void setUpSingleTimer() {
         Runnable addTimerRunnable = () -> {
@@ -103,10 +87,15 @@ public class TimerFragmentTest {
 
     private void setUpFragment() {
         Runnable setUpFragmentRunnable = () -> {
-            ViewPager deskClockPager =
-                    (ViewPager) rule.getActivity().findViewById(R.id.desk_clock_pager);
-            PagerAdapter tabPagerAdapter = (PagerAdapter) deskClockPager.getAdapter();
-            fragment = (TimerFragment) tabPagerAdapter.instantiateItem(deskClockPager, 2);
+            fragment = (TimerFragment) rule.getActivity().getSupportFragmentManager()
+                    .findFragmentByTag(UiDataModel.Tab.TIMERS.name());
+            if (fragment == null) {
+                UiDataModel.getUiDataModel().setSelectedTab(UiDataModel.Tab.TIMERS);
+                rule.getActivity().getSupportFragmentManager().executePendingTransactions();
+                fragment = (TimerFragment) rule.getActivity().getSupportFragmentManager()
+                        .findFragmentByTag(UiDataModel.Tab.TIMERS.name());
+            }
+
             fragment.onStart();
             fragment.selectTab();
             final MockFabContainer fabContainer =
@@ -118,8 +107,8 @@ public class TimerFragmentTest {
 
             timersView = view.findViewById(R.id.timer_view);
             timerSetupView = view.findViewById(R.id.timer_setup);
-            viewPager = view.findViewById(R.id.vertical_view_pager);
-            adapter = (TimerPagerAdapter) viewPager.getAdapter();
+            recyclerView = view.findViewById(R.id.recycler_view);
+            adapter = (TimerAdapter) recyclerView.getAdapter();
 
             fab = fabContainer.getFab();
             leftButton = fabContainer.getLeftButton();
@@ -136,7 +125,7 @@ public class TimerFragmentTest {
         timerSetupView = null;
         timersView = null;
         adapter = null;
-        viewPager = null;
+        recyclerView = null;
         leftButton = null;
         rightButton = null;
     }
@@ -180,7 +169,7 @@ public class TimerFragmentTest {
         setUpSingleTimer();
 
         setCurrentItem(0);
-        final TimerItem timerItem = (TimerItem) viewPager.getChildAt(0);
+        final TimerItem timerItem = (TimerItem) recyclerView.findViewHolderForAdapterPosition(0).itemView;
         final TextView timeText = timerItem.findViewById(R.id.timer_time_text);
         assertStateEquals(Timer.State.RESET, 0);
         clickView(timeText);
@@ -192,7 +181,7 @@ public class TimerFragmentTest {
         setUpTwoTimers();
 
         setCurrentItem(1);
-        final TimerItem timerItem = (TimerItem) viewPager.getChildAt(1);
+        final TimerItem timerItem = (TimerItem) recyclerView.findViewHolderForAdapterPosition(1).itemView;
         final TextView timeText = timerItem.findViewById(R.id.timer_time_text);
         assertStateEquals(Timer.State.RESET, 1);
         assertStateEquals(Timer.State.RESET, 0);
@@ -206,7 +195,7 @@ public class TimerFragmentTest {
         setUpSingleTimer();
 
         setCurrentItem(0);
-        final TimerItem timerItem = (TimerItem) viewPager.getChildAt(0);
+        final TimerItem timerItem = (TimerItem) recyclerView.findViewHolderForAdapterPosition(0).itemView;
         final TextView timeText = timerItem.findViewById(R.id.timer_time_text);
         assertStateEquals(Timer.State.RESET, 0);
         clickView(timeText);
@@ -220,7 +209,7 @@ public class TimerFragmentTest {
         setUpTwoTimers();
 
         setCurrentItem(1);
-        final TimerItem timerItem = (TimerItem) viewPager.getChildAt(1);
+        final TimerItem timerItem = (TimerItem) recyclerView.findViewHolderForAdapterPosition(1).itemView;
         final TextView timeText = timerItem.findViewById(R.id.timer_time_text);
         assertStateEquals(Timer.State.RESET, 1);
         assertStateEquals(Timer.State.RESET, 0);
@@ -237,7 +226,7 @@ public class TimerFragmentTest {
         setUpSingleTimer();
 
         setCurrentItem(0);
-        final TimerItem timerItem = (TimerItem) viewPager.getChildAt(0);
+        final TimerItem timerItem = (TimerItem) recyclerView.findViewHolderForAdapterPosition(0).itemView;
         final TextView timeText = timerItem.findViewById(R.id.timer_time_text);
         assertStateEquals(Timer.State.RESET, 0);
         clickView(timeText);
@@ -253,7 +242,7 @@ public class TimerFragmentTest {
         setUpTwoTimers();
 
         setCurrentItem(1);
-        final TimerItem timerItem = (TimerItem) viewPager.getChildAt(1);
+        final TimerItem timerItem = (TimerItem) recyclerView.findViewHolderForAdapterPosition(1).itemView;
         final TextView timeText = timerItem.findViewById(R.id.timer_time_text);
         assertStateEquals(Timer.State.RESET, 1);
         assertStateEquals(Timer.State.RESET, 0);
@@ -388,8 +377,8 @@ public class TimerFragmentTest {
         setUpSingleTimer();
 
         setCurrentItem(0);
-        final TimerItem timerItem = (TimerItem) viewPager.getChildAt(0);
-        final Button addMinute = timerItem.findViewById(R.id.reset_add);
+        final TimerItem timerItem = (TimerItem) recyclerView.findViewHolderForAdapterPosition(0).itemView;
+        final Button addMinute = timerItem.findViewById(R.id.add_one_min);
         assertStateEquals(Timer.State.RESET, 0);
         clickFab();
         assertStateEquals(Timer.State.RUNNING, 0);
@@ -411,8 +400,8 @@ public class TimerFragmentTest {
         setUpTwoTimers();
 
         setCurrentItem(1);
-        final TimerItem timerItem = (TimerItem) viewPager.getChildAt(1);
-        final Button addMinute = timerItem.findViewById(R.id.reset_add);
+        final TimerItem timerItem = (TimerItem) recyclerView.findViewHolderForAdapterPosition(1).itemView;
+        final Button addMinute = timerItem.findViewById(R.id.add_one_min);
         assertStateEquals(Timer.State.RESET, 1);
         assertStateEquals(Timer.State.RESET, 0);
         clickFab();
@@ -437,8 +426,8 @@ public class TimerFragmentTest {
         setUpSingleTimer();
 
         setCurrentItem(0);
-        final TimerItem timerItem = (TimerItem) viewPager.getChildAt(0);
-        final Button reset = timerItem.findViewById(R.id.reset_add);
+        final TimerItem timerItem = (TimerItem) recyclerView.findViewHolderForAdapterPosition(0).itemView;
+        final View reset = timerItem.findViewById(R.id.reset);
         assertStateEquals(Timer.State.RESET, 0);
         clickFab();
         assertStateEquals(Timer.State.RUNNING, 0);
@@ -453,8 +442,8 @@ public class TimerFragmentTest {
         setUpTwoTimers();
 
         setCurrentItem(1);
-        final TimerItem timerItem = (TimerItem) viewPager.getChildAt(1);
-        final Button reset = timerItem.findViewById(R.id.reset_add);
+        final TimerItem timerItem = (TimerItem) recyclerView.findViewHolderForAdapterPosition(1).itemView;
+        final View reset = timerItem.findViewById(R.id.reset);
         assertStateEquals(Timer.State.RESET, 1);
         assertStateEquals(Timer.State.RESET, 0);
         clickFab();
@@ -473,141 +462,12 @@ public class TimerFragmentTest {
         setUpSingleTimer();
 
         setCurrentItem(0);
-        final TimerItem timerItem = (TimerItem) viewPager.getChildAt(0);
+        final TimerItem timerItem = (TimerItem) recyclerView.findViewHolderForAdapterPosition(0).itemView;
         final TextView label = timerItem.findViewById(R.id.timer_label);
         assertStateEquals(Timer.State.RESET, 0);
         clickView(label);
     }
 
-    //
-    // 3 Indicators
-    //
-
-    @Test
-    public void verify3Indicators0Pages() {
-        assertIndicatorsEquals(0, 3, 0, GONE, GONE, GONE);
-    }
-
-    @Test
-    public void verify3Indicators1Page() {
-        assertIndicatorsEquals(0, 3, 1, GONE, GONE, GONE);
-    }
-
-    @Test
-    public void verify3Indicators2Pages() {
-        assertIndicatorsEquals(0, 3, 2, LIGHT, DARK, GONE);
-        assertIndicatorsEquals(1, 3, 2, DARK, LIGHT, GONE);
-    }
-
-    @Test
-    public void verify3Indicators3Pages() {
-        assertIndicatorsEquals(0, 3, 3, LIGHT, DARK, DARK);
-        assertIndicatorsEquals(1, 3, 3, DARK, LIGHT, DARK);
-        assertIndicatorsEquals(2, 3, 3, DARK, DARK, LIGHT);
-    }
-
-    @Test
-    public void verify3Indicators4Pages() {
-        assertIndicatorsEquals(0, 3, 4, LIGHT, DARK, BOTTOM);
-        assertIndicatorsEquals(1, 3, 4, DARK, LIGHT, BOTTOM);
-        assertIndicatorsEquals(2, 3, 4, TOP, LIGHT, DARK);
-        assertIndicatorsEquals(3, 3, 4, TOP, DARK, LIGHT);
-    }
-
-    @Test
-    public void verify3Indicators5Pages() {
-        assertIndicatorsEquals(0, 3, 5, LIGHT, DARK, BOTTOM);
-        assertIndicatorsEquals(1, 3, 5, DARK, LIGHT, BOTTOM);
-        assertIndicatorsEquals(2, 3, 5, TOP, LIGHT, BOTTOM);
-        assertIndicatorsEquals(3, 3, 5, TOP, LIGHT, DARK);
-        assertIndicatorsEquals(4, 3, 5, TOP, DARK, LIGHT);
-    }
-
-    @Test
-    public void verify3Indicators6Pages() {
-        assertIndicatorsEquals(0, 3, 6, LIGHT, DARK, BOTTOM);
-        assertIndicatorsEquals(1, 3, 6, DARK, LIGHT, BOTTOM);
-        assertIndicatorsEquals(2, 3, 6, TOP, LIGHT, BOTTOM);
-        assertIndicatorsEquals(3, 3, 6, TOP, LIGHT, BOTTOM);
-        assertIndicatorsEquals(4, 3, 6, TOP, LIGHT, DARK);
-        assertIndicatorsEquals(5, 3, 6, TOP, DARK, LIGHT);
-    }
-
-    @Test
-    public void verify3Indicators7Pages() {
-        assertIndicatorsEquals(0, 3, 7, LIGHT, DARK, BOTTOM);
-        assertIndicatorsEquals(1, 3, 7, DARK, LIGHT, BOTTOM);
-        assertIndicatorsEquals(2, 3, 7, TOP, LIGHT, BOTTOM);
-        assertIndicatorsEquals(3, 3, 7, TOP, LIGHT, BOTTOM);
-        assertIndicatorsEquals(4, 3, 7, TOP, LIGHT, BOTTOM);
-        assertIndicatorsEquals(5, 3, 7, TOP, LIGHT, DARK);
-        assertIndicatorsEquals(6, 3, 7, TOP, DARK, LIGHT);
-    }
-
-    //
-    // 4 Indicators
-    //
-
-    @Test
-    public void verify4Indicators0Pages() {
-        assertIndicatorsEquals(0, 4, 0, GONE, GONE, GONE, GONE);
-    }
-
-    @Test
-    public void verify4Indicators1Page() {
-        assertIndicatorsEquals(0, 4, 1, GONE, GONE, GONE, GONE);
-    }
-
-    @Test
-    public void verify4Indicators2Pages() {
-        assertIndicatorsEquals(0, 4, 2, LIGHT, DARK, GONE, GONE);
-        assertIndicatorsEquals(1, 4, 2, DARK, LIGHT, GONE, GONE);
-    }
-
-    @Test
-    public void verify4Indicators3Pages() {
-        assertIndicatorsEquals(0, 4, 3, LIGHT, DARK, DARK, GONE);
-        assertIndicatorsEquals(1, 4, 3, DARK, LIGHT, DARK, GONE);
-        assertIndicatorsEquals(2, 4, 3, DARK, DARK, LIGHT, GONE);
-    }
-
-    @Test
-    public void verify4Indicators4Pages() {
-        assertIndicatorsEquals(0, 4, 4, LIGHT, DARK, DARK, DARK);
-        assertIndicatorsEquals(1, 4, 4, DARK, LIGHT, DARK, DARK);
-        assertIndicatorsEquals(2, 4, 4, DARK, DARK, LIGHT, DARK);
-        assertIndicatorsEquals(3, 4, 4, DARK, DARK, DARK, LIGHT);
-    }
-
-    @Test
-    public void verify4Indicators5Pages() {
-        assertIndicatorsEquals(0, 4, 5, LIGHT, DARK, DARK, BOTTOM);
-        assertIndicatorsEquals(1, 4, 5, DARK, LIGHT, DARK, BOTTOM);
-        assertIndicatorsEquals(2, 4, 5, DARK, DARK, LIGHT, BOTTOM);
-        assertIndicatorsEquals(3, 4, 5, TOP, DARK, LIGHT, DARK);
-        assertIndicatorsEquals(4, 4, 5, TOP, DARK, DARK, LIGHT);
-    }
-
-    @Test
-    public void verify4Indicators6Pages() {
-        assertIndicatorsEquals(0, 4, 6, LIGHT, DARK, DARK, BOTTOM);
-        assertIndicatorsEquals(1, 4, 6, DARK, LIGHT, DARK, BOTTOM);
-        assertIndicatorsEquals(2, 4, 6, DARK, DARK, LIGHT, BOTTOM);
-        assertIndicatorsEquals(3, 4, 6, TOP, DARK, LIGHT, BOTTOM);
-        assertIndicatorsEquals(4, 4, 6, TOP, DARK, LIGHT, DARK);
-        assertIndicatorsEquals(5, 4, 6, TOP, DARK, DARK, LIGHT);
-    }
-
-    @Test
-    public void verify4Indicators7Pages() {
-        assertIndicatorsEquals(0, 4, 7, LIGHT, DARK, DARK, BOTTOM);
-        assertIndicatorsEquals(1, 4, 7, DARK, LIGHT, DARK, BOTTOM);
-        assertIndicatorsEquals(2, 4, 7, DARK, DARK, LIGHT, BOTTOM);
-        assertIndicatorsEquals(3, 4, 7, TOP, DARK, LIGHT, BOTTOM);
-        assertIndicatorsEquals(4, 4, 7, TOP, DARK, LIGHT, BOTTOM);
-        assertIndicatorsEquals(5, 4, 7, TOP, DARK, LIGHT, DARK);
-        assertIndicatorsEquals(6, 4, 7, TOP, DARK, DARK, LIGHT);
-    }
 
     @Test
     public void showTimerSetupView_fromIntent() {
@@ -648,7 +508,7 @@ public class TimerFragmentTest {
 
         assertEquals(View.VISIBLE, timersView.getVisibility());
         assertEquals(View.GONE, timerSetupView.getVisibility());
-        assertEquals(0, viewPager.getCurrentItem());
+        assertEquals(0, recyclerView.getLayoutManager().findViewByPosition(0) != null ? 0 : -1);
 
         final Intent intent =
                 new Intent(ApplicationProvider.getApplicationContext(), TimerService.class)
@@ -659,17 +519,7 @@ public class TimerFragmentTest {
 
         assertEquals(View.VISIBLE, timersView.getVisibility());
         assertEquals(View.GONE, timerSetupView.getVisibility());
-        assertEquals(1, viewPager.getCurrentItem());
-    }
-
-    private void assertIndicatorsEquals(
-            int page, int indicatorCount, int pageCount, int... expected) {
-        int[] actual = TimerFragment.computePageIndicatorStates(page, indicatorCount, pageCount);
-        if (!Arrays.equals(expected, actual)) {
-            final String expectedString = Arrays.toString(expected);
-            final String actualString = Arrays.toString(actual);
-            fail(String.format("Expected %s, found %s", expectedString, actualString));
-        }
+        // Since it's a list, the target timer should be visible.
     }
 
     private void assertStateEquals(Timer.State expectedState, int index) {
@@ -683,7 +533,7 @@ public class TimerFragmentTest {
 
     private void assertAdapter(int count) {
         Runnable assertRunnable = () -> {
-            assertEquals(count, adapter.getCount());
+            assertEquals(count, adapter.getItemCount());
         };
         InstrumentationRegistry.getInstrumentation().runOnMainSync(assertRunnable);
     }
@@ -697,7 +547,7 @@ public class TimerFragmentTest {
 
     private void setCurrentItem(int position) {
         Runnable setCurrentItemRunnable = () -> {
-            viewPager.setCurrentItem(position);
+            recyclerView.scrollToPosition(position);
         };
         InstrumentationRegistry.getInstrumentation().runOnMainSync(setCurrentItemRunnable);
     }

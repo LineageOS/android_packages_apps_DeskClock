@@ -72,11 +72,11 @@ public final class MockFabContainer implements FabContainer {
         return fab;
     }
 
-    public Button getLeftButton() {
+    public ImageView getLeftButton() {
         return leftButton;
     }
 
-    public Button getRightButton() {
+    public ImageView getRightButton() {
         return rightButton;
     }
 }

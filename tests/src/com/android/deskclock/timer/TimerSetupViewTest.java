@@ -19,6 +19,7 @@ package com.android.deskclock.timer;
 import android.content.Context;
 import android.text.TextUtils;
 import android.view.View;
+import android.widget.ImageView;
 import android.widget.TextView;
 
 import androidx.annotation.IdRes;
@@ -75,7 +76,7 @@ public class TimerSetupViewTest {
         Locale.setDefault(new Locale("en", "US"));
         Context context = InstrumentationRegistry.getInstrumentation().getTargetContext();
         final TimerFragment fragment = new TimerFragment();
-        rule.getActivity().getFragmentManager().beginTransaction().add(fragment, null).commit();
+        rule.getActivity().getSupportFragmentManager().beginTransaction().add(fragment, null).commit();
         Runnable selectTabRunnable = () -> {
             fragment.selectTab();
             fabContainer = new MockFabContainer(fragment, context);
@@ -248,14 +249,14 @@ public class TimerSetupViewTest {
         assertTrue(TextUtils.equals("Delete", deleteView.getContentDescription()));
 
         final View fab = fabContainer.getFab();
-        final TextView leftButton = fabContainer.getLeftButton();
-        final TextView rightButton = fabContainer.getRightButton();
+        final ImageView leftButton = fabContainer.getLeftButton();
+        final ImageView rightButton = fabContainer.getRightButton();
 
         if (DataModel.getDataModel().getTimers().isEmpty()) {
             assertEquals(INVISIBLE, leftButton.getVisibility());
         } else {
             assertEquals(VISIBLE, leftButton.getVisibility());
-            assertTrue(TextUtils.equals("Cancel", leftButton.getText()));
+            assertTrue(TextUtils.equals("Cancel", leftButton.getContentDescription()));
         }
 
         assertNull(fab.getContentDescription());
@@ -278,14 +279,14 @@ public class TimerSetupViewTest {
         assertTrue(TextUtils.equals("Delete " + seconds % 10, deleteView.getContentDescription()));
 
         final View fab = fabContainer.getFab();
-        final TextView leftButton = fabContainer.getLeftButton();
-        final TextView rightButton = fabContainer.getRightButton();
+        final ImageView leftButton = fabContainer.getLeftButton();
+        final ImageView rightButton = fabContainer.getRightButton();
 
         if (DataModel.getDataModel().getTimers().isEmpty()) {
             assertEquals(INVISIBLE, leftButton.getVisibility());
         } else {
             assertEquals(VISIBLE, leftButton.getVisibility());
-            assertTrue(TextUtils.equals("Cancel", leftButton.getText()));
+            assertTrue(TextUtils.equals("Cancel", leftButton.getContentDescription()));
         }
 
         assertEquals(VISIBLE, fab.getVisibility());

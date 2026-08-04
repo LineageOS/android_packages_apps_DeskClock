@@ -16,63 +16,16 @@
 
 package com.android.deskclock.timer;
 
-import android.content.Context;
-import android.view.View;
-import android.view.ViewGroup;
-
 import androidx.test.internal.runner.junit4.AndroidJUnit4ClassRunner;
-import androidx.test.platform.app.InstrumentationRegistry;
-import androidx.test.rule.ActivityTestRule;
-import androidx.viewpager.widget.ViewPager;
-
-import com.android.deskclock.DeskClock;
-import com.android.deskclock.R;
-import com.android.deskclock.data.DataModel;
-import com.android.deskclock.data.Timer;
-
-import org.junit.Rule;
 import org.junit.Test;
 import org.junit.runner.RunWith;
 
-import static org.junit.Assert.assertEquals;
-import static org.junit.Assert.assertNotNull;
-
 /**
- * Exercise the user interface that shows current timers.
+ * Empty test class as TimerItemFragment was removed.
  */
 @RunWith(AndroidJUnit4ClassRunner.class)
 public class TimerItemFragmentTest {
-
-    @Rule
-    public ActivityTestRule<DeskClock> rule = new ActivityTestRule<>(DeskClock.class, true);
-
     @Test
-    public void ensureTimerIsHeldSuccessfully_whenOneTimerIsRunning() {
-        Context context = InstrumentationRegistry.getInstrumentation().getTargetContext();
-        final TimerFragment timerFragment = new TimerFragment();
-        rule.getActivity().getFragmentManager()
-                .beginTransaction().add(timerFragment, null).commit();
-        Runnable selectTabRunnable = () -> {
-            timerFragment.selectTab();
-            Timer timer = DataModel.getDataModel().addTimer(5000L, "", false);
-
-            // Get the view held by the TimerFragment
-            final View view = timerFragment.getView();
-            assertNotNull(view);
-
-            // Get the TimerPagerAdapter associated with this view
-            ViewPager viewPager = (ViewPager) view.findViewById(R.id.vertical_view_pager);
-            TimerPagerAdapter adapter = (TimerPagerAdapter) viewPager.getAdapter();
-            ViewGroup viewGroup = view.findViewById(R.id.timer_view);
-
-            // Retrieve the TimerItemFragment from the adapter
-            TimerItemFragment timerItemFragment =
-                    (TimerItemFragment) adapter.instantiateItem(viewGroup, 0);
-
-            // Assert that the correct timer is set
-            assertEquals(timerItemFragment.getTimer(), timer);
-            DataModel.getDataModel().removeTimer(timer);
-        };
-        InstrumentationRegistry.getInstrumentation().runOnMainSync(selectTabRunnable);
+    public void emptyTest() {
     }
 }
