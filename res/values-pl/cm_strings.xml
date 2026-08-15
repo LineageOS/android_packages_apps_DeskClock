@@ -58,7 +58,7 @@
     </string-array>
     <string name="screensaver_settings_title">Wygaszacz ekranu</string>
     <string name="screensaver_preview">Podgląd</string>
-    <string name="screensaver_preview_summary">Uruchamia natychmiast wygaszacz ekranu</string>
+    <string name="screensaver_preview_summary">Natychmiast uruchamia wygaszacz ekranu</string>
     <string name="screensaver_change_settings">Ustawienia</string>
     <string name="screensaver_change_settings_summary">Otwiera ustawienia wygaszacza ekranu zegara</string>
     <string name="screensaver_daydream_settings">Zaznacz/włącz wygaszacz ekranu</string>
