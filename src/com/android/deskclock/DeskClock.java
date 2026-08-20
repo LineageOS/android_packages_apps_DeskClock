@@ -87,6 +87,10 @@ public class DeskClock extends BaseActivity
     /** Hides, updates, and shows only the {@link #mLeftButton} and {@link #mRightButton}. */
     private final AnimatorSet mUpdateButtonsOnlyAnimation = new AnimatorSet();
 
+    //** Contains all the animations of this class. */
+    private final AnimatorSet[] mAnimations =
+            {mHideAnimation, mShowAnimation, mUpdateFabOnlyAnimation, mUpdateButtonsOnlyAnimation};
+
     /** Updates the user interface to reflect the selected tab from the backing model. */
     private final TabListener mTabChangeWatcher = new TabChangeWatcher();
 
@@ -377,6 +381,11 @@ public class DeskClock extends BaseActivity
 
     @Override
     public void updateFab(@UpdateFabFlag int updateType) {
+        for (AnimatorSet mAnimation : mAnimations){
+            if (mAnimation.isRunning()) {
+                mAnimation.end();
+            }
+        }
         final DeskClockFragment f = getSelectedDeskClockFragment();
         final int fabAnimationType = updateType & FAB_ANIMATION_MASK;
         if (fabAnimationType == FAB_SHRINK_AND_EXPAND) {
