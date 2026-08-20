@@ -1,0 +1,38 @@
+{
+  "comments": [
+    {
+      "unresolved": true,
+      "key": {
+        "uuid": "172c7807_9bbb6d54",
+        "filename": "src/com/android/deskclock/DeskClock.java",
+        "patchSetId": 2
+      },
+      "lineNbr": 91,
+      "author": {
+        "id": 13028
+      },
+      "writtenOn": "2026-08-20T14:28:41Z",
+      "side": 1,
+      "message": "Line length",
+      "revId": "616478c6edada7b86938ff6b5c02e9b573e5ef00",
+      "serverId": "1ec6b3db-b2c1-4fa4-84a2-4c7efe89ba71"
+    },
+    {
+      "unresolved": true,
+      "key": {
+        "uuid": "68f569ac_e783ca8f",
+        "filename": "src/com/android/deskclock/DeskClock.java",
+        "patchSetId": 2
+      },
+      "lineNbr": 383,
+      "author": {
+        "id": 13028
+      },
+      "writtenOn": "2026-08-20T14:28:41Z",
+      "side": 1,
+      "message": "Space between for and if and the corresponding (",
+      "revId": "616478c6edada7b86938ff6b5c02e9b573e5ef00",
+      "serverId": "1ec6b3db-b2c1-4fa4-84a2-4c7efe89ba71"
+    }
+  ]
+}
