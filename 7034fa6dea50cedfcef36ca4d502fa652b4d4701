@@ -1,0 +1,21 @@
+{
+  "comments": [
+    {
+      "unresolved": false,
+      "key": {
+        "uuid": "06fecf09_012a3a05",
+        "filename": "/PATCHSET_LEVEL",
+        "patchSetId": 2
+      },
+      "lineNbr": 0,
+      "author": {
+        "id": 10067
+      },
+      "writtenOn": "2026-09-12T18:45:05Z",
+      "side": 1,
+      "message": "hopefully this doesn\u0027t make clock as system app usecase worse?",
+      "revId": "7034fa6dea50cedfcef36ca4d502fa652b4d4701",
+      "serverId": "1ec6b3db-b2c1-4fa4-84a2-4c7efe89ba71"
+    }
+  ]
+}
