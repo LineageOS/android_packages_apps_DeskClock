@@ -16,6 +16,23 @@
       "message": "I was too lazy to do it manually, but it just gets rid of unwanted stroke and makes foreground icon bigger - same as google clock.",
       "revId": "8c98e2a2b959f1913de014cf316aa6657c0e8c98",
       "serverId": "1ec6b3db-b2c1-4fa4-84a2-4c7efe89ba71"
+    },
+    {
+      "unresolved": false,
+      "key": {
+        "uuid": "f63d0714_cc50cb9e",
+        "filename": "/PATCHSET_LEVEL",
+        "patchSetId": 1
+      },
+      "lineNbr": 0,
+      "author": {
+        "id": 10067
+      },
+      "writtenOn": "2026-09-12T14:14:02Z",
+      "side": 1,
+      "message": "https://imgur.com/a/L7q0RIg if you want to compare",
+      "revId": "8c98e2a2b959f1913de014cf316aa6657c0e8c98",
+      "serverId": "1ec6b3db-b2c1-4fa4-84a2-4c7efe89ba71"
     }
   ]
 }
