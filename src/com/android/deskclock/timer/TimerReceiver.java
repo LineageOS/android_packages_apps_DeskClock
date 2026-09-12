@@ -37,7 +37,7 @@ public class TimerReceiver extends BroadcastReceiver {
         if ("times_up".equals(intent.getAction())) {
             final int timerId = intent.getIntExtra("timer.intent.extra", -1);
             final Timer timer = DataModel.getDataModel().getTimer(timerId);
-            context.startService(TimerService.createTimerExpiredIntent(context, timer));
+            context.startForegroundService(TimerService.createTimerExpiredIntent(context, timer));
         }
     }
 }
