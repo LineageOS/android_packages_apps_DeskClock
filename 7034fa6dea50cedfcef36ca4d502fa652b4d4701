@@ -16,6 +16,24 @@
       "message": "hopefully this doesn\u0027t make clock as system app usecase worse?",
       "revId": "7034fa6dea50cedfcef36ca4d502fa652b4d4701",
       "serverId": "1ec6b3db-b2c1-4fa4-84a2-4c7efe89ba71"
+    },
+    {
+      "unresolved": false,
+      "key": {
+        "uuid": "8d075b1e_f3fe5ffb",
+        "filename": "/PATCHSET_LEVEL",
+        "patchSetId": 2
+      },
+      "lineNbr": 0,
+      "author": {
+        "id": 11883
+      },
+      "writtenOn": "2026-09-12T19:09:56Z",
+      "side": 1,
+      "message": "The app is system is exempted, so this can only help the non-system usecase",
+      "parentUuid": "06fecf09_012a3a05",
+      "revId": "7034fa6dea50cedfcef36ca4d502fa652b4d4701",
+      "serverId": "1ec6b3db-b2c1-4fa4-84a2-4c7efe89ba71"
     }
   ]
 }
