@@ -16,8 +16,6 @@
 
 package com.android.deskclock.data;
 
-import static android.view.View.GONE;
-import static android.view.View.VISIBLE;
 import static com.android.deskclock.NotificationUtils.STOPWATCH_NOTIFICATION_CHANNEL_ID;
 
 import android.app.Notification;
@@ -26,14 +24,12 @@ import android.app.PendingIntent;
 import android.content.Context;
 import android.content.Intent;
 import android.content.res.Resources;
-import android.os.SystemClock;
-import android.widget.RemoteViews;
+import android.text.format.DateUtils;
 
 import androidx.annotation.StringRes;
 import androidx.core.app.NotificationCompat;
 import androidx.core.app.NotificationCompat.Action;
 import androidx.core.app.NotificationCompat.Builder;
-import androidx.core.content.ContextCompat;
 
 import com.android.deskclock.DeskClock;
 import com.android.deskclock.NotificationUtils;
@@ -63,14 +59,14 @@ class StopwatchNotificationBuilder {
 
         // Compute some values required below.
         final boolean running = stopwatch.isRunning();
-        final String pname = context.getPackageName();
         final Resources res = context.getResources();
-        final long base = SystemClock.elapsedRealtime() - stopwatch.getTotalTime();
+        final long totalTime = stopwatch.getTotalTime();
 
-        final RemoteViews content = new RemoteViews(pname, R.layout.chronometer_notif_content);
-        content.setChronometer(R.id.chronometer, base, null, running);
+        // Time at which the stopwatch reached 0; the platform derives the chronometer from it.
+        final long base = System.currentTimeMillis() - totalTime;
 
         final List<Action> actions = new ArrayList<>(2);
+        final CharSequence text;
 
         if (running) {
             // Left button: Pause
@@ -96,12 +92,9 @@ class StopwatchNotificationBuilder {
             // Show the current lap number if any laps have been recorded.
             final int lapCount = DataModel.getDataModel().getLaps().size();
             if (lapCount > 0) {
-                final int lapNumber = lapCount + 1;
-                final String lap = res.getString(R.string.sw_notification_lap_number, lapNumber);
-                content.setTextViewText(R.id.state, lap);
-                content.setViewVisibility(R.id.state, VISIBLE);
+                text = res.getString(R.string.sw_notification_lap_number, lapCount + 1);
             } else {
-                content.setViewVisibility(R.id.state, GONE);
+                text = null;
             }
         } else {
             // Left button: Start
@@ -122,21 +115,25 @@ class StopwatchNotificationBuilder {
             final PendingIntent intent2 = Utils.pendingServiceIntent(context, reset);
             actions.add(new Action.Builder(null, title2, intent2).build());
 
-            // Indicate the stopwatch is paused.
-            content.setTextViewText(R.id.state, res.getString(R.string.swn_paused));
-            content.setViewVisibility(R.id.state, VISIBLE);
+            // The chronometer cannot be stopped, so report the frozen time as text instead.
+            text = DateUtils.formatElapsedTime(totalTime / DateUtils.SECOND_IN_MILLIS);
         }
 
         final Builder notification = new NotificationCompat.Builder(
                 context, STOPWATCH_NOTIFICATION_CHANNEL_ID)
                         .setLocalOnly(true)
                         .setOngoing(running)
-                        .setCustomContentView(content)
+                        .setWhen(base)
+                        .setShowWhen(false)
+                        .setUsesChronometer(running)
+                        .setRequestPromotedOngoing(running)
+                        .setContentTitle(res.getText(R.string.menu_stopwatch))
+                        .setContentText(text)
+                        .setSubText(running ? null : res.getText(R.string.swn_paused))
                         .setContentIntent(pendingShowApp)
                         .setAutoCancel(stopwatch.isPaused())
                         .setPriority(NotificationManager.IMPORTANCE_DEFAULT)
                         .setSmallIcon(R.drawable.stat_notify_stopwatch)
-                        .setStyle(new NotificationCompat.DecoratedCustomViewStyle())
                         .setColor(ThemeUtils.resolveColor(context, R.attr.colorSurface))
                         .setGroup(nm.getStopwatchNotificationGroupKey());
 
