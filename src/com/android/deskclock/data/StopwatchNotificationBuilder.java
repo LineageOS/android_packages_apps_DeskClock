@@ -106,7 +106,8 @@ class StopwatchNotificationBuilder {
                     .setAction(StopwatchService.ACTION_START_STOPWATCH)
                     .putExtra(Events.EXTRA_EVENT_LABEL, eventLabel);
 
-            final CharSequence title1 = res.getText(R.string.sw_start_button);
+            // We can only resume from the notification.
+            final CharSequence title1 = res.getText(R.string.sw_resume_button);
             final PendingIntent intent1 = Utils.pendingServiceIntent(context, start);
             actions.add(new Action.Builder(null, title1, intent1).build());
 
