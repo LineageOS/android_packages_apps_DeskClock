@@ -24,12 +24,14 @@ import android.app.PendingIntent;
 import android.content.Context;
 import android.content.Intent;
 import android.content.res.Resources;
-import android.text.format.DateUtils;
 
 import androidx.annotation.StringRes;
 import androidx.core.app.NotificationCompat;
 import androidx.core.app.NotificationCompat.Action;
 import androidx.core.app.NotificationCompat.Builder;
+import androidx.core.app.NotificationCompat.Metric;
+import androidx.core.app.NotificationCompat.Metric.TimeDifference;
+import androidx.core.app.NotificationCompat.MetricStyle;
 
 import com.android.deskclock.DeskClock;
 import com.android.deskclock.NotificationUtils;
@@ -39,6 +41,8 @@ import com.android.deskclock.Utils;
 import com.android.deskclock.events.Events;
 import com.android.deskclock.stopwatch.StopwatchService;
 
+import java.time.Duration;
+import java.time.Instant;
 import java.util.ArrayList;
 import java.util.List;
 
@@ -67,7 +71,7 @@ class StopwatchNotificationBuilder {
 
         final List<Action> actions = new ArrayList<>(2);
         final CharSequence text;
-        final String criticalText;
+        final TimeDifference elapsed;
 
         if (running) {
             // Left button: Pause
@@ -98,8 +102,8 @@ class StopwatchNotificationBuilder {
                 text = null;
             }
 
-            // Leave the chip to the chronometer; it takes precedence over critical text.
-            criticalText = null;
+            elapsed = TimeDifference.forStopwatch(Instant.ofEpochMilli(base),
+                    TimeDifference.FORMAT_CHRONOMETER);
         } else {
             // Left button: Start
             final Intent start = new Intent(context, StopwatchService.class)
@@ -120,22 +124,25 @@ class StopwatchNotificationBuilder {
             final PendingIntent intent2 = Utils.pendingServiceIntent(context, reset);
             actions.add(new Action.Builder(null, title2, intent2).build());
 
-            // The chronometer cannot be stopped, so report the frozen time as text instead. The
-            // chip has no other source of content while paused, so give it the same time.
-            criticalText = DateUtils.formatElapsedTime(totalTime / DateUtils.SECOND_IN_MILLIS);
-            text = criticalText;
+            // A paused stopwatch reports the frozen time rather than counting up.
+            elapsed = TimeDifference.forPausedStopwatch(Duration.ofMillis(totalTime),
+                    TimeDifference.FORMAT_CHRONOMETER);
+            text = null;
         }
+
+        final MetricStyle metricStyle = new MetricStyle()
+                .addMetric(new Metric(
+                        elapsed,
+                        text != null ? text : res.getText(R.string.menu_stopwatch)));
 
         final Builder notification = new NotificationCompat.Builder(
                 context, STOPWATCH_NOTIFICATION_CHANNEL_ID)
                         .setLocalOnly(true)
                         .setOngoing(true)
-                        .setWhen(base)
                         .setShowWhen(false)
-                        .setUsesChronometer(running)
                         .setRequestPromotedOngoing(true)
-                        .setShortCriticalText(criticalText)
-                        .setContentTitle(res.getText(R.string.menu_stopwatch))
+                        .setStyle(metricStyle)
+                        .setContentTitle(res.getText(R.string.app_label))
                         .setContentText(text)
                         .setSubText(running ? null : res.getText(R.string.swn_paused))
                         .setContentIntent(pendingShowApp)
