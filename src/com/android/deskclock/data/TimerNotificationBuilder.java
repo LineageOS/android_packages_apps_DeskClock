@@ -28,9 +28,11 @@ import android.content.Context;
 import android.content.Intent;
 import android.content.res.Resources;
 import android.text.TextUtils;
-import android.text.format.DateUtils;
 
 import androidx.core.app.NotificationCompat;
+import androidx.core.app.NotificationCompat.Metric;
+import androidx.core.app.NotificationCompat.Metric.TimeDifference;
+import androidx.core.app.NotificationCompat.MetricStyle;
 
 import com.android.deskclock.DeskClock;
 import com.android.deskclock.NotificationUtils;
@@ -41,6 +43,8 @@ import com.android.deskclock.events.Events;
 import com.android.deskclock.timer.ExpiredTimersActivity;
 import com.android.deskclock.timer.TimerService;
 
+import java.time.Duration;
+import java.time.Instant;
 import java.util.ArrayList;
 import java.util.List;
 
@@ -62,8 +66,13 @@ class TimerNotificationBuilder {
 
         final List<Action> actions = new ArrayList<>(2);
         final CharSequence stateText;
-        final CharSequence contentText =
-                DateUtils.formatElapsedTime(remainingTime / DateUtils.SECOND_IN_MILLIS);
+
+        // A running timer counts down to zero; a paused one reports the time it stopped at.
+        final TimeDifference remaining = running
+                ? TimeDifference.forTimer(Instant.ofEpochMilli(base),
+                        TimeDifference.FORMAT_CHRONOMETER)
+                : TimeDifference.forPausedTimer(Duration.ofMillis(Math.max(0, remainingTime)),
+                        TimeDifference.FORMAT_CHRONOMETER);
 
         if (count == 1) {
             if (running) {
@@ -137,14 +146,16 @@ class TimerNotificationBuilder {
 
         final PendingIntent pendingShowApp = Utils.pendingActivityIntent(context, showApp);
 
+        final MetricStyle metricStyle = new MetricStyle()
+                .addMetric(new Metric(remaining, stateText));
+
         final Builder notification = new NotificationCompat.Builder(
                 context, TIMER_MODEL_NOTIFICATION_CHANNEL_ID)
                         .setOngoing(true)
                         .setLocalOnly(true)
                         .setShowWhen(false)
                         .setAutoCancel(false)
-                        .setContentTitle(stateText)
-                        .setContentText(running ? null : contentText)
+                        .setContentTitle(res.getText(R.string.app_label))
                         .setContentIntent(pendingShowApp)
                         .setPriority(NotificationCompat.PRIORITY_DEFAULT)
                         .setCategory(NotificationCompat.CATEGORY_ALARM)
@@ -153,10 +164,8 @@ class TimerNotificationBuilder {
                         .setVisibility(NotificationCompat.VISIBILITY_PUBLIC)
                         .setColor(ThemeUtils.resolveColor(context, R.attr.colorSurface))
                         .setGroup(nm.getTimerNotificationGroupKey())
-                        .setWhen(base)
-                        .setUsesChronometer(running)
-                        .setChronometerCountDown(true)
-                        .setRequestPromotedOngoing(true);
+                        .setRequestPromotedOngoing(true)
+                        .setStyle(metricStyle);
 
         for (Action action : actions) {
             notification.addAction(action);
@@ -202,6 +211,11 @@ class TimerNotificationBuilder {
             actions.add(new Action.Builder(null, title1, intent1).build());
         }
 
+        // An expired timer keeps counting past zero, so the time reads as negative.
+        final TimeDifference overtime = TimeDifference.forTimer(
+                Instant.ofEpochMilli(getChronometerBase(timer)),
+                TimeDifference.FORMAT_CHRONOMETER);
+
         // Content intent shows the timer full screen when clicked.
         final Intent content = new Intent(context, ExpiredTimersActivity.class);
         final PendingIntent contentIntent = Utils.pendingActivityIntent(context, content);
@@ -211,15 +225,20 @@ class TimerNotificationBuilder {
                 .setFlags(Intent.FLAG_ACTIVITY_NEW_TASK | Intent.FLAG_ACTIVITY_NO_USER_ACTION);
         final PendingIntent pendingFullScreen = Utils.pendingActivityIntent(context, fullScreen);
 
+        final MetricStyle metricStyle = new MetricStyle()
+                .addMetric(new Metric(overtime, stateText));
+
         final Builder notification = new NotificationCompat.Builder(
                 context, FIRING_NOTIFICATION_CHANNEL_ID)
                         .setOngoing(true)
                         .setLocalOnly(true)
                         .setShowWhen(false)
                         .setAutoCancel(false)
-                        .setContentTitle(stateText)
+                        .setContentTitle(context.getString(R.string.app_label))
                         .setContentIntent(contentIntent)
                         .setPriority(NotificationCompat.PRIORITY_HIGH)
+                        .setRequestPromotedOngoing(true)
+                        .setStyle(metricStyle)
                         .setDefaults(Notification.DEFAULT_LIGHTS)
                         .setSmallIcon(R.drawable.stat_notify_timer)
                         .setFullScreenIntent(pendingFullScreen, true)
