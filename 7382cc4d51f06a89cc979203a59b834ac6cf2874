@@ -33,6 +33,23 @@
       "message": "ok, nvm, just 24.0",
       "revId": "7382cc4d51f06a89cc979203a59b834ac6cf2874",
       "serverId": "1ec6b3db-b2c1-4fa4-84a2-4c7efe89ba71"
+    },
+    {
+      "unresolved": false,
+      "key": {
+        "uuid": "b0a86ba7_4c67a4e8",
+        "filename": "/PATCHSET_LEVEL",
+        "patchSetId": 2
+      },
+      "lineNbr": 0,
+      "author": {
+        "id": 10067
+      },
+      "writtenOn": "2026-09-13T21:51:28Z",
+      "side": 1,
+      "message": "i thought it\u0027d pass on 23.0 since it has prebuilts/sdk/current/androidx/m2repository/androidx/core/core/1.19.0-alpha01...",
+      "revId": "7382cc4d51f06a89cc979203a59b834ac6cf2874",
+      "serverId": "1ec6b3db-b2c1-4fa4-84a2-4c7efe89ba71"
     }
   ]
 }
