@@ -32,6 +32,9 @@ import android.widget.ImageView;
 import android.widget.TextView;
 
 import androidx.annotation.NonNull;
+import androidx.core.graphics.Insets;
+import androidx.core.view.ViewCompat;
+import androidx.core.view.WindowInsetsCompat;
 import androidx.loader.app.LoaderManager;
 import androidx.loader.content.CursorLoader;
 import androidx.loader.content.Loader;
@@ -117,6 +120,14 @@ public final class AlarmClockFragment extends DeskClockFragment implements
         final Context context = getActivity();
 
         mRecyclerView = v.findViewById(R.id.alarms_recycler_view);
+        mRecyclerView.setClipToPadding(false);
+        ViewCompat.setOnApplyWindowInsetsListener(mRecyclerView, (view, insets) -> {
+            Insets bars = insets.getInsets(
+                    WindowInsetsCompat.Type.systemBars() | WindowInsetsCompat.Type.displayCutout());
+            view.setPadding(bars.left, view.getPaddingTop(), bars.right, bars.bottom);
+            return WindowInsetsCompat.CONSUMED;
+        });
+
         mLayoutManager = new LinearLayoutManager(context) {
             @Override
             protected void calculateExtraLayoutSpace(@NonNull RecyclerView.State state,
