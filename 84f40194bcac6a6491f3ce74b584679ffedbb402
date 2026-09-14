@@ -1,0 +1,21 @@
+{
+  "comments": [
+    {
+      "unresolved": false,
+      "key": {
+        "uuid": "5151c566_0ddf1241",
+        "filename": "/PATCHSET_LEVEL",
+        "patchSetId": 5
+      },
+      "lineNbr": 0,
+      "author": {
+        "id": 10067
+      },
+      "writtenOn": "2026-09-14T07:31:07Z",
+      "side": 1,
+      "message": "moved metricstyle to var in timer notif too.",
+      "revId": "84f40194bcac6a6491f3ce74b584679ffedbb402",
+      "serverId": "1ec6b3db-b2c1-4fa4-84a2-4c7efe89ba71"
+    }
+  ]
+}
