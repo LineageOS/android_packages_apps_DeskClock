@@ -1,0 +1,21 @@
+{
+  "comments": [
+    {
+      "unresolved": false,
+      "key": {
+        "uuid": "0db731b1_ba7058b9",
+        "filename": "/PATCHSET_LEVEL",
+        "patchSetId": 2
+      },
+      "lineNbr": 0,
+      "author": {
+        "id": 10067
+      },
+      "writtenOn": "2026-09-14T06:54:39Z",
+      "side": 1,
+      "message": "I think deleting in HEAD~~ uses-sdk made this a must.",
+      "revId": "5d509972353f41768bf59f2a41cfc5b340d6c750",
+      "serverId": "1ec6b3db-b2c1-4fa4-84a2-4c7efe89ba71"
+    }
+  ]
+}
