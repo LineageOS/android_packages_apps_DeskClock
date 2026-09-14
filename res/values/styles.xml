@@ -69,10 +69,6 @@
         <item name="android:fontFamily">sans-serif-medium</item>
     </style>
 
-    <style name="navText">
-        <item name="android:textSize">12sp</item>
-    </style>
-
     <style name="Widget.ActionBar" parent="Widget.AppCompat.ActionBar">
         <item name="android:background">@null</item>
 
