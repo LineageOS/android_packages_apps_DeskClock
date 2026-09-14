@@ -1,0 +1,38 @@
+{
+  "comments": [
+    {
+      "unresolved": true,
+      "key": {
+        "uuid": "e31c6b09_191a2f55",
+        "filename": "src/com/android/deskclock/data/StopwatchNotificationBuilder.java",
+        "patchSetId": 3
+      },
+      "lineNbr": 100,
+      "author": {
+        "id": 11883
+      },
+      "writtenOn": "2026-09-14T07:12:05Z",
+      "side": 1,
+      "message": "I feel like this get lost now, it\u0027s now shown anymore",
+      "revId": "c957a418685b4d08b30f0c873d40981ff0c3daeb",
+      "serverId": "1ec6b3db-b2c1-4fa4-84a2-4c7efe89ba71"
+    },
+    {
+      "unresolved": true,
+      "key": {
+        "uuid": "1db99d4b_6accd82d",
+        "filename": "src/com/android/deskclock/data/StopwatchNotificationBuilder.java",
+        "patchSetId": 3
+      },
+      "lineNbr": 140,
+      "author": {
+        "id": 11883
+      },
+      "writtenOn": "2026-09-14T07:12:05Z",
+      "side": 1,
+      "message": "Add a new metric here for that one?",
+      "revId": "c957a418685b4d08b30f0c873d40981ff0c3daeb",
+      "serverId": "1ec6b3db-b2c1-4fa4-84a2-4c7efe89ba71"
+    }
+  ]
+}
