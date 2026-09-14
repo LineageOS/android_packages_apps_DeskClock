@@ -51,6 +51,23 @@
       "message": "sigh, i think i used bad gradle version since now it just randomly runs out of heap memory.",
       "revId": "5d509972353f41768bf59f2a41cfc5b340d6c750",
       "serverId": "1ec6b3db-b2c1-4fa4-84a2-4c7efe89ba71"
+    },
+    {
+      "unresolved": false,
+      "key": {
+        "uuid": "cbbe4931_faa8161a",
+        "filename": "/PATCHSET_LEVEL",
+        "patchSetId": 2
+      },
+      "lineNbr": 0,
+      "author": {
+        "id": 10067
+      },
+      "writtenOn": "2026-09-14T06:57:32Z",
+      "side": 1,
+      "message": "also this removes background for navbar in settings...idk if that\u0027s what we want",
+      "revId": "5d509972353f41768bf59f2a41cfc5b340d6c750",
+      "serverId": "1ec6b3db-b2c1-4fa4-84a2-4c7efe89ba71"
     }
   ]
 }
