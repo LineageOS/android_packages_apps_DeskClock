@@ -27,7 +27,6 @@
         android:clipToPadding="false"
         android:descendantFocusability="beforeDescendants"
         android:fadingEdgeLength="0dp"
-        android:paddingBottom="@dimen/fab_height"
         android:scrollbarStyle="outsideOverlay"
         android:scrollbars="vertical"
         android:splitMotionEvents="false" />
