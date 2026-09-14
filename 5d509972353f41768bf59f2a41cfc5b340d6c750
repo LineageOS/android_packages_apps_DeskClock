@@ -68,6 +68,24 @@
       "message": "also this removes background for navbar in settings...idk if that\u0027s what we want",
       "revId": "5d509972353f41768bf59f2a41cfc5b340d6c750",
       "serverId": "1ec6b3db-b2c1-4fa4-84a2-4c7efe89ba71"
+    },
+    {
+      "unresolved": false,
+      "key": {
+        "uuid": "c7b606ac_1c5e3c17",
+        "filename": "/PATCHSET_LEVEL",
+        "patchSetId": 2
+      },
+      "lineNbr": 0,
+      "author": {
+        "id": 10067
+      },
+      "writtenOn": "2026-09-14T07:09:31Z",
+      "side": 1,
+      "message": "happens with latest too, idk if our fault...",
+      "parentUuid": "124542ff_6157a51c",
+      "revId": "5d509972353f41768bf59f2a41cfc5b340d6c750",
+      "serverId": "1ec6b3db-b2c1-4fa4-84a2-4c7efe89ba71"
     }
   ]
 }
