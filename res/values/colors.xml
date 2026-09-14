@@ -28,6 +28,8 @@
 
     <color name="transparent">#00000000</color>
 
+    <color name="shortcut_background">#FFF5F5F5</color>
+
     <color name="widget_label_color">@color/white</color>
     <color name="widget_label_color_dark">@color/black</color>
 </resources>

@@ -18,6 +18,8 @@ android_app {
         "gen/**/*.java",
     ],
     product_specific: true,
+    min_sdk_version: "31",
+    target_sdk_version: "34",
     static_libs: [
         "androidx.annotation_annotation",
         "androidx.collection_collection",

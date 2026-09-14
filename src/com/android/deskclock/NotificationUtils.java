@@ -57,12 +57,12 @@ public class NotificationUtils {
     /**
      * Notification channel containing all TimerModel notifications.
      */
-    public static final String TIMER_MODEL_NOTIFICATION_CHANNEL_ID = "TimerNotification";
+    public static final String TIMER_MODEL_NOTIFICATION_CHANNEL_ID = "TimerSilentNotification";
 
     /**
      * Notification channel containing all stopwatch notifications.
      */
-    public static final String STOPWATCH_NOTIFICATION_CHANNEL_ID = "StopWatchNotification";
+    public static final String STOPWATCH_NOTIFICATION_CHANNEL_ID = "StopWatchSilentNotification";
 
     /**
      * Values used to bitmask certain channel defaults
@@ -92,11 +92,13 @@ public class NotificationUtils {
         });
         CHANNEL_PROPS.put(STOPWATCH_NOTIFICATION_CHANNEL_ID, new int[]{
                 R.string.stopwatch_channel,
-                IMPORTANCE_DEFAULT
+                IMPORTANCE_DEFAULT,
+                0
         });
         CHANNEL_PROPS.put(TIMER_MODEL_NOTIFICATION_CHANNEL_ID, new int[]{
                 R.string.timer_channel,
-                IMPORTANCE_DEFAULT
+                IMPORTANCE_DEFAULT,
+                0
         });
     }
 
@@ -152,6 +154,8 @@ public class NotificationUtils {
         deleteChannel(nm, "alarmSnoozingNotification");
         deleteChannel(nm, "timerNotification");
         deleteChannel(nm, "stopwatchNotification");
+        deleteChannel(nm, "StopWatchNotification");
+        deleteChannel(nm, "TimerNotification");
 
         // We recreate all existing channels so any language change or our name changes propagate
         // to the actual channels

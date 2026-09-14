@@ -14,15 +14,7 @@
      See the License for the specific language governing permissions and
      limitations under the License.
 -->
-<vector xmlns:android="http://schemas.android.com/apk/res/android"
-    android:width="24dp"
-    android:height="24dp"
-    android:viewportHeight="48.0"
-    android:viewportWidth="48.0">
-    <path
-        android:fillColor="#F5F5F5"
-        android:pathData="M24,24m-22,0a22,22 0,1 1,44 0a22,22 0,1 1,-44 0" />
-    <path
-        android:fillColor="?attr/colorSurface"
-        android:pathData="M22.1,20c0,-1.8 0.6,-3.5 1.5,-5c-4.8,0.2 -8.7,4.2 -8.7,9c0,5 4.1,9 9,9c3.1,0 5.8,-1.6 7.5,-4C26.2,29 22.1,25 22.1,20z" />
-</vector>
+<adaptive-icon xmlns:android="http://schemas.android.com/apk/res/android">
+    <background android:drawable="@color/shortcut_background" />
+    <foreground android:drawable="@drawable/shortcut_screensaver_foreground" />
+</adaptive-icon>

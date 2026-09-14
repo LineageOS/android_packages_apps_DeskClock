@@ -14,7 +14,20 @@
      See the License for the specific language governing permissions and
      limitations under the License.
 -->
-<adaptive-icon xmlns:android="http://schemas.android.com/apk/res/android">
-    <background android:drawable="@color/shortcut_background" />
-    <foreground android:drawable="@drawable/shortcut_new_alarm_foreground" />
-</adaptive-icon>
+<vector xmlns:android="http://schemas.android.com/apk/res/android"
+    android:width="108dp"
+    android:height="108dp"
+    android:viewportHeight="108.0"
+    android:viewportWidth="108.0">
+    <group
+        android:pivotX="24.0"
+        android:pivotY="24.0"
+        android:scaleX="1.636364"
+        android:scaleY="1.636364"
+        android:translateX="30.0"
+        android:translateY="30.0">
+        <path
+            android:fillColor="#000000"
+            android:pathData="M22.1,20c0,-1.8 0.6,-3.5 1.5,-5c-4.8,0.2 -8.7,4.2 -8.7,9c0,5 4.1,9 9,9c3.1,0 5.8,-1.6 7.5,-4C26.2,29 22.1,25 22.1,20z" />
+    </group>
+</vector>
