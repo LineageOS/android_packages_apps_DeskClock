@@ -230,7 +230,7 @@ public class DeskClock extends BaseActivity
 
         mFragmentUtils = new FragmentUtils(this);
         // Mirror changes made to the selected tab into UiDataModel.
-        mBottomNavigation = findViewById(R.id.bottom_view);
+        mBottomNavigation = findViewById(R.id.bottom_navigation);
         mBottomNavigation.setOnItemSelectedListener(mNavigationListener);
 
         // Honor changes to the selected tab from outside entities.

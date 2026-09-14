@@ -19,7 +19,6 @@
 
     <style name="Theme.DeskClock" parent="Theme.Material3Expressive.DynamicColors.Dark.NoActionBar">
         <item name="android:colorBackgroundFloating">?attr/colorBackgroundFloating</item>
-        <item name="android:navigationBarColor">?attr/colorSurfaceVariant</item>
         <item name="popupMenuBackground">@drawable/popup_background</item>
         <item name="floatingActionButtonStyle">@style/Widget.DeskClock.FloatingActionButton</item>
 
