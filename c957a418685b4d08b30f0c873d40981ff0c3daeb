@@ -36,6 +36,24 @@
       "serverId": "1ec6b3db-b2c1-4fa4-84a2-4c7efe89ba71"
     },
     {
+      "unresolved": false,
+      "key": {
+        "uuid": "0b6d36db_79559f65",
+        "filename": "src/com/android/deskclock/data/StopwatchNotificationBuilder.java",
+        "patchSetId": 3
+      },
+      "lineNbr": 100,
+      "author": {
+        "id": 10067
+      },
+      "writtenOn": "2026-09-14T07:26:26Z",
+      "side": 1,
+      "message": "Done",
+      "parentUuid": "eb85a630_23e754b7",
+      "revId": "c957a418685b4d08b30f0c873d40981ff0c3daeb",
+      "serverId": "1ec6b3db-b2c1-4fa4-84a2-4c7efe89ba71"
+    },
+    {
       "unresolved": true,
       "key": {
         "uuid": "1db99d4b_6accd82d",
@@ -49,6 +67,24 @@
       "writtenOn": "2026-09-14T07:12:05Z",
       "side": 1,
       "message": "Add a new metric here for that one?",
+      "revId": "c957a418685b4d08b30f0c873d40981ff0c3daeb",
+      "serverId": "1ec6b3db-b2c1-4fa4-84a2-4c7efe89ba71"
+    },
+    {
+      "unresolved": false,
+      "key": {
+        "uuid": "1809e357_c767df2c",
+        "filename": "src/com/android/deskclock/data/StopwatchNotificationBuilder.java",
+        "patchSetId": 3
+      },
+      "lineNbr": 140,
+      "author": {
+        "id": 10067
+      },
+      "writtenOn": "2026-09-14T07:26:26Z",
+      "side": 1,
+      "message": "Done",
+      "parentUuid": "1db99d4b_6accd82d",
       "revId": "c957a418685b4d08b30f0c873d40981ff0c3daeb",
       "serverId": "1ec6b3db-b2c1-4fa4-84a2-4c7efe89ba71"
     }
