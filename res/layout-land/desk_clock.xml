@@ -22,13 +22,13 @@
     android:layout_width="match_parent"
     android:layout_height="match_parent"
     android:orientation="vertical"
-    app:statusBarBackground="@null"
-    android:fitsSystemWindows="true">
+    app:statusBarBackground="@null">
 
     <com.google.android.material.appbar.AppBarLayout
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:background="@null"
+        android:fitsSystemWindows="true"
         app:elevation="0dp">
 
         <androidx.appcompat.widget.Toolbar
@@ -132,6 +132,7 @@
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:background="?attr/colorSurfaceVariant"
+        android:fitsSystemWindows="true"
         app:menu="@menu/bottom_navigation_menu"
         app:itemIconTint="@color/tab_tint_color"
         app:itemTextColor="@color/tab_tint_color"

@@ -26,14 +26,19 @@ import android.os.Vibrator;
 import android.provider.Settings;
 import android.view.View;
 
+import androidx.activity.EdgeToEdge;
 import androidx.annotation.NonNull;
 import androidx.annotation.Nullable;
+import androidx.core.graphics.Insets;
+import androidx.core.view.ViewCompat;
+import androidx.core.view.WindowInsetsCompat;
 import androidx.preference.ListPreference;
 import androidx.preference.ListPreferenceDialogFragmentCompat;
 import androidx.preference.Preference;
 import androidx.preference.PreferenceDialogFragmentCompat;
 import androidx.preference.PreferenceFragmentCompat;
 import androidx.preference.TwoStatePreference;
+import androidx.recyclerview.widget.RecyclerView;
 
 import com.android.deskclock.R;
 import com.android.deskclock.ScreensaverActivity;
@@ -78,6 +83,8 @@ public final class SettingsActivity extends ToolbarBaseActivity {
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
+        EdgeToEdge.enable(this);
+        getWindow().setNavigationBarContrastEnforced(false);
         super.onCreate(savedInstanceState);
 
         // Create the prefs fragment in code to ensure it's created before PreferenceDialogFragment
@@ -112,6 +119,22 @@ public final class SettingsActivity extends ToolbarBaseActivity {
                     getResources().getDisplayMetrics().densityDpi / 160f);
             view.setPadding(paddingLeftRight, view.getPaddingTop(), paddingLeftRight,
                     view.getPaddingBottom());
+
+            // Apply edge to edge system bars insets
+            final RecyclerView listView = getListView();
+            if (listView != null) {
+                listView.setClipToPadding(false);
+                ViewCompat.setOnApplyWindowInsetsListener(listView, (v, windowInsets) -> {
+                    Insets insets = windowInsets.getInsets(WindowInsetsCompat.Type.systemBars());
+                    v.setPadding(
+                            v.getPaddingLeft(),
+                            v.getPaddingTop(),
+                            v.getPaddingRight(),
+                            insets.bottom
+                    );
+                    return windowInsets;
+                });
+            }
         }
 
         @Override
