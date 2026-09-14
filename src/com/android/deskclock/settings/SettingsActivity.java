@@ -28,12 +28,17 @@ import android.view.View;
 
 import androidx.annotation.NonNull;
 import androidx.annotation.Nullable;
+import androidx.core.graphics.Insets;
+import androidx.core.view.ViewCompat;
+import androidx.core.view.WindowCompat;
+import androidx.core.view.WindowInsetsCompat;
 import androidx.preference.ListPreference;
 import androidx.preference.ListPreferenceDialogFragmentCompat;
 import androidx.preference.Preference;
 import androidx.preference.PreferenceDialogFragmentCompat;
 import androidx.preference.PreferenceFragmentCompat;
 import androidx.preference.TwoStatePreference;
+import androidx.recyclerview.widget.RecyclerView;
 
 import com.android.deskclock.R;
 import com.android.deskclock.ScreensaverActivity;
@@ -79,6 +84,8 @@ public final class SettingsActivity extends ToolbarBaseActivity {
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
+        WindowCompat.enableEdgeToEdge(getWindow());
+        getWindow().setNavigationBarContrastEnforced(false);
 
         // Create the prefs fragment in code to ensure it's created before PreferenceDialogFragment
         if (savedInstanceState == null) {
@@ -107,11 +114,17 @@ public final class SettingsActivity extends ToolbarBaseActivity {
         @Override
         public void onViewCreated(@NonNull View view, @Nullable Bundle savedInstanceState) {
             super.onViewCreated(view, savedInstanceState);
-            int paddingLeftRight = Math.round(
-                    getResources().getDimension(R.dimen.settings_padding) *
-                    getResources().getDisplayMetrics().densityDpi / 160f);
-            view.setPadding(paddingLeftRight, view.getPaddingTop(), paddingLeftRight,
-                    view.getPaddingBottom());
+
+            final RecyclerView listView = getListView();
+            listView.setClipToPadding(false);
+            ViewCompat.setOnApplyWindowInsetsListener(listView, (v, insets) -> {
+                Insets bars = insets.getInsets(
+                        WindowInsetsCompat.Type.systemBars()
+                        | WindowInsetsCompat.Type.displayCutout()
+                );
+                v.setPadding(bars.left, v.getPaddingTop(), bars.right, bars.bottom);
+                return WindowInsetsCompat.CONSUMED;
+            });
         }
 
         @Override
