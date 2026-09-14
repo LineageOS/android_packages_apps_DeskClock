@@ -42,7 +42,6 @@ import android.widget.TextView;
 
 import androidx.annotation.NonNull;
 import androidx.annotation.StringRes;
-import androidx.appcompat.app.ActionBar;
 import androidx.appcompat.widget.Toolbar;
 import androidx.fragment.app.Fragment;
 
@@ -230,7 +229,7 @@ public class DeskClock extends BaseActivity
 
         mFragmentUtils = new FragmentUtils(this);
         // Mirror changes made to the selected tab into UiDataModel.
-        mBottomNavigation = findViewById(R.id.bottom_view);
+        mBottomNavigation = findViewById(R.id.bottom_navigation);
         mBottomNavigation.setOnItemSelectedListener(mNavigationListener);
 
         // Honor changes to the selected tab from outside entities.
