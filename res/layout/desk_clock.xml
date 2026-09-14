@@ -121,12 +121,6 @@
         android:id="@+id/bottom_view"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:background="?attr/colorSurfaceVariant"
-        android:fitsSystemWindows="true"
         app:menu="@menu/bottom_navigation_menu"
-        app:itemIconTint="@color/tab_tint_color"
-        app:itemTextColor="@color/tab_tint_color"
-        app:itemTextAppearanceActive="@style/navText"
-        app:itemTextAppearanceInactive="@style/navText"
         app:labelVisibilityMode="labeled" />
 </LinearLayout>
