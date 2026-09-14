@@ -18,7 +18,6 @@
 <LinearLayout
     xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:app="http://schemas.android.com/apk/res-auto"
-    xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
     android:orientation="vertical"
@@ -128,15 +127,17 @@
     </androidx.coordinatorlayout.widget.CoordinatorLayout>
 
     <com.google.android.material.bottomnavigation.BottomNavigationView
-        android:id="@+id/bottom_view"
+        android:id="@+id/bottom_navigation"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
+<<<<<<< PATCH SET (069d672de1a8eca2385a4b9d56257d6a9120176b DeskClock: Update bottom navigation to align with material c)
+        android:layout_gravity="bottom"
+        app:itemIconGravity="start"
+        app:itemGravity="center"
+=======
         android:background="?attr/colorSurfaceVariant"
+>>>>>>> BASE      (f8d2258e6a673c1b576f009eec98781a5956ffdb DeskClock: Make missed/upcoming/snooze alarm notifications s)
         app:menu="@menu/bottom_navigation_menu"
-        app:itemIconTint="@color/tab_tint_color"
-        app:itemTextColor="@color/tab_tint_color"
-        app:itemTextAppearanceActive="@style/navText"
-        app:itemTextAppearanceInactive="@style/navText"
         app:labelVisibilityMode="labeled" />
 
 </LinearLayout>
