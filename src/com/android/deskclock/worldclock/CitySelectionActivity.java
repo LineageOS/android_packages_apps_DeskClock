@@ -19,6 +19,7 @@ package com.android.deskclock.worldclock;
 import static android.view.Menu.NONE;
 
 import android.content.Context;
+import android.graphics.drawable.ColorDrawable;
 import android.os.Bundle;
 import android.text.TextUtils;
 import android.text.format.DateFormat;
@@ -39,10 +40,15 @@ import android.widget.TextView;
 import androidx.annotation.NonNull;
 import androidx.appcompat.app.ActionBar;
 import androidx.appcompat.widget.SearchView;
+import androidx.core.graphics.Insets;
+import androidx.core.view.ViewCompat;
+import androidx.core.view.WindowCompat;
+import androidx.core.view.WindowInsetsCompat;
 
 import com.android.deskclock.BaseActivity;
 import com.android.deskclock.DropShadowController;
 import com.android.deskclock.R;
+import com.android.deskclock.ThemeUtils;
 import com.android.deskclock.Utils;
 import com.android.deskclock.actionbarmenu.MenuItemController;
 import com.android.deskclock.actionbarmenu.NavUpMenuItemController;
@@ -105,9 +111,14 @@ public final class CitySelectionActivity extends BaseActivity {
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
+        WindowCompat.enableEdgeToEdge(getWindow());
+        getWindow().setNavigationBarContrastEnforced(false);
 
         setContentView(R.layout.cities_activity);
         ActionBar actionBar = getSupportActionBar();
+        //Temporary fill until converting to material toolbar
+        actionBar.setBackgroundDrawable(new ColorDrawable(ThemeUtils.resolveColor(this, R.attr.colorSurface)));
+
         if (actionBar == null) return;
         mSearchMenuItemController =
                 new SearchMenuItemController(actionBar.getThemedContext(),
@@ -131,6 +142,15 @@ public final class CitySelectionActivity extends BaseActivity {
                 .addMenuItemController(new SettingsMenuItemController(this, false));
         mCitiesList = findViewById(R.id.cities_list);
         mCitiesList.setAdapter(mCitiesAdapter);
+
+        ViewCompat.setOnApplyWindowInsetsListener(mCitiesList, (v, insets) -> {
+            Insets bars = insets.getInsets(
+                    WindowInsetsCompat.Type.systemBars()
+                            | WindowInsetsCompat.Type.displayCutout()
+            );
+            v.setPadding(bars.left, bars.top, bars.right, bars.bottom);
+            return WindowInsetsCompat.CONSUMED;
+        });
 
         updateFastScrolling();
     }

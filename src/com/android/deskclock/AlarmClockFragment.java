@@ -32,6 +32,9 @@ import android.widget.ImageView;
 import android.widget.TextView;
 
 import androidx.annotation.NonNull;
+import androidx.core.graphics.Insets;
+import androidx.core.view.ViewCompat;
+import androidx.core.view.WindowInsetsCompat;
 import androidx.loader.app.LoaderManager;
 import androidx.loader.content.CursorLoader;
 import androidx.loader.content.Loader;
@@ -113,10 +116,19 @@ public final class AlarmClockFragment extends DeskClockFragment implements
     @Override
     public View onCreateView(LayoutInflater inflater, ViewGroup container, Bundle savedState) {
         // Inflate the layout for this fragment
-        final View v = inflater.inflate(R.layout.alarm_clock, container, false);
+        final View view = inflater.inflate(R.layout.alarm_clock, container, false);
         final Context context = getActivity();
 
-        mRecyclerView = v.findViewById(R.id.alarms_recycler_view);
+        mRecyclerView = view.findViewById(R.id.alarms_recycler_view);
+        ViewCompat.setOnApplyWindowInsetsListener(mRecyclerView, (v, insets) -> {
+            Insets bars = insets.getInsets(
+                    WindowInsetsCompat.Type.systemBars()
+                            | WindowInsetsCompat.Type.displayCutout()
+            );
+            v.setPadding(bars.left, v.getPaddingTop(), bars.right, bars.bottom);
+            return WindowInsetsCompat.CONSUMED;
+        });
+
         mLayoutManager = new LinearLayoutManager(context) {
             @Override
             protected void calculateExtraLayoutSpace(@NonNull RecyclerView.State state,
@@ -129,9 +141,9 @@ public final class AlarmClockFragment extends DeskClockFragment implements
             }
         };
         mRecyclerView.setLayoutManager(mLayoutManager);
-        mMainLayout = v.findViewById(R.id.main);
+        mMainLayout = view.findViewById(R.id.main);
         mAlarmUpdateHandler = new AlarmUpdateHandler(context, this, mMainLayout);
-        final TextView emptyView = v.findViewById(R.id.alarms_empty_view);
+        final TextView emptyView = view.findViewById(R.id.alarms_empty_view);
         final Drawable noAlarms = Utils.getVectorDrawable(context, R.drawable.ic_noalarms);
         emptyView.setCompoundDrawablesWithIntrinsicBounds(null, noAlarms, null, null);
         mEmptyViewController = new EmptyViewController(mMainLayout, mRecyclerView, emptyView);
@@ -181,7 +193,7 @@ public final class AlarmClockFragment extends DeskClockFragment implements
         itemAnimator.setChangeDuration(150L);
         itemAnimator.setMoveDuration(150L);
         mRecyclerView.setItemAnimator(itemAnimator);
-        return v;
+        return view;
     }
 
     @Override

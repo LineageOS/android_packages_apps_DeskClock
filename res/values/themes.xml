@@ -19,12 +19,10 @@
 
     <style name="Theme.DeskClock" parent="Theme.Material3Expressive.DynamicColors.Dark.NoActionBar">
         <item name="android:colorBackgroundFloating">?attr/colorBackgroundFloating</item>
-        <item name="android:navigationBarColor">?attr/colorSurfaceVariant</item>
         <item name="popupMenuBackground">@drawable/popup_background</item>
         <item name="floatingActionButtonStyle">@style/Widget.DeskClock.FloatingActionButton</item>
 
         <item name="android:timePickerStyle">@style/Widget.TimePicker</item>
-        <item name="android:windowBackground">?attr/colorSurface</item>
         <item name="android:windowContentOverlay">@null</item>
 
         <item name="android:colorForeground">?attr/colorOnSurface</item>
