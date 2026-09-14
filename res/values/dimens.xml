@@ -112,7 +112,6 @@
 
     <dimen name="fab_container_height">120dp</dimen>
     <dimen name="fab_container_width">0dp</dimen>
-    <dimen name="tab_content_bottom_padding">@dimen/fab_container_height</dimen>
 
     <dimen name="gutter_horizontal_padding">24.0dip</dimen>
     <dimen name="gutter_horizontal_padding_extreme_thin">4.0dip</dimen>
@@ -120,8 +119,6 @@
     <dimen name="gutter_horizontal_padding_very_thin">8.0dip</dimen>
 
     <dimen name="alarm_clock_expanded_vertical_margin">8dp</dimen>
-
-    <dimen name="settings_padding">4dp</dimen>
 
     <dimen name="analog_clock_width_percent">0.5</dimen>
 

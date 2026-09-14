@@ -44,6 +44,9 @@ import androidx.annotation.NonNull;
 import androidx.annotation.StringRes;
 import androidx.appcompat.app.ActionBar;
 import androidx.appcompat.widget.Toolbar;
+import androidx.core.graphics.Insets;
+import androidx.core.view.ViewCompat;
+import androidx.core.view.WindowInsetsCompat;
 import androidx.fragment.app.Fragment;
 
 import com.android.deskclock.actionbarmenu.OptionsMenuManager;
@@ -131,6 +134,7 @@ public class DeskClock extends BaseActivity
             0,
             R.string.dialog_permissions_post_notifications,
     };
+    private View mFabContainer;
 
     @Override
     public void onNewIntent(Intent newIntent) {
@@ -166,6 +170,7 @@ public class DeskClock extends BaseActivity
         onCreateOptionsMenu(toolbar.getMenu());
 
         // Configure the buttons shared by the tabs.
+        mFabContainer = findViewById(R.id.fab_container);
         mFab = findViewById(R.id.fab);
         mLeftButton = findViewById(R.id.left_button);
         mRightButton = findViewById(R.id.right_button);
@@ -175,6 +180,15 @@ public class DeskClock extends BaseActivity
                 getSelectedDeskClockFragment().onLeftButtonClick(mLeftButton));
         mRightButton.setOnClickListener(view ->
                 getSelectedDeskClockFragment().onRightButtonClick(mRightButton));
+
+        ViewCompat.setOnApplyWindowInsetsListener(mFabContainer, (v, insets) -> {
+            Insets bars = insets.getInsets(
+                    WindowInsetsCompat.Type.systemBars()
+                            | WindowInsetsCompat.Type.displayCutout()
+            );
+            v.setPadding(bars.left, v.getPaddingTop(), bars.right, v.getPaddingBottom());
+            return WindowInsetsCompat.CONSUMED;
+        });
 
         final long duration = UiDataModel.getUiDataModel().getShortAnimationDuration();
 

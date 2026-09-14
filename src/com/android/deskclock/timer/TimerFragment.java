@@ -42,6 +42,9 @@ import android.view.ViewTreeObserver;
 import android.widget.ImageView;
 
 import androidx.annotation.NonNull;
+import androidx.core.graphics.Insets;
+import androidx.core.view.ViewCompat;
+import androidx.core.view.WindowInsetsCompat;
 import androidx.recyclerview.widget.GridLayoutManager;
 import androidx.recyclerview.widget.LinearLayoutManager;
 import androidx.recyclerview.widget.RecyclerView;
@@ -103,6 +106,17 @@ public final class TimerFragment extends DeskClockFragment {
     public View onCreateView(LayoutInflater inflater, ViewGroup container,
             Bundle savedInstanceState) {
         final View view = inflater.inflate(R.layout.timer_fragment, container, false);
+
+        ViewCompat.setOnApplyWindowInsetsListener(view, (v, insets) -> {
+            Insets bars = insets.getInsets(
+                    WindowInsetsCompat.Type.systemBars() | WindowInsetsCompat.Type.displayCutout());
+            if (Utils.isLandscape(getContext())) {
+                v.setPadding(bars.left, v.getPaddingTop(), bars.right, bars.bottom);
+            } else {
+                mRecyclerView.setPadding(bars.left, v.getPaddingTop(), bars.right, bars.bottom);
+            }
+            return WindowInsetsCompat.CONSUMED;
+        });
 
         mTimerClickHandler = new TimerClickHandler(this);
         mTimerBindHandler = new TimerBindHandler(this);
