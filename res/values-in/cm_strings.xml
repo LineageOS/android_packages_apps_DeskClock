@@ -36,6 +36,7 @@
     <string name="selected">Dipilih</string>
     <string name="more_options">Opsi lanjutan</string>
     <string name="widget_choice_title">Pilih gaya Anda</string>
+    <string name="clock_brightness_percentage">%s%%</string>
     <string name="show_ampm_title">Tampilkan indikator AM/PM</string>
     <string name="bold_text_title">Teks jam tebal</string>
     <string name="night_mode_brightness_text_title">Kecerahan</string>
