@@ -155,10 +155,6 @@
         <item name="android:textColor">?attr/colorOnSurfaceVariant</item>
     </style>
 
-    <style name="TextAppearance.Title" parent="@style/TextAppearance.AppCompat.Widget.ActionBar.Title">
-        <item name="android:textSize">22.0sp</item>
-    </style>
-
     <style name="TimerSetupTime">
         <item name="layout_constraintBottom_toBottomOf">@id/timer_setup_time_bottom</item>
         <item name="layout_constraintEnd_toEndOf">@id/timer_setup_digits</item>

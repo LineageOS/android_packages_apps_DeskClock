@@ -38,7 +38,6 @@ import android.view.Menu;
 import android.view.MenuItem;
 import android.view.View;
 import android.widget.ImageView;
-import android.widget.TextView;
 
 import androidx.annotation.NonNull;
 import androidx.annotation.StringRes;
@@ -108,9 +107,6 @@ public class DeskClock extends BaseActivity
     /** The button right of the {@link #mFab} shared across all tabs in the user interface. */
     private ImageView mRightButton;
 
-    /** The view that displays the current tab's title */
-    private TextView mTitleView;
-
     /** The bottom navigation bar */
     private BottomNavigationView mBottomNavigation;
 
@@ -151,11 +147,6 @@ public class DeskClock extends BaseActivity
         // Configure the toolbar.
         final Toolbar toolbar = findViewById(R.id.toolbar);
         setSupportActionBar(toolbar);
-
-        final ActionBar actionBar = getSupportActionBar();
-        if (actionBar != null) {
-            actionBar.setDisplayShowTitleEnabled(false);
-        }
 
         // Configure the menu item controllers add behavior to the toolbar.
         mOptionsMenuManager.addMenuItemController(new SettingsMenuItemController(this, true));
@@ -234,8 +225,6 @@ public class DeskClock extends BaseActivity
 
         // Honor changes to the selected tab from outside entities.
         UiDataModel.getUiDataModel().addTabListener(mTabChangeWatcher);
-
-        mTitleView = findViewById(R.id.title_view);
     }
 
     private final NavigationBarView.OnItemSelectedListener mNavigationListener
@@ -541,7 +530,7 @@ public class DeskClock extends BaseActivity
         // Update the selected tab in the mBottomNavigation if it does not agree with UiDataModel.
         mBottomNavigation.setSelectedItemId(selectedTab.getPageResId());
         mFragmentUtils.showFragment(selectedTab);
-        mTitleView.setText(selectedTab.getLabelResId());
+        setTitle(selectedTab.getLabelResId());
     }
 
     /**
