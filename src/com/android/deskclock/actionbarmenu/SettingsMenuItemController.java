@@ -53,7 +53,7 @@ public final class SettingsMenuItemController implements MenuItemController {
         if (mShowIcon) {
             menu.add(NONE, SETTING_MENU_RES_ID, NONE, R.string.menu_item_settings)
                     .setIcon(R.drawable.ic_settings)
-                    .setShowAsAction(MenuItem.SHOW_AS_ACTION_IF_ROOM);
+                    .setShowAsAction(MenuItem.SHOW_AS_ACTION_ALWAYS);
         } else {
             menu.add(NONE, SETTING_MENU_RES_ID, NONE, R.string.menu_item_settings)
                     .setShowAsAction(MenuItem.SHOW_AS_ACTION_NEVER);

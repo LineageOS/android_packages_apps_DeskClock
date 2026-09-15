@@ -16,17 +16,17 @@
 
 package com.android.deskclock.widget;
 
-import android.app.ActionBar;
 import android.graphics.BlendMode;
 import android.graphics.BlendModeColorFilter;
 import android.os.Bundle;
 import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
-import android.widget.Toolbar;
 
 import androidx.annotation.Nullable;
-import androidx.fragment.app.FragmentActivity;
+import androidx.appcompat.app.ActionBar;
+import androidx.appcompat.app.AppCompatActivity;
+import androidx.appcompat.widget.Toolbar;
 
 import com.android.deskclock.R;
 import com.android.deskclock.ThemeUtils;
@@ -34,7 +34,7 @@ import com.android.deskclock.ThemeUtils;
 /**
  * A base Activity that has a toolbar layout
  */
-public class ToolbarBaseActivity extends FragmentActivity {
+public class ToolbarBaseActivity extends AppCompatActivity {
 
     @Override
     protected void onCreate(@Nullable Bundle savedInstanceState) {
@@ -42,10 +42,10 @@ public class ToolbarBaseActivity extends FragmentActivity {
         super.setContentView(R.layout.toolbar_base_layout);
 
         final Toolbar toolbar = findViewById(R.id.action_bar);
-        setActionBar(toolbar);
+        setSupportActionBar(toolbar);
 
         // Enable title and home button by default
-        final ActionBar actionBar = getActionBar();
+        final ActionBar actionBar = getSupportActionBar();
         if (actionBar != null) {
             actionBar.setDisplayHomeAsUpEnabled(true);
             actionBar.setHomeButtonEnabled(true);
@@ -88,8 +88,8 @@ public class ToolbarBaseActivity extends FragmentActivity {
     }
 
     @Override
-    public boolean onNavigateUp() {
-        if (!super.onNavigateUp()) {
+    public boolean onSupportNavigateUp() {
+        if (!super.onSupportNavigateUp()) {
             finishAfterTransition();
         }
         return true;
