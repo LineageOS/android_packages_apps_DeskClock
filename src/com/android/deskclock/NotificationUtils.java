@@ -37,17 +37,17 @@ public class NotificationUtils {
     /**
      * Notification channel containing all missed alarm notifications.
      */
-    public static final String ALARM_MISSED_NOTIFICATION_CHANNEL_ID = "alarmMissedNotification";
+    public static final String ALARM_MISSED_NOTIFICATION_CHANNEL_ID = "alarmMissedSilentNotification";
 
     /**
      * Notification channel containing all upcoming alarm notifications.
      */
-    public static final String ALARM_UPCOMING_NOTIFICATION_CHANNEL_ID = "AlarmUpcomingNotification";
+    public static final String ALARM_UPCOMING_NOTIFICATION_CHANNEL_ID = "AlarmUpcomingSilentNotification";
 
     /**
      * Notification channel containing all snooze notifications.
      */
-    public static final String ALARM_SNOOZE_NOTIFICATION_CHANNEL_ID = "AlarmSnoozingNotification";
+    public static final String ALARM_SNOOZE_NOTIFICATION_CHANNEL_ID = "AlarmSnoozingSilentNotification";
 
     /**
      * Notification channel containing all firing alarm and timer notifications.
@@ -75,15 +75,18 @@ public class NotificationUtils {
     static {
         CHANNEL_PROPS.put(ALARM_MISSED_NOTIFICATION_CHANNEL_ID, new int[]{
                 R.string.alarm_missed_channel,
-                IMPORTANCE_HIGH
+                IMPORTANCE_HIGH,
+                0
         });
         CHANNEL_PROPS.put(ALARM_SNOOZE_NOTIFICATION_CHANNEL_ID, new int[]{
                 R.string.alarm_snooze_channel,
-                IMPORTANCE_DEFAULT
+                IMPORTANCE_DEFAULT,
+                0
         });
         CHANNEL_PROPS.put(ALARM_UPCOMING_NOTIFICATION_CHANNEL_ID, new int[]{
                 R.string.alarm_upcoming_channel,
-                IMPORTANCE_DEFAULT
+                IMPORTANCE_DEFAULT,
+                0
         });
         CHANNEL_PROPS.put(FIRING_NOTIFICATION_CHANNEL_ID, new int[]{
                 R.string.firing_alarms_timers_channel,
@@ -156,6 +159,9 @@ public class NotificationUtils {
         deleteChannel(nm, "stopwatchNotification");
         deleteChannel(nm, "StopWatchNotification");
         deleteChannel(nm, "TimerNotification");
+        deleteChannel(nm, "alarmMissedNotification");
+        deleteChannel(nm, "AlarmUpcomingNotification");
+        deleteChannel(nm, "AlarmSnoozingNotification");
 
         // We recreate all existing channels so any language change or our name changes propagate
         // to the actual channels
