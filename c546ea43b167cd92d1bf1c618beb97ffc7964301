@@ -1,0 +1,21 @@
+{
+  "comments": [
+    {
+      "unresolved": true,
+      "key": {
+        "uuid": "096e28eb_12f2aec3",
+        "filename": "/PATCHSET_LEVEL",
+        "patchSetId": 5
+      },
+      "lineNbr": 0,
+      "author": {
+        "id": 36371
+      },
+      "writtenOn": "2026-09-19T00:31:01Z",
+      "side": 1,
+      "message": "Looks good, just can\u0027t figure out how to save the liftOnScroll state when switching to another page then back.",
+      "revId": "c546ea43b167cd92d1bf1c618beb97ffc7964301",
+      "serverId": "1ec6b3db-b2c1-4fa4-84a2-4c7efe89ba71"
+    }
+  ]
+}
