@@ -19,7 +19,6 @@
     <string name="label">Leubail</string>
     <string name="default_label">Caismeachd</string>
     <string name="alarm_vibrate">Dèan crith</string>
-    <string name="alarm_repeat">A-rithist</string>
     <string name="delete">Sguab às</string>
     <string name="default_alarm_ringtone_title">Fuaim bhunaiteach nan caismeachdan</string>
     <string name="alarm_sound">Fuaim na caismeachd</string>
@@ -215,7 +214,6 @@
     <string name="button_alarms">Cuir caismeachd ris</string>
     <string name="button_cities">Bailtean</string>
     <string name="menu_item_settings">Roghainnean</string>
-    <string name="menu_item_help">Cobhair</string>
     <string name="menu_item_night_mode">Sàbhalaiche-sgrìn</string>
     <string name="menu_item_sort_by_gmt_offset">Seòrsaich a-rèir an ama</string>
     <string name="menu_item_sort_by_name">Seòrsaich a-rèir ainm</string>
@@ -394,9 +392,7 @@
     <string name="timer_vibrate_title">Nì an tìmear crith</string>
     <string name="timer_paused">Tha an tìmear ’na stad</string>
     <string name="timers_stopped">Tha na tìmearan (<xliff:g id="number" example="7">%d</xliff:g>) ’nan stad</string>
-    <string name="all_timers_stopped_notif">Thoir gnogag a dh’fhaicinn nan tìmearan agad</string>
     <string name="timers_in_use"><xliff:g id="number" example="7">%d</xliff:g> tìmear(an)</string>
-    <string name="next_timer_notif">An t-ath-thìmear: <xliff:g id="time_remaining" example="2 minutes remaining">%s</xliff:g></string>
     <string name="screensaver_settings">Roghainnean an t-sàbhalaiche-sgrìn</string>
     <string name="night_mode_title">Am modh oidhche</string>
     <string name="night_mode_summary">Sgrìn ghlè fhann (do sheòmraichean dorcha)</string>
@@ -411,8 +407,6 @@
     <string name="world_hours_minutes_behind"><xliff:g id="hours" example="4 hr">%1$s</xliff:g> <xliff:g id="minutes" example="30 min">%2$s</xliff:g> air dheireadh</string>
     <string name="world_hours_tomorrow">A-màireach, <xliff:g id="time" example="6 hours ahead">%1$s</xliff:g></string>
     <string name="world_hours_yesterday">An-dè, <xliff:g id="time" example="4 hours behind">%1$s</xliff:g></string>
-    <string name="world_tomorrow">A-màireach</string>
-    <string name="world_yesterday">An-dè</string>
     <string name="next_alarm_description">An ath-chaismeachd: <xliff:g id="alarm_time" example="Wed 8:00am">%s</xliff:g></string>
     <string name="no_alarms">Chan eil caismeachd ann</string>
     <string name="invalid_time">Àm mì-dhligheach <xliff:g id="invalid_hour" example="25">%1$d</xliff:g>:<xliff:g id="invalid_minutes" example="63">%2$d</xliff:g> <xliff:g id="invalid_ampm" example="PM">%3$s</xliff:g></string>

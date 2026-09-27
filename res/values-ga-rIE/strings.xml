@@ -1,0 +1,249 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!--
+  Copyright (C) 2016 The Android Open Source Project
+
+  Licensed under the Apache License, Version 2.0 (the "License");
+  you may not use this file except in compliance with the License.
+  You may obtain a copy of the License at
+
+      http://www.apache.org/licenses/LICENSE-2.0
+
+  Unless required by applicable law or agreed to in writing, software
+  distributed under the License is distributed on an "AS IS" BASIS,
+  WITHOUT WARRANTIES OR CONDITIONS OF ANY KIND, either express or implied.
+  See the License for the specific language governing permissions and
+  limitations under the License.
+  -->
+<resources xmlns:xliff="urn:oasis:names:tc:xliff:document:1.2" xmlns:tools="http://schemas.android.com/tools">
+    <string name="delete">Scrios</string>
+    <string name="remove_sound">Bain</string>
+    <string name="alarm_alert_dismiss_text">Díbhe</string>
+    <string name="every_day">Gach lá</string>
+    <string name="day_concat">", "</string>
+    <string name="loading_widget">Ag luchtú\u2026</string>
+    <string name="digital_gadget">Clog digiteach</string>
+    <string name="settings">Socruithe</string>
+    <string name="snooze_duration_title">Fad codlata</string>
+    <string name="crescendo_duration_title">Méadaigh an toirt de réir a chéile</string>
+    <string name="auto_silence_title">Ciúnas ina dhiaidh</string>
+    <plurals name="auto_silence_summary">
+        <item quantity="one">1 nóiméad</item>
+        <item quantity="two"><xliff:g id="formatted_number" example="7">%s</xliff:g> nóiméad</item>
+        <item quantity="few"><xliff:g id="formatted_number" example="7">%s</xliff:g> nóiméad</item>
+        <item quantity="many"><xliff:g id="formatted_number" example="7">%s</xliff:g> nóiméad</item>
+        <item quantity="other"><xliff:g id="formatted_number" example="7">%s</xliff:g> nóiméad</item>
+    </plurals>
+    <string name="auto_silence_never">Choíche</string>
+    <string-array name="auto_silence_entries">
+        <item>1 nóiméad</item>
+        <item>5 nóiméad</item>
+        <item>10 nóiméad</item>
+        <item>15 nóiméad</item>
+        <item>20 nóiméad</item>
+        <item>25 nóiméad</item>
+        <item>Choíche</item>
+    </string-array>
+    <string-array name="crescendo_entries">
+        <item>As</item>
+        <item>5 soicind</item>
+        <item>10 soicind</item>
+        <item>15 soicind</item>
+        <item>20 soicind</item>
+        <item>25 soicind</item>
+        <item>30 soicind</item>
+        <item>35 soicind</item>
+        <item>40 soicind</item>
+        <item>45 soicind</item>
+        <item>50 soicind</item>
+        <item>55 soicind</item>
+        <item>60 soicind</item>
+    </string-array>
+    <string-array name="snooze_duration_entries">
+        <item>1 nóiméad</item>
+        <item>2 nóiméad</item>
+        <item>3 nóiméad</item>
+        <item>4 nóiméad</item>
+        <item>5 nóiméad</item>
+        <item>6 nóiméad</item>
+        <item>7 nóiméad</item>
+        <item>8 nóiméad</item>
+        <item>9 nóiméad</item>
+        <item>10 nóiméad</item>
+        <item>11 nóiméad</item>
+        <item>12 nóiméad</item>
+        <item>13 nóiméad</item>
+        <item>14 nóiméad</item>
+        <item>15 nóiméad</item>
+        <item>16 nóiméad</item>
+        <item>17 nóiméad</item>
+        <item>18 nóiméad</item>
+        <item>19 nóiméad</item>
+        <item>20 nóiméad</item>
+        <item>21 nóiméad</item>
+        <item>22 nóiméad</item>
+        <item>23 nóiméad</item>
+        <item>24 nóiméad</item>
+        <item>25 nóiméad</item>
+        <item>26 nóiméad</item>
+        <item>27 nóiméad</item>
+        <item>28 nóiméad</item>
+        <item>29 nóiméad</item>
+        <item>30 nóiméad</item>
+    </string-array>
+    <string name="week_start_title">Tosaigh an tseachtain ar</string>
+    <string-array name="week_start_entries">
+        <item>Dé Sathairn</item>
+        <item>Dé Domhnaigh</item>
+        <item>Dé Luain</item>
+    </string-array>
+    <string name="alarm_volume_title">Toirt aláraim</string>
+    <string name="silent_ringtone_title">Ciúin</string>
+    <string name="unknown_ringtone_title">Anaithnid</string>
+    <string name="alarm_volume_muted">Toirt an aláraim múchta</string>
+    <string name="unmute_alarm_volume">Díbholadh</string>
+    <string name="silent_default_alarm_ringtone">Is ciúin an clog aláraim réamhshocraithe</string>
+    <string name="change_setting_action">Athraigh</string>
+    <string name="app_notifications_blocked">Tá fógraí cloig blocáilte</string>
+    <string name="alarms_blocked_by_dnd">Tá an gléas socraithe go ciúnas iomlán</string>
+    <string name="volume_button_setting_title">Cnaipí toirte</string>
+    <string-array name="volume_button_setting_entries">
+        <item>Codladh</item>
+        <item>Díbhe</item>
+        <item>Rialú toirte</item>
+    </string-array>
+    <string name="label_description">Lipéad</string>
+    <string name="ringtone_description">Glaoch fuaime</string>
+    <string name="menu_alarm">Aláram</string>
+    <string name="menu_timer">Amaireadóir</string>
+    <string name="menu_clock">Clog</string>
+    <string name="menu_stopwatch">Stopuaireadóir</string>
+    <string name="button_alarms">Cuir aláram leis</string>
+    <string name="button_cities">Cathracha</string>
+    <string name="menu_item_settings">Socruithe</string>
+    <string name="menu_item_night_mode">Sábhálaí scáileáin</string>
+    <string name="menu_item_sort_by_gmt_offset">Sórtáil de réir ama</string>
+    <string name="menu_item_sort_by_name">Sórtáil de réir ainm</string>
+    <string name="selected_cities_label">Cathracha Roghnaithe</string>
+    <string name="sw_resume_button">Atosú</string>
+    <string name="sw_reset_button">Athshocraigh</string>
+    <string name="sw_start_button">Tosaigh</string>
+    <string name="sw_pause_button">Sos</string>
+    <string name="sw_lap_button">Cuaird</string>
+    <string name="sw_share_button">Comhroinn</string>
+    <string name="hours_label">u</string>
+    <string name="minutes_label">n</string>
+    <string name="seconds_label">s</string>
+    <string name="timer_setup_description"><xliff:g id="uaireanna" sampla="1 uair an chloig">%1$s</xliff:g>, <xliff:g id="nóiméid" sampla="15 nóiméad">%2$s</xliff:g>, <xliff:g id="soicindí" sampla="30 soicind">%3$s</xliff:g></string>
+    <string name="lap_number_single_digit"># <xliff:g id="UimhirLap">%d</xliff:g></string>
+    <string name="lap_number_double_digit"># <xliff:g id="UimhirLap">%02d</xliff:g></string>
+    <string name="sw_share_main">Is é mo chuid ama ná <xliff:g id="time">%s</xliff:g></string>
+    <string name="sw_share_laps">Amanna cuaird:</string>
+    <string name="sw_notification_lap_number">Cuaird <xliff:g id="number">%d</xliff:g></string>
+    <string name="timer_add_timer">Cuir Amaireoir leis</string>
+    <string name="timer_start">Tosaigh</string>
+    <string name="timer_delete">Scrios</string>
+    <string name="timer_stop">Stop</string>
+    <string name="timer_cancel">Cealaigh</string>
+    <string-array name="sw_share_strings" translatable="true">
+        <item>Tá tú go leor an deamhan luas.</item>
+        <item>Bain sult as torthaí do shaothair.</item>
+        <item>Tá sé ar eolas go bhfuil Androids tapa, ach níl siad chomh tapa leatsa!</item>
+        <item>Fúú!</item>
+        <item>L33t uair.</item>
+        <item>Treluas prodigious den sórt sin.</item>
+        <item>Déanaimis an dlúith ama arís.</item>
+        <item>Just a léim ar chlé.</item>
+        <item>You have a palette for haste.</item>
+        <item>Treoluas fótónach.</item>
+    </string-array>
+    <string-array name="timezone_labels" tools:ignore="Typos">
+        <item>"Marshall Islands"</item>
+        <item>"Midway Island"</item>
+        <item>"Hawaii"</item>
+        <item>"Alaska"</item>
+        <item>"Pacific Time"</item>
+        <item>"Tijuana"</item>
+        <item>"Arizona"</item>
+        <item>"Chihuahua"</item>
+        <item>"Mountain Time"</item>
+        <item>"Central America"</item>
+        <item>"Central Time"</item>
+        <item>"Mexico City"</item>
+        <item>"Saskatchewan"</item>
+        <item>"Bogota"</item>
+        <item>"Eastern Time"</item>
+        <item>"Venezuela"</item>
+        <item>"Am an Atlantaigh (Barbadós)"</item>
+        <item>"Am an Atlantaigh (Ceanada)"</item>
+        <item>"Manaus"</item>
+        <item>"Santiago"</item>
+        <item>"Talamh an Éisc"</item>
+        <item>"Brasília"</item>
+        <item>"Buenos Aires"</item>
+        <item>"An Ghraonlainn"</item>
+        <item>"Montevideo"</item>
+        <item>"Lár-Atlantach"</item>
+        <item>"Na hAsóir"</item>
+        <item>"Oileáin Rinn Verde"</item>
+        <item>"Casablanca"</item>
+        <item>"Londain, Baile Átha Cliath"</item>
+        <item>"Amstardam, Beirlín"</item>
+        <item>"Béalgrád"</item>
+        <item>"An Bhruiséil"</item>
+        <item>"Sairéavó"</item>
+        <item>"Windhoek"</item>
+        <item>"Am Iarthar na hAfraice"</item>
+        <item>"Amman, an Iordáin"</item>
+        <item>"Aithin, Iostanbúl"</item>
+        <item>"Béiriút, an Liobáin"</item>
+        <item>"Caireo"</item>
+        <item>"Heilsincí"</item>
+        <item>"Iarúsailéim"</item>
+        <item>"Minsc"</item>
+        <item>"Harare"</item>
+        <item>"Bagdad"</item>
+        <item>"Moscó"</item>
+        <item>"Cuáit"</item>
+        <item>"Nairobi"</item>
+        <item>"Tehran"</item>
+        <item>"Bácú"</item>
+        <item>"Tbilisi"</item>
+        <item>"Yerevan"</item>
+        <item>"Dúbai"</item>
+        <item>"Cabúl"</item>
+        <item>"Islamabad, Karachi"</item>
+        <item>"Uralsk"</item>
+        <item>"Yekaterinburg"</item>
+        <item>"Kolkata"</item>
+        <item>"Srí Lanca"</item>
+        <item>"Kathmandu"</item>
+        <item>"Astana"</item>
+        <item>"Yangon"</item>
+        <item>"Krasnoyarsk"</item>
+        <item>"Bangkok"</item>
+        <item>"Béising"</item>
+        <item>"Hong Cong"</item>
+        <item>"Irkutsk"</item>
+        <item>"Kuala Lumpur"</item>
+        <item>"Perth"</item>
+        <item>"Taipei"</item>
+        <item>"Seoul"</item>
+        <item>"Tokyo, Osaka"</item>
+        <item>"Yakutsk"</item>
+        <item>"Adelaide"</item>
+        <item>"Darwin"</item>
+        <item>"Brisbane"</item>
+        <item>"Hobart"</item>
+        <item>"Sydney, Canberra"</item>
+        <item>"Vladivostok"</item>
+        <item>"Guam"</item>
+        <item>"Magadan"</item>
+        <item>"Auckland"</item>
+        <item>"Fiji"</item>
+        <item>"Tonga"</item>
+        <item>"Jakarta"</item>
+    </string-array>
+    <string name="shortcut_start_stopwatch_short">Tosaigh</string>
+    <string name="alarm_undo">cuir ar ceal</string>
+    <string name="world_hours_minutes_ahead"><xliff:g id="uaireanna" sampla="6 uair">%1$s</xliff:g> <xliff:g id="nóiméid" sampla="30 nóiméad">%2$s</xliff:g> chun tosaigh</string>
+</resources>
