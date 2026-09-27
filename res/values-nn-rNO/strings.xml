@@ -1,0 +1,413 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!--
+  Copyright (C) 2016 The Android Open Source Project
+
+  Licensed under the Apache License, Version 2.0 (the "License");
+  you may not use this file except in compliance with the License.
+  You may obtain a copy of the License at
+
+      http://www.apache.org/licenses/LICENSE-2.0
+
+  Unless required by applicable law or agreed to in writing, software
+  distributed under the License is distributed on an "AS IS" BASIS,
+  WITHOUT WARRANTIES OR CONDITIONS OF ANY KIND, either express or implied.
+  See the License for the specific language governing permissions and
+  limitations under the License.
+  -->
+<resources xmlns:xliff="urn:oasis:names:tc:xliff:document:1.2" xmlns:tools="http://schemas.android.com/tools">
+    <string name="app_label">Klokke</string>
+    <string name="label">Etikett</string>
+    <string name="default_label">Alarm</string>
+    <string name="alarm_vibrate">Vibrer</string>
+    <string name="delete">Slett</string>
+    <string name="default_alarm_ringtone_title">Standard alarmlyd</string>
+    <string name="alarm_sound">Alarmlyd</string>
+    <string name="timer_sound">Nedteljingslyd</string>
+    <string name="add_new_sound">Legg til ny</string>
+    <string name="remove_sound">Fjerna</string>
+    <string name="confirm_remove_custom_ringtone">Alarmar og nedteljingar som brukar denne lyden vil spela av standardlyden i staden.</string>
+    <string name="your_sounds">Lydane dine</string>
+    <string name="device_sounds">Lydar på eininga</string>
+    <string name="custom_ringtone_lost_permissions">Får ikkje tak i lyden.</string>
+    <string name="default_timer_ringtone_title">Nedteljinga er ferdig</string>
+    <string name="alarm_tomorrow">I morgon</string>
+    <string name="alarm_today">I dag</string>
+    <string name="alarm_alert_dismiss_text">Avvis</string>
+    <string name="alarm_missed_title">Mist alarm</string>
+    <string name="alarm_missed_text"><xliff:g id="alarm_time">%1$s</xliff:g> – <xliff:g id="alarm_label">%2$s</xliff:g></string>
+    <string name="alarm_alert_snoozed_text">Slumra</string>
+    <plurals name="alarm_alert_snooze_duration">
+        <item quantity="one">1 min</item>
+        <item quantity="other"><xliff:g id="number" example="7">%d</xliff:g> min</item>
+    </plurals>
+    <string name="alarm_alert_off_text">Alarmen er av</string>
+    <string name="alarm_alert_snooze_text">Slumra</string>
+    <plurals name="alarm_alert_snooze_set">
+        <item quantity="one">Slumrar i 1 minutt.</item>
+        <item quantity="other">Slumrar i <xliff:g id="minutes">%d</xliff:g> minutt.</item>
+    </plurals>
+    <string name="alarm_alert_snooze_until">Slumrar til <xliff:g id="time">%s</xliff:g></string>
+    <string name="alarm_alert_predismiss_title">Komande alarm</string>
+    <string name="missed_alarm_has_been_deleted">Den miste alarmen din er sletta</string>
+    <string name="timer_notifications_less_min">Under eitt minutt att</string>
+    <string name="timer_notifications_hours"><xliff:g id="HOURS" example="2 hours">%1$s</xliff:g><xliff:g id="REMAINING" example="remaining"> %3$s</xliff:g></string>
+    <string name="timer_notifications_minutes"><xliff:g id="MINUTES" example="2 minutes">%2$s</xliff:g><xliff:g id="REMAINING" example="remaining"> %3$s</xliff:g></string>
+    <string name="timer_notifications_hours_minutes"><xliff:g id="HOURS" example="2 hours">%1$s</xliff:g> <xliff:g id="MINUTES" example="2 minutes">%2$s</xliff:g> att</string>
+    <string name="timer_notifications_seconds"><xliff:g id="SECONDS" example="2 seconds">%4$s</xliff:g><xliff:g id="REMAINING" example="remaining"> %3$s</xliff:g></string>
+    <string name="timer_notifications_minutes_seconds"><xliff:g id="MINUTES" example="2 minutes">%2$s</xliff:g> <xliff:g id="SECONDS" example="2 seconds">%4$s</xliff:g><xliff:g id="REMAINING" example="remaining"> %3$s</xliff:g></string>
+    <string name="timer_notifications_hours_seconds"><xliff:g id="HOURS" example="2 hours">%1$s</xliff:g> <xliff:g id="SECONDS" example="2 seconds">%4$s</xliff:g><xliff:g id="REMAINING" example="remaining"> %3$s</xliff:g></string>
+    <string name="timer_notifications_hours_minutes_seconds"><xliff:g id="HOURS" example="2 hours">%1$s</xliff:g> <xliff:g id="MINUTES" example="2 minutes">%2$s</xliff:g> <xliff:g id="SECONDS" example="2 seconds">%4$s</xliff:g><xliff:g id="REMAINING" example="remaining"> %3$s</xliff:g></string>
+    <string name="timer_accessibility_one_minute_added">Eitt minutt er lagt til, <xliff:g id="TIME" example="5 hours remaining">%1$s</xliff:g></string>
+    <string name="timer_remaining_single">att</string>
+    <string name="timer_remaining_multiple">att</string>
+    <string-array name="alarm_set">
+        <item>Alarmen er sett til mindre enn 1 minutt frå no.</item>
+        <item>Alarmen ringjer om <xliff:g id="DAYS" example="2 days">%1$s</xliff:g>.</item>
+        <item>Alarmen ringjer om <xliff:g id="HOURS" example="2 hours">%2$s</xliff:g>.</item>
+        <item>Alarmen ringjer om <xliff:g id="DAYS" example="2 days">%1$s</xliff:g> og <xliff:g id="HOURS" example="2 hours">%2$s</xliff:g>.</item>
+        <item>Alarmen ringjer om <xliff:g id="MINUTES" example="2 minutes">%3$s</xliff:g>.</item>
+        <item>Alarmen ringjer om <xliff:g id="DAYS" example="2 days">%1$s</xliff:g> og <xliff:g id="MINUTES" example="2 minutes">%3$s</xliff:g>.</item>
+        <item>Alarmen ringjer om <xliff:g id="HOURS" example="2 hours">%2$s</xliff:g> og <xliff:g id="MINUTES" example="2 minutes">%3$s</xliff:g>.</item>
+        <item>Alarmen ringjer om <xliff:g id="DAYS" example="2 days">%1$s</xliff:g>, <xliff:g id="HOURS" example="2 hours">%2$s</xliff:g> og <xliff:g id="MINUTES" example="2 minutes">%3$s</xliff:g>.</item>
+    </string-array>
+    <plurals name="days">
+        <item quantity="one">1 dag</item>
+        <item quantity="other"><xliff:g id="number" example="7">%s</xliff:g> dagar</item>
+    </plurals>
+    <plurals name="hours">
+        <item quantity="one">1 time</item>
+        <item quantity="other"><xliff:g id="number" example="7">%s</xliff:g> timar</item>
+    </plurals>
+    <plurals name="hours_short">
+        <item quantity="one">1 t</item>
+        <item quantity="other"><xliff:g id="number" example="7">%s</xliff:g> t</item>
+    </plurals>
+    <plurals name="minutes">
+        <item quantity="one">1 minutt</item>
+        <item quantity="other"><xliff:g id="number" example="7">%s</xliff:g> minutt</item>
+    </plurals>
+    <plurals name="minutes_short">
+        <item quantity="one">1 min</item>
+        <item quantity="other"><xliff:g id="number" example="7">%s</xliff:g> min</item>
+    </plurals>
+    <plurals name="seconds">
+        <item quantity="one">1 sekund</item>
+        <item quantity="other"><xliff:g id="number" example="7">%s</xliff:g> sekund</item>
+    </plurals>
+    <string name="every_day">Kvar dag</string>
+    <string name="day_concat">", "</string>
+    <string name="loading_widget">Lastar inn \u2026</string>
+    <string name="analog_gadget">Analog klokke</string>
+    <string name="digital_gadget">Digital klokke</string>
+    <string name="settings">Innstillingar</string>
+    <string name="snooze_duration_title">Slumretid</string>
+    <string name="crescendo_duration_title">Auk lydstyrken litt og litt</string>
+    <string name="auto_silence_title">Stille etter</string>
+    <plurals name="auto_silence_summary">
+        <item quantity="one">1 minutt</item>
+        <item quantity="other"><xliff:g id="formatted_number" example="7">%s</xliff:g> minutt</item>
+    </plurals>
+    <string name="auto_silence_never">Aldri</string>
+    <string-array name="auto_silence_entries">
+        <item>1 minutt</item>
+        <item>5 minutt</item>
+        <item>10 minutt</item>
+        <item>15 minutt</item>
+        <item>20 minutt</item>
+        <item>25 minutt</item>
+        <item>Aldri</item>
+    </string-array>
+    <string-array name="crescendo_entries">
+        <item>Av</item>
+        <item>5 sekund</item>
+        <item>10 sekund</item>
+        <item>15 sekund</item>
+        <item>20 sekund</item>
+        <item>25 sekund</item>
+        <item>30 sekund</item>
+        <item>35 sekund</item>
+        <item>40 sekund</item>
+        <item>45 sekund</item>
+        <item>50 sekund</item>
+        <item>55 sekund</item>
+        <item>60 sekund</item>
+    </string-array>
+    <string-array name="snooze_duration_entries">
+        <item>1 minutt</item>
+        <item>2 minutt</item>
+        <item>3 minutt</item>
+        <item>4 minutt</item>
+        <item>5 minutt</item>
+        <item>6 minutt</item>
+        <item>7 minutt</item>
+        <item>8 minutt</item>
+        <item>9 minutt</item>
+        <item>10 minutt</item>
+        <item>11 minutt</item>
+        <item>12 minutt</item>
+        <item>13 minutt</item>
+        <item>14 minutt</item>
+        <item>15 minutt</item>
+        <item>16 minutt</item>
+        <item>17 minutt</item>
+        <item>18 minutt</item>
+        <item>19 minutt</item>
+        <item>20 minutt</item>
+        <item>21 minutt</item>
+        <item>22 minutt</item>
+        <item>23 minutt</item>
+        <item>24 minutt</item>
+        <item>25 minutt</item>
+        <item>26 minutt</item>
+        <item>27 minutt</item>
+        <item>28 minutt</item>
+        <item>29 minutt</item>
+        <item>30 minutt</item>
+    </string-array>
+    <string name="week_start_title">Start veka på</string>
+    <string-array name="week_start_entries">
+        <item>Laurdag</item>
+        <item>Sundag</item>
+        <item>Måndag</item>
+    </string-array>
+    <string name="alarm_volume_title">Lydstyrke for alarm</string>
+    <string name="silent_ringtone_title">Lydlaus</string>
+    <string name="unknown_ringtone_title">Ukjend</string>
+    <string name="alarm_volume_muted">Lyden for alarmen er slått av</string>
+    <string name="unmute_alarm_volume">Slå på lyd</string>
+    <string name="silent_default_alarm_ringtone">Standard alarmtone er lydlaus</string>
+    <string name="change_setting_action">Endra</string>
+    <string name="app_notifications_blocked">Varsel frå klokka er stoppa</string>
+    <string name="alarms_blocked_by_dnd">Eininga er heilt lydlaus</string>
+    <string name="volume_button_setting_title">Volumknappar</string>
+    <string-array name="volume_button_setting_entries">
+        <item>Slumra</item>
+        <item>Avvis</item>
+        <item>Styr lydstyrke</item>
+    </string-array>
+    <string name="label_description">Etikett</string>
+    <string name="ringtone_description">Ringetone</string>
+    <string name="menu_alarm">Alarm</string>
+    <string name="menu_timer">Nedteljing</string>
+    <string name="menu_clock">Klokke</string>
+    <string name="menu_stopwatch">Stoppeklokke</string>
+    <string name="button_alarms">Legg til alarm</string>
+    <string name="button_cities">Byar</string>
+    <string name="menu_item_settings">Innstillingar</string>
+    <string name="menu_item_sort_by_gmt_offset">Sorter etter tid</string>
+    <string name="menu_item_sort_by_name">Sorter etter namn</string>
+    <string name="selected_cities_label">Valde byar</string>
+    <string name="sw_resume_button">Hald fram</string>
+    <string name="sw_reset_button">Nullstill</string>
+    <string name="sw_start_button">Start</string>
+    <string name="sw_pause_button">Pause</string>
+    <string name="sw_lap_button">Runde</string>
+    <string name="sw_share_button">Del</string>
+    <string name="hours_label">t</string>
+    <string name="minutes_label">m</string>
+    <string name="seconds_label">s</string>
+    <string name="timer_setup_description"><xliff:g id="hours" example="1 hour">%1$s</xliff:g>, <xliff:g id="minutes" example="15 minutes">%2$s</xliff:g>, <xliff:g id="seconds" example="30 seconds">%3$s</xliff:g></string>
+    <string name="lap_number_single_digit"># <xliff:g id="lapNumber">%d</xliff:g></string>
+    <string name="lap_number_double_digit"># <xliff:g id="lapNumber">%02d</xliff:g></string>
+    <string name="sw_share_main">Tida mi er <xliff:g id="time">%s</xliff:g></string>
+    <string name="sw_share_laps">Rundetider:</string>
+    <string name="sw_notification_lap_number">Runde <xliff:g id="number">%d</xliff:g></string>
+    <string name="timer_add_timer">Legg til nedteljing</string>
+    <string name="timer_start">Start</string>
+    <string name="timer_delete">Slett</string>
+    <string name="timer_descriptive_delete">Slett <xliff:g id="number_string">%s</xliff:g></string>
+    <string name="timer_plus_one">Legg til 1 minutt</string>
+    <string name="timer_add_minute">+ 1:00</string>
+    <string name="timer_plus_1_min">Legg til 1 min</string>
+    <string name="timer_stop">Stopp</string>
+    <string name="timer_stop_all">Stopp alle nedteljingar</string>
+    <string name="timer_reset">Nullstill</string>
+    <string name="timer_cancel">Avbryt</string>
+    <string name="timer_canceled">Nedteljinga er avbroten</string>
+    <string name="timer_times_up">Tida er ute</string>
+    <string name="timer_multi_times_up"><xliff:g id="NUM_TIMERS" example="2">%d</xliff:g> nedteljingar er ferdige</string>
+    <string name="timer_multi_missed"><xliff:g id="number" example="2">%d</xliff:g> missa nedteljingar</string>
+    <string name="timer_notification_label">Nedteljing</string>
+    <string name="missed_timer_notification_label">Missa nedteljing</string>
+    <string name="missed_named_timer_notification_label">Missa nedteljing: <xliff:g id="name" example="Pick up kids">%s</xliff:g></string>
+    <string name="timer_pause">Pause</string>
+    <string name="timer_reset_all">Nullstill alle nedteljingar</string>
+    <string name="hours_minutes_seconds"><xliff:g id="hours" example="2">%1$d</xliff:g>:<xliff:g id="minutes" example="3">%2$02d</xliff:g>:<xliff:g id="seconds" example="44">%3$02d</xliff:g></string>
+    <string name="minutes_seconds"><xliff:g id="minutes" example="3">%1$d</xliff:g>:<xliff:g id="seconds" example="44">%2$02d</xliff:g></string>
+    <string name="seconds"><xliff:g id="seconds" example="44">%d</xliff:g></string>
+    <string-array name="sw_share_strings" translatable="true">
+        <item>Du er litt av ein fartsfant.</item>
+        <item>Her er løna for strevet.</item>
+        <item>Android-robotar skal vera snøgge, men du er i ein eigen klasse!</item>
+        <item>Puh.</item>
+        <item>Gasta tider.</item>
+        <item>Ein svær fart.</item>
+        <item>Me dreg gjennom tidslomma att.</item>
+        <item>Berre eit hopp til venstre.</item>
+        <item>Du har smaken på fart.</item>
+        <item>Med ljossnøggleiken.</item>
+    </string-array>
+    <string name="home_label">Heim</string>
+    <string name="cities_activity_title">Byar</string>
+    <string name="clock_settings">Klokke</string>
+    <string name="clock_style">Stil</string>
+    <string name="display_clock_seconds_pref">Vis tida med sekund</string>
+    <string name="open_date_settings">Endra dato og tid</string>
+    <string-array name="clock_style_entries">
+        <item>Analog</item>
+        <item>Digital</item>
+    </string-array>
+    <string name="automatic_home_clock">Automatisk heimeklokke</string>
+    <string name="automatic_home_clock_summary">Legg til ei klokke for heimstaden når du reiser i område med ei anna tid</string>
+    <string name="home_time_zone">Heime-tidssone</string>
+    <string name="home_time_zone_title">Heime-tidssone</string>
+    <string name="city_checked"><xliff:g id="city_name">%s</xliff:g> er vald</string>
+    <string name="city_unchecked">Valet for <xliff:g id="city_name">%s</xliff:g> er fjerna</string>
+    <string-array name="timezone_labels" tools:ignore="Typos">
+        <item>"Marshalløyane"</item>
+        <item>"Midwayøya"</item>
+        <item>"Hawaii"</item>
+        <item>"Alaska"</item>
+        <item>"Stillehavstid"</item>
+        <item>"Tijuana"</item>
+        <item>"Arizona"</item>
+        <item>"Chihuahua"</item>
+        <item>"Fjelltid"</item>
+        <item>"Mellom-Amerika"</item>
+        <item>"Sentraltid"</item>
+        <item>"Mexico-by"</item>
+        <item>"Saskatchewan"</item>
+        <item>"Bogota"</item>
+        <item>"Austleg tid"</item>
+        <item>"Venezuela"</item>
+        <item>"Atlanterhavstid (Barbados)"</item>
+        <item>"Atlanterhavstid (Canada)"</item>
+        <item>"Manaus"</item>
+        <item>"Santiago"</item>
+        <item>"Newfoundland"</item>
+        <item>"Brasilia"</item>
+        <item>"Buenos Aires"</item>
+        <item>"Grønland"</item>
+        <item>"Montevideo"</item>
+        <item>"Midt-Atlanteren"</item>
+        <item>"Azorane"</item>
+        <item>"Kapp Verde-øyane"</item>
+        <item>"Casablanca"</item>
+        <item>"London, Dublin"</item>
+        <item>"Amsterdam, Berlin"</item>
+        <item>"Beograd"</item>
+        <item>"Brussel"</item>
+        <item>"Sarajevo"</item>
+        <item>"Windhoek"</item>
+        <item>"Vestafrikansk tid"</item>
+        <item>"Amman, Jordan"</item>
+        <item>"Aten, Istanbul"</item>
+        <item>"Beirut, Libanon"</item>
+        <item>"Kairo"</item>
+        <item>"Helsinki"</item>
+        <item>"Jerusalem"</item>
+        <item>"Minsk"</item>
+        <item>"Harare"</item>
+        <item>"Bagdad"</item>
+        <item>"Moskva"</item>
+        <item>"Kuwait"</item>
+        <item>"Nairobi"</item>
+        <item>"Teheran"</item>
+        <item>"Baku"</item>
+        <item>"Tbilisi"</item>
+        <item>"Jerevan"</item>
+        <item>"Dubai"</item>
+        <item>"Kabul"</item>
+        <item>"Islamabad, Karachi"</item>
+        <item>"Ural'sk"</item>
+        <item>"Jekaterinburg"</item>
+        <item>"Kolkata"</item>
+        <item>"Sri Lanka"</item>
+        <item>"Katmandu"</item>
+        <item>"Astana"</item>
+        <item>"Yangon"</item>
+        <item>"Krasnojarsk"</item>
+        <item>"Bangkok"</item>
+        <item>"Beijing"</item>
+        <item>"Hongkong"</item>
+        <item>"Irkutsk"</item>
+        <item>"Kuala Lumpur"</item>
+        <item>"Perth"</item>
+        <item>"Taipei"</item>
+        <item>"Seoul"</item>
+        <item>"Tokyo, Osaka"</item>
+        <item>"Jakutsk"</item>
+        <item>"Adelaide"</item>
+        <item>"Darwin"</item>
+        <item>"Brisbane"</item>
+        <item>"Hobart"</item>
+        <item>"Sydney, Canberra"</item>
+        <item>"Vladivostok"</item>
+        <item>"Guam"</item>
+        <item>"Magadan"</item>
+        <item>"Auckland"</item>
+        <item>"Fiji"</item>
+        <item>"Tonga"</item>
+        <item>"Jakarta"</item>
+    </string-array>
+    <string name="shortcut_new_alarm_short">Ny alarm</string>
+    <string name="shortcut_new_alarm_long">Lag ny alarm</string>
+    <string name="shortcut_new_timer_short">Ny nedteljing</string>
+    <string name="shortcut_new_timer_long">Lag ny nedteljing</string>
+    <string name="shortcut_start_stopwatch_short">Start</string>
+    <string name="shortcut_start_stopwatch_long">Start stoppeklokka</string>
+    <string name="shortcut_pause_stopwatch_short">Pause</string>
+    <string name="shortcut_pause_stopwatch_long">Pausa stoppeklokka</string>
+    <string name="shortcut_start_screensaver_short">Skjermsparar</string>
+    <string name="shortcut_start_screensaver_long">Start skjermspararen</string>
+    <string name="alarm_settings">Alarmar</string>
+    <string name="timer_service_desc">Gjer handlingar frå nedteljingsvarsel.</string>
+    <string name="stopwatch_service_desc">Gjer handlingar frå stoppeklokkevarsel.</string>
+    <string name="swn_paused">Sett på pause</string>
+    <string name="description_direction_right">Sveip til høgre for å avvisa</string>
+    <string name="description_direction_left">Sveip til venstre for å slumra</string>
+    <string name="description_direction_both">Sveip til venstre for å slumra eller til høgre for å avvisa</string>
+    <string name="timer_settings">Nedteljingar</string>
+    <string name="timer_vibrate_title">Vibrering for nedteljing</string>
+    <string name="timer_paused">Nedteljing sett på pause</string>
+    <string name="timers_stopped"><xliff:g id="number" example="7">%d</xliff:g> nedteljingar sett på pause</string>
+    <string name="timers_in_use"><xliff:g id="number" example="7">%d</xliff:g> nedteljingar</string>
+    <string name="screensaver_settings">Innstillingar for skjermsparar</string>
+    <string name="night_mode_title">Nattmodus</string>
+    <string name="night_mode_summary">Sers dempa lys (for mørke rom)</string>
+    <string name="expand_alarm">Utvid alarmen</string>
+    <string name="collapse_alarm">Slå saman alarmen</string>
+    <string name="alarm_undo">angra</string>
+    <string name="alarm_deleted">Alarmen er sletta</string>
+    <string name="world_day_of_week_label"> / <xliff:g id="label">%s</xliff:g></string>
+    <string name="world_time_ahead"><xliff:g id="time" example="6 hours">%1$s</xliff:g> føre</string>
+    <string name="world_time_behind"><xliff:g id="time" example="4 hours">%1$s</xliff:g> etter</string>
+    <string name="world_hours_minutes_ahead"><xliff:g id="hours" example="6 hr">%1$s</xliff:g> <xliff:g id="minutes" example="30 min">%2$s</xliff:g> føre</string>
+    <string name="world_hours_minutes_behind"><xliff:g id="hours" example="4 hr">%1$s</xliff:g> <xliff:g id="minutes" example="30 min">%2$s</xliff:g> etter</string>
+    <string name="world_hours_tomorrow">I morgon, <xliff:g id="time" example="6 hours ahead">%1$s</xliff:g></string>
+    <string name="world_hours_yesterday">I går, <xliff:g id="time" example="4 hours behind">%1$s</xliff:g></string>
+    <string name="next_alarm_description">Neste alarm: <xliff:g id="alarm_time" example="Wed 8:00am">%s</xliff:g></string>
+    <string name="no_alarms">Ingen alarmar</string>
+    <string name="invalid_time">Ugyldig tid <xliff:g id="invalid_hour" example="25">%1$d</xliff:g>:<xliff:g id="invalid_minutes" example="63">%2$d</xliff:g> <xliff:g id="invalid_ampm" example="PM">%3$s</xliff:g></string>
+    <string name="no_alarm_at">Ingen alarm kl. <xliff:g id="alarm_time_hour" example="14">%1$d</xliff:g>:<xliff:g id="alarm_time_minutes" example="23">%2$d</xliff:g></string>
+    <string name="no_scheduled_alarms">Ingen planlagde alarmar</string>
+    <string name="no_label_specified">Ingen etikett er vald</string>
+    <string name="no_alarms_with_label">Ingen alarmar har denne etiketten</string>
+    <string name="no_alarm_scheduled_for_this_time">Ingen alarm er planlagd til dette tidspunktet</string>
+    <string name="alarm_is_dismissed">Alarmen kl. <xliff:g id="alarm_time" example="14:20">%s</xliff:g> er avvist</string>
+    <string name="alarm_is_set">Alarmen ringjer <xliff:g id="alarm_time" example="14:20">%s</xliff:g></string>
+    <string name="timer_created">Nedteljinga er laga</string>
+    <plurals name="expired_timers_dismissed">
+        <item quantity="one">Nedteljinga er avvist</item>
+        <item quantity="other"><xliff:g id="number" example="5">%d</xliff:g> nedteljingar er avviste</item>
+    </plurals>
+    <string name="timer_deleted">Nedteljinga er sletta</string>
+    <string name="invalid_timer_length">Ugyldig lengd på nedteljinga</string>
+    <string name="invalid_timer">Ugyldig nedteljing er vald</string>
+    <string name="no_expired_timers">Ingen ferdige nedteljingar</string>
+    <string name="alarm_cant_be_dismissed_still_more_than_24_hours_away">Alarmen kl. <xliff:g id="alarm_time" example="14:20">%s</xliff:g> kan ikkje avvisast enno, det er over 24 timar att</string>
+    <string name="dismiss_alarm">Avvis alarm</string>
+    <string name="pick_alarm_to_dismiss">Vel kva for ein alarm som skal avvisast</string>
+    <string name="no_firing_alarms">Ingen alarmar ringjer no</string>
+    <string name="alarm_is_snoozed">Alarmen kl. <xliff:g id="alarm_time" example="14:20">%s</xliff:g> er slumra i 10 minutt</string>
+</resources>
