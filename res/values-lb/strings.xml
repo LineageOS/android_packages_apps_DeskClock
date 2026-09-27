@@ -19,7 +19,6 @@
     <string name="label">Beschreiwung</string>
     <string name="default_label">Wecker</string>
     <string name="alarm_vibrate">Vibréieren</string>
-    <string name="alarm_repeat">Widderhuelen</string>
     <string name="delete">Läschen</string>
     <string name="alarm_tomorrow">Muer</string>
     <string name="alarm_today">Haut</string>
@@ -131,7 +130,6 @@
     <string name="button_alarms">Wecker dobäisetzen</string>
     <string name="button_cities">Stied</string>
     <string name="menu_item_settings">Astellungen</string>
-    <string name="menu_item_help">Hëllef</string>
     <string name="menu_item_sort_by_gmt_offset">No Zäit zortéieren</string>
     <string name="menu_item_sort_by_name">No Numm zortéieren</string>
     <string name="selected_cities_label">Ausgewielt Stied</string>
@@ -272,14 +270,12 @@
     <string name="description_direction_right">No riets wësche fir ze verwerfen</string>
     <string name="description_direction_left">No lénks wësche fir ze näipen</string>
     <string name="timers_in_use"><xliff:g id="number" example="7">%d</xliff:g> Sandaueren</string>
-    <string name="next_timer_notif">Nächst Sandauer: <xliff:g id="time_remaining" example="2 minutes remaining">%s</xliff:g></string>
     <string name="night_mode_title">Nuetsmodus</string>
     <string name="night_mode_summary">Ganz ofgedonkelte Schierm (fir däischter Raim)</string>
     <string name="expand_alarm">Wecker opklappen</string>
     <string name="collapse_alarm">Wecker zesummeklappen</string>
     <string name="alarm_undo">réckgängeg maachen</string>
     <string name="world_day_of_week_label"> / <xliff:g id="label">%s</xliff:g></string>
-    <string name="world_tomorrow">Muer</string>
     <string name="next_alarm_description">Nächste Wecker: <xliff:g id="alarm_time" example="Wed 8:00am">%s</xliff:g></string>
     <string name="no_alarms">Keng Weckeren</string>
 </resources>
