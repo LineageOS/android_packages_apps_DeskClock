@@ -34,6 +34,40 @@
       "parentUuid": "d034a580_6c6848a8",
       "revId": "cd9a375bd40101aff73c0cf5df63129b0afbeaea",
       "serverId": "1ec6b3db-b2c1-4fa4-84a2-4c7efe89ba71"
+    },
+    {
+      "unresolved": true,
+      "key": {
+        "uuid": "0839b01e_35bbd440",
+        "filename": "res/layout-land/desk_clock.xml",
+        "patchSetId": 7
+      },
+      "lineNbr": 18,
+      "author": {
+        "id": 4550
+      },
+      "writtenOn": "2026-09-28T00:04:37Z",
+      "side": 1,
+      "message": "Unrelated change",
+      "revId": "cd9a375bd40101aff73c0cf5df63129b0afbeaea",
+      "serverId": "1ec6b3db-b2c1-4fa4-84a2-4c7efe89ba71"
+    },
+    {
+      "unresolved": true,
+      "key": {
+        "uuid": "a41d78c2_983b160e",
+        "filename": "res/layout/desk_clock.xml",
+        "patchSetId": 7
+      },
+      "lineNbr": 18,
+      "author": {
+        "id": 4550
+      },
+      "writtenOn": "2026-09-28T00:04:37Z",
+      "side": 1,
+      "message": "Unrelated change",
+      "revId": "cd9a375bd40101aff73c0cf5df63129b0afbeaea",
+      "serverId": "1ec6b3db-b2c1-4fa4-84a2-4c7efe89ba71"
     }
   ]
 }
