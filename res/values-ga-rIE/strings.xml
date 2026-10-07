@@ -17,10 +17,72 @@
 <resources xmlns:xliff="urn:oasis:names:tc:xliff:document:1.2" xmlns:tools="http://schemas.android.com/tools">
     <string name="delete">Scrios</string>
     <string name="remove_sound">Bain</string>
+    <string name="custom_ringtone_lost_permissions">Ní féidir rochtain a fháil ar an ábhar fuaime.</string>
+    <string name="default_timer_ringtone_title">Tá an t-amadóir imithe in éag</string>
+    <string name="alarm_tomorrow">Amárach</string>
+    <string name="alarm_today">Inniu</string>
     <string name="alarm_alert_dismiss_text">Díbhe</string>
+    <string name="alarm_alert_predismiss_title">Aláram atá le teacht</string>
+    <string name="missed_alarm_has_been_deleted">Scriosadh an t-aláram nár fhreagair tú</string>
+    <string name="timer_notifications_less_min">Níos lú ná nóiméad fágtha</string>
+    <string name="timer_remaining_single">atá fágtha</string>
+    <string name="timer_remaining_multiple">atá fágtha</string>
+    <string-array name="alarm_set">
+        <item>Aláram socraithe le haghaidh níos lú ná nóiméad amháin ó anois.</item>
+        <item>Aláram socraithe do <xliff:g id="DAYS" example="2 days">%1$s</xliff:g> ón am i láthair.</item>
+        <item>Aláram socraithe do <xliff:g id="HOURS" example="2 hours">%2$s</xliff:g> ón am i láthair.</item>
+        <item>Aláram socraithe do <xliff:g id="DAYS" example="2 days">%1$s</xliff:g> agus <xliff:g id="HOURS" example="2 hours">%2$s</xliff:g> ón am i láthair.</item>
+        <item>Aláram socraithe do <xliff:g id="MINUTES" example="2 minutes">%3$s</xliff:g> ón nóiméad seo.</item>
+        <item>Aláram socraithe do <xliff:g id="DAYS" example="2 days">%1$s</xliff:g> agus <xliff:g id="MINUTES" example="2 minutes">%3$s</xliff:g> ón am i láthair.</item>
+        <item>Aláram socraithe do <xliff:g id="HOURS" example="2 hours">%2$s</xliff:g> agus <xliff:g id="MINUTES" example="2 minutes">%3$s</xliff:g> ón am i láthair.</item>
+        <item>Aláram socraithe do <xliff:g id="DAYS" example="2 days">%1$s</xliff:g>, <xliff:g id="HOURS" example="2 hours">%2$g</xliff:g> agus <xliff:g id="MINUTES" example="2 minutes">%3$g</xliff:g> ón am i láthair.</item>
+    </string-array>
+    <plurals name="days">
+        <item quantity="one">1 lá</item>
+        <item quantity="two"><xliff:g id="number" example="7">%s</xliff:g> lá</item>
+        <item quantity="few"><xliff:g id="number" example="7">%s</xliff:g> lá</item>
+        <item quantity="many"><xliff:g id="number" example="7">%s</xliff:g> lá</item>
+        <item quantity="other"><xliff:g id="number" example="7">%s</xliff:g> lá</item>
+    </plurals>
+    <plurals name="hours">
+        <item quantity="one">1 uair an chloig</item>
+        <item quantity="two"><xliff:g id="number" example="7">%s</xliff:g> uair an chloig</item>
+        <item quantity="few"><xliff:g id="number" example="7">%s</xliff:g> uair an chloig</item>
+        <item quantity="many"><xliff:g id="number" example="7">%s</xliff:g> uair an chloig</item>
+        <item quantity="other"><xliff:g id="number" example="7">%s</xliff:g> uair an chloig</item>
+    </plurals>
+    <plurals name="hours_short">
+        <item quantity="one">1 uair</item>
+        <item quantity="two"><xliff:g id="number" example="7">%s</xliff:g> uair</item>
+        <item quantity="few"><xliff:g id="number" example="7">%s</xliff:g> uair</item>
+        <item quantity="many"><xliff:g id="number" example="7">%s</xliff:g> uair</item>
+        <item quantity="other"><xliff:g id="number" example="7">%s</xliff:g> uair</item>
+    </plurals>
+    <plurals name="minutes">
+        <item quantity="one">1 nóiméad</item>
+        <item quantity="two"><xliff:g id="number" example="7">%s</xliff:g> nóiméad</item>
+        <item quantity="few"><xliff:g id="number" example="7">%s</xliff:g> nóiméad</item>
+        <item quantity="many"><xliff:g id="number" example="7">%s</xliff:g> nóiméad</item>
+        <item quantity="other"><xliff:g id="number" example="7">%s</xliff:g> nóiméad</item>
+    </plurals>
+    <plurals name="minutes_short">
+        <item quantity="one">1 nóim</item>
+        <item quantity="two"><xliff:g id="number" example="7">%s</xliff:g> nóim</item>
+        <item quantity="few"><xliff:g id="number" example="7">%s</xliff:g> nóim</item>
+        <item quantity="many"><xliff:g id="number" example="7">%s</xliff:g> nóim</item>
+        <item quantity="other"><xliff:g id="number" example="7">%s</xliff:g> nóim</item>
+    </plurals>
+    <plurals name="seconds">
+        <item quantity="one">1 soicind</item>
+        <item quantity="two"><xliff:g id="number" example="7">%s</xliff:g> soicind</item>
+        <item quantity="few"><xliff:g id="number" example="7">%s</xliff:g> soicind</item>
+        <item quantity="many"><xliff:g id="number" example="7">%s</xliff:g> soicind</item>
+        <item quantity="other"><xliff:g id="number" example="7">%s</xliff:g> soicind</item>
+    </plurals>
     <string name="every_day">Gach lá</string>
     <string name="day_concat">", "</string>
     <string name="loading_widget">Ag luchtú\u2026</string>
+    <string name="analog_gadget">Clog analógach</string>
     <string name="digital_gadget">Clog digiteach</string>
     <string name="settings">Socruithe</string>
     <string name="snooze_duration_title">Fad codlata</string>
@@ -141,8 +203,26 @@
     <string name="timer_add_timer">Cuir Amaireoir leis</string>
     <string name="timer_start">Tosaigh</string>
     <string name="timer_delete">Scrios</string>
+    <string name="timer_descriptive_delete">Scrios <xliff:g id="number_string">%s</xliff:g></string>
+    <string name="timer_plus_one">Cuir nóiméad amháin leis</string>
+    <string name="timer_add_minute">+ 1:00</string>
+    <string name="timer_plus_1_min">Cuir 1 nóiméad leis</string>
     <string name="timer_stop">Stop</string>
+    <string name="timer_stop_all">Stop gach lasc ama</string>
+    <string name="timer_reset">Athshocraigh</string>
     <string name="timer_cancel">Cealaigh</string>
+    <string name="timer_canceled">Cealaíodh an t-amadóir</string>
+    <string name="timer_times_up">Tá an t-am istigh</string>
+    <string name="timer_multi_times_up">Tá <xliff:g id="NUM_TIMERS" example="2">%d</xliff:g> lasc ama imithe in éag</string>
+    <string name="timer_multi_missed"><xliff:g id="number" example="2">%d</xliff:g> lasc ama caillte</string>
+    <string name="timer_notification_label">Lasc ama</string>
+    <string name="missed_timer_notification_label">Lasc ama caillte</string>
+    <string name="missed_named_timer_notification_label">Lasc ama caillte: <xliff:g id="name" example="Pick up kids">%s</xliff:g></string>
+    <string name="timer_pause">Sos</string>
+    <string name="timer_reset_all">Athshocraigh gach lasc ama</string>
+    <string name="hours_minutes_seconds"><xliff:g id="hours" example="2">%1$d</xliff:g>:<xliff:g id="minutes" example="3">%2$02d</xliff:g>:<xliff:g id="seconds" example="44">%3$02d</xliff:g></string>
+    <string name="minutes_seconds"><xliff:g id="minutes" example="3">%1$d</xliff:g>:<xliff:g id="seconds" example="44">%2$02d</xliff:g></string>
+    <string name="seconds"><xliff:g id="seconds" example="44">%d</xliff:g></string>
     <string-array name="sw_share_strings" translatable="true">
         <item>Tá tú go leor an deamhan luas.</item>
         <item>Bain sult as torthaí do shaothair.</item>
@@ -152,9 +232,11 @@
         <item>Treluas prodigious den sórt sin.</item>
         <item>Déanaimis an dlúith ama arís.</item>
         <item>Just a léim ar chlé.</item>
-        <item>Tá pailéad agat le haghaidh deifir.</item>
+        <item>You have a palette for haste.</item>
         <item>Treoluas fótónach.</item>
     </string-array>
+    <string name="home_label">Baile</string>
+    <string name="cities_activity_title">Cathracha</string>
     <string-array name="timezone_labels" tools:ignore="Typos">
         <item>"Marshall Islands"</item>
         <item>"Midway Island"</item>
@@ -245,4 +327,18 @@
     <string name="shortcut_start_stopwatch_short">Tosaigh</string>
     <string name="alarm_undo">cuir ar ceal</string>
     <string name="world_hours_minutes_ahead"><xliff:g id="uaireanna" sampla="6 uair">%1$s</xliff:g> <xliff:g id="nóiméid" sampla="30 nóiméad">%2$s</xliff:g> chun tosaigh</string>
+    <string name="no_alarms">Gan Aláraim</string>
+    <string name="no_scheduled_alarms">Gan aon aláraim sceidealaithe</string>
+    <string name="no_label_specified">Níor sonraíodh aon lipéad</string>
+    <string name="no_alarms_with_label">Níl an lipéad ar aon aláram</string>
+    <string name="no_alarm_scheduled_for_this_time">Níl aon aláram sceidealaithe don am seo</string>
+    <string name="timer_created">Cruthaíodh lasc ama</string>
+    <string name="timer_deleted">Scriosadh an lasc ama</string>
+    <string name="invalid_timer_length">Fad ama an lasc-ama neamhbhailí</string>
+    <string name="invalid_timer">Roghnaíodh lasc-ama neamhbhailí</string>
+    <string name="no_expired_timers">Gan aon lasc-ama atá imithe in éag</string>
+    <string name="dismiss_alarm">Cealaigh an t-aláram</string>
+    <string name="pick_alarm_to_dismiss">Roghnaigh cén t-aláram le cur ar ceal</string>
+    <string name="no_firing_alarms">Gan aon aláraim ag scaoileadh</string>
+    <string name="alarm_is_snoozed">Cuireadh an t-aláram <xliff:g id="alarm_time" example="14:20">%s</xliff:g> ar athló ar feadh 10 nóiméad</string>
 </resources>

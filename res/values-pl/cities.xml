@@ -22,7 +22,7 @@
   <string name="C5">B<xliff:g id="SEPARATOR">=</xliff:g>Blantyre<xliff:g id="TIMEZONE">|Africa/Blantyre</xliff:g></string>
   <string name="C6">B<xliff:g id="SEPARATOR">=</xliff:g>Brazzaville<xliff:g id="TIMEZONE">|Africa/Brazzaville</xliff:g></string>
   <string name="C7">K<xliff:g id="SEPARATOR">=</xliff:g>Kair<xliff:g id="TIMEZONE">|Africa/Cairo</xliff:g></string>
-  <string name="C8">C<xliff:g id="SEPARATOR">=</xliff:g>Kasablanka<xliff:g id="TIMEZONE">|Africa/Casablanca</xliff:g></string>
+  <string name="C8">C<xliff:g id="SEPARATOR">=</xliff:g>Casablanca<xliff:g id="TIMEZONE">|Africa/Casablanca</xliff:g></string>
   <string name="C9">K<xliff:g id="SEPARATOR">=</xliff:g>Konakry<xliff:g id="TIMEZONE">|Africa/Conakry</xliff:g></string>
   <string name="C10">D<xliff:g id="SEPARATOR">=</xliff:g>Dakar<xliff:g id="TIMEZONE">|Africa/Dakar</xliff:g></string>
   <string name="C11">D<xliff:g id="SEPARATOR">=</xliff:g>Dar es Salaam<xliff:g id="TIMEZONE">|Africa/Dar_es_Salaam</xliff:g></string>

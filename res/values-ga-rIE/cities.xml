@@ -1,0 +1,61 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!--
+    Copyright (C) 2016 The Android Open Source Project
+
+    Licensed under the Apache License, Version 2.0 (the "License");
+    you may not use this file except in compliance with the License.
+    You may obtain a copy of the License at
+
+         http://www.apache.org/licenses/LICENSE-2.0
+
+    Unless required by applicable law or agreed to in writing, software
+    distributed under the License is distributed on an "AS IS" BASIS,
+    WITHOUT WARRANTIES OR CONDITIONS OF ANY KIND, either express or implied.
+    See the License for the specific language governing permissions and
+    limitations under the License
+  -->
+<resources xmlns:xliff="urn:oasis:names:tc:xliff:document:1.2" xmlns:tools="http://schemas.android.com/tools" tools:ignore="Typos">
+  <string name="C2">A<xliff:g id="separator">=</xliff:g>Accra<xliff:g id="timezone">|An Afraic/Accra</xliff:g></string>
+  <string name="C3">A<xliff:g id="separator">=</xliff:g>Addis Ababa<xliff:g id="timezone">|An Afraic/Addis_Ababa</xliff:g></string>
+  <string name="C4">A<xliff:g id="separator">=</xliff:g>Algiers<xliff:g id="timezone">|Africa/Algiers</xliff:g></string>
+  <string name="C5">B<xliff:g id="separator">=</xliff:g>Blantyre<xliff:g id="crios ama">|An Afraic/Blantyre</xliff:g></string>
+  <string name="C6">B<xliff:g id="separator">=</xliff:g>Brazzaville<xliff:g id="crios ama">|An Afraic/Brazzaville</xliff:g></string>
+  <string name="C7">C<xliff:g id="separator">=</xliff:g>Caireo<xliff:g id="crios ama">|An Afraic/Caireo</xliff:g></string>
+  <string name="C8">C<xliff:g id="separator">=</xliff:g>Casablanca<xliff:g id="timezone">|An Afraic/Casablanca</xliff:g></string>
+  <string name="C9">C<xliff:g id="separator">=</xliff:g>Conakry<xliff:g id="timezone">|An Afraic/Conakry</xliff:g></string>
+  <string name="C10">D<xliff:g id="separator">=</xliff:g>Dakar<xliff:g id="timezone">|An Afraic/Dakar</xliff:g></string>
+  <string name="C11">D<xliff:g id="separator">=</xliff:g>Dar es Salaam<xliff:g id="timezone">| An Afraic/Dar_es_Salaam</xliff:g></string>
+  <string name="C12">D<xliff:g id="separator">=</xliff:g>Djibouti<xliff:g id="timezone">|An Afraic/Djibouti</xliff:g></string>
+  <string name="C13">F<xliff:g id="separator">=</xliff:g>Freetown<xliff:g id="crios ama">|An Afraic/Freetown</xliff:g></string>
+  <string name="C14">G<xliff:g id="separator">=</xliff:g>Gaborone<xliff:g id="timezone">|An Afraic/Gaborone</xliff:g></string>
+  <string name="C15">H<xliff:g id="separator">=</xliff:g>Harare<xliff:g id="timezone">|An Afraic/Harare</xliff:g></string>
+  <string name="C16">J<xliff:g id="separator">=</xliff:g>Johannesburg<xliff:g id="timezone">|An Afraic/Johannesburg</xliff:g></string>
+  <string name="C17">K<xliff:g id="separator">=</xliff:g>Kampala<xliff:g id="timezone">|An Afraic/Kampala</xliff:g></string>
+  <string name="C18">C<xliff:g id="separator">=</xliff:g>Cartúm<xliff:g id="timezone">|An Afraic/Cartúm</xliff:g></string>
+  <string name="C19">K<xliff:g id="separator">=</xliff:g>Kigali<xliff:g id="timezone">|An Afraic/Kigali</xliff:g></string>
+  <string name="C20">C<xliff:g id="separator">=</xliff:g>Cionn tSáile<xliff:g id="timezone">|An Afraic/Cinseasa</xliff:g></string>
+  <string name="C21">L<xliff:g id="separator">=</xliff:g>Lagos<xliff:g id="timezone">|An Afraic/Lagos</xliff:g></string>
+  <string name="C22">M<xliff:g id="separator">=</xliff:g>Maseru<xliff:g id="timezone">|An Afraic/Maseru</xliff:g></string>
+  <string name="C23">M<xliff:g id="separator">=</xliff:g>Mogadishu<xliff:g id="timezone">|An Afraic/Mogadishu</xliff:g></string>
+  <string name="C24">N<xliff:g id="separator">=</xliff:g>Nairobi<xliff:g id="timezone">|An Afraic/Nairobi</xliff:g></string>
+  <string name="C25">S<xliff:g id="separator">=</xliff:g>São Tomé<xliff:g id="timezone">|An Afraic/Sao_Tome</xliff:g></string>
+  <string name="C26">T<xliff:g id="separator">=</xliff:g>Timbuktu<xliff:g id="timezone">|An Afraic/Timbuktu</xliff:g></string>
+  <string name="C27">T<xliff:g id="separator">=</xliff:g>Tripoli<xliff:g id="crios ama">|An Afraic/Tripoli</xliff:g></string>
+  <string name="C28">T<xliff:g id="separator">=</xliff:g>Túinis<xliff:g id="timezone">|Africa/Tunis</xliff:g></string>
+  <string name="C29">A<xliff:g id="separator">=</xliff:g>Ancaire<xliff:g id="crios ama">|Meiriceá/Ancaire</xliff:g></string>
+  <string name="C31">A<xliff:g id="separator">=</xliff:g>Aruba<xliff:g id="timezone">|Meiriceá/Aruba</xliff:g></string>
+  <string name="C32">A<xliff:g id="separator">=</xliff:g>Asunción<xliff:g id="timezone">|Meiriceá/Asuncion</xliff:g></string>
+  <string name="C33">B<xliff:g id="separator">=</xliff:g>Barbados<xliff:g id="timezone">|Meiriceá/Barbados</xliff:g></string>
+  <string name="C34">B<xliff:g id="separator">=</xliff:g>An Bheilís<xliff:g id="timezone">|Meiriceá/An Bheilís</xliff:g></string>
+  <string name="C35">B<xliff:g id="separator">=</xliff:g>Bogotá<xliff:g id="crios ama">|Meiriceá/Bogotá</xliff:g></string>
+  <string name="C36">B<xliff:g id="separator">=</xliff:g>Buenos Aires<xliff:g id="crios ama">|Meiriceá/Buenos_Aires</xliff:g></string>
+  <string name="C37">C<xliff:g id="separator">=</xliff:g>Cancun<xliff:g id="timezone">|Meiriceá/Cancun</xliff:g></string>
+  <string name="C38">C<xliff:g id="separator">=</xliff:g>Caracas<xliff:g id="timezone">|Meiriceá/Caracas</xliff:g></string>
+  <string name="C163">B<xliff:g id="separator">=</xliff:g>Béalgrád<xliff:g id="timezone">|An Eoraip/Béalgrád</xliff:g></string>
+  <string name="C164">B<xliff:g id="separator">=</xliff:g>Beirlín<xliff:g id="timezone">|An Eoraip/Beirlín</xliff:g></string>
+  <string name="C165">B<xliff:g id="separator">=</xliff:g>Bratislava<xliff:g id="timezone">|An Eoraip/Bratislava</xliff:g></string>
+  <string name="C167">B<xliff:g id="separator">=</xliff:g>Búcairist<xliff:g id="timezone">|An Eoraip/Búcairist</xliff:g></string>
+  <string name="C169">C<xliff:g id="separator">=</xliff:g>Cisinéav<xliff:g id="crios ama">|An Eoraip/Cisinéav</xliff:g></string>
+  <string name="C170">C<xliff:g id="separator">=</xliff:g>Cóbanhávan<xliff:g id="timezone">|An Eoraip/Cóbanhávan</xliff:g></string>
+  <string name="C172">G<xliff:g id="separator">=</xliff:g>Giobráltar<xliff:g id="timezone">|An Eoraip/Giobráltar</xliff:g></string>
+</resources>
