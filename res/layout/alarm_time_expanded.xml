@@ -166,7 +166,7 @@
 
 
     <Button
-        android:id="@+id/preemptive_dismiss_button"
+        android:id="@+id/skip_next_occurrence"
         style="?borderlessButtonStyle"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
@@ -182,6 +182,26 @@
         android:visibility="gone"
         app:layout_constraintStart_toEndOf="@id/start_guide_thin"
         app:layout_constraintTop_toBottomOf="@id/vibrate_onoff"
+        tools:text="Skip next alarm"
+        tools:visibility="visible" />
+
+    <Button
+        android:id="@+id/preemptive_dismiss_button"
+        style="?borderlessButtonStyle"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:drawablePadding="@dimen/alarm_horizontal_padding"
+        android:focusable="true"
+        android:gravity="center_vertical"
+        android:minHeight="@dimen/touch_target_min_size"
+        android:paddingStart="@dimen/icon_margin"
+        android:paddingEnd="0dp"
+        android:textAllCaps="false"
+        android:textAppearance="@style/body"
+        android:textColor="?attr/colorPrimary"
+        android:visibility="gone"
+        app:layout_constraintStart_toEndOf="@id/start_guide_thin"
+        app:layout_constraintTop_toBottomOf="@id/skip_next_occurrence"
         tools:text="Dismiss"
         tools:visibility="visible" />
 

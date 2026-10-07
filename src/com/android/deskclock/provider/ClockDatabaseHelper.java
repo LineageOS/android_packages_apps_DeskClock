@@ -72,6 +72,11 @@ class ClockDatabaseHelper extends SQLiteOpenHelper {
      */
     private static final int VERSION_11 = 12;
 
+    /**
+     * Added skip_next_occurrence_time column to alarms table
+     */
+    private static final int VERSION_12 = 13;
+
     // This creates a default alarm at 8:30 for every Mon,Tue,Wed,Thu,Fri
     private static final String DEFAULT_ALARM_1 = "(8, 30, 31, 0, 1, '', NULL, 0, 0);";
 
@@ -96,7 +101,9 @@ class ClockDatabaseHelper extends SQLiteOpenHelper {
                 ClockContract.AlarmsColumns.LABEL + " TEXT NOT NULL, " +
                 ClockContract.AlarmsColumns.RINGTONE + " TEXT, " +
                 ClockContract.AlarmsColumns.DELETE_AFTER_USE + " INTEGER NOT NULL DEFAULT 0, " +
-                ClockContract.AlarmsColumns.INCREASING_VOLUME + " INTEGER NOT NULL DEFAULT 0);");
+                ClockContract.AlarmsColumns.INCREASING_VOLUME + " INTEGER NOT NULL DEFAULT 0, " +
+                ClockContract.AlarmsColumns.SKIP_NEXT_OCCURRENCE_TIME
+                + " INTEGER NOT NULL DEFAULT 0);");
         LogUtils.i("Alarms Table created");
     }
 
@@ -120,7 +127,7 @@ class ClockDatabaseHelper extends SQLiteOpenHelper {
     }
 
     public ClockDatabaseHelper(Context context) {
-        super(context, DATABASE_NAME, null, VERSION_11);
+        super(context, DATABASE_NAME, null, VERSION_12);
     }
 
     @Override
@@ -269,6 +276,12 @@ class ClockDatabaseHelper extends SQLiteOpenHelper {
                     + " RENAME TO " + ALARMS_TABLE_NAME + ";");
             db.execSQL("ALTER TABLE " + TEMP_INSTANCES_TABLE_NAME
                     + " RENAME TO " + INSTANCES_TABLE_NAME + ";");
+        }
+
+        if (oldVersion < VERSION_12) {
+            db.execSQL("ALTER TABLE " + ALARMS_TABLE_NAME
+                    + " ADD COLUMN " + ClockContract.AlarmsColumns.SKIP_NEXT_OCCURRENCE_TIME
+                    + " INTEGER NOT NULL DEFAULT 0;");
         }
     }
 

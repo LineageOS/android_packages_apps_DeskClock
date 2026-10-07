@@ -134,6 +134,13 @@ public final class ClockContract {
          * <p>Type: INTEGER</p>
          */
         String DELETE_AFTER_USE = "delete_after_use";
+
+        /**
+         * Time of the next occurrence to skip, in milliseconds since the epoch.
+         * Zero means that no occurrence is being skipped.
+         * <p>Type: INTEGER (long)</p>
+         */
+        String SKIP_NEXT_OCCURRENCE_TIME = "skip_next_occurrence_time";
     }
 
     /**

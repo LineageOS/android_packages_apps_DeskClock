@@ -38,6 +38,7 @@ import androidx.core.content.ContextCompat;
 import androidx.recyclerview.widget.RecyclerView.ViewHolder;
 
 import com.android.deskclock.AnimatorUtils;
+import com.android.deskclock.AlarmUtils;
 import com.android.deskclock.ItemAdapter;
 import com.android.deskclock.R;
 import com.android.deskclock.ThemeUtils;
@@ -49,6 +50,7 @@ import com.android.deskclock.provider.Alarm;
 import com.android.deskclock.provider.AlarmInstance;
 import com.android.deskclock.uidata.UiDataModel;
 
+import java.util.Calendar;
 import java.util.List;
 
 /**
@@ -63,6 +65,7 @@ public final class ExpandedAlarmViewHolder extends AlarmItemViewHolder {
     private final CheckBox vibrate;
     private final TextView ringtone;
     private final TextView delete;
+    private final TextView skipNextOccurrence;
 
     private final boolean mHasVibrator;
 
@@ -76,6 +79,7 @@ public final class ExpandedAlarmViewHolder extends AlarmItemViewHolder {
         ringtone = itemView.findViewById(R.id.choose_ringtone);
         editLabel = itemView.findViewById(R.id.edit_label);
         repeatDays = itemView.findViewById(R.id.repeat_days);
+        skipNextOccurrence = itemView.findViewById(R.id.skip_next_occurrence);
 
         final Context context = itemView.getContext();
         itemView.setBackground(new LayerDrawable(new Drawable[] {
@@ -123,6 +127,10 @@ public final class ExpandedAlarmViewHolder extends AlarmItemViewHolder {
         // Ringtone editor handler
         ringtone.setOnClickListener(v ->
                 getAlarmTimeClickHandler().onRingtoneClicked(context, getItemHolder().item));
+        // Skip next occurrence handler
+        skipNextOccurrence.setOnClickListener(v ->
+                getAlarmTimeClickHandler().setSkipNextOccurrenceEnabled(getItemHolder().item,
+                        !getItemHolder().item.isSkippingNextOccurrence()));
         // Delete alarm handler
         delete.setOnClickListener(v -> {
             getAlarmTimeClickHandler().onDeleteClicked(getItemHolder());
@@ -152,6 +160,7 @@ public final class ExpandedAlarmViewHolder extends AlarmItemViewHolder {
         bindDaysOfWeekButtons(alarm, context);
         bindVibrator(alarm);
         bindRingtone(context, alarm);
+        bindSkipNextOccurrence(context, alarm);
         bindPreemptiveDismissButton(context, alarm, alarmInstance);
         bindRepeatText(context, alarm);
         bindAnnotations(alarm);
@@ -168,6 +177,7 @@ public final class ExpandedAlarmViewHolder extends AlarmItemViewHolder {
         preemptiveDismissButton.setAlpha(1f);
         vibrate.setAlpha(1f);
         delete.setAlpha(1f);
+        skipNextOccurrence.setAlpha(1f);
         setChangingViewsAlpha(1f);
     }
 
@@ -212,6 +222,27 @@ public final class ExpandedAlarmViewHolder extends AlarmItemViewHolder {
         } else {
             vibrate.setVisibility(View.VISIBLE);
             vibrate.setChecked(alarm.vibrate);
+        }
+    }
+
+    private void bindSkipNextOccurrence(Context context, Alarm alarm) {
+        // Skipping is only meaningful for an enabled alarm that rings more than once.
+        final boolean visible = alarm.enabled && alarm.daysOfWeek.isRepeating();
+        skipNextOccurrence.setVisibility(visible ? View.VISIBLE : View.GONE);
+        if (!visible) {
+            return;
+        }
+
+        if (alarm.isSkippingNextOccurrence()) {
+            final Calendar skippedTime = Calendar.getInstance();
+            skippedTime.setTimeInMillis(alarm.skipNextOccurrenceTime);
+            skipNextOccurrence.setText(context.getString(
+                    R.string.alarm_next_occurrence_skipped_rings, AlarmUtils.getFormattedTime(
+                            context, alarm.getNextAlarmTime(skippedTime))));
+        } else {
+            skipNextOccurrence.setText(context.getString(R.string.alarm_skip_next_occurrence,
+                    AlarmUtils.getFormattedTime(context,
+                            alarm.getNextAlarmTime(Calendar.getInstance()))));
         }
     }
 
@@ -280,6 +311,8 @@ public final class ExpandedAlarmViewHolder extends AlarmItemViewHolder {
                 .setDuration(shortDuration);
         final Animator dismissAnimation = ObjectAnimator.ofFloat(preemptiveDismissButton,
                 View.ALPHA, 0f).setDuration(shortDuration);
+        final Animator skipAnimation = ObjectAnimator.ofFloat(skipNextOccurrence, View.ALPHA, 0f)
+                .setDuration(shortDuration);
         final Animator deleteAnimation = ObjectAnimator.ofFloat(delete, View.ALPHA, 0f)
                 .setDuration(shortDuration);
 
@@ -294,6 +327,10 @@ public final class ExpandedAlarmViewHolder extends AlarmItemViewHolder {
             startDelay += delayIncrement;
             dismissAnimation.setStartDelay(startDelay);
         }
+        if (skipNextOccurrence.getVisibility() == View.VISIBLE) {
+            startDelay += delayIncrement;
+            skipAnimation.setStartDelay(startDelay);
+        }
         startDelay += delayIncrement;
         editLabelAnimation.setStartDelay(startDelay);
         startDelay += delayIncrement;
@@ -307,7 +344,8 @@ public final class ExpandedAlarmViewHolder extends AlarmItemViewHolder {
         final AnimatorSet animatorSet = new AnimatorSet();
         animatorSet.playTogether(backgroundAnimator, boundsAnimator,
                 repeatDaysAnimation, vibrateAnimation, ringtoneAnimation, editLabelAnimation,
-                deleteAnimation, dismissAnimation, switchAnimator, clockAnimator, ellipseAnimator);
+                deleteAnimation, dismissAnimation, skipAnimation, switchAnimator, clockAnimator,
+                ellipseAnimator);
         animatorSet.addListener(new AnimatorListenerAdapter() {
             @Override
             public void onAnimationStart(Animator animation) {
@@ -338,6 +376,7 @@ public final class ExpandedAlarmViewHolder extends AlarmItemViewHolder {
         preemptiveDismissButton.setAlpha(0f);
         vibrate.setAlpha(0f);
         delete.setAlpha(0f);
+        skipNextOccurrence.setAlpha(0f);
         setChangingViewsAlpha(0f);
 
         final View newView = itemView;
@@ -357,6 +396,8 @@ public final class ExpandedAlarmViewHolder extends AlarmItemViewHolder {
                 .setDuration(longDuration);
         final Animator dismissAnimation = ObjectAnimator.ofFloat(preemptiveDismissButton,
                 View.ALPHA, 1f).setDuration(longDuration);
+        final Animator skipAnimation = ObjectAnimator.ofFloat(skipNextOccurrence, View.ALPHA, 1f)
+                .setDuration(longDuration);
         final Animator vibrateAnimation = ObjectAnimator.ofFloat(vibrate, View.ALPHA, 1f)
                 .setDuration(longDuration);
         final Animator editLabelAnimation = ObjectAnimator.ofFloat(editLabel, View.ALPHA, 1f)
@@ -380,6 +421,10 @@ public final class ExpandedAlarmViewHolder extends AlarmItemViewHolder {
         startDelay += delayIncrement;
         editLabelAnimation.setStartDelay(startDelay);
         startDelay += delayIncrement;
+        if (skipNextOccurrence.getVisibility() == View.VISIBLE) {
+            skipAnimation.setStartDelay(startDelay);
+            startDelay += delayIncrement;
+        }
         if (preemptiveDismissButton.getVisibility() == View.VISIBLE) {
             dismissAnimation.setStartDelay(startDelay);
             startDelay += delayIncrement;
@@ -389,14 +434,17 @@ public final class ExpandedAlarmViewHolder extends AlarmItemViewHolder {
         final AnimatorSet animatorSet = new AnimatorSet();
         animatorSet.playTogether(backgroundAnimator, boundsAnimator,
                 repeatDaysAnimation, vibrateAnimation, ringtoneAnimation, editLabelAnimation,
-                deleteAnimation, dismissAnimation);
+                deleteAnimation, dismissAnimation, skipAnimation);
         return animatorSet;
     }
 
     private int countNumberOfItems() {
-        // Always between 4 and 6 items.
+        // Always between 4 and 7 items.
         int numberOfItems = 4;
         if (preemptiveDismissButton.getVisibility() == View.VISIBLE) {
+            numberOfItems++;
+        }
+        if (skipNextOccurrence.getVisibility() == View.VISIBLE) {
             numberOfItems++;
         }
         if (repeatDays.getVisibility() == View.VISIBLE) {

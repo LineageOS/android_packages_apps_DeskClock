@@ -63,6 +63,7 @@ public final class Alarm implements Parcelable, ClockContract.AlarmsColumns {
             RINGTONE,
             DELETE_AFTER_USE,
             INCREASING_VOLUME,
+            SKIP_NEXT_OCCURRENCE_TIME,
     };
 
     private static final String[] QUERY_ALARMS_WITH_INSTANCES_COLUMNS = {
@@ -76,6 +77,7 @@ public final class Alarm implements Parcelable, ClockContract.AlarmsColumns {
             ClockDatabaseHelper.ALARMS_TABLE_NAME + "." + RINGTONE,
             ClockDatabaseHelper.ALARMS_TABLE_NAME + "." + DELETE_AFTER_USE,
             ClockDatabaseHelper.ALARMS_TABLE_NAME + "." + INCREASING_VOLUME,
+            ClockDatabaseHelper.ALARMS_TABLE_NAME + "." + SKIP_NEXT_OCCURRENCE_TIME,
             ClockDatabaseHelper.INSTANCES_TABLE_NAME + "."
                     + ClockContract.InstancesColumns.ALARM_STATE,
             ClockDatabaseHelper.INSTANCES_TABLE_NAME + "." + ClockContract.InstancesColumns._ID,
@@ -102,18 +104,19 @@ public final class Alarm implements Parcelable, ClockContract.AlarmsColumns {
     private static final int RINGTONE_INDEX = 7;
     private static final int DELETE_AFTER_USE_INDEX = 8;
     private static final int INCREASING_VOLUME_INDEX = 9;
+    private static final int SKIP_NEXT_OCCURRENCE_TIME_INDEX = 10;
 
-    public static final int INSTANCE_STATE_INDEX = 10;
-    public static final int INSTANCE_ID_INDEX = 11;
-    public static final int INSTANCE_YEAR_INDEX = 12;
-    public static final int INSTANCE_MONTH_INDEX = 13;
-    public static final int INSTANCE_DAY_INDEX = 14;
-    public static final int INSTANCE_HOUR_INDEX = 15;
-    public static final int INSTANCE_MINUTE_INDEX = 16;
-    public static final int INSTANCE_LABEL_INDEX = 17;
-    public static final int INSTANCE_VIBRATE_INDEX = 18;
+    public static final int INSTANCE_STATE_INDEX = 11;
+    public static final int INSTANCE_ID_INDEX = 12;
+    public static final int INSTANCE_YEAR_INDEX = 13;
+    public static final int INSTANCE_MONTH_INDEX = 14;
+    public static final int INSTANCE_DAY_INDEX = 15;
+    public static final int INSTANCE_HOUR_INDEX = 16;
+    public static final int INSTANCE_MINUTE_INDEX = 17;
+    public static final int INSTANCE_LABEL_INDEX = 18;
+    public static final int INSTANCE_VIBRATE_INDEX = 19;
 
-    private static final int COLUMN_COUNT = INCREASING_VOLUME_INDEX + 1;
+    private static final int COLUMN_COUNT = SKIP_NEXT_OCCURRENCE_TIME_INDEX + 1;
     private static final int ALARM_JOIN_INSTANCE_COLUMN_COUNT = INSTANCE_VIBRATE_INDEX + 1;
 
     public static ContentValues createContentValues(Alarm alarm) {
@@ -130,6 +133,7 @@ public final class Alarm implements Parcelable, ClockContract.AlarmsColumns {
         values.put(LABEL, alarm.label);
         values.put(DELETE_AFTER_USE, alarm.deleteAfterUse);
         values.put(INCREASING_VOLUME, alarm.increasingVolume ? 1 : 0);
+        values.put(SKIP_NEXT_OCCURRENCE_TIME, alarm.skipNextOccurrenceTime);
         if (alarm.alert == null) {
             // We want to put null, so default alarm changes
             values.putNull(RINGTONE);
@@ -281,6 +285,7 @@ public final class Alarm implements Parcelable, ClockContract.AlarmsColumns {
     public Uri alert;
     public boolean deleteAfterUse;
     public boolean increasingVolume;
+    public long skipNextOccurrenceTime;
     public int instanceState;
     public int instanceId;
 
@@ -299,6 +304,7 @@ public final class Alarm implements Parcelable, ClockContract.AlarmsColumns {
         this.alert = DataModel.getDataModel().getDefaultAlarmRingtoneUri();
         this.deleteAfterUse = false;
         this.increasingVolume = false;
+        this.skipNextOccurrenceTime = 0;
     }
 
     public Alarm(Cursor c) {
@@ -311,6 +317,7 @@ public final class Alarm implements Parcelable, ClockContract.AlarmsColumns {
         label = c.getString(LABEL_INDEX);
         deleteAfterUse = c.getInt(DELETE_AFTER_USE_INDEX) == 1;
         increasingVolume = c.getInt(INCREASING_VOLUME_INDEX) == 1;
+        skipNextOccurrenceTime = c.getLong(SKIP_NEXT_OCCURRENCE_TIME_INDEX);
 
         if (c.getColumnCount() == ALARM_JOIN_INSTANCE_COLUMN_COUNT) {
             instanceState = c.getInt(INSTANCE_STATE_INDEX);
@@ -337,6 +344,7 @@ public final class Alarm implements Parcelable, ClockContract.AlarmsColumns {
         alert = p.readParcelable(null);
         deleteAfterUse = p.readInt() == 1;
         increasingVolume = p.readInt() == 1;
+        skipNextOccurrenceTime = p.readLong();
     }
 
     public String getLabelOrDefault(Context context) {
@@ -365,13 +373,28 @@ public final class Alarm implements Parcelable, ClockContract.AlarmsColumns {
         p.writeParcelable(alert, flags);
         p.writeInt(deleteAfterUse ? 1 : 0);
         p.writeInt(increasingVolume ? 1 : 0);
+        p.writeLong(skipNextOccurrenceTime);
     }
 
     public int describeContents() {
         return 0;
     }
 
+    /**
+     * @return true if the next occurrence of this alarm is marked to be skipped
+     */
+    public boolean isSkippingNextOccurrence() {
+        return skipNextOccurrenceTime > System.currentTimeMillis();
+    }
+
     public AlarmInstance createInstanceAfter(Calendar time) {
+        // If an occurrence is marked to be skipped and has not yet passed, the next
+        // instance to schedule is the one following the skipped occurrence.
+        if (skipNextOccurrenceTime > time.getTimeInMillis()) {
+            final Calendar skippedTime = Calendar.getInstance();
+            skippedTime.setTimeInMillis(skipNextOccurrenceTime);
+            time = skippedTime;
+        }
         Calendar nextInstanceTime = getNextAlarmTime(time);
         AlarmInstance result = new AlarmInstance(nextInstanceTime, id);
         result.mVibrate = vibrate;
@@ -460,6 +483,7 @@ public final class Alarm implements Parcelable, ClockContract.AlarmsColumns {
                 ", label='" + label + '\'' +
                 ", deleteAfterUse=" + deleteAfterUse +
                 ", increasingVolume=" + increasingVolume +
+                ", skipNextOccurrenceTime=" + skipNextOccurrenceTime +
                 '}';
     }
 }

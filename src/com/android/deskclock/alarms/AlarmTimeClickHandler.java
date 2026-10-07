@@ -106,6 +106,14 @@ public final class AlarmTimeClickHandler {
         }
     }
 
+    public void setSkipNextOccurrenceEnabled(Alarm alarm, boolean newState) {
+        if (newState != alarm.isSkippingNextOccurrence()) {
+            Events.sendAlarmEvent(R.string.action_skip_next_occurrence, R.string.label_deskclock);
+            mAlarmUpdateHandler.asyncSkipNextOccurrence(alarm, newState);
+            LOGGER.d("Updating skip next occurrence state to " + newState);
+        }
+    }
+
     public void setDayOfWeekEnabled(Alarm alarm, boolean checked, int index) {
         final Calendar now = Calendar.getInstance();
         final Calendar oldNextAlarmTime = alarm.getNextAlarmTime(now);

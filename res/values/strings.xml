@@ -910,6 +910,15 @@
     <!-- Toast content when an alarm was deleted  -->
     <string name="alarm_deleted">Alarm deleted</string>
 
+    <!-- Button on the expanded row of a repeating alarm that skips its next occurrence [CHAR LIMIT=NONE] -->
+    <string name="alarm_skip_next_occurrence">Skip next alarm (<xliff:g id="alarm_time" example="Wed 7:00 AM">%s</xliff:g>)</string>
+    <!-- Button on the expanded row of a repeating alarm while an occurrence is skipped [CHAR LIMIT=NONE] -->
+    <string name="alarm_next_occurrence_skipped_rings">Next alarm skipped, rings <xliff:g id="alarm_time" example="Thu 7:00 AM">%s</xliff:g></string>
+    <!-- Snackbar shown after the next occurrence of a repeating alarm is skipped [CHAR LIMIT=NONE] -->
+    <string name="alarm_next_occurrence_skipped">Next alarm skipped: <xliff:g id="alarm_time" example="Wed 7:00 AM">%s</xliff:g></string>
+    <!-- Snackbar shown after a skipped occurrence is restored [CHAR LIMIT=NONE] -->
+    <string name="alarm_next_occurrence_restored">Next alarm restored: <xliff:g id="alarm_time" example="Wed 7:00 AM">%s</xliff:g></string>
+
     <!-- slash between date and next alarm in the clock: used for the DigitalAppWidget -->
     <string name="world_day_of_week_label"> / <xliff:g id="label">%s</xliff:g></string>
 

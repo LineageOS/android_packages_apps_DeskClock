@@ -171,6 +171,55 @@ public final class AlarmUpdateHandler {
     }
 
     /**
+     * Skips the next occurrence of the given repeating alarm on the background, or restores it
+     * if one was already skipped.
+     *
+     * @param alarm The alarm to skip or restore.
+     * @param skip Whether the next occurrence should be skipped.
+     */
+    public void asyncSkipNextOccurrence(final Alarm alarm, final boolean skip) {
+        // Compute the skipped occurrence on the calling thread so the alarm object reflects
+        // the request immediately.
+        final long previousSkipTime = alarm.skipNextOccurrenceTime;
+        final Calendar skippedTime = skip ? alarm.getNextAlarmTime(Calendar.getInstance()) : null;
+        alarm.skipNextOccurrenceTime = skippedTime != null
+                ? skippedTime.getTimeInMillis() : 0;
+
+        ExecutorService executor = Executors.newSingleThreadExecutor();
+        Handler handler = new Handler(Looper.getMainLooper());
+        executor.execute(() -> {
+            final ContentResolver cr = mAppContext.getContentResolver();
+
+            // Save the skip request.
+            Alarm.updateAlarm(cr, alarm);
+
+            // If no occurrence is in progress, reschedule the upcoming instance so the next
+            // ring honors the skip; otherwise the skip applies to the ring that follows the
+            // one in progress, which is scheduled when it is consumed.
+            if (alarm.enabled && alarm.instanceState < AlarmInstance.SNOOZE_STATE) {
+                AlarmStateManager.deleteAllInstances(mAppContext, alarm.id);
+                setupAlarmInstance(alarm);
+            }
+
+            handler.post(() -> {
+                // The skipped occurrence when skipping, the restored one when undoing.
+                final Calendar shownTime = Calendar.getInstance();
+                shownTime.setTimeInMillis(skip ? skippedTime.getTimeInMillis() : previousSkipTime);
+                final String time = AlarmUtils.getFormattedTime(mAppContext, shownTime);
+                final String text = mAppContext.getString(
+                        skip ? R.string.alarm_next_occurrence_skipped
+                                : R.string.alarm_next_occurrence_restored,
+                        time);
+                final Snackbar snackbar =
+                        Snackbar.make(mSnackbarAnchor, text, Snackbar.LENGTH_LONG)
+                                .setAction(R.string.alarm_undo,
+                                        v -> asyncSkipNextOccurrence(alarm, !skip));
+                SnackbarManager.show(snackbar);
+            });
+        });
+    }
+
+    /**
      * Show a toast when an alarm is predismissed.
      *
      * @param instance Instance being predismissed.
