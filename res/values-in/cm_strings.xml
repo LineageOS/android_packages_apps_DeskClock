@@ -37,6 +37,9 @@
     <string name="more_options">Opsi lanjutan</string>
     <string name="widget_choice_title">Pilih gaya Anda</string>
     <string name="clock_brightness_percentage">%s%%</string>
+    <string name="night_mode_enabled_title">Diaktifkan</string>
+    <string name="night_mode_dnd_title">Ikuti status DND</string>
+    <string name="night_mode_dnd_summary">Mode malam mengikuti status Jangan Ganggu</string>
     <string name="show_ampm_title">Tampilkan indikator AM/PM</string>
     <string name="bold_text_title">Teks jam tebal</string>
     <string name="night_mode_brightness_text_title">Kecerahan</string>
@@ -50,4 +53,6 @@
     <string name="screensaver_settings_title">Screen saver</string>
     <string name="screensaver_preview">Pratinjau</string>
     <string name="screensaver_change_settings">Setelan</string>
+    <string name="screensaver_daydream_settings">Pilih/aktifkan screen saver</string>
+    <string name="screensaver_daydream_settings_summary">Buka setelan utama screen saver</string>
 </resources>

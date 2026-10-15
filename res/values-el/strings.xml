@@ -234,6 +234,7 @@
     <string name="timer_reset_all">Επαν. χρονομ.</string>
     <string name="hours_minutes_seconds"><xliff:g id="HOURS">%1$d</xliff:g>:<xliff:g id="MINUTES">%2$02d</xliff:g>:<xliff:g id="SECONDS">%3$02d</xliff:g></string>
     <string name="minutes_seconds"><xliff:g id="MINUTES">%1$d</xliff:g>:<xliff:g id="SECONDS">%2$02d</xliff:g></string>
+    <string name="seconds"><xliff:g id="seconds" example="44">%d</xliff:g></string>
     <string-array name="sw_share_strings" translatable="true">
         <item>Είστε πάρα πολύ γρήγοροι.</item>
         <item>Απολαύστε</item>
