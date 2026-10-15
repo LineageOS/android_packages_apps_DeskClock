@@ -19,7 +19,7 @@
     <string name="flip_action_title">کرداری وەرگێڕانی ئامێر</string>
     <string name="shake_action_title">کرداری ڕاوەشاندنی ئامێر</string>
     <string-array name="action_setting_entries">
-        <item>دواخستنی زەنگ (Snooze)</item>
+        <item>دواخستنی زەنگ</item>
         <item>بێدەنگکردن</item>
         <item>هیچ</item>
     </string-array>
@@ -27,7 +27,7 @@
     <string name="alarm_missed_channel">زەنگی لەدەستچوو</string>
     <string name="alarm_snooze_channel">زەنگی دواخراو</string>
     <string name="alarm_upcoming_channel">زەنگەکانی داهاتوو</string>
-    <string name="stopwatch_channel">ژمێرەری کات (Stopwatch)</string>
+    <string name="stopwatch_channel">ژمێرەری کات</string>
     <string name="timer_channel">کاتپێو</string>
     <string name="add_label">زیادکردنی ناونیشان</string>
     <string name="dialog_permissions_title">ڕێپێدانەکان</string>
@@ -51,7 +51,7 @@
     <string name="night_mode_brightness_text_title">ڕووناکی</string>
     <string name="clock_color_title">ڕەنگ</string>
     <string-array name="clock_color_entries">
-        <item>سپي</item>
+        <item>سپی</item>
         <item>سوور</item>
         <item>سەوز</item>
         <item>شین</item>

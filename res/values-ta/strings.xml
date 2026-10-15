@@ -16,16 +16,16 @@
   -->
 <resources xmlns:xliff="urn:oasis:names:tc:xliff:document:1.2" xmlns:tools="http://schemas.android.com/tools">
     <string name="app_label">கடிகாரம்</string>
-    <string name="label">லேபிள்</string>
-    <string name="default_label">அலாரம்</string>
+    <string name="label">குறிப்பு</string>
+    <string name="default_label">அலறிமணி</string>
     <string name="alarm_vibrate">அதிர்வு</string>
     <string name="delete">நீக்கு</string>
-    <string name="default_alarm_ringtone_title">இயல்பு அலார ஒலி</string>
-    <string name="alarm_sound">அலார ஒலி</string>
-    <string name="timer_sound">டைமர் ஒலி</string>
-    <string name="add_new_sound">புதிய ரிங்டோனைச் சேர்</string>
+    <string name="default_alarm_ringtone_title">இயல்பு அலறிமணியொலி</string>
+    <string name="alarm_sound">அலறிமணியொலி</string>
+    <string name="timer_sound">நேரங்கணிப்பிவொலி</string>
+    <string name="add_new_sound">புதிதுசேர்</string>
     <string name="remove_sound">அகற்று</string>
-    <string name="confirm_remove_custom_ringtone">இந்த ஒலியைப் பயன்படுத்தும் அலாரங்களும் டைமர்களும், அதற்குப் பதிலாக இயல்பு ஒலியை இயக்கும்.</string>
+    <string name="confirm_remove_custom_ringtone">இவ்வொலியைப் பயன்படுத்தும் அலறிமணியும் நேரங்கணிப்பியும் இயல்பொலியை ஒலிக்கும்</string>
     <string name="your_sounds">உங்கள் ஒலிகள்</string>
     <string name="device_sounds">சாதன ஒலிகள்</string>
     <string name="custom_ringtone_lost_permissions">ஒலி உள்ளடக்கத்தை அணுக முடியவில்லை.</string>
@@ -234,17 +234,18 @@
     <string name="timer_reset_all">எல்லா டைமர்களையும் மீட்டமை</string>
     <string name="hours_minutes_seconds"><xliff:g id="HOURS">%1$d</xliff:g>:<xliff:g id="MINUTES">%2$02d</xliff:g>:<xliff:g id="SECONDS">%3$02d</xliff:g></string>
     <string name="minutes_seconds"><xliff:g id="MINUTES">%1$d</xliff:g>:<xliff:g id="SECONDS">%2$02d</xliff:g></string>
+    <string name="seconds"><xliff:g id="seconds" example="44">%d</xliff:g></string>
     <string-array name="sw_share_strings" translatable="true">
-        <item>சிறுத்தை போல் வேகமாக உள்ளீர்கள்.</item>
-        <item>உங்கள் கடின உழைப்பின் பலனை அனுபவிக்கவும்.</item>
-        <item>Android வேகமான செயலுக்கு பெயர்போனது ஆனால் உங்களைவிட வேகமானதல்ல!</item>
-        <item>ப்பூ.</item>
-        <item>L33t முறை.</item>
-        <item>இத்தகைய வியத்தகு வேகம்.</item>
-        <item>மீண்டும் வேகமாகச் செல்வோம்.</item>
-        <item>இடப்பக்கம் குதித்தாலே போதும்.</item>
-        <item>உங்கள் வேகத்திற்கு வரம்பு உண்டு.</item>
-        <item>ஒளியை ஒத்த வேகம்.</item>
+        <item>நீவிர் மிக விரைவாளி.</item>
+        <item>நின் உழைப்பின் பயனைத் துய்.</item>
+        <item>ஆண்ட்ராய்டு விரைவானதென்பர், ஆனால் நின்னளவு விரையாது!</item>
+        <item>அப்பாடா.</item>
+        <item>வித்தகக்காலம்.</item>
+        <item>எத்துணை வியத்தகு விரைவு.</item>
+        <item>மீண்டுங்காலச்சுருள் செய்வோம்.</item>
+        <item>இடப்புறம் ஒரு தாவலே.</item>
+        <item>நினக்கு விரைவு இனிக்கும்.</item>
+        <item>ஒளிரைவு.</item>
     </string-array>
     <string name="home_label">தாய்நாடு</string>
     <string name="cities_activity_title">நகரங்கள்</string>
