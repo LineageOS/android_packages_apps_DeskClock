@@ -1,0 +1,54 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!--
+  Copyright (C) 2016 The Android Open Source Project
+
+  Licensed under the Apache License, Version 2.0 (the "License");
+  you may not use this file except in compliance with the License.
+  You may obtain a copy of the License at
+
+      http://www.apache.org/licenses/LICENSE-2.0
+
+  Unless required by applicable law or agreed to in writing, software
+  distributed under the License is distributed on an "AS IS" BASIS,
+  WITHOUT WARRANTIES OR CONDITIONS OF ANY KIND, either express or implied.
+  See the License for the specific language governing permissions and
+  limitations under the License.
+  -->
+<resources xmlns:xliff="urn:oasis:names:tc:xliff:document:1.2" xmlns:tools="http://schemas.android.com/tools">
+    <string name="app_label">Relógio</string>
+    <string name="label">Rótulo</string>
+    <string name="default_label">Alarme</string>
+    <string name="alarm_vibrate">Vibrar</string>
+    <string name="delete">Apagar</string>
+    <string name="default_alarm_ringtone_title">Som de alarme padrão</string>
+    <string name="alarm_sound">Som do alarme</string>
+    <string name="timer_sound">Som do temporizador</string>
+    <string name="add_new_sound">Adicionar novo</string>
+    <string name="remove_sound">Remover</string>
+    <string name="confirm_remove_custom_ringtone">Alarmes e temporizadores usando esse som tocarão o som padrão em vez dele.</string>
+    <string name="your_sounds">Seus sons</string>
+    <string name="device_sounds">Sons do dispositivo</string>
+    <string name="custom_ringtone_lost_permissions">O conteúdo do som não pôde ser acessado.</string>
+    <string name="default_timer_ringtone_title">Temporizador encerrado</string>
+    <string name="alarm_tomorrow">Amanhã</string>
+    <string name="alarm_today">Hoje</string>
+    <string name="alarm_alert_dismiss_text">Cancelar</string>
+    <string name="alarm_missed_title">Alarme perdido</string>
+    <string name="alarm_missed_text"><xliff:g id="alarm_time">%1$s</xliff:g> - <xliff:g id="alarm_label">%2$s</xliff:g></string>
+    <string name="alarm_alert_snoozed_text">Em soneca</string>
+    <plurals name="alarm_alert_snooze_duration">
+        <item quantity="one">1 min</item>
+        <item quantity="other"><xliff:g id="number" example="7">%d</xliff:g> mins</item>
+    </plurals>
+    <string name="alarm_alert_off_text">Alarme desativado</string>
+    <string name="alarm_alert_snooze_text">Soneca</string>
+    <plurals name="alarm_alert_snooze_set">
+        <item quantity="one">Em soneca por 1 minuto.</item>
+        <item quantity="other">Em soneca por <xliff:g id="minutes">%d</xliff:g> minutos.</item>
+    </plurals>
+    <string name="alarm_alert_snooze_until">Em soneca até às <xliff:g id="time">%s</xliff:g></string>
+    <string name="alarm_alert_predismiss_title">Alarme próximo</string>
+    <string name="missed_alarm_has_been_deleted">Seu alarme perdido foi apagado</string>
+    <string name="timer_notifications_less_min">Menos de um minuto restante</string>
+    <string name="timer_notifications_hours_minutes"><xliff:g id="HOURS" example="2 hours">%1$s</xliff:g><xliff:g id="MINUTES" example="2 minutes"> %2$s</xliff:g> restantes</string>
+</resources>
