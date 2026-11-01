@@ -62,5 +62,5 @@
     <string name="screensaver_change_settings">Ayarlar</string>
     <string name="screensaver_change_settings_summary">Saatın ekran qoruyucu ayarlarını açır</string>
     <string name="screensaver_daydream_settings">Ekran qoruyucunu seç/fəallaşdır</string>
-    <string name="screensaver_daydream_settings_summary">Əsas ekran qoruyucu ayarlarını açır</string>
+    <string name="screensaver_daydream_settings_summary">Ana ekran qoruyucu ayarlarını açır</string>
 </resources>

@@ -236,7 +236,7 @@
     <string name="minutes_seconds"><xliff:g id="minutes" example="3">%1$d</xliff:g>:<xliff:g id="seconds" example="44">%2$02d</xliff:g></string>
     <string name="seconds"><xliff:g id="seconds" example="44">%d</xliff:g></string>
     <string-array name="sw_share_strings" translatable="true">
-        <item>تۆ خێرایی زۆر بەرزت بێدەنگ کرد.</item>
+        <item>تۆ خێراییەکی زۆر بەرزت هەیە.</item>
         <item>دڵخۆشبە به بەری کارەکەت.</item>
         <item>ئەندرۆید بەوە ناسراوە خێرایە ، بەس وەک تۆ نا !</item>
         <item>فیو.!</item>
