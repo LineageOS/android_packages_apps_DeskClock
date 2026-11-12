@@ -97,6 +97,7 @@
 
     <!-- Dimens for drawable padding on Alarms tab -->
     <dimen name="alarm_horizontal_padding">16dp</dimen>
+    <dimen name="alarm_card_corner_radius">28dp</dimen>
 
     <!-- Dimens for icon padding on Alarms tab -->
     <dimen name="icon_margin">4dp</dimen>

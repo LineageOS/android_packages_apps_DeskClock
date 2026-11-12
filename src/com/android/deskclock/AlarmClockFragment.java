@@ -35,12 +35,14 @@ import androidx.annotation.NonNull;
 import androidx.loader.app.LoaderManager;
 import androidx.loader.content.CursorLoader;
 import androidx.loader.content.Loader;
+import androidx.recyclerview.widget.ItemTouchHelper;
 import androidx.recyclerview.widget.LinearLayoutManager;
 import androidx.recyclerview.widget.RecyclerView;
 
 import com.android.deskclock.alarms.AlarmTimeClickHandler;
 import com.android.deskclock.alarms.AlarmUpdateHandler;
 import com.android.deskclock.alarms.ScrollHandler;
+import com.android.deskclock.alarms.SwipeToDeleteCallback;
 import com.android.deskclock.alarms.TimePickerDialogFragment;
 import com.android.deskclock.alarms.dataadapter.AlarmItemHolder;
 import com.android.deskclock.alarms.dataadapter.CollapsedAlarmViewHolder;
@@ -181,6 +183,8 @@ public final class AlarmClockFragment extends DeskClockFragment implements
         itemAnimator.setChangeDuration(150L);
         itemAnimator.setMoveDuration(150L);
         mRecyclerView.setItemAnimator(itemAnimator);
+        new ItemTouchHelper(new SwipeToDeleteCallback(context))
+                .attachToRecyclerView(mRecyclerView);
         return v;
     }
 
