@@ -20,47 +20,47 @@
     <string name="shake_action_title">கருவி குலுக்கல் செயல்</string>
     <string-array name="action_setting_entries">
         <item>ஒத்திவை</item>
-        <item>விலக்கு</item>
+        <item>தவிர்</item>
         <item>ஏதுமில்லை</item>
     </string-array>
-    <string name="firing_alarms_timers_channel">ஒலிக்கும் அலறிமணியும், நேரங்கணிப்பியும்</string>
+    <string name="firing_alarms_timers_channel">ஒலிக்கும் அலறிமணியும், காலமளவியும்</string>
     <string name="alarm_missed_channel">தவறிய அலறிமணி</string>
     <string name="alarm_snooze_channel">ஒத்திவைத்த அலறிமணி</string>
     <string name="alarm_upcoming_channel">வரவிருக்கும் அலறிமணி</string>
-    <string name="stopwatch_channel">நொடிக்கணக்கி</string>
-    <string name="timer_channel">நேரங்கணிப்பி</string>
+    <string name="stopwatch_channel">நொடியளவி</string>
+    <string name="timer_channel">காலமளவி</string>
     <string name="add_label">குறிப்பேடு சேர்</string>
     <string name="dialog_permissions_title">இசைவுகள்</string>
     <string name="dialog_permissions_ask">மீண்டும் கேள்</string>
-    <string name="dialog_permissions_dismiss">விலக்கு</string>
+    <string name="dialog_permissions_dismiss">தவிர்</string>
     <string name="dialog_permissions_settings">அமைப்புகள்</string>
     <string name="dialog_permissions_power_off_alarm">இவ்விசைவின்றி கருவி அலறிமணியை எழுப்பத் தானாக விழித்தெழாது</string>
     <string name="dialog_permissions_no_permission">வேண்டிய இசைவு மறுக்கப்பட்டது; அமைவுச் செயலியியான் செயலாக்கு</string>
     <string name="dialog_permissions_post_notifications">இச்செயலி அறிவிப்புச்சார்ந்தது; அதனின்றி இயங்கவியலாது!</string>
     <string name="selected">தேர்ந்தது</string>
     <string name="more_options">கூடுதற்தெரிவு</string>
-    <string name="widget_choice_title">நின் பாணியைத் தேர்</string>
+    <string name="widget_choice_title">பாணியைத் தேர்</string>
     <string name="widget_name_transparent">பின்புலமிலி</string>
     <string name="widget_name_solid">பின்புலமுளது</string>
     <string name="clock_brightness_percentage">%s%%</string>
-    <string name="night_mode_enabled_title">இயங்குவது</string>
-    <string name="night_mode_dnd_title">DND நிலைதொடர்</string>
-    <string name="night_mode_dnd_summary">இரவுப்பயன்முறை அமைதிநிலை தொடரும்</string>
-    <string name="show_ampm_title">AM/PM குறிகாட்டி தோன்று</string>
-    <string name="bold_text_title">தடித்த மணினியுரை</string>
+    <string name="night_mode_enabled_title">இயக்கம்</string>
+    <string name="night_mode_dnd_title">DND நிலை ஒழுகு</string>
+    <string name="night_mode_dnd_summary">இரவுப்பயன்முறை அமைதி நிலை ஒழுகும்</string>
+    <string name="show_ampm_title">AM/PM குறிகாட்டி காண்பி</string>
+    <string name="bold_text_title">தடித்த மணி உரை</string>
     <string name="night_mode_brightness_text_title">ஒளிர்வு</string>
     <string name="clock_color_title">நிறம்</string>
     <string-array name="clock_color_entries">
-        <item>வெண்மை</item>
-        <item>செம்மை</item>
-        <item>பசுமை</item>
+        <item>வெள்ளை</item>
+        <item>சிவப்பு</item>
+        <item>பச்சை</item>
         <item>நீலம்</item>
     </string-array>
     <string name="screensaver_settings_title">திரைக்காப்பு</string>
-    <string name="screensaver_preview">முன்காண்</string>
-    <string name="screensaver_preview_summary">திரைக்காப்புடன் தொடங்கும்</string>
+    <string name="screensaver_preview">முன்னோட்டம்</string>
+    <string name="screensaver_preview_summary">திரைக்காப்பை உடனே தொடங்கு</string>
     <string name="screensaver_change_settings">அமைப்புகள்</string>
-    <string name="screensaver_change_settings_summary">மணினித்திரைக்காப்பு அமைப்பு திறக்கும்</string>
-    <string name="screensaver_daydream_settings">திரைக்காப்பு தேர்ந்தெடுக்கவோ இயக்கவோ</string>
-    <string name="screensaver_daydream_settings_summary">முதன்மைத்திரைக்காப்பு அமைப்பு திறக்கும்</string>
+    <string name="screensaver_change_settings_summary">மணித் திரைக்காப்பு அமைப்புகள் திறக்கும்</string>
+    <string name="screensaver_daydream_settings">திரைக்காப்பு தேர்வு/இயக்கு</string>
+    <string name="screensaver_daydream_settings_summary">முதன்மைத்திரைக்காப்பு அமைப்புகள் திறக்கும்</string>
 </resources>

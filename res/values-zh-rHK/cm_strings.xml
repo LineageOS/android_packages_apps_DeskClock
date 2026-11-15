@@ -17,9 +17,25 @@
 -->
 <resources xmlns:xliff="urn:oasis:names:tc:xliff:document:1.2">
     <string-array name="action_setting_entries">
-        <item>延遲</item>
+        <item>延後</item>
         <item>忽略</item>
         <item>無</item>
     </string-array>
+    <string name="alarm_snooze_channel">已延後的鬧鐘</string>
     <string name="add_label">新增標籤</string>
+    <string name="dialog_permissions_title">權限</string>
+    <string name="dialog_permissions_ask">再次詢問</string>
+    <string name="dialog_permissions_dismiss">忽略</string>
+    <string name="dialog_permissions_settings">設定</string>
+    <string name="dialog_permissions_power_off_alarm">若沒有此權限，裝置將無法在鬧鐘響起時自動開機。</string>
+    <string name="selected">已選取</string>
+    <string name="more_options">更多選項</string>
+    <string name="clock_brightness_percentage">%s%%</string>
+    <string name="clock_color_title">顏色</string>
+    <string name="screensaver_settings_title">螢幕保護程式</string>
+    <string name="screensaver_preview">預覽</string>
+    <string name="screensaver_preview_summary">立即開啟螢幕保護程式</string>
+    <string name="screensaver_change_settings">設定</string>
+    <string name="screensaver_change_settings_summary">開啟時鐘螢幕保護程式的設定</string>
+    <string name="screensaver_daydream_settings_summary">開啟螢幕保護程式設定</string>
 </resources>
